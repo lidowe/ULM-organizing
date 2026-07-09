@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"chat.editing.autoAcceptDelay": 5,
+		"chat.editRequests": "inline",
+		"chat.planAgent.defaultModel": "Qwen3.7 Plus (opencodego)",
+		"chat.agent.thinkingStyle": "collapsedPreview",
+		"chat.editor.fontSize": 11,
+		"chat.editor.wordWrap": "on"
+	}
+}

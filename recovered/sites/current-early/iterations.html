@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ULM Iterations</title>
+<meta name="description" content="Browse each website iteration and open matching pages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <a class="brand" href="index.html">
+            <span class="mark">Upper Level Music</span>
+            <span class="full">ULM · Est.</span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+        <nav class="nav" id="primary-nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="lessons.html">Lessons</a>
+            <a href="gear.html">Used Gear</a>
+            <a href="blog.html">Journal</a>
+            <a href="contact.html">Contact</a>
+            <a href="iterations.html" class="active">Iterations</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" style="padding-top: 84px; padding-bottom: 70px;">
+    <div class="container">
+        <p class="eyebrow">Version Hub</p>
+        <h1>Open each build from one place.</h1>
+        <p class="lede" style="max-width: 62ch;">
+            This page checks common version folders (like v1, v2, v4-fresh) and shows links only when those pages exist.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="section-head">
+            <p class="eyebrow">Detected versions</p>
+            <h2>Available iterations</h2>
+            <p id="scan-status">Scanning folders...</p>
+        </div>
+
+        <div id="version-grid" class="grid grid-3"></div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="legal">
+            <span>© <span id="year"></span> Upper Level Music</span>
+            <span>Iteration map</span>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+(function () {
+    var grid = document.getElementById('version-grid');
+    var status = document.getElementById('scan-status');
+    var pages = ['index.html', 'services.html', 'lessons.html', 'gear.html', 'blog.html', 'contact.html'];
+
+    // Root plus common version folder names used during iterative local work.
+    var roots = [
+        { label: 'Current', dir: '' },
+        { label: 'v1', dir: 'v1' },
+        { label: 'v2', dir: 'v2' },
+        { label: 'v3', dir: 'v3' },
+        { label: 'v4', dir: 'v4' },
+        { label: 'v4-fresh', dir: 'v4-fresh' },
+        { label: 'v5', dir: 'v5' },
+        { label: 'old', dir: 'old' },
+        { label: 'archive', dir: 'archive' },
+        { label: 'backup', dir: 'backup' }
+    ];
+
+    function pathFor(dir, page) {
+        return dir ? (dir + '/' + page) : page;
+    }
+
+    function checkExists(path) {
+        return fetch(path, { method: 'HEAD', cache: 'no-store' }).then(function (res) {
+            return res.ok;
+        }).catch(function () {
+            return false;
+        });
+    }
+
+    function renderCard(version, existingPages) {
+        var card = document.createElement('div');
+        card.className = 'card';
+
+        var title = document.createElement('h3');
+        title.textContent = version.label;
+        card.appendChild(title);
+
+        var meta = document.createElement('p');
+        meta.className = 'meta';
+        meta.textContent = version.dir ? ('/' + version.dir + '/') : '/';
+        card.appendChild(meta);
+
+        var list = document.createElement('ul');
+        list.style.margin = '8px 0 0';
+        list.style.paddingLeft = '18px';
+
+        for (var i = 0; i < existingPages.length; i++) {
+            var page = existingPages[i];
+            var item = document.createElement('li');
+            item.style.marginBottom = '6px';
+
+            var link = document.createElement('a');
+            link.href = pathFor(version.dir, page);
+            link.textContent = page;
+
+            item.appendChild(link);
+            list.appendChild(item);
+        }
+
+        card.appendChild(list);
+        grid.appendChild(card);
+    }
+
+    Promise.all(roots.map(function (version) {
+        return Promise.all(pages.map(function (page) {
+            var path = pathFor(version.dir, page);
+            return checkExists(path).then(function (ok) {
+                return ok ? page : null;
+            });
+        })).then(function (found) {
+            var existingPages = found.filter(Boolean);
+            return { version: version, pages: existingPages };
+        });
+    })).then(function (results) {
+        var withPages = results.filter(function (entry) {
+            return entry.pages.length > 0;
+        });
+
+        if (withPages.length === 0) {
+            status.textContent = 'No iteration folders detected yet. Create folders like v1, v2, or v4-fresh to have them appear here.';
+            return;
+        }
+
+        status.textContent = 'Showing versions that returned a real page.';
+        for (var i = 0; i < withPages.length; i++) {
+            renderCard(withPages[i].version, withPages[i].pages);
+        }
+    });
+})();
+</script>
+</body>
+</html>
