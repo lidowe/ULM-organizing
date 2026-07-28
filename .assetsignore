@@ -1,0 +1,26 @@
+# Files in this repo that should not be uploaded as public site assets.
+# Same syntax as .gitignore. Everything not listed here IS published.
+
+# Repo and editor plumbing
+**/.git
+**/.gitignore
+**/node_modules
+**/.DS_Store
+**/Thumbs.db
+*.code-workspace
+.idea/
+.vscode/
+
+# Deploy config itself
+wrangler.jsonc
+.assetsignore
+DEPLOYING.md
+
+# NOTE: versions/, recovered/, and v4-fresh/ are deliberately NOT excluded.
+# iterations.html is in the site nav and links into them, so excluding them
+# would break the public Iterations page. If you would rather keep the old
+# drafts and editor snapshots off the public internet, uncomment the three
+# lines below and remove the Iterations link from the nav in each page.
+# versions/
+# recovered/
+# v4-fresh/

@@ -1,0 +1,14 @@
+{
+	// Must match the existing Worker that serves upperlevelmusic.com.
+	// Changing this name creates a *new* Worker and leaves the custom
+	// domain pointed at the old one. See DEPLOYING.md before renaming.
+	"name": "old-unit-7acb",
+	"compatibility_date": "2026-07-28",
+
+	// The site is plain HTML/CSS/JS with no build step, so the assets
+	// directory is the repo root. Exclusions live in .assetsignore.
+	"assets": {
+		"directory": "./",
+		"not_found_handling": "404-page"
+	}
+}
