@@ -11,5 +11,17 @@
   // Pinned so the Workers runtime behaviour doesn't silently shift between
   // builds — nitro defaults this to the date the build ran.
   "compatibility_date": "2026-08-05",
-  "compatibility_flags": ["nodejs_compat"]
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Attaching the domains here means the first successful deploy also creates
+  // the DNS records and issues the certificate — no dashboard step needed.
+  // `custom_domain: true` routes ALL paths of the hostname to this Worker.
+  //
+  // If a deploy fails here, the usual cause is an existing CNAME record on the
+  // hostname: Cloudflare refuses to create a Custom Domain over one. Delete the
+  // old record in DNS → Records, then redeploy.
+  "routes": [
+    { "pattern": "upperlevelmusic.com", "custom_domain": true },
+    { "pattern": "www.upperlevelmusic.com", "custom_domain": true }
+  ]
 }
