@@ -1,0 +1,15 @@
+{
+  // Nitro generates .output/server/wrangler.json on every build and merges this
+  // file into it. `main` and `assets` are always set by the build — don't add
+  // them here or the build warns and ignores them.
+  //
+  // `name` is pinned because nitro otherwise auto-derives it from the git repo
+  // and folder ("lidowe-ulm-organizing-site"), which would become the
+  // *.workers.dev hostname.
+  "name": "upperlevelmusic",
+
+  // Pinned so the Workers runtime behaviour doesn't silently shift between
+  // builds — nitro defaults this to the date the build ran.
+  "compatibility_date": "2026-08-05",
+  "compatibility_flags": ["nodejs_compat"]
+}
