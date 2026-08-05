@@ -120,10 +120,10 @@ all seven routes (`/`, `/about`, `/services`, `/studio`, `/work`, `/process`,
 favicon serve from `/`, and `/.mcp/list-tools` responds. No `/__l5e/` paths
 remain in the rendered output.
 
-The `routes` block above was added after that smoke test, during a sandbox
-outage that blocked all shell commands — so it is verified against nitro's
-config-merge behaviour by reading its source, not by a build run. Confirm the
-first Cloudflare build goes green.
+The `routes` block was added after that smoke test and confirmed by a later
+build: both Custom Domain patterns come through into
+`.output/server/wrangler.json` intact, alongside the pinned `name` and
+`compatibility_date`, with no override warnings.
 
 ## Syncing future Lovable edits
 
