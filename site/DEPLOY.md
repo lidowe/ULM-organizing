@@ -5,7 +5,8 @@ This deploys as a **Worker**, not a static Pages site. It has live server routes
 (a read-only MCP server at `/mcp` plus a `.well-known` OAuth metadata endpoint),
 so it needs a running server — a static-file host will not work.
 
-Worker name: **`upperlevelmusic`** (pinned in `wrangler.jsonc`).
+Worker name: **`ulm-organizing`** (pinned in `wrangler.jsonc`, and it must keep
+matching the Worker in the Cloudflare dashboard — see below).
 
 ## Where this code came from — read this first
 
@@ -28,18 +29,37 @@ Lovable edits" below).
 
 ## Option A — Cloudflare Workers Builds (auto-redeploy on push)
 
-Cloudflare dashboard → **Workers & Pages → Create → Import a repository** →
-pick `lidowe/ULM-organizing`, then:
+The Worker already exists (`ulm-organizing`, imported from this repo). Its build
+settings live at Worker → **Settings → Build**:
 
 | Field | Value |
 |---|---|
 | Root directory | `site` |
 | Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
-| Branch | whichever branch you merge this to |
+| Branch control → production branch | `main` |
 
-Root directory **must** be `site` — the repo root is an archive of older static
-HTML iterations, not this app. Redeploys on every push to that branch.
+To connect a *new* Worker from scratch instead: **Workers & Pages → Create
+application → Import a repository** → `lidowe/ULM-organizing`, then the same
+four settings.
+
+All four matter, and none is the default:
+
+- **Root directory must be `site`.** Left blank, the build runs at the repo
+  root — an archive of older static HTML iterations with no app in it, and no
+  wrangler config. It will fail.
+- **Build command must be set.** Without it nothing is compiled, so there is no
+  `.output/` for wrangler to deploy.
+- **Production branch must be `main`** (where PR #1 landed). Commits to any
+  other branch build a *preview version* instead of deploying, so a Worker
+  pointed at a `claude/…` branch quietly stops tracking real work.
+- **The Worker's name must equal `name` in `wrangler.jsonc`** — currently
+  `ulm-organizing`. Workers Builds hard-fails on a mismatch. If you ever
+  recreate the Worker under a different name, change the config to match; a
+  Worker cannot be renamed in place.
+
+The custom domains attach themselves on the first successful deploy — see
+"Custom domain" below. Every later push to `main` redeploys.
 
 ## Option B — deploy from your machine
 
@@ -55,28 +75,36 @@ generated `.output/server/wrangler.json`, so `wrangler deploy` needs no flags.
 
 ## Custom domain
 
-After the first successful deploy, the Worker is live on
-`upperlevelmusic.<your-subdomain>.workers.dev`. To attach the real domain:
+**This is automatic — there is no dashboard step.** `wrangler.jsonc` declares
+both hostnames as Custom Domains:
 
-Cloudflare dashboard → the `upperlevelmusic` Worker → **Settings → Domains &
-Routes → Add → Custom domain** → add **both**:
+```jsonc
+"routes": [
+  { "pattern": "upperlevelmusic.com",     "custom_domain": true },
+  { "pattern": "www.upperlevelmusic.com", "custom_domain": true }
+]
+```
 
-- `upperlevelmusic.com`
-- `www.upperlevelmusic.com`
+On the first successful deploy Cloudflare creates the DNS records and issues the
+certificate itself — the zone is already on the same account, so there is no
+manual DNS entry and no third-party cert. Allow a few minutes for the
+certificate to go active; until it does, HTTPS on the apex may error.
 
-The zone already lives on the same Cloudflare account, so Cloudflare creates the
-DNS records and issues the certificate itself — no manual DNS entry, no
-third-party cert. Give it a few minutes for the cert to go active.
-
-Adding `www` as a second custom domain serves the site on both hostnames. If you
-would rather have one canonical hostname, add only the apex here and create a
-**Redirect Rule** (Rules → Redirects) sending `www.upperlevelmusic.com/*` to
+`custom_domain: true` routes **all** paths of each hostname to this Worker, and
+serving both means the site answers on the bare domain and on `www`. If you'd
+rather have one canonical hostname, drop the `www` entry and add a **Redirect
+Rule** (Rules → Redirects) sending `www.upperlevelmusic.com/*` to
 `https://upperlevelmusic.com/$1` with a 301.
+
+**If the deploy fails on this step**, the usual cause is an existing CNAME
+record on the hostname — Cloudflare refuses to create a Custom Domain over one.
+Delete the stale record under DNS → Records and redeploy. Note also that
+attaching these domains takes over whatever is currently served there.
 
 ## About `wrangler.jsonc`
 
 Nitro regenerates `.output/server/wrangler.json` on every build and merges this
-file into it. Two keys are pinned there deliberately:
+file into it. Three things are set there deliberately:
 
 - **`name`** — without it, nitro auto-derives the worker name from the git repo
   and folder, which produced `lidowe-ulm-organizing-site`. That string would
@@ -84,6 +112,8 @@ file into it. Two keys are pinned there deliberately:
 - **`compatibility_date`** — nitro otherwise defaults it to *the date the build
   ran*, so the Workers runtime semantics could shift under you on a later
   rebuild.
+- **`routes`** — the two Custom Domains, so the domain attaches on deploy
+  instead of by hand in the dashboard.
 
 Do not add `main` or `assets` to that file; the build always overrides them and
 will warn.
@@ -95,6 +125,11 @@ all seven routes (`/`, `/about`, `/services`, `/studio`, `/work`, `/process`,
 `/contact`) return 200 with server-rendered HTML, all three studio JPEGs and the
 favicon serve from `/`, and `/.mcp/list-tools` responds. No `/__l5e/` paths
 remain in the rendered output.
+
+The `routes` block was added after that smoke test and confirmed by a later
+build: both Custom Domain patterns come through into
+`.output/server/wrangler.json` intact, alongside the pinned `name` and
+`compatibility_date`, with no override warnings.
 
 ## Syncing future Lovable edits
 
