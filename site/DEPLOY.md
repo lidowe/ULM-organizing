@@ -5,7 +5,8 @@ This deploys as a **Worker**, not a static Pages site. It has live server routes
 (a read-only MCP server at `/mcp` plus a `.well-known` OAuth metadata endpoint),
 so it needs a running server — a static-file host will not work.
 
-Worker name: **`upperlevelmusic`** (pinned in `wrangler.jsonc`).
+Worker name: **`ulm-organizing`** (pinned in `wrangler.jsonc`, and it must keep
+matching the Worker in the Cloudflare dashboard — see below).
 
 ## Where this code came from — read this first
 
@@ -28,32 +29,37 @@ Lovable edits" below).
 
 ## Option A — Cloudflare Workers Builds (auto-redeploy on push)
 
-Cloudflare dashboard → **Workers & Pages → Create application → Import a
-repository** → pick `lidowe/ULM-organizing`, then:
+The Worker already exists (`ulm-organizing`, imported from this repo). Its build
+settings live at Worker → **Settings → Build**:
 
 | Field | Value |
 |---|---|
-| Worker name | `upperlevelmusic` |
 | Root directory | `site` |
 | Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
-| Production branch | `main` |
+| Branch control → production branch | `main` |
 
-Three of those are load-bearing:
+To connect a *new* Worker from scratch instead: **Workers & Pages → Create
+application → Import a repository** → `lidowe/ULM-organizing`, then the same
+four settings.
 
-- **Root directory must be `site`.** The repo root is an archive of older static
-  HTML iterations, not this app.
-- **Worker name must be `upperlevelmusic`** — exactly matching `name` in
-  `wrangler.jsonc`. Workers Builds fails the build when the dashboard name and
-  the config name disagree.
-- **Production branch must be the branch this code is on**, which is now `main`
-  (merged via PR #1). Commits to any other branch build a *preview version*
-  instead of deploying, so a Worker still pointed at the original
-  `claude/cloudflare-domain-hosting-b36p1n` branch will quietly stop tracking
-  real work.
+All four matter, and none is the default:
+
+- **Root directory must be `site`.** Left blank, the build runs at the repo
+  root — an archive of older static HTML iterations with no app in it, and no
+  wrangler config. It will fail.
+- **Build command must be set.** Without it nothing is compiled, so there is no
+  `.output/` for wrangler to deploy.
+- **Production branch must be `main`** (where PR #1 landed). Commits to any
+  other branch build a *preview version* instead of deploying, so a Worker
+  pointed at a `claude/…` branch quietly stops tracking real work.
+- **The Worker's name must equal `name` in `wrangler.jsonc`** — currently
+  `ulm-organizing`. Workers Builds hard-fails on a mismatch. If you ever
+  recreate the Worker under a different name, change the config to match; a
+  Worker cannot be renamed in place.
 
 The custom domains attach themselves on the first successful deploy — see
-"Custom domain" below. Every later push to the production branch redeploys.
+"Custom domain" below. Every later push to `main` redeploys.
 
 ## Option B — deploy from your machine
 

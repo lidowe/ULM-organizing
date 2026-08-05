@@ -3,10 +3,18 @@
   // file into it. `main` and `assets` are always set by the build — don't add
   // them here or the build warns and ignores them.
   //
-  // `name` is pinned because nitro otherwise auto-derives it from the git repo
-  // and folder ("lidowe-ulm-organizing-site"), which would become the
-  // *.workers.dev hostname.
-  "name": "upperlevelmusic",
+  // `name` is pinned for two reasons. Nitro otherwise auto-derives it from the
+  // git repo and folder ("lidowe-ulm-organizing-site"), which would become the
+  // *.workers.dev hostname. More importantly, Workers Builds FAILS the build
+  // when this disagrees with the Worker's name in the Cloudflare dashboard.
+  //
+  // This must therefore match the dashboard Worker exactly. It is
+  // "ulm-organizing" because that is the default name Cloudflare assigned when
+  // the repository was imported. Renaming a Worker means deleting and
+  // recreating it, so the config matches the Worker rather than the reverse.
+  // Only the *.workers.dev address depends on this; the custom domains below
+  // are what the site is actually served on.
+  "name": "ulm-organizing",
 
   // Pinned so the Workers runtime behaviour doesn't silently shift between
   // builds — nitro defaults this to the date the build ran.
