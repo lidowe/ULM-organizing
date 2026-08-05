@@ -106,14 +106,16 @@ remain in the rendered output.
    that the three JPEGs are still in `public/`.
 4. `npm run build`, then push (Option A) or `npx wrangler deploy` (Option B).
 
-## Open content items — both in `src/lib/site-pages.ts`, both currently live
+## Content notes — both in `src/lib/site-pages.ts`, both currently live
 
-1. **Placeholder editorial block ships to production.** The studio page renders
-   a block reading "Real equipment list needed… Replace with the actual locker
-   and rack." It is visible on the built site right now. Replace with the real
-   equipment list or delete the block before pointing the domain at this.
-2. **Two-rack photo caption/alt is wrong.** `studio-racks.jpg`'s alt text and
-   caption name gear that is not in the shot (SansAmp, Chandler Germanium,
-   Ampeg, Summit MP-2A). The photo is the main channel-strip rack beside a
-   second rack of Drawmer 1968 MKII, API 2500, Tonelux Equalux and related mix
-   processors. Rewrite to match.
+1. **The "Real equipment list needed" block is intentional — leave it.** The
+   studio page renders a placeholder block saying the panels below describe
+   categories rather than named gear. This ships deliberately; showing the work
+   in progress is the editorial call, not an oversight. Do not "clean it up."
+2. **Two-rack photo caption/alt is factually wrong** — still worth fixing.
+   `studio-racks.jpg`'s alt text and caption name gear that is not in the shot
+   (SansAmp, Chandler Germanium, Ampeg, Summit MP-2A). The photo is the main
+   channel-strip rack beside a second rack of Drawmer 1968 MKII, API 2500,
+   Tonelux Equalux and related mix processors. This one isn't a placeholder,
+   it's an inaccurate description of a photo — and the alt text is what screen
+   readers announce.
