@@ -20,13 +20,41 @@
 
 import { existsSync, readFileSync, writeFileSync, cpSync, readdirSync } from "node:fs";
 import { join, resolve, basename } from "node:path";
+import { execFileSync } from "node:child_process";
 
 const SITE = resolve(import.meta.dirname, "..");
-const src = process.argv[2];
+const args = process.argv.slice(2);
+const force = args.includes("--force");
+const src = args.find((a) => !a.startsWith("--"));
 
 if (!src) {
-  console.error("usage: node scripts/sync-from-lovable.mjs <path-to-lovable-checkout>");
+  console.error("usage: node scripts/sync-from-lovable.mjs <path-to-lovable-checkout> [--force]");
   process.exit(1);
+}
+
+// This sync overwrites src/ wholesale, so it can silently revert work done
+// here since the last sync. Insisting on a clean tree means the result always
+// lands as one reviewable commit-sized diff that `git checkout .` can undo.
+if (!force) {
+  let dirty = "";
+  try {
+    dirty = execFileSync("git", ["status", "--porcelain", "--", SITE], {
+      cwd: SITE,
+      encoding: "utf8",
+    }).trim();
+  } catch {
+    // Not a git checkout — nothing to protect, carry on.
+  }
+  if (dirty) {
+    console.error(`Refusing to sync: there are uncommitted changes under site/.
+
+${dirty}
+
+This sync overwrites src/ with Lovable's copy, which would bury them with no
+way to tell what was lost. Commit or discard them first, then re-run.
+Use --force only if you intend to throw those changes away.`);
+    process.exit(1);
+  }
 }
 
 const SRC = resolve(src);
@@ -140,8 +168,13 @@ if (missing.length) {
 }
 
 console.log(`
-Next: npm run build     (confirm it compiles)
-      git add -A && git commit && push to main — Cloudflare redeploys itself.
+Next: git diff          <- READ THIS FIRST
+      npm run build     (confirm it compiles)
+      then commit and push to main — Cloudflare redeploys itself.
+
+The sync runs one way, Lovable -> here, and overwrites src/. If the diff shows
+your own recent edits being reverted, that is Lovable overwriting work it never
+had. 'git checkout -- site' undoes the whole sync.
 `);
 
 process.exit(missing.length ? 2 : 0);
