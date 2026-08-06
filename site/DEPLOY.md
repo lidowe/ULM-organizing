@@ -133,13 +133,54 @@ build: both Custom Domain patterns come through into
 
 ## Syncing future Lovable edits
 
-1. Export / pull the latest from Lovable.
-2. Copy it over `site/`, preserving `wrangler.jsonc`, and keeping
-   `package.json` → `name` and `src/lib/mcp/index.ts` → `name`/`title`
-   (Lovable resets these to `tanstack_start_ts` / `pixel-perfect-clone`).
-3. Confirm `src/lib/site-pages.ts` uses `/studio-*.jpg`, not `/__l5e/…`, and
-   that the three JPEGs are still in `public/`.
-4. `npm run build`, then push (Option A) or `npx wrangler deploy` (Option B).
+**This repo is the source of truth, not Lovable.** Lovable is a design tool
+whose output gets pulled in here; the deployed site does not depend on Lovable
+being alive (see "Leaving Lovable" below).
+
+One command:
+
+```bash
+cd site
+node scripts/sync-from-lovable.mjs ../path/to/pixel-perfect-clone
+npm run build
+```
+
+Then commit and push to `main` — Cloudflare redeploys itself.
+
+The script copies `src/` and the config files across, and re-applies every fix
+that the copy would otherwise destroy: it rewrites Lovable's preview-only
+`/__l5e/assets-v1/<uuid>/<file>` image URLs to `/<file>`, leaves `public/`,
+`wrangler.jsonc` and this file alone, and restores the MCP server's name, which
+Lovable resets to its own project name.
+
+It then checks that every image the site references actually exists in
+`public/` and **exits 2 with a WARNING listing any that don't**. That is the
+one failure mode worth watching: Lovable keeps uploaded images on its own
+servers and never commits them, so a photo added in Lovable arrives here as a
+reference to a file that isn't in the repo. Download it from the Lovable editor
+into `site/public/` under exactly the reported name. Text, layout and new pages
+need no manual step.
+
+Exit codes: `0` clean, `2` referenced images missing, `1` the path given is not
+a Lovable checkout.
+
+## Leaving Lovable
+
+Cancelling Lovable does not take the site down, by design:
+
+- The images are committed here, not hotlinked from Lovable. This is the whole
+  reason the `/__l5e/` rewrite exists — deploying Lovable's own repo would have
+  left the studio photos pointing at Lovable's servers.
+- The build depends on `@lovable.dev/vite-tanstack-config` and
+  `@lovable.dev/mcp-js`, but those are ordinary public npm packages. A cancelled
+  subscription does not remove them, and `npm install` keeps working.
+
+So the exit is simply: stop syncing. Nothing to migrate, nothing to switch off.
+
+Stripping the Lovable packages out afterwards is optional and is a real
+refactor, not a cleanup — `vite.config.ts` is built on their config wrapper, and
+the `/mcp` and `.well-known` routes come from their MCP package. Leave it alone
+unless there is a reason.
 
 ## Content notes — both in `src/lib/site-pages.ts`, both currently live
 
