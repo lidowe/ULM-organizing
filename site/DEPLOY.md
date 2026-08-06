@@ -188,10 +188,13 @@ unless there is a reason.
    studio page renders a placeholder block saying the panels below describe
    categories rather than named gear. This ships deliberately; showing the work
    in progress is the editorial call, not an oversight. Do not "clean it up."
-2. **Two-rack photo caption/alt is factually wrong** — still worth fixing.
-   `studio-racks.jpg`'s alt text and caption name gear that is not in the shot
-   (SansAmp, Chandler Germanium, Ampeg, Summit MP-2A). The photo is the main
-   channel-strip rack beside a second rack of Drawmer 1968 MKII, API 2500,
-   Tonelux Equalux and related mix processors. This one isn't a placeholder,
-   it's an inaccurate description of a photo — and the alt text is what screen
-   readers announce.
+2. **The studio photos are stand-ins.** `studio-front-rack.jpg`,
+   `studio-racks.jpg` and `studio-drums.jpg` were chosen to get the layout
+   moving, not as final images. Don't treat them as settled or write more copy
+   around them.
+
+   This is why `studio-racks.jpg`'s caption and alt text name gear that isn't in
+   the shot (SansAmp, Chandler Germanium, Ampeg, Summit MP-2A). Not worth
+   rewriting against a placeholder — but when the real photos land, the captions
+   and alt text have to be rewritten with them. Alt text is what screen readers
+   announce, so it needs to describe whatever is actually in the final frame.
