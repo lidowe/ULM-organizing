@@ -182,7 +182,19 @@ refactor, not a cleanup — `vite.config.ts` is built on their config wrapper, a
 the `/mcp` and `.well-known` routes come from their MCP package. Leave it alone
 unless there is a reason.
 
-## Content notes — both in `src/lib/site-pages.ts`, both currently live
+## Content notes
+
+**Read this before "finishing" anything.** The site is being built in public,
+live, across sessions — visible incompleteness is deliberate and runs with the
+philosophy of the work. Placeholder copy, stand-in images and unfinished
+sections are the current state on purpose, not a backlog.
+
+So: do not smooth over rough edges, fill in blanks, or replace placeholder text
+with plausible-sounding copy because it reads as unfinished. If something looks
+like an oversight, ask before changing it. Actual defects — broken links, images
+that 404, text that contradicts itself — are still worth fixing and reporting.
+
+Both notes below are in `src/lib/site-pages.ts`, and both are live right now:
 
 1. **The "Real equipment list needed" block is intentional — leave it.** The
    studio page renders a placeholder block saying the panels below describe
