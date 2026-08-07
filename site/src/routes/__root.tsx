@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
-      { name: "theme-color", content: "#0c0d0f" },
+      { name: "theme-color", content: "#0a0a0a" },
       { title: "Upper Level Music · Edward Lidow" },
       {
         name: "description",
@@ -86,20 +86,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Artist-first recording, mixing, production, vocal production and mastering at Upper Level Music in Columbia, South Carolina.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Upper Level Music" },
       { property: "og:title", content: "Upper Level Music" },
       {
         property: "og:description",
         content:
           "Artist-first recording, mixing, production, vocal production and mastering in Columbia, SC.",
       },
+      // Absolute URL required — link previews are fetched by other people's
+      // servers, which cannot resolve a root-relative path. Individual routes
+      // override og:title/og:description but inherit this image.
+      { property: "og:image", content: "https://upperlevelmusic.com/console-large.jpg" },
+      {
+        property: "og:image:alt",
+        content: "A large-format recording console in a professional control room",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "https://upperlevelmusic.com/console-large.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: siteCss },

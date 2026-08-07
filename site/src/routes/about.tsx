@@ -1,23 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/about")({
+  beforeLoad: () => {
+    throw redirect({ to: "/who-we-are" });
+  },
   head: () => ({
     meta: [
-      { title: "Edward Lidow \u00b7 About" },
-      { name: "description", content: "Musician, engineer, mixer and producer. 12 years at Hit Factory / Criteria Miami." },
-      { property: "og:title", content: "Edward Lidow \u00b7 About" },
-      { property: "og:description", content: "Musician, engineer, mixer and producer. 12 years at Hit Factory / Criteria Miami." },
+      { title: "Who We Are \u00b7 Upper Level Music" },
+      { name: "description", content: "Upper Level Music was created in 2006 by Edward Lidow." },
     ],
   }),
   component: AboutPage,
 });
 
 function AboutPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.about} />
-    </SiteLayout>
-  );
+  return null;
 }
