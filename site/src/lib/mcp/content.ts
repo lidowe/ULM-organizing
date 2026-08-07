@@ -1,4 +1,6 @@
 import { pages } from "@/lib/site-pages";
+import { CREDITS, byArtist } from "@/lib/credits";
+import { renderTokens } from "@/lib/render-tokens";
 
 export type PageSlug = keyof typeof pages;
 
@@ -16,11 +18,18 @@ export const PAGE_META: Array<{
       "Private recording studio in Columbia, South Carolina. Recording, production, vocal production, mixing and mastering.",
   },
   {
-    slug: "work",
-    path: "/work",
-    title: "Work · Selected records",
+    slug: "who-we-are",
+    path: "/who-we-are",
+    title: "Who We Are · Upper Level Music",
     description:
-      "A selected view of Edward Lidow's work across recording, mixing, production and mastering.",
+      "Upper Level Music was created in 2006 by Edward Lidow — the story, and why the studio exists.",
+  },
+  {
+    slug: "credits",
+    path: "/credits",
+    title: "Credits · Selected discography and partial credits",
+    description:
+      "Selected discography and partial credits for Edward Lidow across recording, mixing, production and mastering.",
   },
   {
     slug: "process",
@@ -44,11 +53,18 @@ export const PAGE_META: Array<{
       "Recording, production, vocal production, mixing, mastering and consultation.",
   },
   {
-    slug: "about",
-    path: "/about",
-    title: "Edward Lidow · About",
+    slug: "education",
+    path: "/education",
+    title: "Educational Services · Upper Level Music",
     description:
-      "Musician, engineer, mixer and producer. 12 years at Hit Factory / Criteria Miami.",
+      "One-on-one training in recording, mixing and studio technical work, pitched at the level you are actually at.",
+  },
+  {
+    slug: "news",
+    path: "/news",
+    title: "News and Thoughts · Upper Level Music",
+    description:
+      "Studio updates, releases, and short essays on making records.",
   },
   {
     slug: "contact",
@@ -57,6 +73,13 @@ export const PAGE_META: Array<{
     description:
       "Tell me about the record. Rough, reference, or a few sentences is enough to start.",
   },
+  {
+    slug: "reach",
+    path: "/reach",
+    title: "Contact · Upper Level Music",
+    description:
+      "Questions, press, or anything that is not a project inquiry.",
+  },
 ];
 
 export function pageSlugs(): string[] {
@@ -64,7 +87,8 @@ export function pageSlugs(): string[] {
 }
 
 export function getPageHtml(slug: string): string | undefined {
-  return (pages as Record<string, string>)[slug];
+  const html = (pages as Record<string, string>)[slug];
+  return html === undefined ? undefined : renderTokens(html);
 }
 
 const ENTITIES: Record<string, string> = {
@@ -114,34 +138,19 @@ export type Credit = {
   year: string;
   role: string;
   roleTags: string[];
+  credited: boolean;
 };
 
-/** Parse the selected-discography cards out of the Work page markup. */
+/** All discography credits, alphabetical by artist. */
 export function listCredits(): Credit[] {
-  const html = getPageHtml("work") ?? "";
-  const cards = html.match(/<article class="work-card"[\s\S]*?<\/article>/g) ?? [];
-
-  return cards.map((card) => {
-    const year = /data-year="([^"]*)"/.exec(card)?.[1] ?? "";
-    const roleTags = (/data-work-role="([^"]*)"/.exec(card)?.[1] ?? "")
-      .split(/\s+/)
-      .filter(Boolean);
-    const artistRaw = /<div class="artist">([\s\S]*?)<\/div>/.exec(card)?.[1] ?? "";
-    const title = decodeEntities(
-      (/<h3>([\s\S]*?)<\/h3>/.exec(card)?.[1] ?? "").replace(/<[^>]+>/g, ""),
-    ).trim();
-    const role = decodeEntities(
-      (/<div class="role">([\s\S]*?)<\/div>/.exec(card)?.[1] ?? "").replace(
-        /<[^>]+>/g,
-        "",
-      ),
-    ).trim();
-    const artist = decodeEntities(artistRaw.replace(/<[^>]+>/g, ""))
-      .split("·")[0]!
-      .trim();
-
-    return { artist, title, year, role, roleTags };
-  });
+  return byArtist(CREDITS).map((c) => ({
+    artist: c.artist,
+    title: c.title ?? "",
+    year: c.year ?? "",
+    role: c.role,
+    roleTags: c.tags,
+    credited: c.credited,
+  }));
 }
 
 export const CONTACT = {

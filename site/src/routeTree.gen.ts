@@ -12,10 +12,15 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CreditsRouteImport } from './routes/credits'
+import { Route as EducationRouteImport } from './routes/education'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as NewsRouteImport } from './routes/news'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as ReachRouteImport } from './routes/reach'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as StudioRouteImport } from './routes/studio'
+import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
@@ -36,14 +41,34 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CreditsRoute = CreditsRouteImport.update({
+  id: '/credits',
+  path: '/credits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EducationRoute = EducationRouteImport.update({
+  id: '/education',
+  path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const McpRoute = McpRouteImport.update({
   id: '/mcp',
   path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReachRoute = ReachRouteImport.update({
+  id: '/reach',
+  path: '/reach',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ServicesRoute = ServicesRouteImport.update({
@@ -54,6 +79,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhoWeAreRoute = WhoWeAreRouteImport.update({
+  id: '/who-we-are',
+  path: '/who-we-are',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkRoute = WorkRouteImport.update({
@@ -84,10 +114,15 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/credits': typeof CreditsRoute
+  '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/studio': typeof StudioRoute
+  '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -97,10 +132,15 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/credits': typeof CreditsRoute
+  '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/studio': typeof StudioRoute
+  '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -111,10 +151,15 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/credits': typeof CreditsRoute
+  '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/studio': typeof StudioRoute
+  '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -126,10 +171,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/credits'
+    | '/education'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/reach'
     | '/services'
     | '/studio'
+    | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -139,10 +189,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/credits'
+    | '/education'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/reach'
     | '/services'
     | '/studio'
+    | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -152,10 +207,15 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/contact'
+    | '/credits'
+    | '/education'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/reach'
     | '/services'
     | '/studio'
+    | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -166,10 +226,15 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  CreditsRoute: typeof CreditsRoute
+  EducationRoute: typeof EducationRoute
   McpRoute: typeof McpRoute
+  NewsRoute: typeof NewsRoute
   ProcessRoute: typeof ProcessRoute
+  ReachRoute: typeof ReachRoute
   ServicesRoute: typeof ServicesRoute
   StudioRoute: typeof StudioRoute
+  WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -199,6 +264,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/credits': {
+      id: '/credits'
+      path: '/credits'
+      fullPath: '/credits'
+      preLoaderRoute: typeof CreditsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/education': {
+      id: '/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/mcp': {
       id: '/mcp'
       path: '/mcp'
@@ -206,11 +285,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/process': {
       id: '/process'
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reach': {
+      id: '/reach'
+      path: '/reach'
+      fullPath: '/reach'
+      preLoaderRoute: typeof ReachRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/services': {
@@ -225,6 +318,13 @@ declare module '@tanstack/react-router' {
       path: '/studio'
       fullPath: '/studio'
       preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/who-we-are': {
+      id: '/who-we-are'
+      path: '/who-we-are'
+      fullPath: '/who-we-are'
+      preLoaderRoute: typeof WhoWeAreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work': {
@@ -262,10 +362,15 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  CreditsRoute: CreditsRoute,
+  EducationRoute: EducationRoute,
   McpRoute: McpRoute,
+  NewsRoute: NewsRoute,
   ProcessRoute: ProcessRoute,
+  ReachRoute: ReachRoute,
   ServicesRoute: ServicesRoute,
   StudioRoute: StudioRoute,
+  WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:

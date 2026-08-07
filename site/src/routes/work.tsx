@@ -1,23 +1,18 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/work")({
+  beforeLoad: () => {
+    throw redirect({ to: "/credits" });
+  },
   head: () => ({
     meta: [
-      { title: "Work \u00b7 Selected records" },
-      { name: "description", content: "A selected view of Edward Lidow's work across recording, mixing, production and mastering." },
-      { property: "og:title", content: "Work \u00b7 Selected records" },
-      { property: "og:description", content: "A selected view of Edward Lidow's work across recording, mixing, production and mastering." },
+      { title: "Credits \u00b7 Upper Level Music" },
+      { name: "description", content: "Selected discography and partial credits for Edward Lidow." },
     ],
   }),
   component: WorkPage,
 });
 
 function WorkPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.work} />
-    </SiteLayout>
-  );
+  return null;
 }

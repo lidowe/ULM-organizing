@@ -1,7 +1,8 @@
-// Shared behaviors from the original static site: header scroll shadow,
-// menu dialog, IntersectionObserver reveals, work filter, project form,
-// resonance canvas. Call once after each route renders; each block is a
-// no-op if its target elements are absent on the current page.
+// Shared behaviors: header scroll shadow, menu dialog, IntersectionObserver
+// reveals, work filter, project form, click-to-reveal sections. Call once
+// after each route renders; each block is a no-op if its target elements are
+// absent on the current page.
+
 
 export function initSiteBehaviors(): () => void {
   const cleanups: Array<() => void> = [];
@@ -14,15 +15,21 @@ export function initSiteBehaviors(): () => void {
   cleanups.push(() => window.removeEventListener("scroll", setHeader));
 
   const dialog = document.querySelector<HTMLDialogElement>("[data-menu-dialog]");
+  const menuBtn = document.querySelector<HTMLButtonElement>("[data-open-menu]");
+  const setMenuExpanded = (expanded: boolean) => {
+    menuBtn?.setAttribute("aria-expanded", expanded ? "true" : "false");
+  };
   const openMenu = () => {
     if (!dialog) return;
     if (typeof dialog.showModal === "function") dialog.showModal();
     else dialog.setAttribute("open", "");
+    setMenuExpanded(true);
   };
   const closeMenu = () => {
     if (!dialog) return;
     if (typeof dialog.close === "function") dialog.close();
     else dialog.removeAttribute("open");
+    setMenuExpanded(false);
   };
   document.querySelectorAll("[data-open-menu]").forEach((btn) => {
     btn.addEventListener("click", openMenu);
@@ -118,118 +125,91 @@ export function initSiteBehaviors(): () => void {
     cleanups.push(() => form.removeEventListener("submit", onSubmit));
   }
 
-  const canvas = document.querySelector<HTMLCanvasElement>("[data-resonance]");
-  if (canvas) {
-    const ctx = canvas.getContext("2d", { alpha: true })!;
-    let w = 0,
-      h = 0,
-      dpr = 1,
-      mouseX = 0.68,
-      mouseY = 0.35,
-      raf = 0;
-    const resize = () => {
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.clientWidth;
-      h = canvas.clientHeight;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    };
-    const onMove = (e: PointerEvent) => {
-      mouseX = e.clientX / Math.max(innerWidth, 1);
-      mouseY = e.clientY / Math.max(innerHeight, 1);
-    };
-    window.addEventListener("resize", resize, { passive: true });
-    window.addEventListener("pointermove", onMove, { passive: true });
-    resize();
-    const draw = (t: number) => {
-      ctx.clearRect(0, 0, w, h);
-      const cx = w * (0.64 + (mouseX - 0.5) * 0.06);
-      const cy = h * (0.35 + (mouseY - 0.5) * 0.05);
-      const rings = Math.max(11, Math.min(22, Math.floor(w / 70)));
-      for (let r = 0; r < rings; r++) {
-        const p = r / (rings - 1);
-        const base = Math.min(w, h) * (0.08 + p * 0.78);
-        ctx.beginPath();
-        const steps = 170;
-        for (let i = 0; i <= steps; i++) {
-          const a = (i / steps) * Math.PI * 2;
-          const wave =
-            Math.sin(a * 3 + t * 0.00022 + r * 0.47) * 7 * (1 - p) +
-            Math.sin(a * 7 - t * 0.00013 + r) * 3.4;
-          const ovalX = base * (1.12 + 0.05 * Math.sin(r * 0.5));
-          const ovalY = base * (0.55 + 0.04 * Math.cos(r * 0.7));
-          const x =
-            cx + Math.cos(a) * (ovalX + wave) + Math.sin(a * 2 + t * 0.0001) * 4;
-          const y = cy + Math.sin(a) * (ovalY + wave * 0.45);
-          if (i === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        const alpha = 0.055 + (1 - p) * 0.08;
-        ctx.strokeStyle = `rgba(200,208,216,${alpha})`;
-        ctx.lineWidth = 0.65;
-        ctx.stroke();
-      }
-      const grad = ctx.createRadialGradient(
-        cx,
-        cy,
-        0,
-        cx,
-        cy,
-        Math.min(w, h) * 0.16,
-      );
-      grad.addColorStop(0, "rgba(240,241,243,.10)");
-      grad.addColorStop(0.35, "rgba(200,208,216,.05)");
-      grad.addColorStop(1, "rgba(12,13,15,0)");
-      ctx.fillStyle = grad;
-      ctx.fillRect(0, 0, w, h);
-      if (!reduced) raf = requestAnimationFrame(draw);
-    };
-    draw(performance.now());
-    if (reduced && raf) cancelAnimationFrame(raf);
-    cleanups.push(() => {
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("pointermove", onMove);
-      if (raf) cancelAnimationFrame(raf);
-    });
-  }
 
-  const deck = document.querySelector<HTMLElement>("[data-tape-deck]");
-  if (deck && !reduced) {
-    const reels = [...deck.querySelectorAll<HTMLElement>(".reel")];
-    const counter = deck.querySelector<HTMLElement>("[data-tape-count]");
-    let angle = 0,
-      velocity = 0.25,
-      lastY = window.scrollY,
-      deckRaf = 0;
-    const onScroll = () => {
-      const y = window.scrollY;
-      velocity += (y - lastY) * 0.06;
-      lastY = y;
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    const tick = () => {
-      velocity = velocity * 0.94 + 0.25 * 0.06;
-      angle += velocity;
-      reels.forEach((reel, i) => {
-        reel.style.transform = `rotate(${angle * (i === 0 ? 1 : 1.28)}deg)`;
-      });
-      if (counter) {
-        const total = Math.max(
-          document.body.scrollHeight - window.innerHeight,
-          1,
-        );
-        const pct = Math.min(Math.max(window.scrollY / total, 0), 1);
-        const secs = Math.round(pct * 214);
-        counter.textContent = `${String(Math.floor(secs / 60)).padStart(2, "0")}:${String(secs % 60).padStart(2, "0")}`;
+  // Click-to-reveal sections (Who We Are). One panel open at a time per group.
+  const accordions = [
+    ...document.querySelectorAll<HTMLElement>("[data-accordion]"),
+  ];
+  if (accordions.length) {
+    const allTriggers: HTMLButtonElement[] = [];
+    const panelOf = (trigger: HTMLElement) =>
+      document.getElementById(trigger.getAttribute("aria-controls") ?? "");
+
+    const setOpen = (trigger: HTMLButtonElement, open: boolean) => {
+      const panel = panelOf(trigger);
+      trigger.setAttribute("aria-expanded", open ? "true" : "false");
+      trigger.closest("[data-accordion-item]")?.classList.toggle("open", open);
+      if (!panel) return;
+      panel.style.height = open ? `${panel.scrollHeight}px` : "0px";
+      if (open) {
+        const done = () => {
+          if (trigger.getAttribute("aria-expanded") === "true")
+            panel.style.height = "auto";
+          panel.removeEventListener("transitionend", done);
+        };
+        panel.addEventListener("transitionend", done);
       }
-      deckRaf = requestAnimationFrame(tick);
     };
-    tick();
-    cleanups.push(() => {
-      window.removeEventListener("scroll", onScroll);
-      cancelAnimationFrame(deckRaf);
+
+    accordions.forEach((group) => {
+      const triggers = [
+        ...group.querySelectorAll<HTMLButtonElement>(".wwa-trigger"),
+      ];
+      triggers.forEach((trigger) => {
+        allTriggers.push(trigger);
+        const panel = panelOf(trigger);
+        const startOpen = trigger.getAttribute("aria-expanded") === "true";
+        if (panel) {
+          panel.style.height = startOpen ? "auto" : "0px";
+          trigger
+            .closest("[data-accordion-item]")
+            ?.classList.toggle("open", startOpen);
+        }
+        const onClick = () => {
+          const isOpen = trigger.getAttribute("aria-expanded") === "true";
+          if (!isOpen) {
+            allTriggers.forEach((other) => {
+              if (
+                other !== trigger &&
+                other.getAttribute("aria-expanded") === "true"
+              ) {
+                const otherPanel = panelOf(other);
+                if (otherPanel)
+                  otherPanel.style.height = `${otherPanel.scrollHeight}px`;
+                requestAnimationFrame(() => setOpen(other, false));
+              }
+            });
+            requestAnimationFrame(() => {
+              setOpen(trigger, true);
+              const top = trigger.getBoundingClientRect().top;
+              if (top < 80 || top > window.innerHeight * 0.55) {
+                window.scrollBy({
+                  top: top - 110,
+                  behavior: reduced ? "auto" : "smooth",
+                });
+              }
+            });
+          } else {
+            const p = panelOf(trigger);
+            if (p) p.style.height = `${p.scrollHeight}px`;
+            requestAnimationFrame(() => setOpen(trigger, false));
+          }
+        };
+        trigger.addEventListener("click", onClick);
+        cleanups.push(() => trigger.removeEventListener("click", onClick));
+      });
     });
+
+    const onResize = () => {
+      allTriggers.forEach((trigger) => {
+        if (trigger.getAttribute("aria-expanded") === "true") {
+          const panel = panelOf(trigger);
+          if (panel) panel.style.height = "auto";
+        }
+      });
+    };
+    window.addEventListener("resize", onResize);
+    cleanups.push(() => window.removeEventListener("resize", onResize));
   }
 
   return () => cleanups.forEach((fn) => fn());

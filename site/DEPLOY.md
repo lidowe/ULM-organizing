@@ -133,24 +133,84 @@ build: both Custom Domain patterns come through into
 
 ## Syncing future Lovable edits
 
-1. Export / pull the latest from Lovable.
-2. Copy it over `site/`, preserving `wrangler.jsonc`, and keeping
-   `package.json` → `name` and `src/lib/mcp/index.ts` → `name`/`title`
-   (Lovable resets these to `tanstack_start_ts` / `pixel-perfect-clone`).
-3. Confirm `src/lib/site-pages.ts` uses `/studio-*.jpg`, not `/__l5e/…`, and
-   that the three JPEGs are still in `public/`.
-4. `npm run build`, then push (Option A) or `npx wrangler deploy` (Option B).
+**This repo is the source of truth, not Lovable.** Lovable is a design tool
+whose output gets pulled in here; the deployed site does not depend on Lovable
+being alive (see "Leaving Lovable" below).
 
-## Content notes — both in `src/lib/site-pages.ts`, both currently live
+One command:
 
-1. **The "Real equipment list needed" block is intentional — leave it.** The
-   studio page renders a placeholder block saying the panels below describe
-   categories rather than named gear. This ships deliberately; showing the work
-   in progress is the editorial call, not an oversight. Do not "clean it up."
-2. **Two-rack photo caption/alt is factually wrong** — still worth fixing.
-   `studio-racks.jpg`'s alt text and caption name gear that is not in the shot
-   (SansAmp, Chandler Germanium, Ampeg, Summit MP-2A). The photo is the main
-   channel-strip rack beside a second rack of Drawmer 1968 MKII, API 2500,
-   Tonelux Equalux and related mix processors. This one isn't a placeholder,
-   it's an inaccurate description of a photo — and the alt text is what screen
-   readers announce.
+```bash
+cd site
+node scripts/sync-from-lovable.mjs ../path/to/pixel-perfect-clone
+npm run build
+```
+
+Then commit and push to `main` — Cloudflare redeploys itself.
+
+The script copies `src/` and the config files across, and re-applies every fix
+that the copy would otherwise destroy: it rewrites Lovable's preview-only
+`/__l5e/assets-v1/<uuid>/<file>` image URLs to `/<file>`, leaves `public/`,
+`wrangler.jsonc` and this file alone, and restores the MCP server's name, which
+Lovable resets to its own project name.
+
+It then checks that every image the site references actually exists in
+`public/` and **exits 2 with a WARNING listing any that don't**. That is the
+one failure mode worth watching: Lovable keeps uploaded images on its own
+servers and never commits them, so a photo added in Lovable arrives here as a
+reference to a file that isn't in the repo. Download it from the Lovable editor
+into `site/public/` under exactly the reported name. Text, layout and new pages
+need no manual step.
+
+Exit codes: `0` clean, `2` referenced images missing, `1` the path given is not
+a Lovable checkout.
+
+## Leaving Lovable
+
+Cancelling Lovable does not take the site down, by design:
+
+- The images are committed here, not hotlinked from Lovable. This is the whole
+  reason the `/__l5e/` rewrite exists — deploying Lovable's own repo would have
+  left the studio photos pointing at Lovable's servers.
+- The build depends on `@lovable.dev/vite-tanstack-config` and
+  `@lovable.dev/mcp-js`, but those are ordinary public npm packages. A cancelled
+  subscription does not remove them, and `npm install` keeps working.
+
+So the exit is simply: stop syncing. Nothing to migrate, nothing to switch off.
+
+Stripping the Lovable packages out afterwards is optional and is a real
+refactor, not a cleanup — `vite.config.ts` is built on their config wrapper, and
+the `/mcp` and `.well-known` routes come from their MCP package. Leave it alone
+unless there is a reason.
+
+## Content notes
+
+**Read this before "finishing" anything.** The site is being built in public,
+live, across sessions — visible incompleteness is deliberate and runs with the
+philosophy of the work. Placeholder copy, stand-in images and unfinished
+sections are the current state on purpose, not a backlog.
+
+So: do not smooth over rough edges, fill in blanks, or replace placeholder text
+with plausible-sounding copy because it reads as unfinished. If something looks
+like an oversight, ask before changing it. Actual defects — broken links, images
+that 404, text that contradicts itself — are still worth fixing and reporting.
+
+What that does **not** license is shipping editorial to-dos. The redesign
+carried eight `needs-content` blocks — notes addressed to the owner, rendering
+publicly. Three actively worked against the site: one told visitors every price
+was a working draft, one described the client roster as "largely unverifiable"
+and possibly inflated, and one named a specific artist credit as unconfirmed.
+All eight were removed at the owner's direction. **Do not reintroduce them.**
+
+The distinction that matters: *"The first posts are on the way"* is transparency
+and belongs on the page. *"Confirm the hourly rate and deposit terms before
+publishing"* is a note to self that leaked. Both look like placeholder text; only
+one is addressed to the reader.
+
+Where things stand now:
+
+- The studio page carries the real equipment list — 103 microphones across 64
+  models, preamps and dynamics grouped by topology. The old "Real equipment list
+  needed" placeholder is gone.
+- The 40 photographs are the owner's own. Earlier stand-ins are superseded.
+- `news` and `education` are openly unfinished on purpose, and say so in their
+  own voice. Leave them that way until the owner fills them in.
