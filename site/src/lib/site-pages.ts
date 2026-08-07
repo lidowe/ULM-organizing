@@ -85,14 +85,6 @@ export const pages: Record<string, string> = {
         <p>Nothing fully replaces being in the same space. I trade some of that for access, and I am honest about it.</p>
       </div>
     </details>
-    <details class="fold">
-      <summary><span class="fold-k">Security and confidentiality</span><span class="fold-hint">Read</span></summary>
-      <div class="fold-body">
-        <p>All work happens on the same secure system here at Upper Level Music. When a project takes me to you, the work and the intellectual property still live on ULM drives &mdash; I insist on that, because it is the only way to know exactly where your material is.</p>
-        <p>Releasing any file requires your signed approval. Nobody sees or hears a work in progress without your express permission.</p>
-        <p>In thirty years, no file I have been responsible for has been leaked or accessed without authorization.</p>
-      </div>
-    </details>
   </div>
 </section>
 
