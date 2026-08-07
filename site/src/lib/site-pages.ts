@@ -27,7 +27,7 @@ export const pages: Record<string, string> = {
 <section class="rack-unit stance-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>What this is</span></div>
-    <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. I am a major-label studio veteran offering a different approach &mdash; and when someone else is better suited to the task, I bring them in from a team I trust.</p>
+    <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. It has been my company since I started engineering professionally, and most of the work is still mine &mdash; so you have one consistent point of contact. As it has grown I have brought in people I trust who share the same vision, and we divide work by who genuinely specializes in what you are asking for.</p>
     <div class="stance-body">
       <p>Doesn&rsquo;t it feel like 90% of getting your art heard involves anything but making music? Constant self-marketing, streaming services that don&rsquo;t pay, and learning to record at a professional level just to keep up.</p>
       <p>Upper Level Music is here for that last part &mdash; the gap between the major label recording studio and the growing home studio. Being in control of your record is the one place a musician actually wants control.</p>
@@ -83,6 +83,14 @@ export const pages: Record<string, string> = {
       <div class="fold-body">
         <p>Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets me work with artists anywhere, on any schedule.</p>
         <p>Nothing fully replaces being in the same space. I trade some of that for access, and I am honest about it.</p>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span class="fold-k">Security and confidentiality</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>All work happens on the same secure system here at Upper Level Music. When a project takes me to you, the work and the intellectual property still live on ULM drives &mdash; I insist on that, because it is the only way to know exactly where your material is.</p>
+        <p>Releasing any file requires your signed approval. Nobody sees or hears a work in progress without your express permission.</p>
+        <p>In thirty years, no file I have been responsible for has been leaked or accessed without authorization.</p>
       </div>
     </details>
   </div>
