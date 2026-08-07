@@ -19,6 +19,7 @@ import { Route as NewsRouteImport } from './routes/news'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ReachRouteImport } from './routes/reach'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
@@ -76,6 +77,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
@@ -121,6 +127,7 @@ export interface FileRoutesByFullPath {
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
@@ -139,6 +146,7 @@ export interface FileRoutesByTo {
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
@@ -158,6 +166,7 @@ export interface FileRoutesById {
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
@@ -178,6 +187,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/reach'
     | '/services'
+    | '/sitemap.xml'
     | '/studio'
     | '/who-we-are'
     | '/work'
@@ -196,6 +206,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/reach'
     | '/services'
+    | '/sitemap.xml'
     | '/studio'
     | '/who-we-are'
     | '/work'
@@ -214,6 +225,7 @@ export interface FileRouteTypes {
     | '/process'
     | '/reach'
     | '/services'
+    | '/sitemap.xml'
     | '/studio'
     | '/who-we-are'
     | '/work'
@@ -233,6 +245,7 @@ export interface RootRouteChildren {
   ProcessRoute: typeof ProcessRoute
   ReachRoute: typeof ReachRoute
   ServicesRoute: typeof ServicesRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StudioRoute: typeof StudioRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
@@ -313,6 +326,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/studio': {
       id: '/studio'
       path: '/studio'
@@ -369,6 +389,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProcessRoute: ProcessRoute,
   ReachRoute: ReachRoute,
   ServicesRoute: ServicesRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   StudioRoute: StudioRoute,
   WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,

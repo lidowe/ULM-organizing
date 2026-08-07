@@ -1,0 +1,20 @@
+export default `
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Services &amp; rates</div><h1 class="page-title">Tell me where the record is stuck.</h1><p class="page-deck">Book one stage, bring one problem, or scope the whole record. No request is too small.</p></div></section>
+<section class="section"><div class="wrap services-stack">
+  <article class="service-row reveal" id="recording"><h2>Recording &amp; tracking</h2><div class="service-copy"><p>Overdubs, vocals, instruments, session engineering. Remote or in the room you already work in.</p><p>Mic and chain get picked for the source in front of us, not from a template.</p></div><div class="service-price">$65–$100 / hr<small>day rates from $500</small></div></article>
+  <article class="service-row reveal"><h2>Vocal production &amp; editing</h2><div class="service-copy"><p>Direction, comping, tuning to taste, editing, mix prep.</p><p>Range reflects scope — a clean comp versus a dense stack.</p></div><div class="service-price">$150–$400 / song<small>based on scope</small></div></article>
+  <article class="service-row reveal" id="mixing"><h2>Mixing</h2><div class="service-copy"><p>Analog and digital together. Balances, automation, and delivery in the formats you need.</p><p>Track count, editing, alternates, and turnaround affect the quote.</p></div><div class="service-price">$400–$900 / song<small>typical independent range</small></div></article>
+  <article class="service-row reveal" id="finish"><h2>Mastering</h2><div class="service-copy"><p>Final tone, level, consistency, release-ready delivery.</p><p>Albums and EPs quoted as a body of work.</p></div><div class="service-price">$100–$175 / song<small>release packages quoted</small></div></article>
+  <article class="service-row reveal" id="production"><h2>Production &amp; arrangement</h2><div class="service-copy"><p>Song development, arrangement, parts, programming.</p><p>One song or an ongoing role, quoted by the assignment rather than the hour.</p></div><div class="service-price">Project based<small>personalized quote</small></div></article>
+  <article class="service-row reveal"><h2>Full-project development</h2><div class="service-copy"><p>Early production through final delivery, with the same person on it the whole way.</p><p>My role shifts stage to stage &mdash; producer, engineer, mixer, advisor &mdash; without handing the record to someone new.</p></div><div class="service-price">Project based<small>multi-stage scope</small></div></article>
+  <article class="service-row reveal"><h2>Consultation &amp; studio systems</h2><div class="service-copy"><p>Session strategy, mix diagnosis, signal flow, wiring, gain structure, troubleshooting.</p></div><div class="service-price">$100–$150 / hr<small>remote or by appointment</small></div></article>
+  <div class="rate-panel reveal"><h2>Rates are a starting point, not a judgment on the project.</h2><div><p>Independent budgets are real. Where scope allows, I work on a sliding scale.</p><div class="needs-content"><strong>Confirm rates before publishing</strong>Every price on this page is a working draft. Confirm the hourly, per-song and day rates, deposit terms, revision policy and what a day rate actually includes.</div><p>Ask. If the work is interesting and the scope is clear, the number is negotiable.</p></div></div>
+</div></section>
+<section class="section">
+  <div class="wrap photo-set two reveal">
+    <figure><img src="{{IMG:guitars-rack-wall}}" alt="A rack of electric and acoustic guitars against the studio wall" loading="lazy" /><figcaption>Instruments on hand</figcaption></figure>
+    <figure><img src="{{IMG:pedalboard-overhead}}" alt="A large pedalboard photographed from overhead" loading="lazy" /><figcaption>Tone building</figcaption></figure>
+  </div>
+</section>
+<section class="cta-section"><div class="wrap cta-inner"><div class="reveal"><h2>You can start now.</h2><p>Any topic, any questions, thoughts, files, or hit me up just to talk shop. The industry is changing and it's your lead.</p></div><a class="btn primary reveal" href="/contact">Talk about the project</a></div></section>
+`;
