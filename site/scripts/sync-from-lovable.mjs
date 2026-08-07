@@ -89,19 +89,22 @@ for (const entry of COPY) {
 // Images arrive one of two ways, and never in public/ — Lovable leaves that
 // holding only favicon.ico.
 //
-//   exported-assets/  a zip export ships the real image files here. This is
-//                     the authoritative copy for that export, so it wins over
-//                     what is already in public/.
+//   assets-export/    a zip export ships the real image files here, by their
+//   exported-assets/  original filenames. Lovable has used both names, so try
+//                     each. This is the authoritative copy for that export, so
+//                     it wins over what is already in public/.
 //   public/           a git checkout ships nothing useful, but copy anything
 //                     genuinely new and never delete ours.
-const fromExport = join(SRC, "exported-assets");
-if (existsSync(fromExport)) {
+for (const dir of ["assets-export", "exported-assets"]) {
+  const fromExport = join(SRC, dir);
+  if (!existsSync(fromExport)) continue;
   let copied = 0;
   for (const file of readdirSync(fromExport)) {
     cpSync(join(fromExport, file), join(SITE, "public", file), { force: true });
     copied++;
   }
-  notes.push(`copied ${copied} image(s) from exported-assets/ into public/`);
+  notes.push(`copied ${copied} image(s) from ${dir}/ into public/`);
+  break;
 }
 
 const upstreamPublic = join(SRC, "public");
