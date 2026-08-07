@@ -1,86 +1,23 @@
 import { pages } from "@/lib/site-pages";
 import { CREDITS, byArtist } from "@/lib/credits";
 import { renderTokens } from "@/lib/render-tokens";
+import { PAGES } from "@/lib/seo";
 
 export type PageSlug = keyof typeof pages;
 
+/** Page index for MCP clients, derived from the same table that feeds
+ * /sitemap.xml and every page head, so the three cannot drift apart. */
 export const PAGE_META: Array<{
   slug: string;
   path: string;
   title: string;
   description: string;
-}> = [
-  {
-    slug: "index",
-    path: "/",
-    title: "Home · Upper Level Music · Edward Lidow",
-    description:
-      "Private recording studio in Columbia, South Carolina. Recording, production, vocal production, mixing and mastering.",
-  },
-  {
-    slug: "who-we-are",
-    path: "/who-we-are",
-    title: "Who We Are · Upper Level Music",
-    description:
-      "Upper Level Music was created in 2006 by Edward Lidow — the story, and why the studio exists.",
-  },
-  {
-    slug: "credits",
-    path: "/credits",
-    title: "Credits · Selected discography and partial credits",
-    description:
-      "Selected discography and partial credits for Edward Lidow across recording, mixing, production and mastering.",
-  },
-  {
-    slug: "process",
-    path: "/process",
-    title: "Process · How the work moves",
-    description:
-      "How a project moves from first conversation to a finished record at Upper Level Music.",
-  },
-  {
-    slug: "studio",
-    path: "/studio",
-    title: "Studio · The room and the gear",
-    description:
-      "The private studio in Columbia, SC — room, monitoring, and instruments.",
-  },
-  {
-    slug: "services",
-    path: "/services",
-    title: "Services · Recording, mixing, production, mastering",
-    description:
-      "Recording, production, vocal production, mixing, mastering and consultation.",
-  },
-  {
-    slug: "education",
-    path: "/education",
-    title: "Educational Services · Upper Level Music",
-    description:
-      "One-on-one training in recording, mixing and studio technical work, pitched at the level you are actually at.",
-  },
-  {
-    slug: "news",
-    path: "/news",
-    title: "News and Thoughts · Upper Level Music",
-    description:
-      "Studio updates, releases, and short essays on making records.",
-  },
-  {
-    slug: "contact",
-    path: "/contact",
-    title: "Start a project · Upper Level Music",
-    description:
-      "Tell me about the record. Rough, reference, or a few sentences is enough to start.",
-  },
-  {
-    slug: "reach",
-    path: "/reach",
-    title: "Contact · Upper Level Music",
-    description:
-      "Questions, press, or anything that is not a project inquiry.",
-  },
-];
+}> = PAGES.map(({ slug, path, title, description }) => ({
+  slug,
+  path,
+  title,
+  description,
+}));
 
 export function pageSlugs(): string[] {
   return PAGE_META.map((p) => p.slug);

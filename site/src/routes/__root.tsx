@@ -79,11 +79,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#0a0a0a" },
-      { title: "Upper Level Music · Edward Lidow" },
+      { title: "Upper Level Music · Recording, Mixing and Production" },
       {
         name: "description",
         content:
-          "Artist-first recording, mixing, production, vocal production and mastering at Upper Level Music in Columbia, South Carolina.",
+          "Major-label studio veterans offering recording, production, vocal production, mixing and mastering — remote or in person.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Upper Level Music" },
@@ -91,31 +91,53 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Artist-first recording, mixing, production, vocal production and mastering in Columbia, SC.",
-      },
-      // Absolute URL required — link previews are fetched by other people's
-      // servers, which cannot resolve a root-relative path. Individual routes
-      // override og:title/og:description but inherit this image.
-      { property: "og:image", content: "https://upperlevelmusic.com/console-large.jpg" },
-      {
-        property: "og:image:alt",
-        content: "A large-format recording console in a professional control room",
+          "Major-label studio veterans offering recording, production, vocal production, mixing and mastering.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "https://upperlevelmusic.com/console-large.jpg" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: siteCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "MusicGroup",
+          name: "Upper Level Music",
+          alternateName: "Upper Level Music Creative",
+          url: "https://upperlevelmusic.com",
+          email: "edwardlidow@upperlevelmusic.com",
+          foundingDate: "2006",
+          founder: { "@type": "Person", name: "Edward Lidow" },
+          areaServed: "Worldwide",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Columbia",
+            addressRegion: "SC",
+            addressCountry: "US",
+          },
+          knowsAbout: [
+            "Recording",
+            "Production",
+            "Vocal production",
+            "Mixing",
+            "Mastering",
+            "Audio engineering education",
+          ],
+        }),
+      },
+    ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
