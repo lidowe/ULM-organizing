@@ -118,6 +118,43 @@ if (existsSync(upstreamPublic)) {
   }
 }
 
+// --- Fix 0: rebuild any asset pointer the export forgot to ship -------------
+// The app resolves {{IMG:name}} through src/assets/<name>.<ext>.asset.json, and
+// photo() returns "" when there is no pointer — so a missing pointer renders
+// <img src=""> even though the image file itself is sitting right there in
+// public/. Export 4 shipped 86 image files and a manifest declaring 86
+// pointers, but only 65 pointer files, silently breaking ten photos.
+//
+// The manifest is authoritative, so reconcile against it.
+const manifestPath = join(SRC, "assets-export-manifest.json");
+if (existsSync(manifestPath)) {
+  const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
+  let rebuilt = 0;
+  for (const asset of manifest.assets ?? []) {
+    const rel = asset.asset_json;
+    if (!rel) continue;
+    const target = join(SITE, rel);
+    if (existsSync(target)) continue;
+    writeFileSync(
+      target,
+      JSON.stringify(
+        {
+          version: 1,
+          asset_id: asset.asset_id,
+          url: `/__l5e/assets-v1/${asset.asset_id}/${asset.filename}`,
+          original_filename: asset.filename,
+          content_type: asset.content_type,
+          size: asset.size,
+        },
+        null,
+        2,
+      ) + "\n",
+    );
+    rebuilt++;
+  }
+  if (rebuilt) notes.push(`rebuilt ${rebuilt} asset pointer(s) the export omitted`);
+}
+
 // --- Fix 1: Lovable's preview-only asset URLs -------------------------------
 // /__l5e/assets-v1/<uuid>/studio-racks.jpg  ->  /studio-racks.jpg
 const L5E = /\/__l5e\/assets-v1\/[0-9a-f-]+\/([^"'\\\s)]+)/g;
@@ -172,11 +209,43 @@ for (const name of referenced) {
   if (!existsSync(join(SITE, "public", basename(name)))) missing.push(name);
 }
 
+// Every {{IMG:name}} token has to resolve through a pointer in src/assets.
+// Without one, photo() yields "" and the page ships <img src="">, which no
+// build step and no file-existence check will catch — the image file is
+// present, it is the pointer that is absent.
+const pointers = new Set(
+  readdirSync(join(SITE, "src", "assets"))
+    .filter((f) => f.endsWith(".asset.json"))
+    .map((f) => f.replace(/\.[a-z0-9]+\.asset\.json$/i, "")),
+);
+const unresolved = [];
+for (const file of walk(join(SITE, "src"))) {
+  for (const m of readFileSync(file, "utf8").matchAll(/\{\{IMG:([a-z0-9-]+)\}\}/g)) {
+    // "name" is the metavariable in the doc comments that explain the syntax,
+    // not a real photo.
+    if (m[1] === "name") continue;
+    if (!pointers.has(m[1])) unresolved.push(m[1]);
+  }
+}
+const unresolvedUnique = [...new Set(unresolved)];
+
 // --- Report ----------------------------------------------------------------
 console.log(`\nSynced from ${SRC}`);
 console.log(`  rewrote ${rewritten} Lovable asset URL(s) to root-relative paths`);
 console.log(`  ${referenced.size} image(s) referenced by the site`);
+console.log(`  ${pointers.size} asset pointer(s) available to resolve {{IMG:}} tokens`);
 for (const n of notes) console.log(`  note: ${n}`);
+
+if (unresolvedUnique.length) {
+  console.log(`\nWARNING — ${unresolvedUnique.length} {{IMG:}} token(s) have no asset pointer:`);
+  for (const u of unresolvedUnique) console.log(`    ${u}`);
+  console.log(`
+  These render as <img src=""> — a blank space, not a broken-image icon, so
+  they are easy to miss. The image file may well be in public/ already; what
+  is absent is src/assets/<name>.<ext>.asset.json. If the export shipped an
+  assets-export-manifest.json this is rebuilt automatically, so seeing this
+  means the manifest did not list them either.`);
+}
 
 if (missing.length) {
   console.log(`\nWARNING — ${missing.length} referenced image(s) are not in public/:`);
@@ -197,4 +266,4 @@ your own recent edits being reverted, that is Lovable overwriting work it never
 had. 'git checkout -- site' undoes the whole sync.
 `);
 
-process.exit(missing.length ? 2 : 0);
+process.exit(missing.length || unresolvedUnique.length ? 2 : 0);
