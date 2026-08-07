@@ -86,7 +86,24 @@ for (const entry of COPY) {
   cpSync(from, join(SITE, entry), { recursive: true, force: true });
 }
 
-// Images: copy any Lovable does happen to ship, but never delete ours.
+// Images arrive one of two ways, and never in public/ — Lovable leaves that
+// holding only favicon.ico.
+//
+//   exported-assets/  a zip export ships the real image files here. This is
+//                     the authoritative copy for that export, so it wins over
+//                     what is already in public/.
+//   public/           a git checkout ships nothing useful, but copy anything
+//                     genuinely new and never delete ours.
+const fromExport = join(SRC, "exported-assets");
+if (existsSync(fromExport)) {
+  let copied = 0;
+  for (const file of readdirSync(fromExport)) {
+    cpSync(join(fromExport, file), join(SITE, "public", file), { force: true });
+    copied++;
+  }
+  notes.push(`copied ${copied} image(s) from exported-assets/ into public/`);
+}
+
 const upstreamPublic = join(SRC, "public");
 if (existsSync(upstreamPublic)) {
   for (const file of readdirSync(upstreamPublic)) {
