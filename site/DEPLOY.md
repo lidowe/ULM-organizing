@@ -194,19 +194,23 @@ with plausible-sounding copy because it reads as unfinished. If something looks
 like an oversight, ask before changing it. Actual defects — broken links, images
 that 404, text that contradicts itself — are still worth fixing and reporting.
 
-Both notes below are in `src/lib/site-pages.ts`, and both are live right now:
+What that does **not** license is shipping editorial to-dos. The redesign
+carried eight `needs-content` blocks — notes addressed to the owner, rendering
+publicly. Three actively worked against the site: one told visitors every price
+was a working draft, one described the client roster as "largely unverifiable"
+and possibly inflated, and one named a specific artist credit as unconfirmed.
+All eight were removed at the owner's direction. **Do not reintroduce them.**
 
-1. **The "Real equipment list needed" block is intentional — leave it.** The
-   studio page renders a placeholder block saying the panels below describe
-   categories rather than named gear. This ships deliberately; showing the work
-   in progress is the editorial call, not an oversight. Do not "clean it up."
-2. **The studio photos are stand-ins.** `studio-front-rack.jpg`,
-   `studio-racks.jpg` and `studio-drums.jpg` were chosen to get the layout
-   moving, not as final images. Don't treat them as settled or write more copy
-   around them.
+The distinction that matters: *"The first posts are on the way"* is transparency
+and belongs on the page. *"Confirm the hourly rate and deposit terms before
+publishing"* is a note to self that leaked. Both look like placeholder text; only
+one is addressed to the reader.
 
-   This is why `studio-racks.jpg`'s caption and alt text name gear that isn't in
-   the shot (SansAmp, Chandler Germanium, Ampeg, Summit MP-2A). Not worth
-   rewriting against a placeholder — but when the real photos land, the captions
-   and alt text have to be rewritten with them. Alt text is what screen readers
-   announce, so it needs to describe whatever is actually in the final frame.
+Where things stand now:
+
+- The studio page carries the real equipment list — 103 microphones across 64
+  models, preamps and dynamics grouped by topology. The old "Real equipment list
+  needed" placeholder is gone.
+- The 40 photographs are the owner's own. Earlier stand-ins are superseded.
+- `news` and `education` are openly unfinished on purpose, and say so in their
+  own voice. Leave them that way until the owner fills them in.
