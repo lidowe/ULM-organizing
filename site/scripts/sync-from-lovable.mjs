@@ -195,6 +195,21 @@ if (existsSync(mcpIndex)) {
   }
 }
 
+// --- Fix 3: the corrections this repo re-applies to every export ------------
+// Defects that ship if left alone and that keep coming back, so they live in
+// their own module and run on every sync. Warnings there are surfaced but do
+// not stop the sync; see scripts/local-fixes.mjs.
+let localFixWarnings = false;
+try {
+  execFileSync(process.execPath, [join(SITE, "scripts", "local-fixes.mjs")], {
+    cwd: SITE,
+    stdio: "inherit",
+  });
+} catch (err) {
+  if (err.status === 3) localFixWarnings = true;
+  else throw err;
+}
+
 // --- Check: every image the site asks for actually exists -------------------
 // This is the failure that would ship a page with broken photos, so it is
 // checked explicitly rather than left to the build (which will not catch it).
@@ -266,4 +281,4 @@ your own recent edits being reverted, that is Lovable overwriting work it never
 had. 'git checkout -- site' undoes the whole sync.
 `);
 
-process.exit(missing.length || unresolvedUnique.length ? 2 : 0);
+process.exit(missing.length || unresolvedUnique.length ? 2 : localFixWarnings ? 3 : 0);

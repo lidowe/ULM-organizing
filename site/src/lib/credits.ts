@@ -40,7 +40,7 @@ const UNCREDITED_INDIE = "Co-Production · Tracking Engineer · Mixing";
 const LIL_WAYNE_EXTRA =
   "Vocal Tracking (various) · Editing · Mixing Assistant · Touring Engineer (various)";
 
-/** Not artists — kept out of the artist ribbon and index. */
+/** Not artists, kept out of the artist ribbon and index. */
 export const MEDIA_AND_BRANDS = ["American Idol", "The Simpsons", "Spotify"];
 
 export const CREDITS: Credit[] = [
@@ -87,7 +87,7 @@ export const CREDITS: Credit[] = [
   },
   {
     artist: "Lil Mama",
-    title: "VYP — Voice of the Young People",
+    title: "VYP, Voice of the Young People",
     year: "2008",
     role: "Studio Assistant · Tracking Engineer (various) · Mixing Engineer (various)",
     tags: ["assistant", "mix", "recording"],
@@ -296,7 +296,7 @@ export function artistRoster(): string[] {
     .filter((name) => (seen.has(name) ? false : (seen.add(name), true)));
 }
 
-/** Credits with a named release — the Work page cards. */
+/** Credits with a named release, the Work page cards. */
 export function releaseCredits(): Credit[] {
   return byArtist(CREDITS.filter((c) => c.title));
 }

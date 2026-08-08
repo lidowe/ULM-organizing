@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Educational Services</div><h1 class="page-title">Somebody has to teach this.</h1><p class="page-deck">One-on-one training in recording, mixing, and studio technical work &mdash; for artists, engineers, producers, and students.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Educational Services</div><h1 class="page-title">Somebody has to teach this.</h1><p class="page-deck">One-on-one training in recording, mixing, and studio technical work, for artists, engineers, producers, and students.</p></div></section>
 <section class="edu-photo-band">
   <img src="{{IMG:mastering-list}}" alt="A session screen listing finished song titles" loading="lazy" />
 </section>
@@ -12,12 +12,6 @@ export default `
   </div>
 </section>
 <section class="section">
-  <div class="wrap photo-set two reveal">
-    <figure><img src="{{IMG:drums-yamaha-booth}}" alt="A maple drum kit miked up in a treated booth" loading="lazy" /><figcaption>Learning on real sessions</figcaption></figure>
-    <figure><img src="{{IMG:locker-shelves-tight}}" alt="Microphone cases stacked on the locker shelves" loading="lazy" /><figcaption>Knowing the locker</figcaption></figure>
-  </div>
-</section>
-<section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Open position</div><h2 class="section-title">Engineering Assistant</h2></div>
   <div class="wrap remote-body reveal">
     <p>If you&rsquo;re trying to get real-world experience working in the studio environment and live in the Columbia, South Carolina area, or are willing to participate via online video direction, feel free to send us your resume.</p>
@@ -25,6 +19,12 @@ export default `
     <p>The hours are on an as-needed basis, but the position is mostly part-time and somewhat flexible. Payment and compensation work on an overflow system: as you begin to learn the day-to-day workflow, certain tasks from actual projects will be sent to you, primarily involving session editing, organization, analog patchbay management, session documentation and recall, and more. It&rsquo;s by project and trust dependent.</p>
     <p>The position is available for one remote applicant and one local applicant.</p>
     <div class="hero-actions"><a class="btn primary" href="/contact">Send your resume</a></div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap photo-set two edu reveal">
+    <figure><img src="{{IMG:drums-yamaha-booth}}" alt="A maple drum kit miked up in a treated booth" loading="lazy" /><figcaption>Learning on real sessions</figcaption></figure>
+    <figure><img src="{{IMG:locker-shelves-tight}}" alt="Microphone cases stacked on the locker shelves" loading="lazy" /><figcaption>Knowing the locker</figcaption></figure>
   </div>
 </section>
 `;

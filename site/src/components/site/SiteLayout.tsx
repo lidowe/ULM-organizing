@@ -5,9 +5,9 @@ import { renderTokens } from "@/lib/render-tokens";
 
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
   { to: "/process", label: "Process" },
+  { to: "/who-we-are", label: "Who We Are" },
   { to: "/services", label: "Available Services" },
   { to: "/studio", label: "Studio and Technology" },
-  { to: "/who-we-are", label: "Who We Are" },
   { to: "/education", label: "Educational Services" },
   { to: "/news", label: "News and Thoughts" },
   { to: "/credits", label: "Credits" },
@@ -16,15 +16,16 @@ const NAV: Array<{ to: string; hash?: string; label: string }> = [
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
   { to: "/process", label: "Process", n: "02" },
-  { to: "/services", label: "Available Services", n: "03" },
-  { to: "/studio", label: "Studio and Technology", n: "04" },
-  { to: "/who-we-are", label: "Who We Are", n: "05" },
+  { to: "/who-we-are", label: "Who We Are", n: "03" },
+  { to: "/services", label: "Available Services", n: "04" },
+  { to: "/studio", label: "Studio and Technology", n: "05" },
   { to: "/education", label: "Educational Services", n: "06" },
   { to: "/news", label: "News and Thoughts", n: "07" },
   { to: "/credits", label: "Credits", n: "08" },
   { to: "/contact", label: "Start a project", n: "09" },
   { to: "/reach", label: "Contact", n: "10" },
 ];
+
 
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -44,7 +45,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="wrap header-inner">
           <Link to="/" className="brand" aria-label="Upper Level Music home">
             <strong>Upper Level Music</strong>
-            <span>Creative, South Carolina</span>
+            <span>Columbia, South Carolina</span>
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation">
             {NAV.map((item) => (
@@ -78,7 +79,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="menu-top">
             <Link to="/" className="brand" data-close-menu>
               <strong>Upper Level Music</strong>
-              <span>Creative, South Carolina</span>
+              <span>Columbia, South Carolina</span>
             </Link>
             <button className="menu-close" type="button" data-close-menu>
               Close

@@ -9,6 +9,11 @@ export const SITE_URL = "https://upperlevelmusic.com";
 
 export const SITE_NAME = "Upper Level Music";
 
+/** Social share image: black and white session photo, drums and guitar. */
+export const SITE_OG_IMAGE =
+  SITE_URL +
+  "/session-bw.jpg";
+
 export type PageEntry = {
   /** Content key in src/lib/site-pages.ts */
   slug: string;
@@ -25,7 +30,7 @@ export const PAGES: PageEntry[] = [
     path: "/",
     title: "Upper Level Music · Recording, Mixing and Production",
     description:
-      "Major-label studio veterans offering recording, production, vocal production, mixing and mastering — remote or in person, tailored to where your record is.",
+      "Major-label studio veterans offering recording, production, vocal production, mixing and mastering, remote or in person, tailored to where your record is.",
     changefreq: "weekly",
     priority: "1.0",
   },
@@ -34,9 +39,18 @@ export const PAGES: PageEntry[] = [
     path: "/process",
     title: "Process · Upper Level Music",
     description:
-      "How a project moves from the first conversation to a finished record — questions first, then scope, then the work.",
+      "How a project moves from the first conversation to a finished record, questions first, then scope, then the work.",
     changefreq: "monthly",
     priority: "0.8",
+  },
+  {
+    slug: "who-we-are",
+    path: "/who-we-are",
+    title: "Who We Are · Upper Level Music",
+    description:
+      "Created in 2006 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
+    changefreq: "monthly",
+    priority: "0.7",
   },
   {
     slug: "services",
@@ -52,16 +66,7 @@ export const PAGES: PageEntry[] = [
     path: "/studio",
     title: "Studio and Technology · Upper Level Music",
     description:
-      "The microphone locker, outboard racks and analog front end behind the work — 103 microphones across 64 models.",
-    changefreq: "monthly",
-    priority: "0.7",
-  },
-  {
-    slug: "who-we-are",
-    path: "/who-we-are",
-    title: "Who We Are · Upper Level Music",
-    description:
-      "Created in 2006 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
+      "The microphone locker, outboard racks and analog front end behind the work, 103 microphones across 64 models.",
     changefreq: "monthly",
     priority: "0.7",
   },
@@ -70,7 +75,7 @@ export const PAGES: PageEntry[] = [
     path: "/education",
     title: "Educational Services · Upper Level Music",
     description:
-      "One-on-one training in recording, mixing and studio technical work for artists, engineers, producers and students — remote, at your pace.",
+      "One-on-one training in recording, mixing and studio technical work for artists, engineers, producers and students, remote, at your pace.",
     changefreq: "monthly",
     priority: "0.7",
   },
@@ -88,7 +93,7 @@ export const PAGES: PageEntry[] = [
     path: "/credits",
     title: "Credits · Upper Level Music",
     description:
-      "Selected discography and credits for Edward Lidow — recording, mixing, production, editing and assistant work across genres.",
+      "Selected discography and credits for Edward Lidow, recording, mixing, production, editing and assistant work across genres.",
     changefreq: "monthly",
     priority: "0.8",
   },
@@ -97,7 +102,7 @@ export const PAGES: PageEntry[] = [
     path: "/contact",
     title: "Start a Project · Upper Level Music",
     description:
-      "Tell us about the record — what you're making, where it is now, and what's getting in the way.",
+      "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
     changefreq: "yearly",
     priority: "0.9",
   },
@@ -106,7 +111,7 @@ export const PAGES: PageEntry[] = [
     path: "/reach",
     title: "Contact · Upper Level Music",
     description:
-      "Get in touch with Upper Level Music — questions, press, or anything that isn't a project inquiry.",
+      "Get in touch with Upper Level Music, questions, press, or anything that isn't a project inquiry.",
     changefreq: "yearly",
     priority: "0.5",
   },
@@ -132,13 +137,10 @@ export function pageHead(slug: string) {
       { property: "og:description", content: page.description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
-      { property: "og:image", content: absoluteUrl("/drummer-engineer.jpg") },
-      {
-        property: "og:image:alt",
-        content: "Upper Level Music — an engineer and drummer working together during a session",
-      },
+      { property: "og:image", content: SITE_OG_IMAGE },
+      { property: "og:image:alt", content: "Two musicians mid-session, drums and guitar, black and white" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: absoluteUrl("/drummer-engineer.jpg") },
+      { name: "twitter:image", content: SITE_OG_IMAGE },
       { name: "twitter:title", content: page.title },
       { name: "twitter:description", content: page.description },
     ],

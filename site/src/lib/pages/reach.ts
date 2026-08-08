@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Contact</div><h1 class="page-title">Get in touch.</h1><p class="page-deck">For anything that isn’t a project inquiry — questions, press, or just saying hello.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Contact</div><h1 class="page-title">Get in touch.</h1><p class="page-deck">For anything that isn’t a project inquiry, questions, press, or just saying hello.</p></div></section>
 <section class="section">
   <div class="wrap remote-body reveal">
     <div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment · Remote work available</div>

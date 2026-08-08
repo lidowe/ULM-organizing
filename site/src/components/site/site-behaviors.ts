@@ -100,30 +100,98 @@ export function initSiteBehaviors(): () => void {
         return el ? el.value.trim() : "";
       };
       const service = val("need") || "Project inquiry";
+      const payload = {
+        name: val("name"),
+        email: val("email"),
+        project: val("project"),
+        stage: val("stage"),
+        need: service,
+        timeline: val("timeline"),
+        budget: val("budget"),
+        links: val("links"),
+        details: val("details"),
+        company: val("company"),
+      };
       const body = [
-        "Name: " + val("name"),
-        "Email: " + val("email"),
-        "Artist / project: " + (val("project") || "—"),
-        "Where the project is now: " + (val("stage") || "—"),
+        "Name: " + payload.name,
+        "Email: " + payload.email,
+        "Artist / project: " + (payload.project || "-"),
+        "Where the project is now: " + (payload.stage || "-"),
         "What I need help with: " + service,
-        "Timeline: " + (val("timeline") || "—"),
-        "Budget / range: " + (val("budget") || "—"),
-        "Links: " + (val("links") || "—"),
+        "Timeline: " + (payload.timeline || "-"),
+        "Budget / range: " + (payload.budget || "-"),
+        "Links: " + (payload.links || "-"),
         "",
         "About the record:",
-        val("details"),
+        payload.details,
       ].join("\n");
+
       const status = document.querySelector("[data-form-status]");
-      if (status) status.classList.add("show");
-      window.location.href =
-        "mailto:edwardlidow@upperlevelmusic.com?subject=" +
-        encodeURIComponent("Upper Level Music — " + service) +
-        "&body=" +
-        encodeURIComponent(body);
+      const setStatus = (text: string) => {
+        if (!status) return;
+        status.textContent = text;
+        status.classList.add("show");
+      };
+      const submitBtn = form.querySelector<HTMLButtonElement>("button[type=submit]");
+      const originalLabel = submitBtn ? submitBtn.textContent : null;
+
+      const mailtoFallback = () => {
+        setStatus(
+          "Opening your email app with the project details drafted. If nothing opens, email Edward directly at edwardlidow@upperlevelmusic.com.",
+        );
+        window.location.href =
+          "mailto:edwardlidow@upperlevelmusic.com?subject=" +
+          encodeURIComponent("Upper Level Music - " + service) +
+          "&body=" +
+          encodeURIComponent(body);
+      };
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+      setStatus("Sending your inquiry...");
+
+      void fetch("/api/public/inquiry", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+        .then(async (res) => {
+          const data = (await res.json().catch(() => ({}))) as {
+            ok?: boolean;
+            error?: string;
+            fallback?: string;
+          };
+          if (res.ok && data.ok) {
+            form.reset();
+            setStatus(
+              "Thank you, your inquiry is in. Edward will reply to " +
+                payload.email +
+                " directly.",
+            );
+            return;
+          }
+          if (res.status === 400) {
+            setStatus(
+              data.error || "Please check the required fields and try again.",
+            );
+            return;
+          }
+          mailtoFallback();
+        })
+        .catch(() => mailtoFallback())
+        .finally(() => {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalLabel || "Send inquiry";
+          }
+        });
     };
     form.addEventListener("submit", onSubmit);
     cleanups.push(() => form.removeEventListener("submit", onSubmit));
   }
+
 
 
   // Click-to-reveal sections (Who We Are). One panel open at a time per group.
