@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Major-label studio veterans offering recording, production, vocal production, mixing and mastering — remote or in person.",
+          "Major-label studio veterans offering recording, production, vocal production, mixing and mastering, remote or in person.",
       },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Upper Level Music" },

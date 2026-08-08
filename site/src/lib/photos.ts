@@ -1,19 +1,20 @@
 /**
- * CDN photo registry.
+ * Local photo registry (portable export build).
  *
- * Every graded studio photo lives in `src/assets/<name>.jpg.asset.json` as a
- * Lovable Assets pointer. This module turns those pointers into a
- * `name -> url` map so page markup can reference them with `{{IMG:name}}`.
+ * Every graded studio photo lives in `src/assets/<name>.jpg` and is bundled by
+ * Vite. This module turns those files into a `name -> url` map so page markup
+ * can reference them with `{{IMG:name}}`.
  */
-const pointers = import.meta.glob<{ url: string }>("../assets/*.asset.json", {
+const files = import.meta.glob<string>("../assets/*.{jpg,jpeg,png,webp}", {
   eager: true,
   import: "default",
+  query: "?url",
 });
 
 export const photos: Record<string, string> = Object.fromEntries(
-  Object.entries(pointers).map(([path, pointer]) => {
-    const name = path.split("/").pop()!.replace(/\.(jpg|png|webp|jpeg)\.asset\.json$/, "");
-    return [name, pointer.url];
+  Object.entries(files).map(([path, url]) => {
+    const name = path.split("/").pop()!.replace(/\.(jpg|jpeg|png|webp)$/, "");
+    return [name, url];
   }),
 );
 

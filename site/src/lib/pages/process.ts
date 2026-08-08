@@ -1,29 +1,122 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Process</div><h1 class="page-title">First I ask questions. Then we decide what my job is.</h1><p class="page-deck">Every project starts the same way and then stops being the same. Here is the order I actually work in.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Process</div><h1 class="page-title">The process for Upper Level is simple.</h1><p class="page-deck">Audio work isn&rsquo;t just for chart-topping hits. Let&rsquo;s find out what it is for you, and how you&rsquo;d like the task at hand accomplished. Then let&rsquo;s head for the proper level. We&rsquo;ll take the elevator up and find your level.</p></div></section>
+
 <section class="section">
   <div class="wrap">
-    <div class="process-line reveal"><div class="process-no">01</div><div class="process-content"><h2>We talk first.</h2><p>Before anything technical, I want to know who you are and why you make music at all. What is underneath it. What you are trying to say. I have never been able to do good work for someone I do not understand.</p></div></div>
-    <div class="process-line reveal"><div class="process-no">02</div><div class="process-content"><h2>Three questions.</h2><p>What do you struggle to achieve? What do you feel connected to? What do you wish you could accomplish? The answers usually tell me more about the record than a reference track does.</p></div></div>
-    <div class="process-line reveal"><div class="process-no">03</div><div class="process-content"><h2>We decide what you are hiring me for.</h2><p>Do you want me to do the work, teach you how to do it, guide you to the finish, or sit in as an advisor? Am I the engineer, the educator, or the resource? People hire me for all four and the answer changes the price, the schedule, and how much of it you touch.</p></div></div>
-    <div class="process-line reveal"><div class="process-no">04</div><div class="process-content"><h2>We scope the gap.</h2><p>I get hired to fill a gap, and the gap is different every time. Acoustic problems in the space you already record in. A technical fault you cannot isolate. A vocal that will not sit. Twelve songs that stalled at 80 percent. A chain you want explained rather than handed to you.</p></div></div>
-    <div class="process-line reveal"><div class="process-no">05</div><div class="process-content"><h2>Nothing moves without your approval.</h2><p>You hear it, you sign off, we go on. No request is too small and no question is beneath asking. If you want a single edit reviewed, that is a real job and I will take it.</p></div></div>
+    <h2 class="plain-title reveal">Planning. We discuss, then we get to work.</h2>
+
+    <blockquote class="pull-quote small lead-quote reveal">
+      <p>I like to start every project the same way. After the planning stage, no two projects remain that way. Audio often falls under the engineering umbrella, but it is a creative role at heart.</p>
+
+    </blockquote>
+
+
+
+    <div class="plan-pair reveal">
+      <div class="plan-part">
+        <span class="plan-mark">First</span>
+        <h3>Let&rsquo;s define who <em>you</em> are.</h3>
+        <p>What are you trying to say and what&rsquo;s the motivation behind it? What is actually getting in the way? The best work is hard when working with someone not understood as a person and in context of the work. It&rsquo;s even harder when the client hasn&rsquo;t figured themselves out either. We&rsquo;ll solve this here.</p>
+      </div>
+      <div class="plan-part">
+        <span class="plan-mark">Then</span>
+        <h3>You decide the path, for both of us.</h3>
+        <p>What you are hiring for changes the price, the schedule, and how much of it we touch. We settle that before anything starts by letting you pick the path ULM takes.</p>
+        <p>You do not need the vocabulary to start. &ldquo;This part should sound like I&apos;m in a spaceship&rdquo; is enough to work from. Hand us a routing problem like if you should half-normal your patch bay instead and we will work there. Same depth either way.</p>
+      </div>
+    </div>
+
+
+
+
+
   </div>
 </section>
+
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Why I work this way</div><div><h2 class="section-title">The apprenticeship is gone. The knowledge does not have to go with it.</h2><div class="section-copy"><p>I learned this trade the old way: as an intern and then an assistant at Hit Factory Criteria, standing behind people who had been doing it for thirty years. That path barely exists now. Almost nobody entering audio today will get a room, a mentor, and five years to absorb it.</p><p>So I hand it over directly. If you want to know why a ribbon needs 70 dB of clean gain, or why your kick sounds different in your room than in the car, I will tell you and show you. If you would rather I just handle it, that is fine too.</p></div></div></div>
-</section>
-<section class="section">
-  <div class="wrap photo-set two reveal">
-    <figure><img src="{{IMG:build-console-teardown}}" alt="A large mixing console partly disassembled during a rebuild" loading="lazy" /><figcaption>Scoping the gap</figcaption></figure>
-    <figure><img src="{{IMG:build-panels-garage}}" alt="Acoustic treatment panels under construction in a workshop" loading="lazy" /><figcaption>Fixing the room first</figcaption></figure>
+  <div class="wrap">
+    <div class="paths-head reveal">
+      <h2>Your path, then the work.</h2>
+      <p>Three paths. Pick one and open it to see exactly what it covers.</p>
+    </div>
+
+    <div class="path-stack">
+
+            <div class="path reveal">
+              <h4>&ldquo;Just f**king do it.&rdquo;</h4>
+              <p>You want results and deliverables, done right and on time. Heard.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>Full production from demo to master, or any single stage of it</li>
+                    <li>Recording and tracking, remote or in person, with engineers matched to the material</li>
+                    <li>Vocal production: direction, comping, tuning, timing, stacks and ad-libs</li>
+                    <li>Mixing, including revisions, stems, instrumentals and TV mixes</li>
+                    <li>Mastering for streaming, vinyl prep, and sequenced album masters</li>
+                    <li>Editing and repair: drum edits, tuning cleanup, noise and bleed removal</li>
+                    <li>Podcast and content audio, edited, leveled and delivered to spec</li>
+                    <li>Twelve songs stalled at eighty percent, finished and consistent as a body of work</li>
+                    <li>One reviewed edit is a real job. We take small ones.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="path reveal">
+              <h4>&ldquo;Help me be my best. Coach me through it.&rdquo;</h4>
+              <p>When you need help with a specific aspect inside a larger scope, we&rsquo;ll work it out together. We&rsquo;ve got you.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>A mix that will not sit, worked through on your session, in your DAW</li>
+                    <li>A room that lies to you: measurement, treatment plan, speaker placement</li>
+                    <li>A signal path with a fault you cannot isolate, traced end to end</li>
+                    <li>Gain structure, impedance, converters and clocking on your actual rig</li>
+                    <li>Templates, routing and recall built around how you already work</li>
+                    <li>A home playback system that never matched the record</li>
+                    <li>Gear you are about to buy, checked before you spend</li>
+                    <li>Vocal chain and tracking setup dialed in with you on the session</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="path reveal">
+              <h4>&ldquo;Teach me, I&rsquo;m going pro!&rdquo;</h4>
+              <p>Whatever the job, we&rsquo;ll teach you the theory and get as detailed as you want. We&rsquo;ll work one on one so you can understand the depth involved and produce professional results on your own terms. We&rsquo;ll adapt the lesson element to your learning style.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>Engineers on gain structure, impedance, conversion, summing and monitoring</li>
+                    <li>Producers on arrangement, routing, and diagnosing a mix instead of guessing</li>
+                    <li>Artists learning to record themselves properly, start to finish</li>
+                    <li>Students who want the apprenticeship that no longer exists</li>
+                    <li>Mastering theory: loudness, dynamics, delivery specs, and what actually matters</li>
+                    <li>Technical work: patchbays, wiring, maintenance, and reading a schematic</li>
+                    <li>The home engineer already charging for work
+                      <span class="path-aside">If you&rsquo;re a home engineer, well, we get it. You&rsquo;re going to do our job on your own and charge less. Upper Level might be the only ones who will say it out loud. We know, we&rsquo;ve seen you poach clients from some engineers. It&rsquo;s okay, it&rsquo;s never been ours. We just don&rsquo;t like the quality drop, and neither do you. So let&rsquo;s still get you the deliverable to &lsquo;your&rsquo; client, if you have any yet. It could just be you, and that&rsquo;s cool, we were never worried. But let&rsquo;s teach it right, whether that&rsquo;s via lessons on theory or just showing you how &lsquo;the pros&rsquo; do it.</span>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+    </div>
+
   </div>
 </section>
+
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Who hires me</div><div><h2 class="section-title">Not only people finishing a song.</h2><div class="section-copy"><p>Artists, engineers, producers, students, podcasters, content creators, and people who simply want to get better at a craft that touches audio. The service is bridging the gap in front of you, whatever it happens to be.</p></div></div></div>
-  <div class="wrap entry-grid reveal"><article class="entry"><div class="tiny">Artists</div><h3>Make the record</h3><p>Production, tracking, vocal production, mixing, mastering, or one stage of it.</p></article><article class="entry"><div class="tiny">Engineers &amp; producers</div><h3>Go deeper</h3><p>Gain structure, impedance, conversion, summing, routing, room treatment, mix diagnosis.</p></article><article class="entry"><div class="tiny">Students</div><h3>Learn it properly</h3><p>Lessons and mentorship at the level you are actually at, not the level a curriculum assumes.</p></article><article class="entry"><div class="tiny">Podcast &amp; content</div><h3>Sound like you mean it</h3><p>Mic choice, chain setup, editing, cleanup, and a workflow you can repeat without me.</p></article></div>
-</section>
-<section class="section">
-  <div class="wrap terminology-panel reveal"><h2>You do not need the vocabulary to start.</h2><p>&ldquo;It sounds too polite.&rdquo; &ldquo;It does not sound like me.&rdquo; That is enough for me to work from. Hand me a routing problem instead and we will work there. Same depth either way.</p></div>
+  <div class="wrap closing-note reveal">
+    <h2>The apprenticeship is gone. The knowledge does not have to go with it.</h2>
+    <div class="closing-copy">
+      <p>I learned this trade the old way: as an intern and then an assistant at Hit Factory Criteria, standing behind people who had been doing it for thirty years. Almost nobody entering audio today gets a room, a mentor, and five years to absorb it.</p>
+      <p>Home studios are everywhere, which is a large part of why the major rooms are closing. So I hand the training over directly. If you want to know why a ribbon needs 70 dB of clean gain, or why your kick sounds different in your room than in the car, I will show you. If you want to discuss the hysteresis effect transformers have on the tone of your audio, and how the choice of windings and blends of metal affect the harmonic result, I can show you that too. If you would rather I just handle it, that is fine too.</p>
+      <p>The tools reached everyone. The training did not, and the rooms that used to hand it down are closing. That gap is the thematic problem Upper Level exists to solve, so all of us get to better creative output.</p>
+    </div>
+  </div>
 </section>
 
 `;

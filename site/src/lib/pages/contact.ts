@@ -2,7 +2,7 @@ export default `
 <section class="page-hero"><div class="wrap"><div class="eyebrow">Start a project</div><h1 class="page-title">Tell me about the record.</h1><p class="page-deck">What you're making, where it is now, what's getting in the way.</p></div></section>
 <section class="section">
   <div class="wrap contact-grid">
-    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the music, not the booking language.</h2><p>A rough mix, voice memo, or private link is plenty. The form just gives me context to answer well.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment · Remote work available</div></aside>
+    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the basics, not the booking language.</h2><p>A rough mix, voice memo, or private link is plenty. The form just gives me context to answer well.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment · Remote work available</div></aside>
     <form class="form reveal" data-project-form>
       <div class="form-row"><div class="field"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div></div>
       <div class="field"><label for="project">Artist / project name</label><input id="project" name="project" placeholder="Artist, band, project, or working title"></div>
@@ -10,8 +10,9 @@ export default `
       <div class="form-row"><div class="field"><label for="timeline">Timeline</label><input id="timeline" name="timeline" placeholder="Target date or general timing"></div><div class="field"><label for="budget">Budget / range</label><input id="budget" name="budget" placeholder="A rough range is useful"></div></div>
       <div class="field"><label for="links">Music / reference links</label><input id="links" name="links" type="url" inputmode="url" placeholder="Private streaming link, Drive, Dropbox, etc."></div>
       <div class="field"><label for="details">About the record *</label><textarea id="details" name="details" required placeholder="What are you trying to make? What matters most? What feels wrong or unfinished right now?"></textarea></div>
-      <div class="form-actions"><button class="btn primary" type="submit">Draft inquiry email</button><div class="needs-content"><strong>Booking details needed</strong>Add a phone or text number, typical response time, and a street address or neighbourhood if walk-in visits are ever appropriate. The form currently drafts an email — a real form endpoint can be wired up when you’re ready.</div><div class="form-note">This drafts the inquiry in your email app.</div></div>
-      <div class="form-status" data-form-status>Opening your email app with the project details drafted. If nothing opens, email Edward directly at edwardlidow@upperlevelmusic.com.</div>
+      <div class="field" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
+      <div class="form-actions"><button class="btn primary" type="submit">Send inquiry</button><div class="form-note">Sent straight to Edward. Replies go to the email you enter above.</div></div>
+      <div class="form-status" data-form-status role="status" aria-live="polite"></div>
     </form>
   </div>
 </section>

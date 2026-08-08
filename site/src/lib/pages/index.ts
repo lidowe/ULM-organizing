@@ -22,7 +22,7 @@ export default `
     <div class="unit-label"><span class="unit-no">01</span><span>What this is</span></div>
     <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. It is a service built to bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
 
-    <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for &mdash; engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
+    <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
 
     <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
   </div>
@@ -35,7 +35,7 @@ export default `
   </div>
   <div class="wrap anywhere-grid">
     <figure><img src="{{IMG:room-major-console}}" alt="A major-label control room with a large-format console and monitor wall" loading="lazy" /><figcaption>A major-label control room.</figcaption></figure>
-    <figure><img src="{{IMG:room-home-amps}}" alt="A home setup with guitars, amps, a pedalboard, and a drum kit" loading="lazy" /><figcaption>A working room, cables and all.</figcaption></figure>
+    <figure><img src="{{IMG:room-home-amps}}" alt="A home setup with guitars, amps, a pedalboard, and a drum kit" loading="lazy" /><figcaption>A WORKING ROOM AT HOME</figcaption></figure>
     <figure><img src="{{IMG:room-kid}}" alt="A child playing a keyboard in a blue-lit room with a drum kit behind" loading="lazy" /><figcaption>Somebody&rsquo;s first setup.</figcaption></figure>
   </div>
 </section>
@@ -64,8 +64,8 @@ export default `
     <details class="fold">
       <summary><span class="fold-k">Our values</span><span class="fold-hint">Read</span></summary>
       <div class="fold-body">
-        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs &mdash; their story, their name, their risk. Our work belongs in service to the song.</p>
-        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world &mdash; the gear, the sonic character.</p>
+        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs, their story, their name, their risk. Our work belongs in service to the song.</p>
+        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world, the gear, the sonic character.</p>
         <p>It is not the artist&rsquo;s job to know whether an 1176 or a dbx 160VU will help express that. If you are an engineer who wants to know, we will travel that path as far as you want.</p>
         <p>It is better to listen to the artist in order to hear the song.</p>
       </div>
@@ -82,8 +82,7 @@ export default `
 
 <section class="rack-unit proof-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">04</span><span>Proof</span></div>
-    <h2 class="unit-title">Records that went out into the world.</h2>
+    <h2 class="unit-title small-title">Artists worked with...</h2>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
   <div class="wrap proof-actions"><a class="btn" href="/credits">All credits</a></div>
