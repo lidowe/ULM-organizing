@@ -21,15 +21,25 @@ can't be traced back to a line in here, it probably shouldn't be there.
 
 ## 1. The gap
 
-**Processing got taught as correction. The half that's missing is processing as
-expression.**
+**The decisions that matter most aren't available as controls.**
 
-Multiband on every track, limiter on every track, sample-replace the drums, EQ
-to fix. That vocabulary is complete — a career fits inside it. What almost
-nobody carries now is the other half: a topology choice *is* an expressive
-choice. Second-order versus third. An opto responding through an LED versus a
-filament. Not technical preferences with technical outcomes — emotional
-outcomes, chosen at the circuit.
+The corrective vocabulary is complete and a whole career fits inside it —
+multiband on every track, limiter on every track, sample-replace the drums, EQ
+to fix. What it cannot reach is everything that isn't a parameter.
+
+Some of what it can't reach is **physical**: an opto compressor's character
+comes from how its light source decays, and an LED stops almost immediately
+while a filament keeps glowing. Same circuit, same controls, a different
+release curve — and it is not a control. Second-order versus third-order
+harmonic content is an emotional outcome chosen at the circuit, not a technical
+preference with a technical result.
+
+Some of what it can't reach is **human**: there is no knob marked *confidence*
+and no plugin has an *emote %*. A take either carries it or it doesn't, and
+getting it out of a singer is a conversation, not a setting.
+
+Both halves are the same statement at different points in the chain, and it is
+the same missing knowledge in both cases.
 
 Ed's own framing: *"You don't need a multiband compressor and limiter on every
 track. You just need the knowledge of the right circuit for the right job."*
@@ -202,6 +212,39 @@ The fourth "manifesto door" is optional and small. If the distribution works,
 it may not be needed at all.
 
 ---
+
+## 4b. The instances
+
+The gap is never stated on the site. One checkable instance is placed inside
+each door, in that audience's language, and the reader derives the rest. The
+conclusion is never written — the last line is the fact.
+
+**Constraints.** Twenty-five to fifty words. One fact. Verifiable in ten
+seconds by anyone who cares. Nobody accused. No conclusion sentence. Facts and
+reasoning only — never produced audio, because that is work and work is never
+free.
+
+**Hire — the human layer.** Not technical capture; that reads as posturing.
+The essence of this door is that the work can't be done without understanding
+the person. Ed's instance, in his own words:
+
+> There's no knob marked confidence. No plugin has an emote %. So when a vocal
+> isn't landing, I ask the singer to picture someone in the crowd who doesn't
+> speak the language — no lyrics, nothing but delivery. Give me the take where
+> that person knows exactly what you mean.
+
+What the reader derives, unstated: *the thing missing from my vocals was never
+in my plugin folder.*
+
+**Bring me a problem** — instance still to come. Candidate: six U47s sitting
+next to each other don't sound the same as each other, which is worth knowing
+if you've spent a year hunting the clone that matches one.
+
+**Learn** — instance still to come. Candidate: the opto light-source decay,
+LED against filament.
+
+These three are the only copy on the site that genuinely cannot be written by
+anyone but Ed.
 
 ## 5. Voice
 
