@@ -99,33 +99,32 @@ export function initSiteBehaviors(): () => void {
           | null;
         return el ? el.value.trim() : "";
       };
-      const service = val("need") || "Project inquiry";
       const payload = {
         name: val("name"),
         email: val("email"),
-        project: val("project"),
-        stage: val("stage"),
-        need: service,
-        timeline: val("timeline"),
-        budget: val("budget"),
-        links: val("links"),
+        working: val("working"),
         details: val("details"),
+        tried: val("tried"),
+        links: val("links"),
         help: val("help"),
+        context: val("context"),
         company: val("company"),
       };
       const body = [
         "Name: " + payload.name,
         "Email: " + payload.email,
-        "Artist / project: " + (payload.project || "-"),
-        "Where the project is now: " + (payload.stage || "-"),
-        "What I need help with: " + service,
+        "Working on: " + (payload.working || "-"),
         "How they'd rather work: " + (payload.help || "-"),
-        "Timeline: " + (payload.timeline || "-"),
-        "Budget / range: " + (payload.budget || "-"),
         "Links: " + (payload.links || "-"),
         "",
-        "About the record:",
+        "What is wrong / what they want:",
         payload.details,
+        "",
+        "Already tried:",
+        payload.tried || "-",
+        "",
+        "Anything else:",
+        payload.context || "-",
       ].join("\n");
 
       const status = document.querySelector("[data-form-status]");
@@ -143,7 +142,7 @@ export function initSiteBehaviors(): () => void {
         );
         window.location.href =
           "mailto:edwardlidow@upperlevelmusic.com?subject=" +
-          encodeURIComponent("Upper Level Music - " + service) +
+          encodeURIComponent("Upper Level Music - " + (payload.working || payload.name)) +
           "&body=" +
           encodeURIComponent(body);
       };

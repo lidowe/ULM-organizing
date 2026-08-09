@@ -21,19 +21,28 @@ import { z } from "zod";
  * See docs/FORM-ENDPOINT.md for per host setup notes.
  */
 
+/**
+ * Only name, email and the description of the problem are required. Everything
+ * else is optional on purpose: the person this form exists to catch is the one
+ * who cannot yet name the service, the stage, or the budget. Fields the form no
+ * longer renders stay accepted so a page already open in a browser can still
+ * submit, and unknown keys are stripped rather than rejected.
+ */
 const InquirySchema = z.object({
   name: z.string().trim().min(1).max(120),
   email: z.string().trim().email().max(200),
+  working: z.string().trim().max(300).optional().default(""),
+  details: z.string().trim().min(1).max(5000),
+  tried: z.string().trim().max(3000).optional().default(""),
+  links: z.string().trim().max(500).optional().default(""),
+  help: z.string().trim().max(120).optional().default(""),
+  context: z.string().trim().max(2000).optional().default(""),
+  // Retired fields, still accepted from a stale page.
   project: z.string().trim().max(160).optional().default(""),
   stage: z.string().trim().max(120).optional().default(""),
-  // Optional on purpose: a visitor who does not yet know which service they
-  // need is exactly the person the form is meant to catch.
-  need: z.string().trim().max(120).optional().default("Project inquiry"),
+  need: z.string().trim().max(120).optional().default(""),
   timeline: z.string().trim().max(160).optional().default(""),
   budget: z.string().trim().max(160).optional().default(""),
-  links: z.string().trim().max(500).optional().default(""),
-  details: z.string().trim().min(1).max(5000),
-  help: z.string().trim().max(120).optional().default(""),
   // honeypot, must stay empty
   company: z.string().max(0).optional().default(""),
 });
@@ -41,19 +50,30 @@ const InquirySchema = z.object({
 type Inquiry = z.infer<typeof InquirySchema>;
 
 function plainText(data: Inquiry) {
+  const retired = [
+    data.project && `Artist / project: ${data.project}`,
+    data.stage && `Stage: ${data.stage}`,
+    data.need && `Service named: ${data.need}`,
+    data.timeline && `Timeline: ${data.timeline}`,
+    data.budget && `Budget: ${data.budget}`,
+  ].filter(Boolean) as string[];
+
   return [
     `Name: ${data.name}`,
     `Email: ${data.email}`,
-    `Artist / project: ${data.project || "-"}`,
-    `Where the project is now: ${data.stage || "-"}`,
-    `What they need help with: ${data.need}`,
+    `Working on: ${data.working || "-"}`,
     `How they'd rather work: ${data.help || "-"}`,
-    `Timeline: ${data.timeline || "-"}`,
-    `Budget / range: ${data.budget || "-"}`,
     `Links: ${data.links || "-"}`,
+    ...retired,
     "",
-    "About the record:",
+    "What is wrong / what they want:",
     data.details,
+    "",
+    "Already tried:",
+    data.tried || "-",
+    "",
+    "Anything else:",
+    data.context || "-",
   ].join("\n");
 }
 
@@ -91,7 +111,9 @@ export const Route = createFileRoute("/api/public/inquiry")({
         const webhookUrl = process.env["INQUIRY_WEBHOOK_URL"];
 
         const body = plainText(data);
-        const subject = `Upper Level Music inquiry: ${data.need} (${data.name})`;
+        const subject = `Upper Level Music inquiry: ${data.name}${
+          data.working ? ` — ${data.working.slice(0, 60)}` : ""
+        }`;
 
         try {
           if (webhookUrl) {
