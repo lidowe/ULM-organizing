@@ -21,25 +21,50 @@ can't be traced back to a line in here, it probably shouldn't be there.
 
 ## 1. The gap
 
-**The decisions that matter most aren't available as controls.**
+**Everything school and the internet can teach is the first three quarters.
+The last quarter is psychological, and it can only be transmitted in a room
+with someone doing it.**
 
-The corrective vocabulary is complete and a whole career fits inside it —
-multiband on every track, limiter on every track, sample-replace the drums, EQ
-to fix. What it cannot reach is everything that isn't a parameter.
+Ed's framing, to students: master the DAW, master signal flow, understand the
+differences between gear, put in five years and do it with your eyes closed —
+*that is not mastery, that is competence.* Three quarters of the way.
 
-Some of what it can't reach is **physical**: an opto compressor's character
-comes from how its light source decays, and an LED stops almost immediately
-while a filament keeps glowing. Same circuit, same controls, a different
-release curve — and it is not a control. Second-order versus third-order
-harmonic content is an emotional outcome chosen at the circuit, not a technical
-preference with a technical result.
+The last quarter is the psychology. Reading the room. Knowing how to phrase
+something and when to say nothing. Planting an idea so the artist arrives at it
+themselves — not to manipulate the art, but to reach in and lift out the
+performance they can only reach in their own head. Treating everything you say
+as a tool for getting the thing you need out of the source, so the gear has
+something worth elevating.
 
-Some of what it can't reach is **human**: there is no knob marked *confidence*
-and no plugin has an *emote %*. A take either carries it or it doesn't, and
-getting it out of a singer is a conversation, not a setting.
+There is no knob marked *confidence* and no plugin has an *emote %*.
 
-Both halves are the same statement at different points in the chain, and it is
-the same missing knowledge in both cases.
+### Why this is the strongest form of the argument
+
+- **It accuses nobody.** Three quarters is a lot. The reader hears *I'm most of
+  the way there*, which is true, and is the opposite of being told they're bad.
+- **It explains the apprenticeship's death exactly.** Not sentiment — the
+  fourth quarter was only ever transmitted by standing next to someone doing
+  it. The rooms closed and the transmission line closed with them.
+- **It explains why tutorials structurally cannot close it.** Reading *your*
+  artist in *your* room is situational by definition, which is why "nobody here
+  talking about someone else's project" lands — a pro handling a different
+  singer in a different room can only ever demonstrate the first three
+  quarters.
+- **It is the one part AI cannot approach.** No training data, and nothing to
+  train on.
+- **It gives the doors their content.** Ed applying the fourth quarter, or Ed
+  transmitting it. The teaching isn't a side business; it's the only channel
+  that still exists.
+
+### The circuit material is a sub-part, not the headline
+
+An opto's character comes from how its light source decays — an LED stops
+almost immediately, a filament keeps glowing. Same circuit, same controls, a
+different release curve that is not a control. Second- against third-order
+harmonic content is an emotional outcome chosen at the circuit.
+
+True, and Ed's own bracket on it is **"advanced shit for later."** It belongs
+deep, as proof of the fourth quarter — never as the way in.
 
 Ed's own framing: *"You don't need a multiband compressor and limiter on every
 track. You just need the knowledge of the right circuit for the right job."*
@@ -138,13 +163,12 @@ unread.
 > agents ever run — the research was synthesised, not conducted. Treat the
 > structure below as the leading candidate and nothing more.
 >
-> **The strongest objection is Ed's own account of the work.** He describes
-> producing as pulling something out of an artist they didn't know they had —
-> setting the room, dropping the lights, making the mic disappear, seeding
-> ideas so the good ones arrive as the artist's own. That is not "do it for
-> me." Door 1 as written implies handing a project over and receiving a
-> product back, which is not how he has ever described working. **Door 1 and
-> Door 2 may be the same door.**
+> The doors are not, however, undermined by Ed's account of producing. That
+> account is what Door 1 *contains* — the artist is present and performing
+> while Ed owns the outcome. The dividing line between doors was never the
+> client's presence; it is who owns the result. Door 1, Ed owns it. Door 2,
+> the client owns it and Ed helps them reach it. Door 3, the client learns to
+> reach it alone.
 >
 > Alternatives never examined: two doors (make it / learn it) with the paid
 > conversation as the shared entrance; one door (the conversation) with
