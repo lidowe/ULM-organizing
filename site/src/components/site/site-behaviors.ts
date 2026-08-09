@@ -110,6 +110,7 @@ export function initSiteBehaviors(): () => void {
         budget: val("budget"),
         links: val("links"),
         details: val("details"),
+        help: val("help"),
         company: val("company"),
       };
       const body = [
@@ -118,6 +119,7 @@ export function initSiteBehaviors(): () => void {
         "Artist / project: " + (payload.project || "-"),
         "Where the project is now: " + (payload.stage || "-"),
         "What I need help with: " + service,
+        "How they'd rather work: " + (payload.help || "-"),
         "Timeline: " + (payload.timeline || "-"),
         "Budget / range: " + (payload.budget || "-"),
         "Links: " + (payload.links || "-"),

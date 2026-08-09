@@ -1,18 +1,17 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout, PageBody } from "../components/site/SiteLayout";
+import { pages } from "../lib/site-pages";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/work")({
-  beforeLoad: () => {
-    throw redirect({ to: "/credits" });
-  },
-  head: () => ({
-    meta: [
-      { title: "Credits \u00b7 Upper Level Music" },
-      { name: "description", content: "Selected discography and partial credits for Edward Lidow." },
-    ],
-  }),
+  head: () => pageHead("work"),
   component: WorkPage,
 });
 
 function WorkPage() {
-  return null;
+  return (
+    <SiteLayout>
+      <PageBody html={pages.work} />
+    </SiteLayout>
+  );
 }

@@ -124,10 +124,17 @@ img,svg,canvas{display:block;max-width:100%}
 @keyframes ln-up{to{transform:none}}
 
 .hero-title em{font-style:italic;color:var(--amber-light)}
-.hero-deck{font-size:var(--fs-deck);line-height:1.6;max-width:46ch;color:var(--paper-soft);margin:0 0 2rem;animation:rise .9s cubic-bezier(.22,.61,.36,1) .4s both}
+/* The headline is a pun and the plate is the fact. They only both work if they
+   read as different objects, so the plate borrows the engraved rack-label
+   language from the rest of the site rather than continuing the display type. */
+.hero-plate{position:relative;margin:0 0 2.15rem;padding-left:clamp(.95rem,1.5vw,1.35rem);
+  border-left:2px solid var(--amber);animation:rise .9s cubic-bezier(.22,.61,.36,1) .4s both}
+/* No inline separators: the list wraps, and a "·" glued to an item strands
+   itself at the end of a line the moment it does. Gap carries the division. */
+.hero-scope{margin:0 0 .8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;font-family:var(--mono);
+  font-size:.58rem;line-height:1.35;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber-light)}
+.hero-deck{font-size:var(--fs-deck);line-height:1.58;max-width:40ch;color:var(--paper);margin:0}
 .hero-actions{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;animation:rise .9s cubic-bezier(.22,.61,.36,1) .55s both}
-.hero-services{margin-top:1.9rem;display:flex;gap:.5rem 1.5rem;flex-wrap:wrap;color:var(--quiet);font-family:var(--mono);font-size:.57rem;letter-spacing:0.1em;text-transform:uppercase}
-.hero-services span:not(:last-child)::after{content:"·";margin-left:1.5rem}
 .hero-panel{margin:0;position:relative;border:1px solid var(--line);background:var(--panel);
   box-shadow:0 26px 60px rgba(0,0,0,.5)}
 .hero-panel img{width:100%;height:clamp(230px,34vw,430px);object-fit:cover;object-position:center 27%}
@@ -332,10 +339,9 @@ img,svg,canvas{display:block;max-width:100%}
 @media(max-width:660px){
   .header-inner{min-height:72px}
   .brand strong{font-size:1.18rem}.brand span{font-size:.53rem}
-  .hero-services{color:var(--paper-soft)}
   .hero-eyebrow{display:inline-flex;white-space:nowrap;font-size:.52rem;padding:0;border:0;background:none}
-  .hero-services{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}
-  .hero-services span:not(:last-child)::after{display:none}
+  .hero-scope{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}
+  .hero-scope span:not(:last-child)::after{display:none}
   .entry-grid,.capability-grid{grid-template-columns:1fr}
   .section,.rack-unit{padding:3.2rem 0}
   .section-title{font-size:var(--fs-h2)}
@@ -576,6 +582,12 @@ img,svg,canvas{display:block;max-width:100%}
 
 /* What this is */
 .stance-unit{background:var(--bg-soft)}
+/* Short stance block. Body sets the argument at reading size; the last line is
+   the only display-size text, so it lands instead of competing. */
+.why-copy{font-size:var(--fs-deck);line-height:1.62;color:var(--paper-soft);margin:0 0 1.1rem;max-width:58ch}
+.why-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.14;letter-spacing:-.03em;
+  color:var(--paper);margin:1.9rem 0 0;max-width:24ch;padding-left:clamp(.95rem,1.5vw,1.35rem);
+  border-left:2px solid var(--amber)}
 .stance-lead{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.2;letter-spacing:-.022em;color:var(--paper);margin:0 0 1.8rem;max-width:34ch}
 
 /* Anywhere: three rooms */

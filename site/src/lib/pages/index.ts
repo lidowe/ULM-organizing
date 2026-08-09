@@ -4,12 +4,14 @@ export default `
     <div class="hero-copy">
       <p class="hero-eyebrow"><span>Upper Level Music</span><span>Columbia, South Carolina</span><span>Est. 2006</span></p>
       <h1 class="display hero-title"><span class="ln"><span>The industry is undergoing</span></span><span class="ln"><span><em>major key changes.</em></span></span></h1>
-      <p class="hero-deck">Now is the time to switch modes. Musical or technical, creative or still learning, you set the scale. We&rsquo;ll help you find the resolve.</p>
+      <div class="hero-plate">
+        <p class="hero-scope"><span>Records</span><span>Voice &amp; content</span><span>Mixing</span><span>Rooms &amp; systems</span><span>Teaching</span></p>
+        <p class="hero-deck">Major-label engineering without the major-label overhead. Wherever you are in it, and whatever stage it is stuck at.</p>
+      </div>
       <div class="hero-actions">
         <a class="btn primary" href="/contact">Start a project</a>
         <a class="btn" href="/process">See the process</a>
       </div>
-      <div class="hero-services"><span>Recording</span><span>Production</span><span>Vocal production</span><span>Mixing</span><span>Mastering</span></div>
     </div>
     <figure class="hero-panel">
       <img src="{{IMG:rack-panel-alt}}" alt="A red 19-inch rack panel reading UPPER LEVEL MUSIC in blocky lettering, bolted between a Pendulum Quartet II and a Retro Revolver" fetchpriority="high" />
@@ -28,9 +30,19 @@ export default `
   </div>
 </section>
 
+<section class="rack-unit why-unit">
+  <div class="wrap">
+    <div class="unit-label"><span class="unit-no">02</span><span>Why this exists</span></div>
+    <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
+    <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
+    <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
+    <div class="needs-content"><strong>Placeholder, to be expanded</strong>Edward is writing the full version of this. It should end up as its own page for people who want the whole account of what happened to the pipeline, linked from About and Learn rather than sitting in the nav. This short version stays on the home page.</div>
+  </div>
+</section>
+
 <section class="rack-unit anywhere-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>The setups</span></div>
+    <div class="unit-label"><span class="unit-no">03</span><span>The setups</span></div>
     <h2 class="unit-title">There is art being captured in all of these.</h2>
   </div>
   <div class="wrap anywhere-grid">
@@ -43,7 +55,7 @@ export default `
 
 <section class="rack-unit start-here">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>Where to start</span></div>
+    <div class="unit-label"><span class="unit-no">04</span><span>Where to start</span></div>
     <h2 class="unit-title">Down to business.</h2>
   </div>
   <div class="wrap rack-rows">
@@ -51,10 +63,10 @@ export default `
     <a class="rack-row" href="/services"><span class="no">02</span><h3>Available Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
     <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio and Technology</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
 
-    <a class="rack-row" href="/who-we-are"><span class="no">04</span><h3>Who We Are</h3><p>Edward Lidow and the people behind the work.</p></a>
+    <a class="rack-row" href="/about"><span class="no">04</span><h3>About</h3><p>Edward Lidow and the people behind the work.</p></a>
     <a class="rack-row" href="/education"><span class="no">05</span><h3>Educational Services</h3><p>Training and technical guidance for artists and engineers.</p></a>
     <a class="rack-row" href="/news"><span class="no">06</span><h3>News and Thoughts</h3><p>Notes on sessions, technique, and the industry.</p></a>
-    <a class="rack-row" href="/credits"><span class="no">07</span><h3>Credits</h3><p>Major-label and independent records, with precise roles.</p></a>
+    <a class="rack-row" href="/work"><span class="no">07</span><h3>Work</h3><p>Major-label and independent records, with precise roles.</p></a>
     <a class="rack-row live" href="/contact"><span class="no">08</span><h3>Start a project</h3><p>Send a rough, a reference, or a few sentences.</p></a>
   </div>
 </section>
@@ -85,7 +97,7 @@ export default `
     <h2 class="unit-title small-title">Artists worked with...</h2>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
-  <div class="wrap proof-actions"><a class="btn" href="/credits">All credits</a></div>
+  <div class="wrap proof-actions"><a class="btn" href="/work">See the work</a></div>
 </section>
 
 <section class="cta-section">

@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Legacy URL. There is one contact destination now: /contact. */
 export const Route = createFileRoute("/reach")({
-  head: () =>
-    pageHead("reach"),
-  component: ReachPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/contact", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function ReachPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.reach} />
-    </SiteLayout>
-  );
-}

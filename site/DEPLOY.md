@@ -199,7 +199,18 @@ carried eight `needs-content` blocks — notes addressed to the owner, rendering
 publicly. Three actively worked against the site: one told visitors every price
 was a working draft, one described the client roster as "largely unverifiable"
 and possibly inflated, and one named a specific artist credit as unconfirmed.
-All eight were removed at the owner's direction. **Do not reintroduce them.**
+They were removed at the owner's direction — but they came back, because the
+removal happened outside this repo and a later sync overwrote it. That is the
+failure mode to design against, not the blocks themselves.
+
+So they are now **gated instead of deleted**. `stripAuthoringNotes()` in
+`src/lib/render-tokens.ts` removes every `<div class="needs-content">` from any
+production build; they render only under `vite dev`. A sync can no longer put
+one in front of a visitor, and the owner keeps the reminders while editing.
+
+Consequence for anyone working here: writing a `needs-content` block is safe
+and is the right place for a note to the owner. Writing a note to the owner in
+*any other markup* is not, because nothing strips it.
 
 The distinction that matters: *"The first posts are on the way"* is transparency
 and belongs on the page. *"Confirm the hourly rate and deposit terms before

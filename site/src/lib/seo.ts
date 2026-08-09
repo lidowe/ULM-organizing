@@ -44,9 +44,9 @@ export const PAGES: PageEntry[] = [
     priority: "0.8",
   },
   {
-    slug: "who-we-are",
-    path: "/who-we-are",
-    title: "Who We Are · Upper Level Music",
+    slug: "about",
+    path: "/about",
+    title: "About · Upper Level Music",
     description:
       "Created in 2006 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
     changefreq: "monthly",
@@ -89,9 +89,9 @@ export const PAGES: PageEntry[] = [
     priority: "0.6",
   },
   {
-    slug: "credits",
-    path: "/credits",
-    title: "Credits · Upper Level Music",
+    slug: "work",
+    path: "/work",
+    title: "Work · Upper Level Music",
     description:
       "Selected discography and credits for Edward Lidow, recording, mixing, production, editing and assistant work across genres.",
     changefreq: "monthly",
@@ -105,15 +105,6 @@ export const PAGES: PageEntry[] = [
       "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
     changefreq: "yearly",
     priority: "0.9",
-  },
-  {
-    slug: "reach",
-    path: "/reach",
-    title: "Contact · Upper Level Music",
-    description:
-      "Get in touch with Upper Level Music, questions, press, or anything that isn't a project inquiry.",
-    changefreq: "yearly",
-    priority: "0.5",
   },
 ];
 

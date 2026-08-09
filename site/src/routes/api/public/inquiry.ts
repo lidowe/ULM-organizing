@@ -26,11 +26,14 @@ const InquirySchema = z.object({
   email: z.string().trim().email().max(200),
   project: z.string().trim().max(160).optional().default(""),
   stage: z.string().trim().max(120).optional().default(""),
-  need: z.string().trim().min(1).max(120),
+  // Optional on purpose: a visitor who does not yet know which service they
+  // need is exactly the person the form is meant to catch.
+  need: z.string().trim().max(120).optional().default("Project inquiry"),
   timeline: z.string().trim().max(160).optional().default(""),
   budget: z.string().trim().max(160).optional().default(""),
   links: z.string().trim().max(500).optional().default(""),
   details: z.string().trim().min(1).max(5000),
+  help: z.string().trim().max(120).optional().default(""),
   // honeypot, must stay empty
   company: z.string().max(0).optional().default(""),
 });
@@ -44,6 +47,7 @@ function plainText(data: Inquiry) {
     `Artist / project: ${data.project || "-"}`,
     `Where the project is now: ${data.stage || "-"}`,
     `What they need help with: ${data.need}`,
+    `How they'd rather work: ${data.help || "-"}`,
     `Timeline: ${data.timeline || "-"}`,
     `Budget / range: ${data.budget || "-"}`,
     `Links: ${data.links || "-"}`,

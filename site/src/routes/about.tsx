@@ -1,18 +1,17 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout, PageBody } from "../components/site/SiteLayout";
+import { pages } from "../lib/site-pages";
+import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/about")({
-  beforeLoad: () => {
-    throw redirect({ to: "/who-we-are" });
-  },
-  head: () => ({
-    meta: [
-      { title: "Who We Are \u00b7 Upper Level Music" },
-      { name: "description", content: "Upper Level Music was created in 2006 by Edward Lidow." },
-    ],
-  }),
+  head: () => pageHead("about"),
   component: AboutPage,
 });
 
 function AboutPage() {
-  return null;
+  return (
+    <SiteLayout>
+      <PageBody html={pages.about} />
+    </SiteLayout>
+  );
 }

@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Legacy URL. The page is now /about. */
 export const Route = createFileRoute("/who-we-are")({
-  head: () =>
-    pageHead("who-we-are"),
-  component: WhoWeArePage,
+  beforeLoad: () => {
+    throw redirect({ to: "/about", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function WhoWeArePage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages["who-we-are"]} />
-    </SiteLayout>
-  );
-}
