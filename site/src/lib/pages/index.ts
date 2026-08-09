@@ -51,10 +51,10 @@ export default `
     <a class="rack-row" href="/services"><span class="no">02</span><h3>Available Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
     <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio and Technology</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
 
-    <a class="rack-row" href="/who-we-are"><span class="no">04</span><h3>Who We Are</h3><p>Edward Lidow and the people behind the work.</p></a>
+    <a class="rack-row" href="/about"><span class="no">04</span><h3>About</h3><p>Edward Lidow and the people behind the work.</p></a>
     <a class="rack-row" href="/education"><span class="no">05</span><h3>Educational Services</h3><p>Training and technical guidance for artists and engineers.</p></a>
     <a class="rack-row" href="/news"><span class="no">06</span><h3>News and Thoughts</h3><p>Notes on sessions, technique, and the industry.</p></a>
-    <a class="rack-row" href="/credits"><span class="no">07</span><h3>Credits</h3><p>Major-label and independent records, with precise roles.</p></a>
+    <a class="rack-row" href="/work"><span class="no">07</span><h3>Work</h3><p>Major-label and independent records, with precise roles.</p></a>
     <a class="rack-row live" href="/contact"><span class="no">08</span><h3>Start a project</h3><p>Send a rough, a reference, or a few sentences.</p></a>
   </div>
 </section>
@@ -85,7 +85,7 @@ export default `
     <h2 class="unit-title small-title">Artists worked with...</h2>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
-  <div class="wrap proof-actions"><a class="btn" href="/credits">All credits</a></div>
+  <div class="wrap proof-actions"><a class="btn" href="/work">See the work</a></div>
 </section>
 
 <section class="cta-section">

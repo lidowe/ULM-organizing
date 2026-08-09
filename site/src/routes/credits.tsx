@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Legacy URL. Credits are now a layer inside /work. */
 export const Route = createFileRoute("/credits")({
-  head: () =>
-    pageHead("credits"),
-  component: CreditsPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/work", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function CreditsPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.credits} />
-    </SiteLayout>
-  );
-}

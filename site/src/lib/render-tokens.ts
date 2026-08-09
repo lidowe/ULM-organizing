@@ -57,9 +57,20 @@ function enhanceImages(html: string): string {
   });
 }
 
+/**
+ * Editorial TODO blocks. They are useful while drafting, but they are page
+ * content like anything else, so in a production build they ship to visitors
+ * as amber "content needed" panels. Keep them in source, strip them here.
+ */
+const NEEDS_CONTENT = /\s*<div class="needs-content">[\s\S]*?<\/div>/g;
+
+function stripAuthoringNotes(html: string): string {
+  return import.meta.env.DEV ? html : html.replace(NEEDS_CONTENT, "");
+}
+
 /** Replace content tokens in a static page string with generated markup. */
 export function renderTokens(html: string): string {
-  const withTokens = html.replace(
+  const withTokens = stripAuthoringNotes(html).replace(
     /\{\{(?:IMG:[a-z0-9-]+|[A-Z_]+)\}\}/g,
     (token) => {
       if (token.startsWith("{{IMG:")) {

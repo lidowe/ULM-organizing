@@ -3,27 +3,29 @@ import { useEffect, type ReactNode } from "react";
 import { initSiteBehaviors } from "./site-behaviors";
 import { renderTokens } from "@/lib/render-tokens";
 
+/**
+ * Short, conventional labels. The site is already unusual in what it says;
+ * making the navigation unusual too just adds decoding cost.
+ * "Start a project" is rendered separately as the highlighted action.
+ */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
+  { to: "/work", label: "Work" },
+  { to: "/services", label: "Services" },
   { to: "/process", label: "Process" },
-  { to: "/who-we-are", label: "Who We Are" },
-  { to: "/services", label: "Available Services" },
-  { to: "/studio", label: "Studio and Technology" },
-  { to: "/education", label: "Educational Services" },
-  { to: "/news", label: "News and Thoughts" },
-  { to: "/credits", label: "Credits" },
+  { to: "/education", label: "Learn" },
+  { to: "/studio", label: "Studio" },
+  { to: "/about", label: "About" },
 ];
 
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
-  { to: "/process", label: "Process", n: "02" },
-  { to: "/who-we-are", label: "Who We Are", n: "03" },
-  { to: "/services", label: "Available Services", n: "04" },
-  { to: "/studio", label: "Studio and Technology", n: "05" },
-  { to: "/education", label: "Educational Services", n: "06" },
-  { to: "/news", label: "News and Thoughts", n: "07" },
-  { to: "/credits", label: "Credits", n: "08" },
-  { to: "/contact", label: "Start a project", n: "09" },
-  { to: "/reach", label: "Contact", n: "10" },
+  { to: "/work", label: "Work", n: "02" },
+  { to: "/services", label: "Services", n: "03" },
+  { to: "/process", label: "Process", n: "04" },
+  { to: "/education", label: "Learn", n: "05" },
+  { to: "/studio", label: "Studio", n: "06" },
+  { to: "/about", label: "About", n: "07" },
+  { to: "/contact", label: "Start a project", n: "08" },
 ];
 
 
@@ -117,8 +119,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 </Link>
               ))}
               <Link to="/contact">Start a project</Link>
-              <Link to="/reach">Contact</Link>
-
             </div>
           </div>
           <div className="footer-meta">
