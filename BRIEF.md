@@ -9,18 +9,64 @@ can't be traced back to a line in here, it probably shouldn't be there.
 
 ---
 
-## 1. The one job
+## 1. The gap
 
-Close the gap between the result someone intended and the result they got —
-wherever that gap lives.
+**Processing got taught as correction. The half that's missing is processing as
+expression.**
 
-Every service is that job at a different point. Mixing is it at the mix stage.
-Teaching is it at the skill stage. A room diagnosis is it at the monitoring
-stage. This is what lets the range of work read as one practice rather than a
-man who does everything.
+Multiband on every track, limiter on every track, sample-replace the drums, EQ
+to fix. That vocabulary is complete — a career fits inside it. What almost
+nobody carries now is the other half: a topology choice *is* an expressive
+choice. Second-order versus third. An opto responding through an LED versus a
+filament. Not technical preferences with technical outcomes — emotional
+outcomes, chosen at the circuit.
 
-**Ed's own line, already written and better than any replacement:** *"I get
-hired to fill a gap, and the gap is different every time."*
+Ed's own framing: *"You don't need a multiband compressor and limiter on every
+track. You just need the knowledge of the right circuit for the right job."*
+And: *"Engineering is about taking what's good and making it great in a mix.
+It's not about fixing the errors of the tracking engineer or the artist's
+sloppy guitar part."*
+
+This is not nostalgia and not a moral claim. It is a specific, teachable,
+demonstrable piece of craft that stopped being transmitted.
+
+### Why it stopped — the causal chain
+
+Every link is structural. Nobody in it is a villain, and the site should never
+imply otherwise.
+
+| Cause | Effect |
+|---|---|
+| The apprenticeship died | Nobody left to teach it |
+| Clone wars and simplified gear | Nothing to learn it on, and the reference is gone — six U47s don't match each other, so "which clone is closest" was always the wrong question |
+| Affiliate and sponsorship economics | No incentive to teach it correctly |
+| AirPods, 2× playback, lossy streams | No feedback signal that it mattered |
+| Labels buying campaigns instead of records | No demand pulling it from the top |
+
+### Why this framing and not the other two
+
+- **The rant** — the damage. Has no buyer.
+- **The manifesto** — the values. Real, but nobody hires values.
+- **The gap** — a missing capability with a name. The only one that is a
+  business, because it can be *shown*, in an hour, on the client's material.
+
+It also cannot alienate anyone. *"You were taught the corrective half of a
+craft that has two halves"* accuses no one of being bad. It explains why
+someone talented and well-equipped is stuck, without a word about their
+ability.
+
+### It unifies the existing work
+
+The locker grouped by topology *"because that is how they get chosen."* The
+preproduction thesis — capture it right and there is nothing to correct. The
+kid with an SM57 and a Focusrite out-mixing a mid-tier studio, because it's
+knowledge, not inventory. Comfort working in the box: not against the tools,
+against choosing without knowing what you're choosing.
+
+Same idea in seven places across the current site, never named.
+
+**Also still true, and still the best short line for the range of services:**
+*"I get hired to fill a gap, and the gap is different every time."*
 
 ---
 
@@ -87,11 +133,23 @@ public labels are still open — see §7.
 
 ---
 
-## 4. The manifesto, distributed
+## 4. The argument, distributed
 
-**There is no manifesto page.** The argument is true and it is load-bearing, but
-stated as a section it reads as a rant of gripes, and leading with what's wrong
-makes the author a jaded hasbeen pretending to be the cure.
+**There is no manifesto page.** The argument is true and load-bearing, but as a
+section it reads as a rant of gripes, and leading with what's wrong makes the
+author a jaded hasbeen pretending to be the cure.
+
+What gets distributed is **the gap and its causes** (§1), not the grievances.
+The grievances — predatory contracts, unpaid invoices, A&R credit theft, the
+Disney attrition pipeline, gear-brand dilution, distribution politics — are
+true, and they explain how Ed knows what he knows. **None of them go on the
+site.** They read as score-settling, and several would cost him work.
+
+The demonstration problem also dissolves here. No case study is needed: one
+small, checkable decision made at the circuit that no plugin chain reaches,
+explained in plain language. That is the entrance to the middle door, it's the
+free sample that isn't a free mix, and it can't be copied by someone who
+doesn't know it.
 
 A fragment earns its place when it **explains a choice the visitor is already
 looking at.** Attached to a decision it's reasoning; floating free it's
@@ -107,6 +165,13 @@ complaint.
 | The tools let you get the part right in two takes instead of two hundred. Some had it pushed on them, some walked through the door because it opened. | **About** | Why the practice exists |
 | Get it right at the source. A decision made early costs nothing; a rescue made later costs everything. | **Process / preproduction** | Why he asks about rehearsal before booking |
 | I own a lot of gear for the same dopamine reason anyone does. I just know what's being marketed to me. | **Studio / gear depth** | Why the locker isn't a flex |
+| Six U47s sitting next to each other don't sound the same as each other either. | **Studio / gear depth** | Why chasing the closest clone was the wrong question |
+| Art is yours to create — but the day it becomes the money your life runs on, everything changes. Money isn't the only finite currency: integrity, self-respect, the ability to take it. Spend those down and you go broke in a way nobody talks about. | **Learn** | Why the teaching isn't only technical |
+
+The currency material above is the deepest thing in the source conversations.
+The version Ed gives students names nobody and is publishable. The version with
+names attached — specific A&Rs, labels, distributors — is not, and would get him
+blacklisted. Keep the teaching version; never the second.
 
 The fourth "manifesto door" is optional and small. If the distribution works,
 it may not be needed at all.
