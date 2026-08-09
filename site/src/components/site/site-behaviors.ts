@@ -99,32 +99,34 @@ export function initSiteBehaviors(): () => void {
           | null;
         return el ? el.value.trim() : "";
       };
+      const expedited = !!document.querySelector<HTMLInputElement>("#expedited:checked");
+      const style =
+        document.querySelector<HTMLInputElement>("input[name=style]:checked")?.value ?? "";
       const payload = {
         name: val("name"),
         email: val("email"),
-        working: val("working"),
-        details: val("details"),
-        tried: val("tried"),
-        links: val("links"),
-        help: val("help"),
-        context: val("context"),
+        services: val("services"),
+        expedited,
+        situation: val("situation"),
+        send: val("send"),
+        style,
+        notes: val("notes"),
         company: val("company"),
       };
       const body = [
-        "Name: " + payload.name,
+        (expedited ? "EXPEDITED REQUEST\n\n" : "") + "Name: " + payload.name,
         "Email: " + payload.email,
-        "Working on: " + (payload.working || "-"),
-        "How they'd rather work: " + (payload.help || "-"),
-        "Links: " + (payload.links || "-"),
+        "Preferred way of working: " + (payload.style || "-"),
+        "Files / links: " + (payload.send || "-"),
         "",
-        "What is wrong / what they want:",
-        payload.details,
+        "Services they're interested in:",
+        payload.services,
         "",
-        "Already tried:",
-        payload.tried || "-",
+        "Situation and what they've tried:",
+        payload.situation || "-",
         "",
-        "Anything else:",
-        payload.context || "-",
+        "Questions, comments, concerns, criticisms:",
+        payload.notes || "-",
       ].join("\n");
 
       const status = document.querySelector("[data-form-status]");
@@ -142,7 +144,9 @@ export function initSiteBehaviors(): () => void {
         );
         window.location.href =
           "mailto:edwardlidow@upperlevelmusic.com?subject=" +
-          encodeURIComponent("Upper Level Music - " + (payload.working || payload.name)) +
+          encodeURIComponent(
+            (expedited ? "EXPEDITED - " : "") + "Upper Level Music - " + payload.name,
+          ) +
           "&body=" +
           encodeURIComponent(body);
       };
