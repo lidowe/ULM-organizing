@@ -176,6 +176,8 @@ img,svg,canvas{display:block;max-width:100%}
 .page-hero .wrap{position:relative;z-index:2;padding-bottom:clamp(2.4rem,4.6vw,4rem)}
 .page-title{font-family:var(--serif);font-size:var(--fs-h1);font-weight:400;letter-spacing:-.035em;line-height:1.04;margin:.75rem 0 1.1rem;max-width:24ch}
 .page-deck{font-family:var(--sans);font-size:var(--fs-deck);line-height:1.55;color:var(--paper-soft);max-width:62ch;margin:0}
+/* A second deck paragraph: separated, and quieter than the first. */
+.page-deck-second{margin-top:1.05rem;color:var(--muted)}
 
 .intro-section{padding-block:clamp(2.5rem,6vw,4.5rem)}
 .intro-inner{max-width:64ch}
@@ -661,7 +663,11 @@ img,svg,canvas{display:block;max-width:100%}
 .archive-strip img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:grayscale(.25)}
 .archive-strip figure:hover img{filter:none}
 .archive-strip figcaption{padding:.7rem .8rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet);border-top:1px solid var(--line)}
-.credit-photo{width:min(100%,880px);margin:clamp(3rem,7vw,6rem) 0;border:1px solid var(--line);background:var(--bg-soft)}
+/* Set to one side at a size these files can actually carry. The smallest of
+   them is 566px wide, so the cap stays under that — at the old 880px it was
+   being blown up 1.55x and the softness showed. */
+.credit-photo{width:min(100%,clamp(280px,32vw,460px));margin:clamp(2.4rem,4.5vw,3.6rem) 0;
+  border:1px solid var(--line);background:var(--bg-soft)}
 .credit-photo-right{margin-left:auto}
 .credit-photo-last{margin-bottom:0}
 .credit-photo img{display:block;width:100%;height:auto;object-fit:contain;filter:grayscale(.15)}
@@ -671,9 +677,9 @@ img,svg,canvas{display:block;max-width:100%}
 .award-plaque{margin:0;border:1px solid var(--line);background:var(--bg-soft);display:flex;flex-direction:column}
 .award-plaque img{display:block;width:100%;aspect-ratio:1/1;height:auto;object-fit:contain;padding:.6rem;background:var(--bg)}
 .award-plaque figcaption{margin-top:auto;padding:.7rem .8rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.54rem;line-height:1.55;letter-spacing:.07em;text-transform:uppercase;color:var(--quiet)}
-@media(max-width:860px){.archive-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.credit-photo{width:min(100%,720px)}}
+@media(max-width:860px){.archive-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
-@media(max-width:660px){.credit-photo{width:100%;margin:3.25rem 0}.credit-photo-last{margin-bottom:0}.award-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin:3.25rem 0}}
+@media(max-width:660px){.credit-photo{width:min(100%,340px);margin:2.4rem 0}.credit-photo-last{margin-bottom:0}.award-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin:3.25rem 0}}
 
 .detail-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--photo-gap)}
 .detail-grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
