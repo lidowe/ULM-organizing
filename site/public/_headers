@@ -1,0 +1,14 @@
+# Security headers for every response. Nitro also emits an /assets/* caching
+# rule into .output/public/_headers at build time; both sets end up in the
+# deployed file, so keep this to rules nitro does not set itself.
+#
+# No Content-Security-Policy here on purpose: the app inlines its own hydration
+# script and loads Google Fonts, so a policy written blind would break the site
+# rather than protect it. Worth adding deliberately, with the report-only
+# header first.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), payment=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

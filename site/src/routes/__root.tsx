@@ -111,14 +111,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "MusicGroup",
+          // Not MusicGroup: that declares a band, which sends search engines
+          // looking for releases by "Upper Level Music" instead of a practice
+          // that sells audio services.
+          "@type": "ProfessionalService",
           name: "Upper Level Music",
           alternateName: "Upper Level Music Creative",
           url: "https://upperlevelmusic.com",
           email: "edwardlidow@upperlevelmusic.com",
+          image: "https://upperlevelmusic.com/session-bw.jpg",
           foundingDate: "2006",
           founder: { "@type": "Person", name: "Edward Lidow" },
           areaServed: "Worldwide",
+          serviceType: [
+            "Audio mixing",
+            "Audio mastering",
+            "Audio editing and vocal tuning",
+            "Recording and tracking",
+            "Music production",
+            "Audio consulting and troubleshooting",
+            "Acoustic treatment planning",
+            "Studio systems and signal flow",
+            "Audio engineering instruction",
+          ],
           address: {
             "@type": "PostalAddress",
             addressLocality: "Columbia",

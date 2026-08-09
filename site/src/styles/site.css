@@ -274,6 +274,15 @@ img,svg,canvas{display:block;max-width:100%}
 .tools-details .detail-body{color:var(--muted);padding:0 0 1.6rem;max-width:80ch;font-size:var(--fs-body)}
 
 .services-stack{border-top:1px solid var(--line)}
+/* Group heading inside the services stack. The page covers work in several
+   unrelated fields, so the groups do the sorting the visitor would otherwise
+   have to do by reading every row. */
+.service-group{display:grid;grid-template-columns:1.05fr 1.35fr minmax(150px,.5fr);
+  gap:clamp(1.5rem,4vw,4rem);padding:clamp(2.2rem,4vw,3.4rem) 0 0;align-items:baseline}
+.service-group h2{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--amber-light);margin:0;font-weight:500}
+.service-group p{grid-column:2 / -1;margin:0;color:var(--muted);font-size:var(--fs-sm);max-width:56ch}
+@media(max-width:900px){.service-group{grid-template-columns:1fr}.service-group p{grid-column:1}}
 .service-row{display:grid;grid-template-columns:1.05fr 1.35fr minmax(150px,.5fr);gap:clamp(1.5rem,4vw,4rem);padding:clamp(2rem,4vw,3.6rem) 0;border-bottom:1px solid var(--line);align-items:start}
 .service-row h2{font-family:var(--serif);font-size:var(--fs-h4);font-weight:400;line-height:1.08;letter-spacing:-.025em;margin:0}
 .service-row .service-copy{color:var(--paper-soft);max-width:52ch;font-size:var(--fs-body)}
