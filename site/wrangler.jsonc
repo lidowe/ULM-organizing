@@ -21,6 +21,27 @@
   "compatibility_date": "2026-08-05",
   "compatibility_flags": ["nodejs_compat"],
 
+  // Pinned here for the same reason as everything else in this file: settings
+  // that live only in the dashboard can be reset by a deploy.
+  //
+  // This is on because the site is not static. /api/public/inquiry already
+  // logs "inquiry delivery failed" when Resend or the webhook rejects a
+  // submission, and without log persistence nobody ever sees it — a contact
+  // form that quietly stops working is the worst failure this site has.
+  //
+  // head_sampling_rate 1 logs every request. Sampling below 1 exists for
+  // high-traffic Workers; at this volume partial logs would just hide the one
+  // failure worth catching. Retention is 7 days.
+  //
+  // observability.traces is deliberately absent: it is distributed tracing for
+  // multi-service apps, free only during its beta, and there is nothing here
+  // for it to trace.
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": { "invocation_logs": true }
+  },
+
   // Attaching the domains here means the first successful deploy also creates
   // the DNS records and issues the certificate — no dashboard step needed.
   // `custom_domain: true` routes ALL paths of the hostname to this Worker.
