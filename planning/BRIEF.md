@@ -228,13 +228,19 @@ free.
 The essence of this door is that the work can't be done without understanding
 the person. Ed's instance, in his own words:
 
-> There's no knob marked confidence. No plugin has an emote %. So when a vocal
-> isn't landing, I ask the singer to picture someone in the crowd who doesn't
-> speak the language — no lyrics, nothing but delivery. Give me the take where
-> that person knows exactly what you mean.
+> There's no knob marked confidence. No plugin has an emote %. So I ask the
+> singer to picture a fan who doesn't speak English and doesn't understand a
+> word of the lyrics — now give me the take where that fan knows exactly what
+> you're feeling and saying, because you put it into the delivery.
 
 What the reader derives, unstated: *the thing missing from my vocals was never
 in my plugin folder.*
+
+Note the mechanism: it doesn't ask for more emotion, it removes language as an
+option. The singer can't lean on the words, so the only channel left is the
+one that was missing. That's the shape worth copying in the other two
+instances — not "try harder," but a constraint that makes the missing thing
+the only way through.
 
 **Bring me a problem** — instance still to come. Candidate: six U47s sitting
 next to each other don't sound the same as each other, which is worth knowing
