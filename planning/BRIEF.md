@@ -1,5 +1,15 @@
 # Upper Level Music — site brief
 
+> **NOT BUILD INPUT. Do not implement from this file.**
+>
+> Coding agents — Lovable, Claude Code, Copilot, Cursor — should ignore this
+> directory entirely. It is pre-production: decisions, reasoning and open
+> questions for a human writing copy and structure. It contains instructions
+> like "dissolve the services page" that are strategy, not tickets.
+>
+> Build instructions live in the site tree and in its AGENTS.md. Nothing here
+> is a task.
+
 The constraint document for the rebuild. Written from three strategy documents,
 two long planning conversations, and the current build. Everything here is a
 decision already made or an open question clearly marked as one.
