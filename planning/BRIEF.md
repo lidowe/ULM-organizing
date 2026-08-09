@@ -95,10 +95,9 @@ imply otherwise.
 - **The gap** — a missing capability with a name. The only one that is a
   business, because it can be *shown*, in an hour, on the client's material.
 
-It also cannot alienate anyone. *"You were taught the corrective half of a
-craft that has two halves"* accuses no one of being bad. It explains why
-someone talented and well-equipped is stuck, without a word about their
-ability.
+It also cannot alienate anyone. *"You have three quarters of it"* accuses no
+one of being bad. It explains why someone talented and well-equipped is stuck,
+without a word about their ability.
 
 ### It unifies the existing work
 
