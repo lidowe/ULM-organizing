@@ -147,9 +147,24 @@ site.** They read as score-settling, and several would cost him work.
 
 The demonstration problem also dissolves here. No case study is needed: one
 small, checkable decision made at the circuit that no plugin chain reaches,
-explained in plain language. That is the entrance to the middle door, it's the
-free sample that isn't a free mix, and it can't be copied by someone who
-doesn't know it.
+explained in plain language.
+
+**Reasoning is free to state. Work is never free.** Saying *six U47s don't
+sound the same as each other* costs nothing to reproduce, is verifiable by
+anyone who has stood in a mic locker, and proves judgment without spending any.
+Producing a demonstration clip costs the same hours as the paid work — a full
+setup, capture and mix built around the point — and giving that away is the
+race to the bottom, not an escape from it.
+
+So the instances are **facts and reasoning, never produced audio.** That rules
+out the before/after clip convention the whole trade runs on, and it is a
+constraint on which instances can be used.
+
+**No free samples, stated as position rather than policy.** Refusing them is
+itself a demonstration of the thesis: the engineer already absorbs unpaid
+rescue work with no stake in the result, and free trial mixes are that same
+transaction moved to the front of the funnel. Say it plainly and it does
+double duty — a boundary and an argument in one line.
 
 A fragment earns its place when it **explains a choice the visitor is already
 looking at.** Attached to a decision it's reasoning; floating free it's
