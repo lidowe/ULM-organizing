@@ -30,9 +30,19 @@ export default `
   </div>
 </section>
 
+<section class="rack-unit why-unit">
+  <div class="wrap">
+    <div class="unit-label"><span class="unit-no">02</span><span>Why this exists</span></div>
+    <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
+    <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
+    <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
+    <div class="needs-content"><strong>Placeholder, to be expanded</strong>Edward is writing the full version of this. It should end up as its own page for people who want the whole account of what happened to the pipeline, linked from About and Learn rather than sitting in the nav. This short version stays on the home page.</div>
+  </div>
+</section>
+
 <section class="rack-unit anywhere-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>The setups</span></div>
+    <div class="unit-label"><span class="unit-no">03</span><span>The setups</span></div>
     <h2 class="unit-title">There is art being captured in all of these.</h2>
   </div>
   <div class="wrap anywhere-grid">
@@ -45,7 +55,7 @@ export default `
 
 <section class="rack-unit start-here">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>Where to start</span></div>
+    <div class="unit-label"><span class="unit-no">04</span><span>Where to start</span></div>
     <h2 class="unit-title">Down to business.</h2>
   </div>
   <div class="wrap rack-rows">
