@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Who We Are</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2006 by Edward Lidow. A studio built around the person making the record.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">About</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2006 by Edward Lidow. A studio built around the person making the record.</p></div></section>
 <section class="section intro-section">
   <div class="wrap intro-inner">
     <p class="intro-copy">Doesn&rsquo;t it feel like 90% of getting your art heard involves anything but making music? Constant self-marketing, streaming services that don&rsquo;t pay, and learning to record at a professional level just to keep up.</p>
@@ -120,7 +120,7 @@ export default `
 </section>
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell me about the record.</h2><p>A rough, a reference, or a few sentences is enough.</p></div>
+    <div class="reveal"><h2>Tell me what you&rsquo;re working on.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
     <a class="btn primary reveal" href="/contact">Start a project</a>
   </div>
 </section>

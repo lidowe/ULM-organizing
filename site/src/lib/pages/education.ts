@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Educational Services</div><h1 class="page-title">Somebody has to teach this.</h1><p class="page-deck">One-on-one training in recording, mixing, and studio technical work, for artists, engineers, producers, and students.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Learn</div><h1 class="page-title">Somebody has to teach this.</h1><p class="page-deck">One-on-one training in recording, mixing, and studio technical work, for artists, engineers, producers, and students.</p></div></section>
 <section class="edu-photo-band">
   <img src="{{IMG:mastering-list}}" alt="A session screen listing finished song titles" loading="lazy" />
 </section>

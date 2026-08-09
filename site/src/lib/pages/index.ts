@@ -60,12 +60,12 @@ export default `
   </div>
   <div class="wrap rack-rows">
     <a class="rack-row" href="/process"><span class="no">01</span><h3>Process</h3><p>How the conversation starts and what happens after it.</p></a>
-    <a class="rack-row" href="/services"><span class="no">02</span><h3>Available Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
-    <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio and Technology</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
+    <a class="rack-row" href="/services"><span class="no">02</span><h3>Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
+    <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
 
     <a class="rack-row" href="/about"><span class="no">04</span><h3>About</h3><p>Edward Lidow and the people behind the work.</p></a>
-    <a class="rack-row" href="/education"><span class="no">05</span><h3>Educational Services</h3><p>Training and technical guidance for artists and engineers.</p></a>
-    <a class="rack-row" href="/news"><span class="no">06</span><h3>News and Thoughts</h3><p>Notes on sessions, technique, and the industry.</p></a>
+    <a class="rack-row" href="/education"><span class="no">05</span><h3>Learn</h3><p>Training and technical guidance for artists and engineers.</p></a>
+    <a class="rack-row" href="/news"><span class="no">06</span><h3>News</h3><p>Notes on sessions, technique, and the industry.</p></a>
     <a class="rack-row" href="/work"><span class="no">07</span><h3>Work</h3><p>Major-label and independent records, with precise roles.</p></a>
     <a class="rack-row live" href="/contact"><span class="no">08</span><h3>Start a project</h3><p>Send a rough, a reference, or a few sentences.</p></a>
   </div>
@@ -102,7 +102,7 @@ export default `
 
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell me about the record.</h2><p>A rough, a reference, or a few sentences is enough.</p></div>
+    <div class="reveal"><h2>Tell me what you&rsquo;re working on.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
     <a class="btn primary reveal" href="/contact">Start a project</a>
   </div>
 </section>

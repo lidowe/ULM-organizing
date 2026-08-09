@@ -55,7 +55,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "services",
     path: "/services",
-    title: "Available Services · Upper Level Music",
+    title: "Services · Upper Level Music",
     description:
       "Recording, production, vocal production, mixing, mastering and consultation. Book one stage or scope a whole record.",
     changefreq: "monthly",
@@ -64,7 +64,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "studio",
     path: "/studio",
-    title: "Studio and Technology · Upper Level Music",
+    title: "Studio · Upper Level Music",
     description:
       "The microphone locker, outboard racks and analog front end behind the work, 103 microphones across 64 models.",
     changefreq: "monthly",
@@ -73,7 +73,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "education",
     path: "/education",
-    title: "Educational Services · Upper Level Music",
+    title: "Learn · Upper Level Music",
     description:
       "One-on-one training in recording, mixing and studio technical work for artists, engineers, producers and students, remote, at your pace.",
     changefreq: "monthly",
@@ -82,7 +82,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "news",
     path: "/news",
-    title: "News and Thoughts · Upper Level Music",
+    title: "News · Upper Level Music",
     description:
       "Studio updates, releases, and short essays on making records from Upper Level Music.",
     changefreq: "weekly",
