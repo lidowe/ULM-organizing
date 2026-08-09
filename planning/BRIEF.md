@@ -131,6 +131,26 @@ unread.
 
 ## 3. Structure
 
+> **The three doors are an untested hypothesis, not a decision.** They came
+> from Ed's own `/process` page. A strategy document then echoed them back
+> while citing his material, and a planning conversation built on that echo as
+> if it were confirmation. No user research, no alternatives compared, no
+> agents ever run — the research was synthesised, not conducted. Treat the
+> structure below as the leading candidate and nothing more.
+>
+> **The strongest objection is Ed's own account of the work.** He describes
+> producing as pulling something out of an artist they didn't know they had —
+> setting the room, dropping the lights, making the mic disappear, seeding
+> ideas so the good ones arrive as the artist's own. That is not "do it for
+> me." Door 1 as written implies handing a project over and receiving a
+> product back, which is not how he has ever described working. **Door 1 and
+> Door 2 may be the same door.**
+>
+> Alternatives never examined: two doors (make it / learn it) with the paid
+> conversation as the shared entrance; one door (the conversation) with
+> everything downstream of it; no doors at all. Before building, test the
+> structure rather than inheriting it.
+
 Root → three doors → depth as proof. Nav is three doors plus one action.
 
 | Page | Owns | Gate it serves |
