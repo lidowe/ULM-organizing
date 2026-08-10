@@ -14,7 +14,7 @@ export default `
     </div>
   </div>
   <figure class="hero-panel">
-    <img src="{{IMG:rack-panel-alt}}" alt="A red 19-inch rack panel reading UPPER LEVEL MUSIC in blocky lettering, bolted between a Pendulum Quartet II and a Retro Revolver" fetchpriority="high" />
+    <img src="{{IMG:rack-ulm-front}}" alt="A studio rack seen head on: a Sonic Farm Creamer+ at the top, a pair of Undertone Audio MPEQ-1s, a Stam SA-T69 and an A-Designs Ventura SE, NPNG DMP-2NW preamps, a Retro 176, a red 19-inch panel reading UPPER LEVEL MUSIC, a Retro Sta-Level Gold Edition, and a Mamba XD8 patchbay below" fetchpriority="high" />
   </figure>
 </section>
 

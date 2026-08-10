@@ -381,8 +381,10 @@ img,svg,canvas{display:block;max-width:100%}
   .cta-inner{grid-template-columns:1fr}.cta-inner .btn{justify-self:start}}
 
 @media(max-width:900px){
-  .hero-panel{position:static;width:100%;height:auto;margin-top:2.2rem;justify-content:flex-start}
-  .hero-panel img{height:auto;max-height:48vh;object-position:center}
+  /* Below the copy rather than beside it. object-fit is dropped here: with a
+     height cap it shrinks the photo instead of bounding it. */
+  .hero-panel{position:static;width:auto;height:auto;margin:2.4rem var(--gutter) 0;justify-content:center}
+  .hero-panel img{width:min(100%,360px);height:auto;object-fit:fill;margin-inline:auto}
   .hero-rack-inner{grid-template-columns:1fr}
 }
 @media(max-width:660px){
@@ -760,7 +762,6 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
-  .hero-panel img{height:clamp(200px,54vw,300px);object-position:center 30%}
   /* narrow screens: taller frames so tall sources are not sliced into strips */
   .studio-hero-photo img{aspect-ratio:4/3}
   .lead-photo img{aspect-ratio:4/3}
@@ -769,9 +770,6 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
   .inline-photo img{aspect-ratio:4/3}
   .edu-photo-band img{aspect-ratio:16/9;max-height:none}
 }
-
-@media(min-width:701px) and (max-width:1024px){
-  .hero-panel img{object-position:center 28%}}
 
 /* ---- Display typeface: squared industrial, matched to the rack banner ---- */
 :root{--display:"Epilogue","Inter",sans-serif}
