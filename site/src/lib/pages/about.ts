@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">About</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2006 by Edward Lidow. A studio built around the person making the record.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">About</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2012 by Edward Lidow. A studio built around the person making the record.</p></div></section>
 <section class="section intro-section">
   <div class="wrap intro-inner">
     <p class="intro-copy">Doesn&rsquo;t it feel like 90% of getting your art heard involves anything but making music? Constant self-marketing, streaming services that don&rsquo;t pay, and learning to record at a professional level just to keep up.</p>
@@ -28,7 +28,7 @@ export default `
       <div class="wwa-panel" id="wwa-panel-01" role="region" aria-labelledby="wwa-btn-01">
         <div class="wwa-panel-inner">
           <div class="person-lead">
-            <p class="person-copy">Upper Level Music was created in 2006 by Edward Lidow, musician, recording engineer, mixer, producer, studio owner, acoustic consultant, and university instructor in audio engineering. There are few jobs in this industry he hasn&rsquo;t done at some point.</p>
+            <p class="person-copy">Upper Level Music was created in 2012 by Edward Lidow, musician, recording engineer, mixer, producer, studio owner, acoustic consultant, and university instructor in audio engineering. There are few jobs in this industry he hasn&rsquo;t done at some point.</p>
             <figure class="person-thumb">
               <img src="{{IMG:edward-thumbnail}}" alt="Edward Lidow at a recording console with studio monitors behind him" loading="lazy" />
               <figcaption>Edward Lidow at the console.</figcaption>
@@ -43,11 +43,11 @@ export default `
         </div>
       </div>
     </article>
-    <article class="wwa-item" data-accordion-item>
+    <article class="wwa-item" id="industry" data-accordion-item>
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-02" id="wwa-btn-02">
           <span class="wwa-no">02</span>
-          <span class="wwa-heading"><span class="wwa-title">The industry as it stands</span><span class="wwa-summary">The team got smaller. The list of jobs didn&rsquo;t.</span></span>
+          <span class="wwa-heading"><span class="wwa-title accent">The Music Industry and The Diminished Artist</span><span class="wwa-summary">The technology to create has never been so powerful, so why do I feel so powerless?</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>

@@ -120,7 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: "https://upperlevelmusic.com",
           email: "edwardlidow@upperlevelmusic.com",
           image: "https://upperlevelmusic.com/session-bw.jpg",
-          foundingDate: "2006",
+          foundingDate: "2012",
           founder: { "@type": "Person", name: "Edward Lidow" },
           areaServed: "Worldwide",
           serviceType: [

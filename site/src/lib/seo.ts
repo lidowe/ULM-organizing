@@ -48,7 +48,7 @@ export const PAGES: PageEntry[] = [
     path: "/about",
     title: "About · Upper Level Music",
     description:
-      "Created in 2006 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
+      "Created in 2012 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
     changefreq: "monthly",
     priority: "0.7",
   },

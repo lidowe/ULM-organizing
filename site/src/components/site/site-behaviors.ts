@@ -273,6 +273,25 @@ export function initSiteBehaviors(): () => void {
       });
     });
 
+    // Arriving on a deep link such as /about#industry: without this the browser
+    // scrolls to a collapsed panel and the visitor sees a heading with nothing
+    // under it. Reuses setOpen so there is only one way a panel opens.
+    const openFromHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      if (!id) return;
+      const item = document.getElementById(id);
+      const trigger = item?.querySelector<HTMLButtonElement>(".wwa-trigger");
+      if (!trigger) return;
+      if (trigger.getAttribute("aria-expanded") !== "true") setOpen(trigger, true);
+      requestAnimationFrame(() => {
+        item!.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" });
+        window.scrollBy({ top: -100, behavior: "auto" });
+      });
+    };
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    cleanups.push(() => window.removeEventListener("hashchange", openFromHash));
+
     const onResize = () => {
       allTriggers.forEach((trigger) => {
         if (trigger.getAttribute("aria-expanded") === "true") {

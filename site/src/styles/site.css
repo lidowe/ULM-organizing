@@ -109,11 +109,11 @@ img,svg,canvas{display:block;max-width:100%}
 .menu-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.78rem;font-family:var(--mono)}
 
 /* ---- Home hero: the rack panel ---- */
-.hero-rack{position:relative;padding:clamp(8rem,15vh,11rem) 0 clamp(3rem,7vw,5.5rem);background:
+.hero-rack{position:relative;overflow:hidden;padding:clamp(8rem,15vh,11rem) 0 clamp(3rem,7vw,5.5rem);background:
   linear-gradient(180deg,var(--bg-soft),var(--bg) 70%);border-bottom:1px solid var(--line)}
 .hero-rack::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:repeating-linear-gradient(0deg,rgba(238,236,231,.028) 0 1px,transparent 1px 7px);opacity:.5}
-.hero-rack-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero-rack-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
 .hero-eyebrow{display:flex;align-items:center;gap:.55rem .9rem;flex-wrap:wrap;font-family:var(--mono);font-size:.58rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper-soft);margin:0 0 1.6rem}
 .hero-eyebrow span:not(:last-child)::after{content:"/";margin-left:.9rem;color:var(--quiet)}
 .hero-title{font-family:var(--serif);font-size:var(--fs-hero);margin:0 0 1.5rem;line-height:.98;letter-spacing:-.035em;font-weight:400;color:var(--paper)}
@@ -124,20 +124,23 @@ img,svg,canvas{display:block;max-width:100%}
 @keyframes ln-up{to{transform:none}}
 
 .hero-title em{font-style:italic;color:var(--amber-light)}
+.hero-link{display:inline-block;border-bottom:2px solid transparent;transition:border-color .2s}
+.hero-link:hover,.hero-link:focus-visible{border-bottom-color:var(--amber-light)}
+/* The one accordion heading that is also a landing target from the home page. */
+.wwa-title.accent{color:var(--amber-light)}
 /* The headline is a pun and the plate is the fact. They only both work if they
    read as different objects, so the plate borrows the engraved rack-label
    language from the rest of the site rather than continuing the display type. */
 .hero-plate{position:relative;margin:0 0 2.15rem;padding-left:clamp(.95rem,1.5vw,1.35rem);
   border-left:2px solid var(--amber);animation:rise .9s cubic-bezier(.22,.61,.36,1) .4s both}
-/* No inline separators: the list wraps, and a "·" glued to an item strands
-   itself at the end of a line the moment it does. Gap carries the division. */
-.hero-scope{margin:0 0 .8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;font-family:var(--mono);
-  font-size:.58rem;line-height:1.35;letter-spacing:0.14em;text-transform:uppercase;color:var(--amber-light)}
 .hero-deck{font-size:var(--fs-deck);line-height:1.58;max-width:40ch;color:var(--paper);margin:0}
 .hero-actions{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;animation:rise .9s cubic-bezier(.22,.61,.36,1) .55s both}
-.hero-panel{margin:0;position:relative;border:1px solid var(--line);background:var(--panel);
-  box-shadow:0 26px 60px rgba(0,0,0,.5)}
-.hero-panel img{width:100%;height:clamp(230px,34vw,430px);object-fit:cover;object-position:center 27%}
+/* The photo runs the full height of the dark band, including behind the fixed
+   header, on the right half of the page. object-fit:contain because it is not
+   to be cropped, so it letterboxes inside its half rather than filling it. */
+.hero-panel{position:absolute;top:0;right:0;bottom:0;width:50%;margin:0;padding:0;
+  display:flex;align-items:center;justify-content:flex-end;pointer-events:none}
+.hero-panel img{width:100%;height:100%;object-fit:contain;object-position:right center}
 
 .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);font-family:var(--mono);font-size:.6rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .btn>*{position:relative;z-index:1}
@@ -377,12 +380,15 @@ img,svg,canvas{display:block;max-width:100%}
   .rate-panel,.terminology-panel{grid-template-columns:1fr}
   .cta-inner{grid-template-columns:1fr}.cta-inner .btn{justify-self:start}}
 
+@media(max-width:900px){
+  .hero-panel{position:static;width:100%;height:auto;margin-top:2.2rem;justify-content:flex-start}
+  .hero-panel img{height:auto;max-height:48vh;object-position:center}
+  .hero-rack-inner{grid-template-columns:1fr}
+}
 @media(max-width:660px){
   .header-inner{min-height:72px}
   .brand strong{font-size:1.18rem}.brand span{font-size:.53rem}
   .hero-eyebrow{display:inline-flex;white-space:nowrap;font-size:.52rem;padding:0;border:0;background:none}
-  .hero-scope{display:grid;grid-template-columns:1fr 1fr;gap:.4rem 1rem}
-  .hero-scope span:not(:last-child)::after{display:none}
   .entry-grid,.capability-grid{grid-template-columns:1fr}
   .section,.rack-unit{padding:3.2rem 0}
   .section-title{font-size:var(--fs-h2)}

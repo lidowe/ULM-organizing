@@ -2,21 +2,20 @@ export default `
 <section class="hero-rack">
   <div class="wrap hero-rack-inner">
     <div class="hero-copy">
-      <p class="hero-eyebrow"><span>Upper Level Music</span><span>Columbia, South Carolina</span><span>Est. 2006</span></p>
-      <h1 class="display hero-title"><span class="ln"><span>The industry is undergoing</span></span><span class="ln"><span><em>major key changes.</em></span></span></h1>
+      <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
+      <h1 class="display hero-title"><span class="ln"><span>The Industry is undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>major key changes.</em></a></span></span></h1>
       <div class="hero-plate">
-        <p class="hero-scope"><span>Records</span><span>Voice &amp; content</span><span>Mixing</span><span>Rooms &amp; systems</span><span>Teaching</span></p>
-        <p class="hero-deck">Major-label engineering without the major-label overhead. Wherever you are in it, and whatever stage it is stuck at.</p>
+        <p class="hero-deck">Now is the time to switch modes. Musical or technical, creative or still learning, you set the scale. We&rsquo;ll help you find the resolve.</p>
       </div>
       <div class="hero-actions">
         <a class="btn primary" href="/contact">Start a project</a>
         <a class="btn" href="/process">See the process</a>
       </div>
     </div>
-    <figure class="hero-panel">
-      <img src="{{IMG:rack-panel-alt}}" alt="A red 19-inch rack panel reading UPPER LEVEL MUSIC in blocky lettering, bolted between a Pendulum Quartet II and a Retro Revolver" fetchpriority="high" />
-    </figure>
   </div>
+  <figure class="hero-panel">
+    <img src="{{IMG:rack-panel-alt}}" alt="A red 19-inch rack panel reading UPPER LEVEL MUSIC in blocky lettering, bolted between a Pendulum Quartet II and a Retro Revolver" fetchpriority="high" />
+  </figure>
 </section>
 
 <section class="rack-unit stance-unit">
