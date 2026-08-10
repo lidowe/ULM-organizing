@@ -2,6 +2,13 @@
   --bg:#0b0d11;
   --bg-soft:#111520;
   --photo-gap:clamp(1rem,2.2vw,1.75rem);
+  /* Photo widths as fractions of the 1200 content column, so a standalone
+     photograph lands on the same edges as the ones inside the grids. */
+  --pw-full:1200px;
+  --pw-2of3:784px;
+  --pw-half:588px;
+  --pw-3rd:384px;
+  --photo-rhythm:clamp(1.8rem,3.4vw,2.8rem);
   --panel:#161b26;
   --paper:#eceae5;
   --paper-soft:#a8adb8;
@@ -647,32 +654,34 @@ img,svg,canvas{display:block;max-width:100%}
 /* Sits under the statement, indented to the same rule so the two read as one
    block. No caption, no frame, no desaturation: the photograph is the
    argument, and 1261px on the long edge is the ceiling before it softens. */
-.why-photo{margin:2rem 0 0;padding-left:clamp(.95rem,1.5vw,1.35rem);max-width:760px}
-.why-photo img{display:block;width:100%;height:auto}
+.why-photo{margin:var(--photo-rhythm) 0 0;padding-left:clamp(.95rem,1.5vw,1.35rem);max-width:var(--pw-2of3)}
+.why-photo img,.work-lead-photo img,.panel-photo img,.service-photo img,
+.acoustics-photo img,.room-band img,.freedom-photo img{display:block;width:100%;height:auto;
+  max-height:560px;object-fit:contain;object-position:left center}
 /* Lead image on Work. Uncaptioned on purpose: the credits underneath are the
    names, this is the work. Capped at its own 1203px so it never softens. */
-.work-lead-photo{margin:clamp(1.8rem,3.5vw,2.8rem) 0 0;max-width:1200px}
+.work-lead-photo{margin:var(--photo-rhythm) 0 0;max-width:var(--pw-full)}
 .work-lead-photo img{display:block;width:100%;height:auto}
 /* Photographs inside the About panels, and beside the artist quote. All of
    these sources are about 1260px on the long edge, so the caps below are the
    point at which they stay sharp rather than an aesthetic preference. */
-.panel-photo{margin:1.9rem 0 .4rem;max-width:620px}
+.panel-photo{margin:var(--photo-rhythm) 0 .4rem;max-width:var(--pw-half)}
 .panel-photo img{display:block;width:100%;height:auto}
 /* The writing room, at the width its 2.47:1 shape needs. Capped at its own
    1261px so it stays sharp. */
 /* Acoustics. The source is 1049px wide, so both caps sit under it. */
-.service-photo{margin:2rem 0 .5rem;max-width:440px}
+.service-photo{margin:var(--photo-rhythm) 0 .5rem;max-width:var(--pw-3rd)}
 .service-photo img{display:block;width:100%;height:auto}
 .acoustics-split{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:start}
 .acoustics-copy p{color:var(--paper-soft);font-size:var(--fs-body);margin:0 0 1rem;max-width:56ch}
-.acoustics-photo{margin:0;max-width:420px}
+.acoustics-photo{margin:0;max-width:var(--pw-3rd)}
 .acoustics-photo img{display:block;width:100%;height:auto}
 @media(max-width:860px){.acoustics-split{grid-template-columns:1fr}.acoustics-photo{max-width:360px}}
 
 .room-band-section{padding-top:0}
-.room-band{margin:0;max-width:1200px;margin-inline:auto}
+.room-band{margin:0 auto;max-width:var(--pw-full)}
 .room-band img{display:block;width:100%;height:auto}
-.freedom-photo{margin:2.4rem 0 0;max-width:460px}
+.freedom-photo{margin:var(--photo-rhythm) 0 0;max-width:var(--pw-3rd)}
 .freedom-photo img{display:block;width:100%;height:auto}
 @media(min-width:901px){
   .freedom-inner{display:grid;grid-template-columns:1fr auto;gap:clamp(2rem,4vw,3.5rem);align-items:center}
