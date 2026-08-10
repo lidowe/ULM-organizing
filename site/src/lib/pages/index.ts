@@ -43,22 +43,10 @@ export default `
   </div>
 </section>
 
-<section class="rack-unit anywhere-unit">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>The setups</span></div>
-    <h2 class="unit-title">There is art being captured in all of these.</h2>
-  </div>
-  <div class="wrap anywhere-grid">
-    <figure><img src="{{IMG:room-major-console}}" alt="A major-label control room with a large-format console and monitor wall" loading="lazy" /><figcaption>A major-label control room.</figcaption></figure>
-    <figure><img src="{{IMG:room-home-amps}}" alt="A home setup with guitars, amps, a pedalboard, and a drum kit" loading="lazy" /><figcaption>A working room at home.</figcaption></figure>
-    <figure><img src="{{IMG:room-kid}}" alt="A child playing a keyboard in a blue-lit room with a drum kit behind" loading="lazy" /><figcaption>Somebody&rsquo;s first setup.</figcaption></figure>
-  </div>
-</section>
-
 
 <section class="rack-unit start-here">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">04</span><span>Where to start</span></div>
+    <div class="unit-label"><span class="unit-no">03</span><span>Where to start</span></div>
     <h2 class="unit-title">Pick the one that sounds like you.</h2>
     <div class="path-stack">
       <div class="path reveal">
@@ -147,7 +135,7 @@ export default `
 
 <section class="rack-unit proof-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">05</span><span>Every role</span></div>
+    <div class="unit-label"><span class="unit-no">04</span><span>Every role</span></div>
     <p class="why-copy">Various roles, various artists. Whether the role was large or small, the artist famous or not, every job contributes to the flow state and every job asks 100% focus. Even the coffee can ruin an entire day, or fuel the magic later.</p>
     <p class="why-line">No matter the task, we serve the process. The work is in service to the song, and the ego stays outside.</p>
     <p class="why-copy">Get them coffee, route signal flow and place mics, run the DAW or be the tape op. It was all part of a bigger picture and personal growth. Running cables became running sessions. Tuning instruments became vocal tuning and production. Production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
