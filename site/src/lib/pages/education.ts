@@ -12,16 +12,6 @@ export default `
   </div>
 </section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Open position</div><h2 class="section-title">Engineering Assistant</h2></div>
-  <div class="wrap remote-body reveal">
-    <p>If you&rsquo;re trying to get real-world experience working in the studio environment and live in the Columbia, South Carolina area, or are willing to participate via online video direction, feel free to send us your resume.</p>
-    <p>The job of studio assistant involves knowing and learning studio signal flow, basic DAW workflow (Pro Tools, Logic, Ableton, and Luna primarily), and introductory electronics comprehension like circuit testing, reading schematics, and simple soldering-iron skills. Formal education is not required, though encouraged. We will have you in recording sessions that move at the speed of some of the biggest recording studios across the country. A willingness to learn analog systems as well as digital is essential. You will be given the classic studio-assistant responsibilities and education to be comfortable working in analog and digital environments.</p>
-    <p>The hours are on an as-needed basis, but the position is mostly part-time and somewhat flexible. Payment and compensation work on an overflow system: as you begin to learn the day-to-day workflow, certain tasks from actual projects will be sent to you, primarily involving session editing, organization, analog patchbay management, session documentation and recall, and more. It&rsquo;s by project and trust dependent.</p>
-    <p>The position is available for one remote applicant and one local applicant.</p>
-    <div class="hero-actions"><a class="btn primary" href="/contact">Send your resume</a></div>
-  </div>
-</section>
-<section class="section">
   <div class="wrap">
     <figure class="teaching-photo reveal"><img src="{{IMG:classroom}}" alt="A teaching room: projector screen showing a first-class questionnaire, whiteboard, keyboard, drum pads and a laptop on the table" loading="lazy" /></figure>
   </div>
