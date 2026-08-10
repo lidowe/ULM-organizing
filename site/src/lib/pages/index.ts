@@ -35,6 +35,7 @@ export default `
     <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
     <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
     <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
+    <figure class="why-photo"><img src="{{IMG:wild-drunk-jordan}}" alt="A guitarist on his back on the stage floor, still playing, the rest of the band around him mid-song" loading="lazy" /></figure>
     <div class="needs-content"><strong>Placeholder, to be expanded</strong>Edward is writing the full version of this. It should end up as its own page for people who want the whole account of what happened to the pipeline, linked from About and Learn rather than sitting in the nav. This short version stays on the home page.</div>
   </div>
 </section>

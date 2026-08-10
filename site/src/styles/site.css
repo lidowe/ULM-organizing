@@ -644,6 +644,31 @@ img,svg,canvas{display:block;max-width:100%}
 .why-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.14;letter-spacing:-.03em;
   color:var(--paper);margin:1.9rem 0 0;max-width:24ch;padding-left:clamp(.95rem,1.5vw,1.35rem);
   border-left:2px solid var(--amber)}
+/* Sits under the statement, indented to the same rule so the two read as one
+   block. No caption, no frame, no desaturation: the photograph is the
+   argument, and 1261px on the long edge is the ceiling before it softens. */
+.why-photo{margin:2rem 0 0;padding-left:clamp(.95rem,1.5vw,1.35rem);max-width:760px}
+.why-photo img{display:block;width:100%;height:auto}
+/* Lead image on Work. Uncaptioned on purpose: the credits underneath are the
+   names, this is the work. Capped at its own 1203px so it never softens. */
+.work-lead-photo{margin:clamp(1.8rem,3.5vw,2.8rem) 0 0;max-width:1200px}
+.work-lead-photo img{display:block;width:100%;height:auto}
+/* Photographs inside the About panels, and beside the artist quote. All of
+   these sources are about 1260px on the long edge, so the caps below are the
+   point at which they stay sharp rather than an aesthetic preference. */
+.panel-photo{margin:1.9rem 0 .4rem;max-width:620px}
+.panel-photo img{display:block;width:100%;height:auto}
+/* The writing room, at the width its 2.47:1 shape needs. Capped at its own
+   1261px so it stays sharp. */
+.room-band-section{padding-top:0}
+.room-band{margin:0;max-width:1200px;margin-inline:auto}
+.room-band img{display:block;width:100%;height:auto}
+.freedom-photo{margin:2.4rem 0 0;max-width:460px}
+.freedom-photo img{display:block;width:100%;height:auto}
+@media(min-width:901px){
+  .freedom-inner{display:grid;grid-template-columns:1fr auto;gap:clamp(2rem,4vw,3.5rem);align-items:center}
+  .freedom-photo{margin:0}
+}
 .stance-lead{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.2;letter-spacing:-.022em;color:var(--paper);margin:0 0 1.8rem;max-width:34ch}
 
 /* Anywhere: three rooms */

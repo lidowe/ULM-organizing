@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Selected work</div><h1 class="page-title">On record.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Selected work</div><h1 class="page-title">On record.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console with a session running, seen from behind, a band tracking through the control room glass" fetchpriority="high" /></figure></div></section>
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">Real records. Real roles.</h2><div class="section-copy"><p>Public role language where available, kept legible instead of exhaustive.</p></div></div></div>
   <div class="wrap">

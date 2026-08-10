@@ -27,7 +27,7 @@ export default `
 <section class="section">
   <div class="wrap photo-set two reveal">
     <figure><img src="{{IMG:guitars-rack-wall}}" alt="A rack of electric and acoustic guitars against the studio wall" loading="lazy" /><figcaption>Instruments on hand</figcaption></figure>
-    <figure><img src="{{IMG:pedalboard-overhead}}" alt="A large pedalboard photographed from overhead" loading="lazy" /><figcaption>Tone building</figcaption></figure>
+    <figure><img src="{{IMG:superpower}}" alt="A singer at the microphone mid-phrase on a club stage, a second vocalist behind her" loading="lazy" /><figcaption>The performance</figcaption></figure>
   </div>
 </section>
 <section class="cta-section"><div class="wrap cta-inner"><div class="reveal"><h2>You can start now.</h2><p>Any topic, any questions, thoughts, files, or hit me up just to talk shop. The industry is changing and it's your lead.</p></div><a class="btn primary reveal" href="/contact">Talk about the project</a></div></section>

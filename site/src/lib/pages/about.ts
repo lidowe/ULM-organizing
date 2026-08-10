@@ -56,6 +56,7 @@ export default `
           <p class="person-copy">The record industry today is shifting the responsibilities of an entire team of specialized talents onto underfunded, overworked artists, asking them to own a dozen things that have nothing to do with why they were drawn to music in the first place. It is nearly impossible to make a record with the sound quality, the collaborative depth, and the specialized touch that a label can simply fund and hire.</p>
           <p class="person-copy">It used to run bottom to top. A label sent an A&amp;R to a dive bar to see a band with a little local buzz, a write-up in a weekly, a tip from a friend of a friend, and the artist blew them away. The label then had to convince the artist to sign, so the label could support them.</p>
           <p class="person-copy">Now it runs top to bottom. Labels are media conglomerates pushing artists they choose and shape toward radio, toward numbers that streaming will never pay an independent artist. For the creative-minded musician, engineer, or anyone who wants to be present while music gets made, the landscape has gone dystopian.</p>
+          <figure class="panel-photo"><img src="{{IMG:jm-pretending}}" alt="A band posed in matching suits against a painted flat while a photographer shoots from a stepladder, lighting stand and props in frame" loading="lazy" /></figure>
         </div>
       </div>
     </article>
@@ -64,6 +65,12 @@ export default `
 <section class="section freedom-section">
   <div class="wrap reveal freedom-inner">
     <blockquote class="freedom-quote">It is the artist who is vulnerable. It is the artist expressing their emotion, their story. That is where all of this starts, and the industry should be built to reflect it.</blockquote>
+    <figure class="freedom-photo"><img src="{{IMG:jef-bear-weirdo}}" alt="A bassist performing in a full polar bear costume, drummer behind, mid-song" loading="lazy" /></figure>
+  </div>
+</section>
+<section class="section room-band-section">
+  <div class="wrap">
+    <figure class="room-band"><img src="{{IMG:infamed}}" alt="A writing room mid-session: two violinists, a guitarist, someone working at a laptop, synths and keyboards around the table" loading="lazy" /></figure>
   </div>
 </section>
 <section class="section wwa-reveal-section">
