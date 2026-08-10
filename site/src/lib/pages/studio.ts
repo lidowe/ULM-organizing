@@ -13,6 +13,17 @@ export default `
   </div>
 </section>
 <section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">The room</div><div><h2 class="section-title">The room is the first thing in the signal path.</h2><div class="section-copy"><p>Every microphone in the locker is listening to a room before it listens to anything else. A room that lies to you costs more than any preamp will fix.</p></div></div></div>
+  <div class="wrap acoustics-split reveal">
+    <div class="acoustics-copy">
+      <p>Work starts with measurement rather than product: what the room actually does, where the speakers should sit, and which problems are worth spending on. Low frequency behaviour and early reflections come first, because they are what makes a mix translate or not.</p>
+      <p>The plan gets written to be built, by you or by a contractor. We do not sell the materials, which is what keeps the recommendation honest. Panels here were built rather than bought, so the advice comes from having made the thing.</p>
+      <p><a class="btn" href="/services#acoustics">Room and acoustic treatment planning</a></p>
+    </div>
+    <figure class="acoustics-photo"><img src="{{IMG:acoustic-panels}}" alt="Two absorption panels part built: mineral wool set into timber frames, one clamped while the glue sets" loading="lazy" /></figure>
+  </div>
+</section>
+<section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Equipment</div><div><h2 class="section-title">The list.</h2><div class="section-copy"><p>103 microphones across 64 models. 19 preamps, 26 channels. 9 equalizers, 28 channels. 22 dynamics units, 36 channels. Grouped by topology, because that is how they get chosen.</p></div></div></div>
   <div class="wrap photo-set four short reveal">
     <figure><img src="{{IMG:locker-shelves}}" alt="Shelves of microphone cases and boxes in the mic locker" loading="lazy" /><figcaption>The locker</figcaption></figure>
