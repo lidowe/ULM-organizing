@@ -17,7 +17,8 @@ export default `
   <div class="wrap acoustics-split reveal">
     <div class="acoustics-copy">
       <p>Work starts with measurement rather than product: what the room actually does, where the speakers should sit, and which problems are worth spending on. Low frequency behaviour and early reflections come first, because they are what makes a mix translate or not.</p>
-      <p>The plan gets written to be built, by you or by a contractor. We do not sell the materials, which is what keeps the recommendation honest. Panels here were built rather than bought, so the advice comes from having made the thing.</p>
+      <p>The plan gets written to be built, by you, by your contractor, or by us. What the room needs is the same either way, which is what keeps the recommendation honest. Panels here were built rather than bought, so the advice comes from having made the thing.</p>
+      <p>Whole rooms are on the table too, from treatment and wiring through power, monitoring and the gear itself. That work starts with remote planning and measurement and ends with us on site.</p>
       <p><a class="btn" href="/services#acoustics">Room and acoustic treatment planning</a></p>
     </div>
     <figure class="acoustics-photo"><img src="{{IMG:acoustic-panels}}" alt="Two absorption panels part built: mineral wool set into timber frames, one clamped while the glue sets" loading="lazy" /></figure>
