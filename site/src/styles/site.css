@@ -223,6 +223,12 @@ img,svg,canvas{display:block;max-width:100%}
 .pull-quote.small{margin:clamp(1.6rem,3vw,2.4rem) 0 0;max-width:70ch}
 .pull-quote.lead-quote{margin:0 0 clamp(1.8rem,3.2vw,2.6rem)}
 
+/* Audit T1: this had no rule of its own and was rendering at body size next
+   to a large photograph. It is a pull quote, so it is set as one. */
+.freedom-quote{margin:0;padding-left:clamp(1rem,2.4vw,1.8rem);border-left:2px solid var(--amber);
+  font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.26;
+  letter-spacing:-.025em;color:var(--paper);max-width:30ch;text-wrap:balance}
+
 .plain-title{font-family:var(--display);font-weight:600;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.02em;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
 
 .plan-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
@@ -656,11 +662,13 @@ img,svg,canvas{display:block;max-width:100%}
    the only display-size text, so it lands instead of competing. */
 .why-copy{font-size:var(--fs-deck);line-height:1.62;color:var(--paper-soft);margin:0 0 1.1rem;max-width:58ch}
 .why-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.14;letter-spacing:-.03em;
-  color:var(--paper);margin:1.9rem 0 0;max-width:24ch;padding-left:clamp(.95rem,1.5vw,1.35rem);
+  color:var(--paper);margin:1.9rem 0 1.9rem;max-width:24ch;padding-left:clamp(.95rem,1.5vw,1.35rem);
   border-left:2px solid var(--amber)}
 /* Sits under the statement, indented to the same rule so the two read as one
    block. No caption, no frame, no desaturation: the photograph is the
    argument, and 1261px on the long edge is the ceiling before it softens. */
+.proof-unit .ribbon-strip{margin-top:clamp(2.2rem,4vw,3.2rem)}
+.proof-unit .why-copy{max-width:64ch}
 .why-photo{margin:var(--photo-rhythm) 0 0;padding-left:clamp(.95rem,1.5vw,1.35rem);max-width:var(--pw-2of3)}
 .why-photo img,.work-lead-photo img,.panel-photo img,.service-photo img,
 .acoustics-photo img,.room-band img,.freedom-photo img{display:block;width:100%;height:auto;
@@ -737,7 +745,7 @@ img,svg,canvas{display:block;max-width:100%}
 .ribbon-track span{font-family:var(--mono);font-size:var(--fs-fine);letter-spacing:.04em;text-transform:uppercase;color:var(--paper-soft);flex:none}
 @keyframes ribbon{to{transform:translateX(-50%)}}
 
-@media(prefers-reduced-motion:reduce){.ribbon-track{flex-wrap:wrap;white-space:normal;width:auto;animation:none;gap:.6rem 1.6rem}}
+@media(prefers-reduced-motion:reduce){.ribbon-track{flex-wrap:wrap;white-space:normal;width:auto;animation:none;gap:.6rem 1.6rem;max-height:11rem;overflow:hidden}}
 
 /* Photography blocks */
 .lead-photo-section{padding:clamp(2rem,4vw,3.4rem) 0}

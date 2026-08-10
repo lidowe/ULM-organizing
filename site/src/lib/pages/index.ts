@@ -97,7 +97,11 @@ export default `
 
 <section class="rack-unit proof-unit">
   <div class="wrap">
-    <h2 class="unit-title small-title">Artists worked with...</h2>
+    <div class="unit-label"><span class="unit-no">05</span><span>Every role</span></div>
+    <p class="why-copy">Various roles, various artists. Whether the role was large or small, the artist famous or not, every job contributes to the flow state and every job asks 100% focus. Even the coffee can ruin an entire day, or fuel the magic later.</p>
+    <p class="why-line">No matter the task, we serve the process. The work is in service to the song, and the ego stays outside.</p>
+    <p class="why-copy">Get them coffee, route signal flow and place mics, run the DAW or be the tape op. It was all part of a bigger picture and personal growth. Running cables became running sessions. Tuning instruments became vocal tuning and production. Production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
+    <p class="why-copy">Relationships carried on. Years go by and I am asked to build someone&rsquo;s private studio after working with them commercially, having been their barista a decade earlier. Others continue as clients, friends and contemporaries to this day. The only thing that stays consistent is the dedication and effort put into every detail.</p>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
   <div class="wrap proof-actions"><a class="btn" href="/work">See the work</a></div>
