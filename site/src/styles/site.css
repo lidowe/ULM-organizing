@@ -684,6 +684,9 @@ img,svg,canvas{display:block;max-width:100%}
 .service-copy::after{content:"";display:block;clear:both}
 @media(max-width:560px){.row-thumb{width:96px;margin-right:.85rem}}
 
+.teaching-photo{margin:0;max-width:var(--pw-2of3)}
+.teaching-photo img{display:block;width:100%;height:auto}
+
 .service-photo{margin:var(--photo-rhythm) 0 .5rem;max-width:var(--pw-3rd)}
 .service-photo img{display:block;width:100%;height:auto}
 .acoustics-split{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:start}

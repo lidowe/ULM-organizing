@@ -22,9 +22,8 @@ export default `
   </div>
 </section>
 <section class="section">
-  <div class="wrap photo-set two edu reveal">
-    <figure><img src="{{IMG:drums-yamaha-booth}}" alt="A maple drum kit miked up in a treated booth" loading="lazy" /><figcaption>Learning on real sessions</figcaption></figure>
-    <figure><img src="{{IMG:locker-shelves-tight}}" alt="Microphone cases stacked on the locker shelves" loading="lazy" /><figcaption>Knowing the locker</figcaption></figure>
+  <div class="wrap">
+    <figure class="teaching-photo reveal"><img src="{{IMG:classroom}}" alt="A teaching room: projector screen showing a first-class questionnaire, whiteboard, keyboard, drum pads and a laptop on the table" loading="lazy" /></figure>
   </div>
 </section>
 `;
