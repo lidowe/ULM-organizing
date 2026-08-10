@@ -23,8 +23,8 @@ export default `
   <div class="wrap artist-index reveal">{{MEDIA_INDEX}}</div>
 </section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2></div></div>
-  <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
+  <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built and sold.</p></div></div></div>
+  <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
   <figure class="credit-photo credit-photo-left credit-photo-last reveal"><img src="{{IMG:credits-crew-lobby}}" alt="Edward Lidow with a session crew in the studio lobby" loading="lazy" /></figure>
 </section>
 `;

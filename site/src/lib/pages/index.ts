@@ -21,11 +21,14 @@ export default `
 <section class="rack-unit stance-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>What this is</span></div>
-    <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. It is a service built to bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
-
-    <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
-
-    <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
+    <div class="stance-split">
+      <div class="stance-copy">
+        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. It is a service built to bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
+        <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
+        <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
+      </div>
+      <figure class="stance-photo"><img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" /></figure>
+    </div>
   </div>
 </section>
 

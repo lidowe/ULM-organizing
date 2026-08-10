@@ -645,6 +645,13 @@ img,svg,canvas{display:block;max-width:100%}
 
 /* What this is */
 .stance-unit{background:var(--bg-soft)}
+/* The copy is capped at 34ch, which left the right half of this section empty.
+   Same measure as the other standalone photographs. */
+.stance-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--pw-3rd));
+  gap:clamp(1.8rem,4vw,3.6rem);align-items:center}
+.stance-photo{margin:0}
+.stance-photo img{display:block;width:100%;height:auto;max-height:560px;object-fit:cover}
+@media(max-width:860px){.stance-split{grid-template-columns:1fr}.stance-photo{max-width:var(--pw-half)}}
 /* Short stance block. Body sets the argument at reading size; the last line is
    the only display-size text, so it lands instead of competing. */
 .why-copy{font-size:var(--fs-deck);line-height:1.62;color:var(--paper-soft);margin:0 0 1.1rem;max-width:58ch}
