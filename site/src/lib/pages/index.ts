@@ -50,7 +50,7 @@ export default `
   </div>
   <div class="wrap anywhere-grid">
     <figure><img src="{{IMG:room-major-console}}" alt="A major-label control room with a large-format console and monitor wall" loading="lazy" /><figcaption>A major-label control room.</figcaption></figure>
-    <figure><img src="{{IMG:room-home-amps}}" alt="A home setup with guitars, amps, a pedalboard, and a drum kit" loading="lazy" /><figcaption>A WORKING ROOM AT HOME</figcaption></figure>
+    <figure><img src="{{IMG:room-home-amps}}" alt="A home setup with guitars, amps, a pedalboard, and a drum kit" loading="lazy" /><figcaption>A working room at home.</figcaption></figure>
     <figure><img src="{{IMG:room-kid}}" alt="A child playing a keyboard in a blue-lit room with a drum kit behind" loading="lazy" /><figcaption>Somebody&rsquo;s first setup.</figcaption></figure>
   </div>
 </section>
@@ -59,18 +59,68 @@ export default `
 <section class="rack-unit start-here">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">04</span><span>Where to start</span></div>
-    <h2 class="unit-title">Down to business.</h2>
-  </div>
-  <div class="wrap rack-rows">
-    <a class="rack-row" href="/process"><span class="no">01</span><h3>Process</h3><p>How the conversation starts and what happens after it.</p></a>
-    <a class="rack-row" href="/services"><span class="no">02</span><h3>Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
-    <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
-
-    <a class="rack-row" href="/about"><span class="no">04</span><h3>About</h3><p>Edward Lidow and the people behind the work.</p></a>
-    <a class="rack-row" href="/education"><span class="no">05</span><h3>Learn</h3><p>Training and technical guidance for artists and engineers.</p></a>
-    <a class="rack-row" href="/news"><span class="no">06</span><h3>News</h3><p>Notes on sessions, technique, and the industry.</p></a>
-    <a class="rack-row" href="/work"><span class="no">07</span><h3>Work</h3><p>Major-label and independent records, with precise roles.</p></a>
-    <a class="rack-row live" href="/contact"><span class="no">08</span><h3>Start a project</h3><p>Send a rough, a reference, or a few sentences.</p></a>
+    <h2 class="unit-title">Pick the one that sounds like you.</h2>
+    <div class="path-stack">
+      <div class="path reveal">
+                    <h4>&ldquo;Just f**king do it.&rdquo;</h4>
+                    <p>You want results and deliverables, done right and on time. Heard.</p>
+                    <details class="path-fold">
+                      <summary>See what this covers</summary>
+                      <div class="path-body">
+                        <ul>
+                          <li>Full production from demo to master, or any single stage of it</li>
+                          <li>Recording and tracking, remote or in person, with engineers matched to the material</li>
+                          <li>Vocal production: direction, comping, tuning, timing, stacks and ad-libs</li>
+                          <li>Mixing, including revisions, stems, instrumentals and TV mixes</li>
+                          <li>Mastering for streaming, vinyl prep, and sequenced album masters</li>
+                          <li>Editing and repair: drum edits, tuning cleanup, noise and bleed removal</li>
+                          <li>Podcast and content audio, edited, leveled and delivered to spec</li>
+                          <li>Twelve songs stalled at eighty percent, finished and consistent as a body of work</li>
+                          <li>One reviewed edit is a real job. We take small ones.</li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+      <div class="path reveal">
+                    <h4>&ldquo;Help me be my best. Coach me through it.&rdquo;</h4>
+                    <p>When you need help with a specific aspect inside a larger scope, we&rsquo;ll work it out together. We&rsquo;ve got you.</p>
+                    <details class="path-fold">
+                      <summary>See what this covers</summary>
+                      <div class="path-body">
+                        <ul>
+                          <li>A mix that will not sit, worked through on your session, in your DAW</li>
+                          <li>A room that lies to you: measurement, treatment plan, speaker placement</li>
+                          <li>A signal path with a fault you cannot isolate, traced end to end</li>
+                          <li>Gain structure, impedance, converters and clocking on your actual rig</li>
+                          <li>Templates, routing and recall built around how you already work</li>
+                          <li>A home playback system that never matched the record</li>
+                          <li>Gear you are about to buy, checked before you spend</li>
+                          <li>Vocal chain and tracking setup dialed in with you on the session</li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+      <div class="path reveal">
+                    <h4>&ldquo;Teach me, I&rsquo;m going pro!&rdquo;</h4>
+                    <p>Whatever the job, we&rsquo;ll teach you the theory and get as detailed as you want. We&rsquo;ll work one on one so you can understand the depth involved and produce professional results on your own terms. We&rsquo;ll adapt the lesson element to your learning style.</p>
+                    <details class="path-fold">
+                      <summary>See what this covers</summary>
+                      <div class="path-body">
+                        <ul>
+                          <li>Engineers on gain structure, impedance, conversion, summing and monitoring</li>
+                          <li>Producers on arrangement, routing, and diagnosing a mix instead of guessing</li>
+                          <li>Artists learning to record themselves properly, start to finish</li>
+                          <li>Students who want the apprenticeship that no longer exists</li>
+                          <li>Mastering theory: loudness, dynamics, delivery specs, and what actually matters</li>
+                          <li>Technical work: patchbays, wiring, maintenance, and reading a schematic</li>
+                          <li>The home engineer already charging for work
+                            <span class="path-aside">If you&rsquo;re a home engineer, well, we get it. You&rsquo;re going to do our job on your own and charge less. Upper Level might be the only ones who will say it out loud. We know, we&rsquo;ve seen you poach clients from some engineers. It&rsquo;s okay, it&rsquo;s never been ours. We just don&rsquo;t like the quality drop, and neither do you. So let&rsquo;s still get you the deliverable to &lsquo;your&rsquo; client, if you have any yet. It could just be you, and that&rsquo;s cool, we were never worried. But let&rsquo;s teach it right, whether that&rsquo;s via lessons on theory or just showing you how &lsquo;the pros&rsquo; do it.</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </details>
+                  </div>
+    </div>
   </div>
 </section>
 

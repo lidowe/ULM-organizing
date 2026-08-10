@@ -231,21 +231,21 @@ img,svg,canvas{display:block;max-width:100%}
   font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.26;
   letter-spacing:-.025em;color:var(--paper);max-width:30ch;text-wrap:balance}
 
-.plain-title{font-family:var(--display);font-weight:600;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.02em;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
+.plain-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.02em;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
 
 .plan-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .plan-part{background:var(--bg);padding:clamp(1.3rem,2.6vw,2rem)}
 .plan-part .plan-mark{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-light);margin:0 0 .7rem}
-.plan-part h3{font-family:var(--display);font-weight:600;font-size:var(--fs-h3);line-height:1.16;letter-spacing:-.02em;margin:0 0 .6rem;max-width:26ch;text-wrap:balance}
+.plan-part h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);line-height:1.16;letter-spacing:-.02em;margin:0 0 .6rem;max-width:26ch;text-wrap:balance}
 .plan-part h3 em{font-style:italic}
 .plan-part p{margin:0;color:var(--paper-soft);font-size:var(--fs-body);line-height:1.56;max-width:60ch;text-wrap:pretty}
 
 .paths-head{margin:0 0 clamp(1.2rem,2.4vw,1.8rem)}
-.paths-head h2{font-family:var(--display);font-weight:600;font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.03em;margin:0 0 .5rem;max-width:26ch;text-wrap:balance}
+.paths-head h2{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.03em;margin:0 0 .5rem;max-width:26ch;text-wrap:balance}
 .paths-head p{margin:0;color:var(--muted);font-size:var(--fs-sm);line-height:1.5;max-width:60ch;text-wrap:pretty}
 .path-stack{display:flex;flex-direction:column;gap:clamp(1rem,2vw,1.4rem)}
 .path{background:var(--bg);border:1px solid var(--line);border-top:2px solid var(--amber-light);padding:clamp(1.4rem,2.8vw,2.2rem)}
-.path h4{font-family:var(--display);font-weight:600;font-size:var(--fs-h3);letter-spacing:-.025em;line-height:1.16;margin:0 0 .6rem;color:var(--paper);text-wrap:balance}
+.path h4{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);letter-spacing:-.025em;line-height:1.16;margin:0 0 .6rem;color:var(--paper);text-wrap:balance}
 .path>p{margin:0;color:var(--paper-soft);font-size:var(--fs-body);line-height:1.58;max-width:76ch;text-wrap:pretty}
 
 .path-fold{margin-top:.9rem;border-top:1px solid var(--line-soft)}
@@ -644,7 +644,19 @@ img,svg,canvas{display:block;max-width:100%}
 .fold-body p{margin:0 0 1.05rem}
 
 /* ---- Rack units: shared horizontal bands ---- */
-.rack-unit{padding:clamp(3.6rem,7vw,6rem) 0;border-bottom:1px solid var(--line-soft);position:relative}
+/* ---- Photograph roles -------------------------------------------------
+   Evidence  flat, natural aspect, uncaptioned, sits beside the claim it
+             supports. .why-photo .work-lead-photo .room-band .panel-photo
+             .stance-photo .teaching-photo .freedom-photo
+   Index     cropped to a shared ratio, captioned, only inside a grid.
+             .anywhere-grid .photo-set .archive-strip .studio-gallery
+   Aside     small, floated, inside running copy. .row-thumb .person-aside
+   No borders on evidence, no desaturation anywhere. ------------------- */
+
+/* Audit L1: this used to carry its own padding and a fainter divider than
+   .section, so the home page ran to a different rhythm than every other
+   page. Same measure, same rule weight. */
+.rack-unit{padding:clamp(3.4rem,6.4vw,6rem) 0;border-bottom:1px solid var(--line);position:relative}
 .unit-label{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
 .unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem;font-weight:700;letter-spacing:.1em}
 .unit-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);letter-spacing:-.03em;line-height:1.06;margin:0 0 clamp(1.6rem,3vw,2.4rem);color:var(--paper);max-width:22ch}
@@ -759,7 +771,7 @@ img,svg,canvas{display:block;max-width:100%}
 .archive-unit{background:var(--bg-soft)}
 .archive-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--photo-gap)}
 .archive-strip figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
-.archive-strip img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:grayscale(.25)}
+.archive-strip img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:none}
 .archive-strip figure:hover img{filter:none}
 .archive-strip figcaption{padding:.7rem .8rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet);border-top:1px solid var(--line)}
 /* Set to one side at a size these files can actually carry. The smallest of
@@ -769,8 +781,7 @@ img,svg,canvas{display:block;max-width:100%}
   border:1px solid var(--line);background:var(--bg-soft)}
 .credit-photo-right{margin-left:auto}
 .credit-photo-last{margin-bottom:0}
-.credit-photo img{display:block;width:100%;height:auto;object-fit:contain;filter:grayscale(.15)}
-.credit-photo:hover img{filter:none}
+.credit-photo img{display:block;width:100%;height:auto;object-fit:contain}
 .credit-photo figcaption{padding:.85rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet)}
 .award-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.9rem,1.8vw,1.4rem);margin:clamp(3rem,7vw,6rem) 0}
 .award-plaque{margin:0;border:1px solid var(--line);background:var(--bg-soft);display:flex;flex-direction:column}
