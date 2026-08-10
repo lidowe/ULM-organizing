@@ -197,6 +197,13 @@ img,svg,canvas{display:block;max-width:100%}
 .filter-bar button{border:1px solid var(--line);background:none;padding:.65rem .85rem;font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .filter-bar button.active,.filter-bar button:hover{background:var(--paper);color:var(--bg);border-color:var(--paper)}
 .work-card[hidden]{display:none}
+/* Release artwork on the cards that have it. Sits above the big ghosted year,
+   and the title clears it so a long one does not run underneath. */
+.work-art{position:absolute;top:clamp(1.5rem,3vw,2.7rem);right:clamp(1.5rem,3vw,2.7rem);
+  width:clamp(58px,7vw,84px);height:auto;aspect-ratio:1;object-fit:cover;z-index:2;
+  border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.45)}
+.work-card.has-art h3{max-width:9ch}
+@media(max-width:520px){.work-art{width:52px}.work-card.has-art h3{max-width:11ch}}
 .artist-index{columns:3 16rem;column-gap:3.2rem;border-top:1px solid var(--line);padding-top:2rem}
 .artist-index span{display:block;break-inside:avoid;padding:.38rem 0;color:var(--paper-soft);font-family:var(--serif);font-size:var(--fs-body);border-bottom:1px solid var(--line-soft)}
 .credit-note{margin-top:2rem;color:var(--muted);font-size:var(--fs-sm);max-width:72ch}

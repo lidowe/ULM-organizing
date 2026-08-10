@@ -17,6 +17,8 @@
  *      "Co-Production · Tracking Engineer · Mixing".
  */
 
+import { photo } from "./photos";
+
 export type Credit = {
   artist: string;
   /** Release title. Omitted for roster-only (uncredited) entries. */
@@ -28,6 +30,12 @@ export type Credit = {
   /** Publicly credited on the release. */
   credited: boolean;
   independent?: boolean;
+  /**
+   * Asset name of the release artwork, without extension, e.g.
+   * "art-rachel-goodrich-baby-now-were-even". Optional: cards render fine
+   * without it, so covers can be added one at a time as they are cleared.
+   */
+  art?: string;
 };
 
 const ASSISTANT_TRACKING = "Assistant Engineer · Editing · Tracking Engineer (various)";
@@ -162,6 +170,7 @@ export const CREDITS: Credit[] = [
     artist: "Rachel Goodrich",
     title: "Baby, Now We're Even",
     year: "2014",
+    art: "art-rachel-goodrich-baby-now-were-even",
     role: "Co-Production · Tracking Engineer · Mixing Engineer · Mastering Engineer",
     tags: ["recording", "mix"],
     credited: true,
@@ -316,9 +325,15 @@ export function creditCardsHtml(): string {
   return releaseCredits()
     .map(
       (c) =>
-        `<article class="work-card" data-year="${esc(c.year ?? "")}" data-work-role="${esc(
-          c.tags.join(" "),
-        )}"><div><div class="artist">${esc(c.artist)}${
+        `<article class="work-card${c.art ? " has-art" : ""}" data-year="${esc(
+          c.year ?? "",
+        )}" data-work-role="${esc(c.tags.join(" "))}">${
+          c.art
+            ? `<img class="work-art" src="${photo(c.art)}" alt="${esc(
+                c.title ?? c.artist,
+              )} cover art" loading="lazy" decoding="async" />`
+            : ""
+        }<div><div class="artist">${esc(c.artist)}${
           c.year ? ` · ${esc(c.year)}` : ""
         }</div><h3>${esc(c.title!)}</h3></div><div class="role">${esc(c.role)}</div></article>`,
     )
