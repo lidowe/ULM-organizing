@@ -677,6 +677,13 @@ img,svg,canvas{display:block;max-width:100%}
 /* The writing room, at the width its 2.47:1 shape needs. Capped at its own
    1261px so it stays sharp. */
 /* Acoustics. The source is 1049px wide, so both caps sit under it. */
+/* Thumbnail inside a service row: small enough that the copy still leads, and
+   floated so the text wraps rather than the picture interrupting the column. */
+.row-thumb{float:left;width:clamp(104px,11vw,148px);height:auto;margin:.15rem 1.05rem .55rem 0;
+  shape-margin:1rem}
+.service-copy::after{content:"";display:block;clear:both}
+@media(max-width:560px){.row-thumb{width:96px;margin-right:.85rem}}
+
 .service-photo{margin:var(--photo-rhythm) 0 .5rem;max-width:var(--pw-3rd)}
 .service-photo img{display:block;width:100%;height:auto}
 .acoustics-split{display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(1.6rem,4vw,3.4rem);align-items:start}
