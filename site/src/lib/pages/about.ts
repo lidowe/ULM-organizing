@@ -121,7 +121,7 @@ export default `
     <figure><img src="{{IMG:archive-crew}}" alt="A group of people in a studio lounge after a session" loading="lazy" /></figure>
     <figure><img src="{{IMG:archive-group}}" alt="Four people posing together in a studio hallway" loading="lazy" /></figure>
     <figure><img src="{{IMG:session-redlit-2}}" alt="An engineer and an artist at a console in a dim control room" loading="lazy" /></figure>
-    <figure><img src="{{IMG:archive-crew-console}}" alt="A group of engineers and artists behind a large mixing console" loading="lazy" /></figure>
+    
     <figure><img src="{{IMG:control-room-red}}" alt="A red-lit control room with a large console and monitors" loading="lazy" /></figure>
 
   </div>

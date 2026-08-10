@@ -65,7 +65,7 @@ export const CREDITS: Credit[] = [
     artist: "Blackfoot",
     title: "Southern Native",
     year: "2016",
-    art: "credits-crew-lobby",
+    art: "archive-crew-console",
     role: "Tracking Engineer · Recording Engineer · Editing · Co-Production",
     tags: ["engineering", "recording"],
     credited: true,
@@ -331,8 +331,8 @@ export function creditCardsHtml(): string {
         )}" data-work-role="${esc(c.tags.join(" "))}">${
           c.art
             ? `<img class="work-art" src="${photo(c.art)}" alt="${esc(
-                c.title ?? c.artist,
-              )} cover art" loading="lazy" decoding="async" />`
+                c.artist,
+              )} — ${esc(c.title ?? "")}" loading="lazy" decoding="async" />`
             : ""
         }<div><div class="artist">${esc(c.artist)}${
           c.year ? ` · ${esc(c.year)}` : ""
