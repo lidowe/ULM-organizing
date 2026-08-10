@@ -4,7 +4,6 @@ export default `
   <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">Real records. Real roles.</h2><div class="section-copy"><p>Public role language where available, kept legible instead of exhaustive.</p></div></div></div>
   <div class="wrap">
     <div class="filter-bar reveal" aria-label="Filter selected work"><button class="active" type="button" data-filter="all">All</button><button type="button" data-filter="recording">Recording</button><button type="button" data-filter="mix">Mix</button><button type="button" data-filter="engineering">Engineering</button><button type="button" data-filter="assistant">Assistant</button></div>
-    <figure class="credit-photo credit-photo-left reveal"><img src="{{IMG:credits-kravitz}}" alt="Edward Lidow with Lenny Kravitz at a session" loading="lazy" /></figure>
     <div class="work-grid reveal">
       {{CREDIT_CARDS}}
     </div>
@@ -25,6 +24,5 @@ export default `
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
   <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; original room, built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
-  <figure class="credit-photo credit-photo-left credit-photo-last reveal"><img src="{{IMG:credits-crew-lobby}}" alt="Edward Lidow with a session crew in the studio lobby" loading="lazy" /></figure>
 </section>
 `;

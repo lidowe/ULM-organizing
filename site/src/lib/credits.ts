@@ -65,6 +65,7 @@ export const CREDITS: Credit[] = [
     artist: "Blackfoot",
     title: "Southern Native",
     year: "2016",
+    art: "credits-crew-lobby",
     role: "Tracking Engineer · Recording Engineer · Editing · Co-Production",
     tags: ["engineering", "recording"],
     credited: true,

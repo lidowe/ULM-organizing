@@ -35,6 +35,7 @@ export default `
             </figure>
           </div>
           <p class="person-copy">I found my place in audio as an engineer, but I started as a musician. Formally trained through high school jazz bands on saxophone and percussion, then years as an indie artist on drums, bass and guitar. That is where the technical side pulled me in, and where I started chasing the blend between the creative and the technical.</p>
+          <figure class="person-aside"><img src="{{IMG:credits-kravitz}}" alt="Edward Lidow with Lenny Kravitz at a session" loading="lazy" /></figure>
           <p class="person-copy">After Clemson University and a media and communications degree, I went to SAE Miami and graduated valedictorian, which earned a rare internship at Hit Factory Criteria Miami, now Criteria Studios. Standing on the shoulders of giants there, I worked on Grammy-winning, platinum-selling records across every genre, and came to understand that everything we do is creative and collaborative. No musical project reaches success without a strong creative team.</p>
           <figure class="inline-photo">
             <img src="{{IMG:hit-factory}}" alt="Five people standing under The Hit Factory neon sign outside the studio" loading="lazy" />
