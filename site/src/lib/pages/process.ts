@@ -39,7 +39,72 @@ export default `
   <div class="wrap">
     <div class="paths-head reveal">
       <h2>Your path, then the work.</h2>
-      <p>The three ways in are on the <a href="/">home page</a>. Whichever you pick, the work starts the same way: we find out what you are making before deciding how to make it.</p>
+      <p>Three paths. Pick one and open it to see exactly what it covers.</p>
+    </div>
+
+    <div class="path-stack">
+
+            <div class="path reveal">
+              <h4>&ldquo;Just f**king do it.&rdquo;</h4>
+              <p>You want results and deliverables, done right and on time. Heard.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>Full production from demo to master, or any single stage of it</li>
+                    <li>Recording and tracking, remote or in person, with engineers matched to the material</li>
+                    <li>Vocal production: direction, comping, tuning, timing, stacks and ad-libs</li>
+                    <li>Mixing, including revisions, stems, instrumentals and TV mixes</li>
+                    <li>Mastering for streaming, vinyl prep, and sequenced album masters</li>
+                    <li>Editing and repair: drum edits, tuning cleanup, noise and bleed removal</li>
+                    <li>Podcast and content audio, edited, leveled and delivered to spec</li>
+                    <li>Twelve songs stalled at eighty percent, finished and consistent as a body of work</li>
+                    <li>One reviewed edit is a real job. We take small ones.</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="path reveal">
+              <h4>&ldquo;Help me be my best. Coach me through it.&rdquo;</h4>
+              <p>When you need help with a specific aspect inside a larger scope, we&rsquo;ll work it out together. We&rsquo;ve got you.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>A mix that will not sit, worked through on your session, in your DAW</li>
+                    <li>A room that lies to you: measurement, treatment plan, speaker placement</li>
+                    <li>A signal path with a fault you cannot isolate, traced end to end</li>
+                    <li>Gain structure, impedance, converters and clocking on your actual rig</li>
+                    <li>Templates, routing and recall built around how you already work</li>
+                    <li>A home playback system that never matched the record</li>
+                    <li>Gear you are about to buy, checked before you spend</li>
+                    <li>Vocal chain and tracking setup dialed in with you on the session</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+
+            <div class="path reveal">
+              <h4>&ldquo;Teach me, I&rsquo;m going pro!&rdquo;</h4>
+              <p>Whatever the job, we&rsquo;ll teach you the theory and get as detailed as you want. We&rsquo;ll work one on one so you can understand the depth involved and produce professional results on your own terms. We&rsquo;ll adapt the lesson element to your learning style.</p>
+              <details class="path-fold">
+                <summary>See what this covers</summary>
+                <div class="path-body">
+                  <ul>
+                    <li>Engineers on gain structure, impedance, conversion, summing and monitoring</li>
+                    <li>Producers on arrangement, routing, and diagnosing a mix instead of guessing</li>
+                    <li>Artists learning to record themselves properly, start to finish</li>
+                    <li>Students who want the apprenticeship that no longer exists</li>
+                    <li>Mastering theory: loudness, dynamics, delivery specs, and what actually matters</li>
+                    <li>Technical work: patchbays, wiring, maintenance, and reading a schematic</li>
+                    <li>The home engineer already charging for work
+                      <span class="path-aside">If you&rsquo;re a home engineer, well, we get it. You&rsquo;re going to do our job on your own and charge less. Upper Level might be the only ones who will say it out loud. We know, we&rsquo;ve seen you poach clients from some engineers. It&rsquo;s okay, it&rsquo;s never been ours. We just don&rsquo;t like the quality drop, and neither do you. So let&rsquo;s still get you the deliverable to &lsquo;your&rsquo; client, if you have any yet. It could just be you, and that&rsquo;s cool, we were never worried. But let&rsquo;s teach it right, whether that&rsquo;s via lessons on theory or just showing you how &lsquo;the pros&rsquo; do it.</span>
+                    </li>
+                  </ul>
+                </div>
+              </details>
+            </div>
     </div>
 
   </div>
