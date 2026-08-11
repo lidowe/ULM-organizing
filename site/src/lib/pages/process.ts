@@ -5,6 +5,8 @@ export default `
   <div class="wrap">
     <h2 class="plain-title reveal">Planning. We discuss, then we get to work.</h2>
 
+    <p class="plain-lead reveal">A production line never misses a beat. That&rsquo;s what&rsquo;s wrong with it.</p>
+
     <blockquote class="pull-quote small lead-quote reveal">
       <p>I like to start every project the same way. After the planning stage, no two projects remain that way. Audio often falls under the engineering umbrella, but it is a creative role at heart.</p>
 

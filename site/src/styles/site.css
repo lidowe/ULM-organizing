@@ -232,6 +232,12 @@ img,svg,canvas{display:block;max-width:100%}
   letter-spacing:-.025em;color:var(--paper);max-width:30ch;text-wrap:balance}
 
 .plain-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.02em;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
+/* A stance line under a .plain-title. Deliberately unruled: the .lead-quote it
+   sits above already carries the amber rule, and two ruled blocks in sequence
+   read as one device used twice rather than two different kinds of statement. */
+.plain-title:has(+ .plain-lead){margin-bottom:1.15rem}
+.plain-lead{font-family:var(--serif);font-size:var(--fs-lead);line-height:1.45;max-width:42ch;
+  margin:0 0 clamp(2rem,3.6vw,3rem);color:var(--paper);text-wrap:balance}
 
 .plan-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .plan-part{background:var(--bg);padding:clamp(1.3rem,2.6vw,2rem)}
