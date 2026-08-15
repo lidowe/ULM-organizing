@@ -18,12 +18,20 @@ export default `
   </figure>
 </section>
 
+<section class="mission-band">
+  <div class="wrap">
+    <p class="mission-why">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
+    <p class="mission-line">Upper Level Music is an attempt to turn that around: to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
+    <p class="mission-open">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
+  </div>
+</section>
+
 <section class="rack-unit stance-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>What this is</span></div>
     <div class="stance-split">
       <div class="stance-copy">
-        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label. It is a service built to bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
+        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label.</p>
         <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
         <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
       </div>
@@ -35,7 +43,6 @@ export default `
 <section class="rack-unit why-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">02</span><span>Why this exists</span></div>
-    <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
     <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
     <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
     <figure class="why-photo"><img src="{{IMG:wild-drunk-jordan}}" alt="A guitarist on his back on the stage floor, still playing, the rest of the band around him mid-song" loading="lazy" /></figure>
@@ -47,18 +54,16 @@ export default `
 <section class="rack-unit start-here">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">03</span><span>Where to start</span></div>
-    <h2 class="unit-title">Down to business.</h2>
+    <h2 class="unit-title">What is getting in the way?</h2>
   </div>
   <div class="wrap rack-rows">
-    <a class="rack-row" href="/process"><span class="no">01</span><h3>Process</h3><p>How the conversation starts and what happens after it.</p></a>
-    <a class="rack-row" href="/services"><span class="no">02</span><h3>Services</h3><p>Production, recording, vocal production, mixing, mastering, teaching, troubleshooting.</p></a>
-    <a class="rack-row" href="/studio"><span class="no">03</span><h3>Studio</h3><p>The mic locker, the racks, the conversion, the signal path.</p></a>
-
-    <a class="rack-row" href="/about"><span class="no">04</span><h3>About</h3><p>Edward Lidow and the people behind the work.</p></a>
-    <a class="rack-row" href="/education"><span class="no">05</span><h3>Learn</h3><p>Training and technical guidance for artists and engineers.</p></a>
-    <a class="rack-row" href="/news"><span class="no">06</span><h3>News</h3><p>Notes on sessions, technique, and the industry.</p></a>
-    <a class="rack-row" href="/work"><span class="no">07</span><h3>Work</h3><p>Major-label and independent records, with precise roles.</p></a>
-    <a class="rack-row live" href="/contact"><span class="no">08</span><h3>Start a project</h3><p>Send a rough, a reference, or a few sentences.</p></a>
+    <a class="rack-row" href="/services#mixing"><span class="no">01</span><h3>The record or the performance</h3><p>The song, the mix, the vocal or the production is stuck. It is close and will not cross the last gap.</p></a>
+    <a class="rack-row" href="/services#systems"><span class="no">02</span><h3>The sound, the room or the system</h3><p>It does not translate outside your room. Recording, noise, routing, monitoring or power is unreliable.</p></a>
+    <a class="rack-row" href="/education"><span class="no">03</span><h3>Understanding it and deciding</h3><p>You want to know what is actually wrong, or to learn to do the work yourself.</p></a>
+    <a class="rack-row live" href="/contact"><span class="no">04</span><h3>Not sure which</h3><p>That is a normal place to start. Describe the problem in your own words and we will work out what it is.</p></a>
+  </div>
+  <div class="wrap router-note">
+    <p>Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed.</p>
   </div>
 </section>
 

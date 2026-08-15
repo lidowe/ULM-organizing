@@ -662,6 +662,25 @@ img,svg,canvas{display:block;max-width:100%}
 /* Audit L1: this used to carry its own padding and a fainter divider than
    .section, so the home page ran to a different rhythm than every other
    page. Same measure, same rule weight. */
+/* The mission band. Sits directly under the hero, before unit 01, and is the
+   only place on the site that states the whole position in one block. Given a
+   lifted ground rather than a rule so it reads as a statement, not a section:
+   the amber rule is already the emphasis-line device elsewhere and repeating
+   it here would make two devices out of one. */
+.mission-band{background:var(--bg-soft);border-bottom:1px solid var(--line);
+  padding:clamp(2.8rem,5.4vw,4.6rem) 0}
+.mission-why{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
+  margin:0 0 1.35rem;max-width:60ch}
+.mission-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.24;
+  letter-spacing:-.02em;color:var(--paper);margin:0 0 1.35rem;max-width:44ch;
+  text-wrap:balance}
+.mission-open{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
+  margin:0;max-width:56ch}
+/* The router's closing condition: every path lands on the same first step. */
+.router-note{margin-top:clamp(1.6rem,3vw,2.4rem)}
+.router-note p{font-size:var(--fs-sm);line-height:1.6;color:var(--muted);
+  margin:0;max-width:62ch}
+
 .rack-unit{padding:clamp(3.4rem,6.4vw,6rem) 0;border-bottom:1px solid var(--line);position:relative}
 .unit-label{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
 .unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem;font-weight:700;letter-spacing:.1em}
