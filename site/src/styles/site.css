@@ -24,9 +24,29 @@
   --line-soft:rgba(236,234,229,.05);
   --max:1200px;
   --gutter:clamp(1.2rem,4.4vw,3.6rem);
-  --serif:"Epilogue","Inter",sans-serif;
+  /* ---------------------------------------------------------------------
+     THE TYPE PALETTE. Three faces, one from each category, so the contrast
+     is structural and the page is recognisable before a word is read.
+
+       --serif   display   Instrument Serif   headlines, pull quotes, the
+                                              mission, section titles. High
+                                              contrast, editorial, 400 only.
+       --sans    reading   Inter              body prose. Deliberately
+                                              neutral; its job is to vanish.
+       --mono    data      JetBrains Mono     labels, kickers, prices, specs.
+                                              The signature: it reads as rack
+                                              legend and patchbay strip, which
+                                              is this trade's own typography.
+
+     Rules: display is always 400 (the face ships one weight, and a high
+     contrast serif should not be faux-bolded). Never set body prose in the
+     display face, and never set a label in anything but mono, or the three
+     roles stop being distinguishable.
+     --------------------------------------------------------------------- */
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
   --sans:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"JetBrains Mono","IBM Plex Mono",monospace;
+  --display:var(--serif);
   --fs-hero:clamp(2.2rem,5vw,3.6rem);
   --fs-h1:clamp(1.75rem,3.2vw,2.4rem);
   --fs-h2:clamp(1.35rem,2.2vw,1.85rem);
@@ -956,15 +976,17 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 }
 
 /* ---- Display typeface: squared industrial, matched to the rack banner ---- */
-:root{--display:"Epilogue","Inter",sans-serif}
+/* --display is defined once, at the top, as an alias of --serif. This block
+   previously redeclared it and set weight 600, which quietly overrode every
+   weight-400 rule above and gave the site two display configurations. */
 .display,.hero-title,.section-title,.cta-section h2,.page-title,
 .work-card h3,.terminology-panel h2,.step h3,.lens h3,.closing-line,.pull-quote p,
 .audience-card h3,.service-row h2,.rate-panel h2,.work-card::after{
-  font-family:var(--display);font-weight:600;letter-spacing:-.012em
+  font-family:var(--display);font-weight:400;letter-spacing:-.012em
 }
 .page-title{letter-spacing:-.022em;line-height:1.04}
 .cta-section h2{letter-spacing:-.02em;line-height:.94}
-.hero-title em{font-style:italic;font-weight:600}
+.hero-title em{font-style:italic;font-weight:400}
 
 @media(max-width:660px){
   .page-title{letter-spacing:-.01em;line-height:1.08}
@@ -976,7 +998,7 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 
 .page-deck{font-family:var(--sans);font-weight:400;letter-spacing:0;line-height:1.55}
 .unit-title,.entry h3,.capability h3,.contact-side h2,.rack-row h3,.tools-details summary,
-.brand strong,.footer-brand,.artist-index span{font-family:var(--display);font-weight:600;letter-spacing:-.012em}
+.brand strong,.footer-brand,.artist-index span{font-family:var(--display);font-weight:400;letter-spacing:-.012em}
 .artist-index span,.tools-details summary{font-weight:500}
 @media(max-width:660px){
   .unit-title{letter-spacing:-.005em;line-height:1.06}
