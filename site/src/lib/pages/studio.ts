@@ -52,4 +52,18 @@ export default `
   </div>
 </section>
 
+
+<section class="page-next">
+  <div class="wrap next-grid">
+    <a class="next-card" href="/work">
+      <span class="next-kicker">Next</span>
+      <h3>What has been made with it.</h3>
+      <p>Exact roles across major-label and independent records. The gear is only evidence; this is the work.</p>
+    </a>
+    <div class="next-cta">
+      <p>Or describe the room or system you are fighting with.</p>
+      <a class="btn primary" href="/contact">Start a project</a>
+    </div>
+  </div>
+</section>
 `;

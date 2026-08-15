@@ -662,6 +662,63 @@ img,svg,canvas{display:block;max-width:100%}
 /* Audit L1: this used to carry its own padding and a fainter divider than
    .section, so the home page ran to a different rhythm than every other
    page. Same measure, same rule weight. */
+/* One section system. Home used numbered .rack-unit blocks with alternating
+   grounds while every interior page used a flat .section, so Home read as
+   composed and the rest read as documents. Interior pages now use the same
+   units, and .unit-soft is the alternation: the ground change is what gives a
+   long page its rests, rather than another hairline rule. */
+.unit-soft{background:var(--bg-soft)}
+.unit-lede{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
+  margin:0 0 clamp(1.8rem,3.4vw,2.6rem);max-width:58ch}
+.unit-prose p{font-size:var(--fs-lead);line-height:1.68;color:var(--paper-soft);
+  margin:0 0 1.15rem;max-width:66ch}
+.unit-prose p:last-child{margin-bottom:0}
+
+/* The quote is the page's one display moment: it earns near-hero scale because
+   it does the arguing three paragraphs would otherwise have to. */
+.sagan{margin:0 0 clamp(1.8rem,3.4vw,2.6rem);padding-left:clamp(1rem,1.8vw,1.5rem);
+  border-left:2px solid var(--amber)}
+.sagan blockquote{margin:0}
+.sagan blockquote p{font-family:var(--serif);font-weight:400;
+  font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.16;letter-spacing:-.03em;
+  color:var(--paper);margin:0;max-width:22ch;text-wrap:balance}
+.sagan figcaption{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--muted);margin-top:.85rem}
+
+/* Three modes, one choice. Side by side on desktop so the closed state reads
+   as a fork rather than a list to work through. */
+.mode-grid{display:grid;gap:clamp(1rem,2vw,1.4rem)}
+@media(min-width:900px){.mode-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}}
+.mode{background:var(--bg);border:1px solid var(--line);
+  border-top:2px solid var(--amber-light);padding:clamp(1.2rem,2.4vw,1.7rem)}
+.unit-soft .mode{background:var(--panel)}
+.mode h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
+  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .55rem}
+.mode > p{font-size:var(--fs-sm);line-height:1.6;color:var(--paper-soft);margin:0 0 1rem}
+.mode > p em{font-style:normal;color:var(--paper)}
+.mode .path-fold{margin:0}
+
+/* End-of-page handoff. Three pages used to simply stop and two ended with the
+   same CTA, so the only choices were keep scrolling or convert. Every page now
+   offers two exits: the next step in the reading order, and the register for
+   whoever is already ready. The next-step card is the wider of the two because
+   continuing is the more common intent. */
+.page-next{border-top:1px solid var(--line);background:var(--bg-soft);
+  padding:clamp(2.4rem,4.6vw,3.6rem) 0}
+.next-grid{display:grid;gap:clamp(1.4rem,3vw,2.4rem);align-items:center}
+@media(min-width:820px){.next-grid{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
+.next-card{display:block;text-decoration:none;color:inherit;
+  border:1px solid var(--line);border-radius:2px;
+  padding:clamp(1.1rem,2.2vw,1.5rem);background:var(--panel)}
+.next-card:hover,.next-card:focus-visible{border-color:var(--amber)}
+.next-kicker{display:block;font-family:var(--mono);font-size:.58rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.next-card h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
+  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .35rem}
+.next-card p{font-size:var(--fs-sm);line-height:1.55;color:var(--paper-soft);
+  margin:0;max-width:52ch}
+.next-cta p{font-size:var(--fs-sm);color:var(--muted);margin:0 0 .7rem;max-width:34ch}
+
 /* The mission band. Sits directly under the hero, before unit 01, and is the
    only place on the site that states the whole position in one block. Given a
    lifted ground rather than a rule so it reads as a statement, not a section:

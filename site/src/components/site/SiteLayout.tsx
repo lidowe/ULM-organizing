@@ -8,10 +8,14 @@ import { renderTokens } from "@/lib/render-tokens";
  * making the navigation unusual too just adds decoding cost.
  * "Start a project" is rendered separately as the highlighted action.
  */
+/**
+ * Process merged into Services, so the nav loses an item rather than asking
+ * anyone to guess the difference between "how it works" and "what it costs".
+ * Order is the reading order the pages hand off in.
+ */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
-  { to: "/work", label: "Work" },
   { to: "/services", label: "Services" },
-  { to: "/process", label: "Process" },
+  { to: "/work", label: "Work" },
   { to: "/education", label: "Learn" },
   { to: "/studio", label: "Studio" },
   { to: "/about", label: "About" },
@@ -19,13 +23,12 @@ const NAV: Array<{ to: string; hash?: string; label: string }> = [
 
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
-  { to: "/work", label: "Work", n: "02" },
-  { to: "/services", label: "Services", n: "03" },
-  { to: "/process", label: "Process", n: "04" },
-  { to: "/education", label: "Learn", n: "05" },
-  { to: "/studio", label: "Studio", n: "06" },
-  { to: "/about", label: "About", n: "07" },
-  { to: "/contact", label: "Start a project", n: "08" },
+  { to: "/services", label: "Services", n: "02" },
+  { to: "/work", label: "Work", n: "03" },
+  { to: "/education", label: "Learn", n: "04" },
+  { to: "/studio", label: "Studio", n: "05" },
+  { to: "/about", label: "About", n: "06" },
+  { to: "/contact", label: "Start a project", n: "07" },
 ];
 
 

@@ -25,4 +25,18 @@ export default `
   <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
   <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; original room, built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
 </section>
+
+<section class="page-next">
+  <div class="wrap next-grid">
+    <a class="next-card" href="/education">
+      <span class="next-kicker">Next</span>
+      <h3>What all of it taught.</h3>
+      <p>The training that produced these roles is gone as a career path. This is where it gets handed over instead.</p>
+    </a>
+    <div class="next-cta">
+      <p>Or bring the record you are trying to finish.</p>
+      <a class="btn primary" href="/contact">Start a project</a>
+    </div>
+  </div>
+</section>
 `;

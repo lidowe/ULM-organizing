@@ -133,4 +133,18 @@ export default `
     <a class="btn primary reveal" href="/contact">Start a project</a>
   </div>
 </section>
+
+<section class="page-next">
+  <div class="wrap next-grid">
+    <a class="next-card" href="/services">
+      <span class="next-kicker">Next</span>
+      <h3>How the work actually goes.</h3>
+      <p>Why a project starts with questions, how it runs, and what each part costs.</p>
+    </a>
+    <div class="next-cta">
+      <p>Or skip ahead and tell me what you are working on.</p>
+      <a class="btn primary" href="/contact">Start a project</a>
+    </div>
+  </div>
+</section>
 `;
