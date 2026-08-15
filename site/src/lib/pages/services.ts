@@ -13,7 +13,7 @@ export default `
       <p>Upper Level&rsquo;s process is not unlike that paraphrased quote. Even a small task requires learning about you and the universe your project is in.</p>
       <p>It starts on beat one. Centering pre-planning and pre-production around you. It&rsquo;s an open dialog where we ask a lot of questions in search of your signature voice, and pre-production is where we search.</p>
       <p class="unit-turn">Wondering why the 3rd degree? Well, we&rsquo;re trying to establish the Root.</p>
-      <p>Upper Level Music&rsquo;s underlying theme is to empower the creator. The idea starts with you. We focus our attention on listening to your words and what rests between them, then we&rsquo;ll make sure you are heard in the final product.</p>
+      <p>Upper Level Music&rsquo;s underlying theme is to empower the creator. The idea starts with you. We focus our attention on listening to your words and what rests between them, so that you are heard and represented in the proper scale and the right key.</p>
     </div>
   </div>
 </section>
