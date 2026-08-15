@@ -41,6 +41,7 @@ export default `
             <img src="{{IMG:hit-factory}}" alt="Five people standing under The Hit Factory neon sign outside the studio" loading="lazy" />
             <figcaption>Hit Factory Criteria, Miami, the internship that started it.</figcaption>
           </figure>
+          <p class="person-copy">The Bay 8 room in Miami was one of mine, built modestly and later sold. Its current owners have expanded it well past what we made, and it still runs as a commercial studio today, which is the kind of proof a build service rarely gets to point at.</p>
         </div>
       </div>
     </article>

@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Studio</div><h1 class="page-title">Studio and technology.</h1><p class="page-deck">The locker and the racks, listed plainly. 103 microphones, 64 models, and the analog front end they run into.</p><figure class="studio-hero-photo reveal"><img src="{{IMG:desk-monitors-control}}" alt="The control room desk with nearfield monitors and outboard racks in daylight" loading="lazy" /></figure></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Studio</div><h1 class="page-title">Studio and technology.</h1><p class="page-deck">The locker and the racks, listed plainly, and the analog front end they run into. The depth is here so the path can change when the source asks for it.</p><figure class="studio-hero-photo reveal"><img src="{{IMG:desk-monitors-control}}" alt="The control room desk with nearfield monitors and outboard racks in daylight" loading="lazy" /></figure></div></section>
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">The studio</div><div><h2 class="section-title">A private studio, by appointment.</h2><div class="section-copy"><p>Not a high-volume facility. One project at a time, so the setup stays built around the work in front of it. Most sessions run remotely; the locker is here when a source needs to be captured properly.</p><p>The point of a deep locker is not the count. It is being able to change the path when the source asks for it.</p></div></div></div>
   <div class="wrap studio-gallery reveal"><figure><img src="{{IMG:studio-racks}}" alt="Two rolling racks of outboard gear beside a large speaker cabinet, including SansAmp, Chandler Germanium preamps, an Ampeg head and an A-Designs MP-2A tube preamp" loading="lazy" /></figure><figure><img src="{{IMG:studio-drums}}" alt="Gretsch drum kit miked up on a patterned rug in the live area, surrounded by cymbals and boom stands" loading="lazy" /></figure></div>
@@ -25,7 +25,7 @@ export default `
   </div>
 </section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Equipment</div><div><h2 class="section-title">The list.</h2><div class="section-copy"><p>103 microphones across 64 models. 19 preamps, 26 channels. 9 equalizers, 28 channels. 22 dynamics units, 36 channels. Grouped by topology, because that is how they get chosen.</p></div></div></div>
+  <div class="wrap section-header reveal"><div class="kicker">Equipment</div><div><h2 class="section-title">The list.</h2><div class="section-copy"><p>Microphones, preamps, equalizers and dynamics, grouped by topology, because that is how they get chosen.</p></div></div></div>
   <div class="wrap photo-set four short reveal">
     <figure><img src="{{IMG:locker-shelves}}" alt="Shelves of microphone cases and boxes in the mic locker" loading="lazy" /><figcaption>The locker</figcaption></figure>
     <figure><img src="{{IMG:mics-fan-cab}}" alt="Five microphones fanned out in front of a guitar speaker cabinet" loading="lazy" /><figcaption>Choosing the path</figcaption></figure>

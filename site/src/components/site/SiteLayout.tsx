@@ -47,7 +47,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
         <div className="wrap header-inner">
           <Link to="/" className="brand" aria-label="Upper Level Music home">
             <strong>Upper Level Music</strong>
-            <span>Columbia, South Carolina</span>
           </Link>
           <nav className="desktop-nav" aria-label="Primary navigation">
             {NAV.map((item) => (
@@ -81,7 +80,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <div className="menu-top">
             <Link to="/" className="brand" data-close-menu>
               <strong>Upper Level Music</strong>
-              <span>Columbia, South Carolina</span>
             </Link>
             <button className="menu-close" type="button" data-close-menu>
               Close
