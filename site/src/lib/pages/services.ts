@@ -3,23 +3,29 @@ export default `
 
 <section class="rack-unit unit-soft">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">01</span><span>Why it starts with questions</span></div>
+    <div class="unit-label"><span class="unit-no">01</span><span>Getting started</span></div>
+    <h2 class="unit-title">How does this whole process start, what should I expect?</h2>
     <figure class="sagan">
       <blockquote><p>In order to make a grilled cheese, first you must create the universe.</p></blockquote>
       <figcaption>paraphrasing Carl Sagan</figcaption>
     </figure>
     <div class="unit-prose">
       <p>Upper Level&rsquo;s process is not unlike that paraphrased quote. Even a small task requires learning about you and the universe your project is in.</p>
-      <p>To record something is not difficult. It is no longer a huge intimidating console behind soundlocked doors, the console can exist in the palm of your hand, but the creative use and ability to take idea to implementation was left behind. We believe in empowering the user, regardless of scope.</p>
-      <p>Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
+      <p>It starts on beat one. Centering pre-planning and pre-production around you. It&rsquo;s an open dialog where we ask a lot of questions in search of your signature voice, and pre-production is where we search.</p>
+      <p class="unit-turn">Wondering why the 3rd degree? Well, we&rsquo;re trying to establish the Root.</p>
+      <p>Upper Level Music&rsquo;s underlying theme is to empower the creator. The idea starts with you. We focus our attention on listening to your words and what rests between them, then we&rsquo;ll make sure you are heard in the final product.</p>
     </div>
   </div>
 </section>
 
 <section class="rack-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>How a project starts</span></div>
+    <div class="unit-label"><span class="unit-no">02</span><span>The planning</span></div>
     <h2 class="unit-title">We discuss, then we get to work.</h2>
+    <div class="unit-prose">
+      <p>To record something is not difficult. It is no longer a huge intimidating console behind soundlocked doors, the console can exist in the palm of your hand, but the creative use and ability to take idea to implementation was left behind. We believe in empowering the user, regardless of scope.</p>
+      <p>Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
+    </div>
     <div class="plan-pair reveal">
       <div class="plan-part">
         <span class="plan-mark">First</span>
