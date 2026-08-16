@@ -1,3 +1,9 @@
+// Accordion item 04, "What Comes Next", is parked until it has real content:
+// its only body was an authoring note, which production strips, so visitors
+// were opening an empty panel. Planned per the brief: Resources (equipment,
+// space, and what can be done with them) replacing the rooms list, an
+// education component, a recurring insight series with audio and video, and a
+// mailing list. Restore the item when any of it exists.
 export default `
 <section class="page-hero"><div class="wrap"><div class="eyebrow">About</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2012 by Edward Lidow. A studio built around the person making the record.</p></div></section>
 <section class="section intro-section">
@@ -94,20 +100,6 @@ export default `
           <p class="person-copy">That feeling is what made me think there has to be a better way, not moving backward to how things were, but putting control back in the hands of the person making the art.</p>
           <p class="person-copy">Upper Level Music is an attempt, by me and the people I have met across a 30-year career, to turn that around, so anyone who wants to express themselves sonically can do it and be sustained by it.</p>
           <p class="person-copy">This is where the creative spirit stands up and says this is not all on us. We want the social element back. We want collaboration. Music is not meant to be made alone, staring at a screen.</p>
-        </div>
-      </div>
-    </article>
-    <article class="wwa-item" data-accordion-item>
-      <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-04" id="wwa-btn-04">
-          <span class="wwa-no">04</span>
-          <span class="wwa-heading"><span class="wwa-title">What Comes Next</span><span class="wwa-summary">Resources, education, insights.</span></span>
-          <span class="wwa-mark" aria-hidden="true"></span>
-        </button>
-      </h2>
-      <div class="wwa-panel" id="wwa-panel-04" role="region" aria-labelledby="wwa-btn-04">
-        <div class="wwa-panel-inner">
-          <div class="needs-content"><strong>Sections still to come</strong>Resources (equipment, space, and what can be done with them) will replace the rooms list. An education component, a recurring insight series with audio and video, and a mailing list are all planned and not yet built.</div>
         </div>
       </div>
     </article>

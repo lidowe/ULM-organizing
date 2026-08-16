@@ -382,7 +382,10 @@ img,svg,canvas{display:block;max-width:100%}
 .cta-section{padding:clamp(5rem,11vw,10rem) 0;background:var(--paper);color:var(--bg);position:relative;overflow:hidden}
 .cta-section::after{content:"";position:absolute;width:42rem;height:42rem;border:1px solid rgba(12,13,15,.13);border-radius:50%;right:-16rem;top:-18rem;box-shadow:0 0 0 5rem rgba(12,13,15,.018),0 0 0 10rem rgba(12,13,15,.012)}
 .cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
-.cta-section h2{font-size:var(--fs-h2);margin:0;max-width:9ch}
+/* Measure re-derived for Spectral: at 9ch the closing line broke into six
+   one-word lines. 16ch holds "Tell Me What You're Working On." to a 2-3 line
+   lockup and lets text-wrap:balance do the ragging. */
+.cta-section h2{font-size:var(--fs-h2);margin:0;max-width:16ch}
 .cta-section p{margin:1.5rem 0 0;max-width:46ch;color:#292524;font-size:var(--fs-body)}
 .cta-section .btn{border-color:rgba(12,13,15,.25)}
 .cta-section .btn.primary{background:var(--bg);color:var(--paper);border-color:var(--bg)}
@@ -488,7 +491,7 @@ img,svg,canvas{display:block;max-width:100%}
 .entry p{color:var(--muted);font-size:var(--fs-body);margin:0}
 .studio-hero-photo{margin:2.5rem 0 0;border:1px solid var(--line);background:var(--bg-soft);position:relative}
 .studio-hero-photo img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.85) contrast(1.05)}
-.studio-hero-photo figcaption,.studio-gallery figcaption{font-size:var(--fs-fine);letter-spacing:0.033em;text-transform:uppercase;color:var(--muted);padding:.85rem 1rem;border-top:1px solid var(--line)}
+.studio-hero-photo figcaption,.studio-gallery figcaption{padding:.85rem 1rem;border-top:1px solid var(--line)}
 .studio-gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--photo-gap);margin-bottom:clamp(2rem,4vw,3.5rem)}
 .studio-gallery figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
 .studio-gallery img{display:block;width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:saturate(.85) contrast(1.05)}
@@ -1095,8 +1098,8 @@ img,svg,canvas{display:block;max-width:100%}
 .photo-set.tall img{aspect-ratio:3/4}
 .photo-set.short img{aspect-ratio:3/2}
 .photo-set.edu img{aspect-ratio:3/2}
-.photo-set.edu img[src$="/drums-yamaha-booth.jpg"]{object-position:center 58%}
-.photo-set.edu img[src$="/locker-shelves-tight.jpg"]{object-position:center 50%}
+.photo-set.edu img[data-photo="drums-yamaha-booth"]{object-position:center 58%}
+.photo-set.edu img[data-photo="locker-shelves-tight"]{object-position:center 50%}
 .photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line)}
 .photo-single{margin:clamp(2rem,4vw,3.25rem) 0 0;background:var(--bg-soft);border:1px solid var(--line)}
 .photo-single img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.9) contrast(1.03)}
@@ -1134,27 +1137,29 @@ img,svg,canvas{display:block;max-width:100%}
 /* Per-photo focal points -------------------------------------------------
    Tall portrait sources cropped into short wide bands need an explicit
    vertical anchor, otherwise the subject falls outside the frame. Matched on
-   the CDN filename, which is stable per asset. */
-img[src$="/room-kid.jpg"]{object-position:center 34%}
-img[src$="/room-living.jpg"]{object-position:center 30%}
-img[src$="/drums-overhead.jpg"]{object-position:center 50%}
-img[src$="/guitars.jpg"]{object-position:center 58%}
-img[src$="/guitar-amp.jpg"]{object-position:center 48%}
-img[src$="/console-working.jpg"]{object-position:center 26%}
-img[src$="/room-halfbuilt.jpg"]{object-position:center 48%}
-img[src$="/studio-racks.jpg"]{object-position:center 42%}
-img[src$="/studio-drums.jpg"]{object-position:center 52%}
-img[src$="/session-bw.jpg"]{object-position:center 38%}
-img[src$="/hit-factory.jpg"]{object-position:center 44%}
-img[src$="/mastering-list.jpg"]{object-position:center 50%}
-img[src$="/moonlight-bass.jpg"]{object-position:center 40%}
-img[src$="/console-large.jpg"]{object-position:center 45%}
-img[src$="/session-redlit.jpg"]{object-position:center 45%}
-img[src$="/session-redlit-2.jpg"]{object-position:center 45%}
-img[src$="/archive-console-pair.jpg"]{object-position:center 40%}
-img[src$="/archive-crew.jpg"]{object-position:center 40%}
-img[src$="/archive-group.jpg"]{object-position:center 35%}
-img[src$="/control-room-red.jpg"]{object-position:center 45%}
+   data-photo, which render-tokens stamps from the registry name — never on
+   the URL: dev and production serve the same photo at different paths, so
+   URL-matched rules pass in dev and silently die on the live site. */
+img[data-photo="room-kid"]{object-position:center 34%}
+img[data-photo="room-living"]{object-position:center 30%}
+img[data-photo="drums-overhead"]{object-position:center 50%}
+img[data-photo="guitars"]{object-position:center 58%}
+img[data-photo="guitar-amp"]{object-position:center 48%}
+img[data-photo="console-working"]{object-position:center 26%}
+img[data-photo="room-halfbuilt"]{object-position:center 48%}
+img[data-photo="studio-racks"]{object-position:center 42%}
+img[data-photo="studio-drums"]{object-position:center 52%}
+img[data-photo="session-bw"]{object-position:center 38%}
+img[data-photo="hit-factory"]{object-position:center 44%}
+img[data-photo="mastering-list"]{object-position:center 50%}
+img[data-photo="moonlight-bass"]{object-position:center 40%}
+img[data-photo="console-large"]{object-position:center 45%}
+img[data-photo="session-redlit"]{object-position:center 45%}
+img[data-photo="session-redlit-2"]{object-position:center 45%}
+img[data-photo="archive-console-pair"]{object-position:center 40%}
+img[data-photo="archive-crew"]{object-position:center 40%}
+img[data-photo="archive-group"]{object-position:center 35%}
+img[data-photo="control-room-red"]{object-position:center 45%}
 
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
@@ -1262,7 +1267,8 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
    tier: uppercasing them would be uppercasing prose. */
 .lead-photo figcaption,.inline-photo figcaption,.archive-strip figcaption,
 .credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
-.photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption{
+.photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption,
+.studio-hero-photo figcaption,.studio-gallery figcaption{
   font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
   letter-spacing:.02em;text-transform:none;color:var(--muted)}
 
