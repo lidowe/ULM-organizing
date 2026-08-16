@@ -103,9 +103,37 @@ server holding the port silently invalidates a whole comparison.
 
 ## Deployment
 
+The three ways to break the live site, in order of how easily they happen:
+
+1. **Merging to `main` is publishing.** There is no staging step between the
+   two. A merge is live within a couple of minutes, on the domain Edward sends
+   to clients.
+2. **Repointing the production branch in the dashboard.** One careless save
+   publishes whatever that branch holds. See the combobox note below.
+3. **Deploying any Worker that still carries `routes`.** The custom domains are
+   bound in config, so a preview built from the unmodified config takes over
+   upperlevelmusic.com.
+
+The details:
+
 - The site is a **Cloudflare Worker** named `ulm-organizing`, not Pages.
-- **Pushing to `main` deploys to upperlevelmusic.com.** Pushing to any other
-  branch does not build or deploy anything.
+- **The production branch is `main`.** Verified by correlation, not by reading
+  the dashboard: `main`'s tip 21cfe76 was committed 2026-08-15 19:29:37 and the
+  Worker's `modified_on` is 19:30:40 — 63 seconds later. Branches that are not
+  the production branch do not deploy.
+- **A dashboard field is not the saved setting.** The Production branch control
+  is a combobox: clicking near it can display a different branch while the
+  stored value is unchanged. This nearly caused a save that would have
+  repointed production at `claude/cloudflare-domain-hosting-b36p1n`, a branch
+  49 commits behind, publishing a week-old site over the live domain. Never
+  read a form control as the current state, and never save a settings page to
+  find out what it does.
+- To confirm what is actually deployed, compare the Worker's `modified_on`
+  against commit timestamps. That is evidence; the UI is a claim.
+- With "Builds for non-production branches" on, those branches build with the
+  **Version command** (`npx wrangler versions upload`), producing a preview
+  version and its own URL. Only the production branch runs the Deploy command
+  (`npx wrangler deploy`) and reaches upperlevelmusic.com.
 - `site/wrangler.jsonc` binds `upperlevelmusic.com` and `www.` as custom
   domains. Any preview deploy must strip `routes` and use a different Worker
   name, or it takes over the live domain.
@@ -117,5 +145,26 @@ server holding the port silently invalidates a whole comparison.
 - Do not push on every edit.
 - Do not use the question/options UI — it has eaten his input. Ask in plain text.
 - Any file he sends is to be read in full before responding to it.
-- Verify before agreeing. Assembling reasons for a conclusion before checking
-  the data is worse than saying "let me look".
+
+## Before asserting
+
+State the evidence, or state that you have not checked. Not "X is the case"
+but "X, because `<the command and what it returned>`."
+
+This has failed three separate ways in a single session:
+
+- a page-order claim argued from assembled reasons before reading the source
+  table, which said the opposite;
+- a deploy claim read off a UI control, while a timestamp comparison one
+  command away said the opposite;
+- a "this refactor changes nothing" claim reasoned from the cascade, disproved
+  by a pixel diff that found a 10px regression.
+
+The rule is not "be careful". It is: if a check is available and cheap, run it
+**before** the sentence, not after Edward pushes back. Reading a value in a UI,
+reasoning about CSS specificity, and remembering what a file says are all
+claims, not evidence.
+
+Corollary for anything that touches the live site: the cheap check is always
+cheaper than the incident. Confirm what is deployed, confirm what a config
+holds, and confirm a "safe" change is safe by measuring it, before acting.
