@@ -323,6 +323,43 @@ img,svg,canvas{display:block;max-width:100%}
 
 .menu-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.78rem;font-family:var(--mono)}
 
+/* ---- Session Sheet grammar --------------------------------------------
+   The page as working studio paperwork: a bordered sheet with field rows,
+   track-strip section labels with a right-hand annotation, margin notes
+   beside prose, and a revision stamp at the foot. The one kinetic gesture
+   is the 1px rule under each track strip drawing itself like a fader push. */
+.hero-sheet{border:1px solid var(--line);background:rgba(236,234,229,.015)}
+.sheet-row{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1.4rem;flex-wrap:wrap;
+  padding:.6rem .95rem;border-bottom:1px solid var(--line-soft)}
+.sheet-row{color:var(--aux-cool)}
+.sheet-row span{white-space:nowrap}
+.sheet-what{color:var(--aux-hot)}
+.sheet-body{padding:clamp(1.4rem,2.6vw,2.2rem) .95rem clamp(1.2rem,2.2vw,1.8rem)}
+.sheet-body .hero-title{margin-bottom:1.1rem}
+.sheet-body .hero-mission{margin-bottom:0}
+.sheet-actions{border-bottom:0;border-top:1px solid var(--line-soft);padding:.8rem .95rem}
+.unit-note{margin-left:auto;color:var(--quiet)}
+@media(max-width:560px){.unit-note{display:none}}
+/* The drawn rule: each track strip underlines itself on first reveal. */
+.unit-label{position:relative;padding-bottom:.7rem}
+.unit-label::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);
+  transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.22,.61,.36,1) .15s}
+.unit-label.in::after,.unit-label:not(.reveal)::after{transform:none}
+/* Margin notes: the engineer's voice beside the prose. */
+.prose-noted{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,230px);gap:clamp(1.6rem,3.4vw,3rem);align-items:start}
+.margin-notes{border-left:1px solid var(--line-soft);padding-left:1.1rem;display:grid;gap:1rem}
+.mnote{margin:0;line-height:1.6}
+@media(max-width:860px){.prose-noted{grid-template-columns:1fr}
+  .margin-notes{border-left:0;border-top:1px solid var(--line-soft);padding:1rem 0 0;max-width:52ch}}
+/* Index rows gain a destination cell, patchbay-style: see the rack-row
+   rules further down, which own the grid template. */
+.rack-row .dest{color:var(--quiet);align-self:baseline}
+.rack-row:hover .dest{color:var(--amber-light)}
+@media(max-width:760px){.rack-row .dest{display:none}}
+/* The revision stamp above the site footer. */
+.sheet-rev{border-top:1px solid var(--line)}
+.sheet-rev .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem;color:var(--quiet)}
+
 /* ---- Home hero: the rack panel ---- */
 .hero-rack{position:relative;overflow:hidden;padding:clamp(8rem,15vh,11rem) 0 clamp(3rem,7vw,5.5rem);background:
   linear-gradient(180deg,var(--bg-soft),var(--bg) 70%);border-bottom:1px solid var(--line)}
@@ -1101,7 +1138,7 @@ img,svg,canvas{display:block;max-width:100%}
 
 /* Where to start: rack rows */
 .rack-rows{display:grid;border-top:1px solid var(--line)}
-.rack-row{display:grid;grid-template-columns:3.5rem minmax(9rem,14rem) 1fr;gap:clamp(.8rem,2.5vw,2rem);align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line);transition:background .22s,padding-left .22s}
+.rack-row{display:grid;grid-template-columns:3.5rem minmax(9rem,14rem) 1fr auto;gap:clamp(.8rem,2.5vw,2rem);align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line);transition:background .22s,padding-left .22s}
 .rack-row:hover{background:rgba(216,52,43,.07);padding-left:.8rem}
 .rack-row .no{color:var(--quiet)}
 .rack-row h3{margin:0;font-size:var(--fs-h3);color:var(--paper)}
@@ -1303,7 +1340,7 @@ img,svg,canvas{display:block;max-width:100%}
 .eyebrow,.kicker,.unit-label,.next-kicker,.service-group h2,.plan-part .plan-mark,
 .pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
 .fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
-.unit-no,.plan-more,.gd-label{
+.unit-no,.plan-more,.gd-label,.sheet-row,.unit-note,.rack-row .dest,.sheet-rev .wrap{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
 }
@@ -1345,7 +1382,7 @@ img,svg,canvas{display:block;max-width:100%}
 .lead-photo figcaption,.inline-photo figcaption,.archive-strip figcaption,
 .credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
 .photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption,
-.studio-hero-photo figcaption,.studio-gallery figcaption,.call{
+.studio-hero-photo figcaption,.studio-gallery figcaption,.call,.mnote{
   font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
   letter-spacing:.02em;text-transform:none;color:var(--muted)}
 
