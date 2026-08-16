@@ -4,6 +4,7 @@ export default `
     <div class="hero-copy">
       <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
       <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>Major Key Changes.</em></a></span></span></h1>
+      <p class="hero-mission">Upper Level Music exists to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
       <div class="hero-plate">
         <p class="hero-deck">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
       </div>
@@ -20,17 +21,24 @@ export default `
   </figure>
 </section>
 
-<section class="mission-band">
+<section class="rack-unit stance-unit">
   <div class="wrap">
-    <p class="mission-why">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
-    <p class="mission-line">Upper Level Music is an attempt to turn that around: to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
-    <p class="mission-open">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
+    <div class="unit-label"><span class="unit-no">01</span><span>What this is</span></div>
+    <div class="stance-split">
+      <div class="stance-copy">
+        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label.</p>
+        <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
+        <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
+      </div>
+      <figure class="stance-photo"><img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" /></figure>
+    </div>
   </div>
 </section>
 
 <section class="rack-unit start-here">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">01</span><span>Where to start</span></div>
+    <div class="unit-label"><span class="unit-no">02</span><span>Where to start</span></div>
+    <p class="unit-lede">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
     <h2 class="unit-title">What Is Getting In The Way?</h2>
   </div>
   <div class="wrap rack-rows">
@@ -44,23 +52,10 @@ export default `
   </div>
 </section>
 
-<section class="rack-unit stance-unit">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>What this is</span></div>
-    <div class="stance-split">
-      <div class="stance-copy">
-        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label.</p>
-        <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
-        <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
-      </div>
-      <figure class="stance-photo"><img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" /></figure>
-    </div>
-  </div>
-</section>
-
 <section class="rack-unit why-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">03</span><span>Why this exists</span></div>
+    <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
     <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
     <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
     <figure class="why-photo"><img src="{{IMG:wild-drunk-jordan}}" alt="A guitarist on his back on the stage floor, still playing, the rest of the band around him mid-song" loading="lazy" /></figure>
