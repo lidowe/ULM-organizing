@@ -589,14 +589,17 @@ img,svg,canvas{display:block;max-width:100%}
 .needs-content{display:block;margin-top:1.25rem;padding:.9rem 1.1rem;border:1px dashed rgba(200,161,90,.45);background:rgba(200,161,90,.12);color:var(--paper-soft);font-size:.82rem;line-height:1.6}
 .needs-content strong{display:block;color:var(--amber-light);font-size:.62rem;letter-spacing:0.099em;text-transform:uppercase;margin-bottom:.35rem;font-weight:600}
 
-/* ---- Studio typography: sharp display, lighter titles ---- */
-.display,.page-title,.section-title,.capability h3,.audience-card h3,
-.service-row h2,.cta-section h2,.work-card h3,
-.brand strong,.tools-details summary,.footer-brand {
-  font-weight:400;letter-spacing:-.03em}
-.display,.page-title{letter-spacing:-.04em;line-height:.92}
-.eyebrow,.kicker{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
-.btn,.desktop-nav a,.menu-close,.menu-button{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
+/* Typography deliberately does not live here any more. It was being set in
+   three separate top-level places — here, the component rules above, and a
+   block at the foot of the file — all declaring face, weight and tracking
+   for the same headings. Because they were all top-level selectors, the last
+   one silently won and the other two were dead text, which is why headings
+   never matched the rules sitting next to them. It is all in the single
+   TYPE SYSTEM block at the end of this file now.
+
+   Every declaration that used to be here was already being overridden by
+   that block, except the two control/label lines, which moved into it
+   unchanged. This consolidation changes no rendered pixel. */
 
 /* ---- Menu reveal: panel wipe + staggered links ---- */
 .menu-dialog{background:linear-gradient(150deg,var(--bg-soft) 0%,var(--bg) 55%,var(--panel) 100%)}
@@ -1101,7 +1104,13 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
   .edu-photo-band img{aspect-ratio:16/9;max-height:none}
 }
 
-/* ---- Display typeface: squared industrial, matched to the rack banner ---- */
+/* =======================================================================
+   THE TYPE SYSTEM — the only place that sets face, weight and tracking.
+   -----------------------------------------------------------------------
+   Sizes still live with their components, because size is layout. Face,
+   weight and tracking live here, because those are identity and must not
+   drift from page to page.
+   ======================================================================= */
 /* --display is defined once, at the top, as an alias of --serif. This block
    previously redeclared it and set weight 600, which quietly overrode every
    weight-400 rule above and gave the site two display configurations. */
@@ -1110,6 +1119,12 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 .audience-card h3,.service-row h2,.rate-panel h2,.work-card::after{
   font-family:var(--display);font-weight:400;letter-spacing:-.012em
 }
+/* .display must keep setting its own line-height HERE, after .hero-title.
+   The hero h1 carries both classes at equal specificity, so source order is
+   what decides between them. Dropping this line as "already set on .display
+   further up" silently handed the hero .hero-title's 0.98 and made the home
+   page 10px taller. */
+.display{line-height:.92}
 .page-title{letter-spacing:-.022em;line-height:1.04}
 .cta-section h2{letter-spacing:-.02em;line-height:.94}
 .hero-title em{font-style:italic;font-weight:400}
@@ -1129,6 +1144,12 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 @media(max-width:660px){
   .unit-title{letter-spacing:-.005em;line-height:1.06}
   .stance-lead{letter-spacing:0;line-height:1.28}}
+
+/* Labels and controls. Moved here unchanged from the block that used to sit
+   mid-file; they were the only declarations there that this block did not
+   already override. */
+.eyebrow,.kicker{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
+.btn,.desktop-nav a,.menu-close,.menu-button{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
 
 /* Menu: clean sans, calm scale */
 .menu-links a{font-family:var(--sans);font-weight:500;letter-spacing:-.01em;line-height:1.2}
