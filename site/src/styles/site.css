@@ -1238,10 +1238,14 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
 .service-price small{display:block;margin-top:.4rem;font-size:var(--fs-fine);
   letter-spacing:.08em;color:var(--muted);text-transform:none;font-weight:400}
 
-/* Controls read as aux, with tracking opened up because they are isolated
-   words rather than labels sitting beside content. */
+/* Controls are part of the tier, at the tier's size. They had drifted to
+   .6rem (9.6px) for buttons and .62rem for nav while every content label sat
+   at 14px, which is the same uniformity break the tier exists to prevent —
+   and 9.6px is too small for a button label regardless. Tracking stays wider
+   because these are isolated words rather than labels beside content. */
 .btn,.desktop-nav a,.menu-close,.menu-button{
-  font-family:var(--mono);font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+  font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
+  letter-spacing:.12em;text-transform:uppercase}
 
 /* ---- Quotes: Space Mono ----------------------------------------------
    A quote is evidence, not a headline: it sits BELOW the heading it answers
