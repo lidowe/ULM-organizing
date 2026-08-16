@@ -1124,8 +1124,6 @@ img,svg,canvas{display:block;max-width:100%}
 .photo-set.tall img{aspect-ratio:3/4}
 .photo-set.short img{aspect-ratio:3/2}
 .photo-set.edu img{aspect-ratio:3/2}
-.photo-set.edu img[data-photo="drums-yamaha-booth"]{object-position:center 58%}
-.photo-set.edu img[data-photo="locker-shelves-tight"]{object-position:center 50%}
 .photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line)}
 .photo-single{margin:clamp(2rem,4vw,3.25rem) 0 0;background:var(--bg-soft);border:1px solid var(--line)}
 .photo-single img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.9) contrast(1.03)}
@@ -1160,32 +1158,9 @@ img,svg,canvas{display:block;max-width:100%}
   .hero-rack-inner{grid-template-columns:1fr}
   .hero-panel{order:-1}}
 
-/* Per-photo focal points -------------------------------------------------
-   Tall portrait sources cropped into short wide bands need an explicit
-   vertical anchor, otherwise the subject falls outside the frame. Matched on
-   data-photo, which render-tokens stamps from the registry name — never on
-   the URL: dev and production serve the same photo at different paths, so
-   URL-matched rules pass in dev and silently die on the live site. */
-img[data-photo="room-kid"]{object-position:center 34%}
-img[data-photo="room-living"]{object-position:center 30%}
-img[data-photo="drums-overhead"]{object-position:center 50%}
-img[data-photo="guitars"]{object-position:center 58%}
-img[data-photo="guitar-amp"]{object-position:center 48%}
-img[data-photo="console-working"]{object-position:center 26%}
-img[data-photo="room-halfbuilt"]{object-position:center 48%}
-img[data-photo="studio-racks"]{object-position:center 42%}
-img[data-photo="studio-drums"]{object-position:center 52%}
-img[data-photo="session-bw"]{object-position:center 38%}
-img[data-photo="hit-factory"]{object-position:center 44%}
-img[data-photo="mastering-list"]{object-position:center 50%}
-img[data-photo="moonlight-bass"]{object-position:center 40%}
-img[data-photo="console-large"]{object-position:center 45%}
-img[data-photo="session-redlit"]{object-position:center 45%}
-img[data-photo="session-redlit-2"]{object-position:center 45%}
-img[data-photo="archive-console-pair"]{object-position:center 40%}
-img[data-photo="archive-crew"]{object-position:center 40%}
-img[data-photo="archive-group"]{object-position:center 35%}
-img[data-photo="control-room-red"]{object-position:center 45%}
+/* Per-photo focal points live in the photo registry (src/lib/photos.ts), as
+   data on the photograph, and arrive here as an inline object-position
+   stamped by render-tokens. Do not add per-photo rules to this file. */
 
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
