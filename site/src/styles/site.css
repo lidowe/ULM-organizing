@@ -352,11 +352,7 @@ img,svg,canvas{display:block;max-width:100%}
 .hero-plate{position:relative;margin:0 0 2.15rem;padding-left:clamp(.95rem,1.5vw,1.35rem);
   border-left:2px solid var(--amber);animation:rise .9s cubic-bezier(.22,.61,.36,1) .4s both}
 .hero-deck{font-size:var(--fs-deck);line-height:1.58;max-width:40ch;color:var(--paper);margin:0}
-/* Four routes out of the hero, two by two, echoing the nav: See (services),
-   Learn (education), Work (contact), About. Single column when narrow. */
-.hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem;max-width:560px;animation:rise .9s cubic-bezier(.22,.61,.36,1) .55s both}
-.hero-actions .btn{width:100%;text-align:center}
-@media(max-width:480px){.hero-actions{grid-template-columns:1fr;max-width:none}}
+.hero-actions{display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;animation:rise .9s cubic-bezier(.22,.61,.36,1) .55s both}
 /* The photo runs the full height of the dark band, including behind the fixed
    header, on the right half of the page. object-fit:contain because it is not
    to be cropped, so it letterboxes inside its half rather than filling it. */

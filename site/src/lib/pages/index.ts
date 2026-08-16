@@ -5,14 +5,9 @@ export default `
       <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
       <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>Major Key Changes.</em></a></span></span></h1>
       <p class="hero-mission">Upper Level Music exists to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
-      <div class="hero-plate">
-        <p class="hero-deck">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
-      </div>
       <div class="hero-actions">
-        <a class="btn" href="/services">See How It Works</a>
-        <a class="btn" href="/education">Learn How To Work It</a>
         <a class="btn primary" href="/contact">Work With Us Now</a>
-        <a class="btn" href="/about">Learn What Upper Level Music Is All About</a>
+        <a class="btn" href="/services">See How It Works</a>
       </div>
     </div>
   </div>
@@ -29,6 +24,7 @@ export default `
         <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label.</p>
         <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
         <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
+        <p class="stance-lead">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
       </div>
       <figure class="stance-photo"><img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" /></figure>
     </div>
