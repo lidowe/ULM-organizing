@@ -6,10 +6,17 @@ If something here conflicts with what Edward says now, he wins — update the fi
 
 ## Whose words these are
 
-The copy is Edward's. Do not rewrite his sentences into house style, do not
-"tighten" his phrasing, and do not invent copy in his voice. If a passage needs
-to change, propose it and let him decide the wording. Restoring his verbatim
-text after an unrequested rewrite has already had to happen once.
+Most of the copy is Edward's — but not all of it, by his own correction
+(16 Aug 2026): earlier sessions left AI-drafted passages mixed in with his,
+and he can tell the difference. So the rule is unchanged in one direction and
+loosened in the other: never rewrite a sentence that is his, and never invent
+copy in his voice — but flagging a passage as probable non-Edward filler,
+with a proposed replacement, is wanted work, not overreach. He decides the
+wording either way.
+
+He does not want wording settled two or three words at a time across many
+messages. Batch copy proposals into one numbered list (current text →
+proposed text → one-line reason) so he can accept or reject in a single pass.
 
 Fix mechanical things freely: capitalisation, typos, entities, markup.
 
