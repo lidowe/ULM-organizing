@@ -1122,6 +1122,29 @@ img,svg,canvas{display:block;max-width:100%}
 .photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
 .photo-single{margin:clamp(2rem,4vw,3.25rem) 0 0;background:var(--bg-soft);border:1px solid var(--line)}
 .photo-single img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.9) contrast(1.03)}
+/* A portrait source must not be forced into the 16/9 frame above: cover would
+   crop away most of a tall photograph, which is the opposite of choosing the
+   crop deliberately. The frame takes the image's own ratio and the figure is
+   held to a width where a tall photo does not swallow the section. */
+.photo-single.portrait{max-width:520px}
+.photo-single.portrait img{aspect-ratio:auto}
+
+/* An expositional block: a photograph beside running copy, for the long-form
+   entries Learn is built around. The photo is a fixed, modest column so a tall
+   source cannot set the height of the whole section, and the prose keeps a
+   real reading measure next to it. */
+.expo{display:grid;grid-template-columns:minmax(0,clamp(240px,26vw,380px)) minmax(0,1fr);
+  gap:clamp(1.6rem,3.4vw,3rem);align-items:start;
+  margin:clamp(1.8rem,3.4vw,2.6rem) 0 0}
+.expo figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
+.expo figure img{display:block;width:100%;height:auto;filter:saturate(.9) contrast(1.03)}
+.expo .expo-copy{max-width:62ch}
+.expo .expo-copy p{margin:0 0 1.05rem}
+.expo .expo-copy p:last-child{margin-bottom:0}
+@media(max-width:860px){
+  .expo{grid-template-columns:1fr}
+  .expo figure{max-width:420px}
+}
 .photo-single figcaption{padding:.85rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
 @media(max-width:900px){.photo-set.four{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-set.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.photo-set.two,.photo-set.three,.photo-set.four{grid-template-columns:1fr}.photo-set img,.photo-set.tall img,.photo-set.short img{aspect-ratio:3/2}}
@@ -1208,7 +1231,7 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
   .stance-lead{letter-spacing:0;line-height:1.28}}
 
 /* ---- Reading: Space Grotesk 400 -------------------------------------- */
-.page-deck,.plain-lead,.hero-deck,.section-copy,.intro-copy,.person-copy,
+.page-deck,.plain-lead,.hero-deck,.section-copy,.intro-copy,.person-copy,.expo-copy,
 .unit-prose p,.unit-lede,.service-row .service-copy,.rate-panel p,
 .mode p,.next-card p,.mission-why{
   font-family:var(--sans);font-weight:400;letter-spacing:0
@@ -1288,3 +1311,7 @@ h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
   .pull-quote{max-width:34ch}
   .closing-line{max-width:32ch}
 }
+
+/* Expositional copy is prose, so it takes the reading face and size like any
+   other prose on the site. */
+.expo .expo-copy{font-size:var(--fs-read);line-height:1.68;color:var(--paper-soft)}

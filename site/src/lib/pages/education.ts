@@ -28,6 +28,22 @@ export default `
   </div>
 </section>
 
+<section class="rack-unit unit-soft">
+  <div class="wrap">
+    <div class="unit-label"><span class="unit-no">03</span><span>The booth</span></div>
+    <h2 class="unit-title">The Vocal Booth Is an Instrument Itself.</h2>
+    <div class="expo reveal">
+      <figure>
+        <img src="{{IMG:vocal-booth-take}}" alt="A vocal booth: a large-diaphragm microphone on a boom with a pop filter and shockmount, fabric-panelled walls, and a vocalist mid-take wearing headphones" loading="lazy" />
+      </figure>
+      <div class="expo-copy">
+        <p>The vocal booth is an instrument itself. Small, unfamiliar, intimidating, and you&rsquo;re expected to perform and be documented forever? If you&rsquo;re nervous, the microphone will know. Sometimes a coach can help silence the mental noise giving you the confidence to deliver. And sometimes an inexperienced engineer needs help knowing which way to point the mic. We can help a vocalist prepare ahead of the big day, or if your first day as an assistant is approaching, maybe a tailored lesson about polar patterns and proximity effect might be the assistance you need.</p>
+        <p>And don&rsquo;t stress, I had an assistant who improperly plugged in a $15,000 Telefunken Elam 251 tube microphone and the mic zapped him so hard he crashed right thru the walls of the booth. (Tube equipment is very high voltage) Don&rsquo;t worry, the mic wasn&rsquo;t damaged. &hellip; Oh, he was checked by a doctor and was fine too. We gave him the rest of the night off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="page-next">
   <div class="wrap next-grid">
     <a class="next-card" href="/studio">

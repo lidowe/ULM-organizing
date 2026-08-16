@@ -38,6 +38,10 @@ export default `
           <figure class="person-aside"><img src="{{IMG:credits-kravitz}}" alt="Edward Lidow with Lenny Kravitz at a session" loading="lazy" /></figure>
           <p class="person-copy">After Clemson University and a media and communications degree, I went to SAE Miami and graduated valedictorian, which earned a rare internship at Hit Factory Criteria Miami, now Criteria Studios. Standing on the shoulders of giants there, I worked on Grammy-winning, platinum-selling records across every genre, and came to understand that everything we do is creative and collaborative. No musical project reaches success without a strong creative team.</p>
           <figure class="inline-photo">
+            <img src="{{IMG:console-mpc-session}}" alt="A large-format recording console in a control room, faders lit, with a live room visible through the glass beyond" loading="lazy" />
+            <figcaption>A large room, mid-session, with the live floor through the glass.</figcaption>
+          </figure>
+          <figure class="inline-photo">
             <img src="{{IMG:hit-factory}}" alt="Five people standing under The Hit Factory neon sign outside the studio" loading="lazy" />
             <figcaption>Hit Factory Criteria, Miami, the internship that started it.</figcaption>
           </figure>
