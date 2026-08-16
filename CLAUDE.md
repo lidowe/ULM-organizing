@@ -69,9 +69,10 @@ Rules that keep getting broken:
   tracking. Rank is carried by **colour only** — `--aux-hot` red is
   load-bearing, `--aux-cool` grey is supporting. Nothing in the tier grows to
   signal importance. If it needs to matter more, it turns red.
-- **Headings are Title Case**, written into the copy, not forced by
-  `text-transform`. "Major" must keep its capital for the pun, and a transform
-  would also capitalise "and" and "the".
+- **Major headings capitalize every word** (Edward, 16 Aug 2026 — supersedes
+  the earlier small-words-lowercase Title Case), still written into the copy,
+  not forced by `text-transform`. "The Industry Is Undergoing Major Key
+  Changes." / "What Is Getting In The Way?" are the pattern.
 - **Prose is one size.** A deck and the body under it are the same; separating
   them by a size step made every deck read as a second heading.
 - **A quote never outranks the heading it sits under.**

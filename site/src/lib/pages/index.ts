@@ -3,13 +3,15 @@ export default `
   <div class="wrap hero-rack-inner">
     <div class="hero-copy">
       <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
-      <h1 class="display hero-title"><span class="ln"><span>The Industry is undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>major key changes.</em></a></span></span></h1>
+      <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>Major Key Changes.</em></a></span></span></h1>
       <div class="hero-plate">
         <p class="hero-deck">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
       </div>
       <div class="hero-actions">
-        <a class="btn primary" href="/contact">Start a project</a>
-        <a class="btn" href="/services">See how it works</a>
+        <a class="btn" href="/services">See How It Works</a>
+        <a class="btn" href="/education">Learn How To Work It</a>
+        <a class="btn primary" href="/contact">Work With Us Now</a>
+        <a class="btn" href="/about">Learn What Upper Level Music Is All About</a>
       </div>
     </div>
   </div>
@@ -29,7 +31,7 @@ export default `
 <section class="rack-unit start-here">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>Where to start</span></div>
-    <h2 class="unit-title">What Is Getting in the Way?</h2>
+    <h2 class="unit-title">What Is Getting In The Way?</h2>
   </div>
   <div class="wrap rack-rows">
     <a class="rack-row" href="/services#mixing"><span class="no">01</span><h3>The record or the performance</h3><p>The song, the mix, the vocal or the production is stuck. It is close and will not cross the last gap.</p></a>
