@@ -4,7 +4,7 @@ export default `
     <div class="hero-copy">
       <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
       <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>Major Key Changes.</em></a></span></span></h1>
-      <p class="hero-mission">Upper Level Music exists to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
+      <p class="hero-mission">The tools reached everyone. The knowledge didn&rsquo;t. Upper Level Music exists to close that gap.</p>
       <div class="hero-actions">
         <a class="btn primary" href="/contact">Work With Us Now</a>
         <a class="btn" href="/services">See How It Works</a>
@@ -53,9 +53,10 @@ export default `
     <div class="unit-label"><span class="unit-no">03</span><span>Why this exists</span></div>
     <p class="why-copy">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
     <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
+    <p class="why-copy">Upper Level Music is an attempt to turn that around: to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
     <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
     <figure class="why-photo"><img src="{{IMG:wild-drunk-jordan}}" alt="A guitarist on his back on the stage floor, still playing, the rest of the band around him mid-song" loading="lazy" /></figure>
-    <div class="needs-content"><strong>Placeholder, to be expanded</strong>Edward is writing the full version of this. It should end up as its own page for people who want the whole account of what happened to the pipeline, linked from About and Learn rather than sitting in the nav. This short version stays on the home page.</div>
+    <p class="why-more"><a class="btn" href="/the-gap">Read The Whole Story</a></p>
   </div>
 </section>
 

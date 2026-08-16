@@ -115,6 +115,15 @@ export const PAGES: PageEntry[] = [
     changefreq: "monthly",
     priority: "0.6",
   },
+  {
+    slug: "the-gap",
+    path: "/the-gap",
+    title: "The Gap · Upper Level Music",
+    description:
+      "The tools reached everyone. The knowledge didn't. How the handoff broke, why the home studio and the industry machine are not enemies, and the patch around the interruption.",
+    changefreq: "monthly",
+    priority: "0.7",
+  },
 ];
 
 export function absoluteUrl(path: string): string {

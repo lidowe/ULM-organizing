@@ -210,7 +210,9 @@
   --sans:"Space Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"Space Mono","IBM Plex Mono",monospace;
   --display:var(--serif);
-  --fs-hero:clamp(2.2rem,5vw,3.6rem);
+  /* Ceiling re-derived 16 Aug so "The Industry Is Undergoing" holds one line
+     in the hero's half-column at desktop widths: the couplet is the design. */
+  --fs-hero:clamp(2.2rem,4.3vw,3.05rem);
   --fs-h1:clamp(1.75rem,3.2vw,2.4rem);
   --fs-h2:clamp(1.35rem,2.2vw,1.85rem);
   --fs-h3:clamp(1.05rem,1.6vw,1.28rem);
@@ -1046,6 +1048,7 @@ img,svg,canvas{display:block;max-width:100%}
   .freedom-photo{margin:0}
 }
 .stance-lead{font-size:var(--fs-lead);line-height:1.62;color:var(--paper-soft);margin:0 0 1.15rem;max-width:58ch}
+.why-more{margin:1.8rem 0 0}
 
 /* Anywhere: three rooms */
 .anywhere-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--photo-gap)}
@@ -1167,6 +1170,29 @@ img,svg,canvas{display:block;max-width:100%}
    data on the photograph, and arrive here as an inline object-position
    stamped by render-tokens. Do not add per-photo rules to this file. */
 
+/* ---- The Gap: signal-path diagrams ------------------------------------
+   Three states of one patchbay chain: normalled, broken, patched. The flow
+   lines draw themselves when the figure scrolls into view (.reveal.in),
+   which is the page's one animated flourish. Reduced-motion kills it via
+   the global rule. */
+.gap-diagram{margin:clamp(1.8rem,3.4vw,2.6rem) 0 0;max-width:760px}
+.gap-diagram svg{display:block;width:100%;height:auto}
+.gap-diagram figcaption{margin-top:.6rem}
+.gd-node{fill:var(--bg);stroke:var(--paper-soft);stroke-width:1.5}
+.gd-node.gd-dim{stroke:var(--quiet)}
+.gd-flow{fill:none;stroke:var(--paper-soft);stroke-width:1.5}
+.gd-faint{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 6}
+.gd-break{fill:none;stroke:var(--amber);stroke-width:2;opacity:.85}
+.gd-patch{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-linecap:round}
+/* Draw-in: paths carry pathLength="1" so one dasharray fits them all. */
+.gap-diagram .gd-flow,.gap-diagram .gd-patch{stroke-dasharray:1;stroke-dashoffset:1}
+.reveal.in .gd-flow{animation:gd-draw .9s cubic-bezier(.22,.61,.36,1) .15s forwards}
+.reveal.in .gd-patch{animation:gd-draw 1.1s cubic-bezier(.22,.61,.36,1) .7s forwards}
+.reveal.in .gd-flow.gd-patched{animation-delay:1.5s}
+@keyframes gd-draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){
+  .gap-diagram .gd-flow,.gap-diagram .gd-patch{stroke-dasharray:none;stroke-dashoffset:0;animation:none}}
+
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
   /* narrow screens: taller frames so tall sources are not sliced into strips */
@@ -1235,7 +1261,7 @@ img,svg,canvas{display:block;max-width:100%}
 .eyebrow,.kicker,.unit-label,.next-kicker,.service-group h2,.plan-part .plan-mark,
 .pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
 .fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
-.unit-no,.plan-more{
+.unit-no,.plan-more,.gd-label{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
 }
@@ -1245,6 +1271,9 @@ img,svg,canvas{display:block;max-width:100%}
 /* Supporting. */
 .kicker,.unit-label,.pull-quote cite,.brand span,.hero-eyebrow,
 .menu-links a span{color:var(--aux-cool)}
+/* SVG labels take the tier's face and tracking; fill is SVG's color and
+   font-size must stay small enough for the 720-unit viewBox. */
+.gd-label{fill:var(--muted);font-size:13px;letter-spacing:.1em}
 /* The qualifier under a price is the tier's one exception: it modifies the
    number above it rather than being a peer of it. */
 .service-price small{display:block;margin-top:.4rem;font-size:var(--fs-fine);
