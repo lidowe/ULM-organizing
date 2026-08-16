@@ -1,9 +1,9 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Process</div><h1 class="page-title">First I ask questions. Then we decide what my job is.</h1><p class="page-deck">Audio work isn&rsquo;t just for chart-topping hits. Let&rsquo;s find out what it is for you, and how you&rsquo;d like the task at hand accomplished.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Process</div><h1 class="page-title">First I Ask Questions. Then We Decide What My Job Is.</h1><p class="page-deck">Audio work isn&rsquo;t just for chart-topping hits. Let&rsquo;s find out what it is for you, and how you&rsquo;d like the task at hand accomplished.</p></div></section>
 
 <section class="section">
   <div class="wrap">
-    <h2 class="plain-title reveal">Planning. We discuss, then we get to work.</h2>
+    <h2 class="plain-title reveal">Planning. We Discuss, Then We Get to Work.</h2>
 
     <p class="plain-lead reveal">A production line never misses a beat. That&rsquo;s what&rsquo;s wrong with it.</p>
 
@@ -38,7 +38,7 @@ export default `
 <section class="section">
   <div class="wrap">
     <div class="paths-head reveal">
-      <h2>Your path, then the work.</h2>
+      <h2>Your Path, Then the Work.</h2>
       <p>Three paths. Pick one and open it to see exactly what it covers.</p>
     </div>
 
@@ -112,7 +112,7 @@ export default `
 
 <section class="section">
   <div class="wrap closing-note reveal">
-    <h2>The apprenticeship is gone. The knowledge does not have to go with it.</h2>
+    <h2>The Apprenticeship Is Gone. The Knowledge Does Not Have to Go with It.</h2>
     <div class="closing-copy">
       <p>I learned this trade the old way: as an intern and then an assistant at Hit Factory Criteria, standing behind people who had been doing it for thirty years. Almost nobody entering audio today gets a room, a mentor, and five years to absorb it.</p>
       <p>Home studios are everywhere, which is a large part of why the major rooms are closing. So I hand the training over directly. If you want to know why a ribbon needs 70 dB of clean gain, or why your kick sounds different in your room than in the car, I will show you. If you want to discuss the hysteresis effect transformers have on the tone of your audio, and how the choice of windings and blends of metal affect the harmonic result, I can show you that too. If you would rather I just handle it, that is fine too.</p>

@@ -1,10 +1,10 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">How the work goes</div><h1 class="page-title">Regardless of scope.</h1><p class="page-deck">Why a project starts with questions, how it actually runs, and what each part costs.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">How the work goes</div><h1 class="page-title">Regardless of Scope.</h1><p class="page-deck">Why a project starts with questions, how it actually runs, and what each part costs.</p></div></section>
 
 <section class="rack-unit unit-soft">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>Getting started</span></div>
-    <h2 class="unit-title">How does this whole process start, what should I expect?</h2>
+    <h2 class="unit-title">How Does This Whole Process Start, What Should I Expect?</h2>
     <figure class="sagan">
       <blockquote><p>In order to make a grilled cheese, first you must create the universe.</p></blockquote>
       <figcaption>paraphrasing Carl Sagan</figcaption>
@@ -21,7 +21,7 @@ export default `
 <section class="rack-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">02</span><span>The planning</span></div>
-    <h2 class="unit-title">We discuss, then we get to work.</h2>
+    <h2 class="unit-title">We Discuss, Then We Get to Work.</h2>
     <div class="unit-prose">
       <p>To record something is not difficult. It is no longer a huge intimidating console behind soundlocked doors, the console can exist in the palm of your hand, but the creative use and ability to take idea to implementation was left behind. We believe in empowering the user, regardless of scope.</p>
       <p>Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
@@ -46,11 +46,11 @@ export default `
 <section class="rack-unit unit-soft">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">03</span><span>How much you do yourself</span></div>
-    <h2 class="unit-title">Pick how far you want to be in it.</h2>
+    <h2 class="unit-title">Pick How Far You Want to Be in It.</h2>
     <p class="unit-lede">The same job can be handed over, worked through together, or taught. It changes the price and the schedule, so it gets settled first.</p>
     <div class="mode-grid">
       <article class="mode">
-        <h3>Hand it over.</h3>
+        <h3>Hand It Over.</h3>
         <p>Results and deliverables, done right and on time. Some people put it less politely, and that has been said too: <em>just f**king do it</em>. Heard.</p>
         <details class="path-fold">
           <summary>See what this covers</summary>
@@ -70,7 +70,7 @@ export default `
         </details>
       </article>
       <article class="mode">
-        <h3>Work it together.</h3>
+        <h3>Work It Together.</h3>
         <p>When you need help with a specific aspect inside a larger scope, we&rsquo;ll work it out together, on your session and in your room. We&rsquo;ve got you.</p>
         <details class="path-fold">
           <summary>See what this covers</summary>
@@ -89,7 +89,7 @@ export default `
         </details>
       </article>
       <article class="mode">
-        <h3>Learn to run it.</h3>
+        <h3>Learn to Run It.</h3>
         <p>Whatever the job, we&rsquo;ll teach you the theory and get as detailed as you want. One on one, so you can produce professional results on your own terms. We adapt to how you learn.</p>
         <details class="path-fold">
           <summary>See what this covers</summary>
@@ -115,33 +115,33 @@ export default `
 <section class="rack-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">04</span><span>What each part costs</span></div>
-    <h2 class="unit-title">The services, and what they run.</h2>
+    <h2 class="unit-title">The Services, and What They Run.</h2>
     <p class="unit-lede">If you have something unique, let us know. One missing piece can bring a project down, and there is no harm in asking about it.</p>
   </div>
   <div class="wrap services-stack">
 
   <div class="service-group reveal"><h2>Review and diagnose</h2><p>Start here when the problem has not been identified yet. Diagnosis comes before any recommendation, and it is the cheapest thing on this page.</p></div>
-  <article class="service-row reveal" id="consulting"><h2>Diagnosis, strategy and planning</h2><div class="service-copy"><p>A mix that will not sit, a session that keeps stalling, a record that is not becoming what it was meant to be. We work out what is causing it before deciding what to do about it.</p><p>Also project planning: what order to work in, what to fix now, and what to leave alone.</p></div><div class="service-price">$100–$150 / hr<small>remote or by appointment</small></div></article>
+  <article class="service-row reveal" id="consulting"><h2>Diagnosis, Strategy and Planning</h2><div class="service-copy"><p>A mix that will not sit, a session that keeps stalling, a record that is not becoming what it was meant to be. We work out what is causing it before deciding what to do about it.</p><p>Also project planning: what order to work in, what to fix now, and what to leave alone.</p></div><div class="service-price">$100–$150 / hr<small>remote or by appointment</small></div></article>
 
   <div class="service-group reveal"><h2>Mix, edit and finish</h2><p>The stages people ask for most, taken one at a time or together.</p></div>
   <article class="service-row reveal" id="mixing"><h2>Mixing</h2><div class="service-copy"><p>Analog and digital together. Balances, automation, and delivery in the formats you need.</p></div><div class="service-price">$400–$900 / song<small>typical independent range</small></div></article>
-  <article class="service-row reveal" id="editing"><h2>Editing, tuning and timing</h2><div class="service-copy"><p>Comping, pitch correction to taste, time alignment, drum and sound replacement, noise and click repair, mix prep.</p></div><div class="service-price">$150–$400 / song<small>based on scope</small></div></article>
-  <article class="service-row reveal"><h2>Vocal production</h2><div class="service-copy"><p>Direction in the session, arrangement of stacks and ad-libs, comping strategy, and the vocal sound itself.</p><p>Performance first. Tuning is a finishing decision, not a rescue.</p></div><div class="service-price">$150–$400 / song<small>based on scope</small></div></article>
+  <article class="service-row reveal" id="editing"><h2>Editing, Tuning and Timing</h2><div class="service-copy"><p>Comping, pitch correction to taste, time alignment, drum and sound replacement, noise and click repair, mix prep.</p></div><div class="service-price">$150–$400 / song<small>based on scope</small></div></article>
+  <article class="service-row reveal"><h2>Vocal Production</h2><div class="service-copy"><p>Direction in the session, arrangement of stacks and ad-libs, comping strategy, and the vocal sound itself.</p><p>Performance first. Tuning is a finishing decision, not a rescue.</p></div><div class="service-price">$150–$400 / song<small>based on scope</small></div></article>
   <article class="service-row reveal" id="finish"><h2>Mastering</h2><div class="service-copy"><p>Final tone, level, consistency, release-ready delivery. Albums and EPs are taken as a body of work rather than song by song.</p></div><div class="service-price">$100–$175 / song<small>release packages quoted</small></div></article>
 
   <div class="service-group reveal"><h2>Recording and production</h2><p>Getting it made, whether that is one overdub or the whole record.</p></div>
-  <article class="service-row reveal" id="recording"><h2>Recording &amp; tracking</h2><div class="service-copy"><p>Overdubs, vocals, instruments, session engineering. Remote or in the room you already work in.</p><p>Mic and chain get picked for the source in front of us, not from a template.</p></div><div class="service-price">$65–$100 / hr<small>day rates from $500</small></div></article>
-  <article class="service-row reveal" id="production"><h2>Production assistance &amp; arrangement</h2><div class="service-copy"><p>Song development, arrangement, parts, programming, and a second set of ears on decisions already made.</p></div><div class="service-price">Project based<small>personalized quote</small></div></article>
-  <article class="service-row reveal"><h2>Full-project development</h2><div class="service-copy"><p>Early production through final delivery, with the same person on it the whole way.</p><p>My role shifts stage to stage, producer, engineer, mixer, advisor, without handing the record to someone new.</p></div><div class="service-price">Project based<small>multi-stage scope</small></div></article>
+  <article class="service-row reveal" id="recording"><h2>Recording &amp; Tracking</h2><div class="service-copy"><p>Overdubs, vocals, instruments, session engineering. Remote or in the room you already work in.</p><p>Mic and chain get picked for the source in front of us, not from a template.</p></div><div class="service-price">$65–$100 / hr<small>day rates from $500</small></div></article>
+  <article class="service-row reveal" id="production"><h2>Production Assistance &amp; Arrangement</h2><div class="service-copy"><p>Song development, arrangement, parts, programming, and a second set of ears on decisions already made.</p></div><div class="service-price">Project based<small>personalized quote</small></div></article>
+  <article class="service-row reveal"><h2>Full-Project Development</h2><div class="service-copy"><p>Early production through final delivery, with the same person on it the whole way.</p><p>My role shifts stage to stage, producer, engineer, mixer, advisor, without handing the record to someone new.</p></div><div class="service-price">Project based<small>multi-stage scope</small></div></article>
 
   <div class="service-group reveal"><h2>Rooms and systems</h2><p>The technical side, worked remotely where it can be measured and on-site where it cannot.</p></div>
-  <article class="service-row reveal" id="systems"><h2>Systems &amp; signal flow</h2><div class="service-copy"><p>Patchbay design and normalling, custom cabling, gain structure, converters and clocking, and hum or grounding faults traced end to end. Power draw and distribution planned alongside your licensed electrician; the panel is their job.</p><p>Equipment guidance sits here too: what a piece will actually do before you spend, and what you already own that is being wasted.</p></div><div class="service-price">$100–$150 / hr<small>plus parts at cost</small></div></article>
-  <article class="service-row reveal" id="acoustics"><h2>Room &amp; acoustics</h2><div class="service-copy"><img class="row-thumb" src="{{IMG:acoustic-panels}}" alt="Absorption panels part built, mineral wool set into timber frames with one clamped while the glue sets" loading="lazy" /><p>Measurement, speaker placement, and a written treatment plan built around the room and budget you have. A whole-room build, treatment through monitoring, is available by arrangement for the right project.</p></div><div class="service-price">$100–$150 / hr<small>measurement and written plan</small></div></article>
+  <article class="service-row reveal" id="systems"><h2>Systems &amp; Signal Flow</h2><div class="service-copy"><p>Patchbay design and normalling, custom cabling, gain structure, converters and clocking, and hum or grounding faults traced end to end. Power draw and distribution planned alongside your licensed electrician; the panel is their job.</p><p>Equipment guidance sits here too: what a piece will actually do before you spend, and what you already own that is being wasted.</p></div><div class="service-price">$100–$150 / hr<small>plus parts at cost</small></div></article>
+  <article class="service-row reveal" id="acoustics"><h2>Room &amp; Acoustics</h2><div class="service-copy"><img class="row-thumb" src="{{IMG:acoustic-panels}}" alt="Absorption panels part built, mineral wool set into timber frames with one clamped while the glue sets" loading="lazy" /><p>Measurement, speaker placement, and a written treatment plan built around the room and budget you have. A whole-room build, treatment through monitoring, is available by arrangement for the right project.</p></div><div class="service-price">$100–$150 / hr<small>measurement and written plan</small></div></article>
 
   <div class="service-group reveal"><h2>Teaching</h2><p>Pitched at where you actually are, not where a curriculum assumes you are.</p></div>
-  <article class="service-row reveal" id="teaching"><h2>Coaching, tutoring and lessons</h2><div class="service-copy"><img class="row-thumb" src="{{IMG:classroom}}" alt="A teaching room set up with a projector screen, whiteboard, keyboard and drum pads" loading="lazy" /><p>One-on-one on any subject on this page: signal flow, recording, editing, mixing, production judgment, mastering theory, acoustics, electronics, or running your own setup without me.</p><p>Sessions work on your material and your rig. You bring the problem, we work it, and you leave with the next thing to practise.</p></div><div class="service-price">$75–$150 / hr<small>blocks and packages by arrangement</small></div></article>
+  <article class="service-row reveal" id="teaching"><h2>Coaching, Tutoring and Lessons</h2><div class="service-copy"><img class="row-thumb" src="{{IMG:classroom}}" alt="A teaching room set up with a projector screen, whiteboard, keyboard and drum pads" loading="lazy" /><p>One-on-one on any subject on this page: signal flow, recording, editing, mixing, production judgment, mastering theory, acoustics, electronics, or running your own setup without me.</p><p>Sessions work on your material and your rig. You bring the problem, we work it, and you leave with the next thing to practise.</p></div><div class="service-price">$75–$150 / hr<small>blocks and packages by arrangement</small></div></article>
 
-  <div class="rate-panel reveal"><h2>Rates are a starting point, not a judgment on the project.</h2><div><p>Independent budgets are real. Where scope allows, I work on a sliding scale.</p><div class="needs-content"><strong>Confirm rates before publishing</strong>Carried over and unchanged: mixing, editing/tuning, vocal production, mastering, recording, consultation. Newly proposed and unconfirmed: teaching at $75–150/hr, and the $100–150/hr consulting rate reused for Systems and for Room &amp; acoustics. Whole-room build is by arrangement rather than a listed rate. Also confirm deposit terms, revision policy and what a day rate includes.</div><p>Ask. If the work is interesting and the scope is clear, the number is negotiable.</p></div></div>
+  <div class="rate-panel reveal"><h2>Rates Are a Starting Point, Not a Judgment on the Project.</h2><div><p>Independent budgets are real. Where scope allows, I work on a sliding scale.</p><div class="needs-content"><strong>Confirm rates before publishing</strong>Carried over and unchanged: mixing, editing/tuning, vocal production, mastering, recording, consultation. Newly proposed and unconfirmed: teaching at $75–150/hr, and the $100–150/hr consulting rate reused for Systems and for Room &amp; acoustics. Whole-room build is by arrangement rather than a listed rate. Also confirm deposit terms, revision policy and what a day rate includes.</div><p>Ask. If the work is interesting and the scope is clear, the number is negotiable.</p></div></div>
 </div></section>
 
 <section class="page-next">

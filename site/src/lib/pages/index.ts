@@ -29,7 +29,7 @@ export default `
 <section class="rack-unit start-here">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">01</span><span>Where to start</span></div>
-    <h2 class="unit-title">What is getting in the way?</h2>
+    <h2 class="unit-title">What Is Getting in the Way?</h2>
   </div>
   <div class="wrap rack-rows">
     <a class="rack-row" href="/services#mixing"><span class="no">01</span><h3>The record or the performance</h3><p>The song, the mix, the vocal or the production is stuck. It is close and will not cross the last gap.</p></a>
@@ -101,7 +101,7 @@ export default `
 
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell me what you&rsquo;re working on.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
+    <div class="reveal"><h2>Tell Me What You&rsquo;re Working On.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
     <a class="btn primary reveal" href="/contact">Start a project</a>
   </div>
 </section>

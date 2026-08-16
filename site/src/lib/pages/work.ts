@@ -1,7 +1,7 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Selected work</div><h1 class="page-title">On record.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console with a session running, seen from behind, a band tracking through the control room glass" fetchpriority="high" /></figure></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Selected work</div><h1 class="page-title">On Record.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console with a session running, seen from behind, a band tracking through the control room glass" fetchpriority="high" /></figure></div></section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">Real records. Real roles.</h2><div class="section-copy"><p>Public role language where available, kept legible instead of exhaustive.</p></div></div></div>
+  <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">Real Records. Real Roles.</h2><div class="section-copy"><p>Public role language where available, kept legible instead of exhaustive.</p></div></div></div>
   <div class="wrap">
     <div class="filter-bar reveal" aria-label="Filter selected work"><button class="active" type="button" data-filter="all">All</button><button type="button" data-filter="recording">Recording</button><button type="button" data-filter="mix">Mix</button><button type="button" data-filter="engineering">Engineering</button><button type="button" data-filter="assistant">Assistant</button></div>
     <div class="work-grid reveal">
@@ -15,14 +15,14 @@ export default `
   </div>
 </section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Selected artists &amp; clients</div><div><h2 class="section-title">Range is part of the work.</h2><div class="section-copy"><p>A partial list. Roles vary by artist and session.</p></div></div></div>
+  <div class="wrap section-header reveal"><div class="kicker">Selected artists &amp; clients</div><div><h2 class="section-title">Range Is Part of the Work.</h2><div class="section-copy"><p>A partial list. Roles vary by artist and session.</p></div></div></div>
   <div class="wrap"><div class="needs-content"><strong>Artist list needs vetting</strong>This roster is broad and largely unverifiable from public credits. Before publishing, mark each name with the actual involvement (session attended, assisted, engineered, mixed) and delete any that can’t be substantiated, an inflated list undercuts the verified credits above.</div></div>
   <div class="wrap artist-index reveal">{{ARTIST_INDEX}}</div>
   <div class="wrap section-header reveal" style="margin-top:3rem"><div class="kicker">Media &amp; brands</div></div>
   <div class="wrap artist-index reveal">{{MEDIA_INDEX}}</div>
 </section>
 <section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
+  <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in Real Studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
   <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; original room, built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
 </section>
 

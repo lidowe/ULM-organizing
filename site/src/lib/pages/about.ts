@@ -21,7 +21,7 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="true" aria-controls="wwa-panel-01" id="wwa-btn-01">
           <span class="wwa-no">01</span>
-          <span class="wwa-heading"><span class="wwa-title">The person</span><span class="wwa-summary">Musician first, engineer second.</span></span>
+          <span class="wwa-heading"><span class="wwa-title">The Person</span><span class="wwa-summary">Musician first, engineer second.</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
@@ -81,7 +81,7 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-03" id="wwa-btn-03">
           <span class="wwa-no">03</span>
-          <span class="wwa-heading"><span class="wwa-title">Why this exists</span><span class="wwa-summary">Control belongs to the person making the art.</span></span>
+          <span class="wwa-heading"><span class="wwa-title">Why This Exists</span><span class="wwa-summary">Control belongs to the person making the art.</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
@@ -97,7 +97,7 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-04" id="wwa-btn-04">
           <span class="wwa-no">04</span>
-          <span class="wwa-heading"><span class="wwa-title">What comes next</span><span class="wwa-summary">Resources, education, insights.</span></span>
+          <span class="wwa-heading"><span class="wwa-title">What Comes Next</span><span class="wwa-summary">Resources, education, insights.</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
@@ -112,7 +112,7 @@ export default `
 <section class="rack-unit archive-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">A</span><span>The archive</span></div>
-    <h2 class="unit-title">Twenty years of rooms and the people in them.</h2>
+    <h2 class="unit-title">Twenty Years of Rooms and the People in Them.</h2>
   </div>
   <div class="wrap archive-strip">
     <figure><img src="{{IMG:moonlight-bass}}" alt="A person playing an acoustic bass outdoors at night with a baby in a carrier" loading="lazy" /><figcaption>Music happens wherever you are.</figcaption></figure>
@@ -129,7 +129,7 @@ export default `
 </section>
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell me what you&rsquo;re working on.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
+    <div class="reveal"><h2>Tell Me What You&rsquo;re Working On.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
     <a class="btn primary reveal" href="/contact">Start a project</a>
   </div>
 </section>
