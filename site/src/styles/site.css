@@ -867,6 +867,39 @@ img,svg,canvas{display:block;max-width:100%}
 /* ---- Homepage: where to start ---- */
 .start-here{background:linear-gradient(180deg,var(--bg),var(--bg-soft))}
 
+/* ---- PRESS RECORD -----------------------------------------------------
+   The red record dot: the one universal studio symbol, aimed at the
+   visitor, not at us. Breathes slowly (recording, not alarming); static
+   under reduced motion. Lives only where the action is real: the primary
+   CTA and the closing invitation. */
+.rec-dot{display:inline-block;width:.62em;height:.62em;border-radius:50%;
+  background:var(--record);box-shadow:0 0 0 0 var(--record-glow);
+  margin-right:.6em;flex:none;
+  animation:rec-breathe 2.6s ease-in-out infinite}
+.btn.primary .rec-dot{background:#0b0c0e;box-shadow:none;animation:none}
+.btn.primary:hover .rec-dot{background:var(--record);animation:rec-breathe 2.6s ease-in-out infinite}
+.cta-dot{display:block;width:20px;height:20px;border-radius:50%;
+  background:var(--record);margin-bottom:1.2rem;
+  box-shadow:0 0 0 0 var(--record-glow);
+  animation:rec-breathe 2.6s ease-in-out infinite}
+@keyframes rec-breathe{
+  0%,100%{box-shadow:0 0 0 0 var(--record-glow)}
+  50%{box-shadow:0 0 0 .55em rgba(220,38,38,0)}}
+@media(prefers-reduced-motion:reduce){.rec-dot,.cta-dot,.btn.primary:hover .rec-dot{animation:none}}
+
+/* The good news: copy beside the drummer photo, same split as the old
+   stance section. */
+.renaissance-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--pw-3rd));
+  gap:clamp(1.8rem,4vw,3.6rem);align-items:center}
+@media(max-width:860px){.renaissance-split{grid-template-columns:1fr}.renaissance-split .stance-photo{max-width:var(--pw-half)}}
+
+/* Call-and-response: the basement's doubt in small type, answered in the
+   display face. The call is a quote, not a label - it stays lowercase,
+   exactly as typed. */
+.call-response{margin:1.5rem 0 0;max-width:56ch}
+.call{margin:0 0 .35rem;line-height:1.5}
+.response{margin:0;font-size:var(--fs-h3);line-height:1.3;color:var(--paper);text-wrap:balance}
+
 /* ---- Collapsible detail folds ---- */
 .more-section{background:var(--bg);padding:clamp(2.5rem,5vw,4rem) 0}
 .fold{border-top:1px solid var(--line)}
@@ -1223,7 +1256,7 @@ img,svg,canvas{display:block;max-width:100%}
 .rack-row h3,.tools-details summary,.brand strong,.footer-brand,
 .artist-index span,.plain-title,.plan-part h3,.paths-head h2,.path h4,
 .closing-note h2,.wwa-title,.mode h3,.next-card h3,.mission-line,.why-line,
-.unit-prose p.unit-turn,.qa-q,.hero-mission{
+.unit-prose p.unit-turn,.qa-q,.hero-mission,.response{
   font-family:var(--display);font-weight:500;letter-spacing:-.01em
 }
 .artist-index span,.tools-details summary{font-weight:500}
@@ -1303,7 +1336,7 @@ img,svg,canvas{display:block;max-width:100%}
 .lead-photo figcaption,.inline-photo figcaption,.archive-strip figcaption,
 .credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
 .photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption,
-.studio-hero-photo figcaption,.studio-gallery figcaption{
+.studio-hero-photo figcaption,.studio-gallery figcaption,.call{
   font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
   letter-spacing:.02em;text-transform:none;color:var(--muted)}
 
