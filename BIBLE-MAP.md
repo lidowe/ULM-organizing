@@ -5,19 +5,24 @@ What exists, what's missing, what publishes, in what order. Marks:
 publishes, the rest stays internal) · **INTERNAL** (studio ops, not site
 content) · **MISSING** (referenced by the others but not in what you sent).
 
-## Inventory
+## Inventory — complete as of the 16 Aug uploads
 
 | Doc | State | Verdict |
 |---|---|---|
-| A — Microphone Locker V2 (103 mics) | MISSING (referenced by H) | rebuildable: `microphones.ts` in the app is its skeleton |
-| B — Preamplification & Power | MISSING (referenced by C/D/F/H) | rebuildable: `preamps.ts` is its skeleton |
+| **Main Bible (tempV2)** — 15 sections: philosophy, power, sequencing, EM zones, patchbay grounds, cables, summing, signal flow, decision framework, troubleshooting | complete, 4.7k words | INTERNAL spine + three PUBLISH excerpts (below) |
+| A — Microphone Locker V2.3 (transducer reference + preamp gain-demand cross-ref) | complete, 7.3k words — the largest volume | EXCERPT-heavy: gain-demand teaching feeds ULM001/004; inventory feeds Studio's The List |
+| B — Preamplification & Power Systems | complete, 1.3k words (the app's `preamps.ts` is its distillation) | INTERNAL reference + source data for interactive fragments |
 | C — Equalizers | complete, 1.7k words | EXCERPT |
 | D — Compression & Dynamics | complete, 3.7k words | PUBLISH (its essay), tables EXCERPT |
 | E — Power & Magnetic Reference | complete, 4.1k words | INTERNAL (one EXCERPT) |
 | F — Rack Layout, Part 1 | complete, 2k words (Part 2 never made) | INTERNAL (one EXCERPT) |
 | G — The Conversion Boundary | complete, 4.7k words | PUBLISH (its argument) |
 | H — Signal Chain Engineering | complete, 4.3k words | PUBLISH — the flagship |
+| Early Microphone Locker (438 words) | superseded by V2.3 | archive |
 | dbx feedback paper | third-party (Brandon Graham / dbx) | reference only, never on site |
+
+Corpus total: ~34,000 words of Edward's engineering writing. Nothing is
+missing; the duplicate Appendix B uploads are identical.
 
 ## The catalogue, in launch order
 
@@ -56,6 +61,16 @@ lesson generalized to plugins — every conclusion transfers to a laptop.
 interaction note: passive LC vs active parametric vs tilt as *different
 philosophies of touching tone*, expanded with D-style depth.
 
+**ULM007 — "Find The Hum."** From the main Bible §13, the Noise
+Troubleshooting Guide — a systematic hunt anyone with an interface and a
+hum can run tonight. Possibly the single highest-traffic entry the
+catalogue will ever have.
+
+**ULM008 — "Five Questions Before You Plug It In."** From §12, the
+Connection Decision Framework: shared PSU? same zone? galvanic isolation?
+gain of the destination? permanent or session? A decision tool, not a
+recipe — teaches the questions, not the answer.
+
 **EXCERPT (Studio page) — "Designed From The Listening Chair Outward."**
 F's cognitive-zone concept: quietest gear nearest the ears, *"session
 momentum is sacred — technical access must never kill creative flow."*
@@ -83,9 +98,9 @@ flag anything that smells current-state-dependent for your check against
 the 2026 room; (3) numbered veto list to you; (4) publish only on your
 numbers. One entry at a time, ULM001 first.
 
-## The missing volumes
+## No missing volumes
 
-A and B exist as references in the others and as skeletons in the app's
-data files. If the full documents live in another tool's project, recover
-them when convenient; if not, B regenerates from `preamps.ts` + your
-review, A from `microphones.ts` the same way. No blocker either way.
+The 16 Aug second batch delivered the main Bible, Appendix A (Microphone
+Locker V2.3) and Appendix B. The library is whole. The only forthcoming
+item ever referenced is F Part 2 (cable routing schematics), which was
+never written and is internal-only anyway.
