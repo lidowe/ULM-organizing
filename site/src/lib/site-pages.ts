@@ -12,6 +12,8 @@ import contact from "./pages/contact";
 import about from "./pages/about";
 import education from "./pages/education";
 import news from "./pages/news";
+import preProduction from "./pages/pre-production";
+import describingSound from "./pages/describing-sound";
 
 export const pages: Record<string, string> = {
   "index": index,
@@ -22,4 +24,6 @@ export const pages: Record<string, string> = {
   "about": about,
   "education": education,
   "news": news,
+  "pre-production": preProduction,
+  "describing-sound": describingSound,
 };

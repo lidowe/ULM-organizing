@@ -13,9 +13,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
+import { Route as DescribingSoundRouteImport } from './routes/describing-sound'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as PreProductionRouteImport } from './routes/pre-production'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ReachRouteImport } from './routes/reach'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -48,6 +50,11 @@ const CreditsRoute = CreditsRouteImport.update({
   path: '/credits',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DescribingSoundRoute = DescribingSoundRouteImport.update({
+  id: '/describing-sound',
+  path: '/describing-sound',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
@@ -61,6 +68,11 @@ const McpRoute = McpRouteImport.update({
 const NewsRoute = NewsRouteImport.update({
   id: '/news',
   path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreProductionRoute = PreProductionRouteImport.update({
+  id: '/pre-production',
+  path: '/pre-production',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcessRoute = ProcessRouteImport.update({
@@ -127,9 +139,11 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
@@ -147,9 +161,11 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
@@ -168,9 +184,11 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
@@ -190,9 +208,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/education'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/reach'
     | '/services'
@@ -210,9 +230,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/education'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/reach'
     | '/services'
@@ -230,9 +252,11 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/education'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/reach'
     | '/services'
@@ -251,9 +275,11 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
+  DescribingSoundRoute: typeof DescribingSoundRoute
   EducationRoute: typeof EducationRoute
   McpRoute: typeof McpRoute
   NewsRoute: typeof NewsRoute
+  PreProductionRoute: typeof PreProductionRoute
   ProcessRoute: typeof ProcessRoute
   ReachRoute: typeof ReachRoute
   ServicesRoute: typeof ServicesRoute
@@ -297,6 +323,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreditsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/describing-sound': {
+      id: '/describing-sound'
+      path: '/describing-sound'
+      fullPath: '/describing-sound'
+      preLoaderRoute: typeof DescribingSoundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/education': {
       id: '/education'
       path: '/education'
@@ -316,6 +349,13 @@ declare module '@tanstack/react-router' {
       path: '/news'
       fullPath: '/news'
       preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pre-production': {
+      id: '/pre-production'
+      path: '/pre-production'
+      fullPath: '/pre-production'
+      preLoaderRoute: typeof PreProductionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/process': {
@@ -403,9 +443,11 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
+  DescribingSoundRoute: DescribingSoundRoute,
   EducationRoute: EducationRoute,
   McpRoute: McpRoute,
   NewsRoute: NewsRoute,
+  PreProductionRoute: PreProductionRoute,
   ProcessRoute: ProcessRoute,
   ReachRoute: ReachRoute,
   ServicesRoute: ServicesRoute,

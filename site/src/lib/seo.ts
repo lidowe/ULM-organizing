@@ -97,6 +97,24 @@ export const PAGES: PageEntry[] = [
     changefreq: "yearly",
     priority: "0.9",
   },
+  {
+    slug: "pre-production",
+    path: "/pre-production",
+    title: "A Chance to Be Heard · Upper Level Music",
+    description:
+      "Why every Upper Level Music project starts with a short, informal Q&A: the source is the guide, and the conversation comes before the microphone.",
+    changefreq: "monthly",
+    priority: "0.6",
+  },
+  {
+    slug: "describing-sound",
+    path: "/describing-sound",
+    title: "Describing Sound · Upper Level Music",
+    description:
+      "You don't need the technical terminology. Sound is described in borrowed words, and translating them, purple guitars included, is our job.",
+    changefreq: "monthly",
+    priority: "0.6",
+  },
 ];
 
 export function absoluteUrl(path: string): string {
