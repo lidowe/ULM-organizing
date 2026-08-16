@@ -18,7 +18,7 @@ export default `
   <div class="wrap section-header reveal"><div class="kicker">Selected artists &amp; clients</div><div><h2 class="section-title">Range Is Part of the Work.</h2><div class="section-copy"><p>A partial list. Roles vary by artist and session.</p></div></div></div>
   <div class="wrap"><div class="needs-content"><strong>Artist list needs vetting</strong>This roster is broad and largely unverifiable from public credits. Before publishing, mark each name with the actual involvement (session attended, assisted, engineered, mixed) and delete any that can’t be substantiated, an inflated list undercuts the verified credits above.</div></div>
   <div class="wrap artist-index reveal">{{ARTIST_INDEX}}</div>
-  <div class="wrap section-header reveal" style="margin-top:3rem"><div class="kicker">Media &amp; brands</div></div>
+  <div class="wrap section-header section-header-followon reveal"><div class="kicker">Media &amp; brands</div></div>
   <div class="wrap artist-index reveal">{{MEDIA_INDEX}}</div>
 </section>
 <section class="section">

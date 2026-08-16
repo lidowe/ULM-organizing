@@ -35,15 +35,6 @@ export const PAGES: PageEntry[] = [
     priority: "1.0",
   },
   {
-    slug: "process",
-    path: "/process",
-    title: "Process · Upper Level Music",
-    description:
-      "How a project moves from the first conversation to a finished record, questions first, then scope, then the work.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
     slug: "about",
     path: "/about",
     title: "About · Upper Level Music",
