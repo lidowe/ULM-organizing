@@ -396,6 +396,15 @@ img,svg,canvas{display:block;max-width:100%}
 .cta-section p{margin:1.5rem 0 0;max-width:46ch;color:#292524;font-size:var(--fs-body)}
 .cta-section .btn{border-color:rgba(12,13,15,.25)}
 .cta-section .btn.primary{background:var(--bg);color:var(--paper);border-color:var(--bg)}
+/* Two doors at the resolution: the primary action, and the quiet free one.
+   Both generous, zero urgency mechanics. */
+.cta-doors{display:grid;gap:.9rem;justify-items:start}
+.cta-alt{margin:0;font-size:var(--fs-sm);color:#57534e;max-width:34ch}
+.cta-alt a{color:inherit;border-bottom:1px solid rgba(12,13,15,.3)}
+.cta-alt a:hover{border-bottom-color:#292524}
+/* Inline links inside running prose on dark ground. */
+.text-link{color:var(--amber-light);border-bottom:1px solid rgba(240,80,67,.4)}
+.text-link:hover{border-bottom-color:var(--amber-light)}
 
 .page-hero{min-height:0;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding-top:clamp(7rem,12vw,9rem);background:
   radial-gradient(circle at 85% 20%,var(--amber-glow),transparent 28rem),

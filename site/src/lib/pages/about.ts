@@ -105,6 +105,26 @@ export default `
     </article>
   </div>
 </section>
+<section class="rack-unit more-section">
+  <div class="wrap">
+    <details class="fold">
+      <summary><span class="fold-k">Our values</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs, their story, their name, their risk. Our work belongs in service to the song.</p>
+        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world, the gear, the sonic character.</p>
+        <p>It is not the artist&rsquo;s job to know whether an 1176 or a dbx 160VU will help express that. If you are an engineer who wants to know, we will travel that path as far as you want.</p>
+        <p>It is better to listen to the artist in order to hear the song.</p>
+      </div>
+    </details>
+    <details class="fold">
+      <summary><span class="fold-k">Remote work</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets us work with artists anywhere, on any schedule.</p>
+        <p>Nothing fully replaces being in the same space. We trade some of that for access, and we are honest about it.</p>
+      </div>
+    </details>
+  </div>
+</section>
 <section class="rack-unit archive-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">A</span><span>The archive</span></div>
