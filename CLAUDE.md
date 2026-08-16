@@ -101,6 +101,42 @@ decode, disable animations and transitions, and confirm the dev server is
 serving assets (`200`, not `404`) before trusting a single screenshot. A stale
 server holding the port silently invalidates a whole comparison.
 
+## If you are a new session starting work — read this first
+
+Edward runs several sessions at once, on different jobs, sometimes on
+different models. He should not have to manage branches, and he will not give
+you branch instructions. Handle it yourself, without being asked:
+
+**1. Make your own branch before you change anything.** Never work directly on
+`main`. Name it for the job.
+
+    git fetch origin main
+    git checkout -B claude/<short-job-name> origin/main
+
+Do this even for a one-line copy fix. Two sessions sharing a branch will
+overwrite each other's work, and Edward will not find out until something he
+approved has disappeared.
+
+**2. Never merge or push to `main` unless Edward says to publish, in those
+words, in this session.** `main` is the live site. Pushing to it puts your
+work on the domain he sends to clients, within a couple of minutes, with no
+staging step and no review. "It's finished" is not permission to publish.
+
+**3. Commit as you go. Do not push unless asked.** A commit is a checkpoint he
+can throw away. A push is not what he asked for and costs him nothing to wait
+for.
+
+**4. Show `git diff`, not a summary of it.** "I fixed the typo" is a claim.
+The diff is the evidence, and for copy work it is the only thing that shows
+whether a sentence was changed as well as corrected.
+
+**5. Do not touch another session's branch.** If `git branch -a` shows other
+`claude/*` branches, they belong to work in progress somewhere else. Branch
+from `origin/main`, not from them.
+
+**6. When your job is done, say so and stop.** Tell Edward the branch name and
+what is on it. He decides what gets published and when.
+
 ## Deployment
 
 The three ways to break the live site, in order of how easily they happen:
