@@ -140,6 +140,23 @@ The details:
 - Agent containers cannot reach `api.cloudflare.com` — the proxy rejects it.
   Deploys and preview deploys have to happen from Edward's side.
 
+## The old site is not in this tree
+
+There used to be an `archived/` folder holding eight complete copies of the
+pre-TanStack static site — v1, v2, v3, v3-2, v3-3, v3-production, v4-fresh and
+recovered — plus its blog, css and js. Nothing referenced it, nothing built it,
+and having six versions of every heading sitting next to the real ones is how
+old Lovable-era copy kept bleeding back into current work.
+
+It is removed from the working tree and preserved in history. To read or
+restore any of it:
+
+    git show 1b3f220 --stat            # what was archived
+    git checkout 1b3f220 -- archived   # bring the whole folder back
+
+If you are looking for the current copy of a page, it is in
+`site/src/lib/pages/`. Nothing outside `site/` is site content.
+
 ## Working preferences
 
 - Do not push on every edit.
