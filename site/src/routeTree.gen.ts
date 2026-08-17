@@ -26,6 +26,7 @@ import { Route as StudioRouteImport } from './routes/studio'
 import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
+import { Route as WorkbenchRouteImport } from './routes/workbench'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -116,6 +117,11 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkbenchRoute = WorkbenchRouteImport.update({
+  id: '/workbench',
+  path: '/workbench',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const Char91DotmcpChar93ListToolsRoute =
   Char91DotmcpChar93ListToolsRouteImport.update({
     id: '/.mcp/list-tools',
@@ -158,6 +164,7 @@ export interface FileRoutesByFullPath {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
+  '/workbench': typeof WorkbenchRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -181,6 +188,7 @@ export interface FileRoutesByTo {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
+  '/workbench': typeof WorkbenchRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -205,6 +213,7 @@ export interface FileRoutesById {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
+  '/workbench': typeof WorkbenchRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -230,6 +239,7 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
+    | '/workbench'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -253,6 +263,7 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
+    | '/workbench'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -276,6 +287,7 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
+    | '/workbench'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -300,6 +312,7 @@ export interface RootRouteChildren {
   TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
+  WorkbenchRoute: typeof WorkbenchRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -427,6 +440,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/workbench': {
+      id: '/workbench'
+      path: '/workbench'
+      fullPath: '/workbench'
+      preLoaderRoute: typeof WorkbenchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/.mcp/list-tools': {
       id: '/.mcp/list-tools'
       path: '/.mcp/list-tools'
@@ -476,6 +496,7 @@ const rootRouteChildren: RootRouteChildren = {
   TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,
+  WorkbenchRoute: WorkbenchRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
