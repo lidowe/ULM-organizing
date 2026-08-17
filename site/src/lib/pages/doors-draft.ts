@@ -142,38 +142,38 @@ export default `
 
     <div class="db-bar" style="--i:3">
       <svg viewBox="0 0 720 120" role="img" aria-label="A knob, a VU meter whose needle never passes halfway, a second knob out of sync, money, a spinner going nowhere, then a phone reading ULM and music">
-        <!-- gear: one chassis holding knob / VU / knob -->
+        <!-- gear: one chassis holding knob / VU / knob, margins symmetric -->
         <g class="db-draw s1">
-          <rect x="24" y="30" width="196" height="60" rx="3" fill="url(#dbPanel)" pathLength="1"/>
+          <rect x="24" y="30" width="164" height="60" rx="3" fill="url(#dbPanel)" pathLength="1"/>
           <circle cx="46" cy="60" r="12" fill="url(#dbMetal)" pathLength="1"/>
-          <rect x="66" y="38" width="76" height="44" rx="2" fill="#0e1119" pathLength="1"/>
-          <path d="M78,72 A26,26 0 0 1 130,72" fill="none" pathLength="1" class="db-faint"/>
-          <path d="M82,66 L86,63 M104,52 L104,46 M126,66 L122,63" pathLength="1" class="db-faint"/>
-          <path d="M130,72 L136,66" class="db-hot" pathLength="1"/>
+          <rect x="68" y="38" width="76" height="44" rx="2" fill="#0e1119" pathLength="1"/>
+          <path d="M80,72 A26,26 0 0 1 132,72" fill="none" pathLength="1" class="db-faint"/>
+          <path d="M84,66 L88,63 M106,52 L106,46 M128,66 L124,63" pathLength="1" class="db-faint"/>
+          <path d="M132,72 L138,66" class="db-hot" pathLength="1"/>
           <circle cx="166" cy="60" r="12" fill="url(#dbMetal)" pathLength="1"/>
         </g>
         <g class="db-knob1"><path d="M46,60 L46,49" pathLength="1"/></g>
-        <g class="db-vu"><path d="M104,76 L104,48" pathLength="1"/></g>
+        <g class="db-vu"><path d="M106,76 L106,48" pathLength="1"/></g>
         <g class="db-knob2"><path d="M166,60 L166,49" pathLength="1"/></g>
-        <text class="gd-label db-cash" x="238" y="76" style="font-size:44px">$</text>
-        <path class="db-arrow s2" d="M292,60 L320,60 M313,54 L320,60 L313,66" pathLength="1"/>
+        <text class="gd-label db-cash" x="206" y="76" style="font-size:44px">$</text>
+        <path class="db-arrow s2" d="M252,60 L280,60 M273,54 L280,60 L273,66" pathLength="1"/>
         <!-- spinner -->
         <g class="db-spinner">
-          <path d="M366,60 A18,18 0 1 1 348,42" fill="none" pathLength="1"/>
+          <path d="M334,60 A18,18 0 1 1 316,42" fill="none" pathLength="1"/>
         </g>
-        <path class="db-arrow s3" d="M400,60 L428,60 M421,54 L428,60 L421,66" pathLength="1"/>
-        <!-- phone -->
+        <path class="db-arrow s3" d="M368,60 L396,60 M389,54 L396,60 L389,66" pathLength="1"/>
+        <!-- phone: the one place the ULM phone appears -->
         <g class="db-draw s3">
-          <rect x="448" y="24" width="48" height="76" rx="9" fill="url(#dbPanel)" pathLength="1"/>
-          <path d="M466,92 L478,92" pathLength="1" class="db-faint"/>
+          <rect x="416" y="24" width="48" height="76" rx="9" fill="url(#dbPanel)" pathLength="1"/>
+          <path d="M434,92 L446,92" pathLength="1" class="db-faint"/>
         </g>
-        <text class="gd-label db-ulm" x="455" y="64" style="font-size:13px">ULM</text>
-        <path class="db-arrow s4" d="M516,60 L544,60 M537,54 L544,60 L537,66" pathLength="1"/>
+        <text class="gd-label db-ulm" x="423" y="64" style="font-size:13px">ULM</text>
+        <path class="db-arrow s4" d="M484,60 L512,60 M505,54 L512,60 L505,66" pathLength="1"/>
         <!-- music out -->
         <g class="db-notes">
-          <g class="db-note n1"><ellipse cx="570" cy="76" rx="7" ry="5"/><path d="M577,74 L577,38 L592,34" pathLength="1"/></g>
-          <g class="db-note n2"><ellipse cx="616" cy="62" rx="7" ry="5"/><path d="M623,60 L623,26 L638,22" pathLength="1"/></g>
-          <g class="db-note n3"><ellipse cx="660" cy="72" rx="7" ry="5"/><path d="M667,70 L667,34" pathLength="1"/></g>
+          <g class="db-note n1"><ellipse cx="540" cy="76" rx="7" ry="5"/><path d="M547,74 L547,38 L562,34" pathLength="1"/></g>
+          <g class="db-note n2"><ellipse cx="588" cy="62" rx="7" ry="5"/><path d="M595,60 L595,26 L610,22" pathLength="1"/></g>
+          <g class="db-note n3"><ellipse cx="634" cy="72" rx="7" ry="5"/><path d="M641,70 L641,34" pathLength="1"/></g>
         </g>
       </svg>
       <div class="db-foot"><span class="db-word">Listen</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
@@ -189,12 +189,11 @@ export default `
           <path d="M28,78 L98,40 M32,42 L96,76 M26,58 L102,62" pathLength="1"/>
         </g>
         <path class="db-arrow s2" d="M130,60 L158,60 M151,54 L158,60 L151,66" pathLength="1"/>
-        <!-- the call -->
-        <g class="db-draw s2">
-          <rect x="204" y="24" width="48" height="76" rx="9" fill="url(#dbPanel)" pathLength="1"/>
-          <path d="M222,92 L234,92" pathLength="1" class="db-faint"/>
+        <!-- the call, in this room's own instrument: the talkback -->
+        <g class="db-talk s2">
+          <circle cx="228" cy="60" r="28" fill="url(#dbPanel)" pathLength="1"/>
+          <text class="gd-label db-talktext" x="209" y="65" style="font-size:12px">TALK</text>
         </g>
-        <text class="gd-label db-ulm db-talktext" x="211" y="64" style="font-size:13px">ULM</text>
         <path class="db-arrow s3" d="M288,60 L316,60 M309,54 L316,60 L309,66" pathLength="1"/>
         <!-- the same wave, clean -->
         <g class="db-cleanwave">

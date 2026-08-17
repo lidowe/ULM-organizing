@@ -1347,10 +1347,10 @@ img,svg,canvas{display:block;max-width:100%}
 /* Setting markers must read against the metal, not vanish into it. The
    .db-bar prefix is load-bearing: it outranks the base svg stroke rule. */
 .db-bar .db-knob1 path,.db-bar .db-knob2 path{stroke:#1c2029;stroke-width:2.5}
-.db-vu path{transform-box:view-box;transform-origin:104px 76px;transform:rotate(-18deg)}
+.db-vu path{transform-box:view-box;transform-origin:106px 76px;transform:rotate(-18deg)}
 .db-reel{transform-box:view-box;transform-origin:540px 60px}
 .db-eqmove{transform-box:fill-box;transform-origin:50% 100%;transform:translateX(22px) scaleX(.55)}
-.db-spinner path{transform-box:view-box;transform-origin:348px 60px}
+.db-spinner path{transform-box:view-box;transform-origin:316px 60px}
 .db-talk{transform-box:view-box;transform-origin:228px 60px}
 /* Sequencer timing: everything shares the 15s loop + per-bar delay. */
 .db-bar .db-draw,.db-bar .db-draw path,.db-bar .db-draw rect,.db-bar .db-draw circle,
