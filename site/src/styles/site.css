@@ -1315,65 +1315,106 @@ img,svg,canvas{display:block;max-width:100%}
 .hum-reset:hover{color:var(--paper)}
 @media(max-width:560px){.hum-block{grid-template-columns:1fr}}
 
-/* ---- The Doors: motion draft ------------------------------------------
-   Five story bars in the gap-diagram grammar, played as a sequencer: each
-   bar solos for 3s of a 15s loop (window = 0-20% of the timeline, offset
-   per bar by --i x 3s). Every element's STATIC state is its final frame,
-   so pre-play, reduced-motion and the between-solos rest all read as the
-   completed story. Hovering a bar zeroes its delay, which restarts its
-   animations = instant replay. */
-.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:860px}
+/* ---- The Doors: motion draft v2 ---------------------------------------
+   Five story bars, fills and metal over the 1px grammar, played as a
+   sequencer: each bar solos for 3s of a 15s loop (window = 0-20% of the
+   timeline, offset per bar by --i x 3s). Every element's STATIC state is
+   its final frame, so pre-play, reduced-motion and the between-solos rest
+   all read as the completed story. Hovering a bar zeroes its delay =
+   instant replay. */
+.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:900px}
 .db-bar{border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem}
 .db-bar svg{display:block;width:100%;height:auto}
 .db-bar svg path,.db-bar svg rect,.db-bar svg circle,.db-bar svg ellipse{
-  fill:none;stroke:var(--paper-soft);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+  stroke:var(--paper-soft);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.db-bar svg path:not([fill]),.db-bar svg circle:not([fill]){fill:none}
 .db-bar .db-faint{stroke:var(--quiet);opacity:.6}
 .db-bar .db-hot{stroke:var(--amber)}
-.db-bar .db-arrow{stroke:var(--quiet)}
+.db-bar .db-arrow{stroke:var(--quiet);fill:none}
+.db-bar .db-tanline{stroke:#8f7c56}
 .db-bar .db-note ellipse{fill:var(--paper-soft);stroke:none}
-.db-bar .db-arcs path{stroke-dasharray:3 5;opacity:.3}
+.db-bar .db-anz rect{stroke:none;transform-box:fill-box;transform-origin:50% 100%}
+.db-bar .db-arcs path{stroke-dasharray:3 5;opacity:.3;fill:none}
+.db-bar .db-q,.db-bar .db-cash{fill:#a8adb8}
+.db-bar .db-ulm{fill:var(--amber-light)}
 .db-foot{display:flex;align-items:baseline;gap:1.3rem;border-top:1px solid var(--line-soft);margin-top:.55rem;padding-top:.7rem}
 .db-line{color:var(--quiet)}
-/* Sequencer timing: every animation shares the 15s loop and the per-bar
-   delay; only the keyframes differ. */
-.db-bar .db-draw path,.db-bar .db-draw rect,.db-bar .db-draw circle,.db-bar .db-draw ellipse,
-.db-bar .db-arrow,.db-bar .db-wave,.db-bar .db-scratch path,.db-bar .db-talk circle,
-.db-bar .db-eqmove,.db-bar .db-cut,.db-bar .db-spokes,.db-bar .db-spark,.db-bar .db-arcs path,
-.db-bar .db-q,.db-bar .db-cash,.db-bar .db-ulm,.db-bar .db-talktext,.db-bar .db-spinner path,
-.db-bar .db-note,.db-bar .db-talk{
+/* Static transforms = final frames; animations override during the solo. */
+.db-knob1 path{transform-box:view-box;transform-origin:44px 60px;transform:rotate(10deg)}
+.db-knob2 path{transform-box:view-box;transform-origin:196px 60px;transform:rotate(-10deg)}
+/* Setting markers must read against the metal, not vanish into it. The
+   .db-bar prefix is load-bearing: it outranks the base svg stroke rule. */
+.db-bar .db-knob1 path,.db-bar .db-knob2 path{stroke:#1c2029;stroke-width:2.5}
+.db-vu path{transform-box:view-box;transform-origin:122px 78px;transform:rotate(-18deg)}
+.db-reel{transform-box:view-box;transform-origin:540px 60px}
+.db-eqmove{transform-box:fill-box;transform-origin:50% 100%;transform:translateX(22px) scaleX(.55)}
+.db-spinner path{transform-box:view-box;transform-origin:330px 60px}
+.db-talk{transform-box:view-box;transform-origin:228px 60px}
+/* Sequencer timing: everything shares the 15s loop + per-bar delay. */
+.db-bar .db-draw,.db-bar .db-draw path,.db-bar .db-draw rect,.db-bar .db-draw circle,
+.db-bar .db-arrow,.db-bar .db-scratch path,.db-bar .db-talk circle,.db-bar .db-talk,
+.db-bar .db-eqmove,.db-bar .db-cut,.db-bar .db-reelwrap,.db-bar .db-reel,.db-bar .db-spark,
+.db-bar .db-arcs path,.db-bar .db-q,.db-bar .db-cash,.db-bar .db-ulm,.db-bar .db-talktext,
+.db-bar .db-spinner path,.db-bar .db-note,.db-bar .db-anz rect,.db-bar .db-cleanwave path,
+.db-bar .db-check circle,.db-bar .db-check path,.db-bar .db-knob1 path,.db-bar .db-knob2 path,
+.db-bar .db-vu path{
   animation-duration:15s;animation-timing-function:linear;animation-iteration-count:infinite;
   animation-delay:calc(var(--i) * 3s)}
 .db-bar:hover *{animation-delay:0s}
-/* Draw-ins: three stagger slots inside the 3s window. */
-.db-bar .db-draw.s1 path,.db-bar .db-draw.s1 rect,.db-bar .db-draw.s1 circle,.db-bar .db-draw.s1 ellipse{
+/* Group fades keep fills from arriving before their strokes. */
+.db-bar .db-draw.s1{animation-name:db-f1}
+.db-bar .db-draw.s2{animation-name:db-f2}
+.db-bar .db-draw.s3{animation-name:db-f3}
+@keyframes db-f1{0%{opacity:0}1.5%,100%{opacity:1}}
+@keyframes db-f2{0%,4.5%{opacity:0}6%,100%{opacity:1}}
+@keyframes db-f3{0%,10.5%{opacity:0}12%,100%{opacity:1}}
+/* Draw-ins: four stagger slots inside the 3s window. */
+.db-bar .db-draw.s1 path,.db-bar .db-draw.s1 rect,.db-bar .db-draw.s1 circle{
   stroke-dasharray:1;animation-name:db-d1}
 .db-bar .db-draw.s2 path,.db-bar .db-draw.s2 rect,.db-bar .db-draw.s2 circle,
 .db-bar .db-talk circle,.db-bar .db-arrow.s2{stroke-dasharray:1;animation-name:db-d2}
 .db-bar .db-draw.s3 path,.db-bar .db-draw.s3 rect,.db-bar .db-draw.s3 circle,
-.db-bar .db-wave,.db-bar .db-arrow.s3{stroke-dasharray:1;animation-name:db-d3}
+.db-bar .db-arrow.s3{stroke-dasharray:1;animation-name:db-d3}
+.db-bar .db-arrow.s4,.db-bar .db-check circle,.db-bar .db-check path{
+  stroke-dasharray:1;animation-name:db-d4}
 @keyframes db-d1{0%{stroke-dashoffset:1}7%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-@keyframes db-d2{0%,5%{stroke-dashoffset:1}13%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-@keyframes db-d3{0%,11%{stroke-dashoffset:1}19%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-/* Finish: the EQ move (rise, shift right, narrow) then the cut; reel turns. */
-.db-eqmove{transform-box:fill-box;transform-origin:50% 100%;transform:translateX(22px) scaleX(.55);animation-name:db-eq}
+@keyframes db-d2{0%,5%{stroke-dashoffset:1}12%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d3{0%,11%{stroke-dashoffset:1}16%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d4{0%,14.5%{stroke-dashoffset:1}19%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+/* Finish: EQ rises, shifts, narrows; the cut lands; the reel spins. */
+.db-eqmove{animation-name:db-eq}
 @keyframes db-eq{0%{opacity:0;transform:scaleY(.3)}4%{opacity:1;transform:scaleY(.3)}7%{transform:none}10%{transform:translateX(22px)}13%,100%{transform:translateX(22px) scaleX(.55)}}
 .db-cut{animation-name:db-late}
-@keyframes db-late{0%,13%{opacity:0}15%,100%{opacity:1}}
-.db-spokes{transform-box:view-box;transform-origin:470px 60px;animation-name:db-reel}
-@keyframes db-reel{0%,13%{transform:none}19%,100%{transform:rotate(240deg)}}
-/* Fix: the break flashes, the arcs die. */
+@keyframes db-late{0%,13.5%{opacity:0}15%,100%{opacity:1}}
+.db-reelwrap{animation-name:db-f3}
+.db-reel{animation-name:db-reelspin}
+@keyframes db-reelspin{0%,13%{transform:none}19.5%,100%{transform:rotate(360deg)}}
+/* Fix: the break flashes; the arcs die. */
 .db-spark{animation-name:db-sparkk}
 @keyframes db-sparkk{0%,6%{opacity:0}7%{opacity:1}8.5%{opacity:0}10%{opacity:1}11.5%{opacity:0}13%,100%{opacity:1}}
 .db-arcs path{animation-name:db-die}
 @keyframes db-die{0%,12%{opacity:0}14%{opacity:1}16%{opacity:.1}17.5%{opacity:.6}19%,100%{opacity:.3}}
-/* Learn: the question blinks, the wave draws itself as movement. */
+/* Learn: the question blinks; the analyzer bounces only during the solo. */
 .db-q{animation-name:db-blinkq}
-@keyframes db-blinkq{0%,5%{opacity:0}6%{opacity:1}8%{opacity:0}10%{opacity:1}12%{opacity:0}13%,100%{opacity:1}}
-/* Listen: money in, spinner spins nowhere, ULM answers, notes rise. */
+@keyframes db-blinkq{0%,5%{opacity:0}6%{opacity:1}8%{opacity:0}10%{opacity:1}12%,100%{opacity:1}}
+.db-anz rect.a1{animation-name:db-az1}
+.db-anz rect.a2{animation-name:db-az2}
+.db-anz rect.a3{animation-name:db-az3}
+@keyframes db-az1{0%,13%{transform:none}14%{transform:scaleY(.5)}15.5%{transform:scaleY(1.15)}17%{transform:scaleY(.65)}18.5%{transform:scaleY(1.05)}19.5%,100%{transform:none}}
+@keyframes db-az2{0%,13.2%{transform:none}14.5%{transform:scaleY(1.28)}16%{transform:scaleY(.55)}17.5%{transform:scaleY(1.1)}19%,100%{transform:none}}
+@keyframes db-az3{0%,13.4%{transform:none}15%{transform:scaleY(.7)}16.5%{transform:scaleY(1.22)}18%{transform:scaleY(.8)}19.5%,100%{transform:none}}
+/* Listen: knobs drift out of sync; the needle works but never past half;
+   the spinner spins nowhere; ULM answers; the notes rise. */
+.db-knob1 path{animation-name:db-k1}
+@keyframes db-k1{0%,1%{transform:rotate(-25deg)}3.5%{transform:rotate(40deg)}6%,100%{transform:rotate(10deg)}}
+.db-knob2 path{animation-name:db-k2}
+@keyframes db-k2{0%,2.2%{transform:rotate(30deg)}4.8%{transform:rotate(-35deg)}7.4%,100%{transform:rotate(-10deg)}}
+.db-vu path{animation-name:db-vuu}
+@keyframes db-vuu{0%,1.5%{transform:rotate(-55deg)}3.5%{transform:rotate(-4deg)}5.5%{transform:rotate(-40deg)}7.5%{transform:rotate(-6deg)}9.5%,100%{transform:rotate(-18deg)}}
 .db-cash{animation-name:db-early}
 @keyframes db-early{0%{opacity:0}6%,100%{opacity:1}}
-.db-spinner path{transform-box:view-box;transform-origin:210px 60px;animation-name:db-spinn}
-@keyframes db-spinn{0%,4%{transform:none;opacity:0}5%{opacity:1}13%{transform:rotate(720deg);opacity:1}100%{transform:rotate(720deg);opacity:1}}
+.db-spinner path{animation-name:db-spinn}
+@keyframes db-spinn{0%,7.5%{transform:none;opacity:0}8.5%{opacity:1}13%{transform:rotate(720deg);opacity:1}100%{transform:rotate(720deg);opacity:1}}
 .db-ulm{animation-name:db-late}
 .db-note{animation-name:db-noteup}
 .db-note.n2{animation-name:db-noteup2}
@@ -1381,15 +1422,17 @@ img,svg,canvas{display:block;max-width:100%}
 @keyframes db-noteup{0%,13%{opacity:0;transform:translateY(10px)}15%,100%{opacity:1;transform:none}}
 @keyframes db-noteup2{0%,15%{opacity:0;transform:translateY(10px)}17%,100%{opacity:1;transform:none}}
 @keyframes db-noteup3{0%,17%{opacity:0;transform:translateY(10px)}19%,100%{opacity:1;transform:none}}
-/* Say It: the scratch lands on the wave, the button presses, the mark. */
+/* Say It: the scratch lands, the button presses, the clean wave, the mark. */
 .db-scratch path{stroke-dasharray:1;animation-name:db-scr}
-@keyframes db-scr{0%,5%{stroke-dashoffset:1}9%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-.db-talk{transform-box:view-box;transform-origin:234px 60px;animation-name:db-press}
-@keyframes db-press{0%,10%{transform:none}11%{transform:scale(.92)}12.5%,100%{transform:none}}
+@keyframes db-scr{0%,2%{stroke-dashoffset:1}6%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.db-talk{animation-name:db-press}
+@keyframes db-press{0%,8%{transform:none}9%{transform:scale(.92)}10.5%,100%{transform:none}}
 .db-talktext{animation-name:db-midfade}
-@keyframes db-midfade{0%,8%{opacity:0}11%,100%{opacity:1}}
+@keyframes db-midfade{0%,7%{opacity:0}9.5%,100%{opacity:1}}
+.db-cleanwave path{stroke-dasharray:1;animation-name:db-cw}
+@keyframes db-cw{0%,11%{stroke-dashoffset:1}15.5%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
 @media(prefers-reduced-motion:reduce){
-  .db-bar *{animation:none!important;stroke-dashoffset:0!important;opacity:revert-layer}
+  .db-bar *{animation:none!important;stroke-dashoffset:0!important}
   .db-bar .db-arcs path{opacity:.3}}
 
 /* Responsive focal points ------------------------------------------------ */
