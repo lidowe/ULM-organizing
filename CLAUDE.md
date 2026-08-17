@@ -79,6 +79,34 @@ Rules that keep getting broken:
 - Photo captions stay **out** of the aux tier. They are sentences; uppercasing
   them would be uppercasing prose.
 
+## The icon grammar (Edward, 17 Aug 2026)
+
+The door story bars (see `/doors-draft`) established an icon system, and it
+is one system, not per-icon taste. Every icon anywhere on the site obeys it:
+
+- **Objects have bodies; signals stay lines.** Anything you could pick up —
+  cassette, console, binder, speaker, phone, chassis — gets a fill and
+  physical depth. Anything that travels — waveforms, EQ curves, sound arcs,
+  notes — stays 1px line work. A flat object reads as a checklist; a filled
+  signal reads as a blob. Neither ships.
+- **One colour, one meaning, everywhere.** Tan = tape/media. Metal = controls.
+  Panel navy = chassis. Green = money. Red = the point (a cut, a break, the
+  ULM mark, an approval) — the same rank-by-colour law the type system runs.
+  A colour never moonlights as decoration.
+- **Motion is narration, never decoration.** A thing moves only because the
+  story says it is doing something: the reel turns, the needle works (and
+  never past halfway — that is the joke), the spinner goes nowhere. Bars solo
+  one at a time — simultaneous motion is five alarms. Static state is always
+  the final frame, so reduced-motion and at-rest read the completed story.
+- **Detail level is uniform.** If one object gains shading or colour, its
+  family members gain it in the same pass (the reel got tan, so the cassette
+  had to). Inconsistency between siblings is the tell of AI assembly and
+  Edward spots it immediately.
+- Emoji vocabulary, never emoji manner: instantly nameable objects, comical
+  cuteness stripped, no faces on things. Frustration is a scratched-out
+  waveform, not a frowny face — emotion shown in studio objects, like the
+  caption rules show people's work and not their persons.
+
 ### Changing a typeface
 
 A face swap invalidates every measure tuned to the previous face — `ch` is the
