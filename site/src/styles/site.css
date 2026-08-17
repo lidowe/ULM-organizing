@@ -1315,6 +1315,83 @@ img,svg,canvas{display:block;max-width:100%}
 .hum-reset:hover{color:var(--paper)}
 @media(max-width:560px){.hum-block{grid-template-columns:1fr}}
 
+/* ---- The Doors: motion draft ------------------------------------------
+   Five story bars in the gap-diagram grammar, played as a sequencer: each
+   bar solos for 3s of a 15s loop (window = 0-20% of the timeline, offset
+   per bar by --i x 3s). Every element's STATIC state is its final frame,
+   so pre-play, reduced-motion and the between-solos rest all read as the
+   completed story. Hovering a bar zeroes its delay, which restarts its
+   animations = instant replay. */
+.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:860px}
+.db-bar{border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem}
+.db-bar svg{display:block;width:100%;height:auto}
+.db-bar svg path,.db-bar svg rect,.db-bar svg circle,.db-bar svg ellipse{
+  fill:none;stroke:var(--paper-soft);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.db-bar .db-faint{stroke:var(--quiet);opacity:.6}
+.db-bar .db-hot{stroke:var(--amber)}
+.db-bar .db-arrow{stroke:var(--quiet)}
+.db-bar .db-note ellipse{fill:var(--paper-soft);stroke:none}
+.db-bar .db-arcs path{stroke-dasharray:3 5;opacity:.3}
+.db-foot{display:flex;align-items:baseline;gap:1.3rem;border-top:1px solid var(--line-soft);margin-top:.55rem;padding-top:.7rem}
+.db-line{color:var(--quiet)}
+/* Sequencer timing: every animation shares the 15s loop and the per-bar
+   delay; only the keyframes differ. */
+.db-bar .db-draw path,.db-bar .db-draw rect,.db-bar .db-draw circle,.db-bar .db-draw ellipse,
+.db-bar .db-arrow,.db-bar .db-wave,.db-bar .db-scratch path,.db-bar .db-talk circle,
+.db-bar .db-eqmove,.db-bar .db-cut,.db-bar .db-spokes,.db-bar .db-spark,.db-bar .db-arcs path,
+.db-bar .db-q,.db-bar .db-cash,.db-bar .db-ulm,.db-bar .db-talktext,.db-bar .db-spinner path,
+.db-bar .db-note,.db-bar .db-talk{
+  animation-duration:15s;animation-timing-function:linear;animation-iteration-count:infinite;
+  animation-delay:calc(var(--i) * 3s)}
+.db-bar:hover *{animation-delay:0s}
+/* Draw-ins: three stagger slots inside the 3s window. */
+.db-bar .db-draw.s1 path,.db-bar .db-draw.s1 rect,.db-bar .db-draw.s1 circle,.db-bar .db-draw.s1 ellipse{
+  stroke-dasharray:1;animation-name:db-d1}
+.db-bar .db-draw.s2 path,.db-bar .db-draw.s2 rect,.db-bar .db-draw.s2 circle,
+.db-bar .db-talk circle,.db-bar .db-arrow.s2{stroke-dasharray:1;animation-name:db-d2}
+.db-bar .db-draw.s3 path,.db-bar .db-draw.s3 rect,.db-bar .db-draw.s3 circle,
+.db-bar .db-wave,.db-bar .db-arrow.s3{stroke-dasharray:1;animation-name:db-d3}
+@keyframes db-d1{0%{stroke-dashoffset:1}7%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d2{0%,5%{stroke-dashoffset:1}13%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d3{0%,11%{stroke-dashoffset:1}19%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+/* Finish: the EQ move (rise, shift right, narrow) then the cut; reel turns. */
+.db-eqmove{transform-box:fill-box;transform-origin:50% 100%;transform:translateX(22px) scaleX(.55);animation-name:db-eq}
+@keyframes db-eq{0%{opacity:0;transform:scaleY(.3)}4%{opacity:1;transform:scaleY(.3)}7%{transform:none}10%{transform:translateX(22px)}13%,100%{transform:translateX(22px) scaleX(.55)}}
+.db-cut{animation-name:db-late}
+@keyframes db-late{0%,13%{opacity:0}15%,100%{opacity:1}}
+.db-spokes{transform-box:view-box;transform-origin:470px 60px;animation-name:db-reel}
+@keyframes db-reel{0%,13%{transform:none}19%,100%{transform:rotate(240deg)}}
+/* Fix: the break flashes, the arcs die. */
+.db-spark{animation-name:db-sparkk}
+@keyframes db-sparkk{0%,6%{opacity:0}7%{opacity:1}8.5%{opacity:0}10%{opacity:1}11.5%{opacity:0}13%,100%{opacity:1}}
+.db-arcs path{animation-name:db-die}
+@keyframes db-die{0%,12%{opacity:0}14%{opacity:1}16%{opacity:.1}17.5%{opacity:.6}19%,100%{opacity:.3}}
+/* Learn: the question blinks, the wave draws itself as movement. */
+.db-q{animation-name:db-blinkq}
+@keyframes db-blinkq{0%,5%{opacity:0}6%{opacity:1}8%{opacity:0}10%{opacity:1}12%{opacity:0}13%,100%{opacity:1}}
+/* Listen: money in, spinner spins nowhere, ULM answers, notes rise. */
+.db-cash{animation-name:db-early}
+@keyframes db-early{0%{opacity:0}6%,100%{opacity:1}}
+.db-spinner path{transform-box:view-box;transform-origin:210px 60px;animation-name:db-spinn}
+@keyframes db-spinn{0%,4%{transform:none;opacity:0}5%{opacity:1}13%{transform:rotate(720deg);opacity:1}100%{transform:rotate(720deg);opacity:1}}
+.db-ulm{animation-name:db-late}
+.db-note{animation-name:db-noteup}
+.db-note.n2{animation-name:db-noteup2}
+.db-note.n3{animation-name:db-noteup3}
+@keyframes db-noteup{0%,13%{opacity:0;transform:translateY(10px)}15%,100%{opacity:1;transform:none}}
+@keyframes db-noteup2{0%,15%{opacity:0;transform:translateY(10px)}17%,100%{opacity:1;transform:none}}
+@keyframes db-noteup3{0%,17%{opacity:0;transform:translateY(10px)}19%,100%{opacity:1;transform:none}}
+/* Say It: the scratch lands on the wave, the button presses, the mark. */
+.db-scratch path{stroke-dasharray:1;animation-name:db-scr}
+@keyframes db-scr{0%,5%{stroke-dashoffset:1}9%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.db-talk{transform-box:view-box;transform-origin:234px 60px;animation-name:db-press}
+@keyframes db-press{0%,10%{transform:none}11%{transform:scale(.92)}12.5%,100%{transform:none}}
+.db-talktext{animation-name:db-midfade}
+@keyframes db-midfade{0%,8%{opacity:0}11%,100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .db-bar *{animation:none!important;stroke-dashoffset:0!important;opacity:revert-layer}
+  .db-bar .db-arcs path{opacity:.3}}
+
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
   /* narrow screens: taller frames so tall sources are not sliced into strips */
@@ -1387,13 +1464,13 @@ img,svg,canvas{display:block;max-width:100%}
 .pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
 .fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
 .unit-no,.plan-more,.gd-label,.sheet-row,.unit-note,.rack-row .dest,.sheet-rev .wrap,
-.tool-label,.tr-key,.tr-num,.hum-crumb,.hum-opt .no{
+.tool-label,.tr-key,.tr-num,.hum-crumb,.hum-opt .no,.db-word{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
 }
 /* Load-bearing. */
 .eyebrow,.next-kicker,.service-group h2,.plan-part .plan-mark,
-.path-fold summary,.fold summary,.service-price,.plan-more,.tr-key.hot{color:var(--aux-hot)}
+.path-fold summary,.fold summary,.service-price,.plan-more,.tr-key.hot,.db-word{color:var(--aux-hot)}
 /* Supporting. */
 .kicker,.unit-label,.pull-quote cite,.brand span,.hero-eyebrow,
 .menu-links a span,.tool-label,.tr-key,.hum-crumb{color:var(--aux-cool)}
@@ -1430,7 +1507,7 @@ img,svg,canvas{display:block;max-width:100%}
 .credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
 .photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption,
 .studio-hero-photo figcaption,.studio-gallery figcaption,.call,.mnote,
-.tool-under p,.hum-reset{
+.tool-under p,.hum-reset,.db-line{
   font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
   letter-spacing:.02em;text-transform:none;color:var(--muted)}
 
