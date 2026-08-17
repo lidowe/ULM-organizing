@@ -62,7 +62,7 @@ export default `
           </g>
         </g>
       </svg>
-      <div class="db-foot"><h3 class="db-word">Complete the Project</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Complete The Project</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:1">
@@ -92,7 +92,7 @@ export default `
           <path d="M576,28 C596,44 596,76 576,92" pathLength="1"/>
         </g>
       </svg>
-      <div class="db-foot"><h3 class="db-word">Fix an Issue</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Fix An Issue</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:2">
@@ -137,7 +137,7 @@ export default `
           <path d="M466,88 L616,88" pathLength="1" class="db-faint"/>
         </g>
       </svg>
-      <div class="db-foot"><h3 class="db-word">Learn the Craft</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Learn The Craft</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:3">
