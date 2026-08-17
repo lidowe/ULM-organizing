@@ -116,6 +116,15 @@ export const PAGES: PageEntry[] = [
     priority: "0.6",
   },
   {
+    slug: "workbench",
+    path: "/workbench",
+    title: "The Workbench · Upper Level Music",
+    description:
+      "Working studio tools, free in the browser: check whether a microphone and preamp actually get along, and walk a real troubleshooting tree to find the hum in your room.",
+    changefreq: "monthly",
+    priority: "0.8",
+  },
+  {
     slug: "the-gap",
     path: "/the-gap",
     title: "The Gap · Upper Level Music",

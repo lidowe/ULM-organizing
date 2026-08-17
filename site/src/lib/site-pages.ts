@@ -15,6 +15,7 @@ import news from "./pages/news";
 import preProduction from "./pages/pre-production";
 import describingSound from "./pages/describing-sound";
 import theGap from "./pages/the-gap";
+import workbench from "./pages/workbench";
 
 export const pages: Record<string, string> = {
   "index": index,
@@ -28,4 +29,5 @@ export const pages: Record<string, string> = {
   "pre-production": preProduction,
   "describing-sound": describingSound,
   "the-gap": theGap,
+  "workbench": workbench,
 };

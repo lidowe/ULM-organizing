@@ -16,6 +16,7 @@ import { renderTokens } from "@/lib/render-tokens";
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
   { to: "/services", label: "Services" },
   { to: "/work", label: "Work" },
+  { to: "/workbench", label: "Workbench" },
   { to: "/education", label: "Learn" },
   { to: "/studio", label: "Studio" },
   { to: "/about", label: "About" },
@@ -25,10 +26,11 @@ const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
   { to: "/services", label: "Services", n: "02" },
   { to: "/work", label: "Work", n: "03" },
-  { to: "/education", label: "Learn", n: "04" },
-  { to: "/studio", label: "Studio", n: "05" },
-  { to: "/about", label: "About", n: "06" },
-  { to: "/contact", label: "Start a project", n: "07" },
+  { to: "/workbench", label: "Workbench", n: "04" },
+  { to: "/education", label: "Learn", n: "05" },
+  { to: "/studio", label: "Studio", n: "06" },
+  { to: "/about", label: "About", n: "07" },
+  { to: "/contact", label: "Start a project", n: "08" },
 ];
 
 
