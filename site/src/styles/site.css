@@ -1322,7 +1322,7 @@ img,svg,canvas{display:block;max-width:100%}
    its final frame, so pre-play, reduced-motion and the between-solos rest
    all read as the completed story. Hovering a bar zeroes its delay =
    instant replay. */
-.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:900px}
+.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:760px}
 .db-bar{border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem}
 .db-bar svg{display:block;width:100%;height:auto}
 .db-bar svg path,.db-bar svg rect,.db-bar svg circle,.db-bar svg ellipse{
@@ -1339,7 +1339,8 @@ img,svg,canvas{display:block;max-width:100%}
 .db-bar .db-q{fill:#a8adb8}
 .db-bar .db-cash{fill:#57a874}
 .db-bar .db-ulm{fill:var(--amber-light)}
-.db-foot{display:flex;align-items:baseline;gap:1.3rem;border-top:1px solid var(--line-soft);margin-top:.55rem;padding-top:.7rem}
+.db-foot{display:grid;gap:.35rem;border-top:1px solid var(--line-soft);margin-top:.55rem;padding-top:.75rem}
+.db-word{font-size:var(--fs-h3);color:var(--paper);margin:0}
 .db-line{color:var(--quiet)}
 /* Static transforms = final frames; animations override during the solo. */
 .db-knob1 path{transform-box:view-box;transform-origin:46px 60px;transform:rotate(10deg)}
@@ -1467,7 +1468,7 @@ img,svg,canvas{display:block;max-width:100%}
 .rack-row h3,.tools-details summary,.brand strong,.footer-brand,
 .artist-index span,.plain-title,.plan-part h3,.paths-head h2,.path h4,
 .closing-note h2,.wwa-title,.mode h3,.next-card h3,.mission-line,.why-line,
-.unit-prose p.unit-turn,.qa-q,.hero-mission,.response,.hum-title{
+.unit-prose p.unit-turn,.qa-q,.hero-mission,.response,.hum-title,.db-word{
   font-family:var(--display);font-weight:500;letter-spacing:-.01em
 }
 /* The admission line under a tool is the engineer speaking, not a label:
@@ -1509,13 +1510,13 @@ img,svg,canvas{display:block;max-width:100%}
 .pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
 .fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
 .unit-no,.plan-more,.gd-label,.sheet-row,.unit-note,.rack-row .dest,.sheet-rev .wrap,
-.tool-label,.tr-key,.tr-num,.hum-crumb,.hum-opt .no,.db-word{
+.tool-label,.tr-key,.tr-num,.hum-crumb,.hum-opt .no{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
 }
 /* Load-bearing. */
 .eyebrow,.next-kicker,.service-group h2,.plan-part .plan-mark,
-.path-fold summary,.fold summary,.service-price,.plan-more,.tr-key.hot,.db-word{color:var(--aux-hot)}
+.path-fold summary,.fold summary,.service-price,.plan-more,.tr-key.hot{color:var(--aux-hot)}
 /* Supporting. */
 .kicker,.unit-label,.pull-quote cite,.brand span,.hero-eyebrow,
 .menu-links a span,.tool-label,.tr-key,.hum-crumb{color:var(--aux-cool)}

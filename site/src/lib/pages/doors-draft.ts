@@ -62,7 +62,7 @@ export default `
           </g>
         </g>
       </svg>
-      <div class="db-foot"><span class="db-word">Finish</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Complete the Project</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:1">
@@ -92,7 +92,7 @@ export default `
           <path d="M576,28 C596,44 596,76 576,92" pathLength="1"/>
         </g>
       </svg>
-      <div class="db-foot"><span class="db-word">Fix</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Fix an Issue</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:2">
@@ -137,7 +137,7 @@ export default `
           <path d="M466,88 L616,88" pathLength="1" class="db-faint"/>
         </g>
       </svg>
-      <div class="db-foot"><span class="db-word">Learn</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Learn the Craft</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:3">
@@ -176,7 +176,7 @@ export default `
           <g class="db-note n3"><ellipse cx="634" cy="72" rx="7" ry="5"/><path d="M641,70 L641,34" pathLength="1"/></g>
         </g>
       </svg>
-      <div class="db-foot"><span class="db-word">Listen</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Listen, Evaluate, Improve</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:4">
@@ -206,7 +206,7 @@ export default `
           <path class="db-hot" d="M546,60 L556,72 L576,44" pathLength="1"/>
         </g>
       </svg>
-      <div class="db-foot"><span class="db-word">Say It</span><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Explain It, Adapt, Solve It</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
   </div>
