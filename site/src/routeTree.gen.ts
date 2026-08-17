@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as DescribingSoundRouteImport } from './routes/describing-sound'
+import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as NewsRouteImport } from './routes/news'
@@ -55,6 +56,11 @@ const CreditsRoute = CreditsRouteImport.update({
 const DescribingSoundRoute = DescribingSoundRouteImport.update({
   id: '/describing-sound',
   path: '/describing-sound',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoorsDraftRoute = DoorsDraftRouteImport.update({
+  id: '/doors-draft',
+  path: '/doors-draft',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EducationRoute = EducationRouteImport.update({
@@ -152,6 +158,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
@@ -176,6 +183,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
@@ -201,6 +209,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
@@ -227,6 +236,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/describing-sound'
+    | '/doors-draft'
     | '/education'
     | '/mcp'
     | '/news'
@@ -251,6 +261,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/describing-sound'
+    | '/doors-draft'
     | '/education'
     | '/mcp'
     | '/news'
@@ -275,6 +286,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/describing-sound'
+    | '/doors-draft'
     | '/education'
     | '/mcp'
     | '/news'
@@ -300,6 +312,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
   DescribingSoundRoute: typeof DescribingSoundRoute
+  DoorsDraftRoute: typeof DoorsDraftRoute
   EducationRoute: typeof EducationRoute
   McpRoute: typeof McpRoute
   NewsRoute: typeof NewsRoute
@@ -354,6 +367,13 @@ declare module '@tanstack/react-router' {
       path: '/describing-sound'
       fullPath: '/describing-sound'
       preLoaderRoute: typeof DescribingSoundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doors-draft': {
+      id: '/doors-draft'
+      path: '/doors-draft'
+      fullPath: '/doors-draft'
+      preLoaderRoute: typeof DoorsDraftRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/education': {
@@ -484,6 +504,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
   DescribingSoundRoute: DescribingSoundRoute,
+  DoorsDraftRoute: DoorsDraftRoute,
   EducationRoute: EducationRoute,
   McpRoute: McpRoute,
   NewsRoute: NewsRoute,
