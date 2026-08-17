@@ -218,7 +218,7 @@ const HUM: Record<string, HumNode> = {
   rloop: {
     title: "Confirmed: A Ground Loop.",
     mech: "That cable was carrying loop current. Two boxes see ground through different paths, and the difference between those paths flows through your audio shield.",
-    fix: "Break the loop without breaking safety: a transformer isolator on that line, or power both boxes from the same strip so their grounds meet in one place. If one leg of the connection can go digital, that breaks the loop too.",
+    fix: "Break the loop without breaking safety: a transformer isolator on that line, or power both boxes from the same strip so their grounds meet in one place. If one leg can go optical — lightpipe, TOSLINK — the loop has nothing left to ride. Copper digital doesn't count: a coax or USB ground is still a ground.",
     safety: "Never lift the safety ground to fix hum. Not with an adapter, not to test, not for a minute. It works, and it can kill someone. Every other fix on this page exists so that one is never needed.",
   },
   rdig: {
