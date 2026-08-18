@@ -23,6 +23,7 @@ export default `
           <p class="person-copy">I learned this trade the old way: as an intern and then an assistant at Hit Factory Criteria, standing behind people who had been doing it for thirty years. Almost nobody entering audio today gets a room, a mentor, and five years to absorb it.</p>
           <p class="person-copy">Home studios are everywhere, which is a large part of why the major rooms are closing. So I hand the training over directly. If you want to know why a ribbon needs 70 dB of clean gain, or why your kick sounds different in your room than in the car, I will show you. If you want to discuss the hysteresis effect transformers have on the tone of your audio, and how the choice of windings and blends of metal affect the harmonic result, I can show you that too. If you would rather I just handle it, that is fine too.</p>
           <p class="person-copy">The tools reached everyone. The training did not, and the rooms that used to hand it down are closing. That gap is the thematic problem Upper Level Music exists to solve, so all of us get to better creative output.</p>
+          <p class="mnote">photos on the source page: drums-overhead-wide (page band), classroom (tossed section)</p>
         </div>
       </div>
     </article>
@@ -39,6 +40,7 @@ export default `
         <div class="wwa-panel-inner">
           <p class="person-copy">The vocal booth is an instrument itself. Small, unfamiliar, intimidating, and you&rsquo;re expected to perform and be documented forever? If you&rsquo;re nervous, the microphone will know. Sometimes a coach can help silence the mental noise giving you the confidence to deliver. And sometimes an inexperienced engineer needs help knowing which way to point the mic. We can help a vocalist prepare ahead of the big day, or if your first day as an assistant is approaching, maybe a tailored lesson about polar patterns and proximity effect might be the assistance you need.</p>
           <p class="person-copy">And don&rsquo;t stress, I had an assistant who improperly plugged in a $15,000 Telefunken Elam 251 tube microphone and the mic zapped him so hard he crashed right thru the walls of the booth. (Tube equipment is very high voltage) Don&rsquo;t worry, the mic wasn&rsquo;t damaged. &hellip; Oh, he was checked by a doctor and was fine too. We gave him the rest of the night off.</p>
+          <p class="mnote">photo: vocal-booth-take</p>
         </div>
       </div>
     </article>
@@ -57,6 +59,7 @@ export default `
           <p class="person-copy">I found my place in audio as an engineer, but I started as a musician. Formally trained through high school jazz bands on saxophone and percussion, then years as an indie artist on drums, bass and guitar. That is where the technical side pulled me in, and where I started chasing the blend between the creative and the technical.</p>
           <p class="person-copy">After Clemson University and a media and communications degree, I went to SAE Miami and graduated valedictorian, which earned a rare internship at Hit Factory Criteria Miami, now Criteria Studios. Standing on the shoulders of giants there, I worked on Grammy-winning, platinum-selling records across every genre, and came to understand that everything we do is creative and collaborative. No musical project reaches success without a strong creative team.</p>
           <p class="person-copy">The Bay 8 room in Miami was one of mine, built modestly and later sold. Its current owners have expanded it well past what we made, and it still runs as a commercial studio today, which is the kind of proof a build service rarely gets to point at.</p>
+          <p class="mnote">photos: edward-thumbnail, credits-kravitz, console-mpc-session, hit-factory; page lead: session-bw; archive strip: moonlight-bass, console-large, session-redlit, archive-console-pair, archive-crew, archive-group, session-redlit-2, control-room-red</p>
         </div>
       </div>
     </article>
@@ -74,6 +77,7 @@ export default `
           <p class="person-copy">The record industry today is shifting the responsibilities of an entire team of specialized talents onto underfunded, overworked artists, asking them to own a dozen things that have nothing to do with why they were drawn to music in the first place. It is nearly impossible to make a record with the sound quality, the collaborative depth, and the specialized touch that a label can simply fund and hire.</p>
           <p class="person-copy">It used to run bottom to top. A label sent an A&amp;R to a dive bar to see a band with a little local buzz, a write-up in a weekly, a tip from a friend of a friend, and the artist blew them away. The label then had to convince the artist to sign, so the label could support them.</p>
           <p class="person-copy">Now it runs top to bottom. Labels are media conglomerates pushing artists they choose and shape toward radio, toward numbers that streaming will never pay an independent artist. For the creative-minded musician, engineer, or anyone who wants to be present while music gets made, the landscape has gone dystopian.</p>
+          <p class="mnote">photo: jm-pretending</p>
         </div>
       </div>
     </article>
@@ -92,6 +96,7 @@ export default `
           <p class="person-copy">Upper Level Music is an attempt, by me and the people I have met across a 30-year career, to turn that around, so anyone who wants to express themselves sonically can do it and be sustained by it.</p>
           <p class="person-copy">This is where the creative spirit stands up and says this is not all on us. We want the social element back. We want collaboration. Music is not meant to be made alone, staring at a screen.</p>
           <p class="person-copy"><em>&ldquo;It is the artist who is vulnerable. It is the artist expressing their emotion, their story. That is where all of this starts, and the industry should be built to reflect it.&rdquo;</em></p>
+          <p class="mnote">photos nearby on the source page: jef-bear-weirdo (with the quote), infamed (writing room band)</p>
         </div>
       </div>
     </article>
@@ -147,6 +152,7 @@ export default `
           <p class="person-copy">Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
           <p class="person-copy"><strong>First &mdash; Let&rsquo;s define who you are.</strong> Just like any recording, the best outcome happens when you start from the source. Upper Level Music works from an artist-is-the-source mentality: we want to capture the project in your voice, listening to what lives behind the words. Understanding the motivations at the beginning is critical to ending with your voice intact. We don&rsquo;t want to lose the message or its authenticity, so a simple, informal Q&amp;A gives us the template.</p>
           <p class="person-copy"><strong>Then &mdash; You set the destination.</strong> We&rsquo;ll apply the gas and steer the vehicle. The brakes are yours if we miss the turn. Knowing the technical terminology isn&rsquo;t necessary. If we&rsquo;re describing a song&rsquo;s feel and you say &ldquo;the drums should have a real dreamy vibe &mdash; I want it to feel like we&rsquo;re floating in space&rdquo;, we know exactly what you mean, and we head that way. Sound&hellip; is described in borrowed words.</p>
+          <p class="mnote">no photos on the source section</p>
         </div>
       </div>
     </article>
@@ -162,6 +168,7 @@ export default `
       <div class="wwa-panel" id="ho-09" role="region" aria-labelledby="ho-btn-09">
         <div class="wwa-panel-inner">
           <p class="person-copy">Because we&rsquo;ve been on both sides of the process, we know how frustrating it is to be told how to think and what to say to make a &lsquo;hit&rsquo;. Maybe some people welcome that. For us, the source is the guide, and we work in service of the song or project in front of us &mdash; not building your &lsquo;brand&rsquo; or &lsquo;image&rsquo;. That reveals itself through collaboration, in the process.</p>
+          <p class="mnote">no photos on the source section</p>
         </div>
       </div>
     </article>
@@ -181,6 +188,7 @@ export default `
           <p class="person-copy">I reached for a few chorusy effects and a gentle harmonizer, hit play, and they said &ldquo;yes! exactly.&rdquo;</p>
           <p class="person-copy">In my head, hearing the word purple made me think of Prince, and Prince used a lot of chorus (the Roland Dimension D) and gentle doubler effects (the Eventide H3500 being his favorite). Hearing the original guitar parts and the word purple was enough to know what to reach for, and the song inspired what settings to use.</p>
           <figure class="panel-photo"><img src="{{IMG:pedalboard-overhead}}" alt="A pedalboard seen from above, effects pedals wired in a row" loading="lazy" /></figure>
+          <p class="mnote">no photos on the source section</p>
         </div>
       </div>
     </article>
