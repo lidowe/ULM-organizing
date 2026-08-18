@@ -35,60 +35,6 @@ export const PAGES: PageEntry[] = [
     priority: "1.0",
   },
   {
-    slug: "about",
-    path: "/about",
-    title: "About · Upper Level Music",
-    description:
-      "Created in 2012 by Edward Lidow. A collaborative team of engineers, producers, musicians and coaches built around the person making the record.",
-    changefreq: "monthly",
-    priority: "0.7",
-  },
-  {
-    slug: "services",
-    path: "/services",
-    title: "Services · Upper Level Music",
-    description:
-      "Recording, production, vocal production, mixing, mastering and consultation. Book one stage or scope a whole record.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    slug: "studio",
-    path: "/studio",
-    title: "Studio · Upper Level Music",
-    description:
-      "The microphone locker, outboard racks and analog front end behind the work, 103 microphones across 64 models.",
-    changefreq: "monthly",
-    priority: "0.7",
-  },
-  {
-    slug: "education",
-    path: "/education",
-    title: "Learn · Upper Level Music",
-    description:
-      "One-on-one training in recording, mixing and studio technical work for artists, engineers, producers and students, remote, at your pace.",
-    changefreq: "monthly",
-    priority: "0.7",
-  },
-  {
-    slug: "news",
-    path: "/news",
-    title: "News · Upper Level Music",
-    description:
-      "Studio updates, releases, and short essays on making records from Upper Level Music.",
-    changefreq: "weekly",
-    priority: "0.6",
-  },
-  {
-    slug: "work",
-    path: "/work",
-    title: "Work · Upper Level Music",
-    description:
-      "Selected discography and credits for Edward Lidow, recording, mixing, production, editing and assistant work across genres.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
     slug: "contact",
     path: "/contact",
     title: "Start a Project · Upper Level Music",
@@ -96,42 +42,6 @@ export const PAGES: PageEntry[] = [
       "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
     changefreq: "yearly",
     priority: "0.9",
-  },
-  {
-    slug: "pre-production",
-    path: "/pre-production",
-    title: "A Chance to Be Heard · Upper Level Music",
-    description:
-      "Why every Upper Level Music project starts with a short, informal Q&A: the source is the guide, and the conversation comes before the microphone.",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
-  {
-    slug: "describing-sound",
-    path: "/describing-sound",
-    title: "Describing Sound · Upper Level Music",
-    description:
-      "You don't need the technical terminology. Sound is described in borrowed words, and translating them, purple guitars included, is our job.",
-    changefreq: "monthly",
-    priority: "0.6",
-  },
-  {
-    slug: "workbench",
-    path: "/workbench",
-    title: "The Workbench · Upper Level Music",
-    description:
-      "Working studio tools, free in the browser: check whether a microphone and preamp actually get along, and walk a real troubleshooting tree to find the hum in your room.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    slug: "the-gap",
-    path: "/the-gap",
-    title: "The Gap · Upper Level Music",
-    description:
-      "The tools reached everyone. The knowledge didn't. How the handoff broke, why the home studio and the industry machine are not enemies, and the patch around the interruption.",
-    changefreq: "monthly",
-    priority: "0.7",
   },
 ];
 

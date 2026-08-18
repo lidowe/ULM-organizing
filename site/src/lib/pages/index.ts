@@ -13,12 +13,12 @@ export default `
         <div class="sheet-row"><span>ULM &middot; Session Sheet</span><span>Est. 2012</span><span>Rev. 2026-08-17</span></div>
         <div class="sheet-row sheet-what"><span>Mixing &middot; Production &middot; Systems &middot; Teaching</span><span>Independent Artists</span><span>Remote &middot; Columbia SC</span></div>
         <div class="sheet-body">
-          <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><a class="hero-link" href="/the-gap"><em>Major Key Changes.</em></a></span></span></h1>
+          <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><em>Major Key Changes.</em></span></span></h1>
           <p class="hero-mission">One engineer &mdash; Edward Lidow, thirty years in rooms from Miami to LA, now working from Columbia SC and remote. Mixing and production for independent artists, studio systems work, and teaching aimed at the day you don&rsquo;t need me.</p>
         </div>
         <div class="sheet-row sheet-actions">
           <a class="btn primary" href="/contact"><span class="rec-dot" aria-hidden="true"></span>Send Me The Song</a>
-          <a class="btn" href="/services">How It Works</a>
+          <a class="btn" href="/hierarchy-options">How It Works</a>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@ export default `
   </div>
   <div class="wrap doors-stack">
 
-    <a class="db-bar" href="/services#mixing" style="--i:0">
+    <a class="db-bar" href="/contact" style="--i:0">
       <svg viewBox="0 0 720 120" role="img" aria-label="A cassette, then an EQ boost rising, shifting, narrowing and cutting, then a spinning master reel">
         <defs>
           <radialGradient id="dbMetal" cx="38%" cy="32%" r="80%">
@@ -78,7 +78,7 @@ export default `
       <div class="db-foot"><h3 class="db-word">Complete The Project</h3></div>
     </a>
 
-    <a class="db-bar" href="/services#systems" style="--i:1">
+    <a class="db-bar" href="/contact" style="--i:1">
       <svg viewBox="0 0 720 120" role="img" aria-label="A microphone, a cable with a break, and a speaker the sound never reaches">
         <g class="db-draw s1">
           <rect x="30" y="20" width="38" height="56" rx="19" fill="url(#dbPanel)" pathLength="1"/>
@@ -105,7 +105,7 @@ export default `
       <div class="db-foot"><h3 class="db-word">Fix An Issue</h3></div>
     </a>
 
-    <a class="db-bar" href="/education" style="--i:2">
+    <a class="db-bar" href="/contact" style="--i:2">
       <svg viewBox="0 0 720 120" role="img" aria-label="A small console, a question mark, a thick studio binder, then an analyzer moving">
         <g class="db-draw s1">
           <path d="M22,46 L36,32 L142,32 L128,46 Z" fill="#171d2b" pathLength="1"/>
@@ -219,7 +219,7 @@ export default `
     <div class="unit-label reveal"><span class="unit-no">02</span><span>The proof</span><span class="unit-note">ref: /work</span></div>
     <h2 class="unit-title">The Proof Is Checkable.</h2>
     <div class="unit-prose">
-      <p>The credits on the <a class="text-link" href="/work">Work page</a> are worded the way the liner notes word them, and no bigger. Where the record says assistant, this site says assistant. You are right to verify &mdash; this business trained you to &mdash; so nothing here asks to be taken on faith.</p>
+      <p>The credits on the Work page are worded the way the liner notes word them, and no bigger. Where the record says assistant, this site says assistant. You are right to verify &mdash; this business trained you to &mdash; so nothing here asks to be taken on faith.</p>
       <p>The stronger proof is coming: one artist&rsquo;s rough mix and finished mix under your own finger, level-matched and labeled as such. It stays off the page until that artist has said yes by name. Permission is part of the proof.</p>
     </div>
     <div class="needs-content"><strong>Fader slot &mdash; Push Up The Fader</strong>The signature interactive lives here once one artist&rsquo;s A/B pair is cleared: press play on their rough mix, push the fader, crossfade under your own finger into the finish. Level-matched and labeled as such. Blocked on Edward: the clips and the named permission.</div>
@@ -232,7 +232,7 @@ export default `
     <h2 class="unit-title">The Terms, Out Loud.</h2>
     <div class="unit-prose">
       <p>Nothing here is sponsored. No affiliate links, no gear commissions, no partner codes. When a tool gets recommended, it is because it is right for your song, and the recommendation costs you the same either way: nothing.</p>
-      <p>The paid work is mixing, production, studio systems and repair, and one-on-one teaching. The prices are on the <a class="text-link" href="/services">Services page</a>, with what they include, and independent budgets get met where they are.</p>
+      <p>The paid work is mixing, production, studio systems and repair, and one-on-one teaching. The prices are on the Services page, with what they include, and independent budgets get met where they are.</p>
       <p>Messages come to me and get answered &mdash; there is nobody else here to answer them.</p>
     </div>
     <div class="needs-content"><strong>Response window &mdash; blocked on Edward</strong>The research says a stated, kept response time is the single best conversion lever on the whole site. The sentence above takes a number: &ldquo;answered within N.&rdquo; N must be a number Edward will actually keep &mdash; his call, then it goes here and on the contact form.</div>
@@ -244,9 +244,9 @@ export default `
     <div class="unit-label reveal"><span class="unit-no">04</span><span>The person</span><span class="unit-note">est. 2012</span></div>
     <h2 class="unit-title">A Person, Not A Platform.</h2>
     <div class="unit-prose">
-      <p>Thirty years. Roughly seventy-five thousand studio hours. I got the coffee, ran the DAW, tuned the vocals, tracked, mixed, toured, built rooms, taught. Some of the records you know; the exact roles are on the <a class="text-link" href="/work">Work page</a>. When the buildings started closing, the knowledge didn&rsquo;t stop existing. It just stopped having anywhere to go.</p>
+      <p>Thirty years. Roughly seventy-five thousand studio hours. I got the coffee, ran the DAW, tuned the vocals, tracked, mixed, toured, built rooms, taught. Some of the records you know; the exact roles are on the Work page. When the buildings started closing, the knowledge didn&rsquo;t stop existing. It just stopped having anywhere to go.</p>
       <p class="unit-turn">This is where it goes.</p>
-      <p>Why a site like this exists at all &mdash; the tools that reached everyone, the knowledge that never made the trip, Nebraska and the milk crate &mdash; is one click deep, on <a class="text-link" href="/the-gap">The Gap</a>. The argument lives there so this page can just shake your hand.</p>
+      <p>Why a site like this exists at all &mdash; the tools that reached everyone, the knowledge that never made the trip, Nebraska and the milk crate &mdash; is one click deep, on The Gap. The argument lives there so this page can just shake your hand.</p>
     </div>
   </div>
 </section>
@@ -260,7 +260,7 @@ export default `
     </div>
     <div class="cta-doors reveal">
       <a class="btn primary" href="/contact"><span class="rec-dot" aria-hidden="true"></span>Send Me The Song</a>
-      <p class="cta-alt">Or just keep reading &mdash; <a href="/education">the knowledge stays free either way</a>.</p>
+      <p class="cta-alt">Or just keep reading &mdash; <a href="/contact">the knowledge stays free either way</a>.</p>
     </div>
   </div>
 </section>

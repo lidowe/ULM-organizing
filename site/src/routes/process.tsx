@@ -7,7 +7,7 @@ import { createFileRoute, redirect } from "@tanstack/react-router";
  */
 export const Route = createFileRoute("/process")({
   beforeLoad: () => {
-    throw redirect({ to: "/services", statusCode: 301 });
+    throw redirect({ to: "/", statusCode: 301 });
   },
   component: () => null,
 });
