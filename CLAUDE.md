@@ -118,6 +118,18 @@ Same for `clamp()`: derive the middle term against a real viewport width. A
 coefficient that is too small pins the value to its floor at every realistic
 width while the token claims otherwise.
 
+## Physics describes; ears decide (Edward, 18 Aug 2026)
+
+Why the Studio Virtual app was truly shelved: it predicted judgment. A
+forecast of how something WILL sound arrives before the listening and
+contaminates it — "if it sounds good, it is good" is the trade's actual
+epistemology, and half the canon is wrong-on-paper-right-in-the-ear.
+The law for every tool, entry, and sentence on this site: state what
+HAPPENS (ratio, bandwidth, noise — facts about electrons), hand the
+reader an ear test where one exists, and never cross into what they
+will hear as good or bad. The moment copy predicts the verdict instead
+of describing the mechanism, it goes.
+
 ## Verifying visual changes
 
 For any change to typography or layout, screenshot every page at 1400 and 390
