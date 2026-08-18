@@ -1,7 +1,7 @@
 export default `
 <section class="page-hero"><div class="wrap"><div class="eyebrow">Learn</div><h1 class="page-title">Somebody Has to Teach This.</h1><p class="page-deck">One-on-one training in recording, mixing, and studio technical work, for artists, engineers, producers, and students.</p></div></section>
 <section class="edu-photo-band">
-  <img src="{{IMG:mastering-list}}" alt="A session screen listing finished song titles" loading="lazy" />
+  <img src="{{IMG:drums-overhead-wide}}" alt="A drum kit seen from directly above, miked and ready in the live room" loading="lazy" />
 </section>
 
 <section class="rack-unit unit-soft">

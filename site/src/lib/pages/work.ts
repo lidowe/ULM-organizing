@@ -18,12 +18,23 @@ export default `
   <div class="wrap section-header reveal"><div class="kicker">Selected artists &amp; clients</div><div><h2 class="section-title">Range Is Part of the Work.</h2><div class="section-copy"><p>A partial list. Roles vary by artist and session.</p></div></div></div>
   <div class="wrap"><div class="needs-content"><strong>Artist list needs vetting</strong>This roster is broad and largely unverifiable from public credits. Before publishing, mark each name with the actual involvement (session attended, assisted, engineered, mixed) and delete any that can’t be substantiated, an inflated list undercuts the verified credits above.</div></div>
   <div class="wrap artist-index reveal">{{ARTIST_INDEX}}</div>
-  <div class="wrap section-header reveal" style="margin-top:3rem"><div class="kicker">Media &amp; brands</div></div>
+  <div class="wrap section-header section-header-followon reveal"><div class="kicker">Media &amp; brands</div></div>
   <div class="wrap artist-index reveal">{{MEDIA_INDEX}}</div>
 </section>
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in Real Studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
   <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; original room, built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
+</section>
+
+<section class="rack-unit proof-unit">
+  <div class="wrap">
+    <div class="unit-label"><span class="unit-no">&middot;</span><span>Every role</span></div>
+    <p class="why-copy">Various roles, various artists, whether the role was large or small or the artist famous or not, every job contributes to the &lsquo;flow state&rsquo; every job asks 100% focus &hellip; yes, even the coffee can ruin an entire day, or fuel the magic later.</p>
+    <p class="why-line">The takeaway is &hellip; no matter the task, we serve the process, we work in service to the song, and the ego stays outside.</p>
+    <p class="why-copy">Get them coffee, route signal flow and place mics, run the DAW or be the tape op, it all was part of a bigger picture and personal growth. Running cables became running sessions, tuning instruments became vocal tuning and production, production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
+    <p class="why-copy">Relationships carried on, years go by and I&rsquo;m asked to build their private studio after our work together commercially&hellip; by being their barista a decade earlier. Others continue as clients, friends and contemporaries to this day. The only thing that stays consistent is the dedication and effort put into every detail.</p>
+  </div>
+  <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
 </section>
 
 <section class="page-next">

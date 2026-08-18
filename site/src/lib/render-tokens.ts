@@ -4,7 +4,7 @@ import {
   mediaIndexHtml,
   ribbonHtml,
 } from "./credits";
-import { photo } from "./photos";
+import { photo, photoByUrl } from "./photos";
 
 const TOKENS: Record<string, () => string> = {
   "{{RIBBON}}": ribbonHtml,
@@ -12,50 +12,6 @@ const TOKENS: Record<string, () => string> = {
   "{{ARTIST_INDEX}}": artistIndexHtml,
   "{{MEDIA_INDEX}}": mediaIndexHtml,
 };
-
-/** Widths requested from the asset CDN for responsive `srcset` candidates. */
-const WIDTHS = [480, 768, 1024, 1440, 1920];
-
-/**
- * Most photos render either full-bleed or inside the 1200px content column,
- * so one `sizes` hint covers the layout without per-image bookkeeping.
- */
-const SIZES = "(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1200px";
-
-function srcsetFor(url: string): string {
-  return WIDTHS.map((w) => `${url}?w=${w} ${w}w`).join(", ");
-}
-
-/**
- * Add responsive `srcset`/`sizes` to CDN images, and make the first image on
- * a page eager + high priority so the largest paint isn't waiting on a
- * lazy-load callback. Everything below it stays lazy.
- */
-function enhanceImages(html: string): string {
-  let first = true;
-
-  return html.replace(/<img\b[^>]*>/g, (tag) => {
-    const src = /\ssrc="([^"]+)"/.exec(tag)?.[1];
-    if (!src || !src.startsWith("/__l5e/") || tag.includes("srcset=")) return tag;
-
-    const isFirst = first;
-    first = false;
-
-    let out = tag.replace(
-      /\ssrc="/,
-      ` sizes="${SIZES}" srcset="${srcsetFor(src)}" src="`,
-    );
-
-    if (isFirst) {
-      out = out.replace(/\sloading="lazy"/, "");
-      out = out.replace(/<img\b/, '<img loading="eager" fetchpriority="high" decoding="async"');
-    } else if (!out.includes("decoding=")) {
-      out = out.replace(/<img\b/, '<img decoding="async"');
-    }
-
-    return out;
-  });
-}
 
 /**
  * Editorial TODO blocks. They are useful while drafting, but they are page
@@ -66,6 +22,38 @@ const NEEDS_CONTENT = /\s*<div class="needs-content">[\s\S]*?<\/div>/g;
 
 function stripAuthoringNotes(html: string): string {
   return import.meta.env.DEV ? html : html.replace(NEEDS_CONTENT, "");
+}
+
+/**
+ * One `sizes` hint: photos render full-bleed or inside the 1200px column, so
+ * a single hint covers the layout without per-image bookkeeping. A browser
+ * over-fetches by at most one variant step in narrower sub-columns.
+ */
+const SIZES = "(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1200px";
+
+/**
+ * Decorate each rendered photo from the registry: `data-photo` (a name that
+ * is stable in dev AND production — matching on the URL is not, which is how
+ * a previous generation of `img[src$=...]` focal rules silently died on the
+ * live site), the generated `srcset`/`sizes`, and the photo's focal point as
+ * an inline object-position for cropped contexts.
+ */
+function stampPhotoNames(html: string): string {
+  return html.replace(/<img\b[^>]*>/g, (tag) => {
+    if (tag.includes("data-photo=")) return tag;
+    const src = /\ssrc="([^"]+)"/.exec(tag)?.[1];
+    const entry = src ? photoByUrl(src) : undefined;
+    if (!entry) return tag;
+
+    let attrs = `data-photo="${entry.name}"`;
+    if (entry.srcset && !tag.includes("srcset=")) {
+      attrs += ` srcset="${entry.srcset}" sizes="${SIZES}"`;
+    }
+    if (entry.focal && !tag.includes("style=")) {
+      attrs += ` style="object-position:${entry.focal}"`;
+    }
+    return tag.replace(/^<img\b/, `<img ${attrs}`);
+  });
 }
 
 /** Replace content tokens in a static page string with generated markup. */
@@ -80,5 +68,5 @@ export function renderTokens(html: string): string {
     },
   );
 
-  return enhanceImages(withTokens);
+  return stampPhotoNames(withTokens);
 }

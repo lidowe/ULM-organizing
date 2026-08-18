@@ -4,8 +4,12 @@
 // absent on the current page.
 
 
+import { initWorkbenchTools } from "./workbench-tools";
+
 export function initSiteBehaviors(): () => void {
   const cleanups: Array<() => void> = [];
+
+  initWorkbenchTools(cleanups);
 
   const header = document.querySelector(".site-header");
   const setHeader = () =>

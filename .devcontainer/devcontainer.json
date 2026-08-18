@@ -1,0 +1,18 @@
+{
+  "name": "ULM site editing",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "cd site && npm ci",
+  "postAttachCommand": "cd site && npm run dev -- --host",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "workbench.startupEditor": "none",
+        "git.autofetch": true
+      }
+    }
+  },
+  "portsAttributes": {
+    "8080": { "label": "Site preview", "onAutoForward": "openBrowserOnce" },
+    "5173": { "label": "Site preview", "onAutoForward": "openBrowserOnce" }
+  }
+}
