@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
 import { Route as HierarchyOptionsRouteImport } from './routes/hierarchy-options'
@@ -27,11 +26,6 @@ import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquir
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreditsRoute = CreditsRouteImport.update({
@@ -100,7 +94,6 @@ const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
@@ -116,7 +109,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
@@ -133,7 +125,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
@@ -151,7 +142,6 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/contact'
     | '/credits'
     | '/doors-draft'
     | '/hierarchy-options'
@@ -167,7 +157,6 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/contact'
     | '/credits'
     | '/doors-draft'
     | '/hierarchy-options'
@@ -183,7 +172,6 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/contact'
     | '/credits'
     | '/doors-draft'
     | '/hierarchy-options'
@@ -200,7 +188,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
   DoorsDraftRoute: typeof DoorsDraftRoute
   HierarchyOptionsRoute: typeof HierarchyOptionsRoute
@@ -222,13 +209,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/credits': {
@@ -320,7 +300,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
   DoorsDraftRoute: DoorsDraftRoute,
   HierarchyOptionsRoute: HierarchyOptionsRoute,

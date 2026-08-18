@@ -118,27 +118,11 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-07" id="ho-btn-07">
           <span class="wwa-no">07</span>
-          <span class="wwa-heading"><span class="wwa-title">Remote work</span><span class="wwa-summary">from About</span></span>
-          <span class="wwa-mark" aria-hidden="true"></span>
-        </button>
-      </h2>
-      <div class="wwa-panel" id="ho-07" role="region" aria-labelledby="ho-btn-07">
-        <div class="wwa-panel-inner">
-          <p class="person-copy">Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets us work with artists anywhere, on any schedule.</p>
-          <p class="person-copy">Nothing fully replaces being in the same space. We trade some of that for access, and we are honest about it.</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="wwa-item" data-accordion-item>
-      <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-08" id="ho-btn-08">
-          <span class="wwa-no">08</span>
           <span class="wwa-heading"><span class="wwa-title">How Does This Whole Process Start, What Should I Expect?</span><span class="wwa-summary">from Services &middot; getting started</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
-      <div class="wwa-panel" id="ho-08" role="region" aria-labelledby="ho-btn-08">
+      <div class="wwa-panel" id="ho-07" role="region" aria-labelledby="ho-btn-07">
         <div class="wwa-panel-inner">
           <p class="person-copy"><em>&ldquo;In order to make a grilled cheese, first you must create the universe.&rdquo;</em> &mdash; paraphrasing Carl Sagan</p>
           <p class="person-copy">Upper Level&rsquo;s process is not unlike that paraphrased quote. Even a small task requires learning about you and the universe your project is in.</p>
@@ -151,13 +135,13 @@ export default `
 
     <article class="wwa-item" data-accordion-item>
       <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-09" id="ho-btn-09">
-          <span class="wwa-no">09</span>
+        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-08" id="ho-btn-08">
+          <span class="wwa-no">08</span>
           <span class="wwa-heading"><span class="wwa-title">We Discuss, Then We Get to Work.</span><span class="wwa-summary">from Services &middot; the planning</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
-      <div class="wwa-panel" id="ho-09" role="region" aria-labelledby="ho-btn-09">
+      <div class="wwa-panel" id="ho-08" role="region" aria-labelledby="ho-btn-08">
         <div class="wwa-panel-inner">
           <p class="person-copy">To record something is not difficult. It is no longer a huge intimidating console behind soundlocked doors, the console can exist in the palm of your hand, but the creative use and ability to take idea to implementation was left behind. We believe in empowering the user, regardless of scope.</p>
           <p class="person-copy">Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
@@ -169,13 +153,13 @@ export default `
 
     <article class="wwa-item" data-accordion-item>
       <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-10" id="ho-btn-10">
-          <span class="wwa-no">10</span>
+        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-09" id="ho-btn-09">
+          <span class="wwa-no">09</span>
           <span class="wwa-heading"><span class="wwa-title">Why we ask</span><span class="wwa-summary">from A Chance to Be Heard &middot; first paragraph only</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
-      <div class="wwa-panel" id="ho-10" role="region" aria-labelledby="ho-btn-10">
+      <div class="wwa-panel" id="ho-09" role="region" aria-labelledby="ho-btn-09">
         <div class="wwa-panel-inner">
           <p class="person-copy">Because we&rsquo;ve been on both sides of the process, we know how frustrating it is to be told how to think and what to say to make a &lsquo;hit&rsquo;. Maybe some people welcome that. For us, the source is the guide, and we work in service of the song or project in front of us &mdash; not building your &lsquo;brand&rsquo; or &lsquo;image&rsquo;. That reveals itself through collaboration, in the process.</p>
         </div>
@@ -184,19 +168,36 @@ export default `
 
     <article class="wwa-item" data-accordion-item>
       <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-11" id="ho-btn-11">
-          <span class="wwa-no">11</span>
+        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-10" id="ho-btn-10">
+          <span class="wwa-no">10</span>
           <span class="wwa-heading"><span class="wwa-title">Borrowed words</span><span class="wwa-summary">from Describing Sound &middot; through the pedalboard picture</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
-      <div class="wwa-panel" id="ho-11" role="region" aria-labelledby="ho-btn-11">
+      <div class="wwa-panel" id="ho-10" role="region" aria-labelledby="ho-btn-10">
         <div class="wwa-panel-inner">
           <p class="person-copy">Sound actually has very few words that describe it without referencing another sense. Warm, bright, dull, crunchy, smooth, buttery, harsh, crisp &mdash; all borrowed from somewhere else. It&rsquo;s pretty interesting to hear how someone describes the sonic feeling they want to express.</p>
           <p class="person-copy">I&rsquo;ve been asked to make a guitar sound more purple before, and I still knew what they meant.</p>
           <p class="person-copy">I reached for a few chorusy effects and a gentle harmonizer, hit play, and they said &ldquo;yes! exactly.&rdquo;</p>
           <p class="person-copy">In my head, hearing the word purple made me think of Prince, and Prince used a lot of chorus (the Roland Dimension D) and gentle doubler effects (the Eventide H3500 being his favorite). Hearing the original guitar parts and the word purple was enough to know what to reach for, and the song inspired what settings to use.</p>
           <figure class="panel-photo"><img src="{{IMG:pedalboard-overhead}}" alt="A pedalboard seen from above, effects pedals wired in a row" loading="lazy" /></figure>
+        </div>
+      </div>
+    </article>
+
+    <article class="wwa-item" data-accordion-item>
+      <h2 class="wwa-head">
+        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="ho-11" id="ho-btn-11">
+          <span class="wwa-no">11</span>
+          <span class="wwa-heading"><span class="wwa-title">The Terms, Out Loud.</span><span class="wwa-summary">from Home &middot; small print, parked here</span></span>
+          <span class="wwa-mark" aria-hidden="true"></span>
+        </button>
+      </h2>
+      <div class="wwa-panel" id="ho-11" role="region" aria-labelledby="ho-btn-11">
+        <div class="wwa-panel-inner">
+          <p class="person-copy">Nothing here is sponsored. No affiliate links, no gear commissions, no partner codes. When a tool gets recommended, it is because it is right for your song, and the recommendation costs you the same either way: nothing.</p>
+          <p class="person-copy">The paid work is mixing, production, studio systems and repair, and one-on-one teaching, and independent budgets get met where they are.</p>
+          <p class="person-copy">Messages come to me and get answered &mdash; there is nobody else here to answer them.</p>
         </div>
       </div>
     </article>

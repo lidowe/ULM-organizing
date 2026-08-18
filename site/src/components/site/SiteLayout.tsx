@@ -26,7 +26,6 @@ const NAV: Array<{ to: string; hash?: string; label: string }> = [
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
   { to: "/hierarchy-options", label: "Hierarchy Options", n: "02" },
-  { to: "/contact", label: "Start a project", n: "03" },
 ];
 
 
@@ -55,9 +54,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {item.label}
               </Link>
             ))}
-            <Link className="project-link" to="/contact">
-              Start a project
-            </Link>
           </nav>
           <button
             className="menu-button"
@@ -117,7 +113,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   {item.label}
                 </Link>
               ))}
-              <Link to="/contact">Start a project</Link>
             </div>
           </div>
           <div className="footer-meta">

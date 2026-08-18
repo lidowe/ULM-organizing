@@ -1,10 +1,10 @@
-// Home with the doors leading. Order per Edward's law (17 Aug): identity
-// handshake, then the sort - nothing arguing above the doors. The five
-// icon story bars ARE the sorter; the old Start Anywhere rows are gone
-// (same question, worse). Proof / terms / person hold the verification
-// spine below. Not built yet on purpose: the four class questions (their
-// placement is unresolved) and the mined door sub-lines. Door 5's title
-// is the standing draft pending Edward's language call.
+// Home after the second teardown round (Edward, 17 Aug): hero handshake,
+// then the doors, then the revision stamp. Nothing else. "Send Me The
+// Song" removed everywhere (reads predatory - send-so-I-can-steal-IP);
+// intake trashed pending its rebuild, so the doors carry no links yet;
+// proof tossed, person tossed (redundant), terms moved to the bottom of
+// Hierarchy Options. "How It Works" -> /hierarchy-options stays for the
+// production aspect.
 export default `
 <section class="hero-rack">
   <div class="wrap hero-rack-inner">
@@ -17,7 +17,6 @@ export default `
           <p class="hero-mission">One engineer &mdash; Edward Lidow, thirty years in rooms from Miami to LA, now working from Columbia SC and remote. Mixing and production for independent artists, studio systems work, and teaching aimed at the day you don&rsquo;t need me.</p>
         </div>
         <div class="sheet-row sheet-actions">
-          <a class="btn primary" href="/contact"><span class="rec-dot" aria-hidden="true"></span>Send Me The Song</a>
           <a class="btn" href="/hierarchy-options">How It Works</a>
         </div>
       </div>
@@ -34,7 +33,7 @@ export default `
   </div>
   <div class="wrap doors-stack">
 
-    <a class="db-bar" href="/contact" style="--i:0">
+    <div class="db-bar" style="--i:0">
       <svg viewBox="0 0 720 120" role="img" aria-label="A cassette, then an EQ boost rising, shifting, narrowing and cutting, then a spinning master reel">
         <defs>
           <radialGradient id="dbMetal" cx="38%" cy="32%" r="80%">
@@ -76,9 +75,9 @@ export default `
         </g>
       </svg>
       <div class="db-foot"><h3 class="db-word">Complete The Project</h3></div>
-    </a>
+    </div>
 
-    <a class="db-bar" href="/contact" style="--i:1">
+    <div class="db-bar" style="--i:1">
       <svg viewBox="0 0 720 120" role="img" aria-label="A microphone, a cable with a break, and a speaker the sound never reaches">
         <g class="db-draw s1">
           <rect x="30" y="20" width="38" height="56" rx="19" fill="url(#dbPanel)" pathLength="1"/>
@@ -103,9 +102,9 @@ export default `
         </g>
       </svg>
       <div class="db-foot"><h3 class="db-word">Fix An Issue</h3></div>
-    </a>
+    </div>
 
-    <a class="db-bar" href="/contact" style="--i:2">
+    <div class="db-bar" style="--i:2">
       <svg viewBox="0 0 720 120" role="img" aria-label="A small console, a question mark, a thick studio binder, then an analyzer moving">
         <g class="db-draw s1">
           <path d="M22,46 L36,32 L142,32 L128,46 Z" fill="#171d2b" pathLength="1"/>
@@ -145,9 +144,9 @@ export default `
         </g>
       </svg>
       <div class="db-foot"><h3 class="db-word">Learn The Craft</h3></div>
-    </a>
+    </div>
 
-    <a class="db-bar" href="/contact" style="--i:3">
+    <div class="db-bar" style="--i:3">
       <svg viewBox="0 0 720 120" role="img" aria-label="A knob, a VU meter whose needle never passes halfway, a second knob out of sync, money, a spinner going nowhere, then a phone reading ULM and music">
         <g class="db-draw s1">
           <rect x="24" y="30" width="164" height="60" rx="3" fill="url(#dbPanel)" pathLength="1"/>
@@ -180,9 +179,9 @@ export default `
         </g>
       </svg>
       <div class="db-foot"><h3 class="db-word">Playback, Evaluate, Improve</h3></div>
-    </a>
+    </div>
 
-    <a class="db-bar" href="/contact" style="--i:4">
+    <div class="db-bar" style="--i:4">
       <svg viewBox="0 0 720 120" role="img" aria-label="A scratched-out waveform, the talkback, the same waveform clean, then the mark of approval">
         <g class="db-draw s1">
           <path d="M26,60 L34,44 L41,72 L48,38 L56,78 L63,52 L70,64 L78,42 L86,70 L93,56 L100,60" pathLength="1"/>
@@ -206,62 +205,11 @@ export default `
         </g>
       </svg>
       <div class="db-foot"><h3 class="db-word">Explain It, Adapt, Solve It</h3></div>
-    </a>
+    </div>
 
   </div>
   <div class="wrap router-note">
     <p>Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed. You do not need to know what it&rsquo;s called.</p>
-  </div>
-</section>
-
-<section class="rack-unit unit-soft">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">02</span><span>The proof</span><span class="unit-note">ref: /work</span></div>
-    <h2 class="unit-title">The Proof Is Checkable.</h2>
-    <div class="unit-prose">
-      <p>The credits on the Work page are worded the way the liner notes word them, and no bigger. Where the record says assistant, this site says assistant. You are right to verify &mdash; this business trained you to &mdash; so nothing here asks to be taken on faith.</p>
-      <p>The stronger proof is coming: one artist&rsquo;s rough mix and finished mix under your own finger, level-matched and labeled as such. It stays off the page until that artist has said yes by name. Permission is part of the proof.</p>
-    </div>
-    <div class="needs-content"><strong>Fader slot &mdash; Push Up The Fader</strong>The signature interactive lives here once one artist&rsquo;s A/B pair is cleared: press play on their rough mix, push the fader, crossfade under your own finger into the finish. Level-matched and labeled as such. Blocked on Edward: the clips and the named permission.</div>
-  </div>
-</section>
-
-<section class="rack-unit">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">03</span><span>The terms</span><span class="unit-note">prices: /services</span></div>
-    <h2 class="unit-title">The Terms, Out Loud.</h2>
-    <div class="unit-prose">
-      <p>Nothing here is sponsored. No affiliate links, no gear commissions, no partner codes. When a tool gets recommended, it is because it is right for your song, and the recommendation costs you the same either way: nothing.</p>
-      <p>The paid work is mixing, production, studio systems and repair, and one-on-one teaching. The prices are on the Services page, with what they include, and independent budgets get met where they are.</p>
-      <p>Messages come to me and get answered &mdash; there is nobody else here to answer them.</p>
-    </div>
-    <div class="needs-content"><strong>Response window &mdash; blocked on Edward</strong>The research says a stated, kept response time is the single best conversion lever on the whole site. The sentence above takes a number: &ldquo;answered within N.&rdquo; N must be a number Edward will actually keep &mdash; his call, then it goes here and on the contact form.</div>
-  </div>
-</section>
-
-<section class="rack-unit unit-soft">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">04</span><span>The person</span><span class="unit-note">est. 2012</span></div>
-    <h2 class="unit-title">A Person, Not A Platform.</h2>
-    <div class="unit-prose">
-      <p>Thirty years. Roughly seventy-five thousand studio hours. I got the coffee, ran the DAW, tuned the vocals, tracked, mixed, toured, built rooms, taught. Some of the records you know; the exact roles are on the Work page. When the buildings started closing, the knowledge didn&rsquo;t stop existing. It just stopped having anywhere to go.</p>
-      <p class="unit-turn">This is where it goes.</p>
-      <p>Why a site like this exists at all &mdash; the tools that reached everyone, the knowledge that never made the trip, Nebraska and the milk crate &mdash; is one click deep, on The Gap. The argument lives there so this page can just shake your hand.</p>
-    </div>
-  </div>
-</section>
-
-<section class="cta-section">
-  <div class="wrap cta-inner">
-    <div class="reveal">
-      <span class="cta-dot" aria-hidden="true"></span>
-      <h2>Either Way, You Now Have Us.</h2>
-      <p>That is what this page is for. Not a funnel &mdash; a resource. Send the song that&rsquo;s fighting you. A rough, a voice memo, a photo of the room, or a question with no project attached at all. It comes to me &mdash; Edward, there is nobody else answering &mdash; and I answer everything.</p>
-    </div>
-    <div class="cta-doors reveal">
-      <a class="btn primary" href="/contact"><span class="rec-dot" aria-hidden="true"></span>Send Me The Song</a>
-      <p class="cta-alt">Or just keep reading &mdash; <a href="/contact">the knowledge stays free either way</a>.</p>
-    </div>
   </div>
 </section>
 

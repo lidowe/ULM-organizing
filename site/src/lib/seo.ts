@@ -34,15 +34,6 @@ export const PAGES: PageEntry[] = [
     changefreq: "weekly",
     priority: "1.0",
   },
-  {
-    slug: "contact",
-    path: "/contact",
-    title: "Start a Project · Upper Level Music",
-    description:
-      "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
-    changefreq: "yearly",
-    priority: "0.9",
-  },
 ];
 
 export function absoluteUrl(path: string): string {
