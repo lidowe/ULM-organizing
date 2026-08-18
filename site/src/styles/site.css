@@ -1323,7 +1323,10 @@ img,svg,canvas{display:block;max-width:100%}
    all read as the completed story. Hovering a bar zeroes its delay =
    instant replay. */
 .doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:760px}
-.db-bar{border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem}
+.db-bar{display:block;border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem;transition:border-color .2s,background .2s}
+/* On Home the bars are doors: clickable, and they say so on approach. */
+a.db-bar:hover,a.db-bar:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.05)}
+a.db-bar:hover .db-word{color:var(--amber-light)}
 .db-bar svg{display:block;width:100%;height:auto}
 .db-bar svg path,.db-bar svg rect,.db-bar svg circle,.db-bar svg ellipse{
   stroke:var(--paper-soft);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}

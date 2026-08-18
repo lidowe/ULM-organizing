@@ -176,7 +176,7 @@ export default `
           <g class="db-note n3"><ellipse cx="634" cy="72" rx="7" ry="5"/><path d="M641,70 L641,34" pathLength="1"/></g>
         </g>
       </svg>
-      <div class="db-foot"><h3 class="db-word">Listen, Evaluate, Improve</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
+      <div class="db-foot"><h3 class="db-word">Playback, Evaluate, Improve</h3><span class="db-line">( line pending &mdash; mined from real intake )</span></div>
     </div>
 
     <div class="db-bar" style="--i:4">
