@@ -4,7 +4,13 @@ import {
   mediaIndexHtml,
   ribbonHtml,
 } from "./credits";
-import { photo, photoName } from "./photos";
+import { photo, photoName, photoSrcset } from "./photos";
+
+/**
+ * Most photos render either full-bleed or inside the 1200px content column,
+ * so one `sizes` hint covers the layout without per-image bookkeeping.
+ */
+const SIZES = "(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1200px";
 
 const TOKENS: Record<string, () => string> = {
   "{{RIBBON}}": ribbonHtml,
@@ -33,6 +39,11 @@ function enhanceImages(html: string): string {
     let out = tag;
     if (!out.includes("data-photo=")) {
       out = out.replace(/<img\b/, `<img data-photo="${name}"`);
+    }
+
+    const srcset = photoSrcset(name);
+    if (srcset && !out.includes("srcset=")) {
+      out = out.replace(/\ssrc="/, ` sizes="${SIZES}" srcset="${srcset}" src="`);
     }
 
     if (isFirst) {
