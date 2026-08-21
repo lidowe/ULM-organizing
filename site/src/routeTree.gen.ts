@@ -10,14 +10,30 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CompleteRouteImport } from './routes/complete'
+import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
+import { Route as EducationRouteImport } from './routes/education'
+import { Route as EvaluateRouteImport } from './routes/evaluate'
+import { Route as FixRouteImport } from './routes/fix'
 import { Route as HierarchyOptionsRouteImport } from './routes/hierarchy-options'
+import { Route as LearnRouteImport } from './routes/learn'
 import { Route as McpRouteImport } from './routes/mcp'
+import { Route as NewsRouteImport } from './routes/news'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as ProofRouteImport } from './routes/proof'
+import { Route as PurpleRouteImport } from './routes/purple'
 import { Route as ReachRouteImport } from './routes/reach'
+import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as StartRouteImport } from './routes/start'
+import { Route as StoryRouteImport } from './routes/story'
+import { Route as StudioRouteImport } from './routes/studio'
+import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
+import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
@@ -26,6 +42,21 @@ import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquir
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompleteRoute = CompleteRouteImport.update({
+  id: '/complete',
+  path: '/complete',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreditsRoute = CreditsRouteImport.update({
@@ -38,9 +69,29 @@ const DoorsDraftRoute = DoorsDraftRouteImport.update({
   path: '/doors-draft',
   getParentRoute: () => rootRouteImport,
 } as any)
+const EducationRoute = EducationRouteImport.update({
+  id: '/education',
+  path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvaluateRoute = EvaluateRouteImport.update({
+  id: '/evaluate',
+  path: '/evaluate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FixRoute = FixRouteImport.update({
+  id: '/fix',
+  path: '/fix',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HierarchyOptionsRoute = HierarchyOptionsRouteImport.update({
   id: '/hierarchy-options',
   path: '/hierarchy-options',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnRoute = LearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
   getParentRoute: () => rootRouteImport,
 } as any)
 const McpRoute = McpRouteImport.update({
@@ -48,9 +99,24 @@ const McpRoute = McpRouteImport.update({
   path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NewsRoute = NewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProofRoute = ProofRouteImport.update({
+  id: '/proof',
+  path: '/proof',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PurpleRoute = PurpleRouteImport.update({
+  id: '/purple',
+  path: '/purple',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReachRoute = ReachRouteImport.update({
@@ -58,14 +124,44 @@ const ReachRoute = ReachRouteImport.update({
   path: '/reach',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StudioRoute = StudioRouteImport.update({
+  id: '/studio',
+  path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheGapRoute = TheGapRouteImport.update({
+  id: '/the-gap',
+  path: '/the-gap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhoWeAreRoute = WhoWeAreRouteImport.update({
   id: '/who-we-are',
   path: '/who-we-are',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WorkRoute = WorkRouteImport.update({
+  id: '/work',
+  path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Char91DotmcpChar93ListToolsRoute =
@@ -94,14 +190,30 @@ const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
+  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
+  '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
+  '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -109,14 +221,30 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
+  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
+  '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
+  '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -125,14 +253,30 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
+  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/doors-draft': typeof DoorsDraftRoute
+  '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
+  '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
+  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
+  '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -142,14 +286,30 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/complete'
+    | '/contact'
     | '/credits'
     | '/doors-draft'
+    | '/education'
+    | '/evaluate'
+    | '/fix'
     | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
+    | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
+    | '/studio'
+    | '/the-gap'
     | '/who-we-are'
+    | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -157,14 +317,30 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/complete'
+    | '/contact'
     | '/credits'
     | '/doors-draft'
+    | '/education'
+    | '/evaluate'
+    | '/fix'
     | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
+    | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
+    | '/studio'
+    | '/the-gap'
     | '/who-we-are'
+    | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -172,14 +348,30 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/complete'
+    | '/contact'
     | '/credits'
     | '/doors-draft'
+    | '/education'
+    | '/evaluate'
+    | '/fix'
     | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
+    | '/news'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
+    | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
+    | '/studio'
+    | '/the-gap'
     | '/who-we-are'
+    | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
@@ -188,14 +380,30 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  CompleteRoute: typeof CompleteRoute
+  ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
   DoorsDraftRoute: typeof DoorsDraftRoute
+  EducationRoute: typeof EducationRoute
+  EvaluateRoute: typeof EvaluateRoute
+  FixRoute: typeof FixRoute
   HierarchyOptionsRoute: typeof HierarchyOptionsRoute
+  LearnRoute: typeof LearnRoute
   McpRoute: typeof McpRoute
+  NewsRoute: typeof NewsRoute
   ProcessRoute: typeof ProcessRoute
+  ProofRoute: typeof ProofRoute
+  PurpleRoute: typeof PurpleRoute
   ReachRoute: typeof ReachRoute
+  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StartRoute: typeof StartRoute
+  StoryRoute: typeof StoryRoute
+  StudioRoute: typeof StudioRoute
+  TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
+  WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
@@ -209,6 +417,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/complete': {
+      id: '/complete'
+      path: '/complete'
+      fullPath: '/complete'
+      preLoaderRoute: typeof CompleteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/credits': {
@@ -225,11 +454,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DoorsDraftRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/education': {
+      id: '/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evaluate': {
+      id: '/evaluate'
+      path: '/evaluate'
+      fullPath: '/evaluate'
+      preLoaderRoute: typeof EvaluateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fix': {
+      id: '/fix'
+      path: '/fix'
+      fullPath: '/fix'
+      preLoaderRoute: typeof FixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/hierarchy-options': {
       id: '/hierarchy-options'
       path: '/hierarchy-options'
       fullPath: '/hierarchy-options'
       preLoaderRoute: typeof HierarchyOptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn': {
+      id: '/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof LearnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -239,11 +496,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/news': {
+      id: '/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/process': {
       id: '/process'
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proof': {
+      id: '/proof'
+      path: '/proof'
+      fullPath: '/proof'
+      preLoaderRoute: typeof ProofRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/purple': {
+      id: '/purple'
+      path: '/purple'
+      fullPath: '/purple'
+      preLoaderRoute: typeof PurpleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reach': {
@@ -253,6 +531,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ReachRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
@@ -260,11 +545,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/studio': {
+      id: '/studio'
+      path: '/studio'
+      fullPath: '/studio'
+      preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-gap': {
+      id: '/the-gap'
+      path: '/the-gap'
+      fullPath: '/the-gap'
+      preLoaderRoute: typeof TheGapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/who-we-are': {
       id: '/who-we-are'
       path: '/who-we-are'
       fullPath: '/who-we-are'
       preLoaderRoute: typeof WhoWeAreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work': {
+      id: '/work'
+      path: '/work'
+      fullPath: '/work'
+      preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/.mcp/list-tools': {
@@ -300,14 +620,30 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  CompleteRoute: CompleteRoute,
+  ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
   DoorsDraftRoute: DoorsDraftRoute,
+  EducationRoute: EducationRoute,
+  EvaluateRoute: EvaluateRoute,
+  FixRoute: FixRoute,
   HierarchyOptionsRoute: HierarchyOptionsRoute,
+  LearnRoute: LearnRoute,
   McpRoute: McpRoute,
+  NewsRoute: NewsRoute,
   ProcessRoute: ProcessRoute,
+  ProofRoute: ProofRoute,
+  PurpleRoute: PurpleRoute,
   ReachRoute: ReachRoute,
+  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StartRoute: StartRoute,
+  StoryRoute: StoryRoute,
+  StudioRoute: StudioRoute,
+  TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
+  WorkRoute: WorkRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,

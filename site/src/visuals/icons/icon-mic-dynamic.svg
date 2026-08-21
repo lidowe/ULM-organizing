@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Dynamic microphone">
+<title>Dynamic microphone</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<g transform="rotate(-35 32 32)">
+<rect x="24" y="8" width="16" height="22" rx="8"/>
+<path d="M27 14h10M27 19h10" class="d"/>
+<path d="M28 30h8v20a4 4 0 0 1-8 0z"/>
+</g>
+</svg>

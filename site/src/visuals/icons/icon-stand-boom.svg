@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Microphone stand">
+<title>Microphone stand</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M18 14h26"/>
+<rect x="40" y="17" width="9" height="15" rx="4.5" transform="rotate(18 44 24)"/>
+<path d="M18 14v38"/>
+<path d="M8 56l10-6 10 6" class="d"/>
+<circle cx="18" cy="14" r="2.6" class="d"/>
+</svg>

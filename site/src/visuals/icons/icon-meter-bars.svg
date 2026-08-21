@@ -1,0 +1,5 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Level meter">
+<title>Level meter</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M8.0 50V40"/><path d="M13.5 50V32"/><path d="M19.0 50V24"/><path d="M24.5 50V36"/><path d="M30.0 50V20"/><path d="M35.5 50V28"/><path d="M41.0 50V16"/><path d="M46.5 50V34"/><path d="M52.0 50V26"/><path d="M57.5 50V38"/>
+</svg>

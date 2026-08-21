@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Figure-8 pattern">
+<title>Figure-8 pattern</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M32.0 5.0L33.8 5.1L35.5 5.5L37.2 6.0L38.8 6.8L40.2 7.8L41.5 9.0L42.7 10.3L43.7 11.7L44.5 13.3L45.0 15.0L45.4 16.7L45.5 18.5L45.4 20.3L45.0 22.0L44.5 23.7L43.7 25.2L42.7 26.7L41.5 28.0L40.2 29.2L38.8 30.2L37.2 31.0L35.5 31.5L33.8 31.9L32.0 32.0L33.8 32.1L35.5 32.5L37.2 33.0L38.8 33.8L40.2 34.8L41.5 36.0L42.7 37.3L43.7 38.7L44.5 40.3L45.0 42.0L45.4 43.7L45.5 45.5L45.4 47.3L45.0 49.0L44.5 50.7L43.7 52.2L42.7 53.7L41.5 55.0L40.2 56.2L38.8 57.2L37.2 58.0L35.5 58.5L33.8 58.9L32.0 59.0L30.2 58.9L28.5 58.5L26.8 58.0L25.2 57.2L23.8 56.2L22.5 55.0L21.3 53.7L20.3 52.3L19.5 50.7L19.0 49.0L18.6 47.3L18.5 45.5L18.6 43.7L19.0 42.0L19.5 40.3L20.3 38.8L21.3 37.3L22.5 36.0L23.8 34.8L25.3 33.8L26.8 33.0L28.5 32.5L30.2 32.1L32.0 32.0L30.2 31.9L28.5 31.5L26.8 31.0L25.3 30.2L23.8 29.2L22.5 28.0L21.3 26.7L20.3 25.2L19.5 23.7L19.0 22.0L18.6 20.3L18.5 18.5L18.6 16.7L19.0 15.0L19.5 13.3L20.3 11.8L21.3 10.3L22.5 9.0L23.8 7.8L25.2 6.8L26.8 6.0L28.5 5.5L30.2 5.1L32.0 5.0Z"/>
+<circle cx="32" cy="32" r="3" fill="var(--ulm-dim,#7C838E)" stroke="none"/>
+<path d="M8 32h6M50 32h6" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

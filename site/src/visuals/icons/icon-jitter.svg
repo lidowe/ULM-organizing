@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Clock jitter">
+<title>Clock jitter</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M6 44h5V20h6v24h6V20h6v24" stroke="var(--ulm-dim,#7C838E)"/>
+<path d="M34 44h5V20h7v24h5V20h7" stroke="var(--ulm-accent,#E03B3B)" stroke-dasharray="0"/>
+<path d="M30 52h4M40 52h4" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

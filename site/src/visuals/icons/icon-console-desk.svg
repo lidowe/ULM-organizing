@@ -1,0 +1,10 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Mixing console">
+<title>Mixing console</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="5" y="18" width="54" height="30" rx="3"/>
+<path d="M15 24v18M25 24v18M35 24v18M45 24v18" class="d" stroke="var(--ulm-dim,#7C838E)"/>
+<rect x="11" y="30" width="8" height="4" rx="1"/>
+<rect x="21" y="36" width="8" height="4" rx="1"/>
+<rect x="31" y="26" width="8" height="4" rx="1"/>
+<rect x="41" y="33" width="8" height="4" rx="1"/>
+</svg>

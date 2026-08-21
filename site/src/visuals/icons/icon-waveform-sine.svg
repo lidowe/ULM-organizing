@@ -1,0 +1,5 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sine waveform">
+<title>Sine waveform</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M3.0 32.0L3.9 29.5L4.8 27.0L5.7 24.8L6.6 22.8L7.5 21.2L8.4 20.0L9.3 19.2L10.2 19.0L11.2 19.2L12.1 20.0L13.0 21.2L13.9 22.8L14.8 24.8L15.7 27.0L16.6 29.5L17.5 32.0L18.4 34.5L19.3 37.0L20.2 39.2L21.1 41.2L22.0 42.8L22.9 44.0L23.8 44.8L24.8 45.0L25.7 44.8L26.6 44.0L27.5 42.8L28.4 41.2L29.3 39.2L30.2 37.0L31.1 34.5L32.0 32.0L32.9 29.5L33.8 27.0L34.7 24.8L35.6 22.8L36.5 21.2L37.4 20.0L38.3 19.2L39.2 19.0L40.2 19.2L41.1 20.0L42.0 21.2L42.9 22.8L43.8 24.8L44.7 27.0L45.6 29.5L46.5 32.0L47.4 34.5L48.3 37.0L49.2 39.2L50.1 41.2L51.0 42.8L51.9 44.0L52.8 44.8L53.8 45.0L54.7 44.8L55.6 44.0L56.5 42.8L57.4 41.2L58.3 39.2L59.2 37.0L60.1 34.5L61.0 32.0"/>
+</svg>

@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="EQ curve">
+<title>EQ curve</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="4" y="12" width="56" height="40" rx="2" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M8 38C18 38 18 20 26 20S34 38 42 38 48 30 56 30"/>
+<circle cx="26" cy="20" r="2.4" stroke="var(--ulm-accent,#E03B3B)"/>
+</svg>

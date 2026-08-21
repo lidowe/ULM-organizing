@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Shield and drain">
+<title>Shield and drain</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M4 30h10M50 30h10"/>
+<rect x="14" y="22" width="36" height="16" rx="2"/>
+<path d="M20 38 28 22M28 38 36 22M36 38 44 22" class="d"/>
+<path d="M32 38v10h12" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M44 44v8M40 52h8M42 57h4" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

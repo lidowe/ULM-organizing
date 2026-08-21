@@ -88,14 +88,14 @@ export default `
 
 <section class="page-next">
   <div class="wrap next-grid">
-    <a class="next-card" href="/education">
+    <a class="next-card" href="/learn">
       <span class="next-kicker">Next</span>
       <h3>Where the passing-on happens.</h3>
       <p>One-on-one, pitched at your project, not a curriculum&rsquo;s idea of it.</p>
     </a>
     <div class="next-cta">
       <p>Or bring the record the gap has been holding back.</p>
-      <a class="btn primary" href="/contact">Work With Us Now</a>
+      <a class="btn primary" href="/start">Start here</a>
     </div>
   </div>
 </section>

@@ -1,0 +1,69 @@
+<svg class="rm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" preserveAspectRatio="xMidYMid meet" fill="none" role="img" aria-label="Standing waves in a room: the first three axial modes with their pressure nulls">
+<title>Room modes</title>
+<style>
+.rm text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:var(--ulm-anim-fs,12px);letter-spacing:1.1px;fill:var(--ulm-dim,#7C838E);stroke:none}
+.rm .hi{fill:var(--ulm-accent,#E03B3B)}
+@keyframes rm-osc0{
+0.0%{transform:scaleY(1);opacity:0}
+1.5%{transform:scaleY(1);opacity:1}
+5.5%{transform:scaleY(-1);opacity:1}
+9.5%{transform:scaleY(1);opacity:1}
+13.5%{transform:scaleY(-1);opacity:1}
+17.5%{transform:scaleY(1);opacity:1}
+21.5%{transform:scaleY(-1);opacity:1}
+29.0%{transform:scaleY(1);opacity:1}
+31.0%{transform:scaleY(1);opacity:0}
+100%{opacity:0}}
+.rm-m0{transform-box:view-box;transform-origin:250px 150px;animation:rm-osc0 9.0s linear infinite}
+@keyframes rm-lab0{0%,0.0%{opacity:0}2.0%,31.3%{opacity:1}33.3%,100%{opacity:0}}
+.rm-l0{animation:rm-lab0 9.0s linear infinite;opacity:0}
+@keyframes rm-osc1{
+33.3%{transform:scaleY(1);opacity:0}
+34.8%{transform:scaleY(1);opacity:1}
+38.8%{transform:scaleY(-1);opacity:1}
+42.8%{transform:scaleY(1);opacity:1}
+46.8%{transform:scaleY(-1);opacity:1}
+50.8%{transform:scaleY(1);opacity:1}
+54.8%{transform:scaleY(-1);opacity:1}
+62.3%{transform:scaleY(1);opacity:1}
+64.3%{transform:scaleY(1);opacity:0}
+100%{opacity:0}}
+.rm-m1{transform-box:view-box;transform-origin:250px 150px;animation:rm-osc1 9.0s linear infinite}
+@keyframes rm-lab1{0%,33.3%{opacity:0}35.3%,64.7%{opacity:1}66.7%,100%{opacity:0}}
+.rm-l1{animation:rm-lab1 9.0s linear infinite;opacity:0}
+@keyframes rm-osc2{
+66.7%{transform:scaleY(1);opacity:0}
+68.2%{transform:scaleY(1);opacity:1}
+72.2%{transform:scaleY(-1);opacity:1}
+76.2%{transform:scaleY(1);opacity:1}
+80.2%{transform:scaleY(-1);opacity:1}
+84.2%{transform:scaleY(1);opacity:1}
+88.2%{transform:scaleY(-1);opacity:1}
+95.7%{transform:scaleY(1);opacity:1}
+97.7%{transform:scaleY(1);opacity:0}
+100%{opacity:0}}
+.rm-m2{transform-box:view-box;transform-origin:250px 150px;animation:rm-osc2 9.0s linear infinite}
+@keyframes rm-lab2{0%,66.7%{opacity:0}68.7%,98.0%{opacity:1}100.0%,100%{opacity:0}}
+.rm-l2{animation:rm-lab2 9.0s linear infinite;opacity:0}
+@media (prefers-reduced-motion: reduce){.rm *{animation:none!important}.rm-m0,.rm-l0{opacity:1!important}.rm-m1,.rm-m2,.rm-l1,.rm-l2{opacity:0!important}}
+</style>
+<path d="M60 60V240M440 60V240" stroke="var(--ulm-line,#E8E6E1)" stroke-width="3"/>
+<path d="M60 150H440" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" stroke-dasharray="3 5"/>
+<path class="rm-m0" d="M60.0 150.0L63.2 148.4L66.3 146.8L69.5 145.1L72.7 143.5L75.8 141.9L79.0 140.3L82.2 138.7L85.3 137.1L88.5 135.5L91.7 134.0L94.8 132.4L98.0 130.8L101.2 129.3L104.3 127.8L107.5 126.3L110.7 124.8L113.8 123.3L117.0 121.9L120.2 120.4L123.3 119.0L126.5 117.6L129.7 116.2L132.8 114.9L136.0 113.6L139.2 112.3L142.3 111.0L145.5 109.7L148.7 108.5L151.8 107.3L155.0 106.2L158.2 105.0L161.3 103.9L164.5 102.9L167.7 101.8L170.8 100.8L174.0 99.8L177.2 98.9L180.3 98.0L183.5 97.1L186.7 96.3L189.8 95.5L193.0 94.8L196.2 94.0L199.3 93.4L202.5 92.7L205.7 92.1L208.8 91.6L212.0 91.0L215.2 90.6L218.3 90.1L221.5 89.7L224.7 89.4L227.8 89.0L231.0 88.8L234.2 88.5L237.3 88.3L240.5 88.2L243.7 88.1L246.8 88.0L250.0 88.0L253.2 88.0L256.3 88.1L259.5 88.2L262.7 88.3L265.8 88.5L269.0 88.8L272.2 89.0L275.3 89.4L278.5 89.7L281.7 90.1L284.8 90.6L288.0 91.0L291.2 91.6L294.3 92.1L297.5 92.7L300.7 93.4L303.8 94.0L307.0 94.8L310.2 95.5L313.3 96.3L316.5 97.1L319.7 98.0L322.8 98.9L326.0 99.8L329.2 100.8L332.3 101.8L335.5 102.9L338.7 103.9L341.8 105.0L345.0 106.2L348.2 107.3L351.3 108.5L354.5 109.7L357.7 111.0L360.8 112.3L364.0 113.6L367.2 114.9L370.3 116.2L373.5 117.6L376.7 119.0L379.8 120.4L383.0 121.9L386.2 123.3L389.3 124.8L392.5 126.3L395.7 127.8L398.8 129.3L402.0 130.8L405.2 132.4L408.3 134.0L411.5 135.5L414.7 137.1L417.8 138.7L421.0 140.3L424.2 141.9L427.3 143.5L430.5 145.1L433.7 146.8L436.8 148.4L440.0 150.0" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2.4"/>
+<path class="rm-m1" d="M60.0 150.0L63.2 146.8L66.3 143.5L69.5 140.3L72.7 137.1L75.8 134.0L79.0 130.8L82.2 127.8L85.3 124.8L88.5 121.9L91.7 119.0L94.8 116.2L98.0 113.6L101.2 111.0L104.3 108.5L107.5 106.2L110.7 103.9L113.8 101.8L117.0 99.8L120.2 98.0L123.3 96.3L126.5 94.8L129.7 93.4L132.8 92.1L136.0 91.0L139.2 90.1L142.3 89.4L145.5 88.8L148.7 88.3L151.8 88.1L155.0 88.0L158.2 88.1L161.3 88.3L164.5 88.8L167.7 89.4L170.8 90.1L174.0 91.0L177.2 92.1L180.3 93.4L183.5 94.8L186.7 96.3L189.8 98.0L193.0 99.8L196.2 101.8L199.3 103.9L202.5 106.2L205.7 108.5L208.8 111.0L212.0 113.6L215.2 116.2L218.3 119.0L221.5 121.9L224.7 124.8L227.8 127.8L231.0 130.8L234.2 134.0L237.3 137.1L240.5 140.3L243.7 143.5L246.8 146.8L250.0 150.0L253.2 153.2L256.3 156.5L259.5 159.7L262.7 162.9L265.8 166.0L269.0 169.2L272.2 172.2L275.3 175.2L278.5 178.1L281.7 181.0L284.8 183.8L288.0 186.4L291.2 189.0L294.3 191.5L297.5 193.8L300.7 196.1L303.8 198.2L307.0 200.2L310.2 202.0L313.3 203.7L316.5 205.2L319.7 206.6L322.8 207.9L326.0 209.0L329.2 209.9L332.3 210.6L335.5 211.2L338.7 211.7L341.8 211.9L345.0 212.0L348.2 211.9L351.3 211.7L354.5 211.2L357.7 210.6L360.8 209.9L364.0 209.0L367.2 207.9L370.3 206.6L373.5 205.2L376.7 203.7L379.8 202.0L383.0 200.2L386.2 198.2L389.3 196.1L392.5 193.8L395.7 191.5L398.8 189.0L402.0 186.4L405.2 183.8L408.3 181.0L411.5 178.1L414.7 175.2L417.8 172.2L421.0 169.2L424.2 166.0L427.3 162.9L430.5 159.7L433.7 156.5L436.8 153.2L440.0 150.0" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2.4"/>
+<path class="rm-m2" d="M60.0 150.0L63.2 145.1L66.3 140.3L69.5 135.5L72.7 130.8L75.8 126.3L79.0 121.9L82.2 117.6L85.3 113.6L88.5 109.7L91.7 106.2L94.8 102.9L98.0 99.8L101.2 97.1L104.3 94.8L107.5 92.7L110.7 91.0L113.8 89.7L117.0 88.8L120.2 88.2L123.3 88.0L126.5 88.2L129.7 88.8L132.8 89.7L136.0 91.0L139.2 92.7L142.3 94.8L145.5 97.1L148.7 99.8L151.8 102.9L155.0 106.2L158.2 109.7L161.3 113.6L164.5 117.6L167.7 121.9L170.8 126.3L174.0 130.8L177.2 135.5L180.3 140.3L183.5 145.1L186.7 150.0L189.8 154.9L193.0 159.7L196.2 164.5L199.3 169.2L202.5 173.7L205.7 178.1L208.8 182.4L212.0 186.4L215.2 190.3L218.3 193.8L221.5 197.1L224.7 200.2L227.8 202.9L231.0 205.2L234.2 207.3L237.3 209.0L240.5 210.3L243.7 211.2L246.8 211.8L250.0 212.0L253.2 211.8L256.3 211.2L259.5 210.3L262.7 209.0L265.8 207.3L269.0 205.2L272.2 202.9L275.3 200.2L278.5 197.1L281.7 193.8L284.8 190.3L288.0 186.4L291.2 182.4L294.3 178.1L297.5 173.7L300.7 169.2L303.8 164.5L307.0 159.7L310.2 154.9L313.3 150.0L316.5 145.1L319.7 140.3L322.8 135.5L326.0 130.8L329.2 126.3L332.3 121.9L335.5 117.6L338.7 113.6L341.8 109.7L345.0 106.2L348.2 102.9L351.3 99.8L354.5 97.1L357.7 94.8L360.8 92.7L364.0 91.0L367.2 89.7L370.3 88.8L373.5 88.2L376.7 88.0L379.8 88.2L383.0 88.8L386.2 89.7L389.3 91.0L392.5 92.7L395.7 94.8L398.8 97.1L402.0 99.8L405.2 102.9L408.3 106.2L411.5 109.7L414.7 113.6L417.8 117.6L421.0 121.9L424.2 126.3L427.3 130.8L430.5 135.5L433.7 140.3L436.8 145.1L440.0 150.0" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2.4"/>
+<circle class="rm-l0" cx="60" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l0" cx="440" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l1" cx="60" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l1" cx="250" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l1" cx="440" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l2" cx="60" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l2" cx="187" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l2" cx="313" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle class="rm-l2" cx="440" cy="150" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<text class="rm-l0" x="60" y="270" >AXIAL MODE 1 — HALF WAVELENGTH FITS THE ROOM</text>
+<text class="rm-l1" x="60" y="270">MODE 2 — ONE NULL INSIDE THE ROOM</text>
+<text class="rm-l2" x="60" y="270">MODE 3 — TWO NULLS INSIDE THE ROOM</text>
+<text x="60" y="42" class="hi">ROOM MODES</text>
+<text x="60" y="290">RED = PRESSURE NULL — MOVE THE MIC, NOT THE EQ</text>
+</svg>

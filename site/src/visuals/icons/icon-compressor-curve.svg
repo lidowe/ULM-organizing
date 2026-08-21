@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Compression curve">
+<title>Compression curve</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="6" y="8" width="52" height="48" rx="2" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M8 54 54 10" stroke="var(--ulm-dim,#7C838E)" class="d" stroke-dasharray="3 4"/>
+<path d="M8 54 28 34C32 30 34 29 56 24" stroke="var(--ulm-accent,#E03B3B)"/>
+</svg>

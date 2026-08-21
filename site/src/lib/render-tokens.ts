@@ -5,12 +5,16 @@ import {
   ribbonHtml,
 } from "./credits";
 import { photo, photoByUrl } from "./photos";
+import { animHtml, iconHtml } from "./visuals";
+import { doorMarkHtml, doorRailHtml, doorsHtml } from "./doors";
 
 const TOKENS: Record<string, () => string> = {
   "{{RIBBON}}": ribbonHtml,
   "{{CREDIT_CARDS}}": creditCardsHtml,
   "{{ARTIST_INDEX}}": artistIndexHtml,
   "{{MEDIA_INDEX}}": mediaIndexHtml,
+  "{{DOORS}}": doorsHtml,
+  "{{DOOR_RAIL}}": doorRailHtml,
 };
 
 /**
@@ -59,11 +63,17 @@ function stampPhotoNames(html: string): string {
 /** Replace content tokens in a static page string with generated markup. */
 export function renderTokens(html: string): string {
   const withTokens = stripAuthoringNotes(html).replace(
-    /\{\{(?:IMG:[a-z0-9-]+|[A-Z_]+)\}\}/g,
+    /\{\{(?:(?:IMG|ICON|UI|ANIM|DOOR_MARK):[a-z0-9-]+(?::[a-z]+)?|[A-Z_]+)\}\}/g,
     (token) => {
-      if (token.startsWith("{{IMG:")) {
-        return photo(token.slice(6, -2));
+      const inner = token.slice(2, -2);
+      if (inner.startsWith("IMG:")) return photo(inner.slice(4));
+      if (inner.startsWith("ICON:")) {
+        const [name, size] = inner.slice(5).split(":");
+        return iconHtml(name, size ?? "sm");
       }
+      if (inner.startsWith("UI:")) return iconHtml(inner.slice(3));
+      if (inner.startsWith("ANIM:")) return animHtml(inner.slice(5));
+      if (inner.startsWith("DOOR_MARK:")) return doorMarkHtml(inner.slice(10));
       return TOKENS[token]?.() ?? token;
     },
   );

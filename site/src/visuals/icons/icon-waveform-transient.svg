@@ -1,0 +1,5 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Transient waveform">
+<title>Transient waveform</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M2 32H6 L10 26 L14 46 L18 28 L22 52 L26 23 L30 56 L34 20 L38 50 L42 25 L46 47 L50 27 L54 42 L58 32L62 32" stroke-linejoin="miter"/>
+</svg>

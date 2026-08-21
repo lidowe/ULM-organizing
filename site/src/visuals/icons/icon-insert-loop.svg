@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Insert send and return">
+<title>Insert send and return</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M4 22h12M48 22h12"/>
+<path d="M16 22v6h32v-6" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M16 28l-3-4M16 28l3-4M48 22l-3 4M48 22l3 4" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+<rect x="20" y="30" width="24" height="16" rx="2"/>
+<path d="M26 38h12" class="d"/>
+</svg>

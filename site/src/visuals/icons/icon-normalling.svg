@@ -1,0 +1,10 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Normalled patch point">
+<title>Normalled patch point</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<circle cx="18" cy="20" r="7"/><circle cx="18" cy="44" r="7"/>
+<circle cx="46" cy="20" r="7"/><circle cx="46" cy="44" r="7"/>
+<path d="M25 20h14" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M25 44h14" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M18 27v10" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M46 28l-4 8M46 28l4 8" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

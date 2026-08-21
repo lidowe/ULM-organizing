@@ -1,0 +1,11 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Balanced power">
+<title>Balanced power</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M22 16a4 4 0 0 0 0 9a4 4 0 0 0 0 9"/>
+<path d="M42 16a4 4 0 0 1 0 9a4 4 0 0 1 0 9"/>
+<path d="M28 13v24M34 13v24"/>
+<path d="M42 16h8M42 34h8" class="d"/>
+<path d="M22 16h-8M22 34h-8" class="d"/>
+<path d="M46 25h6v22" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+<path d="M45 47h14M48 52h8" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Magnetic field">
+<title>Magnetic field</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="27" y="24" width="10" height="16" rx="1"/>
+<path d="M27 28h-4M27 34h-4M37 28h4M37 34h4" class="d"/>
+<ellipse cx="32" cy="32" rx="17" ry="12" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+<ellipse cx="32" cy="32" rx="26" ry="19" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+</svg>

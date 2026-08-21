@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="VU meter">
+<title>VU meter</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="5" y="16" width="54" height="32" rx="2"/>
+<path d="M18 40a14 14 0 0 1 28 0" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M32 41 42 26" stroke="var(--ulm-accent,#E03B3B)"/>
+<circle cx="32" cy="41" r="1.6" fill="var(--ulm-line,#E8E6E1)" stroke="none"/>
+</svg>

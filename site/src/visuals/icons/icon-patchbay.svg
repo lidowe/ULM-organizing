@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Patchbay">
+<title>Patchbay</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="4" y="20" width="56" height="24" rx="2"/>
+<circle cx="14" cy="28" r="2.4" stroke="var(--ulm-dim,#7C838E)"/><circle cx="26" cy="28" r="2.4" stroke="var(--ulm-dim,#7C838E)"/>
+<circle cx="38" cy="28" r="2.4" stroke="var(--ulm-dim,#7C838E)"/><circle cx="50" cy="28" r="2.4" stroke="var(--ulm-accent,#E03B3B)"/>
+<circle cx="14" cy="37" r="2.4" stroke="var(--ulm-dim,#7C838E)"/><circle cx="26" cy="37" r="2.4" stroke="var(--ulm-accent,#E03B3B)"/>
+<circle cx="38" cy="37" r="2.4" stroke="var(--ulm-dim,#7C838E)"/><circle cx="50" cy="37" r="2.4" stroke="var(--ulm-dim,#7C838E)"/>
+</svg>

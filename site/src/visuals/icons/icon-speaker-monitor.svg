@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Studio monitor">
+<title>Studio monitor</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M8 26h9l11-9v30l-11-9H8z"/>
+<path d="M38 24a12 12 0 0 1 0 16"/>
+<path d="M45 18a21 21 0 0 1 0 28"/>
+</svg>

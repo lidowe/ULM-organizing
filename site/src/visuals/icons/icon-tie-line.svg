@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Tie line panel">
+<title>Tie line panel</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="6" y="14" width="52" height="36" rx="2"/>
+<circle cx="19" cy="25" r="5"/><circle cx="45" cy="25" r="5"/>
+<circle cx="19" cy="40" r="5"/><circle cx="45" cy="40" r="5"/>
+<circle cx="19" cy="25" r="1.4" class="d"/><circle cx="45" cy="25" r="1.4" class="d"/>
+<circle cx="19" cy="40" r="1.4" class="d"/><circle cx="45" cy="40" r="1.4" class="d"/>
+</svg>

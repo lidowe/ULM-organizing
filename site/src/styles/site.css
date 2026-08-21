@@ -282,7 +282,7 @@ img,svg,canvas{display:block;max-width:100%}
 
 @keyframes vt-in{from{opacity:0;filter:blur(6px);transform:translateY(8px)}to{opacity:1;filter:none;transform:none}}
 
-.site-header{position:fixed;inset:0 0 auto;z-index:80;background:linear-gradient(180deg,rgba(10,10,10,.92),rgba(10,10,10,.65) 62%,transparent);transition:background .35s,border-color .35s}
+.site-header{position:fixed;inset:0 0 auto;z-index:80;background:linear-gradient(180deg,rgba(10,10,10,.95),rgba(10,10,10,.8) 68%,transparent);transition:background .35s,border-color .35s}
 .site-header.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-soft)}
 .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .brand{display:inline-flex;flex-direction:column;line-height:1;position:relative;z-index:2}
@@ -293,7 +293,8 @@ img,svg,canvas{display:block;max-width:100%}
 .desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:.28rem;height:1px;background:var(--amber);transition:right .25s ease}
 .desktop-nav a:hover,.desktop-nav a.active,.desktop-nav a[aria-current="page"]{color:var(--paper)}
 .desktop-nav a:hover::after,.desktop-nav a.active::after,.desktop-nav a[aria-current="page"]::after{right:0}
-.desktop-nav .project-link{border:1px solid var(--line);padding:.72rem 1rem;transition:background .2s,border-color .2s,color .2s}
+/* The bar's one hot item, per the aux rank law: if it must matter more, it turns red. */
+.desktop-nav .project-link{border:1px solid rgba(240,80,67,.45);color:var(--amber-light);padding:.72rem 1rem;transition:background .2s,border-color .2s,color .2s}
 .desktop-nav .project-link::after{display:none}
 .desktop-nav .project-link:hover,.desktop-nav .project-link.active,.desktop-nav .project-link[aria-current="page"]{background:var(--paper);border-color:var(--paper);color:var(--bg)}
 .menu-button{display:none;align-items:center;gap:.65rem;border:1px solid rgba(236,234,229,.28);background:rgba(22,27,38,.92);padding:.65rem 1rem;cursor:pointer;color:var(--paper);transition:background .2s,border-color .2s,color .2s,box-shadow .2s;box-shadow:0 1px 0 rgba(0,0,0,.25)}
@@ -1441,6 +1442,80 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
   .db-bar *{animation:none!important;stroke-dashoffset:0!important}
   .db-bar .db-arcs path{opacity:.3}}
 
+/* =======================================================================
+   THE REBUILD COMPONENTS — door pages, rails, lexicon, covers lists.
+   Sizes live here because size is layout; faces and weights stay in THE
+   TYPE SYSTEM block at the foot.
+   ======================================================================= */
+/* Door page hero: the bar is the page mark, quiet above the title. */
+.door-hero .db-bar{max-width:760px;margin-bottom:clamp(1.4rem,3vw,2.2rem)}
+.db-mark{pointer-events:none}
+.db-bar .db-line{margin:.1rem 0 0;color:var(--muted)}
+/* What-this-covers: one icon naming the subject beside each verbatim line. */
+.covers-list{list-style:none;margin:0;padding:0;display:grid;gap:.55rem;max-width:70ch}
+.covers-list li{display:flex;align-items:center;gap:.9rem;border:1px solid var(--line-soft);background:rgba(236,234,229,.015);padding:.7rem .9rem}
+.covers-list li span:not(.ulm-icon){flex:1}
+/* The borrowed-words lexicon: word left, mechanism right, icon between. */
+.lexicon-list{list-style:none;margin:0 0 var(--photo-rhythm);padding:0;display:grid;gap:.55rem;max-width:70ch}
+.lexicon-list li{display:flex;align-items:center;gap:1rem;border:1px solid var(--line-soft);background:rgba(236,234,229,.015);padding:.75rem .9rem}
+.lex-word{min-width:7.5em;color:var(--paper)}
+.lex-mech{flex:1;color:var(--paper-soft)}
+@media(max-width:560px){.lexicon-list li{flex-wrap:wrap}.lex-mech{flex-basis:100%}}
+/* The door rail: compact cross-navigation on door pages. */
+.door-rail{display:grid;gap:.5rem;max-width:760px}
+.rail-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem 1rem;border:1px solid var(--line);padding:.75rem .9rem;text-decoration:none;transition:border-color .2s,background .2s}
+.rail-row:hover,.rail-row:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.05)}
+.rail-row .rail-title{color:var(--paper)}
+.rail-row .rail-sub{color:var(--quiet)}
+.rail-row[aria-current="page"]{border-color:var(--line-soft);opacity:.45;pointer-events:none}
+/* Home units around the doors. */
+.doors-unit .router-note a{color:var(--paper)}
+.gap-teaser .gap-more{margin-top:1.4rem}
+.proof-strip .award-grid{margin-bottom:var(--photo-rhythm)}
+/* Terms said out loud, on the page where the asking happens. */
+.terms-plain{border:1px solid var(--line);background:var(--bg-soft);padding:1rem 1.1rem;margin-top:1.4rem;display:grid;gap:.7rem}
+.terms-plain p{margin:0;color:var(--paper-soft)}
+/* Paired inline photos on Story. */
+.wrap-photos{display:grid;gap:var(--photo-gap);grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:var(--photo-rhythm)}
+.wrap-photos .inline-photo{margin:0}
+
+/* =======================================================================
+   THE VISUAL LIBRARY — Edward's ULM icon and diagram set (src/visuals/).
+   Inlined SVGs; these tokens map its palette onto the site's, so icons,
+   diagrams, doors and type carry one colour system. The library's own
+   baked fallbacks (#E8E6E1 etc.) only apply if these are missing.
+   ======================================================================= */
+:root{
+  --ulm-line:var(--paper-soft);
+  --ulm-dim:var(--muted);
+  --ulm-accent:var(--amber);
+  --ulm-sw:2;
+  --ulm-swd:1.4;
+  --ulm-anim-fs:12px;
+}
+/* Wrap an inlined icon. Size the wrapper, never the svg. */
+.ulm-icon{display:inline-block;line-height:0;flex:none}
+.ulm-icon svg{width:100%;height:100%;display:block}
+/* Optical sizing: stroke gets heavier as the icon gets smaller. */
+.ulm-icon--xs{width:20px;height:20px;--ulm-sw:2.9;--ulm-swd:2.0}
+.ulm-icon--sm{width:28px;height:28px;--ulm-sw:2.5;--ulm-swd:1.75}
+.ulm-icon--md{width:48px;height:48px;--ulm-sw:2.1;--ulm-swd:1.5}
+.ulm-icon--lg{width:72px;height:72px;--ulm-sw:2;--ulm-swd:1.4}
+.ulm-icon--xl{width:120px;height:120px;--ulm-sw:1.7;--ulm-swd:1.2}
+.ulm-icon--display{width:min(220px,40vw);height:auto;aspect-ratio:1;--ulm-sw:1.5;--ulm-swd:1.1}
+/* Motion scenes: fluid to their container; labels step up on phones. */
+.ulm-anim{width:100%;max-width:760px;margin-inline:auto}
+.ulm-anim svg{width:100%;height:auto;display:block}
+@media (max-width:640px){.ulm-anim{--ulm-anim-fs:15px}}
+@media (max-width:400px){.ulm-anim{--ulm-anim-fs:17px}}
+/* A framed teaching scene: panel ground, hairline, mono caption below, and
+   a pause control because looping motion next to prose needs an off switch. */
+.scene{position:relative;border:1px solid var(--line);background:var(--bg-soft);padding:clamp(1rem,2.4vw,1.8rem);margin:var(--photo-rhythm) 0}
+.scene figcaption{margin-top:.8rem;color:var(--muted)}
+.scene.paused svg *{animation-play-state:paused!important}
+.scene-pause{position:absolute;top:.6rem;right:.6rem;background:none;border:1px solid var(--line);color:var(--muted);padding:.3rem .6rem;cursor:pointer;transition:color .2s,border-color .2s}
+.scene-pause:hover,.scene-pause:focus-visible{color:var(--paper);border-color:var(--paper-soft)}
+
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
   /* narrow screens: taller frames so tall sources are not sliced into strips */
@@ -1536,7 +1611,7 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
    at 14px, which is the same uniformity break the tier exists to prevent —
    and 9.6px is too small for a button label regardless. Tracking stays wider
    because these are isolated words rather than labels beside content. */
-.btn,.desktop-nav a,.menu-close,.menu-button{
+.btn,.desktop-nav a,.menu-close,.menu-button,.scene-pause{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:.12em;text-transform:uppercase}
 
@@ -1587,3 +1662,21 @@ h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
 /* Expositional copy is prose, so it takes the reading face and size like any
    other prose on the site. */
 .expo .expo-copy{font-size:var(--fs-read);line-height:1.68;color:var(--paper-soft)}
+
+/* ---- Rebuild additions ------------------------------------------------
+   The door rail is navigation, so its titles join the aux tier; its
+   sublines are sentences and stay prose-sized. The lexicon's left column is
+   quoted speech — the client's borrowed word — so it takes the serif in
+   italic, like any quotation. Scene captions are sentences under diagrams
+   and join the caption family. */
+.rail-row .rail-title{
+  font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
+  letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3}
+.rail-row .rail-sub{font-family:var(--sans);font-weight:400;font-size:var(--fs-fine);letter-spacing:0;text-transform:none}
+.lex-word{font-family:var(--serif);font-style:italic;font-weight:400;font-size:var(--fs-body)}
+.lex-mech{font-family:var(--sans);font-weight:400;font-size:var(--fs-sm)}
+.scene figcaption{
+  font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
+  letter-spacing:.02em;text-transform:none}
+.terms-plain h3{font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
+  letter-spacing:var(--aux-track);text-transform:uppercase;color:var(--aux-cool);margin:0}

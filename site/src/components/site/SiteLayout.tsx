@@ -4,28 +4,27 @@ import { initSiteBehaviors } from "./site-behaviors";
 import { renderTokens } from "@/lib/render-tokens";
 
 /**
- * Short, conventional labels. The site is already unusual in what it says;
- * making the navigation unusual too just adds decoding cost.
- * "Start a project" is rendered separately as the highlighted action.
- */
-/**
- * Process merged into Services, so the nav loses an item rather than asking
- * anyone to guess the difference between "how it works" and "what it costs".
- * Order is the reading order the pages hand off in.
- */
-/**
- * TEARDOWN (Edward, 17 Aug): the site reduces to Home + Hierarchy Options
- * (plus the contact intake). Locked pages keep their modules in
- * src/lib/pages as archive; their routes are gone, so nothing here may
- * point at them.
+ * THE REBUILD (2026-08-21): the doors are the primary navigation and live on
+ * Home, so the bar stays at three items plus the brand — the doors are not
+ * duplicated up here. "Start" is the bar's only hot item. The menu carries
+ * everything, doors included, for anyone who arrives mid-site.
  */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
-  { to: "/hierarchy-options", label: "Hierarchy Options" },
+  { to: "/proof", label: "Proof" },
+  { to: "/story", label: "Story" },
 ];
 
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
-  { to: "/", label: "Home", n: "01" },
-  { to: "/hierarchy-options", label: "Hierarchy Options", n: "02" },
+  { to: "/", label: "Home · The Doors", n: "01" },
+  { to: "/complete", label: "Complete The Project", n: "02" },
+  { to: "/fix", label: "Fix An Issue", n: "03" },
+  { to: "/learn", label: "Learn The Craft", n: "04" },
+  { to: "/evaluate", label: "Playback, Evaluate, Improve", n: "05" },
+  { to: "/purple", label: "Make It More Purple", n: "06" },
+  { to: "/proof", label: "Proof", n: "07" },
+  { to: "/story", label: "Story", n: "08" },
+  { to: "/the-gap", label: "The Gap", n: "09" },
+  { to: "/start", label: "Start", n: "10" },
 ];
 
 
@@ -54,6 +53,9 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {item.label}
               </Link>
             ))}
+            <Link className="project-link" to="/start">
+              Start
+            </Link>
           </nav>
           <button
             className="menu-button"
@@ -108,7 +110,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               Upper Level Music <span>·</span> Edward Lidow
             </div>
             <div className="footer-links">
-              {NAV.map((item) => (
+              {MENU.map((item) => (
                 <Link key={item.to} to={item.to}>
                   {item.label}
                 </Link>

@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Word clock">
+<title>Word clock</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<circle cx="16" cy="32" r="11"/><circle cx="16" cy="32" r="4"/>
+<path d="M16 21v-3M16 43v3" class="d"/>
+<path d="M31 40h5V24h6v16h6V24h5"/>
+</svg>

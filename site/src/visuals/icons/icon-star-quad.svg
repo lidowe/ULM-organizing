@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Star-quad cable">
+<title>Star-quad cable</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<circle cx="32" cy="32" r="22"/>
+<circle cx="32" cy="32" r="16" class="d" stroke-dasharray="3 3"/>
+<circle cx="25" cy="25" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle cx="39" cy="39" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<circle cx="39" cy="25" r="4.5"/><circle cx="25" cy="39" r="4.5"/>
+</svg>

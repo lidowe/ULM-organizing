@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Gain control">
+<title>Gain control</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<circle cx="32" cy="34" r="16"/>
+<path d="M32 34V22" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M14 20l3 3M50 20l-3 3M32 12v3" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+</svg>

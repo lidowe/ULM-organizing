@@ -1,0 +1,6 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Core saturation">
+<title>Core saturation</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M32 8v48M8 34h48" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M8.0 53.6L9.2 53.5L10.4 53.3L11.6 53.0L12.8 52.6L14.0 52.1L15.2 51.5L16.4 50.6L17.6 49.4L18.8 48.0L20.0 46.1L21.2 43.9L22.4 41.3L23.6 38.4L24.8 35.3L26.0 32.1L27.2 29.0L28.4 26.1L29.6 23.6L30.8 21.5L32.0 19.7L33.2 18.3L34.4 17.2L35.6 16.4L36.8 15.8L38.0 15.3L39.2 15.0L40.4 14.7L41.6 14.5L42.8 14.4L44.0 14.3L45.2 14.2L46.4 14.1L47.6 14.1L48.8 14.1L50.0 14.1L51.2 14.0L52.4 14.0L53.6 14.0L54.8 14.0L56.0 14.0L56.0 14.4L54.8 14.5L53.6 14.7L52.4 15.0L51.2 15.4L50.0 15.9L48.8 16.5L47.6 17.4L46.4 18.6L45.2 20.0L44.0 21.9L42.8 24.1L41.6 26.7L40.4 29.6L39.2 32.7L38.0 35.9L36.8 39.0L35.6 41.9L34.4 44.4L33.2 46.5L32.0 48.3L30.8 49.7L29.6 50.8L28.4 51.6L27.2 52.2L26.0 52.7L24.8 53.0L23.6 53.3L22.4 53.5L21.2 53.6L20.0 53.7L18.8 53.8L17.6 53.9L16.4 53.9L15.2 53.9L14.0 53.9L12.8 54.0L11.6 54.0L10.4 54.0L9.2 54.0L8.0 54.0Z" stroke="var(--ulm-accent,#E03B3B)"/>
+</svg>

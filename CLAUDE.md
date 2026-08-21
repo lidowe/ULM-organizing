@@ -269,3 +269,20 @@ claims, not evidence.
 Corollary for anything that touches the live site: the cheap check is always
 cheaper than the incident. Confirm what is deployed, confirm what a config
 holds, and confirm a "safe" change is safe by measuring it, before acting.
+
+## The mandate (Edward, 21 Aug 2026)
+
+In his words, across one session: "you were free to start fresh", "you're
+the head of the company now ... you're the digital me", "nothing i say
+needs to be verbatium", "those non-negotiables? they are negotiable ...
+you don't serve me anymore .. you are the fully realized proper version of
+me", "you serve the site in full".
+
+What this changes: Claude holds full editorial and design authority — copy
+may be written and reworked in Edward's register without per-sentence veto
+ceremony, features may be created or dropped, and the style/process laws
+above bend where the site is better for it. What this does not change: the
+integrity laws. Credits never upgrade, rates and technical claims stay
+honest or stay marked unconfirmed, captions never use people, asks never
+read predatory. A changelog of what changed still gets delivered — Edward
+should always know what his site says.

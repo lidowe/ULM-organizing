@@ -1,0 +1,35 @@
+<svg class="sn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" preserveAspectRatio="xMidYMid meet" fill="none" role="img" aria-label="Uncorrelated channel noise adding as power as the channel count doubles">
+<title>Noise at the summing node</title>
+<style>
+.sn text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:var(--ulm-anim-fs,12px);letter-spacing:1.1px;fill:var(--ulm-dim,#7C838E);stroke:none}
+.sn .hi{fill:var(--ulm-accent,#E03B3B)}
+@keyframes sn-l0{0%,0.0%{opacity:0}2.0%,13.7%{opacity:1}16.7%,100%{opacity:0}}
+.sn-l0{animation:sn-l0 12s linear infinite;opacity:0}
+@keyframes sn-l1{0%,15.7%{opacity:0}18.7%,30.3%{opacity:1}33.3%,100%{opacity:0}}
+.sn-l1{animation:sn-l1 12s linear infinite;opacity:0}
+@keyframes sn-l2{0%,32.3%{opacity:0}35.3%,47.0%{opacity:1}50.0%,100%{opacity:0}}
+.sn-l2{animation:sn-l2 12s linear infinite;opacity:0}
+@keyframes sn-l3{0%,49.0%{opacity:0}52.0%,63.7%{opacity:1}66.7%,100%{opacity:0}}
+.sn-l3{animation:sn-l3 12s linear infinite;opacity:0}
+@keyframes sn-l4{0%,65.7%{opacity:0}68.7%,80.3%{opacity:1}83.3%,100%{opacity:0}}
+.sn-l4{animation:sn-l4 12s linear infinite;opacity:0}
+@keyframes sn-l5{0%,82.3%{opacity:0}85.3%,97.0%{opacity:1}100.0%,100%{opacity:0}}
+.sn-l5{animation:sn-l5 12s linear infinite;opacity:0}
+@keyframes sn-bar{0.0%,13.7%{transform:scaleY(0.015)} 16.7%,30.3%{transform:scaleY(0.167)} 33.3%,47.0%{transform:scaleY(0.334)} 50.0%,63.7%{transform:scaleY(0.502)} 66.7%,80.3%{transform:scaleY(0.669)} 83.3%,97.0%{transform:scaleY(0.836)} 100%{transform:scaleY(0.015)}}
+.sn-bar{transform-box:fill-box;transform-origin:bottom;animation:sn-bar 12s linear infinite}
+@media (prefers-reduced-motion: reduce){.sn *{animation:none!important}.sn-l0{opacity:1!important}}
+</style>
+<text x="24" y="32" class="hi">THE SUMMING NODE IS A NOISE NODE</text>
+<text x="24" y="50">EQUAL, UNCORRELATED SOURCES ADD AS POWER</text>
+<path d="M60 112h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/><path d="M60 132h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/><path d="M60 152h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/><path d="M60 172h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/><path d="M60 192h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/><path d="M60 212h64L228 176" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" opacity="0.8"/>
+<circle cx="230" cy="176" r="6" fill="var(--ulm-line,#E8E6E1)" stroke="none"/>
+<path d="M236 176h30" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path d="M266 158v36l26-18z" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path d="M292 176h24" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path d="M402 240V96M396 240h12M396 96h12" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<rect class="sn-bar" x="406" y="96" width="26" height="144" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<text x="316" y="86">NOISE FLOOR</text>
+<text x="356" y="100">+18</text><text x="344" y="244">0 dB</text>
+<text class="sn-l0" x="60" y="272">1 CHANNELS &#183; FLOOR +0.0 dB</text><text class="sn-l1" x="60" y="272">2 CHANNELS &#183; FLOOR +3.0 dB</text><text class="sn-l2" x="60" y="272">4 CHANNELS &#183; FLOOR +6.0 dB</text><text class="sn-l3" x="60" y="272">8 CHANNELS &#183; FLOOR +9.0 dB</text><text class="sn-l4" x="60" y="272">16 CHANNELS &#183; FLOOR +12.0 dB</text><text class="sn-l5" x="60" y="272">32 CHANNELS &#183; FLOOR +15.1 dB</text>
+<text x="24" y="292">FLOOR RISES 10 log N &#183; +3 dB PER DOUBLING</text>
+</svg>
