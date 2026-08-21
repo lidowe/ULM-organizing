@@ -4,7 +4,7 @@ Current state and priorities. Conclusions only.
 
 ---
 
-## 1. Audience, in priority order
+## 1. Audience, priority order changes can be suggested and reorganized only if newer research shows cause and all suggestions require direct review and approval.  
 
 **1. Independent artists funding their own records.** The primary buyer. They
 arrive with a problem ("this mix won't sit", "I don't know what this needs"),
