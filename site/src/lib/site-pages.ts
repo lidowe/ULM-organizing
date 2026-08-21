@@ -6,7 +6,6 @@
  */
 import index from "./pages/index";
 import work from "./pages/work";
-import process from "./pages/process";
 import studio from "./pages/studio";
 import services from "./pages/services";
 import contact from "./pages/contact";
@@ -17,7 +16,6 @@ import news from "./pages/news";
 export const pages: Record<string, string> = {
   "index": index,
   "work": work,
-  "process": process,
   "studio": studio,
   "services": services,
   "contact": contact,
