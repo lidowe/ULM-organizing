@@ -1,64 +1,84 @@
 /**
- * Local photo registry (portable export build).
+ * The photo registry: every decision about a photograph lives here, once.
  *
- * Every graded studio photo lives in `src/assets/<name>.jpg` and is bundled by
- * Vite. This module turns those files into a `name -> url` map so page markup
- * can reference them with `{{IMG:name}}`.
+ * Each graded studio photo in `src/assets/<name>.jpg` is bundled by Vite two
+ * ways: the original URL, and a generated srcset of resized variants
+ * (vite-imagetools), so phones stop downloading desktop-sized files. Page
+ * markup references photos as `{{IMG:name}}`; the token renderer resolves
+ * the URL and stamps `data-photo`, `srcset`/`sizes` and the focal point onto
+ * the rendered <img> (see render-tokens.ts).
+ *
+ * FOCAL is the vertical anchor used when a context crops the photo into a
+ * frame (object-fit:cover): where the subject sits, as an object-position
+ * value. It belongs to the photograph, not to any page, which is why it is
+ * data here and not a CSS rule per usage.
  */
+
 /**
- * The `src` fallback: a single 1280-wide webp per photo. Browsers that read
+ * The `src` fallback: one 1280-wide webp per photo. Browsers that read
  * `srcset` (everything current) pick from the candidates below instead; this
  * also keeps the multi-megabyte camera originals out of the deploy entirely.
  */
-const files = import.meta.glob<string>("../assets/*.{jpg,jpeg,png,webp}", {
+const originals = import.meta.glob<string>("../assets/*.{jpg,jpeg,png,webp}", {
   eager: true,
   import: "default",
   query: { format: "webp", w: "1280" },
 });
 
-/**
- * Responsive candidates, generated at build time by vite-imagetools: webp at
- * up to three widths (sources narrower than a step are never upscaled). The
- * import evaluates to a ready-made `srcset` string.
- */
-const srcsets = import.meta.glob<string>("../assets/*.{jpg,jpeg,png,webp}", {
+const srcsets = import.meta.glob<string>("../assets/*.{jpg,jpeg}", {
   eager: true,
   import: "default",
   query: { format: "webp", w: "480;960;1600", as: "srcset" },
 });
 
-function baseName(path: string): string {
-  return path
-    .split("/")
-    .pop()!
-    .replace(/\.(jpg|jpeg|png|webp)$/, "");
+/** Subject anchor per photo, for cropped (object-fit:cover) contexts. */
+const FOCAL: Record<string, string> = {
+  "room-kid": "center 34%",
+  "room-living": "center 30%",
+  "drums-overhead": "center 50%",
+  "guitars": "center 58%",
+  "guitar-amp": "center 48%",
+  "console-working": "center 26%",
+  "room-halfbuilt": "center 48%",
+  "studio-racks": "center 42%",
+  "studio-drums": "center 52%",
+  "session-bw": "center 38%",
+  "hit-factory": "center 44%",
+  "mastering-list": "center 50%",
+  "moonlight-bass": "center 40%",
+  "console-large": "center 45%",
+  "session-redlit": "center 45%",
+  "session-redlit-2": "center 45%",
+  "archive-console-pair": "center 40%",
+  "archive-crew": "center 40%",
+  "archive-group": "center 35%",
+  "control-room-red": "center 45%",
+};
+
+export type Photo = {
+  url: string;
+  srcset?: string;
+  focal?: string;
+};
+
+function nameOf(path: string): string {
+  return path.split("/").pop()!.replace(/\.(jpg|jpeg|png|webp)$/, "");
 }
 
-export const photos: Record<string, string> = Object.fromEntries(
-  Object.entries(files).map(([path, url]) => [baseName(path), url]),
-);
-
-const srcsetByName: Record<string, string> = Object.fromEntries(
-  Object.entries(srcsets).map(([path, srcset]) => [baseName(path), srcset]),
-);
-
-export function photoSrcset(name: string): string | undefined {
-  return srcsetByName[name];
+export const photos: Record<string, Photo> = {};
+for (const [path, url] of Object.entries(originals)) {
+  const name = nameOf(path);
+  photos[name] = { url, srcset: srcsets[path], focal: FOCAL[name] };
 }
 
+/** Bundled URL for a photo, "" if the name is unknown. */
 export function photo(name: string): string {
-  return photos[name] ?? "";
+  return photos[name]?.url ?? "";
 }
 
-/**
- * Reverse lookup, url -> registry name. Lets the token renderer stamp
- * `data-photo="<name>"` onto rendered <img> tags, so CSS can target a photo
- * by its stable name instead of a src that changes with Vite's build hashes.
- */
-const namesByUrl: Record<string, string> = Object.fromEntries(
-  Object.entries(photos).map(([name, url]) => [url, name]),
-);
+/** Registry entry for a photo by its bundled URL (how rendered tags are matched). */
+const byUrl = new Map(Object.entries(photos).map(([name, p]) => [p.url, { name, ...p }]));
 
-export function photoName(url: string): string | undefined {
-  return namesByUrl[url];
+export function photoByUrl(url: string): ({ name: string } & Photo) | undefined {
+  return byUrl.get(url);
 }

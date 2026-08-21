@@ -15,6 +15,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
+    // imagetools generates the resized variants behind the ?w=...&as=srcset
+    // imports in src/lib/photos.ts.
     plugins: [mcpPlugin(), imagetools()],
   },
 });

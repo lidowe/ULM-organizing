@@ -13,22 +13,19 @@ import { renderTokens } from "@/lib/render-tokens";
  * anyone to guess the difference between "how it works" and "what it costs".
  * Order is the reading order the pages hand off in.
  */
+/**
+ * TEARDOWN (Edward, 17 Aug): the site reduces to Home + Hierarchy Options
+ * (plus the contact intake). Locked pages keep their modules in
+ * src/lib/pages as archive; their routes are gone, so nothing here may
+ * point at them.
+ */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
-  { to: "/services", label: "Services" },
-  { to: "/work", label: "Work" },
-  { to: "/education", label: "Learn" },
-  { to: "/studio", label: "Studio" },
-  { to: "/about", label: "About" },
+  { to: "/hierarchy-options", label: "Hierarchy Options" },
 ];
 
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
-  { to: "/services", label: "Services", n: "02" },
-  { to: "/work", label: "Work", n: "03" },
-  { to: "/education", label: "Learn", n: "04" },
-  { to: "/studio", label: "Studio", n: "05" },
-  { to: "/about", label: "About", n: "06" },
-  { to: "/contact", label: "Start a project", n: "07" },
+  { to: "/hierarchy-options", label: "Hierarchy Options", n: "02" },
 ];
 
 
@@ -57,9 +54,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {item.label}
               </Link>
             ))}
-            <Link className="project-link" to="/contact">
-              Start a project
-            </Link>
           </nav>
           <button
             className="menu-button"
@@ -119,7 +113,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   {item.label}
                 </Link>
               ))}
-              <Link to="/contact">Start a project</Link>
             </div>
           </div>
           <div className="footer-meta">

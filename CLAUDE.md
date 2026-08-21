@@ -6,10 +6,17 @@ If something here conflicts with what Edward says now, he wins — update the fi
 
 ## Whose words these are
 
-The copy is Edward's. Do not rewrite his sentences into house style, do not
-"tighten" his phrasing, and do not invent copy in his voice. If a passage needs
-to change, propose it and let him decide the wording. Restoring his verbatim
-text after an unrequested rewrite has already had to happen once.
+Most of the copy is Edward's — but not all of it, by his own correction
+(16 Aug 2026): earlier sessions left AI-drafted passages mixed in with his,
+and he can tell the difference. So the rule is unchanged in one direction and
+loosened in the other: never rewrite a sentence that is his, and never invent
+copy in his voice — but flagging a passage as probable non-Edward filler,
+with a proposed replacement, is wanted work, not overreach. He decides the
+wording either way.
+
+He does not want wording settled two or three words at a time across many
+messages. Batch copy proposals into one numbered list (current text →
+proposed text → one-line reason) so he can accept or reject in a single pass.
 
 Fix mechanical things freely: capitalisation, typos, entities, markup.
 
@@ -62,14 +69,43 @@ Rules that keep getting broken:
   tracking. Rank is carried by **colour only** — `--aux-hot` red is
   load-bearing, `--aux-cool` grey is supporting. Nothing in the tier grows to
   signal importance. If it needs to matter more, it turns red.
-- **Headings are Title Case**, written into the copy, not forced by
-  `text-transform`. "Major" must keep its capital for the pun, and a transform
-  would also capitalise "and" and "the".
+- **Major headings capitalize every word** (Edward, 16 Aug 2026 — supersedes
+  the earlier small-words-lowercase Title Case), still written into the copy,
+  not forced by `text-transform`. "The Industry Is Undergoing Major Key
+  Changes." / "What Is Getting In The Way?" are the pattern.
 - **Prose is one size.** A deck and the body under it are the same; separating
   them by a size step made every deck read as a second heading.
 - **A quote never outranks the heading it sits under.**
 - Photo captions stay **out** of the aux tier. They are sentences; uppercasing
   them would be uppercasing prose.
+
+## The icon grammar (Edward, 17 Aug 2026)
+
+The door story bars (see `/doors-draft`) established an icon system, and it
+is one system, not per-icon taste. Every icon anywhere on the site obeys it:
+
+- **Objects have bodies; signals stay lines.** Anything you could pick up —
+  cassette, console, binder, speaker, phone, chassis — gets a fill and
+  physical depth. Anything that travels — waveforms, EQ curves, sound arcs,
+  notes — stays 1px line work. A flat object reads as a checklist; a filled
+  signal reads as a blob. Neither ships.
+- **One colour, one meaning, everywhere.** Tan = tape/media. Metal = controls.
+  Panel navy = chassis. Green = money. Red = the point (a cut, a break, the
+  ULM mark, an approval) — the same rank-by-colour law the type system runs.
+  A colour never moonlights as decoration.
+- **Motion is narration, never decoration.** A thing moves only because the
+  story says it is doing something: the reel turns, the needle works (and
+  never past halfway — that is the joke), the spinner goes nowhere. Bars solo
+  one at a time — simultaneous motion is five alarms. Static state is always
+  the final frame, so reduced-motion and at-rest read the completed story.
+- **Detail level is uniform.** If one object gains shading or colour, its
+  family members gain it in the same pass (the reel got tan, so the cassette
+  had to). Inconsistency between siblings is the tell of AI assembly and
+  Edward spots it immediately.
+- Emoji vocabulary, never emoji manner: instantly nameable objects, comical
+  cuteness stripped, no faces on things. Frustration is a scratched-out
+  waveform, not a frowny face — emotion shown in studio objects, like the
+  caption rules show people's work and not their persons.
 
 ### Changing a typeface
 
@@ -81,6 +117,18 @@ produced a pull quote breaking into four stubby lines.
 Same for `clamp()`: derive the middle term against a real viewport width. A
 coefficient that is too small pins the value to its floor at every realistic
 width while the token claims otherwise.
+
+## Physics describes; ears decide (Edward, 18 Aug 2026)
+
+Why the Studio Virtual app was truly shelved: it predicted judgment. A
+forecast of how something WILL sound arrives before the listening and
+contaminates it — "if it sounds good, it is good" is the trade's actual
+epistemology, and half the canon is wrong-on-paper-right-in-the-ear.
+The law for every tool, entry, and sentence on this site: state what
+HAPPENS (ratio, bandwidth, noise — facts about electrons), hand the
+reader an ear test where one exists, and never cross into what they
+will hear as good or bad. The moment copy predicts the verdict instead
+of describing the mechanism, it goes.
 
 ## Verifying visual changes
 

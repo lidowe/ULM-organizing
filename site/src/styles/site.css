@@ -210,7 +210,9 @@
   --sans:"Space Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"Space Mono","IBM Plex Mono",monospace;
   --display:var(--serif);
-  --fs-hero:clamp(2.2rem,5vw,3.6rem);
+  /* Ceiling re-derived 16 Aug so "The Industry Is Undergoing" holds one line
+     in the hero's half-column at desktop widths: the couplet is the design. */
+  --fs-hero:clamp(2.2rem,4.3vw,3.05rem);
   --fs-h1:clamp(1.75rem,3.2vw,2.4rem);
   --fs-h2:clamp(1.35rem,2.2vw,1.85rem);
   --fs-h3:clamp(1.05rem,1.6vw,1.28rem);
@@ -241,7 +243,6 @@
   --aux-track:.13em;
   --aux-hot:#f05043;
   --aux-cool:#b3b8c2;
-  --fs-eyebrow:var(--fs-aux);
   --fs-sm:.86rem;
   --fs-fine:.74rem;
   color-scheme:dark;
@@ -261,15 +262,13 @@ img,svg,canvas{display:block;max-width:100%}
 .skip-link{position:fixed;left:1rem;top:1rem;z-index:999;transform:translateY(-180%);background:var(--paper);color:var(--bg);padding:.75rem 1rem;font-weight:600}
 .skip-link:focus{transform:none}
 .wrap{width:min(100%,var(--max));margin-inline:auto;padding-inline:var(--gutter)}
-.eyebrow,.kicker{font-family:var(--mono);font-size:var(--fs-eyebrow);line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;font-weight:500}
 /* The page-hero eyebrow deliberately has NO rule of its own. It used to set
    its own weight and tracking, and being two classes deep it outranked the
    auxiliary tier, so the one label at the top of every page was the one label
-   that did not match the others. Uniformity is the point of the tier. */
-.eyebrow{color:var(--amber-light)}
-.kicker{color:var(--muted)}
+   that did not match the others. Uniformity is the point of the tier.
+   .eyebrow/.kicker/.display carry no face, weight, size or tracking here at
+   all: those live in THE TYPE SYSTEM block at the end of this file. */
 .kicker::before{content:"";width:1.6rem;height:1px;background:var(--amber);opacity:.8;margin-right:.6rem}
-.display{font-family:var(--serif);font-weight:400;letter-spacing:-.035em;line-height:.92}
 .muted{color:var(--muted)}
 .rule{height:1px;background:var(--line)}
 
@@ -287,17 +286,17 @@ img,svg,canvas{display:block;max-width:100%}
 .site-header.scrolled{background:rgba(10,10,10,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line-soft)}
 .header-inner{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .brand{display:inline-flex;flex-direction:column;line-height:1;position:relative;z-index:2}
-.brand strong{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,2vw,1.6rem);letter-spacing:-.02em}
-.brand span{margin-top:.35rem;color:var(--muted);font-size:.55rem;letter-spacing:0.11em;text-transform:uppercase;font-family:var(--mono)}
+.brand strong{font-size:clamp(1.25rem,2vw,1.6rem)}
+.brand span{margin-top:.35rem;font-size:.55rem}
 .desktop-nav{display:flex;align-items:center;gap:clamp(1rem,2vw,1.9rem)}
-.desktop-nav a{font-family:var(--mono);font-size:.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--paper-soft);position:relative;padding:.6rem 0;transition:color .2s}
+.desktop-nav a{color:var(--paper-soft);position:relative;padding:.6rem 0;transition:color .2s}
 .desktop-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:.28rem;height:1px;background:var(--amber);transition:right .25s ease}
 .desktop-nav a:hover,.desktop-nav a.active,.desktop-nav a[aria-current="page"]{color:var(--paper)}
 .desktop-nav a:hover::after,.desktop-nav a.active::after,.desktop-nav a[aria-current="page"]::after{right:0}
 .desktop-nav .project-link{border:1px solid var(--line);padding:.72rem 1rem;transition:background .2s,border-color .2s,color .2s}
 .desktop-nav .project-link::after{display:none}
 .desktop-nav .project-link:hover,.desktop-nav .project-link.active,.desktop-nav .project-link[aria-current="page"]{background:var(--paper);border-color:var(--paper);color:var(--bg)}
-.menu-button{display:none;align-items:center;gap:.65rem;border:1px solid rgba(236,234,229,.28);background:rgba(22,27,38,.92);text-transform:uppercase;letter-spacing:0.12em;font-family:var(--mono);font-size:.65rem;padding:.65rem 1rem;cursor:pointer;color:var(--paper);transition:background .2s,border-color .2s,color .2s,box-shadow .2s;box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.menu-button{display:none;align-items:center;gap:.65rem;border:1px solid rgba(236,234,229,.28);background:rgba(22,27,38,.92);padding:.65rem 1rem;cursor:pointer;color:var(--paper);transition:background .2s,border-color .2s,color .2s,box-shadow .2s;box-shadow:0 1px 0 rgba(0,0,0,.25)}
 .hamburger{display:flex;flex-direction:column;justify-content:space-between;width:1.1rem;height:.72rem;flex-shrink:0}
 .hamburger span{display:block;height:2px;background:currentColor;border-radius:1px}
 .menu-button:hover,.menu-button:focus-visible{background:var(--paper);border-color:var(--paper);color:var(--bg);box-shadow:0 4px 14px rgba(0,0,0,.35)}
@@ -311,19 +310,59 @@ img,svg,canvas{display:block;max-width:100%}
 
 .menu-shell{min-height:100dvh;display:grid;grid-template-rows:auto 1fr auto;padding:1.2rem var(--gutter) 2rem}
 .menu-top{display:flex;align-items:center;justify-content:space-between;min-height:70px}
-.menu-close{background:rgba(22,27,38,.55);border:1px solid rgba(236,234,229,.28);cursor:pointer;font-family:var(--mono);font-size:.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--paper);padding:.65rem 1rem;transition:background .2s,border-color .2s,color .2s}
+.menu-close{background:rgba(22,27,38,.55);border:1px solid rgba(236,234,229,.28);cursor:pointer;color:var(--paper);padding:.65rem 1rem;transition:background .2s,border-color .2s,color .2s}
 .menu-close:hover,.menu-close:focus-visible{background:var(--paper);border-color:var(--paper);color:var(--bg)}
 .menu-close:focus-visible{outline:2px solid var(--amber-light);outline-offset:3px}
 .menu-links{align-self:center;display:grid;gap:.2rem}
-.menu-links a{font-family:var(--sans);font-weight:500;font-size:clamp(1.5rem,4.6vw,2.35rem);line-height:1.2;letter-spacing:-.012em;color:var(--paper);display:flex;align-items:baseline;gap:.85rem;padding:.55rem 0;transition:color .2s,transform .2s,background .2s}
-.menu-links a span{font-family:var(--mono);font-size:.55rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--quiet);flex-shrink:0}
+.menu-links a{font-size:clamp(1.5rem,4.6vw,2.35rem);color:var(--paper);display:flex;align-items:baseline;gap:.85rem;padding:.55rem 0;transition:color .2s,transform .2s,background .2s}
+.menu-links a span{flex-shrink:0}
 .menu-links a:hover,.menu-links a.active,.menu-links a[aria-current="page"]{color:var(--amber-light);transform:translateX(.25rem)}
 .menu-links a.active,.menu-links a[aria-current="page"]{background:linear-gradient(90deg,var(--amber-glow),transparent 60%);margin-left:calc(var(--gutter) * -1);padding-left:var(--gutter);padding-right:1rem}
 @media(max-width:420px){
-  .menu-links a{font-size:clamp(1.35rem,6vw,1.7rem);letter-spacing:-.01em;gap:.65rem}
-  .menu-links a span{font-size:.5rem}}
+  .menu-links a{font-size:clamp(1.35rem,6vw,1.7rem);gap:.65rem}}
 
 .menu-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.78rem;font-family:var(--mono)}
+
+/* ---- Session Sheet grammar --------------------------------------------
+   The page as working studio paperwork: a bordered sheet with field rows,
+   track-strip section labels with a right-hand annotation, margin notes
+   beside prose, and a revision stamp at the foot. The one kinetic gesture
+   is the 1px rule under each track strip drawing itself like a fader push. */
+.hero-sheet{border:1px solid var(--line);background:rgba(236,234,229,.015)}
+.sheet-row{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1.4rem;flex-wrap:wrap;
+  padding:.6rem .95rem;border-bottom:1px solid var(--line-soft)}
+.sheet-row{color:var(--aux-cool)}
+.sheet-row span{white-space:nowrap}
+/* On a phone the WHAT row's longest cell exceeds the viewport; a nowrap span
+   sets the sheet's min-content width, which pushed the whole hero past the
+   right edge. Cells wrap on small screens instead. */
+@media(max-width:560px){.sheet-row span{white-space:normal}}
+.sheet-what{color:var(--aux-hot)}
+.sheet-body{padding:clamp(1.4rem,2.6vw,2.2rem) .95rem clamp(1.2rem,2.2vw,1.8rem)}
+.sheet-body .hero-title{margin-bottom:1.1rem}
+.sheet-body .hero-mission{margin-bottom:0}
+.sheet-actions{border-bottom:0;border-top:1px solid var(--line-soft);padding:.8rem .95rem}
+.unit-note{margin-left:auto;color:var(--quiet)}
+@media(max-width:560px){.unit-note{display:none}}
+/* The drawn rule: each track strip underlines itself on first reveal. */
+.unit-label{position:relative;padding-bottom:.7rem}
+.unit-label::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--line);
+  transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.22,.61,.36,1) .15s}
+.unit-label.in::after,.unit-label:not(.reveal)::after{transform:none}
+/* Margin notes: the engineer's voice beside the prose. */
+.prose-noted{display:grid;grid-template-columns:minmax(0,1fr) minmax(180px,230px);gap:clamp(1.6rem,3.4vw,3rem);align-items:start}
+.margin-notes{border-left:1px solid var(--line-soft);padding-left:1.1rem;display:grid;gap:1rem}
+.mnote{margin:0;line-height:1.6}
+@media(max-width:860px){.prose-noted{grid-template-columns:1fr}
+  .margin-notes{border-left:0;border-top:1px solid var(--line-soft);padding:1rem 0 0;max-width:52ch}}
+/* Index rows gain a destination cell, patchbay-style: see the rack-row
+   rules further down, which own the grid template. */
+.rack-row .dest{color:var(--quiet);align-self:baseline}
+.rack-row:hover .dest{color:var(--amber-light)}
+@media(max-width:760px){.rack-row .dest{display:none}}
+/* The revision stamp above the site footer. */
+.sheet-rev{border-top:1px solid var(--line)}
+.sheet-rev .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:.8rem;padding-bottom:.8rem;color:var(--quiet)}
 
 /* ---- Home hero: the rack panel ---- */
 .hero-rack{position:relative;overflow:hidden;padding:clamp(8rem,15vh,11rem) 0 clamp(3rem,7vw,5.5rem);background:
@@ -331,20 +370,25 @@ img,svg,canvas{display:block;max-width:100%}
 .hero-rack::before{content:"";position:absolute;inset:0;pointer-events:none;
   background:repeating-linear-gradient(0deg,rgba(238,236,231,.028) 0 1px,transparent 1px 7px);opacity:.5}
 .hero-rack-inner{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.hero-eyebrow{display:flex;align-items:center;gap:.55rem .9rem;flex-wrap:wrap;font-family:var(--mono);font-size:.58rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;color:var(--paper-soft);margin:0 0 1.6rem}
+.hero-eyebrow{display:flex;align-items:center;gap:.55rem .9rem;flex-wrap:wrap;margin:0 0 1.6rem}
 .hero-eyebrow span:not(:last-child)::after{content:"/";margin-left:.9rem;color:var(--quiet)}
-.hero-title{font-family:var(--serif);font-size:var(--fs-hero);margin:0 0 1.5rem;line-height:.98;letter-spacing:-.035em;font-weight:400;color:var(--paper)}
+.hero-title{font-size:var(--fs-hero);margin:0 0 1.5rem;color:var(--paper)}
 .hero-title .ln{display:block;overflow:hidden;padding-bottom:.08em}
 .hero-title .ln>span{display:block;transform:translateY(105%);animation:ln-up .95s cubic-bezier(.16,.84,.34,1) both}
 .hero-title .ln:nth-child(1)>span{animation-delay:.08s}
 .hero-title .ln:nth-child(2)>span{animation-delay:.2s}
 @keyframes ln-up{to{transform:none}}
 
-.hero-title em{font-style:italic;color:var(--amber-light)}
+.hero-title em{color:var(--amber-light)}
 .hero-link{display:inline-block;border-bottom:2px solid transparent;transition:border-color .2s}
 .hero-link:hover,.hero-link:focus-visible{border-bottom-color:var(--amber-light)}
 /* The one accordion heading that is also a landing target from the home page. */
 .wwa-title.accent{color:var(--amber-light)}
+/* The motivation, stated before the tempo hook: display face, a step below
+   the headline, so the mission reads as the reason and the plate as the offer. */
+.hero-mission{font-size:var(--fs-h3);line-height:1.4;color:var(--paper);
+  margin:0 0 1.6rem;max-width:44ch;text-wrap:pretty;
+  animation:rise .9s cubic-bezier(.22,.61,.36,1) .3s both}
 /* The headline is a pun and the plate is the fact. They only both work if they
    read as different objects, so the plate borrows the engraved rack-label
    language from the rest of the site rather than continuing the display type. */
@@ -359,7 +403,7 @@ img,svg,canvas{display:block;max-width:100%}
   display:flex;align-items:center;justify-content:flex-end;pointer-events:none}
 .hero-panel img{width:100%;height:100%;object-fit:contain;object-position:right center}
 
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);font-family:var(--mono);font-size:.6rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);line-height:1;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .btn>*{position:relative;z-index:1}
 .btn::before{content:"";position:absolute;inset:0;background:var(--paper);transform:scaleY(0);transform-origin:bottom;transition:transform .34s cubic-bezier(.22,.61,.36,1);z-index:0}
 .btn:hover{transform:translateY(-1px);border-color:var(--paper);color:var(--bg)}
@@ -372,11 +416,13 @@ img,svg,canvas{display:block;max-width:100%}
 
 @media (prefers-reduced-motion:reduce){
   .hero-title .ln>span{animation:none;transform:none}
-  .hero-deck,.hero-actions{animation:none;transform:none;opacity:1}}
+  .hero-deck,.hero-actions,.hero-mission{animation:none;transform:none;opacity:1}}
 
 .section{padding:clamp(3.4rem,6.4vw,6rem) 0;border-bottom:1px solid var(--line);position:relative}
 .section-header{display:grid;grid-template-columns:minmax(140px,.34fr) 1fr;gap:clamp(2rem,5vw,6rem);align-items:start;margin-bottom:clamp(2.8rem,5vw,5rem)}
-.section-title{font-family:var(--serif);font-weight:400;letter-spacing:-.04em;line-height:1.04;font-size:var(--fs-h2);margin:0;max-width:14ch}
+/* A second header inside the same section, e.g. Media & brands under the artist index. */
+.section-header-followon{margin-top:3rem}
+.section-title{line-height:1.04;font-size:var(--fs-h2);margin:0;max-width:14ch}
 .section-copy{max-width:66ch;color:var(--paper-soft);font-size:var(--fs-body)}
 .section-copy p{margin:0 0 1.15rem}
 .section-copy strong{color:var(--paper);font-weight:600}
@@ -384,17 +430,29 @@ img,svg,canvas{display:block;max-width:100%}
 .cta-section{padding:clamp(5rem,11vw,10rem) 0;background:var(--paper);color:var(--bg);position:relative;overflow:hidden}
 .cta-section::after{content:"";position:absolute;width:42rem;height:42rem;border:1px solid rgba(12,13,15,.13);border-radius:50%;right:-16rem;top:-18rem;box-shadow:0 0 0 5rem rgba(12,13,15,.018),0 0 0 10rem rgba(12,13,15,.012)}
 .cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
-.cta-section h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:400;line-height:.94;letter-spacing:-.045em;margin:0;max-width:9ch}
+/* Measure re-derived for Spectral: at 9ch the closing line broke into six
+   one-word lines. 16ch holds "Tell Me What You're Working On." to a 2-3 line
+   lockup and lets text-wrap:balance do the ragging. */
+.cta-section h2{font-size:var(--fs-h2);margin:0;max-width:16ch}
 .cta-section p{margin:1.5rem 0 0;max-width:46ch;color:#292524;font-size:var(--fs-body)}
 .cta-section .btn{border-color:rgba(12,13,15,.25)}
 .cta-section .btn.primary{background:var(--bg);color:var(--paper);border-color:var(--bg)}
+/* Two doors at the resolution: the primary action, and the quiet free one.
+   Both generous, zero urgency mechanics. */
+.cta-doors{display:grid;gap:.9rem;justify-items:start}
+.cta-alt{margin:0;font-size:var(--fs-sm);color:#57534e;max-width:34ch}
+.cta-alt a{color:inherit;border-bottom:1px solid rgba(12,13,15,.3)}
+.cta-alt a:hover{border-bottom-color:#292524}
+/* Inline links inside running prose on dark ground. */
+.text-link{color:var(--amber-light);border-bottom:1px solid rgba(240,80,67,.4)}
+.text-link:hover{border-bottom-color:var(--amber-light)}
 
 .page-hero{min-height:0;display:flex;align-items:flex-end;position:relative;overflow:hidden;padding-top:clamp(7rem,12vw,9rem);background:
   radial-gradient(circle at 85% 20%,var(--amber-glow),transparent 28rem),
   radial-gradient(circle at 20% 80%,rgba(200,161,90,.1),transparent 30rem),var(--bg)}
 .page-hero::before{content:"";position:absolute;inset:15% -10% -60% 38%;border:1px solid var(--line-soft);border-radius:50%;box-shadow:0 0 0 7rem rgba(238,236,231,.012),0 0 0 14rem rgba(238,236,231,.007);transform:rotate(-18deg)}
 .page-hero .wrap{position:relative;z-index:2;padding-bottom:clamp(2.4rem,4.6vw,4rem)}
-.page-title{font-family:var(--serif);font-size:var(--fs-h1);font-weight:400;letter-spacing:-.035em;line-height:1.04;margin:.75rem 0 1.1rem;max-width:24ch}
+.page-title{font-size:var(--fs-h1);margin:.75rem 0 1.1rem}
 .page-deck{font-family:var(--sans);font-size:var(--fs-deck);line-height:1.55;color:var(--paper-soft);max-width:62ch;margin:0}
 /* A second deck paragraph: separated, and quieter than the first. */
 .page-deck-second{margin-top:1.05rem;color:var(--muted)}
@@ -406,9 +464,9 @@ img,svg,canvas{display:block;max-width:100%}
 
 .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .work-card{background:var(--bg);padding:clamp(1.5rem,3vw,2.7rem);min-height:265px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-.work-card::after{content:attr(data-year);position:absolute;right:-.02em;bottom:-.24em;font-family:var(--serif);font-size:clamp(7rem,17vw,14rem);line-height:1;color:rgba(238,236,231,.025);letter-spacing:-.08em;pointer-events:none}
+.work-card::after{content:attr(data-year);position:absolute;right:-.02em;bottom:-.24em;font-size:clamp(7rem,17vw,14rem);line-height:1;color:rgba(238,236,231,.025);pointer-events:none}
 .work-card .artist{color:var(--amber-light);font-size:.7rem;letter-spacing:0.099em;text-transform:uppercase;font-weight:600}
-.work-card h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:400;line-height:1.04;letter-spacing:-.03em;margin:1.7rem 0 1.4rem;position:relative;z-index:1;max-width:12ch}
+.work-card h3{font-size:var(--fs-h3);line-height:1.04;margin:1.7rem 0 1.4rem;position:relative;z-index:1;max-width:12ch}
 .work-card .role{color:var(--muted);font-size:var(--fs-body);position:relative;z-index:1;max-width:36ch}
 .filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
 .filter-bar button{border:1px solid var(--line);background:none;padding:.65rem .85rem;font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase;color:var(--muted);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
@@ -422,13 +480,13 @@ img,svg,canvas{display:block;max-width:100%}
 .work-card.has-art h3{max-width:9ch}
 @media(max-width:520px){.work-art{width:52px}.work-card.has-art h3{max-width:11ch}}
 .artist-index{columns:3 16rem;column-gap:3.2rem;border-top:1px solid var(--line);padding-top:2rem}
-.artist-index span{display:block;break-inside:avoid;padding:.38rem 0;color:var(--paper-soft);font-family:var(--serif);font-size:var(--fs-body);border-bottom:1px solid var(--line-soft)}
+.artist-index span{display:block;break-inside:avoid;padding:.38rem 0;color:var(--paper-soft);font-size:var(--fs-body);border-bottom:1px solid var(--line-soft)}
 .credit-note{margin-top:2rem;color:var(--muted);font-size:var(--fs-sm);max-width:72ch}
 .credit-links{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem}
 
 .pull-quote{margin:clamp(2.6rem,5vw,4rem) 0 0;padding-left:clamp(1rem,2.4vw,1.8rem);border-left:2px solid var(--amber);max-width:74ch}
-.pull-quote p{margin:0;font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.26;letter-spacing:-.025em;color:var(--paper);text-wrap:balance}
-.pull-quote cite{display:block;margin-top:1rem;font-family:var(--mono);font-style:normal;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pull-quote p{margin:0;font-size:var(--fs-h2);line-height:1.26;color:var(--paper);text-wrap:balance}
+.pull-quote cite{display:block;margin-top:1rem;font-style:normal}
 .pull-quote.small p{font-size:var(--fs-deck);line-height:1.45;letter-spacing:-.012em;color:var(--paper-soft);max-width:68ch}
 .pull-quote.small{margin:clamp(1.6rem,3vw,2.4rem) 0 0;max-width:70ch}
 .pull-quote.lead-quote{margin:0 0 clamp(1.8rem,3.2vw,2.6rem)}
@@ -436,34 +494,60 @@ img,svg,canvas{display:block;max-width:100%}
 /* Audit T1: this had no rule of its own and was rendering at body size next
    to a large photograph. It is a pull quote, so it is set as one. */
 .freedom-quote{margin:0;padding-left:clamp(1rem,2.4vw,1.8rem);border-left:2px solid var(--amber);
-  font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.26;
-  letter-spacing:-.025em;color:var(--paper);max-width:30ch;text-wrap:balance}
+  font-size:var(--fs-h2);line-height:1.26;
+  color:var(--paper);max-width:30ch;text-wrap:balance}
 
-.plain-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.18;letter-spacing:-.02em;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
+.plain-title{font-size:var(--fs-h2);line-height:1.18;margin:0 0 clamp(2rem,3.6vw,3rem);max-width:34ch;text-align:left;text-wrap:balance}
 /* A stance line under a .plain-title. Deliberately unruled: the .lead-quote it
    sits above already carries the amber rule, and two ruled blocks in sequence
    read as one device used twice rather than two different kinds of statement. */
 .plain-title:has(+ .plain-lead){margin-bottom:1.15rem}
-.plain-lead{font-family:var(--serif);font-size:var(--fs-lead);line-height:1.45;max-width:42ch;
+.plain-lead{font-size:var(--fs-lead);line-height:1.45;max-width:42ch;
   margin:0 0 clamp(2rem,3.6vw,3rem);color:var(--paper);text-wrap:balance}
 
 .plan-pair{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
-.plan-part{background:var(--bg);padding:clamp(1.3rem,2.6vw,2rem)}
-.plan-part .plan-mark{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--amber-light);margin:0 0 .7rem}
-.plan-part h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);line-height:1.16;letter-spacing:-.02em;margin:0 0 .6rem;max-width:26ch;text-wrap:balance}
+/* The two planning cards are links into their detail pages (the sample Q&A
+   and Describing Sound). The red cue line is the only clickable signal the
+   card needs: red mono = clickable, per the aux tier. */
+.plan-part{display:block;background:var(--bg);padding:clamp(1.3rem,2.6vw,2rem);transition:background .25s}
+.plan-part:hover,.plan-part:focus-visible{background:var(--bg-soft)}
+.plan-part:hover h3,.plan-part:focus-visible h3{color:var(--amber-light)}
+.plan-part .plan-mark{display:block;margin:0 0 .7rem}
+.plan-part h3{font-size:var(--fs-h3);line-height:1.16;margin:0 0 .6rem;max-width:26ch;text-wrap:balance;transition:color .25s}
 .plan-part h3 em{font-style:italic}
 .plan-part p{margin:0;color:var(--paper-soft);font-size:var(--fs-body);line-height:1.56;max-width:60ch;text-wrap:pretty}
+.plan-part p+p{margin-top:.7rem}
+.plan-more{display:block;margin-top:1rem}
+.plan-more::after{content:" \2192"}
+
+/* ---- The sample Q&A (pre-production) ---- */
+.qa-stack{max-width:70ch}
+.qa-item{border-top:1px solid var(--line-soft);padding:1.15rem 0 1.05rem}
+.qa-item:last-child{border-bottom:1px solid var(--line-soft)}
+.qa-q{font-size:var(--fs-h3);line-height:1.25;color:var(--paper);margin:0 0 .45rem;text-wrap:balance}
+.qa-a{font-size:var(--fs-body);line-height:1.6;color:var(--muted);margin:0;max-width:62ch;text-wrap:pretty}
+.qa-close{font-size:var(--fs-lead);line-height:1.6;color:var(--paper);margin:clamp(1.8rem,3.4vw,2.6rem) 0 0;max-width:56ch}
+/* The conversation appears line by line on arrival. */
+.qa-item{opacity:0;transform:translateY(14px);animation:qa-in .55s cubic-bezier(.22,.61,.36,1) forwards}
+.qa-item:nth-child(1){animation-delay:.05s}
+.qa-item:nth-child(2){animation-delay:.15s}
+.qa-item:nth-child(3){animation-delay:.25s}
+.qa-item:nth-child(4){animation-delay:.35s}
+.qa-item:nth-child(5){animation-delay:.45s}
+.qa-item:nth-child(6){animation-delay:.55s}
+@keyframes qa-in{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.qa-item{opacity:1;transform:none;animation:none}}
 
 .paths-head{margin:0 0 clamp(1.2rem,2.4vw,1.8rem)}
-.paths-head h2{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.1;letter-spacing:-.03em;margin:0 0 .5rem;max-width:26ch;text-wrap:balance}
+.paths-head h2{font-size:var(--fs-h2);line-height:1.1;margin:0 0 .5rem;max-width:26ch;text-wrap:balance}
 .paths-head p{margin:0;color:var(--muted);font-size:var(--fs-sm);line-height:1.5;max-width:60ch;text-wrap:pretty}
 .path-stack{display:flex;flex-direction:column;gap:clamp(1rem,2vw,1.4rem)}
 .path{background:var(--bg);border:1px solid var(--line);border-top:2px solid var(--amber-light);padding:clamp(1.4rem,2.8vw,2.2rem)}
-.path h4{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);letter-spacing:-.025em;line-height:1.16;margin:0 0 .6rem;color:var(--paper);text-wrap:balance}
+.path h4{font-size:var(--fs-h3);line-height:1.16;margin:0 0 .6rem;color:var(--paper);text-wrap:balance}
 .path>p{margin:0;color:var(--paper-soft);font-size:var(--fs-body);line-height:1.58;max-width:76ch;text-wrap:pretty}
 
 .path-fold{margin-top:.9rem;border-top:1px solid var(--line-soft)}
-.path-fold summary{cursor:pointer;list-style:none;padding:.7rem 0 0;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-light);display:flex;align-items:center;gap:.5rem}
+.path-fold summary{cursor:pointer;list-style:none;padding:.7rem 0 0;display:flex;align-items:center;gap:.5rem}
 .path-fold summary::-webkit-details-marker{display:none}
 .path-fold summary::after{content:"+";font-family:var(--mono);font-size:.85rem;line-height:1;color:var(--muted)}
 .path-fold[open] summary::after{content:"\2013"}
@@ -471,14 +555,14 @@ img,svg,canvas{display:block;max-width:100%}
 .path-fold ul{list-style:none;margin:0;padding:0;columns:2 22rem;column-gap:2.4rem}
 .path-fold li{break-inside:avoid;padding:.42rem 0;border-bottom:1px solid var(--line-soft);color:var(--muted);font-size:var(--fs-sm);line-height:1.45}
 .path-aside{display:block;margin-top:.6rem;color:var(--quiet);font-size:var(--fs-fine);line-height:1.55;max-width:64ch}
-.closing-line{margin:clamp(2rem,4vw,3rem) 0 0;font-family:var(--serif);font-size:var(--fs-h2);line-height:1.3;letter-spacing:-.025em;color:var(--paper);max-width:56ch;text-wrap:balance}
+.closing-line{margin:clamp(2rem,4vw,3rem) 0 0;font-size:var(--fs-h2);line-height:1.3;color:var(--paper);max-width:56ch;text-wrap:balance}
 
 .terminology-panel{margin-top:1px;background:linear-gradient(120deg,var(--amber-glow),rgba(200,161,90,.08));padding:clamp(2.5rem,7vw,6rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem);align-items:start}
-.terminology-panel h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:400;letter-spacing:-.04em;line-height:1.02;margin:0}
+.terminology-panel h2{font-size:var(--fs-h2);line-height:1.02;margin:0}
 .terminology-panel p{font-size:var(--fs-body);color:var(--paper-soft);margin:0;max-width:52ch}
 
 .closing-note{border-top:1px solid var(--amber);padding-top:clamp(1.6rem,3vw,2.4rem)}
-.closing-note h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:400;letter-spacing:-.02em;line-height:1.12;margin:0;max-width:34ch;text-wrap:balance}
+.closing-note h2{font-size:var(--fs-h2);line-height:1.12;margin:0;max-width:34ch;text-wrap:balance}
 .closing-copy{margin-top:clamp(1.1rem,2vw,1.6rem);max-width:68ch}
 .closing-copy p{margin:0 0 1rem;color:var(--paper-soft);font-size:var(--fs-body);line-height:1.58;text-wrap:pretty}
 .closing-copy p:last-child{margin-bottom:0}
@@ -486,11 +570,11 @@ img,svg,canvas{display:block;max-width:100%}
 .entry-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .entry{background:var(--bg);padding:1.8rem;min-height:220px}
 .entry .tiny{color:var(--quiet);font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase}
-.entry h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);line-height:1.14;letter-spacing:-.02em;margin:2.5rem 0 .8rem}
+.entry h3{font-size:var(--fs-h3);line-height:1.14;margin:2.5rem 0 .8rem}
 .entry p{color:var(--muted);font-size:var(--fs-body);margin:0}
 .studio-hero-photo{margin:2.5rem 0 0;border:1px solid var(--line);background:var(--bg-soft);position:relative}
 .studio-hero-photo img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.85) contrast(1.05)}
-.studio-hero-photo figcaption,.studio-gallery figcaption{font-size:var(--fs-fine);letter-spacing:0.033em;text-transform:uppercase;color:var(--muted);padding:.85rem 1rem;border-top:1px solid var(--line)}
+.studio-hero-photo figcaption,.studio-gallery figcaption{padding:.85rem 1rem;border-top:1px solid var(--line)}
 .studio-gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--photo-gap);margin-bottom:clamp(2rem,4vw,3.5rem)}
 .studio-gallery figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
 .studio-gallery img{display:block;width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:saturate(.85) contrast(1.05)}
@@ -498,15 +582,15 @@ img,svg,canvas{display:block;max-width:100%}
 
 .capability-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .capability{background:var(--bg);padding:clamp(1.6rem,3vw,2.5rem);min-height:240px}
-.capability h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);line-height:1.12;letter-spacing:-.02em;margin:2.7rem 0 .8rem}
+.capability h3{font-size:var(--fs-h3);line-height:1.12;margin:2.7rem 0 .8rem}
 .capability p{color:var(--muted);font-size:var(--fs-body);margin:0}
 .audience-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem)}
 .audience-card{border-top:1px solid var(--line);padding-top:1.5rem}
-.audience-card h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:400;letter-spacing:-.025em;margin:0 0 1rem}
+.audience-card h3{font-size:var(--fs-h3);margin:0 0 1rem}
 .audience-card p{color:var(--paper-soft);max-width:50ch;margin:0;font-size:var(--fs-body)}
 .tools-details{border-top:1px solid var(--line)}
 .tools-details details{border-bottom:1px solid var(--line)}
-.tools-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;cursor:pointer;font-family:var(--serif);font-size:var(--fs-h3)}
+.tools-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.4rem 0;cursor:pointer;font-size:var(--fs-h3)}
 .tools-details summary::-webkit-details-marker{display:none}
 .tools-details summary::after{content:"+";font-family:var(--sans);color:var(--amber-light)}
 .tools-details details[open] summary::after{content:"–"}
@@ -518,25 +602,23 @@ img,svg,canvas{display:block;max-width:100%}
    have to do by reading every row. */
 .service-group{display:grid;grid-template-columns:1.05fr 1.35fr minmax(150px,.5fr);
   gap:clamp(1.5rem,4vw,4rem);padding:clamp(2.2rem,4vw,3.4rem) 0 0;align-items:baseline}
-.service-group h2{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--amber-light);margin:0;font-weight:500}
+.service-group h2{margin:0}
 .service-group p{grid-column:2 / -1;margin:0;color:var(--muted);font-size:var(--fs-sm);max-width:56ch}
 @media(max-width:900px){.service-group{grid-template-columns:1fr}.service-group p{grid-column:1}}
 .service-row{display:grid;grid-template-columns:1.05fr 1.35fr minmax(150px,.5fr);gap:clamp(1.5rem,4vw,4rem);padding:clamp(2rem,4vw,3.6rem) 0;border-bottom:1px solid var(--line);align-items:start}
-.service-row h2{font-family:var(--serif);font-size:var(--fs-h3);font-weight:400;line-height:1.08;letter-spacing:-.025em;margin:0}
+.service-row h2{font-size:var(--fs-h3);line-height:1.08;margin:0}
 .service-row .service-copy{color:var(--paper-soft);max-width:52ch;font-size:var(--fs-body)}
 .service-row .service-copy p{margin:0 0 .8rem}
-.service-price{text-align:right;color:var(--amber-light);font-size:var(--fs-body);font-weight:600}
-.service-price small{display:block;color:var(--quiet);font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase;font-weight:600;margin-top:.35rem}
+.service-price{text-align:right}
 .rate-panel{margin-top:clamp(3rem,6vw,5rem);background:var(--paper);color:var(--bg);padding:clamp(2rem,6vw,5rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem)}
-.rate-panel h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:400;line-height:1;letter-spacing:-.04em;margin:0}
+.rate-panel h2{font-size:var(--fs-h2);line-height:1;margin:0}
 .rate-panel p{font-size:var(--fs-body);max-width:54ch;margin:0;color:#292524}
 .rate-panel p + p{margin-top:1rem}
 .timeline{border-top:1px solid var(--line)}
 
 .contact-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(3rem,7vw,8rem);align-items:start}
 .contact-side{position:sticky;top:120px}
-.contact-side h2{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);line-height:1.04;letter-spacing:-.035em;margin:.7rem 0 1.4rem}
+.contact-side h2{font-size:var(--fs-h2);line-height:1.04;margin:.7rem 0 1.4rem}
 .contact-side p{color:var(--muted);max-width:38ch;font-size:var(--fs-body)}
 .contact-direct{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:var(--fs-sm);color:var(--paper-soft);line-height:1.9}
 .contact-direct a{color:var(--amber-light);border-bottom:1px solid rgba(200,161,90,.35)}
@@ -586,7 +668,7 @@ img,svg,canvas{display:block;max-width:100%}
 
 .site-footer{padding:3rem 0;background:var(--bg)}
 .footer-grid{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
-.footer-brand{font-family:var(--serif);font-size:.74rem;letter-spacing:.02em}
+.footer-brand{font-size:.74rem}
 .footer-brand span{color:var(--amber-light)}
 .footer-meta{text-align:right;color:var(--muted);font-size:.78rem;line-height:1.9}
 .footer-links{margin-top:1.4rem;display:flex;gap:1rem 1.5rem;flex-wrap:wrap}
@@ -626,13 +708,13 @@ img,svg,canvas{display:block;max-width:100%}
 @media(max-width:660px){
   .header-inner{min-height:72px}
   .brand strong{font-size:1.18rem}.brand span{font-size:.53rem}
-  .hero-eyebrow{display:inline-flex;white-space:nowrap;font-size:.52rem;padding:0;border:0;background:none}
+  .hero-eyebrow{display:inline-flex;white-space:nowrap;padding:0;border:0;background:none}
   .entry-grid,.capability-grid{grid-template-columns:1fr}
   .section,.rack-unit{padding:3.2rem 0}
   .section-title{font-size:var(--fs-h2)}
   .page-hero{min-height:0;padding-top:6.2rem}
   .page-hero .wrap{padding-bottom:2.2rem}
-  .page-title{font-size:var(--fs-h1);max-width:22ch;margin:.55rem 0 .9rem}
+  .page-title{font-size:var(--fs-h1);margin:.55rem 0 .9rem}
   .page-deck{font-size:var(--fs-deck)}
   .hero-title{font-size:var(--fs-hero)}
   .unit-title,.cta-section h2,.rate-panel h2,.contact-side h2,.terminology-panel h2{font-size:var(--fs-h2)}
@@ -651,17 +733,13 @@ img,svg,canvas{display:block;max-width:100%}
 .needs-content{display:block;margin-top:1.25rem;padding:.9rem 1.1rem;border:1px dashed rgba(200,161,90,.45);background:rgba(200,161,90,.12);color:var(--paper-soft);font-size:.82rem;line-height:1.6}
 .needs-content strong{display:block;color:var(--amber-light);font-size:.62rem;letter-spacing:0.099em;text-transform:uppercase;margin-bottom:.35rem;font-weight:600}
 
-/* Typography deliberately does not live here any more. It was being set in
-   three separate top-level places — here, the component rules above, and a
-   block at the foot of the file — all declaring face, weight and tracking
-   for the same headings. Because they were all top-level selectors, the last
-   one silently won and the other two were dead text, which is why headings
-   never matched the rules sitting next to them. It is all in the single
-   TYPE SYSTEM block at the end of this file now.
-
-   Every declaration that used to be here was already being overridden by
-   that block, except the two control/label lines, which moved into it
-   unchanged. This consolidation changes no rendered pixel. */
+/* Typography deliberately does not live here any more: face, weight and
+   tracking are set ONCE, in the TYPE SYSTEM block at the end of this file.
+   The component rules above hold only size, layout and colour that the type
+   block does not claim. Do not re-add face/weight/tracking to a component
+   rule — at equal specificity the type block wins by source order, so the
+   addition becomes silent dead text and the next editor is misled by it.
+   That failure has now been cleaned out of this file twice. */
 
 /* ---- Menu reveal: panel wipe + staggered links ---- */
 .menu-dialog{background:linear-gradient(150deg,var(--bg-soft) 0%,var(--bg) 55%,var(--panel) 100%)}
@@ -722,9 +800,6 @@ img,svg,canvas{display:block;max-width:100%}
   outline-offset: 4px;
 }
 .wwa-no {
-  font-family: var(--serif);
-  font-size: 0.7rem;
-  letter-spacing: 0.09em;
   color: var(--quiet);
 }
 .wwa-heading {
@@ -732,10 +807,8 @@ img,svg,canvas{display:block;max-width:100%}
   gap: 0.35rem;
 }
 .wwa-title {
-  font-family: var(--serif);
   font-size: var(--fs-h3);
   line-height: 1.1;
-  letter-spacing: -0.02em;
   color: var(--paper);
   transition: color 0.25s ease;
 }
@@ -816,11 +889,6 @@ img,svg,canvas{display:block;max-width:100%}
 }
 .person-thumb figcaption {
   padding: 0.7rem 0.85rem;
-  font-family: var(--mono);
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
   border-top: 1px solid var(--line);
 }
 @media (max-width: 700px) {
@@ -849,11 +917,44 @@ img,svg,canvas{display:block;max-width:100%}
 /* ---- Homepage: where to start ---- */
 .start-here{background:linear-gradient(180deg,var(--bg),var(--bg-soft))}
 
+/* ---- PRESS RECORD -----------------------------------------------------
+   The red record dot: the one universal studio symbol, aimed at the
+   visitor, not at us. Breathes slowly (recording, not alarming); static
+   under reduced motion. Lives only where the action is real: the primary
+   CTA and the closing invitation. */
+.rec-dot{display:inline-block;width:.62em;height:.62em;border-radius:50%;
+  background:var(--record);box-shadow:0 0 0 0 var(--record-glow);
+  margin-right:.6em;flex:none;
+  animation:rec-breathe 2.6s ease-in-out infinite}
+.btn.primary .rec-dot{background:#0b0c0e;box-shadow:none;animation:none}
+.btn.primary:hover .rec-dot{background:var(--record);animation:rec-breathe 2.6s ease-in-out infinite}
+.cta-dot{display:block;width:20px;height:20px;border-radius:50%;
+  background:var(--record);margin-bottom:1.2rem;
+  box-shadow:0 0 0 0 var(--record-glow);
+  animation:rec-breathe 2.6s ease-in-out infinite}
+@keyframes rec-breathe{
+  0%,100%{box-shadow:0 0 0 0 var(--record-glow)}
+  50%{box-shadow:0 0 0 .55em rgba(220,38,38,0)}}
+@media(prefers-reduced-motion:reduce){.rec-dot,.cta-dot,.btn.primary:hover .rec-dot{animation:none}}
+
+/* The good news: copy beside the drummer photo, same split as the old
+   stance section. */
+.renaissance-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--pw-3rd));
+  gap:clamp(1.8rem,4vw,3.6rem);align-items:center}
+@media(max-width:860px){.renaissance-split{grid-template-columns:1fr}.renaissance-split .stance-photo{max-width:var(--pw-half)}}
+
+/* Call-and-response: the basement's doubt in small type, answered in the
+   display face. The call is a quote, not a label - it stays lowercase,
+   exactly as typed. */
+.call-response{margin:1.5rem 0 0;max-width:56ch}
+.call{margin:0 0 .35rem;line-height:1.5}
+.response{margin:0;font-size:var(--fs-h3);line-height:1.3;color:var(--paper);text-wrap:balance}
+
 /* ---- Collapsible detail folds ---- */
 .more-section{background:var(--bg);padding:clamp(2.5rem,5vw,4rem) 0}
 .fold{border-top:1px solid var(--line)}
 .fold:last-of-type{border-bottom:1px solid var(--line)}
-.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;font-family:var(--mono);font-size:var(--fs-eyebrow);letter-spacing:.12em;text-transform:uppercase;color:var(--paper)}
+.fold summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0}
 .fold summary::-webkit-details-marker{display:none}
 .fold-hint{color:var(--quiet)}
 .fold[open] .fold-hint{color:var(--amber-light)}
@@ -886,8 +987,8 @@ img,svg,canvas{display:block;max-width:100%}
 .unit-prose p:last-child{margin-bottom:0}
 /* The line the section turns on. Sized up and set in the display face so the
    root/third pun lands as the payoff rather than passing as another sentence. */
-.unit-prose p.unit-turn{font-family:var(--serif);font-size:var(--fs-h3);
-  line-height:1.3;letter-spacing:-.02em;color:var(--paper);max-width:34ch;
+.unit-prose p.unit-turn{font-size:var(--fs-h3);
+  line-height:1.3;color:var(--paper);max-width:34ch;
   margin:1.7rem 0 1.7rem}
 .unit-prose + .plan-pair{margin-top:clamp(1.8rem,3.4vw,2.6rem)}
 
@@ -896,14 +997,11 @@ img,svg,canvas{display:block;max-width:100%}
 .sagan{margin:0 0 clamp(1.8rem,3.4vw,2.6rem);padding-left:clamp(1rem,1.8vw,1.5rem);
   border-left:2px solid var(--amber)}
 .sagan blockquote{margin:0}
-.sagan blockquote p{font-family:var(--serif);font-weight:400;
-  font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.16;letter-spacing:-.03em;
-  color:var(--paper);margin:0;max-width:22ch;text-wrap:balance}
+.sagan blockquote p{color:var(--paper);margin:0;text-wrap:balance}
 /* Attribution stays small but must not share the mono uppercase treatment the
    section labels use, or the two read as the same kind of thing. Serif italic,
    sentence case: clearly a credit rather than a label. */
-.sagan figcaption{font-family:var(--serif);font-style:italic;font-size:.9rem;
-  letter-spacing:0;text-transform:none;color:var(--muted);margin-top:.9rem}
+.sagan figcaption{margin-top:.9rem}
 
 /* Three modes, one choice. Side by side on desktop so the closed state reads
    as a fork rather than a list to work through. */
@@ -912,8 +1010,8 @@ img,svg,canvas{display:block;max-width:100%}
 .mode{background:var(--bg);border:1px solid var(--line);
   border-top:2px solid var(--amber-light);padding:clamp(1.2rem,2.4vw,1.7rem)}
 .unit-soft .mode{background:var(--panel)}
-.mode h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
-  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .55rem}
+.mode h3{font-size:var(--fs-h3);
+  line-height:1.2;color:var(--paper);margin:0 0 .55rem}
 .mode > p{font-size:var(--fs-sm);line-height:1.6;color:var(--paper-soft);margin:0 0 1rem}
 .mode > p em{font-style:normal;color:var(--paper)}
 .mode .path-fold{margin:0}
@@ -931,10 +1029,9 @@ img,svg,canvas{display:block;max-width:100%}
   border:1px solid var(--line);border-radius:2px;
   padding:clamp(1.1rem,2.2vw,1.5rem);background:var(--panel)}
 .next-card:hover,.next-card:focus-visible{border-color:var(--amber)}
-.next-kicker{display:block;font-family:var(--mono);font-size:.58rem;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
-.next-card h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
-  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .35rem}
+.next-kicker{display:block;margin-bottom:.5rem}
+.next-card h3{font-size:var(--fs-h3);
+  line-height:1.2;color:var(--paper);margin:0 0 .35rem}
 .next-card p{font-size:var(--fs-sm);line-height:1.55;color:var(--paper-soft);
   margin:0;max-width:52ch}
 .next-cta p{font-size:var(--fs-sm);color:var(--muted);margin:0 0 .7rem;max-width:34ch}
@@ -948,8 +1045,8 @@ img,svg,canvas{display:block;max-width:100%}
   padding:clamp(2.8rem,5.4vw,4.6rem) 0}
 .mission-why{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
   margin:0 0 1.35rem;max-width:60ch}
-.mission-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.24;
-  letter-spacing:-.02em;color:var(--paper);margin:0 0 1.35rem;max-width:44ch;
+.mission-line{font-size:var(--fs-h2);line-height:1.24;
+  color:var(--paper);margin:0 0 1.35rem;
   text-wrap:balance}
 .mission-open{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
   margin:0;max-width:56ch}
@@ -959,10 +1056,10 @@ img,svg,canvas{display:block;max-width:100%}
   margin:0;max-width:62ch}
 
 .rack-unit{padding:clamp(3.4rem,6.4vw,6rem) 0;border-bottom:1px solid var(--line);position:relative}
-.unit-label{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-.unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem;font-weight:600;letter-spacing:.1em}
-.unit-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);letter-spacing:-.03em;line-height:1.06;margin:0 0 clamp(1.6rem,3vw,2.4rem);color:var(--paper);max-width:22ch}
-.unit-title.small-title{font-size:var(--fs-fine);letter-spacing:.04em;text-transform:uppercase;font-family:var(--mono);font-weight:500;color:var(--muted)}
+.unit-label{display:flex;align-items:center;gap:.7rem;margin-bottom:1.25rem}
+.unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem}
+.unit-title{font-size:var(--fs-h2);line-height:1.06;margin:0 0 clamp(1.6rem,3vw,2.4rem);color:var(--paper)}
+.unit-title.small-title{color:var(--muted)}
 
 /* What this is */
 .stance-unit{background:var(--bg-soft)}
@@ -976,8 +1073,8 @@ img,svg,canvas{display:block;max-width:100%}
 /* Short stance block. Body sets the argument at reading size; the last line is
    the only display-size text, so it lands instead of competing. */
 .why-copy{font-size:var(--fs-deck);line-height:1.62;color:var(--paper-soft);margin:0 0 1.1rem;max-width:58ch}
-.why-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.14;letter-spacing:-.03em;
-  color:var(--paper);margin:1.9rem 0 1.9rem;max-width:24ch;padding-left:clamp(.95rem,1.5vw,1.35rem);
+.why-line{font-size:var(--fs-h2);line-height:1.14;
+  color:var(--paper);margin:1.9rem 0 1.9rem;padding-left:clamp(.95rem,1.5vw,1.35rem);
   border-left:2px solid var(--amber)}
 /* Sits under the statement, indented to the same rule so the two read as one
    block. No caption, no frame, no desaturation: the photograph is the
@@ -1034,20 +1131,21 @@ img,svg,canvas{display:block;max-width:100%}
   .freedom-photo{margin:0}
 }
 .stance-lead{font-size:var(--fs-lead);line-height:1.62;color:var(--paper-soft);margin:0 0 1.15rem;max-width:58ch}
+.why-more{margin:1.8rem 0 0}
 
 /* Anywhere: three rooms */
 .anywhere-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--photo-gap)}
 .anywhere-grid figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
 .anywhere-grid img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center}
-.anywhere-grid figcaption{padding:.9rem 1rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line)}
+.anywhere-grid figcaption{padding:.9rem 1rem;border-top:1px solid var(--line)}
 @media(max-width:860px){.anywhere-grid{grid-template-columns:1fr}}
 
 /* Where to start: rack rows */
 .rack-rows{display:grid;border-top:1px solid var(--line)}
-.rack-row{display:grid;grid-template-columns:3.5rem minmax(9rem,14rem) 1fr;gap:clamp(.8rem,2.5vw,2rem);align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line);transition:background .22s,padding-left .22s}
+.rack-row{display:grid;grid-template-columns:3.5rem minmax(9rem,14rem) 1fr auto;gap:clamp(.8rem,2.5vw,2rem);align-items:baseline;padding:1.15rem 0;border-bottom:1px solid var(--line);transition:background .22s,padding-left .22s}
 .rack-row:hover{background:rgba(216,52,43,.07);padding-left:.8rem}
-.rack-row .no{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;color:var(--quiet)}
-.rack-row h3{margin:0;font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);letter-spacing:-.02em;color:var(--paper)}
+.rack-row .no{color:var(--quiet)}
+.rack-row h3{margin:0;font-size:var(--fs-h3);color:var(--paper)}
 .rack-row:hover h3{color:var(--amber-light)}
 .rack-row p{margin:0;color:var(--muted);font-size:var(--fs-sm);max-width:56ch}
 .rack-row.live h3{color:var(--amber-light)}
@@ -1066,16 +1164,16 @@ img,svg,canvas{display:block;max-width:100%}
 .lead-photo-section{padding:clamp(2rem,4vw,3.4rem) 0}
 .lead-photo{margin:0;border:1px solid var(--line);background:var(--panel)}
 .lead-photo img{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center}
-.lead-photo figcaption{padding:1rem 1.1rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line)}
+.lead-photo figcaption{padding:1rem 1.1rem;border-top:1px solid var(--line)}
 .inline-photo{margin:1.8rem 0 0;border:1px solid var(--line)}
 .inline-photo img{width:100%;aspect-ratio:3/2;height:auto;object-fit:cover;object-position:center center}
-.inline-photo figcaption{padding:.8rem 1rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line)}
+.inline-photo figcaption{padding:.8rem 1rem;border-top:1px solid var(--line)}
 .archive-unit{background:var(--bg-soft)}
 .archive-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--photo-gap)}
 .archive-strip figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
 .archive-strip img{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center center;filter:none}
 .archive-strip figure:hover img{filter:none}
-.archive-strip figcaption{padding:.7rem .8rem;font-family:var(--mono);font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet);border-top:1px solid var(--line)}
+.archive-strip figcaption{padding:.7rem .8rem;border-top:1px solid var(--line)}
 /* Set to one side at a size these files can actually carry. The smallest of
    them is 566px wide, so the cap stays under that — at the old 880px it was
    being blown up 1.55x and the softness showed. */
@@ -1084,11 +1182,11 @@ img,svg,canvas{display:block;max-width:100%}
 .credit-photo-right{margin-left:auto}
 .credit-photo-last{margin-bottom:0}
 .credit-photo img{display:block;width:100%;height:auto;object-fit:contain}
-.credit-photo figcaption{padding:.85rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--quiet)}
+.credit-photo figcaption{padding:.85rem 1rem;border-top:1px solid var(--line)}
 .award-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.9rem,1.8vw,1.4rem);margin:clamp(3rem,7vw,6rem) 0}
 .award-plaque{margin:0;border:1px solid var(--line);background:var(--bg-soft);display:flex;flex-direction:column}
 .award-plaque img{display:block;width:100%;aspect-ratio:1/1;height:auto;object-fit:contain;padding:.6rem;background:var(--bg)}
-.award-plaque figcaption{margin-top:auto;padding:.7rem .8rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.54rem;line-height:1.55;letter-spacing:.07em;text-transform:uppercase;color:var(--quiet)}
+.award-plaque figcaption{margin-top:auto;padding:.7rem .8rem;border-top:1px solid var(--line);line-height:1.55}
 @media(max-width:860px){.archive-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 @media(max-width:660px){.credit-photo{width:min(100%,340px);margin:2.4rem 0}.credit-photo-last{margin-bottom:0}.award-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin:3.25rem 0}}
@@ -1117,9 +1215,7 @@ img,svg,canvas{display:block;max-width:100%}
 .photo-set.tall img{aspect-ratio:3/4}
 .photo-set.short img{aspect-ratio:3/2}
 .photo-set.edu img{aspect-ratio:3/2}
-.photo-set.edu img[data-photo="drums-yamaha-booth"]{object-position:center 58%}
-.photo-set.edu img[data-photo="locker-shelves-tight"]{object-position:center 50%}
-.photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
+.photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line)}
 .photo-single{margin:clamp(2rem,4vw,3.25rem) 0 0;background:var(--bg-soft);border:1px solid var(--line)}
 .photo-single img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.9) contrast(1.03)}
 /* A portrait source must not be forced into the 16/9 frame above: cover would
@@ -1145,7 +1241,7 @@ img,svg,canvas{display:block;max-width:100%}
   .expo{grid-template-columns:1fr}
   .expo figure{max-width:420px}
 }
-.photo-single figcaption{padding:.85rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
+.photo-single figcaption{padding:.85rem 1rem;border-top:1px solid var(--line)}
 @media(max-width:900px){.photo-set.four{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-set.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.photo-set.two,.photo-set.three,.photo-set.four{grid-template-columns:1fr}.photo-set img,.photo-set.tall img,.photo-set.short img{aspect-ratio:3/2}}
 
@@ -1153,30 +1249,197 @@ img,svg,canvas{display:block;max-width:100%}
   .hero-rack-inner{grid-template-columns:1fr}
   .hero-panel{order:-1}}
 
-/* Per-photo focal points -------------------------------------------------
-   Tall portrait sources cropped into short wide bands need an explicit
-   vertical anchor, otherwise the subject falls outside the frame. Matched on
-   the CDN filename, which is stable per asset. */
-img[data-photo="room-kid"]{object-position:center 34%}
-img[data-photo="room-living"]{object-position:center 30%}
-img[data-photo="drums-overhead"]{object-position:center 50%}
-img[data-photo="guitars"]{object-position:center 58%}
-img[data-photo="guitar-amp"]{object-position:center 48%}
-img[data-photo="console-working"]{object-position:center 26%}
-img[data-photo="room-halfbuilt"]{object-position:center 48%}
-img[data-photo="studio-racks"]{object-position:center 42%}
-img[data-photo="studio-drums"]{object-position:center 52%}
-img[data-photo="session-bw"]{object-position:center 38%}
-img[data-photo="hit-factory"]{object-position:center 44%}
-img[data-photo="mastering-list"]{object-position:center 50%}
-img[data-photo="moonlight-bass"]{object-position:center 40%}
-img[data-photo="console-large"]{object-position:center 45%}
-img[data-photo="session-redlit"]{object-position:center 45%}
-img[data-photo="session-redlit-2"]{object-position:center 45%}
-img[data-photo="archive-console-pair"]{object-position:center 40%}
-img[data-photo="archive-crew"]{object-position:center 40%}
-img[data-photo="archive-group"]{object-position:center 35%}
-img[data-photo="control-room-red"]{object-position:center 45%}
+/* Per-photo focal points live in the photo registry (src/lib/photos.ts), as
+   data on the photograph, and arrive here as an inline object-position
+   stamped by render-tokens. Do not add per-photo rules to this file. */
+
+/* ---- The Gap: signal-path diagrams ------------------------------------
+   Three states of one patchbay chain: normalled, broken, patched. The flow
+   lines draw themselves when the figure scrolls into view (.reveal.in),
+   which is the page's one animated flourish. Reduced-motion kills it via
+   the global rule. */
+.gap-diagram{margin:clamp(1.8rem,3.4vw,2.6rem) 0 0;max-width:760px}
+.gap-diagram svg{display:block;width:100%;height:auto}
+.gap-diagram figcaption{margin-top:.6rem}
+.gd-node{fill:var(--bg);stroke:var(--paper-soft);stroke-width:1.5}
+.gd-node.gd-dim{stroke:var(--quiet)}
+.gd-flow{fill:none;stroke:var(--paper-soft);stroke-width:1.5}
+.gd-faint{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 6}
+.gd-break{fill:none;stroke:var(--amber);stroke-width:2;opacity:.85}
+.gd-patch{fill:none;stroke:var(--amber);stroke-width:2.5;stroke-linecap:round}
+/* Draw-in: paths carry pathLength="1" so one dasharray fits them all. */
+.gap-diagram .gd-flow,.gap-diagram .gd-patch{stroke-dasharray:1;stroke-dashoffset:1}
+.reveal.in .gd-flow{animation:gd-draw .9s cubic-bezier(.22,.61,.36,1) .15s forwards}
+.reveal.in .gd-patch{animation:gd-draw 1.1s cubic-bezier(.22,.61,.36,1) .7s forwards}
+.reveal.in .gd-flow.gd-patched{animation-delay:1.5s}
+@keyframes gd-draw{to{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){
+  .gap-diagram .gd-flow,.gap-diagram .gd-patch{stroke-dasharray:none;stroke-dashoffset:0;animation:none}}
+
+/* ---- The Workbench: playable instruments ------------------------------
+   Two live tools framed as bench paperwork: patchbay-style selects feeding
+   a readout, and the hum tree walking question to result. Faces and colour
+   rank come from THE TYPE SYSTEM block; only layout and size live here. */
+.tool{border:1px solid var(--line);background:rgba(236,234,229,.015);margin-top:clamp(1.6rem,3vw,2.4rem);max-width:820px}
+.tool-io{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:end;padding:1rem .95rem;border-bottom:1px solid var(--line-soft)}
+.tool-field{display:grid;gap:.5rem;min-width:0}
+.tool select{width:100%;background:var(--bg-soft);border:1px solid var(--line);color:var(--paper);padding:.65rem .55rem;font-family:var(--mono);font-size:var(--fs-sm);cursor:pointer}
+.tool-arrow{color:var(--quiet);padding-bottom:.85rem}
+@media(max-width:640px){.tool-io{grid-template-columns:1fr}.tool-arrow{display:none}}
+.tool-readout{padding:1.05rem .95rem;display:grid;gap:.75rem}
+.tr-row{display:grid;grid-template-columns:minmax(6.5rem,9.5rem) 1fr;gap:.4rem 1.2rem;align-items:baseline}
+.tr-text{margin:0;font-size:var(--fs-sm);color:var(--paper-soft);max-width:52ch}
+.tr-num{color:var(--paper)}
+/* The admission line: where the physics hands off to the session. */
+.tool-foot{border-top:1px solid var(--line-soft);padding:.95rem .95rem}
+.tool-foot p{margin:0;font-size:var(--fs-body);color:var(--paper-soft);max-width:48ch}
+.tool-under{margin-top:1rem;max-width:820px}
+.tool-under p{margin:0;max-width:60ch}
+@media(max-width:560px){.tr-row{grid-template-columns:1fr}}
+
+.hum{padding:1.05rem .95rem}
+.hum-crumb{margin-bottom:.9rem;color:var(--quiet)}
+.hum-q{margin:0 0 1.05rem;font-size:var(--fs-body);color:var(--paper);max-width:56ch}
+.hum-opts{display:grid;gap:.5rem}
+.hum-opt{display:grid;grid-template-columns:2.2rem 1fr;gap:.8rem;align-items:baseline;text-align:left;background:none;border:1px solid var(--line);padding:.85rem .95rem;cursor:pointer;transition:border-color .2s,background .2s}
+.hum-opt:hover,.hum-opt:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.07)}
+.hum-opt .no{color:var(--quiet)}
+.hum-opt:hover .no{color:var(--amber-light)}
+.hum-opt-text{font-size:var(--fs-sm);color:var(--paper-soft)}
+.hum-opt:hover .hum-opt-text{color:var(--paper)}
+.hum-title{font-size:var(--fs-h3);margin:.2rem 0 1.05rem;color:var(--paper)}
+.hum-block{display:grid;grid-template-columns:minmax(6.5rem,9.5rem) 1fr;gap:.4rem 1.2rem;align-items:baseline;margin-bottom:.9rem}
+.hum-block .tr-text{max-width:56ch}
+.hum-safety{border:1px solid rgba(216,52,43,.35);background:rgba(216,52,43,.05);padding:.85rem .95rem}
+.hum-reset{margin-top:.5rem;background:none;border:0;padding:.4rem 0;cursor:pointer;color:var(--muted);transition:color .2s}
+.hum-reset:hover{color:var(--paper)}
+@media(max-width:560px){.hum-block{grid-template-columns:1fr}}
+
+/* ---- The Doors: motion draft v2 ---------------------------------------
+   Five story bars, fills and metal over the 1px grammar, played as a
+   sequencer: each bar solos for 3s of a 15s loop (window = 0-20% of the
+   timeline, offset per bar by --i x 3s). Every element's STATIC state is
+   its final frame, so pre-play, reduced-motion and the between-solos rest
+   all read as the completed story. Hovering a bar zeroes its delay =
+   instant replay. */
+.doors-stack{display:grid;gap:clamp(1.6rem,3vw,2.4rem);max-width:760px}
+.db-bar{display:block;border:1px solid var(--line);background:rgba(236,234,229,.015);padding:1rem 1rem .8rem;transition:border-color .2s,background .2s}
+/* On Home the bars are doors: clickable, and they say so on approach. */
+a.db-bar:hover,a.db-bar:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.05)}
+a.db-bar:hover .db-word{color:var(--amber-light)}
+.db-bar svg{display:block;width:100%;height:auto}
+.db-bar svg path,.db-bar svg rect,.db-bar svg circle,.db-bar svg ellipse{
+  stroke:var(--paper-soft);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.db-bar svg path:not([fill]),.db-bar svg circle:not([fill]){fill:none}
+.db-bar .db-faint{stroke:var(--quiet);opacity:.6}
+.db-bar .db-hot{stroke:var(--amber)}
+.db-bar .db-arrow{stroke:var(--quiet);fill:none}
+.db-bar .db-tanline{stroke:#8f7c56}
+.db-bar .db-tandark{stroke:#5d4f35}
+.db-bar .db-note ellipse{fill:var(--paper-soft);stroke:none}
+.db-bar .db-anz rect{stroke:none;transform-box:fill-box;transform-origin:50% 100%}
+.db-bar .db-arcs path{stroke-dasharray:3 5;opacity:.3;fill:none}
+.db-bar .db-q{fill:#a8adb8}
+.db-bar .db-cash{fill:#57a874}
+.db-bar .db-ulm{fill:var(--amber-light)}
+.db-foot{display:grid;gap:.35rem;border-top:1px solid var(--line-soft);margin-top:.55rem;padding-top:.75rem}
+.db-word{font-size:var(--fs-h3);color:var(--paper);margin:0}
+.db-line{color:var(--quiet)}
+/* Static transforms = final frames; animations override during the solo. */
+.db-knob1 path{transform-box:view-box;transform-origin:46px 60px;transform:rotate(10deg)}
+.db-knob2 path{transform-box:view-box;transform-origin:166px 60px;transform:rotate(-10deg)}
+/* Setting markers must read against the metal, not vanish into it. The
+   .db-bar prefix is load-bearing: it outranks the base svg stroke rule. */
+.db-bar .db-knob1 path,.db-bar .db-knob2 path{stroke:#1c2029;stroke-width:2.5}
+.db-vu path{transform-box:view-box;transform-origin:106px 76px;transform:rotate(-18deg)}
+.db-reel{transform-box:view-box;transform-origin:540px 60px}
+.db-eqmove{transform-box:fill-box;transform-origin:50% 100%;transform:translateX(22px) scaleX(.55)}
+.db-spinner path{transform-box:view-box;transform-origin:316px 60px}
+.db-talk{transform-box:view-box;transform-origin:228px 60px}
+/* Sequencer timing: everything shares the 15s loop + per-bar delay. */
+.db-bar .db-draw,.db-bar .db-draw path,.db-bar .db-draw rect,.db-bar .db-draw circle,
+.db-bar .db-arrow,.db-bar .db-scratch path,.db-bar .db-talk circle,.db-bar .db-talk,
+.db-bar .db-eqmove,.db-bar .db-cut,.db-bar .db-reelwrap,.db-bar .db-reel,.db-bar .db-spark,
+.db-bar .db-arcs path,.db-bar .db-q,.db-bar .db-cash,.db-bar .db-ulm,.db-bar .db-talktext,
+.db-bar .db-spinner path,.db-bar .db-note,.db-bar .db-anz rect,.db-bar .db-cleanwave path,
+.db-bar .db-check circle,.db-bar .db-check path,.db-bar .db-knob1 path,.db-bar .db-knob2 path,
+.db-bar .db-vu path{
+  animation-duration:15s;animation-timing-function:linear;animation-iteration-count:infinite;
+  animation-delay:calc(var(--i) * 3s)}
+.db-bar:hover *{animation-delay:0s}
+/* Group fades keep fills from arriving before their strokes. */
+.db-bar .db-draw.s1{animation-name:db-f1}
+.db-bar .db-draw.s2{animation-name:db-f2}
+.db-bar .db-draw.s3{animation-name:db-f3}
+@keyframes db-f1{0%{opacity:0}1.5%,100%{opacity:1}}
+@keyframes db-f2{0%,4.5%{opacity:0}6%,100%{opacity:1}}
+@keyframes db-f3{0%,10.5%{opacity:0}12%,100%{opacity:1}}
+/* Draw-ins: four stagger slots inside the 3s window. */
+.db-bar .db-draw.s1 path,.db-bar .db-draw.s1 rect,.db-bar .db-draw.s1 circle{
+  stroke-dasharray:1;animation-name:db-d1}
+.db-bar .db-draw.s2 path,.db-bar .db-draw.s2 rect,.db-bar .db-draw.s2 circle,
+.db-bar .db-talk circle,.db-bar .db-arrow.s2{stroke-dasharray:1;animation-name:db-d2}
+.db-bar .db-draw.s3 path,.db-bar .db-draw.s3 rect,.db-bar .db-draw.s3 circle,
+.db-bar .db-arrow.s3{stroke-dasharray:1;animation-name:db-d3}
+.db-bar .db-arrow.s4,.db-bar .db-check circle,.db-bar .db-check path{
+  stroke-dasharray:1;animation-name:db-d4}
+@keyframes db-d1{0%{stroke-dashoffset:1}7%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d2{0%,5%{stroke-dashoffset:1}12%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d3{0%,11%{stroke-dashoffset:1}16%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes db-d4{0%,14.5%{stroke-dashoffset:1}19%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+/* Finish: EQ rises, shifts, narrows; the cut lands; the reel spins. */
+.db-eqmove{animation-name:db-eq}
+@keyframes db-eq{0%{opacity:0;transform:scaleY(.3)}4%{opacity:1;transform:scaleY(.3)}7%{transform:none}10%{transform:translateX(22px)}13%,100%{transform:translateX(22px) scaleX(.55)}}
+.db-cut{animation-name:db-late}
+@keyframes db-late{0%,13.5%{opacity:0}15%,100%{opacity:1}}
+.db-reelwrap{animation-name:db-f3}
+.db-reel{animation-name:db-reelspin}
+@keyframes db-reelspin{0%,13%{transform:none}19.5%,100%{transform:rotate(360deg)}}
+/* Fix: the break flashes; the arcs die. */
+.db-spark{animation-name:db-sparkk}
+@keyframes db-sparkk{0%,6%{opacity:0}7%{opacity:1}8.5%{opacity:0}10%{opacity:1}11.5%{opacity:0}13%,100%{opacity:1}}
+.db-arcs path{animation-name:db-die}
+@keyframes db-die{0%,12%{opacity:0}14%{opacity:1}16%{opacity:.1}17.5%{opacity:.6}19%,100%{opacity:.3}}
+/* Learn: the question blinks; the analyzer bounces only during the solo. */
+.db-q{animation-name:db-blinkq}
+@keyframes db-blinkq{0%,5%{opacity:0}6%{opacity:1}8%{opacity:0}10%{opacity:1}12%,100%{opacity:1}}
+.db-anz rect.a1{animation-name:db-az1}
+.db-anz rect.a2{animation-name:db-az2}
+.db-anz rect.a3{animation-name:db-az3}
+@keyframes db-az1{0%,13%{transform:none}14%{transform:scaleY(.5)}15.5%{transform:scaleY(1.15)}17%{transform:scaleY(.65)}18.5%{transform:scaleY(1.05)}19.5%,100%{transform:none}}
+@keyframes db-az2{0%,13.2%{transform:none}14.5%{transform:scaleY(1.28)}16%{transform:scaleY(.55)}17.5%{transform:scaleY(1.1)}19%,100%{transform:none}}
+@keyframes db-az3{0%,13.4%{transform:none}15%{transform:scaleY(.7)}16.5%{transform:scaleY(1.22)}18%{transform:scaleY(.8)}19.5%,100%{transform:none}}
+/* Listen: knobs drift out of sync; the needle works but never past half;
+   the spinner spins nowhere; ULM answers; the notes rise. */
+.db-knob1 path{animation-name:db-k1}
+@keyframes db-k1{0%,1%{transform:rotate(-25deg)}3.5%{transform:rotate(40deg)}6%,100%{transform:rotate(10deg)}}
+.db-knob2 path{animation-name:db-k2}
+@keyframes db-k2{0%,2.2%{transform:rotate(30deg)}4.8%{transform:rotate(-35deg)}7.4%,100%{transform:rotate(-10deg)}}
+.db-vu path{animation-name:db-vuu}
+@keyframes db-vuu{0%,1.5%{transform:rotate(-55deg)}3.5%{transform:rotate(-4deg)}5.5%{transform:rotate(-40deg)}7.5%{transform:rotate(-6deg)}9.5%,100%{transform:rotate(-18deg)}}
+.db-cash{animation-name:db-early}
+@keyframes db-early{0%{opacity:0}6%,100%{opacity:1}}
+.db-spinner path{animation-name:db-spinn}
+@keyframes db-spinn{0%,7.5%{transform:none;opacity:0}8.5%{opacity:1}13%{transform:rotate(720deg);opacity:1}100%{transform:rotate(720deg);opacity:1}}
+.db-ulm{animation-name:db-late}
+.db-note{animation-name:db-noteup}
+.db-note.n2{animation-name:db-noteup2}
+.db-note.n3{animation-name:db-noteup3}
+@keyframes db-noteup{0%,13%{opacity:0;transform:translateY(10px)}15%,100%{opacity:1;transform:none}}
+@keyframes db-noteup2{0%,15%{opacity:0;transform:translateY(10px)}17%,100%{opacity:1;transform:none}}
+@keyframes db-noteup3{0%,17%{opacity:0;transform:translateY(10px)}19%,100%{opacity:1;transform:none}}
+/* Say It: the scratch lands, the button presses, the clean wave, the mark. */
+.db-scratch path{stroke-dasharray:1;animation-name:db-scr}
+@keyframes db-scr{0%,2%{stroke-dashoffset:1}6%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+.db-talk{animation-name:db-press}
+@keyframes db-press{0%,8%{transform:none}9%{transform:scale(.92)}10.5%,100%{transform:none}}
+.db-talktext{animation-name:db-midfade}
+@keyframes db-midfade{0%,7%{opacity:0}9.5%,100%{opacity:1}}
+.db-cleanwave path{stroke-dasharray:1;animation-name:db-cw}
+@keyframes db-cw{0%,11%{stroke-dashoffset:1}15.5%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@media(prefers-reduced-motion:reduce){
+  .db-bar *{animation:none!important;stroke-dashoffset:0!important}
+  .db-bar .db-arcs path{opacity:.3}}
 
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
@@ -1208,9 +1471,12 @@ img[data-photo="control-room-red"]{object-position:center 45%}
 .rack-row h3,.tools-details summary,.brand strong,.footer-brand,
 .artist-index span,.plain-title,.plan-part h3,.paths-head h2,.path h4,
 .closing-note h2,.wwa-title,.mode h3,.next-card h3,.mission-line,.why-line,
-.unit-prose p.unit-turn{
+.unit-prose p.unit-turn,.qa-q,.hero-mission,.response,.hum-title,.db-word{
   font-family:var(--display);font-weight:500;letter-spacing:-.01em
 }
+/* The admission line under a tool is the engineer speaking, not a label:
+   the display face in italic, like the Sagan attribution. */
+.tool-foot p{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0}
 .artist-index span,.tools-details summary{font-weight:500}
 /* .display must set its line-height HERE, after .hero-title: the hero h1
    carries both classes at equal specificity, so source order is what decides
@@ -1233,7 +1499,7 @@ img[data-photo="control-room-red"]{object-position:center 45%}
 /* ---- Reading: Space Grotesk 400 -------------------------------------- */
 .page-deck,.plain-lead,.hero-deck,.section-copy,.intro-copy,.person-copy,.expo-copy,
 .unit-prose p,.unit-lede,.service-row .service-copy,.rate-panel p,
-.mode p,.next-card p,.mission-why{
+.mode p,.next-card p,.mission-why,.qa-a,.qa-close{
   font-family:var(--sans);font-weight:400;letter-spacing:0
 }
 .page-deck{line-height:1.6}
@@ -1246,16 +1512,20 @@ img[data-photo="control-room-red"]{object-position:center 45%}
 .eyebrow,.kicker,.unit-label,.next-kicker,.service-group h2,.plan-part .plan-mark,
 .pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
 .fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
-.unit-no{
+.unit-no,.plan-more,.gd-label,.sheet-row,.unit-note,.rack-row .dest,.sheet-rev .wrap,
+.tool-label,.tr-key,.tr-num,.hum-crumb,.hum-opt .no{
   font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
 }
 /* Load-bearing. */
 .eyebrow,.next-kicker,.service-group h2,.plan-part .plan-mark,
-.path-fold summary,.fold summary,.service-price{color:var(--aux-hot)}
+.path-fold summary,.fold summary,.service-price,.plan-more,.tr-key.hot{color:var(--aux-hot)}
 /* Supporting. */
 .kicker,.unit-label,.pull-quote cite,.brand span,.hero-eyebrow,
-.menu-links a span{color:var(--aux-cool)}
+.menu-links a span,.tool-label,.tr-key,.hum-crumb{color:var(--aux-cool)}
+/* SVG labels take the tier's face and tracking; fill is SVG's color and
+   font-size must stay small enough for the 720-unit viewBox. */
+.gd-label{fill:var(--muted);font-size:13px;letter-spacing:.1em}
 /* The qualifier under a price is the tier's one exception: it modifies the
    number above it rather than being a peer of it. */
 .service-price small{display:block;margin-top:.4rem;font-size:var(--fs-fine);
@@ -1284,7 +1554,9 @@ img[data-photo="control-room-red"]{object-position:center 45%}
    tier: uppercasing them would be uppercasing prose. */
 .lead-photo figcaption,.inline-photo figcaption,.archive-strip figcaption,
 .credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
-.photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption{
+.photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption,
+.studio-hero-photo figcaption,.studio-gallery figcaption,.call,.mnote,
+.tool-under p,.hum-reset,.db-line{
   font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
   letter-spacing:.02em;text-transform:none;color:var(--muted)}
 

@@ -3,23 +3,19 @@
  *
  * Tokens: {{RIBBON}}, {{CREDIT_CARDS}}, {{ARTIST_INDEX}}, {{MEDIA_INDEX}}
  * and {{IMG:name}} for CDN photos (see src/lib/photos.ts).
+ *
+ * TEARDOWN (Edward, 17 Aug): the site reduces to Home + Hierarchy Options
+ * (+ the unlisted doors-draft lab; the intake was trashed pending its rebuild). Every other
+ * page module stays in ./pages as the locked archive - unimported, so
+ * unbuilt - recoverable from here or from git history when its rebuild
+ * comes.
  */
 import index from "./pages/index";
-import work from "./pages/work";
-import studio from "./pages/studio";
-import services from "./pages/services";
-import contact from "./pages/contact";
-import about from "./pages/about";
-import education from "./pages/education";
-import news from "./pages/news";
+import hierarchyOptions from "./pages/hierarchy-options";
+import doorsDraft from "./pages/doors-draft";
 
 export const pages: Record<string, string> = {
   "index": index,
-  "work": work,
-  "studio": studio,
-  "services": services,
-  "contact": contact,
-  "about": about,
-  "education": education,
-  "news": news,
+  "hierarchy-options": hierarchyOptions,
+  "doors-draft": doorsDraft,
 };
