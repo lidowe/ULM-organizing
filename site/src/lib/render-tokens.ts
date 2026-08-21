@@ -4,7 +4,7 @@ import {
   mediaIndexHtml,
   ribbonHtml,
 } from "./credits";
-import { photo } from "./photos";
+import { photo, photoName } from "./photos";
 
 const TOKENS: Record<string, () => string> = {
   "{{RIBBON}}": ribbonHtml,
@@ -13,22 +13,10 @@ const TOKENS: Record<string, () => string> = {
   "{{MEDIA_INDEX}}": mediaIndexHtml,
 };
 
-/** Widths requested from the asset CDN for responsive `srcset` candidates. */
-const WIDTHS = [480, 768, 1024, 1440, 1920];
-
 /**
- * Most photos render either full-bleed or inside the 1200px content column,
- * so one `sizes` hint covers the layout without per-image bookkeeping.
- */
-const SIZES = "(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1200px";
-
-function srcsetFor(url: string): string {
-  return WIDTHS.map((w) => `${url}?w=${w} ${w}w`).join(", ");
-}
-
-/**
- * Add responsive `srcset`/`sizes` to CDN images, and make the first image on
- * a page eager + high priority so the largest paint isn't waiting on a
+ * Stamp registry photos with `data-photo="<name>"` so the focal-point rules
+ * in site.css survive Vite's hashed asset filenames, and make the first image
+ * on a page eager + high priority so the largest paint isn't waiting on a
  * lazy-load callback. Everything below it stays lazy.
  */
 function enhanceImages(html: string): string {
@@ -36,20 +24,27 @@ function enhanceImages(html: string): string {
 
   return html.replace(/<img\b[^>]*>/g, (tag) => {
     const src = /\ssrc="([^"]+)"/.exec(tag)?.[1];
-    if (!src || !src.startsWith("/__l5e/") || tag.includes("srcset=")) return tag;
+    const name = src ? photoName(src) : undefined;
+    if (!name) return tag;
 
     const isFirst = first;
     first = false;
 
-    let out = tag.replace(
-      /\ssrc="/,
-      ` sizes="${SIZES}" srcset="${srcsetFor(src)}" src="`,
-    );
+    let out = tag;
+    if (!out.includes("data-photo=")) {
+      out = out.replace(/<img\b/, `<img data-photo="${name}"`);
+    }
 
     if (isFirst) {
       out = out.replace(/\sloading="lazy"/, "");
-      out = out.replace(/<img\b/, '<img loading="eager" fetchpriority="high" decoding="async"');
-    } else if (!out.includes("decoding=")) {
+      if (!out.includes("loading=")) {
+        out = out.replace(/<img\b/, '<img loading="eager"');
+      }
+      if (!out.includes("fetchpriority=")) {
+        out = out.replace(/<img\b/, '<img fetchpriority="high"');
+      }
+    }
+    if (!out.includes("decoding=")) {
       out = out.replace(/<img\b/, '<img decoding="async"');
     }
 

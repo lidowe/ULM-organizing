@@ -21,3 +21,16 @@ export const photos: Record<string, string> = Object.fromEntries(
 export function photo(name: string): string {
   return photos[name] ?? "";
 }
+
+/**
+ * Reverse lookup, url -> registry name. Lets the token renderer stamp
+ * `data-photo="<name>"` onto rendered <img> tags, so CSS can target a photo
+ * by its stable name instead of a src that changes with Vite's build hashes.
+ */
+const namesByUrl: Record<string, string> = Object.fromEntries(
+  Object.entries(photos).map(([name, url]) => [url, name]),
+);
+
+export function photoName(url: string): string | undefined {
+  return namesByUrl[url];
+}
