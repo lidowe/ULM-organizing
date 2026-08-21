@@ -1,5 +1,30 @@
 # Website Strategy and Architecture Notes
 
+> **Accuracy review, 2026-08-21.** The framework in this document holds up, and
+> most of Part II is already implemented on the live TanStack site — the home
+> page runs orient → problem routing → category stance → evidence → CTA today.
+> What was stale has been corrected in place, each marked **[Corrected]**:
+>
+> 1. **The audience matrix (§4)** did not match the settled audience list in
+>    `docs/BRIEF.md` — it had no priority order, included audiences that are
+>    not chased (institutions, labels), and omitted the settled ranking:
+>    independent artists first, then training, then studio technical work,
+>    then whole-room design by arrangement.
+> 2. **The information architecture (§7)** proposed a hypothetical nav. The
+>    actual nav is settled: Services, Work, Learn, Studio, About, with Contact
+>    as the persistent CTA. "How I Work" (Process) was deliberately merged
+>    into Services; the old URLs 301-redirect.
+> 3. **The page audit list (§11)** named pages that do not exist (FAQ,
+>    separate per-service pages, Team) and missed ones that do (Studio, Work,
+>    News). Replaced with the real page tree.
+> 4. **"Why It Exists" (Part II)** stated one thesis where the site settled
+>    two: the mission line is *control back in the hands of the person making
+>    the art*; *access outpaced understanding* is the education thesis ("The
+>    tools reached everyone. The training did not." — the Learn page).
+> 5. Added the **standing constraints** (§2a) that bound every choice in this
+>    document but were absent from it: copy ownership, conservative credits,
+>    caption policy, and the not-chased list.
+
 ## Purpose of This Document
 
 This document expands a basic website-change outline into a professional working framework. It also addresses a more unusual strategic problem: the business has multiple, sometimes contradictory objectives and is not merely competing within an established category, but attempting to create a new lane.
@@ -48,6 +73,22 @@ For a category-creating business, this layer must come before conventional site 
 - Conversion strategy
 - Geographic versus remote positioning
 
+## 2a. Standing Constraints [Corrected — added]
+
+These are settled decisions (see `CLAUDE.md` and `docs/BRIEF.md`) that bound
+everything below:
+
+- **The copy is Edward's.** Wording changes are proposed, not made. Mechanical
+  fixes (typos, entities, markup) are free.
+- **Conservative credits.** Every listed credit reflects an actual studio duty
+  beyond intern or casual presence. Never upgraded, never implied by placement.
+- **Captions describe the room and the work, never the people.** No photo is
+  placed where it argues for a service it is not evidence of.
+- **Remote-first.** Columbia, SC is where the work is delivered from, stated
+  as fact on Contact and in the footer, never the leading identity.
+- **Not chased:** labels, construction management, used-gear resale. Shop, if
+  built, is cables and merch only.
+
 ## 3. Business Objectives and Their Tensions
 
 Do not force contradictory objectives into one fixed priority order. Record the tension explicitly:
@@ -72,14 +113,19 @@ The priority order should change with visitor state:
 
 Maintain an audience matrix rather than relying on one vague idea of “the client.”
 
-| Audience | What they want | What worries them | What proves competence |
-|---|---|---|---|
-| Artist | A better record | Cost, chemistry, outcome | Records, experience, philosophy |
-| Engineer | A solution to a technical or creative plateau | Being talked down to | Technical specificity |
-| Home-studio owner | A system that works | Buying the wrong gear | Diagnosis and practical results |
-| Professional studio | Specialist expertise | Credibility | Track record and technical depth |
-| Institution | A reliable specialist | Risk and professionalism | Experience, scope, and process |
-| Non-music client | A solution to an audio problem | The business appears to serve only musicians | Clearly applicable services |
+**[Corrected]** The original matrix here had no priority order and included
+audiences the practice does not chase (institutions, labels, non-music
+clients as a target group). The settled list, in priority order
+(`docs/BRIEF.md` §1):
+
+| # | Audience | What they want | What worries them | What proves competence |
+|---|---|---|---|---|
+| 1 | Independent artists funding their own records | A better record; to be routed from a symptom, not a service name | Cost, chemistry, losing control of the record | Credits, experience, the mission being real |
+| 2 | Engineers, assistants and students who need training | The apprenticeship knowledge that no longer exists as a career path | Being talked down to | Technical specificity, teaching history |
+| 3 | Home and project studio owners | A system and room that work | Buying the wrong gear | Diagnosis first, measurement, practical results |
+| 4 | Whole-room design and build (by arrangement only) | A specialist who has built rooms | Risk | Bay 8, the build work; never a lead offer, never a listed rate |
+
+**Explicitly not chased:** labels, construction management, used-gear resale.
 
 This matrix should influence hierarchy, copy, imagery, and navigation—not merely wording.
 
@@ -151,14 +197,23 @@ Possible credibility elements include:
 - Breadcrumbs and orientation, where appropriate
 - Search, filtering, or category systems, if needed
 
-Keep navigation legible even when the business concept is unusual. A conventional structure might be:
+Keep navigation legible even when the business concept is unusual.
+
+**[Corrected]** The structure is no longer hypothetical; it is settled and
+live:
 
 - Home
-- Work / Services
-- How I Work
+- Services — with Process ("How I Work") deliberately merged in, so prices
+  sit behind the reasoning for them
+- Work
+- Learn (`/education`) — the intended home for long-form written material
+- Studio
 - About
-- Resources / Ideas
-- Contact
+- Contact — persistent CTA rather than a nav destination
+- News — reachable, not in the primary nav
+
+Legacy URLs (`/process`, `/credits`, `/reach`, `/who-we-are`) 301-redirect to
+their new homes.
 
 The innovation can live in the content architecture. Visitors should not have to learn both what the business is and how to operate the website at the same time.
 
@@ -323,24 +378,18 @@ Repeat the following audit for every major page.
 - Qualification before inquiry
 - What happens after clicking
 
-Apply this audit to:
+Apply this audit to the pages that actually exist. **[Corrected]** — the
+original list assumed separate per-service pages, a FAQ, and a Team page,
+none of which exist; services are one consolidated page by design:
 
 - Home / landing
-- About
-- Services overview
-- Each major service page
-- Consulting
-- Recording
-- Mixing
-- Production
-- Education
-- Technical or system work
-- Team and collaborators
-- Credentials, work, and proof
-- Philosophy or methodology, if retained
-- FAQ
+- Services (consolidated: process, modes of working, all service rows, rates)
+- Work (credits, artists, studios; the proof layer)
+- Learn (`/education`; the largest gap between strategic importance and current state)
+- Studio (rooms, equipment, acoustics)
+- About (the person, the industry argument, why this exists)
 - Contact and intake
-- Articles, resources, or research
+- News (empty; cadence undecided)
 
 ## 12. UX and Usability Audit
 
@@ -480,6 +529,14 @@ The solution is not to choose one objective. The site should let them run in par
 
 This is neither a conventional commercial site nor a manifesto site.
 
+**[Corrected — status note]** The current home page already runs this
+sequence: hero (orientation) → mission band (the contradiction) → "What Is
+Getting in the Way?" (problem-state routing) → "What this is" (the category
+stance) → "Why this exists" (the argument, with the full account deferred to
+its own future page) → "Every role" plus the credits ribbon (evidence) →
+"Tell Me What You're Working On" (conversion). This section is a record of
+the reasoning behind that page, not a to-do list.
+
 The opening screen does not need to explain the whole philosophy. It only needs to establish enough coordinates that the visitor is not lost:
 
 ### What This Is
@@ -488,7 +545,16 @@ Audio work, systems, production, technical problem-solving, and education.
 
 ### Why It Exists
 
-Access to tools has increased faster than understanding.
+**[Corrected]** The original draft put one thesis here: *access to tools has
+increased faster than understanding.* The site settled on two, at different
+depths, both in Edward's words:
+
+- **The mission line (home page):** control back in the hands of the person
+  making the art — major-label quality and talent for anyone, anywhere,
+  without the overhead.
+- **The education thesis (Learn page):** "The tools reached everyone. The
+  training did not." This is the access-versus-understanding argument, and it
+  lives with the teaching offer rather than in the hero.
 
 ### What Makes It Different
 
