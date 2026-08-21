@@ -24,20 +24,22 @@ import theGap from "./pages/the-gap";
 import story from "./pages/story";
 import proof from "./pages/proof";
 import start from "./pages/start";
+import preProduction from "./pages/pre-production";
 import hierarchyOptions from "./pages/hierarchy-options";
 import doorsDraft from "./pages/doors-draft";
 
 export const pages: Record<string, string> = {
-  "index": index,
-  "complete": complete,
-  "fix": fix,
-  "learn": learn,
-  "evaluate": evaluate,
-  "purple": purple,
+  index: index,
+  complete: complete,
+  fix: fix,
+  learn: learn,
+  evaluate: evaluate,
+  purple: purple,
   "the-gap": theGap,
-  "story": story,
-  "proof": proof,
-  "start": start,
+  story: story,
+  proof: proof,
+  start: start,
+  "pre-production": preProduction,
   // Working surfaces, unlisted: Edward's ranking page and the icon lab.
   "hierarchy-options": hierarchyOptions,
   "doors-draft": doorsDraft,

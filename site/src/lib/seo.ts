@@ -107,6 +107,15 @@ export const PAGES: PageEntry[] = [
     priority: "0.8",
   },
   {
+    slug: "pre-production",
+    path: "/pre-production",
+    title: "A Chance to Be Heard · Upper Level Music",
+    description:
+      "Before we reach for a microphone, a short, informal Q&A. We wouldn't know which mic to start with without knowing what's being delivered into it.",
+    changefreq: "monthly",
+    priority: "0.6",
+  },
+  {
     slug: "start",
     path: "/start",
     title: "Start · Upper Level Music",

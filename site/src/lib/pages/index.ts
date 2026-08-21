@@ -12,13 +12,13 @@ export default `
         <div class="sheet-row sheet-what"><span>Mixing &middot; Production &middot; Systems &middot; Teaching</span><span>Independent Artists</span><span>Remote &middot; Columbia SC</span></div>
         <div class="sheet-body">
           <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><em>Major Key Changes.</em></span></span></h1>
-          <p class="hero-mission">One engineer &mdash; Edward Lidow, thirty years in rooms from Miami to LA, now working from Columbia SC and remote. Mixing and production for independent artists, studio systems work, and teaching aimed at the day you don&rsquo;t need me.</p>
+          <p class="hero-mission">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
         </div>
       </div>
     </div>
   </div>
   <figure class="hero-panel">
-    <img src="{{IMG:rack-ulm-front}}" alt="A studio rack seen head on: a Sonic Farm Creamer+ at the top, a pair of Undertone Audio MPEQ-1s, a Stam SA-T69 and an A-Designs Ventura SE, NPNG DMP-2NW preamps, a Retro 176, a red 19-inch panel reading UPPER LEVEL MUSIC, a Retro Sta-Level Gold Edition, and a Mamba XD8 patchbay below" fetchpriority="high" />
+    <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console mid-session, working at the screen, an engineer beside him, the control room lit by the desk" fetchpriority="high" />
   </figure>
 </section>
 
@@ -34,9 +34,24 @@ export default `
   </div>
 </section>
 
+<section class="rack-unit identity-unit">
+  <div class="wrap">
+    <div class="unit-label reveal"><span class="unit-no">02</span><span>Whoever walked in</span></div>
+    <h2 class="unit-title">Doors, Not Departments.</h2>
+    <div class="identity-grid reveal">
+      <article class="identity-card"><div class="kicker">The Artist</div><p>You can talk about the song in human terms. Tell me what feels wrong and what you are trying not to lose.</p></article>
+      <article class="identity-card"><div class="kicker">The Engineer</div><p>The technical depth is there when you want it. Gain structure, impedance interaction, summing, conversion &mdash; we can work at that level directly.</p></article>
+      <article class="identity-card"><div class="kicker">The Student</div><p>The apprenticeship that no longer exists. If you want to know why a ribbon needs 70 dB of clean gain, I will show you.</p></article>
+      <article class="identity-card"><div class="kicker">The Audiophile</div><p>A playback system that never matched the record, taken seriously. A listening room is a room, and rooms can be measured.</p></article>
+      <article class="identity-card"><div class="kicker">The Client</div><p>A podcast, a voiceover, a space that has to sound right. Audio work isn&rsquo;t just for chart-topping hits.</p></article>
+    </div>
+    <p class="identity-close reveal">You could be three of these in the same week. The doors route the problem, not the title.</p>
+  </div>
+</section>
+
 <section class="rack-unit unit-soft gap-teaser">
   <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">02</span><span>Why this exists</span></div>
+    <div class="unit-label reveal"><span class="unit-no">03</span><span>Why this exists</span></div>
     <h2 class="unit-title">The Tools Reached Everyone. The Knowledge Didn&rsquo;t.</h2>
     <div class="unit-prose">
       <p>For most of a century, knowledge moved through this trade the way signal moves through a patchbay: <em>normalled</em>. It flowed by default &mdash; engineer to assistant, assistant to the intern holding the coffee. The rooms were the schools. Nobody called it teaching. It was just how a record got made.</p>
@@ -61,7 +76,7 @@ export default `
 
 <section class="rack-unit proof-strip">
   <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">03</span><span>On record</span></div>
+    <div class="unit-label reveal"><span class="unit-no">04</span><span>On record</span></div>
     <h2 class="unit-title">Real Records. Real Roles.</h2>
     <p class="unit-lede">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p>
   </div>
@@ -71,7 +86,7 @@ export default `
     <figure class="award-plaque"><img src="{{IMG:award-riaa-wayne-rebirth}}" alt="RIAA gold plaque for Lil Wayne, Rebirth" loading="lazy" /><figcaption>Lil Wayne, <em>Rebirth</em>, RIAA gold</figcaption></figure>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
-  <div class="wrap proof-actions reveal"><a class="btn" href="/proof">Every credit, with its exact role</a></div>
+  <div class="wrap proof-actions reveal"><a class="btn" href="/proof">See the full record</a></div>
 </section>
 
 <section class="cta-section">

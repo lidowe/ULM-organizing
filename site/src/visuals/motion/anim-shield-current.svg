@@ -7,7 +7,7 @@
 .sc-flow{stroke-dasharray:7 5;animation:sc-run 1.1s linear infinite}
 @media (prefers-reduced-motion: reduce){.sc *{animation:none!important}}
 </style>
-<text x="24" y="32" class="hi">WHERE PIN 1 LANDS</text>
+<text x="24" y="32">WHERE PIN 1 LANDS</text>
 <text x="24" y="50">INTERFERENCE ARRIVES ON THE SHIELD EITHER WAY</text>
 <text x="52" y="86">PIN 1 &#8594; CHASSIS</text>
 <text x="264" y="86" class="hi">PIN 1 &#8594; AUDIO 0V</text>

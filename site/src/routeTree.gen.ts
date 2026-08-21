@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as CompleteRouteImport } from './routes/complete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
+import { Route as DescribingSoundRouteImport } from './routes/describing-sound'
 import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as EvaluateRouteImport } from './routes/evaluate'
@@ -22,6 +23,7 @@ import { Route as HierarchyOptionsRouteImport } from './routes/hierarchy-options
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as PreProductionRouteImport } from './routes/pre-production'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ProofRouteImport } from './routes/proof'
 import { Route as PurpleRouteImport } from './routes/purple'
@@ -64,6 +66,11 @@ const CreditsRoute = CreditsRouteImport.update({
   path: '/credits',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DescribingSoundRoute = DescribingSoundRouteImport.update({
+  id: '/describing-sound',
+  path: '/describing-sound',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DoorsDraftRoute = DoorsDraftRouteImport.update({
   id: '/doors-draft',
   path: '/doors-draft',
@@ -102,6 +109,11 @@ const McpRoute = McpRouteImport.update({
 const NewsRoute = NewsRouteImport.update({
   id: '/news',
   path: '/news',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreProductionRoute = PreProductionRouteImport.update({
+  id: '/pre-production',
+  path: '/pre-production',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProcessRoute = ProcessRouteImport.update({
@@ -194,6 +206,7 @@ export interface FileRoutesByFullPath {
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
@@ -202,6 +215,7 @@ export interface FileRoutesByFullPath {
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/proof': typeof ProofRoute
   '/purple': typeof PurpleRoute
@@ -225,6 +239,7 @@ export interface FileRoutesByTo {
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
@@ -233,6 +248,7 @@ export interface FileRoutesByTo {
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/proof': typeof ProofRoute
   '/purple': typeof PurpleRoute
@@ -257,6 +273,7 @@ export interface FileRoutesById {
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
   '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
@@ -265,6 +282,7 @@ export interface FileRoutesById {
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
   '/proof': typeof ProofRoute
   '/purple': typeof PurpleRoute
@@ -290,6 +308,7 @@ export interface FileRouteTypes {
     | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/doors-draft'
     | '/education'
     | '/evaluate'
@@ -298,6 +317,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/proof'
     | '/purple'
@@ -321,6 +341,7 @@ export interface FileRouteTypes {
     | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/doors-draft'
     | '/education'
     | '/evaluate'
@@ -329,6 +350,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/proof'
     | '/purple'
@@ -352,6 +374,7 @@ export interface FileRouteTypes {
     | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
     | '/doors-draft'
     | '/education'
     | '/evaluate'
@@ -360,6 +383,7 @@ export interface FileRouteTypes {
     | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
     | '/proof'
     | '/purple'
@@ -384,6 +408,7 @@ export interface RootRouteChildren {
   CompleteRoute: typeof CompleteRoute
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
+  DescribingSoundRoute: typeof DescribingSoundRoute
   DoorsDraftRoute: typeof DoorsDraftRoute
   EducationRoute: typeof EducationRoute
   EvaluateRoute: typeof EvaluateRoute
@@ -392,6 +417,7 @@ export interface RootRouteChildren {
   LearnRoute: typeof LearnRoute
   McpRoute: typeof McpRoute
   NewsRoute: typeof NewsRoute
+  PreProductionRoute: typeof PreProductionRoute
   ProcessRoute: typeof ProcessRoute
   ProofRoute: typeof ProofRoute
   PurpleRoute: typeof PurpleRoute
@@ -445,6 +471,13 @@ declare module '@tanstack/react-router' {
       path: '/credits'
       fullPath: '/credits'
       preLoaderRoute: typeof CreditsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/describing-sound': {
+      id: '/describing-sound'
+      path: '/describing-sound'
+      fullPath: '/describing-sound'
+      preLoaderRoute: typeof DescribingSoundRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/doors-draft': {
@@ -501,6 +534,13 @@ declare module '@tanstack/react-router' {
       path: '/news'
       fullPath: '/news'
       preLoaderRoute: typeof NewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pre-production': {
+      id: '/pre-production'
+      path: '/pre-production'
+      fullPath: '/pre-production'
+      preLoaderRoute: typeof PreProductionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/process': {
@@ -624,6 +664,7 @@ const rootRouteChildren: RootRouteChildren = {
   CompleteRoute: CompleteRoute,
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
+  DescribingSoundRoute: DescribingSoundRoute,
   DoorsDraftRoute: DoorsDraftRoute,
   EducationRoute: EducationRoute,
   EvaluateRoute: EvaluateRoute,
@@ -632,6 +673,7 @@ const rootRouteChildren: RootRouteChildren = {
   LearnRoute: LearnRoute,
   McpRoute: McpRoute,
   NewsRoute: NewsRoute,
+  PreProductionRoute: PreProductionRoute,
   ProcessRoute: ProcessRoute,
   ProofRoute: ProofRoute,
   PurpleRoute: PurpleRoute,

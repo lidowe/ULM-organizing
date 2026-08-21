@@ -64,6 +64,6 @@
 <text class="rm-l0" x="60" y="270" >AXIAL MODE 1 — HALF WAVELENGTH FITS THE ROOM</text>
 <text class="rm-l1" x="60" y="270">MODE 2 — ONE NULL INSIDE THE ROOM</text>
 <text class="rm-l2" x="60" y="270">MODE 3 — TWO NULLS INSIDE THE ROOM</text>
-<text x="60" y="42" class="hi">ROOM MODES</text>
+<text x="60" y="42">ROOM MODES</text>
 <text x="60" y="290">RED = PRESSURE NULL — MOVE THE MIC, NOT THE EQ</text>
 </svg>

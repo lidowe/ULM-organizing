@@ -402,7 +402,7 @@ img,svg,canvas{display:block;max-width:100%}
    to be cropped, so it letterboxes inside its half rather than filling it. */
 .hero-panel{position:absolute;top:0;right:0;bottom:0;width:50%;margin:0;padding:0;
   display:flex;align-items:center;justify-content:flex-end;pointer-events:none}
-.hero-panel img{width:100%;height:100%;object-fit:contain;object-position:right center}
+.hero-panel img{width:100%;height:100%;object-fit:cover;object-position:62% center}
 
 .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);line-height:1;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .btn>*{position:relative;z-index:1}
@@ -703,7 +703,7 @@ img,svg,canvas{display:block;max-width:100%}
   /* Below the copy rather than beside it. object-fit is dropped here: with a
      height cap it shrinks the photo instead of bounding it. */
   .hero-panel{position:static;width:auto;height:auto;margin:2.4rem var(--gutter) 0;justify-content:center}
-  .hero-panel img{width:min(100%,360px);height:auto;object-fit:fill;margin-inline:auto}
+  .hero-panel img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;margin-inline:auto}
   .hero-rack-inner{grid-template-columns:1fr}
 }
 @media(max-width:660px){
@@ -1461,6 +1461,7 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 .lex-word{min-width:7.5em;color:var(--paper)}
 .lex-mech{flex:1;color:var(--paper-soft)}
 @media(max-width:560px){.lexicon-list li{flex-wrap:wrap}.lex-mech{flex-basis:100%}}
+.section-mark{margin:0 0 .9rem}
 /* The door rail: compact cross-navigation on door pages. */
 .door-rail{display:grid;gap:.5rem;max-width:760px}
 .rail-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:.35rem 1rem;border:1px solid var(--line);padding:.75rem .9rem;text-decoration:none;transition:border-color .2s,background .2s}
@@ -1470,6 +1471,12 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 .rail-row[aria-current="page"]{border-color:var(--line-soft);opacity:.45;pointer-events:none}
 /* Home units around the doors. */
 .doors-unit .router-note a{color:var(--paper)}
+/* Whoever walked in: five identities, one door system. */
+.identity-grid{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.identity-card{border:1px solid var(--line-soft);background:rgba(236,234,229,.015);padding:1rem 1.05rem}
+.identity-card .kicker{margin-bottom:.55rem}
+.identity-card p{margin:0;font-size:var(--fs-sm);line-height:1.6;color:var(--paper-soft)}
+.identity-close{margin-top:1.2rem;color:var(--muted);max-width:52ch}
 .gap-teaser .gap-more{margin-top:1.4rem}
 .proof-strip .award-grid{margin-bottom:var(--photo-rhythm)}
 /* Terms said out loud, on the page where the asking happens. */

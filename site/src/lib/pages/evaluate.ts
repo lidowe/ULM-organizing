@@ -27,21 +27,52 @@ export default `
 
 <section class="rack-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>Before you spend</span></div>
-    <h2 class="unit-title">What a Piece Will Actually Do, Before You Spend.</h2>
-    <div class="unit-prose">
-      <p>Equipment guidance is evaluation too: what a piece will actually do in your chain, and what you already own that is being wasted. The answer is physics first &mdash; and where the physics runs out, the tool says so, because past that line the answer isn&rsquo;t a calculation. It&rsquo;s a session.</p>
-      <p>One of the checks, drawn to scale &mdash; what an external clock actually changes:</p>
+    <div class="unit-label"><span class="unit-no">02</span><span>Before you spend</span><span class="unit-note">engine: Studio Virtual</span></div>
+    <h2 class="unit-title">Will That Mic Like That Preamp?</h2>
+    <div class="prose-noted">
+      <div class="unit-prose">
+        <p>Every microphone meets every preamp at a junction, and the junction has an opinion. A preamp that loads a microphone&rsquo;s frequency-dependent impedance differently at different frequencies is applying an EQ curve before the signal reaches the gain stage &mdash; before you have touched a single knob. Most of the time the bridge is generous and nothing happens. Sometimes it rolls off the top, damps the transients, or starves a ribbon right at its resonance.</p>
+        <p>Pick a pairing. The tool reports the bridging ratio, what it does to the sound, and whether the preamp has the gain the mic actually asks for. The microphones and preamps are the ones racked in this studio, plus a typical interface channel so you can test the room you are actually in.</p>
+      </div>
+      <aside class="margin-notes" aria-label="Bench notes">
+        <p class="mnote">Ratios under 10:1 start to color. Under 3:1 they start to load. Ribbons are checked at their resonance peak, not their nominal number &mdash; that is where they get hurt.</p>
+        <p class="mnote">Gain demand assumes a quiet source. Loud sources forgive; whispers don&rsquo;t.</p>
+      </aside>
+    </div>
+    <div class="tool" data-imp-tool>
+      <div class="tool-io">
+        <label class="tool-field"><span class="tool-label">Microphone</span><select data-imp-mic aria-label="Choose a microphone"></select></label>
+        <span class="tool-arrow" aria-hidden="true">&rarr;</span>
+        <label class="tool-field"><span class="tool-label">Preamp</span><select data-imp-pre aria-label="Choose a preamp"></select></label>
+      </div>
+      <div class="tool-readout" data-imp-out aria-live="polite"></div>
+      <div class="tool-foot"><p>The numbers are physics and they are dependable. Which coloration the song wants doesn&rsquo;t compute. That part is the session.</p></div>
     </div>
     <figure class="scene reveal">
-      {{ANIM:clock-jitter}}
+      {{ANIM:impedance-bridging}}
     </figure>
   </div>
 </section>
 
 <section class="rack-unit unit-soft">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>What it costs</span></div>
+    <div class="unit-label"><span class="unit-no">03</span><span>The clock question</span></div>
+    <h2 class="unit-title">The Purchase Checks, Drawn to Scale.</h2>
+    <div class="unit-prose">
+      <p>Two of the most-asked purchases in the rack, stated as physics. The external clock: error = timing offset &times; slew rate, zero at the peaks, largest at the crossings. The summing box: equal, uncorrelated sources add as power, +3 dB of floor per doubling. State what happens, then listen.</p>
+    </div>
+    <figure class="scene reveal">
+      {{ANIM:clock-jitter}}
+    </figure>
+    <figure class="scene reveal">
+      {{ANIM:summing-noise}}
+    </figure>
+  </div>
+</section>
+
+<section class="rack-unit unit-soft">
+  <div class="wrap">
+    <div class="unit-label"><span class="unit-no">04</span><span>What it costs</span></div>
   </div>
   <div class="wrap services-stack">
     <article class="service-row reveal" id="consulting"><h2>Diagnosis, Strategy and Planning</h2><div class="service-copy"><p>A record that is not becoming what it was meant to be, played back and planned: what order to work in, what to fix now, and what to leave alone.</p></div><div class="service-price">$100&ndash;$150 / hr<small>remote or by appointment</small></div></article>
@@ -51,7 +82,7 @@ export default `
 
 <section class="rack-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">04</span><span>The other doors</span></div>
+    <div class="unit-label"><span class="unit-no">05</span><span>The other doors</span></div>
     {{DOOR_RAIL}}
   </div>
 </section>
@@ -59,7 +90,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Send the Mix You Want Honest Ears On.</h2><p>A rough, a reference, or the link to the piece you are about to buy. What comes back is what was heard, not what you hoped to hear.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <a class="btn primary reveal" href="/start">Send the mix</a>
   </div>
 </section>
 `;

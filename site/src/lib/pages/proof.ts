@@ -3,7 +3,7 @@
 // the equipment. No motion here: proof is photographs, plaques and roles,
 // and a narrated physics scene on this page would be decoration.
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">On record</div><h1 class="page-title">Real Records. Real Roles.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console with a session running, seen from behind, a band tracking through the control room glass" fetchpriority="high" /></figure></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">On record</div><h1 class="page-title">Real Records. Real Roles.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:room-major-console}}" alt="A major-label control room: a large-format console stretching toward the live-room glass, monitors flown above" fetchpriority="high" /></figure></div></section>
 
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">The Credits, With Their Exact Roles.</h2><div class="section-copy"><p>Role language follows the public credits.</p></div></div></div>
@@ -64,7 +64,7 @@ export default `
     <figure><img src="{{IMG:locker-shelves}}" alt="Shelves of microphone cases and boxes in the mic locker" loading="lazy" /><figcaption>The locker</figcaption></figure>
     <figure><img src="{{IMG:mics-fan-cab}}" alt="Five microphones fanned out in front of a guitar speaker cabinet" loading="lazy" /><figcaption>Choosing the path</figcaption></figure>
     <figure><img src="{{IMG:racks-preamp-loom}}" alt="Outboard preamps and a loom of patch cables behind the rack" loading="lazy" /><figcaption>Front end</figcaption></figure>
-    <figure><img src="{{IMG:bench-tech-repair}}" alt="A circuit board mid-repair on the tech bench" loading="lazy" /><figcaption>Kept working</figcaption></figure>
+    <figure><img src="{{IMG:build-console-teardown}}" alt="A console mid-teardown on work stands in the shop, panels off" loading="lazy" /><figcaption>Kept working</figcaption></figure>
   </div>
   <div class="wrap tools-details reveal">
     <details><summary>Tube large diaphragm condensers</summary><div class="detail-body">Wunder Audio CM7 GS (K47 capsule, NOS Telefunken 800-series tube, external HV supply) &middot; Telefunken TF51 (in-house CK12 capsule, NOS 6072a, external HV supply)</div></details>

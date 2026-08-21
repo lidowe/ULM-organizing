@@ -31,6 +31,7 @@ export default `
 <section class="rack-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">02</span><span>The lexicon</span></div>
+    <div class="section-mark">{{ICON:translation:lg}}</div>
     <h2 class="unit-title">The Words People Bring, and What They Usually Name.</h2>
     <p class="unit-lede">Your word on the left. The mechanism it most often turns out to be on the right. Usually &mdash; the song gets the final say, which is why the translation is a conversation and not a chart.</p>
     <ul class="lexicon-list reveal">
@@ -73,7 +74,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Describe It in Your Own Words.</h2><p>&ldquo;This part should sound like I&rsquo;m in a spaceship&rdquo; is enough to work from. Translating it is the job.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <a class="btn primary reveal" href="/start">Say it your way</a>
   </div>
 </section>
 `;

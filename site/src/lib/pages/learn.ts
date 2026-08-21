@@ -47,13 +47,16 @@ export default `
     <div class="unit-label"><span class="unit-no">03</span><span>How the teaching sounds</span></div>
     <h2 class="unit-title">Physics Describes. Ears Decide.</h2>
     <div class="unit-prose">
-      <p>Every lesson runs on the same rule as this site: state what happens, the ratio, the bandwidth, the noise, facts about electrons &hellip; then listen. What it does to the song is decided in your ears, not on a spec sheet. Two of the mechanisms, drawn to scale:</p>
+      <p>Every lesson runs on the same rule as this site: state what happens, the ratio, the bandwidth, the noise, facts about electrons &hellip; then listen. What it does to the song is decided in your ears, not on a spec sheet. Three of the mechanisms, drawn to scale:</p>
     </div>
     <figure class="scene reveal">
       {{ANIM:gain-structure}}
     </figure>
     <figure class="scene reveal">
       {{ANIM:precedence-haas}}
+    </figure>
+    <figure class="scene reveal">
+      {{ANIM:comb-filtering}}
     </figure>
   </div>
 </section>
@@ -71,6 +74,9 @@ export default `
         <p>And don&rsquo;t stress, I had an assistant who improperly plugged in a $15,000 Telefunken Elam 251 tube microphone and the mic zapped him so hard he crashed right thru the walls of the booth. (Tube equipment is very high voltage) Don&rsquo;t worry, the mic wasn&rsquo;t damaged. &hellip; Oh, he was checked by a doctor and was fine too. We gave him the rest of the night off.</p>
       </div>
     </div>
+    <figure class="scene reveal">
+      {{ANIM:polar-patterns}}
+    </figure>
   </div>
 </section>
 
@@ -94,7 +100,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Bring the Problem You Are Actually Stuck On.</h2><p>The first session starts from your question, not a syllabus.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <a class="btn primary reveal" href="/start">Ask the first question</a>
   </div>
 </section>
 `;

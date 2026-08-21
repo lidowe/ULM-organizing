@@ -33,14 +33,14 @@ export default `
 
 <section class="page-next">
   <div class="wrap next-grid">
-    <a class="next-card" href="/services">
+    <a class="next-card" href="/complete">
       <span class="next-kicker">Back to</span>
-      <h3>How the work goes, and what it costs.</h3>
-      <p>The planning, the three ways to work, and the rates.</p>
+      <h3>Back through the finishing door.</h3>
+      <p>The process, what it covers, and what each stage runs.</p>
     </a>
     <div class="next-cta">
       <p>Or just answer the first question now.</p>
-      <a class="btn primary" href="/contact">Start the conversation</a>
+      <a class="btn primary" href="/start">Answer the first question</a>
     </div>
   </div>
 </section>

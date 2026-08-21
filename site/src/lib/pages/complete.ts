@@ -21,7 +21,7 @@ export default `
     </figure>
     <div class="unit-prose">
       <p>Upper Level&rsquo;s process is not unlike that paraphrased quote. Even a small task requires learning about you and the universe your project is in.</p>
-      <p>It starts on beat one. Centering pre-planning and pre-production around you. It&rsquo;s an open dialog where we ask a lot of questions in search of your signature voice, and pre-production is where we search.</p>
+      <p>We start with the pickup notes into bar one: pre-planning and pre-production, centered around you. It&rsquo;s an open dialog where we ask a lot of questions in search of your signature voice, and pre-production is where we search.</p>
       <p class="unit-turn">Wondering why the 3rd degree? Well, we&rsquo;re trying to establish the Root.</p>
       <p>Upper Level Music&rsquo;s underlying theme is to empower the creator. The idea starts with you. We focus our attention on listening to your words and what rests between them, so the key signature is yours and we maintain the proper scale &hellip; without accidentals.</p>
     </div>
@@ -30,7 +30,7 @@ export default `
         <span class="plan-mark">First</span>
         <h3>Let&rsquo;s define who <em>you</em> are.</h3>
         <p>Just like any recording, the best outcome happens when you start from the source. Upper Level Music works from an artist-<em>is</em>-the-source mentality: we want to capture the project in your voice, listening to what lives behind the words.</p>
-        <p>Understanding the motivations at the beginning is critical to ending with your voice intact. We don&rsquo;t want to lose the message or its authenticity, so a simple, informal Q&amp;A gives us the template.</p>
+        <p>Understanding the motivations at the beginning is critical to ending with your voice intact. We don&rsquo;t want to lose the message or its authenticity, so a simple, informal Q&amp;A gives us the template. <a href="/pre-production">See a sample Q&amp;A.</a></p>
       </div>
       <div class="plan-part">
         <span class="plan-mark">Then</span>
@@ -39,7 +39,6 @@ export default `
         <p>Knowing the technical terminology isn&rsquo;t necessary. If we&rsquo;re describing a song&rsquo;s feel and you say &ldquo;the drums should have a real dreamy vibe &mdash; I want it to feel like we&rsquo;re floating in space&rdquo;, we know exactly what you mean, and we head that way. <a href="/purple">Sound&hellip; is described in borrowed words.</a></p>
       </div>
     </div>
-    <p class="plain-lead reveal">A production line never misses a beat. That&rsquo;s what&rsquo;s wrong with it.</p>
   </div>
 </section>
 
@@ -58,8 +57,12 @@ export default `
       <li>{{ICON:check-circle:md}}<span>Twelve songs stalled at eighty percent, finished and consistent as a body of work</span></li>
     </ul>
     <p class="unit-turn reveal">One reviewed edit is a real job. We take small ones.</p>
+    <div class="unit-prose reveal"><p>The craft, drawn to scale &mdash; a compressor&rsquo;s attack and release working program material. What it does to your song is decided by ear:</p></div>
+    <figure class="scene reveal">
+      {{ANIM:compressor-envelope}}
+    </figure>
     <figure class="lead-photo reveal">
-      <img src="{{IMG:ed-at-the-console}}" alt="A large-format console with a session running, seen from behind, a band tracking through the control room glass" loading="lazy" />
+      <img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" />
     </figure>
   </div>
 </section>
@@ -92,7 +95,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Bring the Record You Are Trying to Finish.</h2><p>A rough, a reference, or a few sentences is enough. Edward reviews and scopes it before any work or price is agreed.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <a class="btn primary reveal" href="/start">Send the rough</a>
   </div>
 </section>
 `;

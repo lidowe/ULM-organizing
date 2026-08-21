@@ -42,6 +42,9 @@ export default `
       <p>The plan gets written to be built, by you, by your contractor, or by us. What the room needs is the same either way, which is what keeps the recommendation honest. Panels here were built rather than bought, so the advice comes from having made the thing.</p>
       <p>Whole rooms are on the table too, from treatment and wiring through power, monitoring and the gear itself. That work starts with remote planning and measurement and ends with us on site.</p>
     </div>
+    <figure class="scene reveal">
+      {{ANIM:reverb-decay}}
+    </figure>
   </div>
 </section>
 
@@ -52,7 +55,10 @@ export default `
     <div class="unit-prose">
       <p>Patchbay design and normalling, custom cabling, gain structure, converters and clocking, and hum or grounding faults traced end to end. Power draw and distribution planned alongside your licensed electrician; the panel is their job.</p>
       <p>Equipment guidance sits here too: what a piece will actually do before you spend, and what you already own that is being wasted.</p>
+      <p>Every room has one eventually. The internet&rsquo;s answer is a page of eleven possible causes, which is the same as no answer. A bench doesn&rsquo;t work that way: it listens first, tests second, and each test rules half the world out. This is that walk, the one this studio&rsquo;s own troubleshooting guide runs &mdash; no gear to buy at the end of it.</p>
     </div>
+    <div class="tool hum" data-hum-tree></div>
+    <div class="tool-under"><p>Stuck between two branches, or the tree ended without your answer? Send a ten-second phone recording of the noise. A question with no project attached is a normal use of this site.</p></div>
     <figure class="scene reveal">
       {{ANIM:shield-current}}
     </figure>
@@ -86,7 +92,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Describe the Room or System You Are Fighting With.</h2><p>What is happening, when it started, and what you have already ruled out. A ten-second phone recording of the noise is a normal thing to send.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <a class="btn primary reveal" href="/start">Describe the problem</a>
   </div>
 </section>
 `;

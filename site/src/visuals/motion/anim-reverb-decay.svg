@@ -9,7 +9,7 @@
 .rv-env{stroke-dasharray:520;stroke-dashoffset:520;animation:rv-env 6s linear infinite}
 @keyframes rv-rt{0%,70%{opacity:0}82%,100%{opacity:1}}
 .rv-rt{animation:rv-rt 6s linear infinite;opacity:0}
-@media (prefers-reduced-motion: reduce){.rv *{animation:none!important}}
+@media (prefers-reduced-motion: reduce){.rv *{animation:none!important}.rv-wipe{transform:none}.rv-env{stroke-dashoffset:0}.rv-rt{opacity:1}}
 </style>
 <defs><clipPath id="rvClip"><rect class="rv-wipe" x="56" y="72" width="404" height="188"/></clipPath></defs>
 <path d="M60 78V250H440" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
@@ -19,6 +19,6 @@
 <path class="rv-env" d="M60.0 92.0L295.6 227.4L440.0 250.0" stroke="var(--ulm-accent,#E03B3B)" stroke-width="2"/>
 <g class="rv-rt"><path d="M60 68H296M60 62v12M296 62v12" stroke="var(--ulm-accent,#E03B3B)" stroke-width="1.5"/>
 <text x="162" y="56" class="hi">RT60</text></g>
-<text x="60" y="42" class="hi">DECAY TO -60 dB</text>
+<text x="60" y="42">DECAY TO -60 dB</text>
 <text x="60" y="278">DIRECT — EARLY REFLECTIONS — DIFFUSE TAIL</text>
 </svg>
