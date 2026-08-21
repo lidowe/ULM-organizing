@@ -190,7 +190,7 @@ philosophy of the work. Placeholder copy, stand-in images and unfinished
 sections are the current state on purpose, not a backlog.
 
 So: do not smooth over rough edges, fill in blanks, or replace placeholder text
-with plausible-sounding copy because it reads as unfinished. If something looks
+with plausible-sounding copy because it reads as unfinished. If there is a change that seems it should apply or be revised in a way that aligns with the progression of the work, suggest it, do not move forward with suggestions unless specifically stated suggestion is approved. If something looks
 like an oversight, ask before changing it. Actual defects — broken links, images
 that 404, text that contradicts itself — are still worth fixing and reporting.
 
