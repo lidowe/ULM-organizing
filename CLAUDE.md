@@ -2,7 +2,7 @@
 
 Standing decisions for this repo. These were settled in conversation and kept
 getting re-litigated or forgotten, which is the only reason this file exists.
-If something here conflicts with what Edward says now, he wins — update the file.
+If something here conflicts with what Edward says now, check to see if the change has thematic reduancy somewhere else on the working draft
 
 ## Whose words these are
 
