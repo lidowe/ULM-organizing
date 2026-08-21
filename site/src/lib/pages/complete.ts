@@ -45,7 +45,7 @@ export default `
 <section class="rack-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">02</span><span>What this covers</span></div>
-    <h2 class="unit-title">We<h2 class="unit-title">Hand It Over.</h2>mp;rsquo;ll Take It From Here.</h2>
+    <h2 class="unit-title">We&rsquo;ll Take It From Here.</h2>
     <ul class="covers-list reveal">
       <li>{{ICON:tape-reel:md}}<span>Full production from demo to master, or any single stage of it</span></li>
       <li>{{ICON:mic-condenser:md}}<span>Recording and tracking, remote or in person, with engineers matched to the material</span></li>
