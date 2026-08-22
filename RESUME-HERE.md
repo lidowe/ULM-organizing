@@ -82,10 +82,12 @@ VISUALS     src/visuals/ = 70 icons + 9 ui + 14 motion scenes. All 14 ship. 6 we
 CURRENT LAW      CLAUDE.md (root, active branch) — standing decisions + "The mandate" (full authority, 21 Aug)
                  docs/BRIEF.md — audience priority, site intent, what's finished vs scaffolding
                  docs/DESIGN.md — the redesign's locked decisions + why doors beat service/client/sector splits
-RESEARCH (this session, scratch — NOT in git, regenerate if needed):
-                 COPY-BIBLE.md · VOICE-PROFILE.md · DESIGN-RESEARCH.md · VISUALS-AUDIT.md
-                 were written to the session scratchpad and are LOST when this container dies.
-                 VOICE-PROFILE.md is the highest-value one: Edward's quotes, humor, metaphor engine, anti-slop list.
+RESEARCH (2026-08-21, now saved in git at docs/research/):
+                 VOICE-PROFILE.md  — Edward's quotes, verdicts, humor, metaphor engine, 15 voice tests,
+                                     anti-slop list. READ THIS BEFORE WRITING ANY COPY.
+                 COPY-BIBLE.md     — every verbatim Edward passage, by theme, with provenance flags
+                 DESIGN-RESEARCH.md— dark-site patterns, computed contrast values, motion contract
+                 VISUALS-AUDIT.md  — the 92-file icon/motion library audited + mapped to the doors
 SUPERSEDED REF   (root, active branch) BIBLE-MAP.md · CLEAN-ROOM.md · CONCEPT-BRIEF.md · COPY-AUDIT-aug-16.md
                  PROPOSALS-aug-16.md · REBUILD-DRAFT.md · REVIEW-aug-16.md · TASTE-MAP.md
                  Prior session's verdict (handoff/HANDOFF.md): "a map with no legend", led "miles off course".
