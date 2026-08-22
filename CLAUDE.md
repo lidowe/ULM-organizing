@@ -1,5 +1,21 @@
 # Upper Level Music — working notes
 
+## Session protocol (read before anything else)
+
+1. **Read `RESUME-HERE.md` first, every session.** It carries current state,
+   open questions, warnings, and where every document lives. It is short on
+   purpose.
+2. **Update `RESUME-HERE.md` last, before stopping** — and again after each
+   committed milestone, not only at the end. Sessions die without warning
+   (credit limits, container recycling); a resume file written only at the end
+   is a resume file that never gets written. Commit and push it each time.
+3. **Never read `human/**`.** Those files are Edward's plain-English
+   translations of the same facts, written for a non-coder. They cost tokens
+   and tell you nothing you cannot get from the machine-facing files. Blocked
+   in `.claude/settings.json`. When you write a machine file, write its human
+   twin in the same commit and stamp both identically — writing is cheap,
+   reading them back is not.
+
 Standing decisions for this repo. These were settled in conversation and kept
 getting re-litigated or forgotten, which is the only reason this file exists.
 If something here conflicts with what Edward says now, he wins — update the file.
