@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - Upper Level Music</title>
+  <meta name="description" content="Tell your story and get a role-based scope recommendation.">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a href="index.html" class="brand"><strong>Upper Level Music</strong><span>Intake</span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="process.html">Process</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <button type="button" class="menu-btn" data-open-menu aria-expanded="false" aria-controls="overlay-nav">Menu</button>
+    </div>
+  </header>
+
+  <div class="overlay" data-overlay aria-hidden="true">
+    <div class="overlay-panel" id="overlay-nav">
+      <button type="button" class="btn btn-ghost close-btn" data-close-menu>Close</button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="process.html">Process</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main" class="section">
+    <div class="wrap">
+      <header class="page-head reveal">
+        <div>
+          <p class="kicker">Tell your story</p>
+          <h1>Describe your project stage, blocker, and target outcome.</h1>
+          <p class="section-intro">You do not need perfect language. Clear context is enough to map the right role and scope for your project.</p>
+        </div>
+        <aside class="panel"><h2>Response format</h2><p>You receive a role-based recommendation, scope outline, and practical next step. No pressure to commit before fit is clear.</p></aside>
+      </header>
+
+      <form class="form" data-inquiry-form>
+        <div class="form-grid">
+          <div class="field"><label for="name">Name</label><input id="name" name="name" required></div>
+          <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+          <div class="field"><label for="role">Role</label><select id="role" name="role" required><option value="">Select</option><option>Artist</option><option>Producer</option><option>Engineer</option><option>Artist-engineer</option><option>Other</option></select></div>
+          <div class="field"><label for="stage">Current stage</label><select id="stage" name="stage" required><option value="">Select</option><option>Idea / writing</option><option>Demo</option><option>Tracking complete</option><option>Rough mix</option><option>Near finish</option><option>Release prep</option></select></div>
+          <div class="field"><label for="desired-path">Primary role you want from me</label><select id="desired-path" name="desired-path" required><option value="">Select</option><option>Producer / executive producer</option><option>Recording and mix engineer</option><option>Vocal producer / vocal coaching</option><option>Co-engineer support</option><option>Mentorship / technical training</option><option>Not sure yet</option></select></div>
+          <div class="field"><label for="timeline">Timeline</label><select id="timeline" name="timeline" required><option value="">Select</option><option>Under 2 weeks</option><option>2 to 6 weeks</option><option>1 to 3 months</option><option>Flexible</option></select></div>
+          <div class="field"><label for="budget">Budget band</label><select id="budget" name="budget" required><option value="">Select</option><option>Under 500</option><option>500 to 1,500</option><option>1,500 to 5,000</option><option>5,000+</option><option>Need guidance first</option></select></div>
+          <div class="field"><label for="references">Reference tracks (2-3 links)</label><input id="references" name="references" placeholder="Spotify, YouTube, or private links"></div>
+        </div>
+        <div class="field"><label for="blocker">Main blocker right now</label><input id="blocker" name="blocker" required></div>
+        <div class="field"><label for="story">Project story</label><textarea id="story" name="story" required placeholder="What are you trying to make, what is failing, and what should the finished result do?"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Intake</button>
+        <p class="notice">Your email app should open with a prefilled message. If it does not, email edwardlidow@upperlevelmusic.com directly.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-row"><div><strong>Upper Level Music</strong></div><nav class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="work.html">Work</a></nav></div></footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>
