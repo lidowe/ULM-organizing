@@ -9,14 +9,44 @@
    deletions, branch and tag creation, settings changes, and anything that
    alters state. Reading, searching and reporting are not actions — gather
    freely, then stop and propose.
-2. **Read `RESUME-HERE.md` first, every session.** It carries current state,
+2. **Declared read depth. No undisclosed sampling.** The failure is not that
+   reading gets rationed — it is that the rationing goes undisclosed, reported
+   in the same confident register as a full read. So every read is declared
+   before and reported after.
+   - **2.1 Three depths, binding.** FULL — every line, no truncation, verified
+     by line count. PARTIAL — name exactly what was read, what was skipped, and
+     why. SEARCH — pattern-match only; the file was not read and no claim about
+     it may be made.
+   - **2.2 Large files only, measured in bytes.** The weights prompt fires when
+     a file is **≥ 28 KB on disk** (≈ 7k tokens, ≈ 400 lines) — size read from
+     the filesystem before opening, never token-counted, because the byte size
+     rides free on any listing while tokens cannot be known without counting.
+     Under 28 KB: read FULL and say so in one line, no prompt.
+   - **2.3 Fixed template, never re-worded.** When it fires it is always this
+     block, same wording every time (one canonical prompt, never re-phrased):
+     `READ SCOPE · <file> · <KB / lines>` / `PROPOSED <FULL|PARTIAL|SEARCH>` /
+     `WEIGHTS [1]budget [2]answer-locus [3]structure [4]redundancy [5]recency
+     [6]truncation-risk` (≤1 line on which push off FULL, and why) /
+     `YOUR CALL ok · or override any [1–6]`.
+   - **2.4 The six variables** that set depth absent an override: context
+     budget · guessing where the answer lives · structure (code vs. prose) ·
+     assumed redundancy · recency/prominence bias · silent truncation.
+   - **2.5 Report after, including truncation.** e.g. "FULL on 11 of 12;
+     studio.ts truncated at 2,000 lines, 340 unread — re-read?" No silent gaps.
+   - **2.6 Absence claims require FULL.** At SEARCH or PARTIAL depth, never
+     state what a file does *not* contain.
+   - **2.7 A forced second pass means pass one failed.** Do not repeat the six
+     lines — report what was missed and which variable caused it, subdivide the
+     six into their finer drivers, and hand that back to re-steer. Pass two
+     should be the last.
+3. **Read `RESUME-HERE.md` first, every session.** It carries current state,
    open questions, warnings, and where every document lives. It is short on
    purpose.
-3. **Update `RESUME-HERE.md` last, before stopping** — and again after each
+4. **Update `RESUME-HERE.md` last, before stopping** — and again after each
    committed milestone, not only at the end. Sessions die without warning
    (credit limits, container recycling); a resume file written only at the end
    is a resume file that never gets written. Commit and push it each time.
-4. **Never read `human/**`.** Those files are Edward's plain-English
+5. **Never read `human/**`.** Those files are Edward's plain-English
    translations of the same facts, written for a non-coder. They cost tokens
    and tell you nothing you cannot get from the machine-facing files. Blocked
    in `.claude/settings.json`. When you write a machine file, write its human

@@ -4,7 +4,7 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-08-21 19:48 UTC · claude-opus-5 · branch claude/site-iterations-docs-review-dbr45q @ 05f1330
+STAMP    2026-08-22 · branch claude/consolidation-attempt-analysis-c8sqwt @ 366b0a8
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
 LIVE     main @ c6bc9ac -> upperlevelmusic.com. Runs the OLD pre-doors site. NOT the work below.
 PREVIEW  https://claude-site-iterations-docs-review-dbr45q-ulm-organizing.upperlevelmusic.workers.dev
