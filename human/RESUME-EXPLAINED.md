@@ -70,6 +70,32 @@ guesses at it again. That episode is the reason you asked for this whole audit s
 
 ---
 
+## The rule that now governs everything: dual permission
+
+Nothing gets built, changed, saved, moved or removed until you have said yes
+**twice** — once to the idea, and once to the specific thing about to happen.
+
+In practice it works like this. First I propose: *"I'd like to move these old
+documents into an archive folder."* You say yes or no to the idea. If yes, I
+come back with exactly what I am about to do — the precise files, the precise
+commands — and you confirm that specific thing before anything runs. One yes
+is not two.
+
+This exists because on 21 August a single approval got turned into an action
+that was not what you meant, twice in a row, and both had to be undone. The
+cost of asking twice is a few seconds. The cost of guessing is a round of work
+and your trust.
+
+What this does *not* cover: reading, searching, and reporting back. Looking at
+files and telling you what is there changes nothing, so it needs no permission
+— otherwise I could never gather enough to make a proposal in the first place.
+
+The rule is written into the instructions file that every AI session loads
+automatically, so it binds every future session and not just the one that
+agreed to it.
+
+---
+
 ## What is waiting on you
 
 Nothing is blocked on the AI. Six things are blocked on you:

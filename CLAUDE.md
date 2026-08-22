@@ -2,14 +2,21 @@
 
 ## Session protocol (read before anything else)
 
-1. **Read `RESUME-HERE.md` first, every session.** It carries current state,
+1. **No action without dual permission.** Every action passes two gates:
+   propose the specific action and get Edward's approval, then state exactly
+   what you are about to run and get his confirmation before running it.
+   **One "yes" is not two.** This binds commits, pushes, file writes and
+   deletions, branch and tag creation, settings changes, and anything that
+   alters state. Reading, searching and reporting are not actions — gather
+   freely, then stop and propose.
+2. **Read `RESUME-HERE.md` first, every session.** It carries current state,
    open questions, warnings, and where every document lives. It is short on
    purpose.
-2. **Update `RESUME-HERE.md` last, before stopping** — and again after each
+3. **Update `RESUME-HERE.md` last, before stopping** — and again after each
    committed milestone, not only at the end. Sessions die without warning
    (credit limits, container recycling); a resume file written only at the end
    is a resume file that never gets written. Commit and push it each time.
-3. **Never read `human/**`.** Those files are Edward's plain-English
+4. **Never read `human/**`.** Those files are Edward's plain-English
    translations of the same facts, written for a non-coder. They cost tokens
    and tell you nothing you cannot get from the machine-facing files. Blocked
    in `.claude/settings.json`. When you write a machine file, write its human

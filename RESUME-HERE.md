@@ -23,6 +23,8 @@ BLOCKED  Nothing. Two unanswered questions under DECISIONS.
 ## NEVER DO
 
 ```
+- Act on one approval. DUAL PERMISSION: propose -> Edward approves -> state the exact command -> he confirms -> run.
+  Binds commits, pushes, writes, deletes, branch/tag creation, settings. Reads and reports are not actions.
 - Publish to main / merge to main. main = live site, no staging, live in ~2 min. Only on Edward's word "publish".
 - Touch PR #8 (claude/upperlevelmusic-review-hod2rl -> main, open since Aug 16). Edward: "should remain set aside".
 - Rewrite pushed history (force-push, rebase, amend, squash). Lovable is connected to this repo and syncs.
