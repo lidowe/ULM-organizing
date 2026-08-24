@@ -82,16 +82,31 @@ without re-reading everything:
 
 ---
 
-## Seeing and editing the work — the living document
+## The live loop — how we actually work
 
-Edward sees and edits the work like a living document, not by typing into a side
-file with the browser next to it:
+The shared surface is the **preview URL**: the live, rebuilt version of the
+branch (not upperlevelmusic.com). It is the *real* site, so what Claude pushes is
+exactly what Edward sees — **no conversion ambiguity, no clone that drifts.**
 
-- The current build always renders at the **preview URL** — that's the visual truth.
-- The **copy and structure** live in an editable surface Edward changes directly,
-  and Claude syncs those edits back into the site. He edits; Claude typesets and
-  pushes; the preview updates. This surface is built and kept current as part of
-  the work.
+1. **Batch.** Edward assembles a set of changes — typed, drawn on a screenshot of
+   the real preview, or via the Copy Desk.
+2. **Button.** Edward says **"push it."**
+3. **Implement.** Claude makes the edits in code and pushes to the branch.
+4. **Live.** The preview rebuilds (~2 min); Edward checks the real result on the
+   preview URL and redirects if needed.
+
+Batch → button → live. This is the **lean** path: targeted edits and a push, no
+clones to regenerate, no giant reads. Claude verifies with a local build (the
+identical render) because its sandbox can't open the live URL; Edward confirms on
+the preview.
+
+**The Copy Desk** stays as the one-click way to edit pure copy in a saving
+document; "pull the copy desk" folds those edits into the same loop.
+
+**Setup that makes this work:** the working session must be **scoped to the
+site's branch** — its working/output branch *is* that branch — or the push is
+walled off (that is exactly what happened in the session that wrote this file).
+Start each working session on that branch.
 
 ---
 
