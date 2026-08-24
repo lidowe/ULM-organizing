@@ -6,6 +6,7 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/tanstack/vite";
+import { imagetools } from "vite-imagetools";
 
 export default defineConfig({
   tanstackStart: {
@@ -14,6 +15,8 @@ export default defineConfig({
     server: { entry: "server" },
   },
   vite: {
-    plugins: [mcpPlugin()],
+    // imagetools generates the resized variants behind the ?w=...&as=srcset
+    // imports in src/lib/photos.ts.
+    plugins: [mcpPlugin(), imagetools()],
   },
 });

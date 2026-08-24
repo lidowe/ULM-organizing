@@ -1,0 +1,6 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Musical note">
+<title>Musical note</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M26 46V14l14 6v6"/>
+<ellipse cx="19" cy="46" rx="7" ry="5.5" transform="rotate(-18 19 46)"/>
+</svg>

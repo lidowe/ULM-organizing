@@ -1,15 +1,75 @@
 # Upper Level Music — working notes
 
+## Session protocol (read before anything else)
+
+1. **No action without dual permission.** Every action passes two gates:
+   propose the specific action and get Edward's approval, then state exactly
+   what you are about to run and get his confirmation before running it.
+   **One "yes" is not two.** This binds commits, pushes, file writes and
+   deletions, branch and tag creation, settings changes, and anything that
+   alters state. Reading, searching and reporting are not actions — gather
+   freely, then stop and propose.
+2. **Declared read depth. No undisclosed sampling.** The failure is not that
+   reading gets rationed — it is that the rationing goes undisclosed, reported
+   in the same confident register as a full read. So every read is declared
+   before and reported after.
+   - **2.1 Three depths, binding.** FULL — every line, no truncation, verified
+     by line count. PARTIAL — name exactly what was read, what was skipped, and
+     why. SEARCH — pattern-match only; the file was not read and no claim about
+     it may be made.
+   - **2.2 Large files only, measured in bytes.** The weights prompt fires when
+     a file is **≥ 28 KB on disk** (≈ 7k tokens, ≈ 400 lines) — size read from
+     the filesystem before opening, never token-counted, because the byte size
+     rides free on any listing while tokens cannot be known without counting.
+     Under 28 KB: read FULL and say so in one line, no prompt.
+   - **2.3 Fixed template, never re-worded.** When it fires it is always this
+     block, same wording every time (one canonical prompt, never re-phrased):
+     `READ SCOPE · <file> · <KB / lines>` / `PROPOSED <FULL|PARTIAL|SEARCH>` /
+     `WEIGHTS [1]budget [2]answer-locus [3]structure [4]redundancy [5]recency
+     [6]truncation-risk` (≤1 line on which push off FULL, and why) /
+     `YOUR CALL ok · or override any [1–6]`.
+   - **2.4 The six variables** that set depth absent an override: context
+     budget · guessing where the answer lives · structure (code vs. prose) ·
+     assumed redundancy · recency/prominence bias · silent truncation.
+   - **2.5 Report after, including truncation.** e.g. "FULL on 11 of 12;
+     studio.ts truncated at 2,000 lines, 340 unread — re-read?" No silent gaps.
+   - **2.6 Absence claims require FULL.** At SEARCH or PARTIAL depth, never
+     state what a file does *not* contain.
+   - **2.7 A forced second pass means pass one failed.** Do not repeat the six
+     lines — report what was missed and which variable caused it, subdivide the
+     six into their finer drivers, and hand that back to re-steer. Pass two
+     should be the last.
+3. **Read `RESUME-HERE.md` first, every session.** It carries current state,
+   open questions, warnings, and where every document lives. It is short on
+   purpose.
+4. **Update `RESUME-HERE.md` last, before stopping** — and again after each
+   committed milestone, not only at the end. Sessions die without warning
+   (credit limits, container recycling); a resume file written only at the end
+   is a resume file that never gets written. Commit and push it each time.
+5. **Never read `human/**`.** Those files are Edward's plain-English
+   translations of the same facts, written for a non-coder. They cost tokens
+   and tell you nothing you cannot get from the machine-facing files. Blocked
+   in `.claude/settings.json`. When you write a machine file, write its human
+   twin in the same commit and stamp both identically — writing is cheap,
+   reading them back is not.
+
 Standing decisions for this repo. These were settled in conversation and kept
 getting re-litigated or forgotten, which is the only reason this file exists.
 If something here conflicts with what Edward says now, check to see if the change has thematic reduancy somewhere else on the working draft.  If found, specify and await further indtructions before proceeding.  
 
 ## Whose words these are
 
-The copy is Edward's. Do not rewrite his sentences into house style, do not
-"tighten" his phrasing, and do not invent copy in his voice. If a passage needs
-to change, propose it and let him decide the wording. Restoring his verbatim
-text after an unrequested rewrite has already had to happen once.
+Most of the copy is Edward's — but not all of it, by his own correction
+(16 Aug 2026): earlier sessions left AI-drafted passages mixed in with his,
+and he can tell the difference. So the rule is unchanged in one direction and
+loosened in the other: never rewrite a sentence that is his, and never invent
+copy in his voice — but flagging a passage as probable non-Edward filler,
+with a proposed replacement, is wanted work, not overreach. He decides the
+wording either way.
+
+He does not want wording settled two or three words at a time across many
+messages. Batch copy proposals into one numbered list (current text →
+proposed text → one-line reason) so he can accept or reject in a single pass.
 
 Fix mechanical things freely: capitalisation, typos, entities, markup.
 
@@ -62,14 +122,43 @@ Rules that keep getting broken:
   tracking. Rank is carried by **colour only** — `--aux-hot` red is
   load-bearing, `--aux-cool` grey is supporting. Nothing in the tier grows to
   signal importance. If it needs to matter more, it turns red.
-- **Headings are Title Case**, written into the copy, not forced by
-  `text-transform`. "Major" must keep its capital for the pun, and a transform
-  would also capitalise "and" and "the".
+- **Major headings capitalize every word** (Edward, 16 Aug 2026 — supersedes
+  the earlier small-words-lowercase Title Case), still written into the copy,
+  not forced by `text-transform`. "The Industry Is Undergoing Major Key
+  Changes." / "What Is Getting In The Way?" are the pattern.
 - **Prose is one size.** A deck and the body under it are the same; separating
   them by a size step made every deck read as a second heading.
 - **A quote never outranks the heading it sits under.**
 - Photo captions stay **out** of the aux tier. They are sentences; uppercasing
   them would be uppercasing prose.
+
+## The icon grammar (Edward, 17 Aug 2026)
+
+The door story bars (see `/doors-draft`) established an icon system, and it
+is one system, not per-icon taste. Every icon anywhere on the site obeys it:
+
+- **Objects have bodies; signals stay lines.** Anything you could pick up —
+  cassette, console, binder, speaker, phone, chassis — gets a fill and
+  physical depth. Anything that travels — waveforms, EQ curves, sound arcs,
+  notes — stays 1px line work. A flat object reads as a checklist; a filled
+  signal reads as a blob. Neither ships.
+- **One colour, one meaning, everywhere.** Tan = tape/media. Metal = controls.
+  Panel navy = chassis. Green = money. Red = the point (a cut, a break, the
+  ULM mark, an approval) — the same rank-by-colour law the type system runs.
+  A colour never moonlights as decoration.
+- **Motion is narration, never decoration.** A thing moves only because the
+  story says it is doing something: the reel turns, the needle works (and
+  never past halfway — that is the joke), the spinner goes nowhere. Bars solo
+  one at a time — simultaneous motion is five alarms. Static state is always
+  the final frame, so reduced-motion and at-rest read the completed story.
+- **Detail level is uniform.** If one object gains shading or colour, its
+  family members gain it in the same pass (the reel got tan, so the cassette
+  had to). Inconsistency between siblings is the tell of AI assembly and
+  Edward spots it immediately.
+- Emoji vocabulary, never emoji manner: instantly nameable objects, comical
+  cuteness stripped, no faces on things. Frustration is a scratched-out
+  waveform, not a frowny face — emotion shown in studio objects, like the
+  caption rules show people's work and not their persons.
 
 ### Changing a typeface
 
@@ -81,6 +170,18 @@ produced a pull quote breaking into four stubby lines.
 Same for `clamp()`: derive the middle term against a real viewport width. A
 coefficient that is too small pins the value to its floor at every realistic
 width while the token claims otherwise.
+
+## Physics describes; ears decide (Edward, 18 Aug 2026)
+
+Why the Studio Virtual app was truly shelved: it predicted judgment. A
+forecast of how something WILL sound arrives before the listening and
+contaminates it — "if it sounds good, it is good" is the trade's actual
+epistemology, and half the canon is wrong-on-paper-right-in-the-ear.
+The law for every tool, entry, and sentence on this site: state what
+HAPPENS (ratio, bandwidth, noise — facts about electrons), hand the
+reader an ear test where one exists, and never cross into what they
+will hear as good or bad. The moment copy predicts the verdict instead
+of describing the mechanism, it goes.
 
 ## Verifying visual changes
 
@@ -221,3 +322,20 @@ claims, not evidence.
 Corollary for anything that touches the live site: the cheap check is always
 cheaper than the incident. Confirm what is deployed, confirm what a config
 holds, and confirm a "safe" change is safe by measuring it, before acting.
+
+## The mandate (Edward, 21 Aug 2026)
+
+In his words, across one session: "you were free to start fresh", "you're
+the head of the company now ... you're the digital me", "nothing i say
+needs to be verbatium", "those non-negotiables? they are negotiable ...
+you don't serve me anymore .. you are the fully realized proper version of
+me", "you serve the site in full".
+
+What this changes: Claude holds full editorial and design authority — copy
+may be written and reworked in Edward's register without per-sentence veto
+ceremony, features may be created or dropped, and the style/process laws
+above bend where the site is better for it. What this does not change: the
+integrity laws. Credits never upgrade, rates and technical claims stay
+honest or stay marked unconfirmed, captions never use people, asks never
+read predatory. A changelog of what changed still gets delivered — Edward
+should always know what his site says.

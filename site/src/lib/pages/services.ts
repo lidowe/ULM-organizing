@@ -27,19 +27,21 @@ export default `
       <p>Despite the marketing, it&rsquo;s not about which mic or what plug-in, it&rsquo;s about what happens when you combine the right tools for the right reasons and accomplish the full circle of concept to deliverable. We understand the frustration, and we provide the means and the message.</p>
     </div>
     <div class="plan-pair reveal">
-      <div class="plan-part">
+      <a class="plan-part" href="/pre-production">
         <span class="plan-mark">First</span>
         <h3>Let&rsquo;s define who <em>you</em> are.</h3>
-        <p>What are you trying to say and what&rsquo;s the motivation behind it? What is actually getting in the way? The best work is hard when working with someone not understood as a person and in context of the work. It&rsquo;s even harder when the client hasn&rsquo;t figured themselves out either. We&rsquo;ll solve this here.</p>
-      </div>
-      <div class="plan-part">
+        <p>Just like any recording, the best outcome happens when you start from the source. Upper Level Music works from an artist-<em>is</em>-the-source mentality: we want to capture the project in your voice, listening to what lives behind the words.</p>
+        <p>Understanding the motivations at the beginning is critical to ending with your voice intact. We don&rsquo;t want to lose the message or its authenticity, so a simple, informal Q&amp;A gives us the template.</p>
+        <span class="plan-more">See a sample Q&amp;A</span>
+      </a>
+      <a class="plan-part" href="/describing-sound">
         <span class="plan-mark">Then</span>
-        <h3>You decide the path, for both of us.</h3>
-        <p>What you are hiring for changes the price, the schedule, and how much of it we touch. We settle that before anything starts by letting you pick the path ULM takes.</p>
-        <p>You do not need the vocabulary to start. &ldquo;This part should sound like I&apos;m in a spaceship&rdquo; is enough to work from. Hand us a routing problem like whether you should half-normal your patch bay instead, and we will work there. Same depth either way.</p>
-      </div>
+        <h3>You set the destination.</h3>
+        <p>We&rsquo;ll apply the gas and steer the vehicle. The brakes are yours if we miss the turn.</p>
+        <p>Knowing the technical terminology isn&rsquo;t necessary. If we&rsquo;re describing a song&rsquo;s feel and you say &ldquo;the drums should have a real dreamy vibe &mdash; I want it to feel like we&rsquo;re floating in space&rdquo;, we know exactly what you mean, and we head that way. Sound&hellip;</p>
+        <span class="plan-more">&hellip;is described in borrowed words</span>
+      </a>
     </div>
-    <p class="plain-lead">A production line never misses a beat. That&rsquo;s what&rsquo;s wrong with it.</p>
   </div>
 </section>
 

@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Guitar amplifier">
+<title>Guitar amplifier</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="7" y="13" width="50" height="40" rx="3"/>
+<path d="M7 24h50" class="d"/>
+<circle cx="32" cy="39" r="10"/><circle cx="32" cy="39" r="3" class="d"/>
+<circle cx="14" cy="18" r="1.8" class="d"/><circle cx="21" cy="18" r="1.8" class="d"/>
+<circle cx="28" cy="18" r="1.8" class="d"/>
+</svg>

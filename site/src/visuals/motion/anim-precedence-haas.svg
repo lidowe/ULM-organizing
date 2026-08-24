@@ -1,0 +1,30 @@
+<svg class="hs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" preserveAspectRatio="xMidYMid meet" fill="none" role="img" aria-label="As the delay of a second arrival grows, the image pulls to the first source, then splits into an audible echo">
+<title>Precedence effect</title>
+<style>
+.hs text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:var(--ulm-anim-fs,12px);letter-spacing:1.1px;fill:var(--ulm-dim,#7C838E);stroke:none}
+.hs .hi{fill:var(--ulm-accent,#E03B3B)}
+@keyframes hs-img{0%{transform:translateX(0)}45%,100%{transform:translateX(-120px)}}
+.hs-img{animation:hs-img 9s ease-in-out infinite}
+@keyframes hs-dial{0%{transform:translateX(0)}45%,100%{transform:translateX(300px)}}
+.hs-dial{animation:hs-dial 9s ease-in-out infinite}
+@keyframes hs-echo{0%,72%{opacity:0}82%,100%{opacity:1}}
+.hs-echo{animation:hs-echo 9s ease-in-out infinite;opacity:0}
+@keyframes hs-one{0%,60%{opacity:1}72%,100%{opacity:0}}
+.hs-one{animation:hs-one 9s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.hs *{animation:none!important}}
+</style>
+<rect x="60" y="70" width="46" height="34" rx="3" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<rect x="374" y="70" width="46" height="34" rx="3" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<text x="60" y="122">FIRST ARRIVAL</text><text x="330" y="122">DELAYED COPY</text>
+<circle cx="240" cy="196" r="14" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path d="M103 104 226 186M377 104 254 186" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<g class="hs-img"><circle cx="240" cy="46" r="9" fill="var(--ulm-accent,#E03B3B)" stroke="none"/></g>
+<text x="196" y="26">PERCEIVED IMAGE</text>
+<path d="M60 46H420" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5" stroke-dasharray="3 5"/>
+<text class="hs-echo hi" x="330" y="66">SEPARATE ECHO</text>
+<g transform="translate(60 262)">
+<path d="M0 0h300M0 -5v10M300 -5v10M100 -4v8" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<circle class="hs-dial" cx="0" cy="0" r="4.5" fill="var(--ulm-accent,#E03B3B)" stroke="none"/></g>
+<text x="52" y="286">0</text><text x="140" y="286">~35 ms</text><text x="330" y="286">80 ms</text>
+<text x="60" y="26" class="hi">PRECEDENCE</text>
+</svg>

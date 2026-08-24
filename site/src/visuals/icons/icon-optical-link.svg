@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Optical isolation">
+<title>Optical isolation</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="4" y="24" width="14" height="16" rx="2"/>
+<rect x="46" y="24" width="14" height="16" rx="2"/>
+<path d="M18 32h8M38 32h8"/>
+<path d="M32 22v20" stroke="var(--ulm-accent,#E03B3B)" stroke-dasharray="3 4"/>
+<path d="M28 32h2M34 32h2" stroke="var(--ulm-accent,#E03B3B)"/>
+</svg>

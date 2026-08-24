@@ -1,0 +1,10 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="DI and reamp">
+<title>DI and reamp</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="8" y="18" width="48" height="28" rx="3"/>
+<circle cx="18" cy="32" r="4"/>
+<circle cx="46" cy="32" r="6"/>
+<circle cx="44" cy="30" r="1.2" class="d"/><circle cx="48" cy="30" r="1.2" class="d"/>
+<circle cx="46" cy="34" r="1.2" class="d"/>
+<path d="M28 30h8M28 36h8" stroke="var(--ulm-accent,#E03B3B)" class="d"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Transformer">
+<title>Transformer</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M23 18a4 4 0 0 0 0 9a4 4 0 0 0 0 9a4 4 0 0 0 0 9"/>
+<path d="M41 18a4 4 0 0 1 0 9a4 4 0 0 1 0 9a4 4 0 0 1 0 9"/>
+<path d="M29 15v34M35 15v34"/>
+<path d="M23 18h-9M23 45h-9M41 18h9M41 45h9" class="d"/>
+</svg>

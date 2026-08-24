@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Headphones">
+<title>Headphones</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M12 40v-6a20 20 0 0 1 40 0v6"/>
+<rect x="6" y="36" width="11" height="17" rx="4"/>
+<rect x="47" y="36" width="11" height="17" rx="4"/>
+</svg>

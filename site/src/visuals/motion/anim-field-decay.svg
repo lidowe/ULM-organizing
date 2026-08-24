@@ -1,0 +1,41 @@
+<svg class="fd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" preserveAspectRatio="xMidYMid meet" fill="none" role="img" aria-label="Coupled interference falling with the cube of distance from a transformer">
+<title>Magnetic field decay</title>
+<style>
+.fd text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:var(--ulm-anim-fs,12px);letter-spacing:1.1px;fill:var(--ulm-dim,#7C838E);stroke:none}
+.fd .hi{fill:var(--ulm-accent,#E03B3B)}
+@keyframes fd-l0{0%,0%{opacity:0}2%,22%{opacity:1}25%,100%{opacity:0}}
+.fd-l0{animation:fd-l0 12s linear infinite;opacity:0}
+@keyframes fd-l1{0%,24%{opacity:0}27%,47%{opacity:1}50%,100%{opacity:0}}
+.fd-l1{animation:fd-l1 12s linear infinite;opacity:0}
+@keyframes fd-l2{0%,49%{opacity:0}52%,72%{opacity:1}75%,100%{opacity:0}}
+.fd-l2{animation:fd-l2 12s linear infinite;opacity:0}
+@keyframes fd-l3{0%,74%{opacity:0}77%,97%{opacity:1}100%,100%{opacity:0}}
+.fd-l3{animation:fd-l3 12s linear infinite;opacity:0}
+@keyframes fd-victim{
+0%,22%{transform:translateX(0)}25%,47%{transform:translateX(72px)}
+50%,72%{transform:translateX(164px)}75%,97%{transform:translateX(296px)}
+100%{transform:translateX(0)}}
+.fd-victim{animation:fd-victim 12s linear infinite}
+@keyframes fd-bar{
+0%,22%{transform:scaleY(1.000)}25%,47%{transform:scaleY(0.700)}
+50%,72%{transform:scaleY(0.400)}75%,97%{transform:scaleY(0.100)}
+100%{transform:scaleY(1.000)}}
+.fd-bar{transform-box:fill-box;transform-origin:bottom;animation:fd-bar 12s linear infinite}
+@keyframes fd-pulse{0%{transform:scale(0.3);opacity:0.5}100%{transform:scale(2.6);opacity:0}}
+.fd-pulse{transform-box:view-box;transform-origin:60px 150px;animation:fd-pulse 2s linear infinite}
+@media (prefers-reduced-motion: reduce){.fd *{animation:none!important}.fd-l0{opacity:1!important}}
+</style>
+<text x="24" y="32">DISTANCE, NOT SHIELDING</text>
+<text x="24" y="50">NEAR-FIELD COUPLING FALLS AS 1/r&#179;</text>
+<rect x="52" y="138" width="16" height="24" rx="1" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<ellipse class="fd-pulse" cx="60" cy="150" rx="18" ry="13" stroke="var(--ulm-accent,#E03B3B)" stroke-width="2"/>
+<path d="M60 200H430M104 196v8M176 196v8M268 196v8M400 196v8" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<text x="96" y="218">3&#8243;</text><text x="168" y="218">6&#8243;</text><text x="260" y="218">12&#8243;</text><text x="392" y="218">24&#8243;</text>
+<g class="fd-victim"><path d="M104 168v24" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2.4"/><circle cx="104" cy="164" r="4" fill="var(--ulm-line,#E8E6E1)" stroke="none"/></g>
+<path d="M446 232V108M440 232h12M440 108h12" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<rect class="fd-bar" x="434" y="108" width="12" height="124" fill="var(--ulm-accent,#E03B3B)" stroke="none"/>
+<text x="360" y="98">COUPLED LEVEL</text>
+<text x="410" y="112">0</text><text x="374" y="236">-60 dB</text>
+<text class="fd-l0" x="150" y="268">3&#8243; FROM THE CORE &#183; 0 dB</text><text class="fd-l1" x="150" y="268">6&#8243; FROM THE CORE &#183; -18 dB</text><text class="fd-l2" x="150" y="268">12&#8243; FROM THE CORE &#183; -36 dB</text><text class="fd-l3" x="150" y="268">24&#8243; FROM THE CORE &#183; -54 dB</text>
+<text x="24" y="292">EVERY DOUBLING OF DISTANCE: -18 dB</text>
+</svg>

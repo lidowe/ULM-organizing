@@ -1,108 +1,100 @@
+// Home, rebuilt on the teardown's bedrock (hero handshake → the doors) and
+// grown back deliberately: the doors are now open and each one leads to its
+// page; the Gap argument gets a first move and a link instead of silence;
+// the proof strip puts the plaques where a first visit can see them; the
+// start strip is the only ask. Nothing argues above the doors.
 export default `
 <section class="hero-rack">
   <div class="wrap hero-rack-inner">
     <div class="hero-copy">
-      <p class="hero-eyebrow"><span>ULM</span><span>Edward Lidow</span><span>Est. 2012</span></p>
-      <h1 class="display hero-title"><span class="ln"><span>The Industry is undergoing</span></span><span class="ln"><span><a class="hero-link" href="/about#industry"><em>major key changes.</em></a></span></span></h1>
-      <div class="hero-plate">
-        <p class="hero-deck">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
-      </div>
-      <div class="hero-actions">
-        <a class="btn primary" href="/contact">Start a project</a>
-        <a class="btn" href="/services">See how it works</a>
+      <div class="hero-sheet">
+        <div class="sheet-row"><span>ULM &middot; Session Sheet</span><span>Est. 2012</span><span>Rev. 2026-08-21</span></div>
+        <div class="sheet-row sheet-what"><span>Mixing &middot; Production &middot; Systems &middot; Teaching</span><span>Independent Artists</span><span>Remote &middot; Columbia SC</span></div>
+        <div class="sheet-body">
+          <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><em>Major Key Changes.</em></span></span></h1>
+          <p class="hero-mission">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
+        </div>
       </div>
     </div>
   </div>
   <figure class="hero-panel">
-    <img src="{{IMG:rack-ulm-front}}" alt="A studio rack seen head on: a Sonic Farm Creamer+ at the top, a pair of Undertone Audio MPEQ-1s, a Stam SA-T69 and an A-Designs Ventura SE, NPNG DMP-2NW preamps, a Retro 176, a red 19-inch panel reading UPPER LEVEL MUSIC, a Retro Sta-Level Gold Edition, and a Mamba XD8 patchbay below" fetchpriority="high" />
+    <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console mid-session, working at the screen, an engineer beside him, the control room lit by the desk" fetchpriority="high" />
   </figure>
 </section>
 
-<section class="mission-band">
+<section class="rack-unit doors-unit">
   <div class="wrap">
-    <p class="mission-why">Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation.</p>
-    <p class="mission-line">Upper Level Music is an attempt to turn that around: to put control back in the hands of the person making the art, and bring major-label quality and talent to anyone, anywhere, without the overhead.</p>
-    <p class="mission-open">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
+    <div class="unit-label reveal"><span class="unit-no">01</span><span>Start here</span><span class="unit-note">choose any door</span></div>
   </div>
-</section>
-
-<section class="rack-unit start-here">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">01</span><span>Where to start</span></div>
-    <h2 class="unit-title">What Is Getting in the Way?</h2>
-  </div>
-  <div class="wrap rack-rows">
-    <a class="rack-row" href="/services#mixing"><span class="no">01</span><h3>The record or the performance</h3><p>The song, the mix, the vocal or the production is stuck. It is close and will not cross the last gap.</p></a>
-    <a class="rack-row" href="/services#systems"><span class="no">02</span><h3>The sound, the room or the system</h3><p>It does not translate outside your room. Recording, noise, routing, monitoring or power is unreliable.</p></a>
-    <a class="rack-row" href="/education"><span class="no">03</span><h3>Understanding it and deciding</h3><p>You want to know what is actually wrong, or to learn to do the work yourself.</p></a>
-    <a class="rack-row live" href="/contact"><span class="no">04</span><h3>Not sure which</h3><p>That is a normal place to start. Describe the problem in your own words and we will work out what it is.</p></a>
+  <div class="wrap doors-stack">
+{{DOORS}}
   </div>
   <div class="wrap router-note">
-    <p>Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed.</p>
+    <p>Not sure which? That is a normal place to start. <a href="/start">Describe the problem in your own words</a> and we will work out what it is. Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed.</p>
   </div>
 </section>
 
-<section class="rack-unit stance-unit">
+<section class="rack-unit identity-unit">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>What this is</span></div>
-    <div class="stance-split">
-      <div class="stance-copy">
-        <p class="stance-lead">Upper Level Music is not exactly a recording studio, nor a production house or record label.</p>
-        <p class="stance-lead">The work is divided by who genuinely specializes in what you are asking for, engineers, producers, writers, musicians, vocal coaches, and technicians matched to your project.</p>
-        <p class="stance-lead">Wherever you are in your journey, you will have a focused team working for you. Reach for the upper level, and we will give you a boost.</p>
-      </div>
-      <figure class="stance-photo"><img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" /></figure>
+    <div class="unit-label reveal"><span class="unit-no">02</span><span>Whoever walked in</span></div>
+    <h2 class="unit-title">Doors, Not Departments.</h2>
+    <div class="identity-grid reveal">
+      <article class="identity-card"><div class="kicker">The Artist</div><p>You can talk about the song in human terms. Tell me what feels wrong and what you are trying not to lose.</p></article>
+      <article class="identity-card"><div class="kicker">The Engineer</div><p>The technical depth is there when you want it. Gain structure, impedance interaction, summing, conversion &mdash; we can work at that level directly.</p></article>
+      <article class="identity-card"><div class="kicker">The Student</div><p>The apprenticeship that no longer exists. If you want to know why a ribbon needs 70 dB of clean gain, I will show you.</p></article>
+      <article class="identity-card"><div class="kicker">The Audiophile</div><p>A playback system that never matched the record, taken seriously. A listening room is a room, and rooms can be measured.</p></article>
+      <article class="identity-card"><div class="kicker">The Client</div><p>A podcast, a voiceover, a space that has to sound right. Audio work isn&rsquo;t just for chart-topping hits.</p></article>
     </div>
+    <p class="identity-close reveal">You could be three of these in the same week. The doors route the problem, not the title.</p>
   </div>
 </section>
 
-<section class="rack-unit why-unit">
+<section class="rack-unit unit-soft gap-teaser">
   <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>Why this exists</span></div>
-    <p class="why-copy">Labels used to look for talent and give someone a chance to prove their voice resonates. Now they manufacture a product.</p>
-    <p class="why-line">Some of us refuse to put our emotions on an assembly line.</p>
-    <figure class="why-photo"><img src="{{IMG:wild-drunk-jordan}}" alt="A guitarist on his back on the stage floor, still playing, the rest of the band around him mid-song" loading="lazy" /></figure>
-    <div class="needs-content"><strong>Placeholder, to be expanded</strong>Edward is writing the full version of this. It should end up as its own page for people who want the whole account of what happened to the pipeline, linked from About and Learn rather than sitting in the nav. This short version stays on the home page.</div>
+    <div class="unit-label reveal"><span class="unit-no">03</span><span>Why this exists</span></div>
+    <h2 class="unit-title">The Tools Reached Everyone. The Knowledge Didn&rsquo;t.</h2>
+    <div class="unit-prose">
+      <p>For most of a century, knowledge moved through this trade the way signal moves through a patchbay: <em>normalled</em>. It flowed by default &mdash; engineer to assistant, assistant to the intern holding the coffee. The rooms were the schools. Nobody called it teaching. It was just how a record got made.</p>
+      <p>Then the tools got small and cheap and went home with everyone. That part was good. But the power moved faster than the knowledge, and the knowledge was not included in the transfer.</p>
+    </div>
+    <figure class="gap-diagram reveal">
+      <svg viewBox="0 0 720 130" role="img" aria-label="Diagram: the chain from engineer to assistant to intern to the next record, with the connection broken between assistant and intern">
+        <path class="gd-flow" d="M70 48 H320" pathLength="1"/>
+        <path class="gd-break" d="M348 34 L376 62 M376 34 L348 62"/>
+        <path class="gd-faint" d="M404 48 H650"/>
+        <circle class="gd-node" cx="70" cy="48" r="9"/><circle class="gd-node" cx="263" cy="48" r="9"/><circle class="gd-node gd-dim" cx="456" cy="48" r="9"/><circle class="gd-node gd-dim" cx="650" cy="48" r="9"/>
+        <text class="gd-label" x="70" y="86" text-anchor="middle">Engineer</text>
+        <text class="gd-label" x="263" y="86" text-anchor="middle">Assistant</text>
+        <text class="gd-label" x="456" y="86" text-anchor="middle">Intern</text>
+        <text class="gd-label" x="650" y="86" text-anchor="middle">The Next Record</text>
+      </svg>
+      <figcaption>The normal, interrupted: the tools kept moving; the knowledge didn&rsquo;t.</figcaption>
+    </figure>
+    <p class="gap-more"><a class="btn" href="/the-gap">The whole argument, and the patch around the interruption</a></p>
   </div>
 </section>
 
-<section class="rack-unit more-section">
+<section class="rack-unit proof-strip">
   <div class="wrap">
-    <details class="fold">
-      <summary><span class="fold-k">Our values</span><span class="fold-hint">Read</span></summary>
-      <div class="fold-body">
-        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs, their story, their name, their risk. Our work belongs in service to the song.</p>
-        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world, the gear, the sonic character.</p>
-        <p>It is not the artist&rsquo;s job to know whether an 1176 or a dbx 160VU will help express that. If you are an engineer who wants to know, we will travel that path as far as you want.</p>
-        <p>It is better to listen to the artist in order to hear the song.</p>
-      </div>
-    </details>
-    <details class="fold">
-      <summary><span class="fold-k">Remote work</span><span class="fold-hint">Read</span></summary>
-      <div class="fold-body">
-        <p>Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets us work with artists anywhere, on any schedule.</p>
-        <p>Nothing fully replaces being in the same space. We trade some of that for access, and we are honest about it.</p>
-      </div>
-    </details>
+    <div class="unit-label reveal"><span class="unit-no">04</span><span>On record</span></div>
+    <h2 class="unit-title">Real Records. Real Roles.</h2>
+    <p class="unit-lede">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p>
   </div>
-</section>
-
-<section class="rack-unit proof-unit">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">04</span><span>Every role</span></div>
-    <p class="why-copy">Various roles, various artists, whether the role was large or small or the artist famous or not, every job contributes to the &lsquo;flow state&rsquo; every job asks 100% focus &hellip; yes, even the coffee can ruin an entire day, or fuel the magic later.</p>
-    <p class="why-line">The takeaway is &hellip; no matter the task, we serve the process, we work in service to the song, and the ego stays outside.</p>
-    <p class="why-copy">Get them coffee, route signal flow and place mics, run the DAW or be the tape op, it all was part of a bigger picture and personal growth. Running cables became running sessions, tuning instruments became vocal tuning and production, production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
-    <p class="why-copy">Relationships carried on, years go by and I&rsquo;m asked to build their private studio after our work together commercially&hellip; by being their barista a decade earlier. Others continue as clients, friends and contemporaries to this day. The only thing that stays consistent is the dedication and effort put into every detail.</p>
+  <div class="wrap award-grid reveal">
+    <figure class="award-plaque"><img src="{{IMG:award-riaa-katy-teenage-dream}}" alt="RIAA multi-platinum plaque for Katy Perry, Teenage Dream" loading="lazy" /><figcaption>Katy Perry, <em>Teenage Dream</em>, RIAA 8&times; platinum</figcaption></figure>
+    <figure class="award-plaque"><img src="{{IMG:award-billboard-willie-hires}}" alt="Billboard number one plaque for Willie Nelson, Band of Brothers" loading="lazy" /><figcaption>Willie Nelson, <em>Band of Brothers</em>, Billboard #1 Top Country Albums</figcaption></figure>
+    <figure class="award-plaque"><img src="{{IMG:award-riaa-wayne-rebirth}}" alt="RIAA gold plaque for Lil Wayne, Rebirth" loading="lazy" /><figcaption>Lil Wayne, <em>Rebirth</em>, RIAA gold</figcaption></figure>
   </div>
   <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
-  <div class="wrap proof-actions"><a class="btn" href="/work">See the work</a></div>
+  <div class="wrap proof-actions reveal"><a class="btn" href="/proof">See the full record</a></div>
 </section>
 
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Tell Me What You&rsquo;re Working On.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
-    <a class="btn primary reveal" href="/contact">Start a project</a>
+    <a class="btn primary reveal" href="/start">Start here</a>
   </div>
 </section>
+
+<div class="sheet-rev"><div class="wrap"><span>Home &middot; Rev. 2026-08-21</span><span>Maintained by Edward Lidow</span></div></div>
 `;

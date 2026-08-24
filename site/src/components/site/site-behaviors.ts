@@ -4,8 +4,39 @@
 // absent on the current page.
 
 
+import { initWorkbenchTools } from "./workbench-tools";
+
 export function initSiteBehaviors(): () => void {
   const cleanups: Array<() => void> = [];
+
+  initWorkbenchTools(cleanups);
+
+  // The door rail marks the page it is on, so the current door reads as
+  // location rather than a link to itself.
+  document.querySelectorAll<HTMLAnchorElement>(".door-rail .rail-row").forEach((row) => {
+    if (row.getAttribute("href") === window.location.pathname) {
+      row.setAttribute("aria-current", "page");
+    }
+  });
+
+  // Every inlined teaching scene gets a pause control: looping motion next
+  // to prose needs an off switch that isn't a system setting.
+  document.querySelectorAll<HTMLElement>("figure.scene").forEach((scene) => {
+    if (scene.querySelector(".scene-pause")) return;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "scene-pause";
+    btn.textContent = "Pause";
+    btn.setAttribute("aria-pressed", "false");
+    const toggle = () => {
+      const paused = scene.classList.toggle("paused");
+      btn.textContent = paused ? "Play" : "Pause";
+      btn.setAttribute("aria-pressed", paused ? "true" : "false");
+    };
+    btn.addEventListener("click", toggle);
+    scene.appendChild(btn);
+    cleanups.push(() => btn.removeEventListener("click", toggle));
+  });
 
   const header = document.querySelector(".site-header");
   const setHeader = () =>

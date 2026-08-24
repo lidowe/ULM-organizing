@@ -1,0 +1,7 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Delay repeats">
+<title>Delay repeats</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M5 50h54" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<path d="M11 50V18" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M23 50V28M33 50V34M41 50V39M47 50V43M52 50V46"/>
+</svg>

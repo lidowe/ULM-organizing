@@ -1,0 +1,11 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Translation: a borrowed word becomes a signal">
+<title>Translation</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<!-- the borrowed word: an opening quote pair -->
+<path d="M10 22 C10 17 13 14 17 14 C15 17 15 19 15 22 L15 26 L10 26 Z"/>
+<path d="M21 22 C21 17 24 14 28 14 C26 17 26 19 26 22 L26 26 L21 26 Z"/>
+<!-- the translation: the point of the glyph -->
+<path d="M32 40 L46 40 M41 35 L46 40 L41 45" stroke="var(--ulm-accent,#E03B3B)"/>
+<!-- the named signal: one clean cycle -->
+<path d="M36 22 C39 14 43 14 46 22 C49 30 53 30 56 22"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Gain structure">
+<title>Gain structure</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M4 12h56" stroke="var(--ulm-accent,#E03B3B)" stroke-dasharray="4 4"/>
+<path d="M4 52h56" stroke="var(--ulm-dim,#7C838E)" class="d"/>
+<rect x="8" y="30" width="9" height="22"/><rect x="22" y="24" width="9" height="28"/>
+<rect x="36" y="21" width="9" height="31"/><rect x="50" y="18" width="9" height="34"/>
+</svg>

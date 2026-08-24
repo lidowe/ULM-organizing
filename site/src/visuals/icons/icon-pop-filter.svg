@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Pop filter">
+<title>Pop filter</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<circle cx="24" cy="24" r="15"/>
+<path d="M24 9v30M9 24h30" class="d"/>
+<path d="M39 26c9 0 5 18 15 22"/>
+<path d="M48 52h10"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Condenser microphone">
+<title>Condenser microphone</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="25" y="7" width="14" height="28" rx="7"/>
+<path d="M28 14h8M28 20h8M28 26h8" class="d" stroke="var(--ulm-dim,#7C838E)"/>
+<path d="M19 29v2a13 13 0 0 0 26 0v-2"/>
+<path d="M32 44v9M23 53h18"/>
+</svg>

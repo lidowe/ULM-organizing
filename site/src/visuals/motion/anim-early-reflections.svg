@@ -1,0 +1,110 @@
+<svg class="er" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320" fill="none" role="img" aria-label="Early reflections: direct sound arrives first, boundary reflections arrive later">
+<title>Early reflections</title>
+<style>
+.er text{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:var(--ulm-anim-fs,12px);letter-spacing:1.2px;fill:var(--ulm-dim,#7C838E);stroke:none}
+.er .hi{fill:var(--ulm-accent,#E03B3B)}
+@keyframes er-travel-0{
+0%{stroke-dashoffset:256;opacity:0}
+0.5%{opacity:1}
+15.23%{stroke-dashoffset:0;opacity:1}
+78.0%{stroke-dashoffset:0;opacity:1}
+90.0%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:256;opacity:0}}
+.er-r0{stroke-dasharray:256;stroke-dashoffset:256;animation:er-travel-0 4.0s linear infinite}
+@keyframes er-tick-0{
+0%,14.83%{transform:scaleY(0);opacity:0}
+15.23%{transform:scaleY(1);opacity:1}
+78.0%{transform:scaleY(1);opacity:1}
+90.0%,100%{transform:scaleY(1);opacity:0}}
+.er-t0{transform-box:fill-box;transform-origin:bottom;animation:er-tick-0 4.0s linear infinite}
+@keyframes er-travel-1{
+0%{stroke-dashoffset:296;opacity:0}
+0.5%{opacity:0.75}
+17.61%{stroke-dashoffset:0;opacity:0.75}
+78.0%{stroke-dashoffset:0;opacity:0.75}
+90.0%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:296;opacity:0}}
+.er-r1{stroke-dasharray:296;stroke-dashoffset:296;animation:er-travel-1 4.0s linear infinite}
+@keyframes er-tick-1{
+0%,17.21%{transform:scaleY(0);opacity:0}
+17.61%{transform:scaleY(1);opacity:0.75}
+78.0%{transform:scaleY(1);opacity:0.75}
+90.0%,100%{transform:scaleY(1);opacity:0}}
+.er-t1{transform-box:fill-box;transform-origin:bottom;animation:er-tick-1 4.0s linear infinite}
+@keyframes er-travel-2{
+0%{stroke-dashoffset:330;opacity:0}
+0.5%{opacity:0.75}
+19.67%{stroke-dashoffset:0;opacity:0.75}
+78.0%{stroke-dashoffset:0;opacity:0.75}
+90.0%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:330;opacity:0}}
+.er-r2{stroke-dasharray:330;stroke-dashoffset:330;animation:er-travel-2 4.0s linear infinite}
+@keyframes er-tick-2{
+0%,19.27%{transform:scaleY(0);opacity:0}
+19.67%{transform:scaleY(1);opacity:0.75}
+78.0%{transform:scaleY(1);opacity:0.75}
+90.0%,100%{transform:scaleY(1);opacity:0}}
+.er-t2{transform-box:fill-box;transform-origin:bottom;animation:er-tick-2 4.0s linear infinite}
+@keyframes er-travel-3{
+0%{stroke-dashoffset:396;opacity:0}
+0.5%{opacity:0.75}
+23.60%{stroke-dashoffset:0;opacity:0.75}
+78.0%{stroke-dashoffset:0;opacity:0.75}
+90.0%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:396;opacity:0}}
+.er-r3{stroke-dasharray:396;stroke-dashoffset:396;animation:er-travel-3 4.0s linear infinite}
+@keyframes er-tick-3{
+0%,23.20%{transform:scaleY(0);opacity:0}
+23.60%{transform:scaleY(1);opacity:0.75}
+78.0%{transform:scaleY(1);opacity:0.75}
+90.0%,100%{transform:scaleY(1);opacity:0}}
+.er-t3{transform-box:fill-box;transform-origin:bottom;animation:er-tick-3 4.0s linear infinite}
+@keyframes er-travel-4{
+0%{stroke-dashoffset:406;opacity:0}
+0.5%{opacity:0.75}
+24.17%{stroke-dashoffset:0;opacity:0.75}
+78.0%{stroke-dashoffset:0;opacity:0.75}
+90.0%{stroke-dashoffset:0;opacity:0}
+100%{stroke-dashoffset:406;opacity:0}}
+.er-r4{stroke-dasharray:406;stroke-dashoffset:406;animation:er-travel-4 4.0s linear infinite}
+@keyframes er-tick-4{
+0%,23.77%{transform:scaleY(0);opacity:0}
+24.17%{transform:scaleY(1);opacity:0.75}
+78.0%{transform:scaleY(1);opacity:0.75}
+90.0%,100%{transform:scaleY(1);opacity:0}}
+.er-t4{transform-box:fill-box;transform-origin:bottom;animation:er-tick-4 4.0s linear infinite}
+@keyframes er-front{
+0%{transform:scale(0.02);opacity:0.55}
+55%{opacity:0.12}
+70%,100%{transform:scale(9);opacity:0}}
+.er-front{transform-box:view-box;transform-origin:110px 150px;animation:er-front 4.0s linear infinite}
+@media (prefers-reduced-motion: reduce){
+.er-ray,.er-tick,.er-front{animation:none!important;stroke-dashoffset:0!important;opacity:0.85!important;transform:none!important}
+.er-front{opacity:0.12!important}
+}
+</style>
+<defs><clipPath id="erRoom"><rect x="40" y="34" width="400" height="180"/></clipPath></defs>
+<rect x="40" y="34" width="400" height="180" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<g clip-path="url(#erRoom)"><circle class="er-front" cx="110" cy="150" r="10" stroke="var(--ulm-line,#E8E6E1)" stroke-width="6"/></g>
+<g clip-path="url(#erRoom)" stroke-linecap="round" stroke-linejoin="round">
+<path class="er-ray er-r0" d="M110 150L365 128" stroke="var(--ulm-accent,#E03B3B)" stroke-width="2.4" opacity="1"/>
+<path class="er-ray er-r1" d="M110 150L217 214L365 128" stroke="var(--ulm-line,#E8E6E1)" stroke-width="1.6" opacity="0.75"/>
+<path class="er-ray er-r2" d="M110 150L247 34L365 128" stroke="var(--ulm-line,#E8E6E1)" stroke-width="1.6" opacity="0.75"/>
+<path class="er-ray er-r3" d="M110 150L40 136L365 128" stroke="var(--ulm-line,#E8E6E1)" stroke-width="1.6" opacity="0.75"/>
+<path class="er-ray er-r4" d="M110 150L440 124L365 128" stroke="var(--ulm-line,#E8E6E1)" stroke-width="1.6" opacity="0.75"/>
+</g>
+<path class="er-tick er-t0" d="M96.0 288V244" stroke="var(--ulm-accent,#E03B3B)" stroke-width="3"/>
+<path class="er-tick er-t1" d="M181.0 288V259" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path class="er-tick er-t2" d="M254.6 288V264" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path class="er-tick er-t3" d="M395.4 288V269" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<path class="er-tick er-t4" d="M416.0 288V274" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<circle cx="110" cy="150" r="5" fill="var(--ulm-line,#E8E6E1)" stroke="none"/>
+<circle cx="365" cy="128" r="5" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-width="2"/>
+<circle cx="365" cy="128" r="10" fill="none" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<text x="94" y="176">SOURCE</text>
+<text x="351" y="112">EARS</text>
+<path d="M60 288H444" stroke="var(--ulm-dim,#7C838E)" stroke-width="1.5"/>
+<text x="60" y="304">TIME</text>
+<text x="96" y="232" class="hi">DIRECT</text>
+<text x="246" y="232">FIRST-ORDER REFLECTIONS</text>
+</svg>

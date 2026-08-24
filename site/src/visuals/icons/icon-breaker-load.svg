@@ -1,0 +1,9 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Circuit capacity">
+<title>Circuit capacity</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<rect x="5" y="14" width="20" height="36" rx="2"/>
+<path d="M15 42V32l7-8" stroke="var(--ulm-accent,#E03B3B)"/><circle cx="15" cy="43" r="1.6" class="d"/>
+<rect x="32" y="24" width="28" height="14" rx="1"/>
+<rect x="32" y="24" width="19" height="14" fill="var(--ulm-dim,#7C838E)" stroke="none"/>
+<path d="M55 20v22" stroke="var(--ulm-accent,#E03B3B)"/>
+</svg>

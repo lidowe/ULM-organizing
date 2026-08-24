@@ -1,0 +1,10 @@
+<svg class="ulmi" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" preserveAspectRatio="xMidYMid meet" fill="none" stroke="var(--ulm-line,#E8E6E1)" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="First reflection point">
+<title>First reflection point</title>
+<style>.ulmi{stroke-width:var(--ulm-sw,2)}.ulmi .d{stroke-width:var(--ulm-swd,1.4)}</style>
+<path d="M6 8v48" stroke="var(--ulm-dim,#7C838E)"/>
+<rect x="14" y="12" width="12" height="10" rx="1"/>
+<circle cx="44" cy="46" r="4"/>
+<path d="M6 26h4" stroke="var(--ulm-accent,#E03B3B)" stroke-width="3"/>
+<path d="M16 22 8 26 42 43" stroke="var(--ulm-accent,#E03B3B)"/>
+<path d="M26 18 42 42" class="d"/>
+</svg>

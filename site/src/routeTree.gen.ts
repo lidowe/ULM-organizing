@@ -11,16 +11,29 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as CompleteRouteImport } from './routes/complete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
+import { Route as DescribingSoundRouteImport } from './routes/describing-sound'
+import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
 import { Route as EducationRouteImport } from './routes/education'
+import { Route as EvaluateRouteImport } from './routes/evaluate'
+import { Route as FixRouteImport } from './routes/fix'
+import { Route as HierarchyOptionsRouteImport } from './routes/hierarchy-options'
+import { Route as LearnRouteImport } from './routes/learn'
 import { Route as McpRouteImport } from './routes/mcp'
 import { Route as NewsRouteImport } from './routes/news'
+import { Route as PreProductionRouteImport } from './routes/pre-production'
 import { Route as ProcessRouteImport } from './routes/process'
+import { Route as ProofRouteImport } from './routes/proof'
+import { Route as PurpleRouteImport } from './routes/purple'
 import { Route as ReachRouteImport } from './routes/reach'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as StartRouteImport } from './routes/start'
+import { Route as StoryRouteImport } from './routes/story'
 import { Route as StudioRouteImport } from './routes/studio'
+import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -38,6 +51,11 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CompleteRoute = CompleteRouteImport.update({
+  id: '/complete',
+  path: '/complete',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -48,9 +66,39 @@ const CreditsRoute = CreditsRouteImport.update({
   path: '/credits',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DescribingSoundRoute = DescribingSoundRouteImport.update({
+  id: '/describing-sound',
+  path: '/describing-sound',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoorsDraftRoute = DoorsDraftRouteImport.update({
+  id: '/doors-draft',
+  path: '/doors-draft',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvaluateRoute = EvaluateRouteImport.update({
+  id: '/evaluate',
+  path: '/evaluate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FixRoute = FixRouteImport.update({
+  id: '/fix',
+  path: '/fix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HierarchyOptionsRoute = HierarchyOptionsRouteImport.update({
+  id: '/hierarchy-options',
+  path: '/hierarchy-options',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LearnRoute = LearnRouteImport.update({
+  id: '/learn',
+  path: '/learn',
   getParentRoute: () => rootRouteImport,
 } as any)
 const McpRoute = McpRouteImport.update({
@@ -63,9 +111,24 @@ const NewsRoute = NewsRouteImport.update({
   path: '/news',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PreProductionRoute = PreProductionRouteImport.update({
+  id: '/pre-production',
+  path: '/pre-production',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProcessRoute = ProcessRouteImport.update({
   id: '/process',
   path: '/process',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProofRoute = ProofRouteImport.update({
+  id: '/proof',
+  path: '/proof',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PurpleRoute = PurpleRouteImport.update({
+  id: '/purple',
+  path: '/purple',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ReachRoute = ReachRouteImport.update({
@@ -83,9 +146,24 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheGapRoute = TheGapRouteImport.update({
+  id: '/the-gap',
+  path: '/the-gap',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WhoWeAreRoute = WhoWeAreRouteImport.update({
@@ -125,16 +203,29 @@ const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
+  '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -145,16 +236,29 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
+  '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -166,16 +270,29 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
+  '/describing-sound': typeof DescribingSoundRoute
+  '/doors-draft': typeof DoorsDraftRoute
   '/education': typeof EducationRoute
+  '/evaluate': typeof EvaluateRoute
+  '/fix': typeof FixRoute
+  '/hierarchy-options': typeof HierarchyOptionsRoute
+  '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
+  '/pre-production': typeof PreProductionRoute
   '/process': typeof ProcessRoute
+  '/proof': typeof ProofRoute
+  '/purple': typeof PurpleRoute
   '/reach': typeof ReachRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/start': typeof StartRoute
+  '/story': typeof StoryRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -188,16 +305,29 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
+    | '/doors-draft'
     | '/education'
+    | '/evaluate'
+    | '/fix'
+    | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
     | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -208,16 +338,29 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
+    | '/doors-draft'
     | '/education'
+    | '/evaluate'
+    | '/fix'
+    | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
     | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -228,16 +371,29 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/complete'
     | '/contact'
     | '/credits'
+    | '/describing-sound'
+    | '/doors-draft'
     | '/education'
+    | '/evaluate'
+    | '/fix'
+    | '/hierarchy-options'
+    | '/learn'
     | '/mcp'
     | '/news'
+    | '/pre-production'
     | '/process'
+    | '/proof'
+    | '/purple'
     | '/reach'
     | '/services'
     | '/sitemap.xml'
+    | '/start'
+    | '/story'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -249,16 +405,29 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  CompleteRoute: typeof CompleteRoute
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
+  DescribingSoundRoute: typeof DescribingSoundRoute
+  DoorsDraftRoute: typeof DoorsDraftRoute
   EducationRoute: typeof EducationRoute
+  EvaluateRoute: typeof EvaluateRoute
+  FixRoute: typeof FixRoute
+  HierarchyOptionsRoute: typeof HierarchyOptionsRoute
+  LearnRoute: typeof LearnRoute
   McpRoute: typeof McpRoute
   NewsRoute: typeof NewsRoute
+  PreProductionRoute: typeof PreProductionRoute
   ProcessRoute: typeof ProcessRoute
+  ProofRoute: typeof ProofRoute
+  PurpleRoute: typeof PurpleRoute
   ReachRoute: typeof ReachRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  StartRoute: typeof StartRoute
+  StoryRoute: typeof StoryRoute
   StudioRoute: typeof StudioRoute
+  TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
@@ -283,6 +452,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/complete': {
+      id: '/complete'
+      path: '/complete'
+      fullPath: '/complete'
+      preLoaderRoute: typeof CompleteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -297,11 +473,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreditsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/describing-sound': {
+      id: '/describing-sound'
+      path: '/describing-sound'
+      fullPath: '/describing-sound'
+      preLoaderRoute: typeof DescribingSoundRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doors-draft': {
+      id: '/doors-draft'
+      path: '/doors-draft'
+      fullPath: '/doors-draft'
+      preLoaderRoute: typeof DoorsDraftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/education': {
       id: '/education'
       path: '/education'
       fullPath: '/education'
       preLoaderRoute: typeof EducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evaluate': {
+      id: '/evaluate'
+      path: '/evaluate'
+      fullPath: '/evaluate'
+      preLoaderRoute: typeof EvaluateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fix': {
+      id: '/fix'
+      path: '/fix'
+      fullPath: '/fix'
+      preLoaderRoute: typeof FixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hierarchy-options': {
+      id: '/hierarchy-options'
+      path: '/hierarchy-options'
+      fullPath: '/hierarchy-options'
+      preLoaderRoute: typeof HierarchyOptionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/learn': {
+      id: '/learn'
+      path: '/learn'
+      fullPath: '/learn'
+      preLoaderRoute: typeof LearnRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mcp': {
@@ -318,11 +536,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NewsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/pre-production': {
+      id: '/pre-production'
+      path: '/pre-production'
+      fullPath: '/pre-production'
+      preLoaderRoute: typeof PreProductionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/process': {
       id: '/process'
       path: '/process'
       fullPath: '/process'
       preLoaderRoute: typeof ProcessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/proof': {
+      id: '/proof'
+      path: '/proof'
+      fullPath: '/proof'
+      preLoaderRoute: typeof ProofRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/purple': {
+      id: '/purple'
+      path: '/purple'
+      fullPath: '/purple'
+      preLoaderRoute: typeof PurpleRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/reach': {
@@ -346,11 +585,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/studio': {
       id: '/studio'
       path: '/studio'
       fullPath: '/studio'
       preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/the-gap': {
+      id: '/the-gap'
+      path: '/the-gap'
+      fullPath: '/the-gap'
+      preLoaderRoute: typeof TheGapRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/who-we-are': {
@@ -401,16 +661,29 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  CompleteRoute: CompleteRoute,
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
+  DescribingSoundRoute: DescribingSoundRoute,
+  DoorsDraftRoute: DoorsDraftRoute,
   EducationRoute: EducationRoute,
+  EvaluateRoute: EvaluateRoute,
+  FixRoute: FixRoute,
+  HierarchyOptionsRoute: HierarchyOptionsRoute,
+  LearnRoute: LearnRoute,
   McpRoute: McpRoute,
   NewsRoute: NewsRoute,
+  PreProductionRoute: PreProductionRoute,
   ProcessRoute: ProcessRoute,
+  ProofRoute: ProofRoute,
+  PurpleRoute: PurpleRoute,
   ReachRoute: ReachRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  StartRoute: StartRoute,
+  StoryRoute: StoryRoute,
   StudioRoute: StudioRoute,
+  TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,

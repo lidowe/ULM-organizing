@@ -1,3 +1,9 @@
+// Accordion item 04, "What Comes Next", is parked until it has real content:
+// its only body was an authoring note, which production strips, so visitors
+// were opening an empty panel. Planned per the brief: Resources (equipment,
+// space, and what can be done with them) replacing the rooms list, an
+// education component, a recurring insight series with audio and video, and a
+// mailing list. Restore the item when any of it exists.
 export default `
 <section class="page-hero"><div class="wrap"><div class="eyebrow">About</div><h1 class="page-title">Upper Level Music</h1><p class="page-deck">Created in 2012 by Edward Lidow. A studio built around the person making the record.</p></div></section>
 <section class="section intro-section">
@@ -97,20 +103,26 @@ export default `
         </div>
       </div>
     </article>
-    <article class="wwa-item" data-accordion-item>
-      <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-04" id="wwa-btn-04">
-          <span class="wwa-no">04</span>
-          <span class="wwa-heading"><span class="wwa-title">What Comes Next</span><span class="wwa-summary">Resources, education, insights.</span></span>
-          <span class="wwa-mark" aria-hidden="true"></span>
-        </button>
-      </h2>
-      <div class="wwa-panel" id="wwa-panel-04" role="region" aria-labelledby="wwa-btn-04">
-        <div class="wwa-panel-inner">
-          <div class="needs-content"><strong>Sections still to come</strong>Resources (equipment, space, and what can be done with them) will replace the rooms list. An education component, a recurring insight series with audio and video, and a mailing list are all planned and not yet built.</div>
-        </div>
+  </div>
+</section>
+<section class="rack-unit more-section">
+  <div class="wrap">
+    <details class="fold">
+      <summary><span class="fold-k">Our values</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs, their story, their name, their risk. Our work belongs in service to the song.</p>
+        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world, the gear, the sonic character.</p>
+        <p>It is not the artist&rsquo;s job to know whether an 1176 or a dbx 160VU will help express that. If you are an engineer who wants to know, we will travel that path as far as you want.</p>
+        <p>It is better to listen to the artist in order to hear the song.</p>
       </div>
-    </article>
+    </details>
+    <details class="fold">
+      <summary><span class="fold-k">Remote work</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets us work with artists anywhere, on any schedule.</p>
+        <p>Nothing fully replaces being in the same space. We trade some of that for access, and we are honest about it.</p>
+      </div>
+    </details>
   </div>
 </section>
 <section class="rack-unit archive-unit">

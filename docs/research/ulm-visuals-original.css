@@ -1,0 +1,27 @@
+/* ULM visual library — sizing + theme tokens */
+:root{
+  --ulm-line:#E8E6E1;
+  --ulm-dim:#7C838E;
+  --ulm-accent:#E03B3B;
+  --ulm-sw:2;          /* icon stroke weight, overridden per size below */
+  --ulm-swd:1.4;       /* secondary detail weight */
+  --ulm-anim-fs:12px;  /* label size inside motion files */
+}
+
+/* Wrap an inlined icon. Size the wrapper, never the svg. */
+.ulm-icon{display:inline-block;line-height:0}
+.ulm-icon svg{width:100%;height:100%;display:block}
+
+/* Optical sizing: stroke gets heavier as the icon gets smaller. */
+.ulm-icon--xs{width:20px;height:20px;--ulm-sw:2.9;--ulm-swd:2.0}
+.ulm-icon--sm{width:28px;height:28px;--ulm-sw:2.5;--ulm-swd:1.75}
+.ulm-icon--md{width:48px;height:48px;--ulm-sw:2.1;--ulm-swd:1.5}
+.ulm-icon--lg{width:72px;height:72px;--ulm-sw:2;--ulm-swd:1.4}
+.ulm-icon--xl{width:120px;height:120px;--ulm-sw:1.7;--ulm-swd:1.2}
+.ulm-icon--display{width:min(220px,40vw);height:auto;aspect-ratio:1;--ulm-sw:1.5;--ulm-swd:1.1}
+
+/* Motion files are fluid: give them a max width and let the viewBox do the rest. */
+.ulm-anim{width:100%;max-width:760px;margin-inline:auto}
+.ulm-anim svg{width:100%;height:auto;display:block}
+@media (max-width:640px){.ulm-anim{--ulm-anim-fs:15px}}
+@media (max-width:400px){.ulm-anim{--ulm-anim-fs:17px}}

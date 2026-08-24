@@ -1,17 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Legacy URL from the pre-doors site. */
 export const Route = createFileRoute("/about")({
-  head: () => pageHead("about"),
-  component: AboutPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/story", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function AboutPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.about} />
-    </SiteLayout>
-  );
-}

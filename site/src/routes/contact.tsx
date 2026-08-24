@@ -1,18 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Legacy URL from the pre-doors site. */
 export const Route = createFileRoute("/contact")({
-  head: () =>
-    pageHead("contact"),
-  component: ContactPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/start", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function ContactPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages.contact} />
-    </SiteLayout>
-  );
-}
