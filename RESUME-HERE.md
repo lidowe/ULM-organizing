@@ -4,10 +4,11 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-08-22 · branch claude/consolidation-attempt-analysis-c8sqwt @ 366b0a8
+STAMP    2026-08-24 · branch claude/five-doors-live-26jwtv @ b68b887 (five-doors build merged in from consolidation)
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
 LIVE     main @ c6bc9ac -> upperlevelmusic.com. Runs the OLD pre-doors site. NOT the work below.
-PREVIEW  https://claude-site-iterations-docs-review-dbr45q-ulm-organizing.upperlevelmusic.workers.dev
+PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev  (confirmed live by Edward 2026-08-24, rebuilds on push to this branch)
+WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min -> Edward checks. Only "publish" -> main.
 ```
 
 ## STATE
