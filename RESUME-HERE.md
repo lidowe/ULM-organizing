@@ -14,19 +14,20 @@ WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min ->
 ## STATE
 
 ```
-DONE     Five-doors rebuild pushed (never published). 2026-08-28: HOMEPAGE RESTRUCTURE DRAFT built at
-         /front-draft (unlisted, noindex): era-thesis sheet hero -> patch bar (click-through to the
-         account) -> patchbay (9 identity presets one side, 5 compact door modules other; arming
-         re-describes doors + draws converging cables; Place of Worship = composite, half-arms
-         venue/corporate/student). Type variants A/B/C + bank L/R toggles on-page. Commit ffb0a9c.
-         Plan approved by Edward in plan mode; full session reads: COPY-BIBLE, VOICE-PROFILE,
-         strategy notes, site.css, main's hosted index.ts (all FULL).
-DOING    Awaiting Edward: "push it" to see /front-draft on preview, then his verdict + copy veto list
-         (delivered in-chat 2026-08-28, numbered).
-NEXT     1. push on his word  2. his verdict on structure/type variant/bank side  3. copy pass (his words
-         against the seen visual)  4. real homepage swap  5. door pages ripple  6. BRIEF audience update
-         (corporate/venue/worship added by Edward 2026-08-28)  7. breakdown page to his spec
-BLOCKED  Nothing. Draft copy is scaffold pending veto; rates/roster laws unchanged.
+DONE     2026-08-28: /front-draft v1 (cable patchbay, ffb0a9c) and v2 (guided walkthrough, 1d9fc19)
+         both built, pushed, REJECTED by Edward on the preview — a marketing page cannot honestly
+         personalize; interactive homepage retired as a direction. STRATEGY SETTLED instead:
+         SITE = simple companion statement, services+identities lightly merged, TWO CTAs
+         (contact · get the app). APP = the depth: free tier better than the current workbench
+         toys (his verdict: "simpliton… incorrect or no significant information" — bench-check
+         failed), subscription tier = lessons + deep wiring/acoustic solvers + AAA graphics.
+         APP STUDY delivered: docs/research/APP-STUDY.md (economics, comps incl. SonarRoom/White
+         Mark, mic-calibration truth, WebGPU/LiDAR capability table, phased path with gates).
+DOING    Awaiting Edward's read of APP-STUDY.md.
+NEXT     1. his verdict on the study (esp. phase-0 gate: name the free tools, bench-check physics)
+         2. front v3 = the simple two-CTA site (thesis hero + patch bar kept; instrument removed)
+         3. door pages / photo-grammar cohesion pass  4. BRIEF audience update  5. breakdown page
+BLOCKED  Nothing. The hosted-preview /front-draft still shows the rejected v2 walkthrough until v3.
 ```
 
 ## NEVER DO

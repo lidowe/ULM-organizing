@@ -1,11 +1,56 @@
 # Where things stand — written for Edward, in plain English
 
-**Stamp: 28 August 2026 · branch `claude/five-doors-live-26jwtv` · commit `ffb0a9c`**
+**Stamp: 28 August 2026 (evening) · branch `claude/five-doors-live-26jwtv` · the App Study commit**
 
 > **Staleness check, takes five seconds:** open `RESUME-HERE.md` (the short file in the
-> main folder) and look at its stamp line. If the commit code there is not `ffb0a9c`,
+> main folder) and look at its stamp line. If it doesn't mention the App Study,
 > then work has happened since this was written and *this* file is behind. Trust the
 > short file, and ask for this one to be refreshed.
+
+---
+
+## 28 August, later: the fork got named, and studied
+
+You tested the interactive homepage twice and killed it twice, for the right
+reason both times: a webpage can't actually know its visitor, so "personalized"
+controls are theater. You named the real shape — **the site becomes simple**
+(ULM as a companion; services and identities lightly merged; two buttons:
+contact, or get the app) **and the app carries the depth** — free tools that are
+genuinely good, and a paid tier with real lessons and deep technical solvers.
+
+Before building anything, you asked for a study. It now exists at
+`docs/research/APP-STUDY.md`, with sources. The headlines, plain:
+
+- **An app is for people who come back** — students, clients, engineers. It
+  cannot be the front door: most app installs are abandoned within a month,
+  and nobody downloads commitment from a stranger. The site stays the front
+  door forever.
+- **The app is where "knowing you" is honest.** It knows your room and your
+  level because you typed them in. The identity system we built and killed on
+  the homepage is actually the app's sign-up flow.
+- **The market just validated the idea — and occupied part of it.** An app
+  called SonarRoom launched in March doing 3D acoustic room-mapping on
+  iPhone, and White Mark (the famous studio designers) ship a pro room app.
+  The lane is real. ULM's edge isn't the scan — it's the thirty years that
+  reviews the scan, and the service behind the button.
+- **Phone microphones genuinely can't do absolute measurements** (peer-
+  reviewed: errors over 3 dB are normal without a calibrated external mic).
+  So the free tools must say their limits out loud — your "physics describes,
+  ears decide" law, carried into the app — and the serious tier pairs with a
+  proper mic, the way Sonarworks does.
+- **What education apps charge:** roughly $10–27 a month (SoundGym, Melodics,
+  Mix with the Masters, Puremix). Apple takes 15% at your size. A hundred
+  subscribers is real money but not a living — the app supports the business;
+  it doesn't replace it.
+- **The build path is phased with gates**: define and bench-check the free
+  tools first (your hours go into correctness, not code) → ship the free
+  companion sharing the site's code → only then the store app with the paid
+  tier → only after that sustains, the native iPhone flagship that scans a
+  sanctuary with the laser sensor and drafts a treatment plan with
+  "have Edward review this" built in.
+
+Nothing was built this round; that was the point. The site's v3 (the simple
+two-button front) comes next, after you've read the study.
 
 ---
 
