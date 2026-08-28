@@ -19,6 +19,7 @@ import { Route as DoorsDraftRouteImport } from './routes/doors-draft'
 import { Route as EducationRouteImport } from './routes/education'
 import { Route as EvaluateRouteImport } from './routes/evaluate'
 import { Route as FixRouteImport } from './routes/fix'
+import { Route as FrontDraftRouteImport } from './routes/front-draft'
 import { Route as HierarchyOptionsRouteImport } from './routes/hierarchy-options'
 import { Route as LearnRouteImport } from './routes/learn'
 import { Route as McpRouteImport } from './routes/mcp'
@@ -89,6 +90,11 @@ const EvaluateRoute = EvaluateRouteImport.update({
 const FixRoute = FixRouteImport.update({
   id: '/fix',
   path: '/fix',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrontDraftRoute = FrontDraftRouteImport.update({
+  id: '/front-draft',
+  path: '/front-draft',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HierarchyOptionsRoute = HierarchyOptionsRouteImport.update({
@@ -211,6 +217,7 @@ export interface FileRoutesByFullPath {
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
   '/fix': typeof FixRoute
+  '/front-draft': typeof FrontDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
@@ -244,6 +251,7 @@ export interface FileRoutesByTo {
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
   '/fix': typeof FixRoute
+  '/front-draft': typeof FrontDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
@@ -278,6 +286,7 @@ export interface FileRoutesById {
   '/education': typeof EducationRoute
   '/evaluate': typeof EvaluateRoute
   '/fix': typeof FixRoute
+  '/front-draft': typeof FrontDraftRoute
   '/hierarchy-options': typeof HierarchyOptionsRoute
   '/learn': typeof LearnRoute
   '/mcp': typeof McpRoute
@@ -313,6 +322,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/evaluate'
     | '/fix'
+    | '/front-draft'
     | '/hierarchy-options'
     | '/learn'
     | '/mcp'
@@ -346,6 +356,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/evaluate'
     | '/fix'
+    | '/front-draft'
     | '/hierarchy-options'
     | '/learn'
     | '/mcp'
@@ -379,6 +390,7 @@ export interface FileRouteTypes {
     | '/education'
     | '/evaluate'
     | '/fix'
+    | '/front-draft'
     | '/hierarchy-options'
     | '/learn'
     | '/mcp'
@@ -413,6 +425,7 @@ export interface RootRouteChildren {
   EducationRoute: typeof EducationRoute
   EvaluateRoute: typeof EvaluateRoute
   FixRoute: typeof FixRoute
+  FrontDraftRoute: typeof FrontDraftRoute
   HierarchyOptionsRoute: typeof HierarchyOptionsRoute
   LearnRoute: typeof LearnRoute
   McpRoute: typeof McpRoute
@@ -506,6 +519,13 @@ declare module '@tanstack/react-router' {
       path: '/fix'
       fullPath: '/fix'
       preLoaderRoute: typeof FixRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/front-draft': {
+      id: '/front-draft'
+      path: '/front-draft'
+      fullPath: '/front-draft'
+      preLoaderRoute: typeof FrontDraftRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/hierarchy-options': {
@@ -669,6 +689,7 @@ const rootRouteChildren: RootRouteChildren = {
   EducationRoute: EducationRoute,
   EvaluateRoute: EvaluateRoute,
   FixRoute: FixRoute,
+  FrontDraftRoute: FrontDraftRoute,
   HierarchyOptionsRoute: HierarchyOptionsRoute,
   LearnRoute: LearnRoute,
   McpRoute: McpRoute,
