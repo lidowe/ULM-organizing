@@ -1,11 +1,61 @@
 # Where things stand — written for Edward, in plain English
 
-**Stamp: 21 August 2026, 7:48pm UTC · branch `claude/site-iterations-docs-review-dbr45q` · commit `05f1330`**
+**Stamp: 28 August 2026 · branch `claude/five-doors-live-26jwtv` · commit `ffb0a9c`**
 
 > **Staleness check, takes five seconds:** open `RESUME-HERE.md` (the short file in the
-> main folder) and look at its stamp line. If the commit code there is not `05f1330`,
+> main folder) and look at its stamp line. If the commit code there is not `ffb0a9c`,
 > then work has happened since this was written and *this* file is behind. Trust the
-> short file, and ask for this one to be refreshed. No AI needs to check this for you.
+> short file, and ask for this one to be refreshed.
+
+---
+
+## What happened on 28 August
+
+You and Claude planned the homepage restructure, and a full working draft of it now
+exists at a hidden page called **/front-draft** on the working branch. It is committed
+but **not yet pushed** — say "push it" and about two minutes later it appears on your
+preview address at `/front-draft`. The public site is untouched, and so is the current
+homepage on the branch: the draft is a separate page, built so you can judge the visual
+narrative before settling any words.
+
+What the draft contains, top to bottom:
+
+1. **The header argues the era, not a rhyme.** "The Tools Reached Everyone. The
+   Knowledge Didn't." over three short paragraphs built almost entirely from sentences
+   you already wrote — soundlocked doors, the interrupted handover — ending on your
+   mission line: control belongs to the person making the art.
+2. **The patch bar.** A full-width strip that draws the story once — the signal flowing,
+   the break, the red cable patched around it — then rests on the repaired state. It is
+   also the clickable way into the full philosophy page (for now it goes to The Gap;
+   you'll spec the real breakdown page later).
+3. **The patchbay.** Nine "whoever walked in" identity blocks on one side (artist, home
+   engineer, student, working engineer, studio owner, audiophile, corporate audio,
+   venue, place of worship), the five doors on the other, drawn small — the "tiny side
+   bars" instinct. Click an identity to *arm* it like a console channel: cables draw
+   across to the doors it feeds, and each door re-describes itself for whoever is
+   armed. Arm several and the cables converge on the same five doors — the whole
+   argument, visible. The Place of Worship is a combination: arming it half-lights
+   venue, corporate and student, exactly as you described it.
+4. **On-page draft controls** (bottom-right) let you flip between three type treatments
+   — A is the current one, B is the lighter cut the hosted site uses, C is JetBrains
+   Mono, the typewriter-ish face from the old archived site — and flip the identity
+   bank left or right. Decide by looking, not by discussing.
+
+All the new connective copy is scaffold awaiting your veto — a numbered list is in the
+chat. Nothing on the draft is final wording. Door 5 appears under your own title,
+"Explain It, Adapt, Solve It", per your note that purple carried too much weight.
+
+One rule note: this file used to say AI sessions are blocked from reading `human/`;
+since HOW-WE-WORK (24 August) they are allowed, and this twin now gets updated with the
+short file, in the same commit, with the same stamp.
+
+---
+
+## The older account below (21 August) — kept for history
+
+Everything below this line describes the state as of 21 August. The "dual permission"
+section is superseded by HOW-WE-WORK.md: the two hard gates now are *preview before
+merge* and *the word "publish" before anything goes live*.
 
 ---
 
