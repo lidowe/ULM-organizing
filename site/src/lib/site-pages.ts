@@ -28,6 +28,7 @@ import preProduction from "./pages/pre-production";
 import hierarchyOptions from "./pages/hierarchy-options";
 import doorsDraft from "./pages/doors-draft";
 import frontDraft from "./pages/front-draft";
+import app from "./pages/app";
 
 export const pages: Record<string, string> = {
   index: index,
@@ -46,4 +47,6 @@ export const pages: Record<string, string> = {
   "hierarchy-options": hierarchyOptions,
   "doors-draft": doorsDraft,
   "front-draft": frontDraft,
+  // The app's working preview (front-draft's second CTA).
+  app: app,
 };

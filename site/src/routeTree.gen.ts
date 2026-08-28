@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as CompleteRouteImport } from './routes/complete'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
@@ -50,6 +51,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CompleteRoute = CompleteRouteImport.update({
@@ -209,6 +215,7 @@ const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/app': typeof AppRoute
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
@@ -243,6 +250,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/app': typeof AppRoute
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
@@ -278,6 +286,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/app': typeof AppRoute
   '/complete': typeof CompleteRoute
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
@@ -314,6 +323,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/app'
     | '/complete'
     | '/contact'
     | '/credits'
@@ -348,6 +358,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
+    | '/app'
     | '/complete'
     | '/contact'
     | '/credits'
@@ -382,6 +393,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
+    | '/app'
     | '/complete'
     | '/contact'
     | '/credits'
@@ -417,6 +429,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AppRoute: typeof AppRoute
   CompleteRoute: typeof CompleteRoute
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
@@ -463,6 +476,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/complete': {
@@ -681,6 +701,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AppRoute: AppRoute,
   CompleteRoute: CompleteRoute,
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
