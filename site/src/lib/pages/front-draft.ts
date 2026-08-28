@@ -21,10 +21,6 @@ export default `
     <button type="button" data-fd-font="b">B</button>
     <button type="button" data-fd-font="c">C</button>
   </span>
-  <span class="fd-ctl-group">Bank
-    <button type="button" data-fd-side="left" class="on">Left</button>
-    <button type="button" data-fd-side="right">Right</button>
-  </span>
 </div>
 
 <section class="fd-hero">
@@ -76,32 +72,48 @@ export default `
   </div>
 </section>
 
-<section class="rack-unit fd-patchbay">
+<section class="rack-unit doors-unit">
   <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">01</span><span>Whoever walked in</span><span class="unit-note">arm any &middot; or several</span></div>
-    <h2 class="unit-title">Doors, Not Departments.</h2>
-    <p class="fd-lede">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
-    <p class="fd-howto">Pick who you are and the doors line up in your order. Skip it and they work fine on their own.</p>
-    <div class="fd-grid" data-fd-grid>
-      <div class="fd-col fd-col-bank">
-        <div class="fd-colhead"><span class="fd-colmark">First</span><h3 class="fd-colq display">Who Walked In?</h3><p class="fd-colsub">Pick any that fit. Several is normal.</p></div>
-        <div class="fd-bank" role="group" aria-label="Who walked in — pick any that fit">
-{{FD_PRESETS}}
-        </div>
-      </div>
-      <svg class="fd-cables" data-fd-cables aria-hidden="true"></svg>
-      <div class="fd-col fd-col-rack">
-        <div class="fd-colhead"><span class="fd-colmark">Then</span><h3 class="fd-colq display">The Five Doors</h3><p class="fd-colsub">Every path ends at one of these.</p></div>
-        <p class="fd-stage" data-fd-stage aria-live="polite"></p>
-        <div class="fd-rack" aria-label="The five doors">
-{{FD_DOORS}}
-        </div>
-      </div>
-    </div>
-    <p class="identity-close reveal">You could be three of these in the same week. The doors route the problem, not the title.</p>
+    <div class="unit-label reveal"><span class="unit-no">01</span><span>The five doors</span><span class="unit-note">every path ends at one of these</span></div>
+    <h2 class="unit-title">Choose Any Door.</h2>
+  </div>
+  <div class="wrap doors-stack">
+{{DOORS}}
   </div>
   <div class="wrap router-note">
     <p>Not sure which? That is a normal place to start. <a href="/start">Describe the problem in your own words</a> and we will work out what it is. Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed.</p>
+  </div>
+</section>
+
+<section class="rack-unit unit-soft fd-walkedin">
+  <div class="wrap">
+    <div class="unit-label reveal"><span class="unit-no">02</span><span>Whoever walked in</span></div>
+    <h2 class="unit-title">Doors, Not Departments.</h2>
+    <div class="unit-prose">
+      <p>Some of you walked in holding a record: the artist carrying a dozen jobs nobody asked for, the home engineer already charging for the work, the student looking for the apprenticeship that no longer exists. Some of you walked in holding a room: the studio owner with a fault that will not show itself, the audiophile whose playback never matched the record, the venue, the sanctuary that is part concert hall, part broadcast studio, part classroom. And some of you walked in holding a deliverable &mdash; the podcast, the voiceover, the space that has to sound right.</p>
+      <p>Different hats &mdash; not different worlds. The requests change with the hat, not the person, and every one of them comes down the same five doors: something to finish, something to fix, something to learn, something to hear with honest ears, something you can only say in your own words. That last one counts double here: you never need the vocabulary to start.</p>
+      <p class="unit-turn">You could be three of these in the same week. The doors route the problem, not the title.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rack-unit fd-ways">
+  <div class="wrap">
+    <div class="unit-label reveal"><span class="unit-no">03</span><span>Two ways in</span></div>
+    <div class="fd-ways-grid reveal">
+      <a class="fd-way" href="/start">
+        <span class="fd-colmark">Now</span>
+        <h3 class="display">Find The Service. Make Contact.</h3>
+        <p>Describe the project or the problem in your own words. Edward reads it himself, and scopes it before any work or price is agreed.</p>
+        <span class="btn primary">Start here</span>
+      </a>
+      <a class="fd-way" href="/app">
+        <span class="fd-colmark">Alongside</span>
+        <h3 class="display">Take The Depth With You.</h3>
+        <p>The ULM app: working instruments, the teaching, and the deep dives &mdash; free to start, honest about its limits. In development; the first instrument already works.</p>
+        <span class="btn">See the app</span>
+      </a>
+    </div>
   </div>
 </section>
 

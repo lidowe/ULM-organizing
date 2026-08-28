@@ -1617,118 +1617,29 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
   .fd-patchbar.in .fd-pb-flow,.fd-patchbar.in .fd-pb-patch,.fd-patchbar.in .fd-pb-patched{stroke-dashoffset:0;animation:none}
   .fd-patchbar.in .fd-pb-break{opacity:.85;animation:none}}
 
-/* ---- The patchbay: who walked in (First), the five doors (Then) ---- */
-.fd-lede{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);margin:0 0 .8rem;max-width:58ch}
-.fd-howto{font-size:var(--fs-sm);line-height:1.55;color:var(--muted);margin:0 0 clamp(1.8rem,3.4vw,2.6rem);max-width:58ch}
-.fd-grid{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2.4rem,5vw,4.5rem);align-items:start}
-.fd-col{min-width:0}
-[data-fd][data-side="right"] .fd-col-bank{order:2}
-[data-fd][data-side="right"] .fd-col-rack{order:1}
-.fd-colhead{margin-bottom:1rem;border-bottom:1px solid var(--line-soft);padding-bottom:.8rem}
-.fd-colq{font-size:var(--fs-h3);line-height:1.15;color:var(--paper);margin:.35rem 0 .3rem}
-.fd-colsub{margin:0}
-/* The narration line: the armed identity's keyphrase, spoken before the
-   doors answer. Empty and collapsed at rest. */
-.fd-stage{margin:0 0 .9rem;min-height:0;max-height:0;overflow:hidden;font-size:var(--fs-h3);line-height:1.35;
-  color:var(--paper);max-width:44ch;opacity:0;transition:opacity .35s ease,max-height .4s ease}
-.fd-stage.on{opacity:1;max-height:6em}
-/* One tracer at a time: the pointer following the narration. Previous
-   tracers settle into faint threads; never a web. */
-.fd-cables{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1}
-.fd-tracer{fill:none;stroke:var(--paper-soft);stroke-width:1.75;opacity:.9}
-.fd-tracer-hot{stroke:var(--amber);stroke-width:2.25;opacity:1}
-.fd-thread{fill:none;stroke:var(--quiet);stroke-width:1.25;opacity:.35}
-
-.fd-bank{display:grid;gap:.7rem;align-content:start}
-.fd-preset{position:relative;display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;text-align:left;
-  border:1px solid var(--line);background:rgba(236,234,229,.015);padding:.8rem 1.3rem .8rem .95rem;cursor:pointer;color:inherit;
-  transition:border-color .2s,background .2s}
-.fd-preset:hover{border-color:var(--paper-soft)}
-.fd-preset:focus-visible{outline:2px solid var(--amber-light);outline-offset:2px}
-.fd-preset.armed{border-color:var(--amber);background:rgba(216,52,43,.07)}
-.fd-preset.fd-partial{border-color:rgba(216,52,43,.4);background:rgba(216,52,43,.03)}
-.fd-preset .ulm-icon{margin-top:.1rem;align-self:center}
-.fd-preset-body{display:grid;gap:.3rem;min-width:0}
-.fd-preset.armed .fd-name{color:var(--aux-hot)}
-.fd-hook{font-size:var(--fs-sm);line-height:1.5;color:var(--paper-soft)}
-/* Declutter: with JS running, the hook and proof lines fold away at rest
-   and speak only on the armed (or half-armed) block. Without JS the page
-   is a static document and everything stays visible. */
-.fd-js .fd-hook,.fd-js .fd-proof{max-height:0;opacity:0;overflow:hidden;margin:0;
-  transition:max-height .35s cubic-bezier(.22,.61,.36,1),opacity .3s ease}
-.fd-js .fd-preset.armed :is(.fd-hook,.fd-proof),
-.fd-js .fd-preset.fd-partial .fd-hook{max-height:5em;opacity:1}
-/* Jacks are tracer endpoints; meaningless without the interaction, so they
-   exist only when JS runs. */
-.fd-jack{display:none;position:absolute;top:50%;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--paper-soft);background:var(--bg);transform:translateY(-50%);z-index:2}
-.fd-js .fd-jack{display:block}
-.fd-preset .fd-jack{right:-5px}
-.fd-door .fd-jack{left:-5px}
-[data-fd][data-side="right"] .fd-preset .fd-jack{right:auto;left:-5px}
-[data-fd][data-side="right"] .fd-door .fd-jack{left:auto;right:-5px}
-.fd-preset.armed .fd-jack{border-color:var(--amber);background:var(--amber)}
-.fd-preset.fd-partial .fd-jack{border-color:var(--amber)}
-
-.fd-rack{display:grid;gap:.8rem;align-content:start}
-.fd-rank{position:absolute;top:.55rem;right:.6rem;z-index:2;border:1px solid rgba(240,80,67,.5);
-  color:var(--amber-light);padding:.08rem .4rem;background:rgba(11,13,17,.85)}
-.fd-door{position:relative;display:block;border:1px solid var(--line);background:rgba(236,234,229,.015);padding:.85rem .95rem;transition:border-color .25s,background .25s,opacity .3s}
-.fd-door.fd-beat{animation:fd-beat .55s ease-out}
-@keyframes fd-beat{0%{background:rgba(216,52,43,.16)}100%{background:rgba(216,52,43,.05)}}
-.fd-door:hover,.fd-door:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.05)}
-.fd-door.fd-lit{border-color:var(--paper-soft)}
-.fd-door.fd-hot{border-color:var(--amber)}
-.fd-door.fd-dim{opacity:.45}
-.fd-door-art{display:block;margin-bottom:.5rem;opacity:.85}
-.fd-door-art svg{display:block;width:100%;max-width:360px;height:auto}
-/* Static door art at module scale: the same grammar the bars use, stroke
-   weight compensated for the smaller render, no sequencer (the .db-bar
-   animation scope is deliberately absent, so every element sits in its
-   final frame — the completed story). */
-.fd-door-art svg path,.fd-door-art svg rect,.fd-door-art svg circle,.fd-door-art svg ellipse{
-  stroke:var(--paper-soft);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-.fd-door-art svg path:not([fill]),.fd-door-art svg circle:not([fill]){fill:none}
-.fd-door-art .db-faint{stroke:var(--quiet);opacity:.6}
-.fd-door-art .db-hot{stroke:var(--amber)}
-.fd-door-art .db-arrow{stroke:var(--quiet);fill:none}
-.fd-door-art .db-tanline{stroke:#8f7c56}
-.fd-door-art .db-tandark{stroke:#5d4f35}
-.fd-door-art .db-note ellipse{fill:var(--paper-soft);stroke:none}
-.fd-door-art .db-anz rect{stroke:none}
-.fd-door-art .db-arcs path{stroke-dasharray:3 5;opacity:.3;fill:none}
-.fd-door-art .db-q{fill:#a8adb8}
-.fd-door-art .db-cash{fill:#57a874}
-.fd-door-art .db-ulm{fill:var(--amber-light)}
-.fd-door-art .db-knob1 path,.fd-door-art .db-knob2 path{stroke:#1c2029;stroke-width:3.4}
-.fd-door-body{display:grid;gap:.3rem}
-.fd-door-title{font-size:var(--fs-h3);line-height:1.15;color:var(--paper);transition:color .25s}
-.fd-door:hover .fd-door-title,.fd-door.fd-hot .fd-door-title{color:var(--amber-light)}
-.fd-tail{margin:.3rem 0 0;font-size:var(--fs-sm);line-height:1.55;color:var(--paper);max-width:56ch;
-  opacity:0;max-height:0;overflow:hidden;transition:opacity .4s ease,max-height .45s cubic-bezier(.22,.61,.36,1)}
-.fd-tail.on{opacity:1;max-height:7em}
-.fd-tail-k{margin-right:.5rem}
+/* ---- v3: doors + whoever-walked-in prose + two ways in --------------
+   The instrument (v1 cables, v2 walkthrough) is retired — see
+   front-draft-behaviors.ts and docs/research/APP-STUDY.md. Identities are
+   prose; the doors are the site's own sequenced bars; the section
+   resolves into the two calls to action. */
+.fd-ways-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.fd-way{display:grid;gap:.8rem;align-content:start;justify-items:start;background:var(--bg);
+  padding:clamp(1.4rem,2.8vw,2.2rem);transition:background .25s}
+.fd-way:hover,.fd-way:focus-visible{background:var(--bg-soft)}
+.fd-way h3{font-size:var(--fs-h3);line-height:1.15;margin:.1rem 0 0;color:var(--paper);max-width:18ch;text-wrap:balance;transition:color .25s}
+.fd-way:hover h3{color:var(--amber-light)}
+.fd-way p{margin:0 0 .4rem;font-size:var(--fs-body);line-height:1.6;color:var(--paper-soft);max-width:44ch;text-wrap:pretty}
+.fd-way .btn{pointer-events:none}
+@media(max-width:760px){.fd-ways-grid{grid-template-columns:1fr}}
 
 /* ---- Type variants (decision by sight; B = main's lighter cut, C =
    JetBrains Mono). Scoped to the draft page only. ---- */
-[data-fd][data-font="b"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k,.fd-colmark,.fd-rank){
+[data-fd][data-font="b"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-patchbar-k,.fd-colmark){
   font-weight:400;letter-spacing:.09em}
-[data-fd][data-font="c"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k,.fd-colmark,.fd-rank){
+[data-fd][data-font="c"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-patchbar-k,.fd-colmark){
   font-family:'JetBrains Mono','Space Mono',monospace;font-weight:500;letter-spacing:.08em}
-[data-fd][data-font="c"] :is(.fd-door-sub,.fd-patchbar-cap,.fd-colsub,.fd-proof){
+[data-fd][data-font="c"] :is(.fd-patchbar-cap,.fd-exhibit figcaption,.db-line){
   font-family:'JetBrains Mono','Space Mono',monospace}
-
-/* ---- Small screens: chips over the stack, sequenced lighting alone
-   carries the response (no lines at all) ---- */
-@media(max-width:900px){
-  .fd-grid{grid-template-columns:1fr;gap:1.6rem}
-  .fd-cables,.fd-js .fd-jack{display:none}
-  .fd-bank{grid-auto-flow:column;grid-auto-columns:minmax(200px,62%);overflow-x:auto;padding-bottom:.7rem;
-    scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-  .fd-preset{scroll-snap-align:start}
-  [data-fd][data-side="right"] .fd-col-bank{order:0}
-  [data-fd][data-side="right"] .fd-col-rack{order:1}
-  .fd-door-art svg{max-width:300px}
-}
 
 /* =======================================================================
    THE TYPE SYSTEM — the only place that sets face, weight and tracking.
@@ -1885,21 +1796,14 @@ h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
   letter-spacing:var(--aux-track);text-transform:uppercase;color:var(--aux-cool);margin:0}
 
 /* ---- FRONT-DRAFT ADDENDUM (working surface; removed or promoted with
-   the fd- block above). Preset names join the aux tier — they are patchbay
-   strip labels, which is the point of the design; the whole-account link
-   is the bar's one hot item. Door sublines, captions and proof fragments
-   join the caption family (sentences, not labels). Draft controls are
-   chrome and take the tier's face at fine size. ---- */
-.fd-name,.fd-patchbar-k,.fd-colmark{font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
-  letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3}
-.fd-patchbar-k,.fd-colmark{color:var(--aux-hot)}
-.fd-name{color:var(--aux-cool)}
-.fd-tail-k,.fd-rank{font-family:var(--mono);font-weight:700;font-size:var(--fs-fine);
-  letter-spacing:.08em;text-transform:uppercase;color:var(--aux-hot)}
-.fd-patchbar-cap,.fd-colsub,.fd-door-sub,.fd-proof,.fd-exhibit figcaption{font-family:var(--mono);font-weight:400;
+   the fd- block above). The whole-account link and the way-marks join the
+   aux tier's hot rank; the patch-bar caption and exhibit caption join the
+   caption family; draft controls are chrome at the tier's face. ---- */
+.fd-patchbar-k,.fd-colmark{font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
+  letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3;color:var(--aux-hot)}
+.fd-patchbar-cap,.fd-exhibit figcaption{font-family:var(--mono);font-weight:400;
   font-size:var(--fs-fine);letter-spacing:.02em;text-transform:none;color:var(--muted)}
-.fd-proof{color:var(--quiet)}
-.fd-thesis p,.fd-mission-sub,.fd-hook,.fd-lede,.fd-howto,.fd-tail{font-family:var(--sans);font-weight:400;letter-spacing:0}
-.fd-thesis p.fd-turn,.fd-stage{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+.fd-thesis p,.fd-mission-sub,.fd-way p{font-family:var(--sans);font-weight:400;letter-spacing:0}
+.fd-thesis p.fd-turn{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
 .fd-controls,.fd-controls button{font-family:var(--mono);font-weight:700;font-size:var(--fs-fine);
   letter-spacing:.08em;text-transform:uppercase}
