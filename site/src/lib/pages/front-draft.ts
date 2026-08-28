@@ -32,17 +32,23 @@ export default `
     <div class="hero-sheet">
       <div class="sheet-row"><span>ULM &middot; Session Sheet</span><span>Est. 2012</span><span>Rev. 2026-08-28 &middot; FRONT DRAFT</span></div>
       <div class="sheet-row sheet-what"><span>Mixing &middot; Production &middot; Systems &middot; Teaching</span><span>Anyone, Anywhere</span><span>Remote &middot; Columbia SC</span></div>
-      <div class="sheet-body">
-        <h1 class="display fd-title"><span class="ln"><span>The Tools Reached Everyone.</span></span><span class="ln"><span><em>The Knowledge Didn&rsquo;t.</em></span></span></h1>
-        <div class="fd-thesis">
-          <p>For most of a century the console lived behind soundlocked doors, and the rooms behind them decided who learned the trade. Knowledge flowed the way signal moves through a patchbay &mdash; <em>normalled</em>, engineer to assistant to the intern holding the coffee. The rooms were the schools.</p>
-          <p>Then the tools got small and cheap and went home with everyone. That part was good. But the console in the palm of your hand did not come with the knowledge, and the trade split into what feel like separate worlds &mdash; the studio, the home rig, the classroom, the venue. Colleagues, separated by a gap neither of them made.</p>
-          <p class="fd-turn">The walls are gone. The sorting is leftover. What you need was never decided by which room you were standing in.</p>
+      <div class="sheet-body fd-sheet-split">
+        <div class="fd-sheet-copy">
+          <h1 class="display fd-title"><span class="ln"><span>The Tools Reached Everyone.</span></span><span class="ln"><span><em>The Knowledge Didn&rsquo;t.</em></span></span></h1>
+          <div class="fd-thesis">
+            <p>For most of a century the console lived behind soundlocked doors, and the rooms behind them decided who learned the trade. Knowledge flowed the way signal moves through a patchbay &mdash; <em>normalled</em>, engineer to assistant to the intern holding the coffee. The rooms were the schools.</p>
+            <p>Then the tools got small and cheap and went home with everyone. That part was good. But the console in the palm of your hand did not come with the knowledge, and the trade split into what feel like separate worlds &mdash; the studio, the home rig, the classroom, the venue. Colleagues, separated by a gap neither of them made.</p>
+            <p class="fd-turn">The walls are gone. The sorting is leftover. What you need was never decided by which room you were standing in.</p>
+          </div>
+          <div class="fd-mission">
+            <p class="fd-mission-line display">Control Belongs to the Person Making the Art.</p>
+            <p class="fd-mission-sub">Major-label quality and talent for anyone, anywhere, without the overhead.</p>
+          </div>
         </div>
-        <div class="fd-mission">
-          <p class="fd-mission-line display">Control Belongs to the Person Making the Art.</p>
-          <p class="fd-mission-sub">Major-label quality and talent for anyone, anywhere, without the overhead.</p>
-        </div>
+        <figure class="fd-exhibit">
+          <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console mid-session, working at the screen, an engineer beside him, the control room lit by the desk" loading="eager" />
+          <figcaption>A large-format room, mid-session.</figcaption>
+        </figure>
       </div>
     </div>
   </div>
@@ -75,14 +81,21 @@ export default `
     <div class="unit-label reveal"><span class="unit-no">01</span><span>Whoever walked in</span><span class="unit-note">arm any &middot; or several</span></div>
     <h2 class="unit-title">Doors, Not Departments.</h2>
     <p class="fd-lede">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
+    <p class="fd-howto">Pick who you are and the doors line up in your order. Skip it and they work fine on their own.</p>
     <div class="fd-grid" data-fd-grid>
-      <div class="fd-bank" role="group" aria-label="Whoever walked in — arm any that fit">
-        <p class="fd-bank-note">Arm whichever fit &mdash; the doors answer.</p>
+      <div class="fd-col fd-col-bank">
+        <div class="fd-colhead"><span class="fd-colmark">First</span><h3 class="fd-colq display">Who Walked In?</h3><p class="fd-colsub">Pick any that fit. Several is normal.</p></div>
+        <div class="fd-bank" role="group" aria-label="Who walked in — pick any that fit">
 {{FD_PRESETS}}
+        </div>
       </div>
       <svg class="fd-cables" data-fd-cables aria-hidden="true"></svg>
-      <div class="fd-rack" aria-label="The five doors">
+      <div class="fd-col fd-col-rack">
+        <div class="fd-colhead"><span class="fd-colmark">Then</span><h3 class="fd-colq display">The Five Doors</h3><p class="fd-colsub">Every path ends at one of these.</p></div>
+        <p class="fd-stage" data-fd-stage aria-live="polite"></p>
+        <div class="fd-rack" aria-label="The five doors">
 {{FD_DOORS}}
+        </div>
       </div>
     </div>
     <p class="identity-close reveal">You could be three of these in the same week. The doors route the problem, not the title.</p>
@@ -92,7 +105,7 @@ export default `
   </div>
 </section>
 
-<section class="rack-unit proof-strip fd-proof">
+<section class="rack-unit proof-strip">
   <div class="wrap">
     <div class="unit-label reveal"><span class="unit-no">02</span><span>On record</span></div>
     <h2 class="unit-title">Real Records. Real Roles.</h2>

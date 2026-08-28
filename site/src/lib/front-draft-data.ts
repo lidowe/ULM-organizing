@@ -27,11 +27,22 @@ export type FdPreset = {
   name: string;
   /** Library icon naming the identity's object — objects, never people. */
   icon: string;
-  /** One line on the block. */
+  /** One line, shown when the block is armed. */
   hook: string;
-  /** The door this identity most often walks through (hottest cable). */
+  /**
+   * The walkthrough's title card: one sentence translating this identity
+   * into needs, spoken before anything lights. Composites name their
+   * components here in plain words — the interconnection carried by
+   * language first, visuals second. DRAFT scaffold, per the veto list.
+   */
+  keyphrase: string;
+  /** The door this identity most often walks through (rank 1). */
   primary: string;
-  /** doorId -> tailored line shown on that door's module when armed. */
+  /**
+   * doorId -> tailored line shown on that door's module when armed.
+   * INSERTION ORDER IS THE RANK ORDER — the walkthrough lights the doors
+   * in this sequence and numbers them from it. Primary first.
+   */
   doors: Record<string, string>;
   /** Composite: arming this also faintly arms these identities. */
   components?: string[];
@@ -45,6 +56,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Artist",
     icon: "note-eighth",
     hook: "A dozen jobs you never asked for, and the record still has to happen.",
+    keyphrase: "Your job is the song. These doors are the jobs around it.",
     primary: "complete",
     doors: {
       complete:
@@ -59,6 +71,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Home Engineer",
     icon: "audio-interface",
     hook: "Already charging for the work, or about to be. We get it.",
+    keyphrase: "You already do this work. The doors fill in the why — and back you up on the hard ones.",
     primary: "learn",
     doors: {
       learn:
@@ -72,6 +85,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Student",
     icon: "headphones",
     hook: "The apprenticeship that no longer exists.",
+    keyphrase: "The apprenticeship lives behind two doors: the teaching, and honest ears on your work.",
     primary: "learn",
     doors: {
       learn:
@@ -84,6 +98,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Working Engineer",
     icon: "console-desk",
     hook: "The technical depth is there when you want it.",
+    keyphrase: "Speak at whatever depth you like — the doors go down to gain structure and up to full production.",
     primary: "fix",
     doors: {
       fix: "Gain structure, impedance, converters and clocking on your actual rig.",
@@ -98,6 +113,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Studio Owner",
     icon: "patchbay",
     hook: "The room, the racks, and the fault you cannot isolate.",
+    keyphrase: "The room and the rack are one system. Two doors cover both ends of it.",
     primary: "fix",
     doors: {
       fix: "Measurement, treatment plan, speaker placement. A room that lies to you costs more than any preamp will fix.",
@@ -110,6 +126,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Audiophile",
     icon: "monitor-pair",
     hook: "A playback system taken as seriously as a control room.",
+    keyphrase: "Playback is a system, and systems can be measured. Two doors, no mystique.",
     primary: "evaluate",
     doors: {
       evaluate: "A playback system that never matched the record, taken seriously.",
@@ -121,6 +138,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "Corporate Audio",
     icon: "mic-dynamic",
     hook: "Audio work isn’t just for chart-topping hits.",
+    keyphrase: "A deliverable, and a space that has to sound right. Two doors, no jargon.",
     primary: "complete",
     proof: "American Idol · The Simpsons · Spotify",
     doors: {
@@ -133,6 +151,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Venue",
     icon: "speaker-monitor",
     hook: "A live room is a room. Rooms can be measured.",
+    keyphrase: "The PA, the room, and the path between them — measured, not guessed.",
     primary: "fix",
     doors: {
       fix: "The signal path traced end to end, and the room measured rather than guessed.",
@@ -144,6 +163,7 @@ export const FD_PRESETS: FdPreset[] = [
     name: "The Place of Worship",
     icon: "room-reflection",
     hook: "A venue, a broadcast, and a volunteer crew, all in one building.",
+    keyphrase: "One roof, three rooms: part venue, part broadcast studio, part classroom. The doors split the job.",
     primary: "fix",
     proof: "WoG Ministries",
     components: ["venue", "corporate", "student"],
@@ -167,7 +187,8 @@ export function fdPresetsHtml(): string {
     const proof = p.proof ? `<span class="fd-proof">${p.proof}</span>` : "";
     return `
     <button type="button" class="fd-preset" aria-pressed="false"
-      data-preset="${p.id}" data-primary="${p.primary}" data-doors="${doorIds}"${components}>
+      data-preset="${p.id}" data-primary="${p.primary}" data-doors="${doorIds}"${components}
+      data-keyphrase="${p.keyphrase}">
       ${iconHtml(p.icon, "md")}
       <span class="fd-preset-body">
         <span class="fd-name">${p.name}</span>
@@ -192,6 +213,7 @@ export function fdDoorsHtml(): string {
     return `
     <a class="fd-door" href="${door.href}" data-door="${door.id}">
       <span class="fd-jack" aria-hidden="true"></span>
+      <span class="fd-rank" hidden></span>
       <span class="fd-door-art" aria-hidden="true"><svg viewBox="0 0 720 120">${doorArt(door.id)}</svg></span>
       <span class="fd-door-body">
         <span class="fd-door-title display">${title}</span>

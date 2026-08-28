@@ -1575,7 +1575,6 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 
 /* ---- Hero: the thesis sheet ---- */
 .fd-hero{padding:clamp(7.5rem,14vh,10rem) 0 clamp(2.6rem,5vw,4rem);background:linear-gradient(180deg,var(--bg-soft),var(--bg) 70%)}
-.fd-hero .hero-sheet{max-width:980px}
 .fd-title{font-size:var(--fs-hero);margin:0 0 1.4rem;color:var(--paper)}
 .fd-title .ln{display:block;overflow:hidden;padding-bottom:.08em}
 .fd-title .ln>span{display:block;transform:translateY(105%);animation:ln-up .95s cubic-bezier(.16,.84,.34,1) both}
@@ -1588,6 +1587,18 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 .fd-mission-line{font-size:var(--fs-h2);line-height:1.2;margin:0 0 .5rem;color:var(--paper);text-wrap:balance}
 .fd-mission-sub{margin:0;font-size:var(--fs-read);line-height:1.6;color:var(--paper-soft);max-width:52ch}
 @media(prefers-reduced-motion:reduce){.fd-title .ln>span{animation:none;transform:none}}
+/* The sheet's one photograph: an exhibit clipped to the paperwork, not a
+   floating panel — bordered, captioned, sharing the sheet's ground. */
+.fd-sheet-split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(1.6rem,3vw,2.6rem);align-items:start}
+.fd-sheet-split .fd-title{font-size:var(--fs-h1)}
+.fd-exhibit{margin:0;border:1px solid var(--line);background:var(--panel)}
+.fd-exhibit img{display:block;width:100%;height:auto}
+.fd-exhibit figcaption{padding:.7rem .85rem;border-top:1px solid var(--line)}
+@media(max-width:900px){
+  .fd-sheet-split{grid-template-columns:1fr}
+  .fd-exhibit{max-width:520px}
+  .fd-exhibit img{aspect-ratio:3/2;height:auto}
+}
 
 /* ---- The patch bar: divider, thesis-in-motion, door to the account ---- */
 .fd-patchbar-band{padding:clamp(1.6rem,3vw,2.6rem) 0;border-bottom:1px solid var(--line)}
@@ -1606,30 +1617,51 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
   .fd-patchbar.in .fd-pb-flow,.fd-patchbar.in .fd-pb-patch,.fd-patchbar.in .fd-pb-patched{stroke-dashoffset:0;animation:none}
   .fd-patchbar.in .fd-pb-break{opacity:.85;animation:none}}
 
-/* ---- The patchbay: preset bank one side, the five doors the other ---- */
-.fd-lede{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);margin:0 0 clamp(1.8rem,3.4vw,2.6rem);max-width:58ch}
+/* ---- The patchbay: who walked in (First), the five doors (Then) ---- */
+.fd-lede{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);margin:0 0 .8rem;max-width:58ch}
+.fd-howto{font-size:var(--fs-sm);line-height:1.55;color:var(--muted);margin:0 0 clamp(1.8rem,3.4vw,2.6rem);max-width:58ch}
 .fd-grid{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(2.4rem,5vw,4.5rem);align-items:start}
-[data-fd][data-side="right"] .fd-bank{order:2}
-[data-fd][data-side="right"] .fd-rack{order:1}
+.fd-col{min-width:0}
+[data-fd][data-side="right"] .fd-col-bank{order:2}
+[data-fd][data-side="right"] .fd-col-rack{order:1}
+.fd-colhead{margin-bottom:1rem;border-bottom:1px solid var(--line-soft);padding-bottom:.8rem}
+.fd-colq{font-size:var(--fs-h3);line-height:1.15;color:var(--paper);margin:.35rem 0 .3rem}
+.fd-colsub{margin:0}
+/* The narration line: the armed identity's keyphrase, spoken before the
+   doors answer. Empty and collapsed at rest. */
+.fd-stage{margin:0 0 .9rem;min-height:0;max-height:0;overflow:hidden;font-size:var(--fs-h3);line-height:1.35;
+  color:var(--paper);max-width:44ch;opacity:0;transition:opacity .35s ease,max-height .4s ease}
+.fd-stage.on{opacity:1;max-height:6em}
+/* One tracer at a time: the pointer following the narration. Previous
+   tracers settle into faint threads; never a web. */
 .fd-cables{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:1}
-.fd-cable{fill:none;stroke:var(--paper-soft);stroke-width:1.75;opacity:.85}
-.fd-cable-hot{stroke:var(--amber);stroke-width:2.25;opacity:1}
-.fd-cable-faint{stroke:var(--quiet);stroke-width:1.5;opacity:.6}
+.fd-tracer{fill:none;stroke:var(--paper-soft);stroke-width:1.75;opacity:.9}
+.fd-tracer-hot{stroke:var(--amber);stroke-width:2.25;opacity:1}
+.fd-thread{fill:none;stroke:var(--quiet);stroke-width:1.25;opacity:.35}
 
 .fd-bank{display:grid;gap:.7rem;align-content:start}
-.fd-bank-note{margin:0 0 .3rem}
 .fd-preset{position:relative;display:grid;grid-template-columns:auto 1fr;gap:.9rem;align-items:start;text-align:left;
-  border:1px solid var(--line);background:rgba(236,234,229,.015);padding:.9rem 1.3rem .9rem .95rem;cursor:pointer;color:inherit;
+  border:1px solid var(--line);background:rgba(236,234,229,.015);padding:.8rem 1.3rem .8rem .95rem;cursor:pointer;color:inherit;
   transition:border-color .2s,background .2s}
 .fd-preset:hover{border-color:var(--paper-soft)}
 .fd-preset:focus-visible{outline:2px solid var(--amber-light);outline-offset:2px}
 .fd-preset.armed{border-color:var(--amber);background:rgba(216,52,43,.07)}
 .fd-preset.fd-partial{border-color:rgba(216,52,43,.4);background:rgba(216,52,43,.03)}
-.fd-preset .ulm-icon{margin-top:.15rem}
+.fd-preset .ulm-icon{margin-top:.1rem;align-self:center}
 .fd-preset-body{display:grid;gap:.3rem;min-width:0}
 .fd-preset.armed .fd-name{color:var(--aux-hot)}
 .fd-hook{font-size:var(--fs-sm);line-height:1.5;color:var(--paper-soft)}
-.fd-jack{position:absolute;top:50%;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--paper-soft);background:var(--bg);transform:translateY(-50%);z-index:2}
+/* Declutter: with JS running, the hook and proof lines fold away at rest
+   and speak only on the armed (or half-armed) block. Without JS the page
+   is a static document and everything stays visible. */
+.fd-js .fd-hook,.fd-js .fd-proof{max-height:0;opacity:0;overflow:hidden;margin:0;
+  transition:max-height .35s cubic-bezier(.22,.61,.36,1),opacity .3s ease}
+.fd-js .fd-preset.armed :is(.fd-hook,.fd-proof),
+.fd-js .fd-preset.fd-partial .fd-hook{max-height:5em;opacity:1}
+/* Jacks are tracer endpoints; meaningless without the interaction, so they
+   exist only when JS runs. */
+.fd-jack{display:none;position:absolute;top:50%;width:10px;height:10px;border-radius:50%;border:1.5px solid var(--paper-soft);background:var(--bg);transform:translateY(-50%);z-index:2}
+.fd-js .fd-jack{display:block}
 .fd-preset .fd-jack{right:-5px}
 .fd-door .fd-jack{left:-5px}
 [data-fd][data-side="right"] .fd-preset .fd-jack{right:auto;left:-5px}
@@ -1638,7 +1670,11 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 .fd-preset.fd-partial .fd-jack{border-color:var(--amber)}
 
 .fd-rack{display:grid;gap:.8rem;align-content:start}
+.fd-rank{position:absolute;top:.55rem;right:.6rem;z-index:2;border:1px solid rgba(240,80,67,.5);
+  color:var(--amber-light);padding:.08rem .4rem;background:rgba(11,13,17,.85)}
 .fd-door{position:relative;display:block;border:1px solid var(--line);background:rgba(236,234,229,.015);padding:.85rem .95rem;transition:border-color .25s,background .25s,opacity .3s}
+.fd-door.fd-beat{animation:fd-beat .55s ease-out}
+@keyframes fd-beat{0%{background:rgba(216,52,43,.16)}100%{background:rgba(216,52,43,.05)}}
 .fd-door:hover,.fd-door:focus-visible{border-color:var(--amber-light);background:rgba(216,52,43,.05)}
 .fd-door.fd-lit{border-color:var(--paper-soft)}
 .fd-door.fd-hot{border-color:var(--amber)}
@@ -1674,22 +1710,23 @@ a.db-bar:hover .db-word{color:var(--amber-light)}
 
 /* ---- Type variants (decision by sight; B = main's lighter cut, C =
    JetBrains Mono). Scoped to the draft page only. ---- */
-[data-fd][data-font="b"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k){
+[data-fd][data-font="b"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k,.fd-colmark,.fd-rank){
   font-weight:400;letter-spacing:.09em}
-[data-fd][data-font="c"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k){
+[data-fd][data-font="c"] :is(.sheet-row,.unit-label,.unit-note,.sheet-rev .wrap,.fd-name,.fd-patchbar-k,.fd-tail-k,.fd-colmark,.fd-rank){
   font-family:'JetBrains Mono','Space Mono',monospace;font-weight:500;letter-spacing:.08em}
-[data-fd][data-font="c"] :is(.fd-door-sub,.fd-patchbar-cap,.fd-bank-note,.fd-proof){
+[data-fd][data-font="c"] :is(.fd-door-sub,.fd-patchbar-cap,.fd-colsub,.fd-proof){
   font-family:'JetBrains Mono','Space Mono',monospace}
 
-/* ---- Small screens: chips over the stack, emphasis instead of cables ---- */
+/* ---- Small screens: chips over the stack, sequenced lighting alone
+   carries the response (no lines at all) ---- */
 @media(max-width:900px){
   .fd-grid{grid-template-columns:1fr;gap:1.6rem}
-  .fd-cables,.fd-jack{display:none}
-  .fd-bank{grid-auto-flow:column;grid-auto-columns:minmax(240px,78%);overflow-x:auto;padding-bottom:.7rem;
+  .fd-cables,.fd-js .fd-jack{display:none}
+  .fd-bank{grid-auto-flow:column;grid-auto-columns:minmax(200px,62%);overflow-x:auto;padding-bottom:.7rem;
     scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
   .fd-preset{scroll-snap-align:start}
-  [data-fd][data-side="right"] .fd-bank{order:0}
-  [data-fd][data-side="right"] .fd-rack{order:1}
+  [data-fd][data-side="right"] .fd-col-bank{order:0}
+  [data-fd][data-side="right"] .fd-col-rack{order:1}
   .fd-door-art svg{max-width:300px}
 }
 
@@ -1853,16 +1890,16 @@ h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
    is the bar's one hot item. Door sublines, captions and proof fragments
    join the caption family (sentences, not labels). Draft controls are
    chrome and take the tier's face at fine size. ---- */
-.fd-name,.fd-patchbar-k{font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
+.fd-name,.fd-patchbar-k,.fd-colmark{font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
   letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3}
-.fd-patchbar-k{color:var(--aux-hot)}
+.fd-patchbar-k,.fd-colmark{color:var(--aux-hot)}
 .fd-name{color:var(--aux-cool)}
-.fd-tail-k{font-family:var(--mono);font-weight:700;font-size:var(--fs-fine);
+.fd-tail-k,.fd-rank{font-family:var(--mono);font-weight:700;font-size:var(--fs-fine);
   letter-spacing:.08em;text-transform:uppercase;color:var(--aux-hot)}
-.fd-patchbar-cap,.fd-bank-note,.fd-door-sub,.fd-proof{font-family:var(--mono);font-weight:400;
+.fd-patchbar-cap,.fd-colsub,.fd-door-sub,.fd-proof,.fd-exhibit figcaption{font-family:var(--mono);font-weight:400;
   font-size:var(--fs-fine);letter-spacing:.02em;text-transform:none;color:var(--muted)}
 .fd-proof{color:var(--quiet)}
-.fd-thesis p,.fd-mission-sub,.fd-hook,.fd-lede,.fd-tail{font-family:var(--sans);font-weight:400;letter-spacing:0}
-.fd-thesis p.fd-turn{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
+.fd-thesis p,.fd-mission-sub,.fd-hook,.fd-lede,.fd-howto,.fd-tail{font-family:var(--sans);font-weight:400;letter-spacing:0}
+.fd-thesis p.fd-turn,.fd-stage{font-family:var(--display);font-weight:500;letter-spacing:-.01em}
 .fd-controls,.fd-controls button{font-family:var(--mono);font-weight:700;font-size:var(--fs-fine);
   letter-spacing:.08em;text-transform:uppercase}
