@@ -38,10 +38,6 @@ import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
-import { Route as VersionsAboutRouteImport } from './routes/versions.about'
-import { Route as VersionsDescribingSoundRouteImport } from './routes/versions.describing-sound'
-import { Route as VersionsEducationRouteImport } from './routes/versions.education'
-import { Route as VersionsStoryRouteImport } from './routes/versions.story'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquiry'
 
@@ -192,26 +188,6 @@ const Char91DotwellKnownChar93OauthProtectedResourceRoute =
     path: '/.well-known/oauth-protected-resource',
     getParentRoute: () => rootRouteImport,
   } as any)
-const VersionsAboutRoute = VersionsAboutRouteImport.update({
-  id: '/versions/about',
-  path: '/versions/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VersionsDescribingSoundRoute = VersionsDescribingSoundRouteImport.update({
-  id: '/versions/describing-sound',
-  path: '/versions/describing-sound',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VersionsEducationRoute = VersionsEducationRouteImport.update({
-  id: '/versions/education',
-  path: '/versions/education',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VersionsStoryRoute = VersionsStoryRouteImport.update({
-  id: '/versions/story',
-  path: '/versions/story',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const Char91DotmcpChar93InvokeToolToolRoute =
   Char91DotmcpChar93InvokeToolToolRouteImport.update({
     id: '/.mcp/invoke-tool/$tool',
@@ -254,10 +230,6 @@ export interface FileRoutesByFullPath {
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/versions/about': typeof VersionsAboutRoute
-  '/versions/describing-sound': typeof VersionsDescribingSoundRoute
-  '/versions/education': typeof VersionsEducationRoute
-  '/versions/story': typeof VersionsStoryRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
 }
@@ -291,10 +263,6 @@ export interface FileRoutesByTo {
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/versions/about': typeof VersionsAboutRoute
-  '/versions/describing-sound': typeof VersionsDescribingSoundRoute
-  '/versions/education': typeof VersionsEducationRoute
-  '/versions/story': typeof VersionsStoryRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
 }
@@ -329,10 +297,6 @@ export interface FileRoutesById {
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/versions/about': typeof VersionsAboutRoute
-  '/versions/describing-sound': typeof VersionsDescribingSoundRoute
-  '/versions/education': typeof VersionsEducationRoute
-  '/versions/story': typeof VersionsStoryRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
 }
@@ -368,10 +332,6 @@ export interface FileRouteTypes {
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
-    | '/versions/about'
-    | '/versions/describing-sound'
-    | '/versions/education'
-    | '/versions/story'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
   fileRoutesByTo: FileRoutesByTo
@@ -405,10 +365,6 @@ export interface FileRouteTypes {
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
-    | '/versions/about'
-    | '/versions/describing-sound'
-    | '/versions/education'
-    | '/versions/story'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
   id:
@@ -442,10 +398,6 @@ export interface FileRouteTypes {
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
-    | '/versions/about'
-    | '/versions/describing-sound'
-    | '/versions/education'
-    | '/versions/story'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
   fileRoutesById: FileRoutesById
@@ -480,10 +432,6 @@ export interface RootRouteChildren {
   WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  VersionsAboutRoute: typeof VersionsAboutRoute
-  VersionsDescribingSoundRoute: typeof VersionsDescribingSoundRoute
-  VersionsEducationRoute: typeof VersionsEducationRoute
-  VersionsStoryRoute: typeof VersionsStoryRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
   ApiPublicInquiryRoute: typeof ApiPublicInquiryRoute
 }
@@ -693,34 +641,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/versions/about': {
-      id: '/versions/about'
-      path: '/versions/about'
-      fullPath: '/versions/about'
-      preLoaderRoute: typeof VersionsAboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/versions/describing-sound': {
-      id: '/versions/describing-sound'
-      path: '/versions/describing-sound'
-      fullPath: '/versions/describing-sound'
-      preLoaderRoute: typeof VersionsDescribingSoundRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/versions/education': {
-      id: '/versions/education'
-      path: '/versions/education'
-      fullPath: '/versions/education'
-      preLoaderRoute: typeof VersionsEducationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/versions/story': {
-      id: '/versions/story'
-      path: '/versions/story'
-      fullPath: '/versions/story'
-      preLoaderRoute: typeof VersionsStoryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/.mcp/invoke-tool/$tool': {
       id: '/.mcp/invoke-tool/$tool'
       path: '/.mcp/invoke-tool/$tool'
@@ -769,10 +689,6 @@ const rootRouteChildren: RootRouteChildren = {
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
-  VersionsAboutRoute: VersionsAboutRoute,
-  VersionsDescribingSoundRoute: VersionsDescribingSoundRoute,
-  VersionsEducationRoute: VersionsEducationRoute,
-  VersionsStoryRoute: VersionsStoryRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
   ApiPublicInquiryRoute: ApiPublicInquiryRoute,
 }
