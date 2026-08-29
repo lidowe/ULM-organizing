@@ -5,11 +5,15 @@
 
 
 import { initWorkbenchTools } from "./workbench-tools";
+import { initFrontDraft } from "./front-draft-behaviors";
+import { initRoomModes } from "./room-modes";
 
 export function initSiteBehaviors(): () => void {
   const cleanups: Array<() => void> = [];
 
   initWorkbenchTools(cleanups);
+  initFrontDraft(cleanups);
+  initRoomModes(cleanups);
 
   // The door rail marks the page it is on, so the current door reads as
   // location rather than a link to itself.

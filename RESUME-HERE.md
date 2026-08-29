@@ -4,7 +4,7 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-08-24 · branch claude/five-doors-live-26jwtv @ b68b887 (five-doors build merged in from consolidation)
+STAMP    2026-08-28 · branch claude/five-doors-live-26jwtv @ ffb0a9c (front-draft working surface, committed NOT pushed)
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
 LIVE     main @ c6bc9ac -> upperlevelmusic.com. Runs the OLD pre-doors site. NOT the work below.
 PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev  (confirmed live by Edward 2026-08-24, rebuilds on push to this branch)
@@ -14,11 +14,20 @@ WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min ->
 ## STATE
 
 ```
-DONE     Five-doors rebuild, complete + pushed, 54 commits ahead of main. Never published.
-DOING    Repo-wide audit + cleanup. PLAN APPROVED, PHASE 0 IN PROGRESS (this file is step 1).
-NEXT     1. safety tags on all branch tips  2. full read of every file  3. docs/INDEX.md + human/ files
-         4. consolidation proposal  5. execute approved items  6. guardrails in CLAUDE.md
-BLOCKED  Nothing. Two unanswered questions under DECISIONS.
+DONE     2026-08-28: /front-draft v1 (cable patchbay, ffb0a9c) and v2 (guided walkthrough, 1d9fc19)
+         both built, pushed, REJECTED by Edward on the preview — a marketing page cannot honestly
+         personalize; interactive homepage retired as a direction. STRATEGY SETTLED instead:
+         SITE = simple companion statement, services+identities lightly merged, TWO CTAs
+         (contact · get the app). APP = the depth: free tier better than the current workbench
+         toys (his verdict: "simpliton… incorrect or no significant information" — bench-check
+         failed), subscription tier = lessons + deep wiring/acoustic solvers + AAA graphics.
+         APP STUDY delivered: docs/research/APP-STUDY.md (economics, comps incl. SonarRoom/White
+         Mark, mic-calibration truth, WebGPU/LiDAR capability table, phased path with gates).
+DOING    Awaiting Edward's read of APP-STUDY.md.
+NEXT     1. his verdict on the study (esp. phase-0 gate: name the free tools, bench-check physics)
+         2. front v3 = the simple two-CTA site (thesis hero + patch bar kept; instrument removed)
+         3. door pages / photo-grammar cohesion pass  4. BRIEF audience update  5. breakdown page
+BLOCKED  Nothing. The hosted-preview /front-draft still shows the rejected v2 walkthrough until v3.
 ```
 
 ## NEVER DO
@@ -37,14 +46,21 @@ BLOCKED  Nothing. Two unanswered questions under DECISIONS.
 ## DECISIONS OPEN (ask Edward, do not guess)
 
 ```
-1. Is the five-doors architecture still the intended direction? (Audit hierarchy depends on it. Assumed YES.)
+1. RESOLVED 2026-08-28: doors stay the routing scheme; homepage restructured around them (see /front-draft).
 2. Any unpushed work in another session/Lovable/Copilot right now? Should be pushed before cleanup.
 3. /complete "What this covers" section wording. Two interpretations tried, both wrong, both reverted.
    Verbatim ask: "Covering The Deliverables." + "standard industry services above standard quality".
    Current state = "We'll Take It From Here." Ask him to state exactly what he wants. See docs/NEXT-SESSION.md.
 4. Rates unconfirmed (teaching $75-150/hr; $100-150/hr reused for systems + acoustics; deposit/revision/day-rate terms).
 5. Work/Proof artist roster unvetted — broad, largely unverifiable from public credits. Blocks publishing.
-6. Door icon scale: full-width bars shipped; his last recorded instinct was "tiny little side bars". Unresolved.
+6. Door icon scale: /front-draft shows compact door modules ("tiny side bars" direction). His verdict pending.
+7. 2026-08-28 pending his veto: front-draft copy list (in-chat, numbered) · identity roster/order/titles ·
+   type variant A/B/C · bank side L/R · "Doors, Not Departments." as section title.
+8. Purple de-weighted (Edward 2026-08-28: "purple is not a major linguistic connector"). Draft shows door 5
+   as his verbatim "Explain It, Adapt, Solve It"; /purple route + doors.ts unchanged until homepage swap.
+9. Audience architecture extended by Edward 2026-08-28: corporate audio, places of worship, venues are now
+   identities (BRIEF §1 excluded institutions — update BRIEF in the swap pass; proof-backed only:
+   media & brands list, WoG Ministries).
 ```
 
 ## BRANCHES (10 remote)
@@ -66,7 +82,10 @@ copilot/preservesite-...-five-doors-full-another-one EMPTY
 
 ```
 LIVE PAGES  / (doors) · /complete · /fix · /learn · /evaluate · /purple · /the-gap · /story · /proof · /start
-            · /pre-production · (unlisted: /hierarchy-options, /doors-draft)
+            · /pre-production · (unlisted: /hierarchy-options, /doors-draft, /front-draft)
+FRONT-DRAFT files: lib/pages/front-draft.ts (page+scaffold copy) · lib/front-draft-data.ts (presets/matrix/
+            renderers) · components/site/front-draft-behaviors.ts (arming/cables/toggles) · routes/front-draft.tsx
+            · site.css fd- blocks (component block + TYPE SYSTEM addendum) · public/fonts/jetbrains-mono-* (variant C)
 REDIRECTS   about->story · work->proof · studio->proof · education->learn · services->complete · contact->start
             · describing-sound->purple · credits,process,reach,who-we-are,news -> /  <-- 4 of these are a DEFECT,
               should point at real destinations, not homepage. Fix during cleanup.

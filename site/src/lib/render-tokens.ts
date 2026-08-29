@@ -7,6 +7,7 @@ import {
 import { photo, photoByUrl } from "./photos";
 import { animHtml, iconHtml } from "./visuals";
 import { doorMarkHtml, doorRailHtml, doorsHtml } from "./doors";
+import { fdDoorsHtml, fdPresetsHtml } from "./front-draft-data";
 
 const TOKENS: Record<string, () => string> = {
   "{{RIBBON}}": ribbonHtml,
@@ -15,6 +16,9 @@ const TOKENS: Record<string, () => string> = {
   "{{MEDIA_INDEX}}": mediaIndexHtml,
   "{{DOORS}}": doorsHtml,
   "{{DOOR_RAIL}}": doorRailHtml,
+  // Front-draft working surface (/front-draft) only.
+  "{{FD_PRESETS}}": fdPresetsHtml,
+  "{{FD_DOORS}}": fdDoorsHtml,
 };
 
 /**

@@ -27,6 +27,8 @@ import start from "./pages/start";
 import preProduction from "./pages/pre-production";
 import hierarchyOptions from "./pages/hierarchy-options";
 import doorsDraft from "./pages/doors-draft";
+import frontDraft from "./pages/front-draft";
+import app from "./pages/app";
 
 export const pages: Record<string, string> = {
   index: index,
@@ -40,7 +42,11 @@ export const pages: Record<string, string> = {
   proof: proof,
   start: start,
   "pre-production": preProduction,
-  // Working surfaces, unlisted: Edward's ranking page and the icon lab.
+  // Working surfaces, unlisted: Edward's ranking page, the icon lab, and
+  // the homepage-restructure draft.
   "hierarchy-options": hierarchyOptions,
   "doors-draft": doorsDraft,
+  "front-draft": frontDraft,
+  // The app's working preview (front-draft's second CTA).
+  app: app,
 };

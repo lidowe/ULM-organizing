@@ -1,11 +1,106 @@
 # Where things stand — written for Edward, in plain English
 
-**Stamp: 21 August 2026, 7:48pm UTC · branch `claude/site-iterations-docs-review-dbr45q` · commit `05f1330`**
+**Stamp: 28 August 2026 (evening) · branch `claude/five-doors-live-26jwtv` · the App Study commit**
 
 > **Staleness check, takes five seconds:** open `RESUME-HERE.md` (the short file in the
-> main folder) and look at its stamp line. If the commit code there is not `05f1330`,
+> main folder) and look at its stamp line. If it doesn't mention the App Study,
 > then work has happened since this was written and *this* file is behind. Trust the
-> short file, and ask for this one to be refreshed. No AI needs to check this for you.
+> short file, and ask for this one to be refreshed.
+
+---
+
+## 28 August, later: the fork got named, and studied
+
+You tested the interactive homepage twice and killed it twice, for the right
+reason both times: a webpage can't actually know its visitor, so "personalized"
+controls are theater. You named the real shape — **the site becomes simple**
+(ULM as a companion; services and identities lightly merged; two buttons:
+contact, or get the app) **and the app carries the depth** — free tools that are
+genuinely good, and a paid tier with real lessons and deep technical solvers.
+
+Before building anything, you asked for a study. It now exists at
+`docs/research/APP-STUDY.md`, with sources. The headlines, plain:
+
+- **An app is for people who come back** — students, clients, engineers. It
+  cannot be the front door: most app installs are abandoned within a month,
+  and nobody downloads commitment from a stranger. The site stays the front
+  door forever.
+- **The app is where "knowing you" is honest.** It knows your room and your
+  level because you typed them in. The identity system we built and killed on
+  the homepage is actually the app's sign-up flow.
+- **The market just validated the idea — and occupied part of it.** An app
+  called SonarRoom launched in March doing 3D acoustic room-mapping on
+  iPhone, and White Mark (the famous studio designers) ship a pro room app.
+  The lane is real. ULM's edge isn't the scan — it's the thirty years that
+  reviews the scan, and the service behind the button.
+- **Phone microphones genuinely can't do absolute measurements** (peer-
+  reviewed: errors over 3 dB are normal without a calibrated external mic).
+  So the free tools must say their limits out loud — your "physics describes,
+  ears decide" law, carried into the app — and the serious tier pairs with a
+  proper mic, the way Sonarworks does.
+- **What education apps charge:** roughly $10–27 a month (SoundGym, Melodics,
+  Mix with the Masters, Puremix). Apple takes 15% at your size. A hundred
+  subscribers is real money but not a living — the app supports the business;
+  it doesn't replace it.
+- **The build path is phased with gates**: define and bench-check the free
+  tools first (your hours go into correctness, not code) → ship the free
+  companion sharing the site's code → only then the store app with the paid
+  tier → only after that sustains, the native iPhone flagship that scans a
+  sanctuary with the laser sensor and drafts a treatment plan with
+  "have Edward review this" built in.
+
+Nothing was built this round; that was the point. The site's v3 (the simple
+two-button front) comes next, after you've read the study.
+
+---
+
+## What happened on 28 August
+
+You and Claude planned the homepage restructure, and a full working draft of it now
+exists at a hidden page called **/front-draft** on the working branch. It is committed
+but **not yet pushed** — say "push it" and about two minutes later it appears on your
+preview address at `/front-draft`. The public site is untouched, and so is the current
+homepage on the branch: the draft is a separate page, built so you can judge the visual
+narrative before settling any words.
+
+What the draft contains, top to bottom:
+
+1. **The header argues the era, not a rhyme.** "The Tools Reached Everyone. The
+   Knowledge Didn't." over three short paragraphs built almost entirely from sentences
+   you already wrote — soundlocked doors, the interrupted handover — ending on your
+   mission line: control belongs to the person making the art.
+2. **The patch bar.** A full-width strip that draws the story once — the signal flowing,
+   the break, the red cable patched around it — then rests on the repaired state. It is
+   also the clickable way into the full philosophy page (for now it goes to The Gap;
+   you'll spec the real breakdown page later).
+3. **The patchbay.** Nine "whoever walked in" identity blocks on one side (artist, home
+   engineer, student, working engineer, studio owner, audiophile, corporate audio,
+   venue, place of worship), the five doors on the other, drawn small — the "tiny side
+   bars" instinct. Click an identity to *arm* it like a console channel: cables draw
+   across to the doors it feeds, and each door re-describes itself for whoever is
+   armed. Arm several and the cables converge on the same five doors — the whole
+   argument, visible. The Place of Worship is a combination: arming it half-lights
+   venue, corporate and student, exactly as you described it.
+4. **On-page draft controls** (bottom-right) let you flip between three type treatments
+   — A is the current one, B is the lighter cut the hosted site uses, C is JetBrains
+   Mono, the typewriter-ish face from the old archived site — and flip the identity
+   bank left or right. Decide by looking, not by discussing.
+
+All the new connective copy is scaffold awaiting your veto — a numbered list is in the
+chat. Nothing on the draft is final wording. Door 5 appears under your own title,
+"Explain It, Adapt, Solve It", per your note that purple carried too much weight.
+
+One rule note: this file used to say AI sessions are blocked from reading `human/`;
+since HOW-WE-WORK (24 August) they are allowed, and this twin now gets updated with the
+short file, in the same commit, with the same stamp.
+
+---
+
+## The older account below (21 August) — kept for history
+
+Everything below this line describes the state as of 21 August. The "dual permission"
+section is superseded by HOW-WE-WORK.md: the two hard gates now are *preview before
+merge* and *the word "publish" before anything goes live*.
 
 ---
 
