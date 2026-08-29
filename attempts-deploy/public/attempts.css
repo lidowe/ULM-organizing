@@ -1,0 +1,95 @@
+/* Off-grid microsite — one page, each attempt an accordion. Self-contained. */
+:root{
+  --ground:#0d0e11;--panel:#15171c;--ink:#ece8e0;--ink-2:#c4c2ba;
+  --dim:#83858d;--hot:#d8442f;--tape:#c9a96a;
+  --line:rgba(236,232,224,.12);--line-2:rgba(236,232,224,.06);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+.display{font-family:"Spectral",Georgia,serif}
+.mono{font-family:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+a{color:var(--tape)}
+a:hover{color:var(--ink)}
+
+/* page head */
+.index-hero{padding:82px 0 30px}
+.index-hero .eyebrow{font-family:"Space Mono",monospace;font-weight:700;font-size:12px;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.index-hero h1{font-family:"Spectral",Georgia,serif;font-weight:600;
+  font-size:clamp(38px,7vw,68px);line-height:1;letter-spacing:-.03em;margin:0}
+.index-hero .sub{color:var(--dim);font-size:15px;margin:.9em 0 0;max-width:52ch}
+
+/* the accordions */
+.accordions{margin:14px 0 0;border-top:1px solid var(--line)}
+details.att{border-bottom:1px solid var(--line)}
+details.att > summary{
+  list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:16px;
+  padding:26px 0;outline:none;
+}
+details.att > summary::-webkit-details-marker{display:none}
+summary .idx{font-family:"Space Mono",monospace;font-size:12px;font-weight:700;
+  letter-spacing:.1em;color:var(--dim);flex:none;line-height:1.7}
+summary .st{flex:1;min-width:0}
+summary .title{font-family:"Spectral",Georgia,serif;font-weight:500;
+  font-size:clamp(21px,3.4vw,29px);line-height:1.18;letter-spacing:-.01em;
+  color:var(--ink);text-wrap:balance}
+summary .sub{display:block;color:var(--dim);font-size:14px;margin-top:6px;max-width:60ch}
+summary .chev{flex:none;color:var(--hot);font-family:"Space Mono",monospace;
+  font-size:20px;line-height:1;transition:transform .25s ease;align-self:center}
+details[open].att > summary .chev{transform:rotate(45deg)}
+details.att:hover > summary .title{color:var(--tape)}
+summary:focus-visible{outline:2px solid var(--tape);outline-offset:4px}
+
+.att-body{padding:2px 0 34px}
+@media (prefers-reduced-motion:no-preference){
+  details[open].att .att-body{animation:reveal .4s ease}
+  @keyframes reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+}
+
+/* prose inside an accordion */
+.unit{padding:18px 0}
+.unit + .unit{border-top:1px solid var(--line-2)}
+.label{font-family:"Space Mono",monospace;font-size:11px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.unit h3{font-family:"Spectral",Georgia,serif;font-weight:500;
+  font-size:clamp(19px,2.6vw,24px);line-height:1.2;letter-spacing:-.01em;
+  margin:0 0 .6em;color:var(--ink);text-wrap:balance}
+.unit p{margin:0 0 1em;color:var(--ink-2);max-width:66ch}
+.unit p:last-child{margin-bottom:0}
+.lede{font-size:1.06em;color:var(--ink)!important}
+.turn{font-family:"Spectral",Georgia,serif;font-style:italic;font-size:1.1em;
+  color:var(--ink)!important;margin:1.1em 0!important}
+blockquote{margin:1.3em 0;padding-left:20px;border-left:2px solid var(--hot);
+  font-family:"Spectral",Georgia,serif;font-style:italic;font-size:1.2em;
+  line-height:1.4;color:var(--ink)}
+strong{color:var(--ink)}
+
+/* patchbay diagrams */
+.diagram{margin:22px 0 6px}
+.diagram svg{width:100%;height:auto;display:block}
+.gd-flow{fill:none;stroke:var(--ink-2);stroke-width:2.4;stroke-linecap:round}
+.gd-faint{fill:none;stroke:var(--line);stroke-width:2.4;stroke-linecap:round}
+.gd-patched{stroke:var(--tape)}
+.gd-node{fill:var(--ink-2)}
+.gd-dim{fill:var(--line)}
+.gd-break{stroke:var(--hot);stroke-width:2.6;stroke-linecap:round}
+.gd-patch{fill:none;stroke:var(--tape);stroke-width:2.6;stroke-linecap:round}
+.gd-label{font-family:"Space Mono",monospace;font-size:13px;fill:var(--dim)}
+figure{margin:0}
+figcaption{font-family:"Space Mono",monospace;font-size:12px;color:var(--dim);
+  margin-top:10px;letter-spacing:.02em}
+
+/* purple lexicon */
+.lex{list-style:none;margin:18px 0;padding:0;border-top:1px solid var(--line-2)}
+.lex li{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;
+  padding:11px 0;border-bottom:1px solid var(--line-2)}
+.lex .w{font-family:"Spectral",Georgia,serif;font-style:italic;font-size:1.1em;
+  color:var(--ink);min-width:9ch}
+.lex .m{color:var(--dim);font-size:.95em}
+
+footer{padding:40px 0 80px;color:var(--dim);font-size:13px}

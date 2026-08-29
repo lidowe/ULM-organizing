@@ -1,0 +1,18 @@
+{
+  // Standalone deployment for the "Various Attempts" page.
+  //
+  // DELIBERATELY ISOLATED. This is its own Worker, unrelated to the live
+  // site's `ulm-organizing` Worker. It has:
+  //   - its own name (below), so it never overwrites the live site;
+  //   - NO `routes` and NO custom domain, so it CANNOT bind or hijack
+  //     upperlevelmusic.com — it only answers on its own workers.dev URL;
+  //   - only static assets, no server code.
+  //
+  // Deploy from this folder:  npx wrangler deploy
+  // Result URL:               https://ulm-attempts.<your-account>.workers.dev
+  "name": "ulm-attempts",
+  "compatibility_date": "2026-08-05",
+  "assets": {
+    "directory": "./public"
+  }
+}
