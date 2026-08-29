@@ -66,6 +66,13 @@ BLOCKED  Nothing. The hosted-preview /front-draft still shows the rejected v2 wa
 ## BRANCHES (10 remote)
 
 ```
+site-alternate                            06c5ff4  FROZEN HOSTING BRANCH (2026-08-29, Edward's ask): the complete
+         five-doors site pre-app-direction, published standalone at its branch preview URL
+         (site-alternate-ulm-organizing.upperlevelmusic.workers.dev). NOT a work branch — never
+         develop on or push to it; any push changes that public site. Not linked from main.
+```
+
+```
 main                                      c6bc9ac  LIVE. Old site. + 6 manual .md edits by Edward 2026-08-21.
 claude/site-iterations-docs-review-dbr45q 05f1330  ACTIVE. The five-doors rebuild. All current work.
 claude/upperlevelmusic-review-hod2rl      d575858  Aug 18. Teardown + doors origin. MERGED into active. PR #8. Keep.
