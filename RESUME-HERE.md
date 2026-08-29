@@ -4,9 +4,10 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-08-28 · branch claude/five-doors-live-26jwtv @ ffb0a9c (front-draft working surface, committed NOT pushed)
+STAMP    2026-08-29 · branch claude/five-doors-live-26jwtv (all work pushed; see STATE)
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
-LIVE     main @ c6bc9ac -> upperlevelmusic.com. Runs the OLD pre-doors site. NOT the work below.
+LIVE     main @ 20de3c0 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ microsite (ULM'd copy,
+         IP footer, published 2026-08-29 by this session; PR #9 had published the first version).
 PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev  (confirmed live by Edward 2026-08-24, rebuilds on push to this branch)
 WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min -> Edward checks. Only "publish" -> main.
 ```
@@ -23,7 +24,15 @@ DONE     2026-08-28: /front-draft v1 (cable patchbay, ffb0a9c) and v2 (guided wa
          failed), subscription tier = lessons + deep wiring/acoustic solvers + AAA graphics.
          APP STUDY delivered: docs/research/APP-STUDY.md (economics, comps incl. SonarRoom/White
          Mark, mic-calibration truth, WebGPU/LiDAR capability table, phased path with gates).
-DOING    Awaiting Edward's read of APP-STUDY.md.
+DONE+    2026-08-28/29 continued: front v3 (simple two-CTA site) + /app working preview (Room Mode
+         Explorer, PWA layer) built + pushed (964e6a2). Two zips delivered to Edward (site source +
+         app preview @ 964e6a2). /attempts/ published live on main (20de3c0): Upper Level Music ->
+         ULM in copy, dated IP/legal footer (authored Aug 1 2026), coda line removed as Reddit bait.
+         site-alternate branch created @ 06c5ff4 (frozen hosting: the full five-doors site pre-app
+         direction, standalone at its branch preview URL). Merged in the other session's work
+         (/attempts sources, attempts-deploy/, /the-argument + /versions renders); branch's
+         /attempts copy synced to the live ULM'd version.
+DOING    Edward posting the theory to Reddit (screenshot/paste). App direction phased per APP-STUDY.
 NEXT     1. his verdict on the study (esp. phase-0 gate: name the free tools, bench-check physics)
          2. front v3 = the simple two-CTA site (thesis hero + patch bar kept; instrument removed)
          3. door pages / photo-grammar cohesion pass  4. BRIEF audience update  5. breakdown page
