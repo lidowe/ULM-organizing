@@ -6,8 +6,10 @@ Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ 
 ```
 STAMP    2026-08-29 · branch claude/five-doors-live-26jwtv (all work pushed; see STATE)
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
-LIVE     main @ 20de3c0 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ microsite (ULM'd copy,
-         IP footer, published 2026-08-29 by this session; PR #9 had published the first version).
+LIVE     main @ 45b2545 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ microsite (ULM'd copy,
+         IP footer) + /alternatevisualAug27/ = STANDALONE STATIC MIRROR of the full five-doors site
+         (snapshot of 06c5ff4; 11 pages + assets + vanilla behaviors bundle; noindex; no links to or
+         from the main site; additive files only — never delete without Edward's word).
 PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev  (confirmed live by Edward 2026-08-24, rebuilds on push to this branch)
 WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min -> Edward checks. Only "publish" -> main.
 ```
