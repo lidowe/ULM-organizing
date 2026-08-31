@@ -103,18 +103,44 @@ unity, strata rising as steps, the control room upstairs, the canopy, the
 typographic lintel (UPPER riding a bar carried by LEVEL MUSIC), and the ULM
 elevator button. Any of them can get the full treatment on request.
 
+## Round three — brainstorm reset (canvas page: Round Three)
+
+Edward's steer: too much reliance on the website — visually, pretend it does
+not exist — and slow down, this is brainstorming, not deciding. Round three
+drops the site's fonts, palette, and every prior visual; two boards of loose
+sketches with hand-written captions, deliberately uncommitted:
+
+- **Fresh Fields** (new ideas first, per his ask): birds on the wires as
+  staff notation · the ridge line with the walked route · the eclipse ring ·
+  a lighthouse keeper's badge · the rubber stamp · a rising constellation ·
+  the speaker totem · the conductor's upbeat brushstroke.
+- **ULM, Bent Nine Ways** (the letters as raw material): the overline ·
+  road-case stencil with THIS SIDE UP · one uncut cable spelling ulm,
+  plug to plug · a tape ribbon spelling as it runs · the stacked chop ·
+  the three-ink overprint · the neon tube sign · the varsity arch · the
+  punched block.
+
+Nothing in round three is a proposal; it exists to be pointed at.
+
 ## Copy bank
 
 House rule kept: **nothing "proposed" ships until Edward says the words.**
 
 **Verbatim from the site (already his, already public):**
-"The Industry is undergoing *major key changes.*" · "A production line never
-misses a beat. That's what's wrong with it." · "Some of us refuse to put our
-emotions on an assembly line." · "Music is not meant to be made alone, staring
-at a screen." · "The gear is only evidence; this is the work." · "It starts on
-beat one." · "Hand It Over. / Work It Together. / Learn to Run It." · "A room
-that lies to you costs more than any preamp will fix." · "Tell Me What You're
-Working On." · "Reach for the upper level, and we will give you a boost."
+"The Industry is undergoing *major key changes.*" · "Some of us refuse to put
+our emotions on an assembly line." · "Music is not meant to be made alone,
+staring at a screen." · "The gear is only evidence; this is the work." · "It
+starts on beat one." · "Hand It Over. / Work It Together. / Learn to Run It."
+· "A room that lies to you costs more than any preamp will fix." · "Tell Me
+What You're Working On." · "Reach for the upper level, and we will give you a
+boost."
+
+**Retracted:** "A production line never misses a beat. That's what's wrong
+with it." was in this list because it appears in the site copy
+(`services.ts:307` and `process.ts:504`), but Edward disowns it — he never
+wrote it and thinks the logic is backwards. Pulled from the boards and this
+bank. It is still live on the site in those two places; whether it comes out
+of the site copy is his call, flagged and awaiting his word.
 
 **Proposed (mine — pick, veto, or rewrite):**
 
@@ -154,7 +180,7 @@ Printway/AMZScout POD reports, Promo Hype band-merch roundup.
 | Slipmat | Rings full-bleed — growth rings under actual vinyl | 12″ felt, dye-sub |
 | Stickers | panel, chip, Trust Your Ears, Everything Is a Phase, It's the Room. | kiss-cut sheet or singles |
 | Enamel pin | Strata mark at 32 mm (its smallest legibility test) | hard enamel |
-| Poster | "A production line never misses a beat. That's what's wrong with it." verbatim, panel footer | A2/A3, also runs reversed on paper stock |
+| Poster | "Music is not meant to be made alone, staring at a screen." verbatim, panel footer | A2/A3, also runs reversed on paper stock |
 
 Deliberately excluded, matching standing rules: **no artist names anywhere**
 (credits rule; the Work roster is unvetted), **no people in imagery** (photo
