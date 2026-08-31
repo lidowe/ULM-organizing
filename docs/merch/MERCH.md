@@ -250,3 +250,34 @@ tag. Works as the actual sizing on real garments, not just a graphic.
 
 Also fixed on Round Four: the tape-path sketch redrawn (the previous
 version had an unfortunate anatomy problem Edward spotted immediately).
+
+## Round five verdict + round six — badge-grade (canvas page: Round Six)
+
+Round five's escalation sketches failed Edward's review: UL read as "Upper
+Large," nothing looked cool or audio-related, and the register was wrong on
+both ends — generative scenes too much, flat vector too simple. His call:
+get research in, step it up.
+
+**The research** (sources: Vintage King and Funky Junk brand histories,
+Creative Bloq / Penji record-label logo analyses): the enduring audio marks
+— Telefunken's diamond, Blue Note's roundel, Motown, the Fender/Marshall
+scripts, Moog's wordmark, mic badges — share five things: the wordmark IS
+the logo and it is drawn, not typed · a containing badge shape from the
+gear world · one color that survives stamping · the audio in the vernacular
+(proportions, plates, calibration ticks), never in a picture of gear ·
+tight geometry with one human quirk.
+
+**Three marks built to that standard:**
+- **The Monogram** — custom-drawn ULM letterforms (cap 240, stroke 58,
+  chamfered L), the only audio tell hidden inside the letter: the U's
+  counter is a fader slot with the cap parked at the top of its throw.
+  Plus a calibrated roundel badge form. Files: `logo/m1-monogram*.svg`,
+  `logo/m2-roundel*.svg`, `logo/generate_round6.py`.
+- **The Amp Badge** — chrome script "Upper Level" on tolex, the
+  Fender/Marshall bloodline; flat single-color cut is the real logo. The
+  script face (Mr Dafoe, OFL) is a stand-in to be custom-drawn if chosen.
+  Files: `renders/r6-script.jpg`, `renders/generate_round6.py`,
+  `renders/mrdafoe.ttf`.
+- **The Plate** — elongated double-keyline lozenge with the same custom
+  letters, mic-badge vernacular; engraved-brass render plus flat cuts.
+  Files: `logo/m3-lozenge*.svg`, `renders/r6-lozenge.jpg`.
