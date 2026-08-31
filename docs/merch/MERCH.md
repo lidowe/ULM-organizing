@@ -231,3 +231,22 @@ drawings.
    went ULM-first; the main site is full-name-first. Boards show both.
 4. Whether a tagline gets picked now (it would fill the empty masthead slot),
    or the slot stays deliberately empty.
+
+## Round five — the escalation (canvas page: Round Five)
+
+Edward's prompt: a play on an elevator and upper level, or things that
+escalate in scope or quality where the highest escalation is the Upper
+Level. Eight sketches: the lobby floor dial (needle past every floor) · the
+button column with UL lit · elevator doors opening on light · B / L / UL
+(the floor above the Lobby) · the size tag · good / better / Upper Level ·
+the gear escalation (earbud → speaker → monitor → desk) · the media
+escalation (cassette → 7" reel → 2" reel). The dial and the button panel
+are also rendered with real materials (`renders/r5-dial.jpg`,
+`renders/r5-buttons.jpg`, rebuilt by `renders/generate_round5.py`).
+
+**The sleeper found inside his prompt: the size run.** On this brand's
+shirts the size above L is not XL — it is **UL**. S, M, L, UL on the woven
+tag. Works as the actual sizing on real garments, not just a graphic.
+
+Also fixed on Round Four: the tape-path sketch redrawn (the previous
+version had an unfortunate anatomy problem Edward spotted immediately).
