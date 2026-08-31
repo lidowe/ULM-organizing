@@ -122,6 +122,33 @@ sketches with hand-written captions, deliberately uncommitted:
 
 Nothing in round three is a proposal; it exists to be pointed at.
 
+## Vetoes (Edward, from the round-three review)
+
+- The **VU meter** (Into the Red) — no.
+- The **wavy-line marks** — no. This kills the Wave concept; the Noise Floor
+  signal line is assumed covered by the same veto (restorable if he only
+  meant one of them).
+- The **vertical stone** (Monolith) — no.
+- The **trilithon** — the stone "pi" does nothing to connect it to audio.
+  The lesson taken from that veto: **a mark should connect to audio on its
+  own**, before the name arrives.
+
+## Round four — ULM as things (canvas page: Round Four)
+
+"Modulate ULM" clarified: invent a graphic out of the letters — use them as
+objects, not as type. Nine sketches, audio-first: U as the shockmount
+cradle · U as the tube filament · U as a vessel filled to its top line ·
+L as the axes every recording is drawn into · L as the mic stand · M as
+acoustic-foam wedge profile · M as headphones face-on · m as the tape path
+over two guides · and the three-pictogram lockup (tube, stand, foam) that
+says ULM without using a letter.
+
+**Edward's mug idea, verbatim from chat (his copy — parked, not a pivot):**
+outside face one, "Upper Level Music"; outside face two, "We'll Provide The
+Uppers"; inside the cup, measuring-cup lines reading bottom to top: "Too
+Low" → "Pour It Up More" → top line "Glad You're On Our Level"; ULM in some
+form on the remaining outside face. Boarded on the Round Four page.
+
 ## Copy bank
 
 House rule kept: **nothing "proposed" ships until Edward says the words.**
