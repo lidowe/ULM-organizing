@@ -149,6 +149,12 @@ Uppers"; inside the cup, measuring-cup lines reading bottom to top: "Too
 Low" → "Pour It Up More" → top line "Glad You're On Our Level"; ULM in some
 form on the remaining outside face. Boarded on the Round Four page.
 
+**Edward's tee, verbatim from chat (his copy — worked off round three's
+stencil tile):** front says "This Side Up" and carries **no logo**, on
+purpose; the back has a ULM (not the stencil one — whichever mark wins) and
+says "This Side More Up", with the logo. Boarded beside the mug. Same play
+works on anything with two faces: tote, mailer, road case.
+
 ## Copy bank
 
 House rule kept: **nothing "proposed" ships until Edward says the words.**
