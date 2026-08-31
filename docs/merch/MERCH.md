@@ -53,7 +53,7 @@ concepts treat it as the decision.
   color. Spindle hole = heartwood. Wood tones kept as background
   (#181410/#c9bfae), never the voice. *Tradeoff: fussiest artwork; needs a
   simplified cut below ~24 px.* Files: `logo/b-rings-ember.svg`,
-  `logo/b-rings-teal.svg`.
+  `logo/b-rings-teal.svg`, `logo/b-mark-paperless.svg` (warm colorway).
 - **C. Wave — "Every Era, One Wave."** The business-card lineage reborn: one
   mirrored waveform sweeping teal → ultraviolet → magenta, extended caps with
   the underline off the 2010s card. *Tradeoff: most personal story, most
@@ -67,7 +67,41 @@ concepts treat it as the decision.
 
 Secondary marks shared by all concepts: the **ULM unit chip**
 (`logo/ulm-chip-*.svg`, echoes the site's `.unit-no` blocks) and the **eyebrow
-lockup** `ULM / EDWARD LIDOW / EST. 2012` (`logo/eyebrow-red.svg`).
+lockup** `ULM / EDWARD LIDOW / EST. 2012` (`logo/eyebrow-red.svg`; the boards
+mostly run its short cut, `ULM / EST. 2012`).
+
+## Round two — "upper level, literally" (canvas page: Round Two)
+
+Edward's note on round one: nothing stood on an upper level from anything
+else — the one thing the name promises was missing from the marks. Round two
+puts elevation in every drawing, rendered in procedural texture and light
+(`renders/generate_renders.py` rebuilds all four JPEGs) as well as flat cuts:
+
+- **E. Trilithon — "The Lintel."** Two standing stones carrying one on the
+  upper level; the ember light lives in the joint where the work meets the
+  support. *Tradeoff: Stonehenge-adjacent; the single gate and the lit joint
+  are what keep it ownable. Retires Strata if chosen.* Files:
+  `renders/r-trilithon.jpg`, `logo/t-trilithon-flat.svg`.
+- **F. Monolith — "The Molten Seam."** One stone split by a seam of light,
+  the upper section held above it. Vertical by nature: sleeves, signage,
+  masthead. *Tradeoff: most abstract; says nothing about audio until the name
+  lands; 2001 comparisons inevitable.* Files: `renders/r-floating.jpg`,
+  `logo/t-monolith-flat.svg`.
+- **G. Into the Red — "Past Zero."** A cream VU meter with the needle pinned
+  past 0 — the upper level of the meter, printed in red for decades, which
+  quietly vindicates the rack panel's color. *Tradeoff: VU meters are audio's
+  most-used badge; ownable only through the exact framing. Drops the
+  wood/stone trick play.* Files: `renders/r-vu.jpg`, `logo/t-meter-flat.svg`.
+- **H. Noise Floor — "Above the Noise Floor."** Hiss rising to a floor line,
+  one clean signal above it. Comes with its own tagline (the masthead-slot
+  candidate). *Tradeoff: more diagram than emblem; dies in a square avatar;
+  best as the supporting graphic system behind whichever mark wins.* Files:
+  `renders/r-noisefloor.jpg`, `logo/t-noisefloor-flat.svg`.
+
+Plus six loose sketches on the "Six More Ways Up" board: the fader past
+unity, strata rising as steps, the control room upstairs, the canopy, the
+typographic lintel (UPPER riding a bar carried by LEVEL MUSIC), and the ULM
+elevator button. Any of them can get the full treatment on request.
 
 ## Copy bank
 
@@ -120,7 +154,7 @@ Printway/AMZScout POD reports, Promo Hype band-merch roundup.
 | Slipmat | Rings full-bleed — growth rings under actual vinyl | 12″ felt, dye-sub |
 | Stickers | panel, chip, Trust Your Ears, Everything Is a Phase, It's the Room. | kiss-cut sheet or singles |
 | Enamel pin | Strata mark at 32 mm (its smallest legibility test) | hard enamel |
-| Poster | "A production line never misses a beat." verbatim, panel footer | A2/A3, also runs reversed on paper stock |
+| Poster | "A production line never misses a beat. That's what's wrong with it." verbatim, panel footer | A2/A3, also runs reversed on paper stock |
 
 Deliberately excluded, matching standing rules: **no artist names anywhere**
 (credits rule; the Work roster is unvetted), **no people in imagery** (photo
