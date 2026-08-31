@@ -281,3 +281,30 @@ tight geometry with one human quirk.
 - **The Plate** — elongated double-keyline lozenge with the same custom
   letters, mic-badge vernacular; engraved-brass render plus flat cuts.
   Files: `logo/m3-lozenge*.svg`, `renders/r6-lozenge.jpg`.
+
+## Round six verdict + round seven — his ideas, developed (canvas page: Round Seven)
+
+Edward on round six: "don't steal ideas... none of those ripped off amp
+logos are even close." The amp-badge script is dead, and the standing rule
+from it: **no borrowed vernacular — original only.** He also named his
+taste: he markets to intelligence; a reference should require a well-read
+reader ("lend me your ears").
+
+Round seven develops two ideas that are HIS, copy verbatim from chat:
+
+- **The Staircase.** His idea: ULM as a staircase with a little guy
+  sitting on top saying "sounds better on the upper level." Drawn: three
+  ascending steps with the letters knocked out of the risers, the figure on
+  the top corner in headphones, legs over the edge, his line beside him.
+  Reversed bare-stairs monogram and a favicon-size silhouette ride along.
+  Mark, mascot, and slogan in one image. Letterforms are placeholders
+  pending his read.
+- **The Lent Ears.** His flip of "lend me your ears": "Here — I'll lend
+  you mine. They sound better." Two imagery routes offered: quotation
+  marks drawn as ears around his line (the Shakespeare lives in the shape,
+  unspelled), and a library due-card — ears out on loan, stamped NEVER due
+  back. Card wording beyond his line is proposed, veto-able. A Roman-bust
+  third route noted and parked as too cliché-adjacent.
+
+Standing invitation logged: his half-ideas are outperforming everything
+generated cold — the drawer should be emptied.
