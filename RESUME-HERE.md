@@ -32,7 +32,7 @@ NEW COPY Claude-written, flag on review: door "usually" lines + door prices (mir
          labels, case-notes intro, "what happens after you send it".
 STYLE    src/styles/concept.css (Lovable) + trial blocks at its foot. Space Grotesk self-hosted VARIABLE.
 SUBS     session-color -> drummer-engineer; session-collab-wide -> session-bw. Ask Edward for the two files.
-LINK     Static copy published as a private claude.ai artifact (see session). Cloudflare branch preview for this
+LINK     Static copy (private artifact): https://claude.ai/artifact/2PJfWZqyaUM5zMNg16pwAe (rebuild via session export script). Cloudflare branch preview for this
          branch did not appear at the guessed URL; check the Worker's deployments in the dashboard.
 ```
 
