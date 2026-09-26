@@ -207,3 +207,8 @@ rebuilds from `main` automatically.
 
 **Lovable** — the earlier tool used to build the original site. Still connected to this
 repository, which is why rewriting history is forbidden.
+
+---
+## 26 Sep 2026 — the trial version
+
+A new version of the site was built on its own branch (`claude/site-version-lovable-alignment-4v841g`). It uses the look you liked from Lovable: bone paper, two fonts, and photos that turn from black-and-white to colour as you scroll. The words come from Lovable wherever Lovable had words. There are seven pages: Home, The Gap, Services, Learn, On Record, About, and Start a project. The live site was not touched. Two photos Lovable used aren't in the project yet, so stand-ins are in their place until you send the originals.

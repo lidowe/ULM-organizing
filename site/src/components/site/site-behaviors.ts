@@ -99,6 +99,46 @@ export function initSiteBehaviors(): () => void {
     revealers.forEach((el) => el.classList.add("in"));
   }
 
+  // Photos develop to full colour as they approach the viewport centre and
+  // return to ink as they scroll away. --cf is 0..1; the grayscale filter in
+  // concept.css reads it. Reduced motion: photos stay ink.
+  if (!reduced) {
+    const fadeImgs = [
+      ...document.querySelectorAll<HTMLElement>(
+        "main figure img, main .photo-set img, main .studio-gallery img, main .work-grid img, main .row-thumb, main .person-thumb img, .hero-panel img",
+      ),
+    ];
+    if (fadeImgs.length) {
+      let ticking = false;
+      const paint = () => {
+        ticking = false;
+        const vh = window.innerHeight;
+        const mid = vh / 2;
+        const range = vh * 0.55;
+        fadeImgs.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -60 || r.top > vh + 60) return;
+          const dist = Math.abs(r.top + r.height / 2 - mid) / range;
+          const t = Math.min(1, Math.max(0, 1 - dist));
+          el.style.setProperty("--cf", (t * t * (3 - 2 * t)).toFixed(3));
+        });
+      };
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(paint);
+        }
+      };
+      paint();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      cleanups.push(() => {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      });
+    }
+  }
+
   const filterButtons = [
     ...document.querySelectorAll<HTMLElement>("[data-filter]"),
   ];

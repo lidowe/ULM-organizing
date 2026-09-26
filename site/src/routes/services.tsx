@@ -1,9 +1,17 @@
-import { createFileRoute, redirect } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { SiteLayout, PageBody } from "../components/site/SiteLayout";
+import { pages } from "../lib/site-pages";
+import { pageHead } from "../lib/seo";
 
-/** Legacy URL from the pre-doors site. */
 export const Route = createFileRoute("/services")({
-  beforeLoad: () => {
-    throw redirect({ to: "/complete", statusCode: 301 });
-  },
-  component: () => null,
+  head: () => pageHead("services"),
+  component: ServicesPage,
 });
+
+function ServicesPage() {
+  return (
+    <SiteLayout>
+      <PageBody html={pages["services"]} />
+    </SiteLayout>
+  );
+}

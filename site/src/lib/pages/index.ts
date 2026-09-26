@@ -1,100 +1,98 @@
-// Home, rebuilt on the teardown's bedrock (hero handshake → the doors) and
-// grown back deliberately: the doors are now open and each one leads to its
-// page; the Gap argument gets a first move and a link instead of silence;
-// the proof strip puts the plaques where a first visit can see them; the
-// start strip is the only ask. Nothing argues above the doors.
+// Home — trial iteration (paper edition). Lovable's opening sheet and copy,
+// then the door board straight after the first plate: nothing argues above the
+// doors. The Gap gets one short move and a link; it is told in full once, on
+// its own page. Proof and one ask close the page.
 export default `
-<section class="hero-rack">
-  <div class="wrap hero-rack-inner">
-    <div class="hero-copy">
-      <div class="hero-sheet">
-        <div class="sheet-row"><span>ULM &middot; Session Sheet</span><span>Est. 2012</span><span>Rev. 2026-08-21</span></div>
-        <div class="sheet-row sheet-what"><span>Mixing &middot; Production &middot; Systems &middot; Teaching</span><span>Independent Artists</span><span>Remote &middot; Columbia SC</span></div>
-        <div class="sheet-body">
-          <h1 class="display hero-title"><span class="ln"><span>The Industry Is Undergoing</span></span><span class="ln"><span><em>Major Key Changes.</em></span></span></h1>
-          <p class="hero-mission">Upper Level Music matches your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves.</p>
+<section class="sheet">
+  <div class="wrap sheet-inner">
+    <p class="sheet-meta"><span><b>ULM</b></span><span>Edward Lidow</span><span>Est. 2012</span><span>Columbia, South Carolina</span><span>Remote work available</span></p>
+    <h1 class="sheet-title">The Industry is undergoing <a href="/story#industry">major key changes.</a></h1>
+    <div class="sheet-foot">
+      <div class="sheet-intro">
+        <p class="sheet-deck"><strong>Upper Level Music is a new way of looking at what a recording studio provides.</strong> It&rsquo;s the people that produce audio and listen to music, so we left the building behind. ULM is about providing the service specific to you: at your tempo. Musical or technical, creative or learning, you pick the scale. Major project or minor tweak, we&rsquo;ll help you find what resolves. <strong class="sheet-close">Wherever you are in your journey, you will have a focused team working for you. Reach for the Upper Level, and we will give you a boost.</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <figure class="plate opening-plate">
+      <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow working at the console during a session" fetchpriority="high" />
+      <figcaption>Plate 01 &mdash; At the console</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!--DOORS-->
+
+<section class="spread home-gap">
+  <div class="wrap">
+    <div class="spread-head">
+      <span class="spread-no">03 / Why this exists</span>
+      <h2 class="spread-h">The gap.</h2>
+    </div>
+    <div class="spread-body">
+      <p class="spread-note">The room<br />The people<br />The teamwork</p>
+      <div>
+        <p class="sheet-gap-kicker">So why did the industry&rsquo;s constant changes and modulations cause mainstream music to be so &hellip; repetitive, and yet sonically still feel unobtainable?</p>
+        <p class="home-gap-copy">Technology and art have always weaved thru history together. Today, recording is easy. The tools reached everyone, but the knowledge and ability didn&rsquo;t. We at Upper Level see how sponsored content and targeted marketing has distorted the priorities of talent and creativity and left newer artists wondering why they feel stuck. We call it <b>the gap</b>. We live in a pivotal moment where technology and artistry are not aligned. One of Upper Level Music&rsquo;s missions is to help bridge The Gap so more and more talent rises to the top.</p>
+        <figure class="gap-chain" role="img" aria-label="A signal chain reading left to right: the room, the people, and the teamwork &mdash; the private place built to create, the people who create, and the sharing and observing that passes the knowledge &mdash; then a break, then the next record that doesn&rsquo;t receive it. The mix, interrupted.">
+          <svg viewBox="-20 0 680 110" xmlns="http://www.w3.org/2000/svg">
+            <line class="gc-solid" x1="79" y1="36" x2="201" y2="36" />
+            <line class="gc-solid" x1="219" y1="36" x2="341" y2="36" />
+            <line class="gc-dash" x1="465" y1="36" x2="551" y2="36" />
+            <circle cx="70" cy="36" r="9" />
+            <circle cx="210" cy="36" r="9" />
+            <circle cx="350" cy="36" r="9" />
+            <circle cx="560" cy="36" r="9" />
+            <line class="gc-brk" x1="425" y1="22" x2="455" y2="50" />
+            <line class="gc-brk" x1="455" y1="22" x2="425" y2="50" />
+            <text x="70" y="82" text-anchor="middle">The room</text>
+            <text x="210" y="82" text-anchor="middle">The people</text>
+            <text x="350" y="82" text-anchor="middle">The teamwork</text>
+            <text x="560" y="82" text-anchor="middle">The next record</text>
+          </svg>
+        </figure>
+        <div class="sheet-actions">
+          <a class="btn gap-cta" href="/the-gap">What&rsquo;s the gap?</a>
+          <a class="btn primary" href="/start">Start a project</a>
         </div>
       </div>
     </div>
   </div>
-  <figure class="hero-panel">
-    <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow at a large-format console mid-session, working at the screen, an engineer beside him, the control room lit by the desk" fetchpriority="high" />
-  </figure>
 </section>
 
-<section class="rack-unit doors-unit">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">01</span><span>Start here</span><span class="unit-note">choose any door</span></div>
-  </div>
-  <div class="wrap doors-stack">
-{{DOORS}}
-  </div>
-  <div class="wrap router-note">
-    <p>Not sure which? That is a normal place to start. <a href="/start">Describe the problem in your own words</a> and we will work out what it is. Whichever one it is, everything starts the same way: Edward reviews it and scopes it before any work or price is agreed.</p>
-  </div>
-</section>
+<section class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></section>
 
-<section class="rack-unit identity-unit">
+<section class="home-second-plate">
   <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">02</span><span>Whoever walked in</span></div>
-    <h2 class="unit-title">Doors, Not Departments.</h2>
-    <div class="identity-grid reveal">
-      <article class="identity-card"><div class="kicker">The Artist</div><p>You can talk about the song in human terms. Tell me what feels wrong and what you are trying not to lose.</p></article>
-      <article class="identity-card"><div class="kicker">The Engineer</div><p>The technical depth is there when you want it. Gain structure, impedance interaction, summing, conversion &mdash; we can work at that level directly.</p></article>
-      <article class="identity-card"><div class="kicker">The Student</div><p>The apprenticeship that no longer exists. If you want to know why a ribbon needs 70 dB of clean gain, I will show you.</p></article>
-      <article class="identity-card"><div class="kicker">The Audiophile</div><p>A playback system that never matched the record, taken seriously. A listening room is a room, and rooms can be measured.</p></article>
-      <article class="identity-card"><div class="kicker">The Client</div><p>A podcast, a voiceover, a space that has to sound right. Audio work isn&rsquo;t just for chart-topping hits.</p></article>
-    </div>
-    <p class="identity-close reveal">You could be three of these in the same week. The doors route the problem, not the title.</p>
-  </div>
-</section>
-
-<section class="rack-unit unit-soft gap-teaser">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">03</span><span>Why this exists</span></div>
-    <h2 class="unit-title">The Tools Reached Everyone. The Knowledge Didn&rsquo;t.</h2>
-    <div class="unit-prose">
-      <p>For most of a century, knowledge moved through this trade the way signal moves through a patchbay: <em>normalled</em>. It flowed by default &mdash; engineer to assistant, assistant to the intern holding the coffee. The rooms were the schools. Nobody called it teaching. It was just how a record got made.</p>
-      <p>Then the tools got small and cheap and went home with everyone. That part was good. But the power moved faster than the knowledge, and the knowledge was not included in the transfer.</p>
-    </div>
-    <figure class="gap-diagram reveal">
-      <svg viewBox="0 0 720 130" role="img" aria-label="Diagram: the chain from engineer to assistant to intern to the next record, with the connection broken between assistant and intern">
-        <path class="gd-flow" d="M70 48 H320" pathLength="1"/>
-        <path class="gd-break" d="M348 34 L376 62 M376 34 L348 62"/>
-        <path class="gd-faint" d="M404 48 H650"/>
-        <circle class="gd-node" cx="70" cy="48" r="9"/><circle class="gd-node" cx="263" cy="48" r="9"/><circle class="gd-node gd-dim" cx="456" cy="48" r="9"/><circle class="gd-node gd-dim" cx="650" cy="48" r="9"/>
-        <text class="gd-label" x="70" y="86" text-anchor="middle">Engineer</text>
-        <text class="gd-label" x="263" y="86" text-anchor="middle">Assistant</text>
-        <text class="gd-label" x="456" y="86" text-anchor="middle">Intern</text>
-        <text class="gd-label" x="650" y="86" text-anchor="middle">The Next Record</text>
-      </svg>
-      <figcaption>The normal, interrupted: the tools kept moving; the knowledge didn&rsquo;t.</figcaption>
+    <figure class="plate">
+      <img src="{{IMG:drummer-engineer}}" alt="A drummer at the kit while an engineer works beside him in the same room" loading="lazy" />
+      <figcaption>Plate 02 &mdash; Working out the part, kit and desk in one room</figcaption>
     </figure>
-    <p class="gap-more"><a class="btn" href="/the-gap">The whole argument, and the patch around the interruption</a></p>
   </div>
 </section>
 
-<section class="rack-unit proof-strip">
-  <div class="wrap">
-    <div class="unit-label reveal"><span class="unit-no">04</span><span>On record</span></div>
-    <h2 class="unit-title">Real Records. Real Roles.</h2>
-    <p class="unit-lede">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p>
+<section class="spread essay-section">
+  <div class="wrap spread-body">
+    <p class="spread-note">04 / Every role</p>
+    <div>
+      <p class="essay-lead">No matter the task, we serve the process, we work in service to the song, and the ego stays outside.</p>
+      <p>Various roles, various artists, whether the role was large or small or the artist famous or not, every job contributes to the &lsquo;flow state&rsquo; every job asks 100% focus &hellip; yes, even the coffee can ruin an entire day, or fuel the magic later.</p>
+      <p>Get them coffee, route signal flow and place mics, run the DAW or be the tape op, it all was part of a bigger picture and personal growth. Running cables became running sessions, tuning instruments became vocal tuning and production, production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
+      <p>Relationships carried on, years go by and I&rsquo;m asked to build their private studio after our work together commercially&hellip; by being their barista a decade earlier. Others continue as clients, friends and contemporaries to this day. The only thing that stays consistent is the dedication and effort put into every detail.</p>
+      <div class="award-grid home-awards">
+        <figure class="award-plaque"><img src="{{IMG:award-riaa-katy-teenage-dream}}" alt="RIAA multi-platinum plaque for Katy Perry, Teenage Dream" loading="lazy" /><figcaption>Katy Perry, <em>Teenage Dream</em>, RIAA 8&times; platinum</figcaption></figure>
+        <figure class="award-plaque"><img src="{{IMG:award-billboard-willie-hires}}" alt="Billboard number one plaque for Willie Nelson, Band of Brothers" loading="lazy" /><figcaption>Willie Nelson, <em>Band of Brothers</em>, Billboard #1 Top Country Albums</figcaption></figure>
+        <figure class="award-plaque"><img src="{{IMG:award-riaa-wayne-rebirth}}" alt="RIAA gold plaque for Lil Wayne, Rebirth" loading="lazy" /><figcaption>Lil Wayne, <em>Rebirth</em>, RIAA gold</figcaption></figure>
+      </div>
+      <p><a class="btn" href="/proof">See the work</a></p>
+    </div>
   </div>
-  <div class="wrap award-grid reveal">
-    <figure class="award-plaque"><img src="{{IMG:award-riaa-katy-teenage-dream}}" alt="RIAA multi-platinum plaque for Katy Perry, Teenage Dream" loading="lazy" /><figcaption>Katy Perry, <em>Teenage Dream</em>, RIAA 8&times; platinum</figcaption></figure>
-    <figure class="award-plaque"><img src="{{IMG:award-billboard-willie-hires}}" alt="Billboard number one plaque for Willie Nelson, Band of Brothers" loading="lazy" /><figcaption>Willie Nelson, <em>Band of Brothers</em>, Billboard #1 Top Country Albums</figcaption></figure>
-    <figure class="award-plaque"><img src="{{IMG:award-riaa-wayne-rebirth}}" alt="RIAA gold plaque for Lil Wayne, Rebirth" loading="lazy" /><figcaption>Lil Wayne, <em>Rebirth</em>, RIAA gold</figcaption></figure>
-  </div>
-  <div class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></div>
-  <div class="wrap proof-actions reveal"><a class="btn" href="/proof">See the full record</a></div>
 </section>
 
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell Me What You&rsquo;re Working On.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
-    <a class="btn primary reveal" href="/start">Start here</a>
+    <div class="reveal"><h2>Tell me what you&rsquo;re working on.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
+    <a class="btn primary reveal" href="/start">Start a project</a>
   </div>
 </section>
-
-<div class="sheet-rev"><div class="wrap"><span>Home &middot; Rev. 2026-08-21</span><span>Maintained by Edward Lidow</span></div></div>
 `;

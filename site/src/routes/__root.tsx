@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import siteCss from "../styles/site.css?url";
+import conceptCss from "../styles/concept.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -96,32 +97,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      // Brand faces are self-hosted; @font-face lives at the top of site.css.
-      // Preload the two the first screen always needs, so the display face is
-      // present before paint rather than swapping in after it.
+      // Trial (paper edition): two faces only. Space Grotesk is now the
+      // variable cut (300-700) so the bold display weight is real, not a
+      // stretched regular. @font-face lives at the top of site.css.
       {
         rel: "preload",
         as: "font",
         type: "font/woff2",
-        href: "/fonts/spectral-500-latin.woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/space-grotesk-400-latin.woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        as: "font",
-        type: "font/woff2",
-        href: "/fonts/space-mono-700-latin.woff2",
+        href: "/fonts/space-grotesk-var-latin.woff2",
         crossOrigin: "anonymous",
       },
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: siteCss },
+      { rel: "stylesheet", href: conceptCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
     scripts: [

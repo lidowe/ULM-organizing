@@ -24,6 +24,7 @@ import theGap from "./pages/the-gap";
 import story from "./pages/story";
 import proof from "./pages/proof";
 import start from "./pages/start";
+import services from "./pages/services";
 import preProduction from "./pages/pre-production";
 import hierarchyOptions from "./pages/hierarchy-options";
 import doorsDraft from "./pages/doors-draft";
@@ -39,6 +40,7 @@ export const pages: Record<string, string> = {
   story: story,
   proof: proof,
   start: start,
+  services: services,
   "pre-production": preProduction,
   // Working surfaces, unlisted: Edward's ranking page and the icon lab.
   "hierarchy-options": hierarchyOptions,

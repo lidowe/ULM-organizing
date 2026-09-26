@@ -124,6 +124,15 @@ export const PAGES: PageEntry[] = [
     changefreq: "yearly",
     priority: "0.9",
   },
+  {
+    slug: "services",
+    path: "/services",
+    title: "Services & Rates · Upper Level Music",
+    description:
+      "Mixing, editing, mastering, recording, production, diagnosis, rooms and systems, and one-on-one teaching, with rates on the page.",
+    changefreq: "monthly",
+    priority: "0.9",
+  },
 ];
 
 export function absoluteUrl(path: string): string {

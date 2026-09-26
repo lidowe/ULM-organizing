@@ -1,102 +1,62 @@
-// "The Gap" — the standalone Why This Exists page, distilled from Edward's
-// 16 Aug conversation. The publishable thesis only: no names, no grievances.
-// The diagrams use his own metaphor — a patchbay normal, broken, then
-// patched. All copy is DRAFT in Edward's voice, pending his veto pass.
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Why this exists</div><h1 class="page-title">The Tools Reached Everyone. The Knowledge Didn&rsquo;t.</h1><p class="page-deck">Thirty years inside the industry machine, and a decade beside home studios. This page is about the gap between them &mdash; and the bridge. There are no villains in it.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">The Gap</div><h1 class="page-title">The tools reached everyone. The knowledge didn&rsquo;t.</h1><p class="page-deck">Why it seems like everyone needs help these days &mdash; and why needing help is normal, not a failure.</p></div></section>
 
-<section class="rack-unit unit-soft">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">01</span><span>How it used to flow</span></div>
-    <div class="unit-prose">
-      <p>For most of a century, knowledge moved through this trade the way signal moves through a patchbay: <em>normalled</em>. It flowed by default &mdash; engineer to assistant, assistant to the intern holding the coffee &mdash; the way a patchbay passes audio top to bottom until something interrupts it. The rooms were the schools. Nobody called it teaching. It was just how a record got made.</p>
-    </div>
-    <figure class="gap-diagram reveal">
-      <svg viewBox="0 0 720 130" role="img" aria-label="Diagram: knowledge flowing by default from engineer to assistant to intern to the next record, like a normalled patchbay connection">
-        <path class="gd-flow" d="M70 48 H650" pathLength="1"/>
-        <circle class="gd-node" cx="70" cy="48" r="9"/><circle class="gd-node" cx="263" cy="48" r="9"/><circle class="gd-node" cx="456" cy="48" r="9"/><circle class="gd-node" cx="650" cy="48" r="9"/>
-        <text class="gd-label" x="70" y="86" text-anchor="middle">Engineer</text>
-        <text class="gd-label" x="263" y="86" text-anchor="middle">Assistant</text>
-        <text class="gd-label" x="456" y="86" text-anchor="middle">Intern</text>
-        <text class="gd-label" x="650" y="86" text-anchor="middle">The Next Record</text>
+<section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">01 / Why this exists</div><h2 class="section-title">The normal, interrupted.</h2></div>
+  <div class="wrap remote-body reveal">
+    <p>For most of a century, knowledge moved through this trade the way signal moves through a patchbay: <em>normalled</em>. It flowed by default &mdash; not through a curriculum, but through the mix: the private place built to create, the people who create, and the teamwork of sharing and observing that carried the craft from one record to the next. The room was the school. Nobody called it teaching. It was just how a record got made.</p>
+    <p>That chain was how every working engineer you have ever heard of learned. Nobody paid for a course. You swept the floor, you wrapped cables, you watched a mix come back from the car test three times before it sat right, and one night at 3 a.m. the engineer asked if you wanted to ride the vocal fader. Years of that, in a real room, behind people who had done it for thirty years.</p>
+    <p>Then the tools got small and cheap and went home with everyone. That part was good &mdash; a recording studio that fits in the palm of your hand is arguably one of the greatest things to happen in audio. But the power moved faster than the knowledge, and the knowledge was not included in the transfer.</p>
+    <figure class="gap-chain" role="img" aria-label="A signal chain reading left to right: the room, the people, and the teamwork &mdash; the private place built to create, the people who create, and the sharing and observing that passes the knowledge &mdash; then a break, then the next record that doesn&rsquo;t receive it. The mix, interrupted.">
+      <svg viewBox="-20 0 680 110" xmlns="http://www.w3.org/2000/svg">
+        <line class="gc-solid" x1="79" y1="36" x2="201" y2="36" />
+        <line class="gc-solid" x1="219" y1="36" x2="341" y2="36" />
+        <line class="gc-dash" x1="465" y1="36" x2="551" y2="36" />
+        <circle cx="70" cy="36" r="9" />
+        <circle cx="210" cy="36" r="9" />
+        <circle cx="350" cy="36" r="9" />
+        <circle cx="560" cy="36" r="9" />
+        <line class="gc-brk" x1="425" y1="22" x2="455" y2="50" />
+        <line class="gc-brk" x1="455" y1="22" x2="425" y2="50" />
+        <text x="70" y="82" text-anchor="middle">The room</text>
+        <text x="210" y="82" text-anchor="middle">The people</text>
+        <text x="350" y="82" text-anchor="middle">The teamwork</text>
+        <text x="560" y="82" text-anchor="middle">The next record</text>
       </svg>
-      <figcaption>The normal: knowledge flows by default, the way signal does.</figcaption>
     </figure>
+    <p>The mix that made the record &mdash; the room built to create, the people who create, the teamwork that passes the knowledge &mdash; broke. The next record gets made without it.</p>
+    <p>So the questions that used to get answered by osmosis now land on one person, alone, at midnight. Why does the kick sound right here and wrong in the car? Why does a ribbon mic need 70 dB of clean gain, and what happens to the low end when it doesn&rsquo;t get it? Why did the take sound huge in the room and small on the phone? These are not stupid questions and they are not rare. They are exactly the questions the intern used to absorb by standing in the room. The room is gone. The questions stayed.</p>
   </div>
 </section>
 
-<section class="rack-unit">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">02</span><span>The interruption</span></div>
-    <div class="unit-prose">
-      <p>Then the tools got small and cheap and went home with everyone. That part was good &mdash; it is the best thing that has happened to music-making in fifty years. But the power moved faster than the knowledge, and the knowledge was not included in the transfer. The big rooms closed quicker than the teaching could find a new path down.</p>
-      <p>Into that silence came a different pool: sponsored advice, gear pushed for margin over merit, side-by-side tests hunting a perfect copy of an original that never existed in the first place. Blanket information for a craft where no two projects are the same. Advice that fits every record fits none of them.</p>
-      <p class="unit-turn">Nobody chose this. The people it fails are not doing anything wrong.</p>
-    </div>
-    <figure class="gap-diagram reveal">
-      <svg viewBox="0 0 720 130" role="img" aria-label="Diagram: the same chain with the connection broken between assistant and intern - the tools kept moving, the knowledge stopped">
-        <path class="gd-flow" d="M70 48 H320" pathLength="1"/>
-        <path class="gd-break" d="M348 34 L376 62 M376 34 L348 62"/>
-        <path class="gd-faint" d="M404 48 H650"/>
-        <circle class="gd-node" cx="70" cy="48" r="9"/><circle class="gd-node" cx="263" cy="48" r="9"/><circle class="gd-node gd-dim" cx="456" cy="48" r="9"/><circle class="gd-node gd-dim" cx="650" cy="48" r="9"/>
-        <text class="gd-label" x="70" y="86" text-anchor="middle">Engineer</text>
-        <text class="gd-label" x="263" y="86" text-anchor="middle">Assistant</text>
-        <text class="gd-label" x="456" y="86" text-anchor="middle">Intern</text>
-        <text class="gd-label" x="650" y="86" text-anchor="middle">The Next Record</text>
-      </svg>
-      <figcaption>The normal, interrupted: the tools kept moving; the knowledge didn&rsquo;t.</figcaption>
-    </figure>
+<section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">02 / The industry</div><h2 class="section-title">The assembly line.</h2></div>
+  <div class="wrap remote-body reveal">
+    <p>The technology to create has never been so powerful &mdash; so why does everyone feel so powerless?</p>
+    <p>It used to run bottom to top. A label sent an A&amp;R to a dive bar to see a band with a little local buzz, a write-up in a weekly, a tip from a friend of a friend, and the artist blew them away. The label then had to convince the artist to sign, so the label could support them. The artist&rsquo;s job was the music.</p>
+    <p>Now it runs top to bottom. Labels are media conglomerates pushing artists they choose and shape toward numbers that streaming will never pay back to an independent artist. Record labels stopped listening to the music or the fans and started calculating risk and cost analysis. Art is hard to calculate, so they took it out of the equation. Some of us refuse to put our emotions on an assembly line.</p>
+    <p>Here is what that looks like from the artist&rsquo;s chair. The jobs that used to belong to a team &mdash; A&amp;R, producer, engineer, mixer, mastering, art direction, marketing, radio, management &mdash; now have one name on them: yours. You write the song, track it in the bedroom, learn mixing from forty contradicting videos, master it yourself because the budget is gone, shoot the cover on a phone, cut the vertical clips, and pitch the playlist. Every one of those was once a career. Now it is a Tuesday.</p>
+    <p>If you feel like you are doing every job and still falling behind, that is not you failing. That is a whole team&rsquo;s job description landing on one person. The answer was never to work harder at all twelve jobs. It is to know which of them you should actually be doing &mdash; and to have people in your corner for the rest.</p>
   </div>
 </section>
 
-<section class="rack-unit unit-soft">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">03</span><span>What the pool can&rsquo;t teach</span></div>
-    <div class="unit-prose">
-      <p>Here is what got lost, concretely: <strong>the circuit is a creative decision.</strong> Different circuits enhance different emotions by design. An optical compressor breathes; a FET grabs. Second-order warmth flatters a voice; third-order edge makes a snare spit. Choosing between them is arranging, not shopping &mdash; and no search for the perfect clone will teach it, because even six originals of the same legendary microphone never sounded the same as each other.</p>
-      <p>And the craft it serves points the same direction: engineering is taking what is good and making it great &mdash; enhancing, not endlessly fixing. The fix-it-later habit isn&rsquo;t a character flaw in the people who have it. It is what a knowledge pool built from sponsored content teaches by omission.</p>
-      <p class="unit-turn">A kid with one honest microphone and a basic interface can out-mix a mid-level studio. They just need the why.</p>
-    </div>
+<section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">03 / Beyond music</div><h2 class="section-title">The gap doesn&rsquo;t stop at the studio door.</h2></div>
+  <div class="wrap remote-body reveal">
+    <p>The same transfer broke everywhere sound matters. The gear got cheaper and everywhere; the understanding stayed scarce.</p>
+    <p>The conference room where the whole company can see the slide deck and nobody past the third row can hear the presenter &mdash; because the ceiling speakers were wired by whoever happened to be on the ladder that day, and the microphone was chosen from a catalog photo. The fix is rarely a bigger speaker. It is knowing that intelligibility lives in the midrange, and that the room, not the wattage, is doing most of the damage.</p>
+    <p>The house of worship where the congregation has faith but can&rsquo;t hear the message &mdash; a beautiful room, hard surfaces, a volunteer doing their best on a console with more channels than training. The worship band sounds fine because music forgives. Speech doesn&rsquo;t. A service lives or dies on whether the words land, and that is a solvable problem: microphone choice and placement, gain structure, a few panels in the right places, and someone who knows why.</p>
+    <p>The restaurant where dinner conversation dies under a system tuned by ear in an empty room. The podcast recorded on good microphones in a bad-sounding spare bedroom, wondering why it never sounds like the shows it admires. Different rooms, different budgets &mdash; the same missing piece.</p>
+    <p>And the fix is not a one-size-fits-all sponsored product. It is knowing what the right tool for the right job is &mdash; and understanding why. That understanding is the thing that didn&rsquo;t transfer. Handing it over is the whole point.</p>
   </div>
 </section>
 
-<section class="rack-unit">
-  <div class="wrap">
-    <div class="unit-label"><span class="unit-no">04</span><span>The patch</span></div>
-    <div class="unit-prose">
-      <p>A broken normal doesn&rsquo;t repair itself. It gets patched &mdash; deliberately, one cable at a time, by someone who knows where the signal needs to go. That is what Upper Level Music is: the patch around the interruption. The industry machine and the home studio are not enemies. They are colleagues separated by a gap neither of them made.</p>
-      <p>So we work both sides of it. Records made with major-label depth for people who will never sign one. Teaching that treats your project as the curriculum, because no two are the same. And the long-form knowledge, written down and handed over, the way it used to be handed down.</p>
-      <p class="unit-turn">Nobody owns the knowledge. Somebody just has to pass it on.</p>
-    </div>
-    <figure class="gap-diagram reveal">
-      <svg viewBox="0 0 720 130" role="img" aria-label="Diagram: an amber patch cable routed around the break, reconnecting the chain">
-        <path class="gd-flow" d="M70 48 H320" pathLength="1"/>
-        <path class="gd-break" d="M348 34 L376 62 M376 34 L348 62"/>
-        <path class="gd-faint" d="M404 48 H650"/>
-        <path class="gd-patch" d="M263 44 C 300 -14, 424 -14, 456 44" pathLength="1"/>
-        <path class="gd-flow gd-patched" d="M456 48 H650" pathLength="1"/>
-        <circle class="gd-node" cx="70" cy="48" r="9"/><circle class="gd-node" cx="263" cy="48" r="9"/><circle class="gd-node" cx="456" cy="48" r="9"/><circle class="gd-node" cx="650" cy="48" r="9"/>
-        <text class="gd-label" x="70" y="86" text-anchor="middle">Engineer</text>
-        <text class="gd-label" x="263" y="86" text-anchor="middle">Assistant</text>
-        <text class="gd-label" x="456" y="86" text-anchor="middle">Intern</text>
-        <text class="gd-label" x="650" y="86" text-anchor="middle">The Next Record</text>
-      </svg>
-      <figcaption>The patch: deliberate, person to person. That is Upper Level Music.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="page-next">
-  <div class="wrap next-grid">
-    <a class="next-card" href="/learn">
-      <span class="next-kicker">Next</span>
-      <h3>Where the passing-on happens.</h3>
-      <p>One-on-one, pitched at your project, not a curriculum&rsquo;s idea of it.</p>
-    </a>
-    <div class="next-cta">
-      <p>Or bring the record the gap has been holding back.</p>
-      <a class="btn primary" href="/start">Start here</a>
-    </div>
+<section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">04 / The patch around the interruption</div><h2 class="section-title">Collaboration, not competition.</h2></div>
+  <div class="wrap remote-body reveal">
+    <p>The pivot left many creators feeling alone, forced to scream to be heard. Upper Level Music exists to close that divide &mdash; for the performer, writer, producer, engineer, audiophile, and the student too. Whether you identify with one title or many, you are an artist given an endless palette but no canvas.</p>
+    <p>Our core belief: your unique sound carries farthest with a team working in harmony with you. The help differs; the position doesn&rsquo;t.</p>
+    <div class="hero-actions"><a class="btn primary" href="/start">Start a project</a><a class="btn" href="/#doors">Pick your path</a></div>
   </div>
 </section>
 `;

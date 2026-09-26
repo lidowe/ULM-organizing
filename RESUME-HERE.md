@@ -4,12 +4,35 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-08-24 · branch claude/five-doors-live-26jwtv @ b68b887 (five-doors build merged in from consolidation)
+STAMP    2026-09-26 · branch claude/site-version-lovable-alignment-4v841g (TRIAL: paper-edition iteration, see TRIAL below)
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
-LIVE     main @ c6bc9ac -> upperlevelmusic.com. Runs the OLD pre-doors site. NOT the work below.
-PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev  (confirmed live by Edward 2026-08-24, rebuilds on push to this branch)
-WORKFLOW HOW-WE-WORK.md governs. Batch -> "push it" -> preview rebuilds ~2min -> Edward checks. Only "publish" -> main.
+LIVE     main @ 45b2545 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ + /alternatevisualAug27/. Untouched by the trial.
+PREVIEW  five-doors: https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev
+WORKFLOW HOW-WE-WORK.md governs. Only "publish" -> main.
 ```
+
+## TRIAL (2026-09-26) — read first
+
+```
+WHAT     Edward: neither the Lovable base (old site, ~cedf9d9 Aug 11) nor five-doors is the direction. Build a new
+         iteration from his intent + Lovable's look. He liked ALL Lovable visuals (bone paper, Space Grotesk/Mono,
+         no serif, grayscale->colour scroll) and Lovable's language ("if it's in Lovable, I liked it better").
+         Rules may bend for the trial. Credit captions may name the credit. Colour grading is not "generation".
+SOURCE   Lovable export (no assets) 2026-09-05: uploaded zip, unzipped to session scratchpad only (not in repo).
+BASE     06c5ff4 (five-doors, pre-app). App stays OFF the site.
+BUILT    7 pages: / (Lovable sheet -> DoorBoard "Which one are you?" -> short Gap + chain -> ribbon -> plate ->
+         every role + plaques -> CTA) · /services (NEW: one page, one section per door #finish #part #technical
+         #chase #learn + #start process; Lovable services+process copy) · /the-gap (Lovable verbatim) · /learn
+         (Lovable education + booth/Telefunken) · /proof "On Record" (Lovable work + plaques-in-rows credits.ts +
+         case-notes slot + Lovable studio) · /story "About" (Lovable about + values) · /start (Lovable contact +
+         purple opener + terms + "what happens after you send it").
+STYLE    src/styles/concept.css (Lovable, loaded after site.css) + "Trial additions" block at its foot.
+         Space Grotesk now self-hosted VARIABLE (space-grotesk-var-*.woff2) so bold 700 is real.
+SUBS     session-color -> drummer-engineer; session-collab-wide -> session-bw. Ask Edward for the two files.
+NEXT     Edward reviews. Then: numbered copy list, photo swaps, remaining pages' polish, CLAUDE.md type rules
+         (Spectral law superseded if trial is kept).
+```
+
 
 ## STATE
 
