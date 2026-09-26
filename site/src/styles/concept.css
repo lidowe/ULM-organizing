@@ -637,3 +637,52 @@ main figure[class]:hover img{filter:grayscale(0) contrast(1.04)}
 .door-row .door-go{align-self:start}
 .remote-body p{margin:0 0 1.05rem;max-width:68ch}
 .teaching-photo img{height:clamp(18rem,56vh,36rem);object-fit:cover;object-position:center 30%}
+
+/* ---- Trial iteration 2: Claude's hierarchy ---------------------------- */
+.sheet-foot{display:grid;grid-template-columns:minmax(0,1fr) minmax(16rem,22rem);gap:clamp(1.4rem,4vw,3rem);align-items:start}
+.sheet-routes{display:grid;gap:0;border-top:1px solid var(--ink)}
+.route-card{display:grid;gap:.35rem;padding:1rem 1rem 1.05rem;border-bottom:1px solid var(--line);
+  text-decoration:none;color:var(--ink);transition:background .18s,color .18s}
+.route-card:first-child{background:var(--ink);color:var(--bg)}
+.route-card:first-child .route-go{color:rgba(233,229,220,.7)}
+.route-card:hover{background:var(--amber);color:#fff}
+.route-card:hover .route-k,.route-card:hover .route-go{color:#fff}
+.route-k{font-family:var(--mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber)}
+.route-card:first-child .route-k{color:#e0735f}
+.route-h{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(1.2rem,2.2vw,1.6rem);line-height:1}
+.route-go{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+@media (max-width:900px){.sheet-foot{grid-template-columns:1fr}}
+
+.door-usually{margin:0;padding:.8rem .9rem;border-left:2px solid var(--amber);background:rgba(181,50,31,.05);
+  color:var(--paper-soft);font-size:.92rem;line-height:1.6}
+.door-usually span{display:block;font-family:var(--mono);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}
+.door-price{margin:0;font-family:var(--mono);font-size:.78rem;font-weight:700;color:var(--amber);letter-spacing:.02em}
+
+.home-proof .case{margin-bottom:1.1rem}
+.home-proof-note{color:var(--muted);font-size:.92rem;line-height:1.6;max-width:62ch}
+.home-person .spread-body{align-items:start}
+.home-person-photo{margin:0;max-width:15rem}
+.home-person-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block}
+.home-person-copy p{color:var(--paper-soft);line-height:1.75;max-width:62ch;margin:0 0 1.05rem;font-size:1.05rem}
+@media (max-width:900px){.home-person-photo{max-width:12rem}}
+.home-gap .gap-chain{color:#f1ede4;margin-top:2rem}
+.home-gap .gap-chain text{fill:rgba(241,237,228,.6)}
+.home-gap .btn{border-color:rgba(241,237,228,.45);color:#f1ede4}
+.home-gap .btn:hover{background:#f1ede4;color:var(--ink)}
+.home-gap b{color:var(--amber);text-transform:uppercase;letter-spacing:.06em}
+
+.why-person{display:grid;gap:1.1rem;max-width:62rem}
+.why-person .person-copy,.why-person > p{color:var(--paper-soft);line-height:1.75;max-width:66ch;margin:0}
+.why-person .person-copy:first-child{font-size:1.1rem;color:var(--ink)}
+.why-person .person-aside{max-width:14rem;margin:0}
+.why-person .inline-photo{max-width:40rem}
+
+.rate-line{display:grid;grid-template-columns:auto auto 1fr;gap:.4rem 1.4rem;align-items:baseline;
+  margin:1.6rem 0;padding:1rem 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.rate-k{font-family:var(--mono);font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.rate-line b{font-family:var(--mono);color:var(--amber);font-size:1rem}
+.rate-line small{color:var(--muted);font-size:.86rem}
+@media (max-width:700px){.rate-line{grid-template-columns:1fr}}
+
+.path-choice legend{font-weight:700;color:var(--ink)}
+.path-choice .choice span b{font-family:var(--display);text-transform:uppercase;font-weight:700;letter-spacing:-.01em;margin-right:.3rem}

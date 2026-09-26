@@ -1,9 +1,21 @@
-// On Record — trial iteration: Lovable's Work page with the plaques beside the
-// credits, a case-notes format (judgment, not only access), and Lovable's
+// On Record — trial iteration: case notes first (judgment), then the credits
+// with plaques beside them (access), then Lovable's
 // Studio page folded in, because the gear is evidence rather than the offer.
 export default `
 
 <section class="page-hero"><div class="wrap"><div class="eyebrow">Selected work</div><h1 class="page-title">On record.</h1><p class="page-deck">Major-label sessions and independent records, across genres. Precise roles where publicly credited.</p><figure class="work-lead-photo"><img src="{{IMG:session-redlit-2}}" alt="Two people seated at a large-format console during a working session under red light" fetchpriority="high" /></figure></div></section>
+<section class="section">
+  <div class="wrap section-header reveal"><div class="kicker">Case notes</div><div><h2 class="section-title">What they said. What it was. What was done.</h2><div class="section-copy"><p>Credits show where the work happened. These show how the judgment works.</p></div></div></div>
+  <div class="wrap case-list reveal">
+    <article class="case">
+      <div class="case-row"><span class="case-k">What they said</span><p>&ldquo;Make the guitar sound more purple.&rdquo;</p></div>
+      <div class="case-row"><span class="case-k">What it was</span><p>Sound has very few words of its own. Hearing the word purple made me think of Prince, and Prince used a lot of chorus (the Roland Dimension D) and gentle doubler effects (the Eventide H3500 being his favorite).</p></div>
+      <div class="case-row"><span class="case-k">What was done</span><p>I reached for a few chorusy effects and a gentle harmonizer, hit play, and they said &ldquo;yes! exactly.&rdquo;</p></div>
+    </article>
+    <div class="needs-content"><strong>Case notes needed</strong>Two or three more real sessions in this same three-line shape: the words the client used, what the problem turned out to be, and what fixed it. No names needed. This is the one place the site can show judgment rather than claim it.</div>
+  </div>
+</section>
+
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Selected discography</div><div><h2 class="section-title">Real records. Real roles.</h2><div class="section-copy"><p>Public role language where available, kept legible instead of exhaustive.</p></div></div></div>
   <div class="wrap">
@@ -27,17 +39,6 @@ export default `
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Studios &amp; institutions</div><div><h2 class="section-title">Built in real studios.</h2><div class="section-copy"><p>Rooms worked in, taught in, and in one case built from scratch.</p></div></div></div>
   <div class="wrap artist-index reveal"><span>Hit Factory / Criteria Miami</span><span>Bay 8 Miami &middot; original room, built and sold</span><span>Record Plant Los Angeles</span><span>Chicago Recording Company</span><span>Dream Asylum</span><span>Studio 8 Miami</span><span>The Jam Room · Columbia</span><span>Midlands Audio Institute</span><span>Midlands Technical College</span><span>Miami Historical Museum</span><span>WoG Ministries</span></div>
-</section>
-<section class="section">
-  <div class="wrap section-header reveal"><div class="kicker">Case notes</div><div><h2 class="section-title">What they said. What it was. What was done.</h2><div class="section-copy"><p>Credits show where the work happened. These show how the judgment works.</p></div></div></div>
-  <div class="wrap case-list reveal">
-    <article class="case">
-      <div class="case-row"><span class="case-k">What they said</span><p>&ldquo;Make the guitar sound more purple.&rdquo;</p></div>
-      <div class="case-row"><span class="case-k">What it was</span><p>Sound has very few words of its own. Hearing the word purple made me think of Prince, and Prince used a lot of chorus (the Roland Dimension D) and gentle doubler effects (the Eventide H3500 being his favorite).</p></div>
-      <div class="case-row"><span class="case-k">What was done</span><p>I reached for a few chorusy effects and a gentle harmonizer, hit play, and they said &ldquo;yes! exactly.&rdquo;</p></div>
-    </article>
-    <div class="needs-content"><strong>Case notes needed</strong>Two or three more real sessions in this same three-line shape: the words the client used, what the problem turned out to be, and what fixed it. No names needed. This is the one place the site can show judgment rather than claim it.</div>
-  </div>
 </section>
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">Studio</div><div><h2 class="section-title">Studio and technology.</h2><div class="section-copy"><p>The locker and the racks, listed plainly. 103 microphones, 64 models, and the analog front end they run into.</p></div></div></div>

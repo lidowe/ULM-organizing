@@ -1,17 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Trial iteration: the five-doors door pages fold into one section each. */
 export const Route = createFileRoute("/fix")({
-  head: () => pageHead("fix"),
-  component: FixPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/services", hash: "chase", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function FixPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages["fix"]} />
-    </SiteLayout>
-  );
-}

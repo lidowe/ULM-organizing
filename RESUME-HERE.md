@@ -4,35 +4,37 @@ READ THIS FIRST, EVERY SESSION. UPDATE IT LAST, BEFORE STOPPING.
 Terse by design. Human translation: `human/RESUME-EXPLAINED.md` — DO NOT READ IT.
 
 ```
-STAMP    2026-09-26 · branch claude/site-version-lovable-alignment-4v841g (TRIAL: paper-edition iteration, see TRIAL below)
+STAMP    2026-08-29 definitive state: branch claude/five-doors-live-26jwtv (see STATE). Unchanged by the Sep 26 alternate.
 OWNER    Edward Lidow (lidowe). Not a coder. Creative director. Full authority granted to Claude (CLAUDE.md "The mandate").
-LIVE     main @ 45b2545 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ + /alternatevisualAug27/. Untouched by the trial.
-PREVIEW  five-doors: https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev
+LIVE     main @ 45b2545 -> upperlevelmusic.com. OLD pre-doors site + /attempts/ + /alternatevisualAug27/.
+PREVIEW  https://claude-five-doors-live-26jwtv-ulm-organizing.upperlevelmusic.workers.dev
 WORKFLOW HOW-WE-WORK.md governs. Only "publish" -> main.
+ALTERNATE Sep 26 test build on claude/site-version-lovable-alignment-4v841g — NOT the definitive state. See ALTERNATE below.
 ```
 
-## TRIAL (2026-09-26) — read first
+## ALTERNATE UNDER TEST (2026-09-26) — not the definitive state
 
 ```
-WHAT     Edward: neither the Lovable base (old site, ~cedf9d9 Aug 11) nor five-doors is the direction. Build a new
-         iteration from his intent + Lovable's look. He liked ALL Lovable visuals (bone paper, Space Grotesk/Mono,
-         no serif, grayscale->colour scroll) and Lovable's language ("if it's in Lovable, I liked it better").
-         Rules may bend for the trial. Credit captions may name the credit. Colour grading is not "generation".
-SOURCE   Lovable export (no assets) 2026-09-05: uploaded zip, unzipped to session scratchpad only (not in repo).
-BASE     06c5ff4 (five-doors, pre-app). App stays OFF the site.
-BUILT    7 pages: / (Lovable sheet -> DoorBoard "Which one are you?" -> short Gap + chain -> ribbon -> plate ->
-         every role + plaques -> CTA) · /services (NEW: one page, one section per door #finish #part #technical
-         #chase #learn + #start process; Lovable services+process copy) · /the-gap (Lovable verbatim) · /learn
-         (Lovable education + booth/Telefunken) · /proof "On Record" (Lovable work + plaques-in-rows credits.ts +
-         case-notes slot + Lovable studio) · /story "About" (Lovable about + values) · /start (Lovable contact +
-         purple opener + terms + "what happens after you send it").
-STYLE    src/styles/concept.css (Lovable, loaded after site.css) + "Trial additions" block at its foot.
-         Space Grotesk now self-hosted VARIABLE (space-grotesk-var-*.woff2) so bold 700 is real.
+PURPOSE  A capability test: Claude vibe-codes the site from the current position, with full authority over
+         hierarchy and permission to write new copy. Lovable (export 2026-09-05, zip in session scratchpad only)
+         supplies the LOOK (bone paper, Space Grotesk/Mono, no serif, grayscale->colour scroll) and its LANGUAGE
+         where it exists. Hierarchy is Claude's. Edward judges it against the definitive five-doors state.
+BRANCH   claude/site-version-lovable-alignment-4v841g (from 06c5ff4). Commit 85da198 = first pass (Lovable
+         hierarchy); next commit = Claude's hierarchy. Compare the two.
+PAGES    / (headline + two routes: know it -> Services, don't -> doors; doors open to usual cause + price;
+         case note then plaques; the person; the gap as one statement; one ask) · /services (reference ledger by
+         door, #finish #part #technical #chase #learn) · /learn · /proof On Record (case notes FIRST, credits with
+         plaques, studio + gear) · /why (About + The Gap merged, told once) · /start (#how process, #purple,
+         path-first form). Redirects: story, the-gap, about -> /why; complete/fix/evaluate -> /services#door;
+         purple -> /start#purple.
+NEW COPY Claude-written, flag on review: door "usually" lines + door prices (mirror Services rates), home route
+         cards, home proof note, "Every message sent through this site comes to me", Learn rate line, Start path
+         labels, case-notes intro, "what happens after you send it".
+STYLE    src/styles/concept.css (Lovable) + trial blocks at its foot. Space Grotesk self-hosted VARIABLE.
 SUBS     session-color -> drummer-engineer; session-collab-wide -> session-bw. Ask Edward for the two files.
-NEXT     Edward reviews. Then: numbered copy list, photo swaps, remaining pages' polish, CLAUDE.md type rules
-         (Spectral law superseded if trial is kept).
+LINK     Static copy published as a private claude.ai artifact (see session). Cloudflare branch preview for this
+         branch did not appear at the guessed URL; check the Worker's deployments in the dashboard.
 ```
-
 
 ## STATE
 

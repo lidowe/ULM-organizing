@@ -209,6 +209,12 @@ rebuilds from `main` automatically.
 repository, which is why rewriting history is forbidden.
 
 ---
-## 26 Sep 2026 — the trial version
+## 26 Sep 2026 — the alternate version (a test, not the main plan)
 
-A new version of the site was built on its own branch (`claude/site-version-lovable-alignment-4v841g`). It uses the look you liked from Lovable: bone paper, two fonts, and photos that turn from black-and-white to colour as you scroll. The words come from Lovable wherever Lovable had words. There are seven pages: Home, The Gap, Services, Learn, On Record, About, and Start a project. The live site was not touched. Two photos Lovable used aren't in the project yet, so stand-ins are in their place until you send the originals.
+A separate test version of the site sits on its own branch (`claude/site-version-lovable-alignment-4v841g`). It is a trial of how well Claude can build the site on its own from where things stand. The main plan hasn't changed: the five-doors site is still the reference point.
+
+The test version uses Lovable's look and its wording. Its structure is Claude's own:
+- The home page gives the whole picture: two ways in ("I know what I need" / "I don't"), doors that show what the problem usually is and what it costs, one real example of the work, you, and The Gap.
+- There are five pages behind it: Services, Learn, On Record, Why ULM (About and The Gap combined), and Start a project.
+
+Some new sentences were written by Claude and are listed in the machine file for your review. The live site was not touched.

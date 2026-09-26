@@ -1,17 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { SiteLayout, PageBody } from "../components/site/SiteLayout";
-import { pages } from "../lib/site-pages";
-import { pageHead } from "../lib/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+/** Trial iteration: About and The Gap are one page now, at /why. */
 export const Route = createFileRoute("/the-gap")({
-  head: () => pageHead("the-gap"),
-  component: TheGapPage,
+  beforeLoad: () => {
+    throw redirect({ to: "/why", statusCode: 301 });
+  },
+  component: () => null,
 });
-
-function TheGapPage() {
-  return (
-    <SiteLayout>
-      <PageBody html={pages["the-gap"]} />
-    </SiteLayout>
-  );
-}

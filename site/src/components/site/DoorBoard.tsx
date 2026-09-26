@@ -20,6 +20,10 @@ function DoorDetail({
       </p>
       <h3 className="door-detail-name">{door.name}</h3>
       <p className="door-detail-body">{door.body}</p>
+      <p className="door-usually">
+        <span>What it usually turns out to be</span>
+        {door.usually}
+      </p>
       <ul className="door-symptoms">
         {door.symptoms.map((s, i) => (
           <li key={s}>
@@ -38,6 +42,7 @@ function DoorDetail({
           </li>
         ))}
       </ul>
+      <p className="door-price">{door.price}</p>
       <div className="door-detail-actions">
         <Link className="btn" to={door.link.to} hash={door.link.hash}>
           {door.link.label}
@@ -76,7 +81,7 @@ export function DoorBoard() {
     <section className="spread doors" id="doors">
       <div className="wrap">
         <div className="spread-head">
-          <span className="spread-no">02 / Who this is for</span>
+          <span className="spread-no">01 / Start here</span>
           <h2 className="spread-h">Which one are you?</h2>
         </div>
         <div className="doors-body">

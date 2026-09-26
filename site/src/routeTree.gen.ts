@@ -35,6 +35,7 @@ import { Route as StoryRouteImport } from './routes/story'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
+import { Route as WhyRouteImport } from './routes/why'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
@@ -171,6 +172,11 @@ const WhoWeAreRoute = WhoWeAreRouteImport.update({
   path: '/who-we-are',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WhyRoute = WhyRouteImport.update({
+  id: '/why',
+  path: '/why',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WorkRoute = WorkRouteImport.update({
   id: '/work',
   path: '/work',
@@ -227,6 +233,7 @@ export interface FileRoutesByFullPath {
   '/studio': typeof StudioRoute
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/why': typeof WhyRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -260,6 +267,7 @@ export interface FileRoutesByTo {
   '/studio': typeof StudioRoute
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/why': typeof WhyRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -294,6 +302,7 @@ export interface FileRoutesById {
   '/studio': typeof StudioRoute
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
+  '/why': typeof WhyRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -329,6 +338,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/the-gap'
     | '/who-we-are'
+    | '/why'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -362,6 +372,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/the-gap'
     | '/who-we-are'
+    | '/why'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -395,6 +406,7 @@ export interface FileRouteTypes {
     | '/studio'
     | '/the-gap'
     | '/who-we-are'
+    | '/why'
     | '/work'
     | '/.mcp/list-tools'
     | '/.well-known/oauth-protected-resource'
@@ -429,6 +441,7 @@ export interface RootRouteChildren {
   StudioRoute: typeof StudioRoute
   TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
+  WhyRoute: typeof WhyRoute
   WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
@@ -620,6 +633,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhoWeAreRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/why': {
+      id: '/why'
+      path: '/why'
+      fullPath: '/why'
+      preLoaderRoute: typeof WhyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work': {
       id: '/work'
       path: '/work'
@@ -685,6 +705,7 @@ const rootRouteChildren: RootRouteChildren = {
   StudioRoute: StudioRoute,
   TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
+  WhyRoute: WhyRoute,
   WorkRoute: WorkRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
   Char91DotwellKnownChar93OauthProtectedResourceRoute:

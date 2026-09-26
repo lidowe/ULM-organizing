@@ -1,51 +1,18 @@
-// Services — trial iteration. One page, one section per door, so a door on the
-// home page lands on its own section here. Copy is Lovable's Services and
-// Process pages (the preferred wording), with the five-doors Sagan / Root
-// passage where Lovable had none. The three paths (hand it over / work it
-// together / learn to run it) are the second question, inside each section.
+// Services — trial iteration: the reference page. For the visitor who already
+// knows what they need, or arrived by referral: every service and every price,
+// grouped by the same five doors as the home page, so a door lands on its
+// section. The process (how every project starts) lives on Start, where the
+// asking happens.
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Services &amp; rates</div><h1 class="page-title">We work across many fields of audio.</h1><p class="page-deck">These are the services we get asked for most. If you have something unique, let us know.</p><p class="page-deck page-deck-second">We know one missing piece can bring a project down. Every detail matters, and there is no harm in asking about it.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Services &amp; rates</div><h1 class="page-title">We work across many fields of audio.</h1><p class="page-deck">These are the services we get asked for most. If you have something unique, let us know.</p><p class="page-deck page-deck-second">We know one missing piece can bring a project down. Every detail matters, and there is no harm in asking about it. Sorted by the five doors; <a href="/start#how">how every project starts</a> is on the Start page.</p></div></section>
 
 <nav class="svc-index" aria-label="Sections on this page"><div class="wrap">
-  <a href="#start"><span>00</span>How it starts</a>
   <a href="#finish"><span>01</span>I can&rsquo;t finish my record</a>
   <a href="#part"><span>02</span>My part won&rsquo;t land</a>
   <a href="#technical"><span>03</span>I can&rsquo;t get it technically right</a>
   <a href="#chase"><span>04</span>I&rsquo;m chasing a problem</a>
   <a href="#learn"><span>05</span>I want to learn how it works</a>
 </div></nav>
-
-<section class="section" id="start">
-  <div class="wrap section-header reveal"><div class="kicker">00 / Process</div><h2 class="section-title">First I ask questions. Then we decide what my job is.</h2></div>
-  <div class="wrap">
-    <p class="plain-lead reveal">A production line never misses a beat. That&rsquo;s what&rsquo;s wrong with it.</p>
-    <blockquote class="pull-quote small lead-quote reveal">
-      <p>I like to start every project the same way. After the planning stage, no two projects remain that way. Audio often falls under the engineering umbrella, but it is a creative role at heart.</p>
-    </blockquote>
-    <div class="remote-body reveal">
-      <p>In order to make a grilled cheese, first you must create the universe. <span class="svc-attrib">(paraphrasing Carl Sagan)</span> Upper Level&rsquo;s process is not unlike that paraphrased quote. Even a small task requires learning about you and the universe your project is in.</p>
-      <p>Wondering why the 3rd degree? Well, we&rsquo;re trying to establish the Root.</p>
-    </div>
-    <div class="plan-pair reveal">
-      <div class="plan-part">
-        <span class="plan-mark">First</span>
-        <h3>Let&rsquo;s define who <em>you</em> are.</h3>
-        <p>What are you trying to say and what&rsquo;s the motivation behind it? What is actually getting in the way? The best work is hard when working with someone not understood as a person and in context of the work. It&rsquo;s even harder when the client hasn&rsquo;t figured themselves out either. We&rsquo;ll solve this here.</p>
-      </div>
-      <div class="plan-part">
-        <span class="plan-mark">Then</span>
-        <h3>You decide the path, for both of us.</h3>
-        <p>What you are hiring for changes the price, the schedule, and how much of it we touch. We settle that before anything starts by letting you pick the path ULM takes.</p>
-        <p>You do not need the vocabulary to start. &ldquo;This part should sound like I&rsquo;m in a spaceship&rdquo; is enough to work from. Hand us a routing problem like if you should half-normal your patch bay instead and we will work there. Same depth either way.</p>
-      </div>
-    </div>
-    <div class="svc-paths reveal">
-      <div class="svc-path"><span class="kicker">Path 1</span><h3>Hand it over.</h3><p>You want results and deliverables, done right and on time. Some people put it less politely, and that has been said too. Heard.</p></div>
-      <div class="svc-path"><span class="kicker">Path 2</span><h3>Work it together.</h3><p>When you need help with a specific aspect inside a larger scope, we&rsquo;ll work it out together, on your session and in your room. We&rsquo;ve got you.</p></div>
-      <div class="svc-path"><span class="kicker">Path 3</span><h3>Learn to run it.</h3><p>Whatever the job, we&rsquo;ll teach you the theory and get as detailed as you want. One on one, so you can produce professional results on your own terms. We adapt to how you learn.</p></div>
-    </div>
-  </div>
-</section>
 
 <section class="section svc-door" id="finish">
   <div class="wrap section-header reveal"><div class="kicker">01 / I can&rsquo;t finish my record</div><h2 class="section-title">Mix, edit and finish.</h2></div>

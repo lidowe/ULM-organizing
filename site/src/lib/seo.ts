@@ -35,24 +35,6 @@ export const PAGES: PageEntry[] = [
     priority: "1.0",
   },
   {
-    slug: "complete",
-    path: "/complete",
-    title: "Complete The Project · Upper Level Music",
-    description:
-      "Full production from demo to master, or any single stage: recording, vocal production, editing, mixing, mastering. Done right and on time.",
-    changefreq: "monthly",
-    priority: "0.9",
-  },
-  {
-    slug: "fix",
-    path: "/fix",
-    title: "Fix An Issue · Upper Level Music",
-    description:
-      "A mix that will not sit, a room that lies to you, a signal path with a fault you cannot isolate. Diagnosis first, then the repair, on your session and your rig.",
-    changefreq: "monthly",
-    priority: "0.9",
-  },
-  {
     slug: "learn",
     path: "/learn",
     title: "Learn The Craft · Upper Level Music",
@@ -60,42 +42,6 @@ export const PAGES: PageEntry[] = [
       "One-on-one training in recording, mixing and studio technical work. The apprenticeship knowledge, handed over directly.",
     changefreq: "monthly",
     priority: "0.9",
-  },
-  {
-    slug: "evaluate",
-    path: "/evaluate",
-    title: "Playback, Evaluate, Improve · Upper Level Music",
-    description:
-      "A second set of experienced ears: honest playback, project planning, and gear checked before you spend.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    slug: "purple",
-    path: "/purple",
-    title: "Make It More Purple · Upper Level Music",
-    description:
-      "You do not need the vocabulary to start. Describe the sound in your own words — borrowed words are how sound gets described — and we will translate it into the work.",
-    changefreq: "monthly",
-    priority: "0.8",
-  },
-  {
-    slug: "the-gap",
-    path: "/the-gap",
-    title: "The Gap · Upper Level Music",
-    description:
-      "The tools reached everyone. The knowledge didn't. How the trade used to hand itself down, what interrupted it, and the patch around the interruption.",
-    changefreq: "monthly",
-    priority: "0.7",
-  },
-  {
-    slug: "story",
-    path: "/story",
-    title: "The Story · Upper Level Music",
-    description:
-      "Created in 2012 by Edward Lidow. The person, what happened to the record industry, and why control belongs to the person making the art.",
-    changefreq: "monthly",
-    priority: "0.7",
   },
   {
     slug: "proof",
@@ -132,6 +78,15 @@ export const PAGES: PageEntry[] = [
       "Mixing, editing, mastering, recording, production, diagnosis, rooms and systems, and one-on-one teaching, with rates on the page.",
     changefreq: "monthly",
     priority: "0.9",
+  },
+  {
+    slug: "why",
+    path: "/why",
+    title: "Why ULM · Upper Level Music",
+    description:
+      "Edward Lidow, the gap between the tools and the knowledge, and why Upper Level Music was built around the person making the record.",
+    changefreq: "monthly",
+    priority: "0.8",
   },
 ];
 

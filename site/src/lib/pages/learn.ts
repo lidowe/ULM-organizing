@@ -1,7 +1,7 @@
 // Learn — trial iteration: Lovable's rebuilt teaching page, plus the booth
 // story from the five-doors Learn door.
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Learn</div><h1 class="page-title">The room is gone. The knowledge doesn&rsquo;t have to go with it.</h1><p class="page-deck">One-on-one teaching in recording, production, mixing and the technical side, built around what you are actually working on.</p><p class="page-deck page-deck-second">Not a curriculum. The apprenticeship, handed over directly, at the level you are at today. <a href="/the-gap">Why that path disappeared &rarr;</a></p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Learn</div><h1 class="page-title">The room is gone. The knowledge doesn&rsquo;t have to go with it.</h1><p class="page-deck">One-on-one teaching in recording, production, mixing and the technical side, built around what you are actually working on.</p><p class="page-deck page-deck-second">Not a curriculum. The apprenticeship, handed over directly, at the level you are at today. <a href="/why#gap">Why that path disappeared &rarr;</a></p></div></section>
 
 <section class="edu-photo-band">
   <img src="{{IMG:classroom}}" alt="A teaching room: projector screen, whiteboard, keyboard, drum pads and a laptop on the table" loading="lazy" />
@@ -154,6 +154,7 @@ export default `
       </div>
     </div>
 
+    <div class="rate-line reveal"><span class="rate-k">One-on-one lessons</span><b>$75&ndash;$150 / hr</b><small>One session or a standing hour. No package to commit to first.</small></div>
     <div class="needs-content"><strong>Content needed</strong>Confirm the teaching rate, session length, and whether blocks or group sessions are offered, then replace this note with the real figures.</div>
 
     <div class="hero-actions reveal"><a class="btn primary" href="/start">Book a session</a><a class="btn" href="/services">See services and rates</a></div>
@@ -179,7 +180,7 @@ export default `
     <div class="closing-copy">
       <p>Home studios are everywhere, which is a large part of why the major rooms are closing, and those rooms were the schools. Needing to be taught this is not a failure. It is what happens when a whole chain of handing-down gets cut and nobody replaces it.</p>
       <p>If you want to know why a ribbon needs seventy decibels of clean gain, or why your kick sounds right here and wrong in the car, I will show you. If you would rather I just handle it, that is fine too, and it is on the same side of the same argument.</p>
-      <p><a href="/the-gap">Read the whole argument: The Gap &rarr;</a></p>
+      <p><a href="/why#gap">Read the whole argument: Why ULM &rarr;</a></p>
     </div>
   </div>
 </section>

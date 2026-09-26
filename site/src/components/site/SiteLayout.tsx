@@ -9,21 +9,19 @@ import { renderTokens } from "@/lib/render-tokens";
  * "Start a project" is rendered separately as the highlighted action.
  */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
-  { to: "/the-gap", label: "The Gap" },
   { to: "/services", label: "Services" },
   { to: "/learn", label: "Learn" },
   { to: "/proof", label: "On Record" },
-  { to: "/story", label: "About" },
+  { to: "/why", label: "Why ULM" },
 ];
 
 const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/", label: "Home", n: "01" },
-  { to: "/the-gap", label: "The Gap", n: "02" },
-  { to: "/services", label: "Services", n: "03" },
-  { to: "/learn", label: "Learn", n: "04" },
-  { to: "/proof", label: "On Record", n: "05" },
-  { to: "/story", label: "About", n: "06" },
-  { to: "/start", label: "Start a project", n: "07" },
+  { to: "/services", label: "Services", n: "02" },
+  { to: "/learn", label: "Learn", n: "03" },
+  { to: "/proof", label: "On Record", n: "04" },
+  { to: "/why", label: "Why ULM", n: "05" },
+  { to: "/start", label: "Start a project", n: "06" },
 ];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
