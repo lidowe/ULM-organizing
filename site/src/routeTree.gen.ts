@@ -21,6 +21,7 @@ import { Route as ReachRouteImport } from './routes/reach'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StudioRouteImport } from './routes/studio'
+import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
 import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
@@ -88,6 +89,11 @@ const StudioRoute = StudioRouteImport.update({
   path: '/studio',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TheGapRoute = TheGapRouteImport.update({
+  id: '/the-gap',
+  path: '/the-gap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WhoWeAreRoute = WhoWeAreRouteImport.update({
   id: '/who-we-are',
   path: '/who-we-are',
@@ -135,6 +141,7 @@ export interface FileRoutesByFullPath {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -155,6 +162,7 @@ export interface FileRoutesByTo {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -176,6 +184,7 @@ export interface FileRoutesById {
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/studio': typeof StudioRoute
+  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
   '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
@@ -198,6 +207,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -218,6 +228,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -238,6 +249,7 @@ export interface FileRouteTypes {
     | '/services'
     | '/sitemap.xml'
     | '/studio'
+    | '/the-gap'
     | '/who-we-are'
     | '/work'
     | '/.mcp/list-tools'
@@ -259,6 +271,7 @@ export interface RootRouteChildren {
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StudioRoute: typeof StudioRoute
+  TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
   Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
@@ -353,6 +366,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StudioRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/the-gap': {
+      id: '/the-gap'
+      path: '/the-gap'
+      fullPath: '/the-gap'
+      preLoaderRoute: typeof TheGapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/who-we-are': {
       id: '/who-we-are'
       path: '/who-we-are'
@@ -411,6 +431,7 @@ const rootRouteChildren: RootRouteChildren = {
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StudioRoute: StudioRoute,
+  TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,
   Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,

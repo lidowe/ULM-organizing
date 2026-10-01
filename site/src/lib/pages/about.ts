@@ -5,12 +5,13 @@ export default `
     <p class="intro-copy">Doesn&rsquo;t it feel like 90% of getting your art heard involves anything but making music? Constant self-marketing, streaming services that don&rsquo;t pay, and learning to record at a professional level just to keep up.</p>
     <p class="intro-copy">Upper Level Music is here for that last part, the gap between the major label recording studio and the growing home studio. Being in control of your record is the one place a musician actually wants control.</p>
     <p class="intro-copy">Major-label resources and experience, made available at any stage. The work is collaborative rather than a permanent building, I pull in the right people when a record needs them. We focus on remote work to be available to anyone, but tell us the scope of your project and any arrangement can be made.</p>
+    <p class="intro-copy"><a href="/the-gap">The whole argument behind it: The Gap &rarr;</a></p>
   </div>
 </section>
 <section class="lead-photo-section">
   <div class="wrap">
     <figure class="lead-photo">
-      <img src="{{IMG:session-bw}}" alt="Black and white photograph of two musicians facing each other mid-session, drums and guitar" loading="lazy" />
+      <img src="{{IMG:session-collab-wide}}" alt="A writing session in progress: an acoustic guitarist, two violinists, and a producer at a cluttered studio desk" loading="lazy" />
       <figcaption>Music is not meant to be made alone, staring at a screen.</figcaption>
     </figure>
   </div>
@@ -21,7 +22,7 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="true" aria-controls="wwa-panel-01" id="wwa-btn-01">
           <span class="wwa-no">01</span>
-          <span class="wwa-heading"><span class="wwa-title">The Person</span><span class="wwa-summary">Musician first, engineer second.</span></span>
+          <span class="wwa-heading"><span class="wwa-title">The person</span><span class="wwa-summary">Musician first, engineer second.</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
@@ -38,14 +39,9 @@ export default `
           <figure class="person-aside"><img src="{{IMG:credits-kravitz}}" alt="Edward Lidow with Lenny Kravitz at a session" loading="lazy" /></figure>
           <p class="person-copy">After Clemson University and a media and communications degree, I went to SAE Miami and graduated valedictorian, which earned a rare internship at Hit Factory Criteria Miami, now Criteria Studios. Standing on the shoulders of giants there, I worked on Grammy-winning, platinum-selling records across every genre, and came to understand that everything we do is creative and collaborative. No musical project reaches success without a strong creative team.</p>
           <figure class="inline-photo">
-            <img src="{{IMG:console-mpc-session}}" alt="A large-format recording console in a control room, faders lit, with a live room visible through the glass beyond" loading="lazy" />
-            <figcaption>A large room, mid-session, with the live floor through the glass.</figcaption>
-          </figure>
-          <figure class="inline-photo">
             <img src="{{IMG:hit-factory}}" alt="Five people standing under The Hit Factory neon sign outside the studio" loading="lazy" />
             <figcaption>Hit Factory Criteria, Miami, the internship that started it.</figcaption>
           </figure>
-          <p class="person-copy">The Bay 8 room in Miami was one of mine, built modestly and later sold. Its current owners have expanded it well past what we made, and it still runs as a commercial studio today, which is the kind of proof a build service rarely gets to point at.</p>
         </div>
       </div>
     </article>
@@ -85,7 +81,7 @@ export default `
       <h2 class="wwa-head">
         <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-03" id="wwa-btn-03">
           <span class="wwa-no">03</span>
-          <span class="wwa-heading"><span class="wwa-title">Why This Exists</span><span class="wwa-summary">Control belongs to the person making the art.</span></span>
+          <span class="wwa-heading"><span class="wwa-title">Why this exists</span><span class="wwa-summary">Control belongs to the person making the art.</span></span>
           <span class="wwa-mark" aria-hidden="true"></span>
         </button>
       </h2>
@@ -97,26 +93,50 @@ export default `
         </div>
       </div>
     </article>
-    <article class="wwa-item" data-accordion-item>
-      <h2 class="wwa-head">
-        <button class="wwa-trigger" type="button" aria-expanded="false" aria-controls="wwa-panel-04" id="wwa-btn-04">
-          <span class="wwa-no">04</span>
-          <span class="wwa-heading"><span class="wwa-title">What Comes Next</span><span class="wwa-summary">Resources, education, insights.</span></span>
-          <span class="wwa-mark" aria-hidden="true"></span>
-        </button>
-      </h2>
-      <div class="wwa-panel" id="wwa-panel-04" role="region" aria-labelledby="wwa-btn-04">
-        <div class="wwa-panel-inner">
-          <div class="needs-content"><strong>Sections still to come</strong>Resources (equipment, space, and what can be done with them) will replace the rooms list. An education component, a recurring insight series with audio and video, and a mailing list are all planned and not yet built.</div>
-        </div>
-      </div>
-    </article>
   </div>
 </section>
+<section class="essay">
+  <div class="wrap spread-body">
+    <p class="spread-note">Every role</p>
+    <div>
+      <p class="essay-lead">No matter the task, we serve the process, we work in service to the song, and the ego stays outside.</p>
+      <p>Various roles, various artists, whether the role was large or small or the artist famous or not, every job contributes to the &lsquo;flow state&rsquo; every job asks 100% focus &hellip; yes, even the coffee can ruin an entire day, or fuel the magic later.</p>
+      <p>Get them coffee, route signal flow and place mics, run the DAW or be the tape op, it all was part of a bigger picture and personal growth. Running cables became running sessions, tuning instruments became vocal tuning and production, production became tracking engineer, mix engineer, mastering, or going on tour with them.</p>
+      <p>Relationships carried on, years go by and I&rsquo;m asked to build their private studio after our work together commercially&hellip; by being their barista a decade earlier. Others continue as clients, friends and contemporaries to this day. The only thing that stays consistent is the dedication and effort put into every detail.</p>
+      <p><a class="btn" href="/work">See the work</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="spread">
+  <div class="wrap">
+    <div class="spread-head">
+      <span class="spread-no">What we believe</span>
+      <h2 class="spread-h">Our values.</h2>
+    </div>
+    <div class="spread-body">
+      <p class="spread-note">Service<br />Intention<br />Listening</p>
+      <div class="spread-cols">
+        <p>The artist is the one who is vulnerable. The social currency spent on a record is theirs, their story, their name, their risk. Our work belongs in service to the song.</p>
+        <p>Before we begin, we want to hear about you: the concept, the intention. Then we translate that into the technical world, the gear, the sonic character.</p>
+        <p>It is not the artist&rsquo;s job to know whether an 1176 or a dbx 160VU will help express that. If you are an engineer who wants to know, we will travel that path as far as you want.</p>
+        <p>It is better to listen to the artist in order to hear the song.</p>
+      </div>
+    </div>
+    <details class="fold">
+      <summary><span class="fold-k">Remote work</span><span class="fold-hint">Read</span></summary>
+      <div class="fold-body">
+        <p>Most work happens through video calls, shared audio feeds, and real-time remote collaboration. That flexibility lets us work with artists anywhere, on any schedule.</p>
+        <p>Nothing fully replaces being in the same space. We trade some of that for access, and we are honest about it.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
 <section class="rack-unit archive-unit">
   <div class="wrap">
     <div class="unit-label"><span class="unit-no">A</span><span>The archive</span></div>
-    <h2 class="unit-title">Twenty Years of Rooms and the People in Them.</h2>
+    <h2 class="unit-title">Twenty years of rooms and the people in them.</h2>
   </div>
   <div class="wrap archive-strip">
     <figure><img src="{{IMG:moonlight-bass}}" alt="A person playing an acoustic bass outdoors at night with a baby in a carrier" loading="lazy" /><figcaption>Music happens wherever you are.</figcaption></figure>
@@ -133,22 +153,8 @@ export default `
 </section>
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Tell Me What You&rsquo;re Working On.</h2><p>A rough, a reference, a photo of the room, or a few sentences is enough.</p></div>
-    <a class="btn primary reveal" href="/contact">Start a project</a>
-  </div>
-</section>
-
-<section class="page-next">
-  <div class="wrap next-grid">
-    <a class="next-card" href="/services">
-      <span class="next-kicker">Next</span>
-      <h3>How the work actually goes.</h3>
-      <p>Why a project starts with questions, how it runs, and what each part costs.</p>
-    </a>
-    <div class="next-cta">
-      <p>Or skip ahead and tell me what you are working on.</p>
-      <a class="btn primary" href="/contact">Start a project</a>
-    </div>
+    <div class="reveal"><h2>Hire your audio team.</h2><p>Major-label experience, available at any stage and any scale.</p></div>
+    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Hire your audio team</a><a class="btn" href="/services">Choose your service</a></div>
   </div>
 </section>
 `;

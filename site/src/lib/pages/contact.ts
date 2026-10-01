@@ -1,12 +1,17 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Start a project</div><h1 class="page-title">Tell Me What You&rsquo;re Working On.</h1><p class="page-deck">A record, a voice, a mix, a room, or learning to do it yourself. You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p></div></section>
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Hire your audio team</div><h1 class="page-title">Tell us what you need.</h1><div class="deck-frame">
+      <p class="sr-only">A record, a voice, a mix, a room, or learning to do it yourself.</p>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>A record</span><span>A voice</span><span>A mix</span><span>A room</span><span>Learning to do it yourself</span><span>A record</span><span>A voice</span><span>A mix</span><span>A room</span><span>Learning to do it yourself</span></div></div>
+      <p class="deck-frame-note">You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
+    </div></div></section>
 <section class="section">
   <div class="wrap contact-grid">
-    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the problem, not the booking language.</h2><p>A rough mix, a voice memo, a photo of the room, or a few sentences is plenty. The questions below just give me enough to answer properly instead of guessing.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment &middot; Remote work available</div><p class="contact-aside-note">Not a project? Questions, press, or just talking shop, the same address works.</p><div class="needs-content"><strong>Details needed</strong>Add a phone or text number, response time, and social links.</div></aside>
-    <form class="form reveal" data-project-form>
+    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the problem, not the booking language.</h2><p>A rough mix, a voice memo, a photo of the room, or a few sentences is plenty. The questions below just give us enough to answer properly instead of guessing.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment &middot; Remote work available</div><p class="contact-aside-note">Not a project? Questions, press, or just talking shop, the same address works.</p><div class="terms-out-loud"><h3>The terms, out loud.</h3><p>Nothing here is sponsored. No affiliate links, no gear commissions, no partner codes. When a tool gets recommended, it is because it is right for your song, and the recommendation costs you the same either way: nothing.</p><p>The paid work is mixing, production, studio systems and repair, and one-on-one teaching, and independent budgets get met where they are.</p><p>Every message gets a reply.</p></div></aside>
+    <form class="form reveal" id="tell-us" data-project-form>
+      <p class="booth-from" data-booth-from hidden></p>
       <div class="form-row"><div class="field"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div></div>
 
-      <div class="field"><label for="services">What type of service or services are you interested in? *</label><textarea id="services" name="services" required rows="4" placeholder="In your own words. You do not need to know the trade term for it."></textarea></div>
+      <div class="field"><label for="services">What&rsquo;s going on? What are you working on, and what do you need? *</label><textarea id="services" name="services" required rows="4" placeholder="In your own words, in your own voice. You do not need to know the trade term for it."></textarea></div>
 
       <div class="urgent-box">
         <label class="urgent-check" for="expedited"><input type="checkbox" id="expedited" name="expedited" value="yes"><span>I&rsquo;m in the middle of a project and need expedited assistance.</span></label>
@@ -30,7 +35,7 @@ export default `
       <div class="field" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="company">Company</label><input id="company" name="company" tabindex="-1" autocomplete="off"></div>
       <div class="form-actions"><button class="btn primary" type="submit">Send it</button></div>
       <div class="form-status" data-form-status role="status" aria-live="polite"></div>
-      <p class="form-close">Thank you for taking the time. This goes straight to me, and replies come back to the address you entered. Feel free to <a href="mailto:edwardlidow@upperlevelmusic.com">email me directly</a> with anything additional, and I will do my best to promptly respond to any topic of interest we may have missed.</p>
+      <p class="form-close">Thank you for taking the time. This goes straight to the team, and replies come back to the address you entered. Feel free to <a href="mailto:edwardlidow@upperlevelmusic.com">email us directly</a> with anything additional, and we will do our best to respond promptly to any topic we may have missed.</p>
     </form>
   </div>
 </section>

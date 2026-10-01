@@ -36,6 +36,11 @@ export type Credit = {
    * without it, so covers can be added one at a time as they are cleared.
    */
   art?: string;
+  /**
+   * Award plaques that belong to this release, rendered alongside the card.
+   * `img` is an asset name without extension, like `art`.
+   */
+  plaques?: { img: string; alt: string }[];
 };
 
 const ASSISTANT_TRACKING = "Assistant Engineer · Editing · Tracking Engineer (various)";
@@ -82,6 +87,16 @@ export const CREDITS: Credit[] = [
     artist: "Katy Perry",
     title: "Teenage Dream",
     year: "2010",
+    plaques: [
+      {
+        img: "award-riaa-katy-teenage-dream",
+        alt: "RIAA multi-platinum plaque for Katy Perry, Teenage Dream, 8× platinum",
+      },
+      {
+        img: "award-riaa-katy-lfn",
+        alt: "RIAA multi-platinum plaque for Katy Perry, Last Friday Night (T.G.I.F.), 6× platinum",
+      },
+    ],
     role: "Assistant Engineer · Editing · Vocal Tuning (various) · DAW/Tape Operator",
     tags: ["assistant", "engineering"],
     credited: true,
@@ -122,6 +137,12 @@ export const CREDITS: Credit[] = [
     artist: "Lil Wayne",
     title: "Rebirth",
     year: "2010",
+    plaques: [
+      {
+        img: "award-riaa-wayne-rebirth",
+        alt: "RIAA gold plaque for Lil Wayne, Rebirth",
+      },
+    ],
     role: `Engineer · Editing · Tracking Engineer (various) · ${LIL_WAYNE_EXTRA} · Guitar/Drum Studio Tech · Consulting · Recording Engineer`,
     tags: ["recording", "engineering", "assistant", "mix"],
     credited: true,
@@ -163,6 +184,12 @@ export const CREDITS: Credit[] = [
     artist: "Nicki Minaj",
     title: "Pink Friday",
     year: "2010",
+    plaques: [
+      {
+        img: "award-riaa-nicki-pink-friday",
+        alt: "RIAA multi-platinum plaque for Nicki Minaj, Pink Friday, 3× platinum",
+      },
+    ],
     role: "Assistant Engineer · Editing · Vocal Tuning (various)",
     tags: ["assistant", "engineering"],
     credited: true,
@@ -189,6 +216,12 @@ export const CREDITS: Credit[] = [
     artist: "Willie Nelson",
     title: "Band of Brothers",
     year: "2014",
+    plaques: [
+      {
+        img: "award-billboard-willie-hires",
+        alt: "Billboard number one plaque for Willie Nelson, Band of Brothers",
+      },
+    ],
     role: ASSISTANT_EQUIPMENT,
     tags: ["assistant", "engineering"],
     credited: true,
@@ -336,7 +369,16 @@ export function creditCardsHtml(): string {
             : ""
         }<div><div class="artist">${esc(c.artist)}${
           c.year ? ` · ${esc(c.year)}` : ""
-        }</div><h3>${esc(c.title!)}</h3></div><div class="role">${esc(c.role)}</div></article>`,
+        }</div><h3>${esc(c.title!)}</h3><div class="role">${esc(c.role)}</div></div>${
+          c.plaques?.length
+            ? `<div class="work-plaques">${c.plaques
+                .map(
+                  (p) =>
+                    `<img class="work-plaque" src="${photo(p.img)}" alt="${esc(p.alt)}" loading="lazy" decoding="async" />`,
+                )
+                .join("")}</div>`
+            : ""
+        }</article>`,
     )
     .join("\n      ");
 }
@@ -354,9 +396,48 @@ export function mediaIndexHtml(): string {
     .join("");
 }
 
+/**
+ * Studios, institutions, and company projects. These carry the home-page
+ * ribbon: the work happened in real rooms, for real organizations, with a
+ * few artists mixed in sparingly.
+ */
+export const PLACES_AND_PROJECTS = [
+  "Hit Factory / Criteria · Miami",
+  "Record Plant · Los Angeles",
+  "Chicago Recording Company",
+  "Bay 8 · Miami",
+  "Dream Asylum",
+  "Studio 8 · Miami",
+  "The Jam Room · Columbia",
+  "Midlands Audio Institute",
+  "Midlands Technical College",
+  "Clemson University",
+  "NBC · Columbia",
+  "Disney",
+  "The Simpsons",
+  "Universal Music Group",
+  "Atlantic Records",
+  "Miami Historical Museum",
+];
+
+/** A deliberately short artist presence in the ribbon. */
+const RIBBON_ARTISTS = [
+  "Lil Wayne",
+  "Willie Nelson",
+  "Katy Perry",
+  "Nicki Minaj",
+  "Blackfoot",
+];
+
 export function ribbonHtml(): string {
-  const run = artistRoster()
-    .map((name) => `<span>${esc(name)}</span>`)
-    .join("");
+  // Places lead; one artist slips in after every third place.
+  const names: string[] = [];
+  PLACES_AND_PROJECTS.forEach((place, i) => {
+    names.push(place);
+    if (i % 3 === 2 && RIBBON_ARTISTS[i / 3 | 0]) {
+      names.push(RIBBON_ARTISTS[i / 3 | 0]!);
+    }
+  });
+  const run = names.map((name) => `<span>${esc(name)}</span>`).join("");
   return `${run}\n      ${run}`;
 }

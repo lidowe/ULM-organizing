@@ -1,15 +1,15 @@
+import { BOOTHS } from "./booths";
+
 // Shared behaviors: header scroll shadow, menu dialog, IntersectionObserver
 // reveals, work filter, project form, click-to-reveal sections. Call once
 // after each route renders; each block is a no-op if its target elements are
 // absent on the current page.
 
-
 export function initSiteBehaviors(): () => void {
   const cleanups: Array<() => void> = [];
 
   const header = document.querySelector(".site-header");
-  const setHeader = () =>
-    header && header.classList.toggle("scrolled", window.scrollY > 24);
+  const setHeader = () => header && header.classList.toggle("scrolled", window.scrollY > 24);
   setHeader();
   window.addEventListener("scroll", setHeader, { passive: true });
   cleanups.push(() => window.removeEventListener("scroll", setHeader));
@@ -40,8 +40,7 @@ export function initSiteBehaviors(): () => void {
     cleanups.push(() => btn.removeEventListener("click", closeMenu));
   });
   const onDialogClick = (e: MouseEvent) => {
-    if (dialog && e.target === dialog && typeof dialog.close === "function")
-      dialog.close();
+    if (dialog && e.target === dialog && typeof dialog.close === "function") dialog.close();
   };
   if (dialog) {
     dialog.addEventListener("click", onDialogClick);
@@ -68,12 +67,64 @@ export function initSiteBehaviors(): () => void {
     revealers.forEach((el) => el.classList.add("in"));
   }
 
-  const filterButtons = [
-    ...document.querySelectorAll<HTMLElement>("[data-filter]"),
-  ];
-  const workCards = [
-    ...document.querySelectorAll<HTMLElement>("[data-work-role]"),
-  ];
+  // Photos develop to full colour as they approach the viewport centre and
+  // return to ink as they scroll away. --cf is 0..1; the grayscale filter in
+  // concept.css reads it. Reduced motion: photos stay ink.
+  if (!reduced) {
+    const fadeImgs = [
+      ...document.querySelectorAll<HTMLElement>(
+        "main figure img, main .photo-set img, main .studio-gallery img, main .row-thumb img, main .person-thumb img, .hero-panel img",
+      ),
+    ].filter((el) => !el.closest(".credit-photo, .work-grid, .work-card, .award-plaque"));
+    if (fadeImgs.length) {
+      let ticking = false;
+      const paint = () => {
+        ticking = false;
+        const vh = window.innerHeight;
+        const mid = vh / 2;
+        const range = vh * 0.55;
+        fadeImgs.forEach((el) => {
+          const r = el.getBoundingClientRect();
+          if (r.bottom < -60 || r.top > vh + 60) return;
+          const dist = Math.abs(r.top + r.height / 2 - mid) / range;
+          const t = Math.min(1, Math.max(0, 1 - dist));
+          el.style.setProperty("--cf", (t * t * (3 - 2 * t)).toFixed(3));
+        });
+      };
+      const onScroll = () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(paint);
+        }
+      };
+      paint();
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      cleanups.push(() => {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      });
+    }
+  }
+
+  // Deep links such as /process#describing-sound open the fold they point at.
+  const openFoldFromHash = () => {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const el = document.getElementById(id);
+    if (el instanceof HTMLDetailsElement && !el.open) {
+      el.open = true;
+      requestAnimationFrame(() =>
+        el.scrollIntoView({ block: "start", behavior: reduced ? "auto" : "smooth" }),
+      );
+    }
+  };
+  openFoldFromHash();
+  window.addEventListener("hashchange", openFoldFromHash);
+  cleanups.push(() => window.removeEventListener("hashchange", openFoldFromHash));
+
+  const filterButtons = [...document.querySelectorAll<HTMLElement>("[data-filter]")];
+  const workCards = [...document.querySelectorAll<HTMLElement>("[data-work-role]")];
   filterButtons.forEach((btn) => {
     const onClick = () => {
       const filter = btn.dataset.filter ?? "all";
@@ -89,14 +140,19 @@ export function initSiteBehaviors(): () => void {
 
   const form = document.querySelector<HTMLFormElement>("[data-project-form]");
   if (form) {
+    // Arriving from a booth (/contact?booth=room): say so, and send it along.
+    const boothParam = new URLSearchParams(window.location.search).get("booth");
+    const booth = BOOTHS.find((b) => b.id === boothParam);
+    const boothNote = form.querySelector<HTMLElement>("[data-booth-from]");
+    if (booth && boothNote) {
+      boothNote.textContent = "You came from the booth: " + booth.name;
+      boothNote.hidden = false;
+    }
     const onSubmit = (e: SubmitEvent) => {
       e.preventDefault();
       const val = (id: string) => {
         const el = document.getElementById(id) as
-          | HTMLInputElement
-          | HTMLTextAreaElement
-          | HTMLSelectElement
-          | null;
+          HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null;
         return el ? el.value.trim() : "";
       };
       const expedited = !!document.querySelector<HTMLInputElement>("#expedited:checked");
@@ -105,7 +161,7 @@ export function initSiteBehaviors(): () => void {
       const payload = {
         name: val("name"),
         email: val("email"),
-        services: val("services"),
+        services: (booth ? "Booth: " + booth.short + "\n" : "") + val("services"),
         expedited,
         situation: val("situation"),
         send: val("send"),
@@ -140,7 +196,7 @@ export function initSiteBehaviors(): () => void {
 
       const mailtoFallback = () => {
         setStatus(
-          "Opening your email app with the project details drafted. If nothing opens, email Edward directly at edwardlidow@upperlevelmusic.com.",
+          "Opening your email app with the project details drafted. If nothing opens, email us directly at edwardlidow@upperlevelmusic.com.",
         );
         window.location.href =
           "mailto:edwardlidow@upperlevelmusic.com?subject=" +
@@ -171,16 +227,12 @@ export function initSiteBehaviors(): () => void {
           if (res.ok && data.ok) {
             form.reset();
             setStatus(
-              "Thank you, your inquiry is in. Edward will reply to " +
-                payload.email +
-                " directly.",
+              "Thank you, your inquiry is in. We will reply to " + payload.email + " directly.",
             );
             return;
           }
           if (res.status === 400) {
-            setStatus(
-              data.error || "Please check the required fields and try again.",
-            );
+            setStatus(data.error || "Please check the required fields and try again.");
             return;
           }
           mailtoFallback();
@@ -197,12 +249,8 @@ export function initSiteBehaviors(): () => void {
     cleanups.push(() => form.removeEventListener("submit", onSubmit));
   }
 
-
-
   // Click-to-reveal sections (Who We Are). One panel open at a time per group.
-  const accordions = [
-    ...document.querySelectorAll<HTMLElement>("[data-accordion]"),
-  ];
+  const accordions = [...document.querySelectorAll<HTMLElement>("[data-accordion]")];
   if (accordions.length) {
     const allTriggers: HTMLButtonElement[] = [];
     const panelOf = (trigger: HTMLElement) =>
@@ -216,8 +264,7 @@ export function initSiteBehaviors(): () => void {
       panel.style.height = open ? `${panel.scrollHeight}px` : "0px";
       if (open) {
         const done = () => {
-          if (trigger.getAttribute("aria-expanded") === "true")
-            panel.style.height = "auto";
+          if (trigger.getAttribute("aria-expanded") === "true") panel.style.height = "auto";
           panel.removeEventListener("transitionend", done);
         };
         panel.addEventListener("transitionend", done);
@@ -225,30 +272,22 @@ export function initSiteBehaviors(): () => void {
     };
 
     accordions.forEach((group) => {
-      const triggers = [
-        ...group.querySelectorAll<HTMLButtonElement>(".wwa-trigger"),
-      ];
+      const triggers = [...group.querySelectorAll<HTMLButtonElement>(".wwa-trigger")];
       triggers.forEach((trigger) => {
         allTriggers.push(trigger);
         const panel = panelOf(trigger);
         const startOpen = trigger.getAttribute("aria-expanded") === "true";
         if (panel) {
           panel.style.height = startOpen ? "auto" : "0px";
-          trigger
-            .closest("[data-accordion-item]")
-            ?.classList.toggle("open", startOpen);
+          trigger.closest("[data-accordion-item]")?.classList.toggle("open", startOpen);
         }
         const onClick = () => {
           const isOpen = trigger.getAttribute("aria-expanded") === "true";
           if (!isOpen) {
             allTriggers.forEach((other) => {
-              if (
-                other !== trigger &&
-                other.getAttribute("aria-expanded") === "true"
-              ) {
+              if (other !== trigger && other.getAttribute("aria-expanded") === "true") {
                 const otherPanel = panelOf(other);
-                if (otherPanel)
-                  otherPanel.style.height = `${otherPanel.scrollHeight}px`;
+                if (otherPanel) otherPanel.style.height = `${otherPanel.scrollHeight}px`;
                 requestAnimationFrame(() => setOpen(other, false));
               }
             });
