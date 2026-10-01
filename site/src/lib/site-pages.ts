@@ -13,6 +13,7 @@ import contact from "./pages/contact";
 import about from "./pages/about";
 import education from "./pages/education";
 import news from "./pages/news";
+import theGap from "./pages/the-gap";
 
 export const pages: Record<string, string> = {
   "index": index,
@@ -24,4 +25,5 @@ export const pages: Record<string, string> = {
   "about": about,
   "education": education,
   "news": news,
+  "the-gap": theGap,
 };

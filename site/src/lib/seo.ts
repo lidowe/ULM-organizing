@@ -73,7 +73,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "education",
     path: "/education",
-    title: "Learn · Upper Level Music",
+    title: "Educational Services · Upper Level Music",
     description:
       "One-on-one training in recording, mixing and studio technical work for artists, engineers, producers and students, remote, at your pace.",
     changefreq: "monthly",
@@ -98,9 +98,18 @@ export const PAGES: PageEntry[] = [
     priority: "0.8",
   },
   {
+    slug: "the-gap",
+    path: "/the-gap",
+    title: "The Gap · Upper Level Music",
+    description:
+      "The tools reached everyone; the knowledge didn't. Why everyone seems to need help these days, and what closes the divide.",
+    changefreq: "monthly",
+    priority: "0.7",
+  },
+  {
     slug: "contact",
     path: "/contact",
-    title: "Start a Project · Upper Level Music",
+    title: "Hire Your Audio Team · Upper Level Music",
     description:
       "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
     changefreq: "yearly",

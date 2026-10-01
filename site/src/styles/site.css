@@ -1,153 +1,6 @@
-/* ---------------------------------------------------------------------
-   Brand faces, served from this origin. Previously these came from
-   fonts.googleapis.com at runtime, which made the visual identity a
-   third-party dependency: if that host was slow or blocked, visitors got
-   Arial and the recognition was gone. Self-hosted also removes the two
-   preconnects and one render-blocking stylesheet from the critical path,
-   and unblocks adding a CSP later.
-
-   Only latin and latin-ext are shipped, and the original unicode-ranges are
-   kept, so a browser downloads a subset only when the page actually uses
-   those characters. Only the weights the stylesheet asks for are here: any
-   other weight would be synthesised, which is what a palette exists to stop.
-
-   Space Grotesk is one variable file declared across a weight range, because
-   Google serves byte-identical files for 400 and 500; shipping both would be
-   the same download twice for one of them.
-   --------------------------------------------------------------------- */
-
-@font-face{
-  font-family:'Spectral';
-  font-style:italic;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/spectral-400-italic-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:italic;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/spectral-400-italic-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:italic;
-  font-weight:500;
-  font-display:swap;
-  src:url('/fonts/spectral-500-italic-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:italic;
-  font-weight:500;
-  font-display:swap;
-  src:url('/fonts/spectral-500-italic-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/spectral-400-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/spectral-400-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:normal;
-  font-weight:500;
-  font-display:swap;
-  src:url('/fonts/spectral-500-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Spectral';
-  font-style:normal;
-  font-weight:500;
-  font-display:swap;
-  src:url('/fonts/spectral-500-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Space Grotesk';
-  font-style:normal;
-  font-weight:300 700;
-  font-display:swap;
-  src:url('/fonts/space-grotesk-400-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Space Grotesk';
-  font-style:normal;
-  font-weight:300 700;
-  font-display:swap;
-  src:url('/fonts/space-grotesk-400-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:italic;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/space-mono-400-italic-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:italic;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/space-mono-400-italic-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/space-mono-400-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:normal;
-  font-weight:400;
-  font-display:swap;
-  src:url('/fonts/space-mono-400-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:normal;
-  font-weight:700;
-  font-display:swap;
-  src:url('/fonts/space-mono-700-latin-ext.woff2') format('woff2');
-  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-@font-face{
-  font-family:'Space Mono';
-  font-style:normal;
-  font-weight:700;
-  font-display:swap;
-  src:url('/fonts/space-mono-700-latin.woff2') format('woff2');
-  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 :root{
-  --bg:#0b0d11;
-  --bg-soft:#111520;
+  --bg:#0a0908;
+  --bg-soft:#12100d;
   --photo-gap:clamp(1rem,2.2vw,1.75rem);
   /* Photo widths as fractions of the 1200 content column, so a standalone
      photograph lands on the same edges as the ones inside the grids. */
@@ -156,101 +9,46 @@
   --pw-half:588px;
   --pw-3rd:384px;
   --photo-rhythm:clamp(1.8rem,3.4vw,2.8rem);
-  --panel:#161b26;
-  --paper:#eceae5;
-  --paper-soft:#a8adb8;
-  --muted:#7d8492;
-  --quiet:#5d6473;
-  --amber:#d8342b;
-  --amber-light:#f05043;
-  --amber-glow:rgba(216,52,43,.16);
+  --panel:#1a1613;
+  --paper:#f4f0e7;
+  --paper-soft:#b6ada0;
+  --muted:#8a8175;
+  --quiet:#645c52;
+  --amber:#cf3a26;
+  --amber-light:#ef5b3f;
+  --amber-glow:rgba(207,58,38,.16);
+  --brass:#c9a45c;
+  --brass-soft:rgba(201,164,92,.36);
   --rust:#8d3a30;
   --record:#dc2626;
   --record-glow:rgba(220,38,38,.55);
-  --line:rgba(236,234,229,.10);
-  --line-soft:rgba(236,234,229,.05);
+  --line:rgba(244,240,231,.11);
+  --line-soft:rgba(244,240,231,.055);
   --max:1200px;
   --gutter:clamp(1.2rem,4.4vw,3.6rem);
-  /* ---------------------------------------------------------------------
-     THE TYPE PALETTE. Three faces, one from each category, so the contrast
-     is structural and the page is recognisable before a word is read.
-
-       --serif   display   Spectral        headlines, pull quotes, the
-                                           mission, section titles. A text
-                                           serif rather than a display serif:
-                                           it holds Title Case at every size
-                                           without the tight high-contrast
-                                           fashion look. Set at 500.
-       --sans    reading   Space Grotesk   prose. Squared terminals and a
-                                           technical skeleton, so reading
-                                           copy belongs to the same world as
-                                           the labels instead of being
-                                           neutral filler.
-       --mono    data      Space Mono      labels, kickers, prices, specs,
-                                           quotes. The signature: it reads as
-                                           rack legend and patchbay strip,
-                                           which is this trade's own
-                                           typography.
-
-     The pair is the balance the brand is after: Spectral is the refined,
-     professional half, Space Mono is the 1960s technical-manual half, and
-     Space Grotesk is the hinge that lets them sit in one system.
-
-     Rules: display is always 500 and Title Case, with Title Case written
-     into the copy rather than forced by text-transform, because "Major"
-     must keep its capital and a transform would also capitalise "and".
-     Never set prose in the display face, and never set a label in anything
-     but mono, or the three roles stop being distinguishable.
-
-     A face swap invalidates every measure tuned to the previous face. The
-     ch-based max-widths below were re-derived for these faces; they are not
-     interchangeable with the old ones.
-     --------------------------------------------------------------------- */
-  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --serif:"Space Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
   --sans:"Space Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
   --mono:"Space Mono","IBM Plex Mono",monospace;
-  --display:var(--serif);
-  --fs-hero:clamp(2.2rem,5vw,3.6rem);
-  --fs-h1:clamp(1.75rem,3.2vw,2.4rem);
-  --fs-h2:clamp(1.35rem,2.2vw,1.85rem);
-  --fs-h3:clamp(1.05rem,1.6vw,1.28rem);
-  /* Prose is ONE size. The deck and the body of a section used to be a step
-     apart, which made every deck read as a second heading and restarted the
-     hierarchy halfway down the page. Lead, deck and body now resolve to the
-     same value; separation is carried by colour and measure instead.
-
-     The middle term is what actually applies across desktop widths, so it is
-     derived rather than guessed: 1.36vw hits ~19px at 1400 and reaches the
-     1.19rem ceiling around 1560. A smaller coefficient pins the value to its
-     floor at every realistic width, which is how this previously shipped at
-     16px while the tokens claimed 19. */
-  --fs-read:clamp(1.02rem,1.36vw,1.19rem);
-  --fs-lead:var(--fs-read);
-  --fs-deck:var(--fs-read);
-  --fs-body:var(--fs-read);
-  /* ---------------------------------------------------------------------
-     THE AUXILIARY TIER. Every sub-title, kicker, label, number, price and
-     spec is the same face, the same weight, the same size, the same
-     tracking. Rank inside the tier is carried by COLOUR ONLY:
-       --aux-hot  (red)  load-bearing, the thing to actually read
-       --aux-cool (grey) supporting
-     Nothing in this tier is ever made bigger to signal importance. That is
-     the entire point of it being a tier.
-     --------------------------------------------------------------------- */
-  --fs-aux:.875rem;
-  --aux-track:.13em;
-  --aux-hot:#f05043;
-  --aux-cool:#b3b8c2;
-  --fs-eyebrow:var(--fs-aux);
+  --fs-hero:clamp(2.4rem,5.6vw,4.1rem);
+  --fs-h1:clamp(1.85rem,3.4vw,2.6rem);
+  --fs-h2:clamp(1.4rem,2.3vw,1.95rem);
+  --fs-h3:clamp(1.05rem,1.6vw,1.3rem);
+  /* Prose has two roles only: a lead for the opening statement of a
+     section, and body for everything else. Anything else was drift. */
+  --fs-lead:clamp(1.02rem,1.3vw,1.14rem);
+  --fs-deck:var(--fs-lead);
+  --fs-eyebrow:.72rem;
+  --fs-body:1rem;
   --fs-sm:.86rem;
   --fs-fine:.74rem;
   color-scheme:dark;
 
 }
 
+
 *{box-sizing:border-box}
 html{background:var(--bg);scroll-behavior:smooth}
-body{margin:0;min-height:100vh;background:var(--bg);color:var(--paper);font-family:var(--sans);font-size:1rem;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--paper);font-family:var(--sans);font-size:14.5px;line-height:1.58;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");mix-blend-mode:soft-light}
 a{color:inherit;text-decoration:none}
 button,input,select,textarea{font:inherit}
@@ -262,10 +60,7 @@ img,svg,canvas{display:block;max-width:100%}
 .skip-link:focus{transform:none}
 .wrap{width:min(100%,var(--max));margin-inline:auto;padding-inline:var(--gutter)}
 .eyebrow,.kicker{font-family:var(--mono);font-size:var(--fs-eyebrow);line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;font-weight:500}
-/* The page-hero eyebrow deliberately has NO rule of its own. It used to set
-   its own weight and tracking, and being two classes deep it outranked the
-   auxiliary tier, so the one label at the top of every page was the one label
-   that did not match the others. Uniformity is the point of the tier. */
+.page-hero .eyebrow{font-size:var(--fs-eyebrow);letter-spacing:0.18em;font-weight:600}
 .eyebrow{color:var(--amber-light)}
 .kicker{color:var(--muted)}
 .kicker::before{content:"";width:1.6rem;height:1px;background:var(--amber);opacity:.8;margin-right:.6rem}
@@ -359,7 +154,7 @@ img,svg,canvas{display:block;max-width:100%}
   display:flex;align-items:center;justify-content:flex-end;pointer-events:none}
 .hero-panel img{width:100%;height:100%;object-fit:contain;object-position:right center}
 
-.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);font-family:var(--mono);font-size:.6rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;font-weight:500;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.9rem 1.6rem;border:1px solid var(--line);font-family:var(--mono);font-size:.6rem;line-height:1;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;transition:background .2s,border-color .2s,color .2s,transform .2s}
 .btn>*{position:relative;z-index:1}
 .btn::before{content:"";position:absolute;inset:0;background:var(--paper);transform:scaleY(0);transform-origin:bottom;transition:transform .34s cubic-bezier(.22,.61,.36,1);z-index:0}
 .btn:hover{transform:translateY(-1px);border-color:var(--paper);color:var(--bg)}
@@ -407,7 +202,7 @@ img,svg,canvas{display:block;max-width:100%}
 .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
 .work-card{background:var(--bg);padding:clamp(1.5rem,3vw,2.7rem);min-height:265px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
 .work-card::after{content:attr(data-year);position:absolute;right:-.02em;bottom:-.24em;font-family:var(--serif);font-size:clamp(7rem,17vw,14rem);line-height:1;color:rgba(238,236,231,.025);letter-spacing:-.08em;pointer-events:none}
-.work-card .artist{color:var(--amber-light);font-size:.7rem;letter-spacing:0.099em;text-transform:uppercase;font-weight:600}
+.work-card .artist{color:var(--amber-light);font-size:.7rem;letter-spacing:0.099em;text-transform:uppercase;font-weight:700}
 .work-card h3{font-family:var(--serif);font-size:var(--fs-h3);font-weight:400;line-height:1.04;letter-spacing:-.03em;margin:1.7rem 0 1.4rem;position:relative;z-index:1;max-width:12ch}
 .work-card .role{color:var(--muted);font-size:var(--fs-body);position:relative;z-index:1;max-width:36ch}
 .filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:2rem}
@@ -527,7 +322,7 @@ img,svg,canvas{display:block;max-width:100%}
 .service-row .service-copy{color:var(--paper-soft);max-width:52ch;font-size:var(--fs-body)}
 .service-row .service-copy p{margin:0 0 .8rem}
 .service-price{text-align:right;color:var(--amber-light);font-size:var(--fs-body);font-weight:600}
-.service-price small{display:block;color:var(--quiet);font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase;font-weight:600;margin-top:.35rem}
+.service-price small{display:block;color:var(--quiet);font-size:.62rem;letter-spacing:0.077em;text-transform:uppercase;font-weight:700;margin-top:.35rem}
 .rate-panel{margin-top:clamp(3rem,6vw,5rem);background:var(--paper);color:var(--bg);padding:clamp(2rem,6vw,5rem);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(2rem,6vw,6rem)}
 .rate-panel h2{font-family:var(--serif);font-size:var(--fs-h2);font-weight:400;line-height:1;letter-spacing:-.04em;margin:0}
 .rate-panel p{font-size:var(--fs-body);max-width:54ch;margin:0;color:#292524}
@@ -543,7 +338,7 @@ img,svg,canvas{display:block;max-width:100%}
 .form{display:grid;gap:1.1rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem}
 .field{display:grid;gap:.48rem}
-.field label{font-size:.62rem;letter-spacing:0.088em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.field label{font-size:.62rem;letter-spacing:0.088em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .field input,.field select,.field textarea{width:100%;border:1px solid var(--line);border-radius:0;background:rgba(255,255,255,.025);color:var(--paper);padding:1rem 1.05rem;min-height:52px;appearance:none;-webkit-appearance:none}
 .field select{background-image:linear-gradient(45deg,transparent 50%,var(--amber) 50%),linear-gradient(135deg,var(--amber) 50%,transparent 50%);background-position:calc(100% - 19px) 22px,calc(100% - 14px) 22px;background-size:5px 5px,5px 5px;background-repeat:no-repeat;padding-right:2.7rem}
 .field textarea{min-height:180px;resize:vertical}
@@ -553,7 +348,7 @@ img,svg,canvas{display:block;max-width:100%}
    collapsed dropdown hides two thirds of the question being asked. */
 .choice-set{border:0;padding:0;margin:0;min-width:0}
 .choice-set legend{padding:0;margin-bottom:.48rem;font-size:.62rem;letter-spacing:0.088em;
-  text-transform:uppercase;color:var(--muted);font-weight:600}
+  text-transform:uppercase;color:var(--muted);font-weight:700}
 .choice-group{display:grid;gap:.55rem}
 .choice{display:grid;grid-template-columns:auto 1fr;gap:.75rem;align-items:start;
   border:1px solid var(--line);padding:.9rem 1.05rem;cursor:pointer;transition:border-color .18s,background .18s}
@@ -649,19 +444,16 @@ img,svg,canvas{display:block;max-width:100%}
 
 /* Content the owner still needs to supply — visibly flagged, easy to grep for "needs-content" */
 .needs-content{display:block;margin-top:1.25rem;padding:.9rem 1.1rem;border:1px dashed rgba(200,161,90,.45);background:rgba(200,161,90,.12);color:var(--paper-soft);font-size:.82rem;line-height:1.6}
-.needs-content strong{display:block;color:var(--amber-light);font-size:.62rem;letter-spacing:0.099em;text-transform:uppercase;margin-bottom:.35rem;font-weight:600}
+.needs-content strong{display:block;color:var(--amber-light);font-size:.62rem;letter-spacing:0.099em;text-transform:uppercase;margin-bottom:.35rem;font-weight:700}
 
-/* Typography deliberately does not live here any more. It was being set in
-   three separate top-level places — here, the component rules above, and a
-   block at the foot of the file — all declaring face, weight and tracking
-   for the same headings. Because they were all top-level selectors, the last
-   one silently won and the other two were dead text, which is why headings
-   never matched the rules sitting next to them. It is all in the single
-   TYPE SYSTEM block at the end of this file now.
-
-   Every declaration that used to be here was already being overridden by
-   that block, except the two control/label lines, which moved into it
-   unchanged. This consolidation changes no rendered pixel. */
+/* ---- Studio typography: sharp display, lighter titles ---- */
+.display,.page-title,.section-title,.capability h3,.audience-card h3,
+.service-row h2,.cta-section h2,.work-card h3,
+.brand strong,.tools-details summary,.footer-brand {
+  font-weight:400;letter-spacing:-.03em}
+.display,.page-title{letter-spacing:-.04em;line-height:.92}
+.eyebrow,.kicker{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
+.btn,.desktop-nav a,.menu-close,.menu-button{font-family:var(--mono);font-weight:500;letter-spacing:0.12em}
 
 /* ---- Menu reveal: panel wipe + staggered links ---- */
 .menu-dialog{background:linear-gradient(150deg,var(--bg-soft) 0%,var(--bg) 55%,var(--panel) 100%)}
@@ -873,94 +665,9 @@ img,svg,canvas{display:block;max-width:100%}
 /* Audit L1: this used to carry its own padding and a fainter divider than
    .section, so the home page ran to a different rhythm than every other
    page. Same measure, same rule weight. */
-/* One section system. Home used numbered .rack-unit blocks with alternating
-   grounds while every interior page used a flat .section, so Home read as
-   composed and the rest read as documents. Interior pages now use the same
-   units, and .unit-soft is the alternation: the ground change is what gives a
-   long page its rests, rather than another hairline rule. */
-.unit-soft{background:var(--bg-soft)}
-.unit-lede{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
-  margin:0 0 clamp(1.8rem,3.4vw,2.6rem);max-width:58ch}
-.unit-prose p{font-size:var(--fs-lead);line-height:1.68;color:var(--paper-soft);
-  margin:0 0 1.15rem;max-width:66ch}
-.unit-prose p:last-child{margin-bottom:0}
-/* The line the section turns on. Sized up and set in the display face so the
-   root/third pun lands as the payoff rather than passing as another sentence. */
-.unit-prose p.unit-turn{font-family:var(--serif);font-size:var(--fs-h3);
-  line-height:1.3;letter-spacing:-.02em;color:var(--paper);max-width:34ch;
-  margin:1.7rem 0 1.7rem}
-.unit-prose + .plan-pair{margin-top:clamp(1.8rem,3.4vw,2.6rem)}
-
-/* The quote is the page's one display moment: it earns near-hero scale because
-   it does the arguing three paragraphs would otherwise have to. */
-.sagan{margin:0 0 clamp(1.8rem,3.4vw,2.6rem);padding-left:clamp(1rem,1.8vw,1.5rem);
-  border-left:2px solid var(--amber)}
-.sagan blockquote{margin:0}
-.sagan blockquote p{font-family:var(--serif);font-weight:400;
-  font-size:clamp(1.5rem,3.4vw,2.35rem);line-height:1.16;letter-spacing:-.03em;
-  color:var(--paper);margin:0;max-width:22ch;text-wrap:balance}
-/* Attribution stays small but must not share the mono uppercase treatment the
-   section labels use, or the two read as the same kind of thing. Serif italic,
-   sentence case: clearly a credit rather than a label. */
-.sagan figcaption{font-family:var(--serif);font-style:italic;font-size:.9rem;
-  letter-spacing:0;text-transform:none;color:var(--muted);margin-top:.9rem}
-
-/* Three modes, one choice. Side by side on desktop so the closed state reads
-   as a fork rather than a list to work through. */
-.mode-grid{display:grid;gap:clamp(1rem,2vw,1.4rem)}
-@media(min-width:900px){.mode-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start}}
-.mode{background:var(--bg);border:1px solid var(--line);
-  border-top:2px solid var(--amber-light);padding:clamp(1.2rem,2.4vw,1.7rem)}
-.unit-soft .mode{background:var(--panel)}
-.mode h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
-  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .55rem}
-.mode > p{font-size:var(--fs-sm);line-height:1.6;color:var(--paper-soft);margin:0 0 1rem}
-.mode > p em{font-style:normal;color:var(--paper)}
-.mode .path-fold{margin:0}
-
-/* End-of-page handoff. Three pages used to simply stop and two ended with the
-   same CTA, so the only choices were keep scrolling or convert. Every page now
-   offers two exits: the next step in the reading order, and the register for
-   whoever is already ready. The next-step card is the wider of the two because
-   continuing is the more common intent. */
-.page-next{border-top:1px solid var(--line);background:var(--bg-soft);
-  padding:clamp(2.4rem,4.6vw,3.6rem) 0}
-.next-grid{display:grid;gap:clamp(1.4rem,3vw,2.4rem);align-items:center}
-@media(min-width:820px){.next-grid{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}}
-.next-card{display:block;text-decoration:none;color:inherit;
-  border:1px solid var(--line);border-radius:2px;
-  padding:clamp(1.1rem,2.2vw,1.5rem);background:var(--panel)}
-.next-card:hover,.next-card:focus-visible{border-color:var(--amber)}
-.next-kicker{display:block;font-family:var(--mono);font-size:.58rem;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
-.next-card h3{font-family:var(--serif);font-weight:400;font-size:var(--fs-h3);
-  line-height:1.2;letter-spacing:-.02em;color:var(--paper);margin:0 0 .35rem}
-.next-card p{font-size:var(--fs-sm);line-height:1.55;color:var(--paper-soft);
-  margin:0;max-width:52ch}
-.next-cta p{font-size:var(--fs-sm);color:var(--muted);margin:0 0 .7rem;max-width:34ch}
-
-/* The mission band. Sits directly under the hero, before unit 01, and is the
-   only place on the site that states the whole position in one block. Given a
-   lifted ground rather than a rule so it reads as a statement, not a section:
-   the amber rule is already the emphasis-line device elsewhere and repeating
-   it here would make two devices out of one. */
-.mission-band{background:var(--bg-soft);border-bottom:1px solid var(--line);
-  padding:clamp(2.8rem,5.4vw,4.6rem) 0}
-.mission-why{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
-  margin:0 0 1.35rem;max-width:60ch}
-.mission-line{font-family:var(--serif);font-size:var(--fs-h2);line-height:1.24;
-  letter-spacing:-.02em;color:var(--paper);margin:0 0 1.35rem;max-width:44ch;
-  text-wrap:balance}
-.mission-open{font-size:var(--fs-lead);line-height:1.6;color:var(--paper-soft);
-  margin:0;max-width:56ch}
-/* The router's closing condition: every path lands on the same first step. */
-.router-note{margin-top:clamp(1.6rem,3vw,2.4rem)}
-.router-note p{font-size:var(--fs-sm);line-height:1.6;color:var(--muted);
-  margin:0;max-width:62ch}
-
 .rack-unit{padding:clamp(3.4rem,6.4vw,6rem) 0;border-bottom:1px solid var(--line);position:relative}
-.unit-label{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:1.25rem}
-.unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem;font-weight:600;letter-spacing:.1em}
+.unit-label{display:flex;align-items:center;gap:.7rem;font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:1.1rem}
+.unit-no{color:#0b0d11;background:var(--amber);padding:.22rem .42rem;font-weight:700;letter-spacing:.1em}
 .unit-title{font-family:var(--serif);font-weight:400;font-size:var(--fs-h2);letter-spacing:-.03em;line-height:1.06;margin:0 0 clamp(1.6rem,3vw,2.4rem);color:var(--paper);max-width:22ch}
 .unit-title.small-title{font-size:var(--fs-fine);letter-spacing:.04em;text-transform:uppercase;font-family:var(--mono);font-weight:500;color:var(--muted)}
 
@@ -1122,29 +829,6 @@ img,svg,canvas{display:block;max-width:100%}
 .photo-set figcaption{padding:.8rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
 .photo-single{margin:clamp(2rem,4vw,3.25rem) 0 0;background:var(--bg-soft);border:1px solid var(--line)}
 .photo-single img{display:block;width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center center;filter:saturate(.9) contrast(1.03)}
-/* A portrait source must not be forced into the 16/9 frame above: cover would
-   crop away most of a tall photograph, which is the opposite of choosing the
-   crop deliberately. The frame takes the image's own ratio and the figure is
-   held to a width where a tall photo does not swallow the section. */
-.photo-single.portrait{max-width:520px}
-.photo-single.portrait img{aspect-ratio:auto}
-
-/* An expositional block: a photograph beside running copy, for the long-form
-   entries Learn is built around. The photo is a fixed, modest column so a tall
-   source cannot set the height of the whole section, and the prose keeps a
-   real reading measure next to it. */
-.expo{display:grid;grid-template-columns:minmax(0,clamp(240px,26vw,380px)) minmax(0,1fr);
-  gap:clamp(1.6rem,3.4vw,3rem);align-items:start;
-  margin:clamp(1.8rem,3.4vw,2.6rem) 0 0}
-.expo figure{margin:0;background:var(--bg-soft);border:1px solid var(--line)}
-.expo figure img{display:block;width:100%;height:auto;filter:saturate(.9) contrast(1.03)}
-.expo .expo-copy{max-width:62ch}
-.expo .expo-copy p{margin:0 0 1.05rem}
-.expo .expo-copy p:last-child{margin-bottom:0}
-@media(max-width:860px){
-  .expo{grid-template-columns:1fr}
-  .expo figure{max-width:420px}
-}
 .photo-single figcaption{padding:.85rem 1rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:var(--quiet)}
 @media(max-width:900px){.photo-set.four{grid-template-columns:repeat(2,minmax(0,1fr))}.photo-set.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.photo-set.two,.photo-set.three,.photo-set.four{grid-template-columns:1fr}.photo-set img,.photo-set.tall img,.photo-set.short img{aspect-ratio:3/2}}
@@ -1153,30 +837,9 @@ img,svg,canvas{display:block;max-width:100%}
   .hero-rack-inner{grid-template-columns:1fr}
   .hero-panel{order:-1}}
 
-/* Per-photo focal points -------------------------------------------------
-   Tall portrait sources cropped into short wide bands need an explicit
-   vertical anchor, otherwise the subject falls outside the frame. Matched on
-   the CDN filename, which is stable per asset. */
-img[src$="/room-kid.jpg"]{object-position:center 34%}
-img[src$="/room-living.jpg"]{object-position:center 30%}
-img[src$="/drums-overhead.jpg"]{object-position:center 50%}
-img[src$="/guitars.jpg"]{object-position:center 58%}
-img[src$="/guitar-amp.jpg"]{object-position:center 48%}
-img[src$="/console-working.jpg"]{object-position:center 26%}
-img[src$="/room-halfbuilt.jpg"]{object-position:center 48%}
-img[src$="/studio-racks.jpg"]{object-position:center 42%}
-img[src$="/studio-drums.jpg"]{object-position:center 52%}
-img[src$="/session-bw.jpg"]{object-position:center 38%}
-img[src$="/hit-factory.jpg"]{object-position:center 44%}
-img[src$="/mastering-list.jpg"]{object-position:center 50%}
-img[src$="/moonlight-bass.jpg"]{object-position:center 40%}
-img[src$="/console-large.jpg"]{object-position:center 45%}
-img[src$="/session-redlit.jpg"]{object-position:center 45%}
-img[src$="/session-redlit-2.jpg"]{object-position:center 45%}
-img[src$="/archive-console-pair.jpg"]{object-position:center 40%}
-img[src$="/archive-crew.jpg"]{object-position:center 40%}
-img[src$="/archive-group.jpg"]{object-position:center 35%}
-img[src$="/control-room-red.jpg"]{object-position:center 45%}
+/* Per-photo focal points live in the photo registry (src/lib/photos.ts), as
+   data on the photograph, and arrive here as an inline object-position
+   stamped by render-tokens. Do not add per-photo rules to this file. */
 
 /* Responsive focal points ------------------------------------------------ */
 @media(max-width:700px){
@@ -1189,117 +852,35 @@ img[src$="/control-room-red.jpg"]{object-position:center 45%}
   .edu-photo-band img{aspect-ratio:16/9;max-height:none}
 }
 
-/* =======================================================================
-   THE TYPE SYSTEM — the only place that sets face, weight and tracking.
-   -----------------------------------------------------------------------
-   Sizes still live with their components, because size is layout. Face,
-   weight, tracking and the auxiliary colour rank live here, because those
-   are identity and must not drift from page to page.
-   ======================================================================= */
-
-/* ---- Display: Spectral 500 -------------------------------------------
-   Spectral is a text serif, so it wants far less negative tracking than the
-   tight display serif it replaced. Carrying the old -.03em over would have
-   jammed it. Title Case is written into the copy, not forced here. */
+/* ---- Display typeface: squared industrial, matched to the rack banner ---- */
+:root{--display:"Epilogue","Inter",sans-serif}
 .display,.hero-title,.section-title,.cta-section h2,.page-title,
-.work-card h3,.work-card::after,.terminology-panel h2,.step h3,.lens h3,
-.closing-line,.pull-quote p,.freedom-quote,.audience-card h3,.service-row h2,
-.rate-panel h2,.unit-title,.entry h3,.capability h3,.contact-side h2,
-.rack-row h3,.tools-details summary,.brand strong,.footer-brand,
-.artist-index span,.plain-title,.plan-part h3,.paths-head h2,.path h4,
-.closing-note h2,.wwa-title,.mode h3,.next-card h3,.mission-line,.why-line,
-.unit-prose p.unit-turn{
-  font-family:var(--display);font-weight:500;letter-spacing:-.01em
+.work-card h3,.terminology-panel h2,.step h3,.lens h3,.closing-line,.pull-quote p,
+.audience-card h3,.service-row h2,.rate-panel h2,.work-card::after{
+  font-family:var(--display);font-weight:600;letter-spacing:-.012em
 }
-.artist-index span,.tools-details summary{font-weight:500}
-/* .display must set its line-height HERE, after .hero-title: the hero h1
-   carries both classes at equal specificity, so source order is what decides
-   between them. See the commit that merged these blocks. */
-.display{line-height:.96}
-.page-title{letter-spacing:-.012em;line-height:1.06}
-.cta-section h2{letter-spacing:-.014em;line-height:1}
-.hero-title{letter-spacing:-.014em;line-height:1.02}
-.hero-title em{font-style:italic;font-weight:500}
+.page-title{letter-spacing:-.022em;line-height:1.04}
+.cta-section h2{letter-spacing:-.02em;line-height:.94}
+.hero-title em{font-style:italic;font-weight:600}
 
 @media(max-width:660px){
-  .page-title{letter-spacing:-.004em;line-height:1.1}
-  .display,.hero-title{letter-spacing:-.004em;line-height:1.06}
+  .page-title{letter-spacing:-.01em;line-height:1.08}
+  .display,.hero-title{letter-spacing:-.005em;line-height:1.02}
   .section-title,.cta-section h2,.terminology-panel h2,
   .rate-panel h2,.work-card h3,.audience-card h3,.service-row h2{
-    letter-spacing:-.004em;line-height:1.08}
-  .unit-title{letter-spacing:-.004em;line-height:1.08}
+    letter-spacing:-.005em;line-height:1.04
+  }}
+
+.page-deck{font-family:var(--sans);font-weight:400;letter-spacing:0;line-height:1.55}
+.unit-title,.entry h3,.capability h3,.contact-side h2,.rack-row h3,.tools-details summary,
+.brand strong,.footer-brand,.artist-index span{font-family:var(--display);font-weight:600;letter-spacing:-.012em}
+.artist-index span,.tools-details summary{font-weight:500}
+@media(max-width:660px){
+  .unit-title{letter-spacing:-.005em;line-height:1.06}
   .stance-lead{letter-spacing:0;line-height:1.28}}
 
-/* ---- Reading: Space Grotesk 400 -------------------------------------- */
-.page-deck,.plain-lead,.hero-deck,.section-copy,.intro-copy,.person-copy,.expo-copy,
-.unit-prose p,.unit-lede,.service-row .service-copy,.rate-panel p,
-.mode p,.next-card p,.mission-why{
-  font-family:var(--sans);font-weight:400;letter-spacing:0
-}
-.page-deck{line-height:1.6}
+/* Menu: clean sans, calm scale */
 .menu-links a{font-family:var(--sans);font-weight:500;letter-spacing:-.01em;line-height:1.2}
-
-/* ---- The auxiliary tier: Space Mono 700 ------------------------------
-   One face, one weight, one size, one tracking. NONE of these is bigger
-   than any other. Rank is colour: red is load-bearing, grey is supporting.
-   If something here needs to matter more, it turns red. It does not grow. */
-.eyebrow,.kicker,.unit-label,.next-kicker,.service-group h2,.plan-part .plan-mark,
-.pull-quote cite,.service-price,.brand span,.hero-eyebrow,.path-fold summary,
-.fold summary,.rack-row .no,.wwa-no,.unit-title.small-title,.menu-links a span,
-.unit-no{
-  font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
-  letter-spacing:var(--aux-track);text-transform:uppercase;line-height:1.3
-}
-/* Load-bearing. */
-.eyebrow,.next-kicker,.service-group h2,.plan-part .plan-mark,
-.path-fold summary,.fold summary,.service-price{color:var(--aux-hot)}
-/* Supporting. */
-.kicker,.unit-label,.pull-quote cite,.brand span,.hero-eyebrow,
-.menu-links a span{color:var(--aux-cool)}
-/* The qualifier under a price is the tier's one exception: it modifies the
-   number above it rather than being a peer of it. */
-.service-price small{display:block;margin-top:.4rem;font-size:var(--fs-fine);
-  letter-spacing:.08em;color:var(--muted);text-transform:none;font-weight:400}
-
-/* Controls are part of the tier, at the tier's size. They had drifted to
-   .6rem (9.6px) for buttons and .62rem for nav while every content label sat
-   at 14px, which is the same uniformity break the tier exists to prevent —
-   and 9.6px is too small for a button label regardless. Tracking stays wider
-   because these are isolated words rather than labels beside content. */
-.btn,.desktop-nav a,.menu-close,.menu-button{
-  font-family:var(--mono);font-weight:700;font-size:var(--fs-aux);
-  letter-spacing:.12em;text-transform:uppercase}
-
-/* ---- Quotes: Space Mono ----------------------------------------------
-   A quote is evidence, not a headline: it sits BELOW the heading it answers
-   in rank. This was backwards, with the Sagan line set larger than the
-   question above it. */
-.sagan blockquote p{font-family:var(--mono);font-weight:400;
-  font-size:clamp(1rem,1.15vw,1.13rem);line-height:1.6;letter-spacing:0;
-  max-width:46ch}
-.sagan figcaption{font-family:var(--serif);font-style:italic;font-weight:400;
-  font-size:.92rem;letter-spacing:0;text-transform:none;color:var(--muted)}
-
-/* Photo captions are sentences, not labels, so they stay out of the aux
-   tier: uppercasing them would be uppercasing prose. */
-.lead-photo figcaption,.inline-photo figcaption,.archive-strip figcaption,
-.credit-photo figcaption,.award-plaque figcaption,.photo-set figcaption,
-.photo-single figcaption,.anywhere-grid figcaption,.person-thumb figcaption{
-  font-family:var(--mono);font-weight:400;font-size:var(--fs-fine);
-  letter-spacing:.02em;text-transform:none;color:var(--muted)}
-
-/* ---- Measures, re-derived for these faces ----------------------------
-   A ch is the width of "0" in the current face, so every ch-based max-width
-   changed meaning when the faces changed. Spectral's ch is narrower than the
-   old display serif's, which left headings wrapping into tall stacks in the
-   left third of a wide screen. These are set for the faces above. */
-.unit-title{max-width:30ch}
-.mission-line,.why-line{max-width:32ch}
-.page-title{max-width:26ch}
-@media(min-width:1100px){
-  .unit-title{max-width:34ch}
-}
-
 /* ---- Line-break quality: balanced headings, pretty paragraphs ---- */
 h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
 .cta-section h2,.terminology-panel h2,.work-card h3,.audience-card h3{text-wrap:balance}
@@ -1312,6 +893,114 @@ h1,h2,h3,h4,.display,.hero-title,.page-title,.section-title,.plain-title,
   .closing-line{max-width:32ch}
 }
 
-/* Expositional copy is prose, so it takes the reading face and size like any
-   other prose on the site. */
-.expo .expo-copy{font-size:var(--fs-read);line-height:1.68;color:var(--paper-soft)}
+/* =====================================================================
+   Creative direction: "Console Room"
+   A warm-carbon, hand-set-serif treatment drawn from the site's own
+   subject matter — tape, brass meter lamps, rack rails, printed paper.
+   Layered on top of the existing structure so markup, routes and
+   behaviour are untouched.
+   ===================================================================== */
+
+/* Warm the room: a soft lamp falloff behind everything, plus the existing
+   grain now reading as film rather than TV static. */
+body{font-size:15px;letter-spacing:.002em}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(201,164,92,.07), transparent 60%),
+    radial-gradient(100% 70% at 50% 115%, rgba(207,58,38,.05), transparent 65%);
+  mix-blend-mode:screen}
+main,.site-header,.site-footer{position:relative;z-index:2}
+
+/* Display type: optical-size aware, set tight and warm. */
+.display,.hero-title,.page-title,h1,h2,h3,h4{font-optical-sizing:auto}
+.display,.hero-title{font-variation-settings:"opsz" 120}
+.hero-title{letter-spacing:-.028em;line-height:.96}
+.hero-title em{font-style:italic;color:var(--amber-light);font-variation-settings:"opsz" 144}
+.plain-title,.unit-title,.closing-line,.pull-quote p,.freedom-quote{font-variation-settings:"opsz" 72}
+
+/* Eyebrows and unit numbers pick up the brass lamp instead of red, so red
+   stays reserved for the record light: links, live states, the CTA. */
+.eyebrow{color:var(--brass)}
+.hero-eyebrow{color:var(--brass);letter-spacing:.18em}
+.hero-eyebrow span:not(:last-child)::after{color:var(--brass-soft)}
+.unit-no,.entry .tiny,.rack-row .no{color:var(--brass)}
+.kicker::before{background:var(--brass)}
+.plan-part .plan-mark{color:var(--brass)}
+.path-fold summary{color:var(--brass)}
+
+/* Rack rails: a hairline brass tick at the head of each numbered unit. */
+.unit-label{position:relative}
+.unit-label::before{content:"";position:absolute;left:0;top:-.9rem;width:2.4rem;height:2px;
+  background:linear-gradient(90deg,var(--brass),transparent)}
+
+/* Header: thinner, quieter, with a lit rail once you leave the top. */
+.site-header{background:linear-gradient(180deg,rgba(10,9,8,.94),rgba(10,9,8,.62) 60%,transparent)}
+.site-header.scrolled{background:rgba(10,9,8,.9);border-bottom:1px solid var(--brass-soft)}
+.brand strong{letter-spacing:-.026em;font-variation-settings:"opsz" 96}
+.brand span{color:var(--brass);opacity:.85}
+.desktop-nav a::after{background:var(--brass)}
+.desktop-nav .project-link{border-color:var(--brass-soft);color:var(--paper)}
+.desktop-nav .project-link:hover,.desktop-nav .project-link.active,
+.desktop-nav .project-link[aria-current="page"]{background:var(--amber);border-color:var(--amber);color:#0a0908}
+
+/* Hero: the rack panel gets warmer light and a printed edge. */
+.hero-rack{background:linear-gradient(180deg,#12100d,var(--bg) 72%)}
+.hero-rack::before{background:repeating-linear-gradient(0deg,rgba(244,240,231,.03) 0 1px,transparent 1px 8px);opacity:.45}
+.hero-panel img{filter:saturate(.94) contrast(1.06) sepia(.06)}
+
+/* Buttons: letterpressed, brass-edged secondary, red record-light primary. */
+.btn{border-color:var(--brass-soft)}
+.btn.primary{background:var(--amber);border-color:var(--amber);color:#0a0908;
+  box-shadow:0 10px 30px -14px rgba(207,58,38,.85)}
+.btn:not(.primary):hover{border-color:var(--brass)}
+
+/* Photography: printed on warm stock, framed, and it breathes on hover. */
+figure img{transition:filter .5s ease,transform .6s cubic-bezier(.22,.61,.36,1)}
+.lead-photo,.inline-photo,.studio-hero-photo,.studio-gallery figure,
+.anywhere-grid figure,.archive-strip figure,.credit-photo,.award-plaque{
+  overflow:hidden;box-shadow:0 24px 60px -34px rgba(0,0,0,.9)}
+.lead-photo img,.inline-photo img,.studio-hero-photo img,.studio-gallery img,
+.anywhere-grid img,.archive-strip img{filter:saturate(.9) contrast(1.06) sepia(.05)}
+.lead-photo:hover img,.inline-photo:hover img,.studio-hero-photo:hover img,
+.studio-gallery figure:hover img,.anywhere-grid figure:hover img,
+.archive-strip figure:hover img{filter:saturate(1) contrast(1.04) sepia(0);transform:scale(1.014)}
+figcaption{font-family:var(--mono)}
+
+/* Cards and rows: the ghosted year warms, hover lights the rail. */
+.work-card::after{color:rgba(201,164,92,.045)}
+.work-card .artist{color:var(--brass);letter-spacing:.11em}
+.work-card{transition:background .25s}
+.work-card:hover{background:var(--bg-soft)}
+.rack-row:hover{background:linear-gradient(90deg,rgba(201,164,92,.09),transparent 70%)}
+.rack-row:hover h3{color:var(--brass)}
+.path{border-top-color:var(--brass)}
+.filter-bar button.active,.filter-bar button:hover{background:var(--brass);border-color:var(--brass);color:#0a0908}
+.artist-index span{font-variation-settings:"opsz" 24}
+
+/* Quotes: the rule reads as a brass edge, the type as set text. */
+.pull-quote,.freedom-quote{border-left-color:var(--brass)}
+.closing-note{border-top-color:var(--brass-soft)}
+.terminology-panel{background:linear-gradient(120deg,rgba(201,164,92,.12),rgba(207,58,38,.07))}
+
+@media(prefers-reduced-motion:reduce){
+  figure img{transition:none}
+  .lead-photo:hover img,.inline-photo:hover img,.studio-hero-photo:hover img,
+  .studio-gallery figure:hover img,.anywhere-grid figure:hover img,
+  .archive-strip figure:hover img{transform:none}
+}
+
+/* The display face is the hand-set serif now, so the two heading systems
+   (--display and --serif) resolve to one voice. Weights come down a step:
+   Fraunces carries authority without needing semibold at large sizes. */
+:root{--display:"Fraunces","Iowan Old Style",Georgia,serif}
+.display,.hero-title,.section-title,.cta-section h2,.page-title,
+.work-card h3,.terminology-panel h2,.step h3,.lens h3,.closing-line,.pull-quote p,
+.audience-card h3,.service-row h2,.rate-panel h2{font-weight:500;letter-spacing:-.02em}
+.hero-title{font-weight:500}
+.hero-title em{font-weight:500;font-style:italic}
+.unit-title,.entry h3,.capability h3,.contact-side h2,.rack-row h3,
+.brand strong,.footer-brand{font-weight:500;letter-spacing:-.018em}
+.tools-details summary,.artist-index span{font-weight:400}
+.work-card::after{font-family:var(--display);font-weight:500}
+/* Menu and decks stay grotesque for contrast against the serif. */
+.menu-links a,.page-deck{font-family:var(--sans)}
