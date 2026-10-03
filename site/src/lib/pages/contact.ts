@@ -6,7 +6,7 @@ export default `
     </div></div></section>
 <section class="section">
   <div class="wrap contact-grid">
-    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the problem, not the booking language.</h2><p>A rough mix, a voice memo, a photo of the room, or a few sentences is plenty. The questions below just give us enough to answer properly instead of guessing.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment &middot; Remote work available</div><p class="contact-aside-note">Not a project? Questions, press, or just talking shop, the same address works.</p><div class="terms-out-loud"><h3>The terms, out loud.</h3><p>Nothing here is sponsored. No affiliate links, no gear commissions, no partner codes. When a tool gets recommended, it is because it is right for your song, and the recommendation costs you the same either way: nothing.</p><p>The paid work is mixing, production, studio systems and repair, and one-on-one teaching, and independent budgets get met where they are.</p><p>Every message gets a reply.</p></div></aside>
+    <aside class="contact-side reveal"><div class="kicker">Upper Level Music</div><h2>Start with the problem, not the booking language.</h2><p>A rough mix, a voice memo, a photo of the room, or a few sentences is plenty. The questions below just give us enough to answer properly instead of guessing.</p><div class="contact-direct"><a href="mailto:edwardlidow@upperlevelmusic.com">edwardlidow@upperlevelmusic.com</a><br>Columbia, South Carolina<br>By appointment &middot; Remote work available</div><p class="contact-aside-note">Not a project? Questions, press, or just talking shop, the same address works.</p></aside>
     <form class="form reveal" id="tell-us" data-project-form>
       <p class="booth-from" data-booth-from hidden></p>
       <div class="form-row"><div class="field"><label for="name">Name *</label><input id="name" name="name" required autocomplete="name"></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div></div>
@@ -16,7 +16,7 @@ export default `
       <div class="urgent-box">
         <label class="urgent-check" for="expedited"><input type="checkbox" id="expedited" name="expedited" value="yes"><span>I&rsquo;m in the middle of a project and need expedited assistance.</span></label>
         <div class="field"><label for="situation">If so, what is the situation, and what have you already tried?</label><textarea id="situation" name="situation" rows="4" placeholder="What is happening, when you need it by, and what you have already ruled out."></textarea></div>
-        <p class="urgent-terms">Marked messages notify me directly and I will get back to you shortly. Expedited troubleshooting carries an additional fee, which is credited back against your next completed project by appointment.</p>
+        <p class="urgent-terms">Marked messages notify the team directly and we will get back to you shortly. Expedited troubleshooting carries an additional fee, which is credited back against your next completed project by appointment.</p>
       </div>
 
       <div class="field"><label for="send">If you have a link to something you&rsquo;d like us to look at or hear, please provide it here</label><input id="send" name="send" placeholder="Drive, Dropbox, WeTransfer, a private streaming link, a photo of the room"></div>

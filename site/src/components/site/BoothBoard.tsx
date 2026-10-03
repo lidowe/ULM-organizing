@@ -102,8 +102,8 @@ export function BoothBoard() {
             So let&rsquo;s get started and help those who need real solutions, not marketing,
             sponsored content or generic AI responses that never seem to fix <em>your</em> issue.
             There is no one answer in music, so we provide the service you need, at any scale, from
-            anywhere, and it&rsquo;s by listening to the artist first that we hear the song and fill
-            in the gap.
+            anywhere, and it&rsquo;s by listening to the artist first that lets us hear the song and
+            fill in the gap.
           </p>
           <p className="booths-pointer">
             Open the booth closest to your situation to see what it covers.

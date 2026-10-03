@@ -123,6 +123,52 @@ export function initSiteBehaviors(): () => void {
   window.addEventListener("hashchange", openFoldFromHash);
   cleanups.push(() => window.removeEventListener("hashchange", openFoldFromHash));
 
+  // Newsletter sign-up (every page): posts to /api/public/subscribe, falls back to an email draft.
+  document.querySelectorAll<HTMLFormElement>("[data-newsletter-form]").forEach((nf) => {
+    const status = nf.querySelector<HTMLElement>("[data-newsletter-status]");
+    const say = (msg: string) => {
+      if (status) status.textContent = msg;
+    };
+    const onNewsletter = (e: SubmitEvent) => {
+      e.preventDefault();
+      const email = (nf.elements.namedItem("email") as HTMLInputElement | null)?.value.trim() ?? "";
+      const company = (nf.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        say("Please enter a valid email address.");
+        return;
+      }
+      say("Subscribing...");
+      void fetch("/api/public/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, company }),
+      })
+        .then(async (res) => {
+          const data = (await res.json().catch(() => ({}))) as { ok?: boolean };
+          if (res.ok && data.ok) {
+            nf.reset();
+            say("Thank you, you're on the list.");
+            return;
+          }
+          if (res.status === 400) {
+            say("Please enter a valid email address.");
+            return;
+          }
+          say(
+            "Opening an email to subscribe you. If nothing opens, write to edwardlidow@upperlevelmusic.com.",
+          );
+          window.location.href =
+            "mailto:edwardlidow@upperlevelmusic.com?subject=" +
+            encodeURIComponent("Newsletter signup") +
+            "&body=" +
+            encodeURIComponent("Please add " + email + " to the newsletter.");
+        })
+        .catch(() => say("Something went wrong. Please try again."));
+    };
+    nf.addEventListener("submit", onNewsletter);
+    cleanups.push(() => nf.removeEventListener("submit", onNewsletter));
+  });
+
   const filterButtons = [...document.querySelectorAll<HTMLElement>("[data-filter]")];
   const workCards = [...document.querySelectorAll<HTMLElement>("[data-work-role]")];
   filterButtons.forEach((btn) => {
