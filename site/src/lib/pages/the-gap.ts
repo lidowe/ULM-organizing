@@ -65,7 +65,7 @@ export default `
     <p>The pivot left many creators feeling alone, forced to scream to be heard. Upper Level Music exists to close that divide &mdash; for the performer, writer, producer, engineer, audiophile, and the student too. Whether you identify with one title or many, you are an artist given an endless palette but no canvas.</p>
     <p>A broken chain doesn't repair itself. It gets patched, deliberately, one cable at a time, by someone who knows where the signal needs to go. That is what Upper Level Music is: the patch around the interruption. The industry machine and the home studio are not enemies. They are colleagues separated by a gap neither of them made.</p>
     <p>Our core belief: your unique sound carries farthest with a team working in harmony with you. The help differs; the position doesn't. Nobody owns the knowledge. Somebody just has to pass it on.</p>
-    <div class="hero-actions"><a class="btn primary" href="/contact">Hire your audio team</a><a class="btn" href="/#booths">Choose your service</a></div>
+    <div class="hero-actions"><a class="btn primary" href="/contact">Talk to your audio team</a><a class="btn" href="/#booths">Choose your service</a></div>
   </div>
 </section>
 `;

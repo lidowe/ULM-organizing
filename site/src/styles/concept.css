@@ -8,6 +8,11 @@
   --paper-grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .36  0 0 0 0 .27  0 0 0 0 .15  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   --paper-blotch:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.006 .009' numOctaves='3' seed='7' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .55  0 0 0 0 .38  0 0 0 0 .18  0 0 0 .6 -.05'/></filter><rect width='100%' height='100%' filter='url(%23b)'/></svg>");
   --dark-grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='d'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 .93  0 0 0 0 .8  0 0 0 .16 -.02'/></filter><rect width='100%' height='100%' filter='url(%23d)'/></svg>");
+  --paper-tooth:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' seed='11' result='n'/><feDiffuseLighting in='n' surfaceScale='1.3' diffuseConstant='1' lighting-color='%23fff8ee'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1.75' intercept='-.62'/><feFuncG type='linear' slope='1.75' intercept='-.62'/><feFuncB type='linear' slope='1.75' intercept='-.62'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>");
+  --paper-tooth-soft:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' seed='11' result='n'/><feDiffuseLighting in='n' surfaceScale='1.3' diffuseConstant='1' lighting-color='white'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1' intercept='.06'/><feFuncG type='linear' slope='1' intercept='.06'/><feFuncB type='linear' slope='1' intercept='.06'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>");
+  --paper-mottle:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='700' height='700'><filter id='m' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.011 .017' numOctaves='4' seed='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .42  0 0 0 0 .32  0 0 0 0 .2  0 0 0 1.25 -.46'/></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>");
+  --paper-fibres:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='520'><filter id='f' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.07 .45' numOctaves='2' seed='5' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .17  0 0 0 7 -4.5'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+  --paper-specks:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='460' height='460'><filter id='s' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='1' seed='21' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .28  0 0 0 0 .2  0 0 0 0 .1  0 0 0 14 -9.6'/></filter><rect width='100%' height='100%' filter='url(%23s)'/></svg>");
   --card-parchment:linear-gradient(180deg,#e9dec6,#dfd1b3);
   --bg:#e5dac3;
   --bg-soft:#ece1ca;
@@ -44,13 +49,13 @@ body{
 }
 body::after{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
-  background:radial-gradient(ellipse at 50% 35%,transparent 52%,rgba(112,80,38,.20) 100%);
+  background:radial-gradient(ellipse at 50% 35%,transparent 46%,rgba(112,80,38,.27) 100%);
 }
 body::before{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
-  background-image:var(--paper-grain),var(--paper-blotch);
-  background-size:220px 220px,900px 900px;
-  mix-blend-mode:multiply;opacity:.55;
+  background-image:var(--paper-tooth),var(--paper-specks),var(--paper-fibres),var(--paper-grain),var(--paper-mottle),var(--paper-blotch);
+  background-size:300px 300px,460px 460px,520px 520px,220px 220px,700px 700px,900px 900px;
+  mix-blend-mode:multiply;opacity:.46;
 }
 main,.site-header,.site-footer{position:relative;z-index:2}
 ::selection{background:var(--amber);color:#f4f1ea}
@@ -926,3 +931,27 @@ h1,h2,h3,h4,.booth-card-name,.explore-name,.booth-group-label,.service-row h2{fo
 .page-hero .eyebrow,.page-hero .kicker{font-weight:400}
 /* the two intro paragraphs on Home read as one voice: same face, size, colour */
 .sheet-deck,.booths-intro p{color:var(--ink)}
+
+/* ---- paper surfaces: the same tooth on cards and panels so they read as paper laid on paper ---- */
+.booth-card,.service-set .service-row,.explore-btn{
+  background-image:var(--paper-tooth-soft),var(--card-parchment);
+  background-blend-mode:multiply,normal}
+.booth-card[aria-expanded="true"],.booth-detail,.pricing-note,.deck-frame,.sheet-pun,.newsletter,.booth-from,
+.award-plaque,.audience-card,.capability,.choice,.path,.rate-panel,.urgent-box,.wwa-panel-inner{
+  background-image:var(--paper-tooth-soft);background-blend-mode:multiply}
+
+/* ---- closing band: text left, actions right, one clear read order ---- */
+.cta-inner{grid-template-columns:minmax(0,1fr);gap:1.6rem;align-items:start}
+.cta-section h2{max-width:none}
+.cta-section p{max-width:54ch}
+.cta-section .cta-close,.cta-section .cta-close strong{font-weight:500;color:#eee4cf}
+@media (min-width:900px){
+  .cta-inner{grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:3rem;align-items:center}
+  .cta-buttons{flex-direction:column;align-items:stretch}
+  .cta-buttons .btn{justify-content:center;text-align:center}
+}
+
+/* tab bar (tablet widths): tighter so every item fits without a side scroll */
+@media (min-width:700px) and (max-width:1079px){
+  .site-header .desktop-nav a{padding:.5rem .4rem;letter-spacing:.04em}
+}

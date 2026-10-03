@@ -109,7 +109,7 @@ export const PAGES: PageEntry[] = [
   {
     slug: "contact",
     path: "/contact",
-    title: "Hire Your Audio Team · Upper Level Music",
+    title: "Contact · Upper Level Music",
     description:
       "Tell us about the record, what you're making, where it is now, and what's getting in the way.",
     changefreq: "yearly",

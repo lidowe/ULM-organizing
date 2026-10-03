@@ -153,7 +153,7 @@ export default `
 <section class="cta-section">
   <div class="wrap cta-inner">
     <div class="reveal"><h2>Choose your path.</h2><p>Hand it over, work it together, or learn to run it. We review the job and scope it before any work or price is agreed.</p></div>
-    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Hire your audio team</a><a class="btn" href="/services">Choose your service</a></div>
+    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Talk to your audio team</a><a class="btn" href="/services">Choose your service</a></div>
   </div>
 </section>
 `;

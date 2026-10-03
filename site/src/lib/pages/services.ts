@@ -38,5 +38,5 @@ export default `
   </div>
 </div>
 </div></section>
-<section class="cta-section"><div class="wrap cta-inner"><div class="reveal"><h2>Choose your service.</h2><p>Pick what fits, or describe something unique. One missing piece can bring a project down, and there is no harm in asking about it.</p></div><div class="cta-buttons reveal"><a class="btn primary" href="/contact">Hire your audio team</a></div></div></section>
+<section class="cta-section"><div class="wrap cta-inner"><div class="reveal"><h2>Choose your service.</h2><p>Pick what fits, or describe something unique. One missing piece can bring a project down, and there is no harm in asking about it.</p></div><div class="cta-buttons reveal"><a class="btn primary" href="/contact">Talk to your audio team</a></div></div></section>
 `;

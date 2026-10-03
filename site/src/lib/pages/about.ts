@@ -153,8 +153,8 @@ export default `
 </section>
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Hire your audio team.</h2><p>Major-label experience, available at any stage and any scale.</p></div>
-    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Hire your audio team</a><a class="btn" href="/services">Choose your service</a></div>
+    <div class="reveal"><h2>Start a conversation.</h2><p>Major-label experience, available at any stage and any scale.</p></div>
+    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Talk to your audio team</a><a class="btn" href="/services">Choose your service</a></div>
   </div>
 </section>
 `;

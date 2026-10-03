@@ -1,5 +1,5 @@
 export default `
-<section class="page-hero"><div class="wrap"><div class="eyebrow">Hire your audio team</div><h1 class="page-title">Tell us what you need.</h1><div class="deck-frame">
+<section class="page-hero"><div class="wrap"><div class="eyebrow">Contact</div><h1 class="page-title">Tell us what you need.</h1><div class="deck-frame">
       <p class="sr-only">A record, a voice, a mix, a room, or learning to do it yourself.</p>
       <div class="ticker" aria-hidden="true"><div class="ticker-track"><span>A record</span><span>A voice</span><span>A mix</span><span>A room</span><span>Learning to do it yourself</span><span>A record</span><span>A voice</span><span>A mix</span><span>A room</span><span>Learning to do it yourself</span></div></div>
       <p class="deck-frame-note">You don&rsquo;t need to know which one it is, or what it&rsquo;s called.</p>
