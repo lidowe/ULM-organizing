@@ -144,7 +144,7 @@ export function BoothBoard() {
             booth, or none of them, tell us what’s going on and we’ll work out the rest.
           </p>
           <Link className="btn primary" to="/contact">
-            Hire your audio team
+            Tell us what’s going on
           </Link>
         </div>
       </div>

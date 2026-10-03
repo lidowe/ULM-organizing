@@ -6,7 +6,7 @@ import { renderTokens } from "@/lib/render-tokens";
 /**
  * Short, conventional labels. The site is already unusual in what it says;
  * making the navigation unusual too just adds decoding cost.
- * "Hire your audio team" is rendered separately as the highlighted action.
+ * "Talk to your audio team" is rendered separately as the highlighted action.
  */
 const NAV: Array<{ to: string; hash?: string; label: string }> = [
   { to: "/the-gap", label: "The Gap" },
@@ -34,7 +34,7 @@ function PageNext({ pathname }: { pathname: string }) {
   if (i < 0) return null;
   const prev = i > 0 ? ORDER[i - 1] : { to: "/", label: "Home" };
   const next =
-    i < ORDER.length - 1 ? ORDER[i + 1] : { to: "/contact", label: "Hire your audio team" };
+    i < ORDER.length - 1 ? ORDER[i + 1] : { to: "/contact", label: "Contact" };
   return (
     <nav className="page-next-nav" aria-label="Next and previous pages">
       <div className="wrap">
@@ -61,7 +61,7 @@ const MENU: Array<{ to: string; hash?: string; label: string; n: string }> = [
   { to: "/studio", label: "Studio", n: "06" },
   { to: "/work", label: "Work", n: "07" },
   { to: "/about", label: "About", n: "08" },
-  { to: "/contact", label: "Hire your audio team", n: "09" },
+  { to: "/contact", label: "Contact", n: "09" },
 ];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -117,7 +117,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               </Link>
             ))}
             <Link className="project-link" to="/contact">
-              Hire your audio team
+              Talk to the team
             </Link>
           </nav>
           <button
@@ -218,7 +218,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                   {item.label}
                 </Link>
               ))}
-              <Link to="/contact">Hire your audio team</Link>
+              <Link to="/contact">Contact</Link>
               <a href="#newsletter">Newsletter</a>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default `
     <div class="sheet-intro">
       <p class="sheet-deck">Upper Level Music is an accessible solution to the modern changes in recording, as recording studios no longer serve the same function as they did from the 1970s through the early 2000s, as many romanticize. We are in an age where a recording studio practically fits in our back pocket. Upper Level Music sees that everyone has access to the tech now, so we&rsquo;ve decided to leave the building behind. Many new avenues and reasons to record exist, and new equipment becomes more accessible, affordable, and more advanced every day. However, one major aspect got lost in this modern shift. <strong>The knowledge about audio didn&rsquo;t come with the new equipment.</strong></p>
       <div class="sheet-actions">
-        <a class="btn primary" href="/contact">Hire your audio team</a>
+        <a class="btn primary" href="/contact">Talk to your audio team</a>
         <a class="btn" href="#booths">Choose your service</a>
       </div>
     </div>
@@ -42,8 +42,8 @@ export default `
 
 <section class="cta-section">
   <div class="wrap cta-inner">
-    <div class="reveal"><h2>Hire your audio team.</h2><p>Describe the job in your own words. We review it and scope it before any work or price is agreed.</p><p class="cta-close"><strong>Wherever you are in your journey, you will have a focused team working for you. Reach for the Upper Level, and we will give you a boost.</strong></p></div>
-    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Hire your audio team</a><a class="btn" href="/services">Choose your service</a></div>
+    <div class="reveal"><h2>Start a conversation.</h2><p>Describe the job in your own words. We review it and scope it before any work or price is agreed.</p><p class="cta-close"><strong>Wherever you are in your journey, you will have a focused team working for you. Reach for the Upper Level, and we will give you a boost.</strong></p></div>
+    <div class="cta-buttons reveal"><a class="btn primary" href="/contact">Talk to your audio team</a><a class="btn" href="/services">Choose your service</a></div>
   </div>
 </section>
 `;
