@@ -28,6 +28,7 @@ import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]
 import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
 import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquiry'
+import { Route as ApiPublicSubscribeRouteImport } from './routes/api/public/subscribe'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -127,6 +128,11 @@ const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
   path: '/api/public/inquiry',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicSubscribeRoute = ApiPublicSubscribeRouteImport.update({
+  id: '/api/public/subscribe',
+  path: '/api/public/subscribe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -148,6 +154,7 @@ export interface FileRoutesByFullPath {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
+  '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -169,6 +176,7 @@ export interface FileRoutesByTo {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
+  '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -191,6 +199,7 @@ export interface FileRoutesById {
   '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
+  '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -214,6 +223,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
+    | '/api/public/subscribe'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -235,6 +245,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
+    | '/api/public/subscribe'
   id:
     | '__root__'
     | '/'
@@ -256,6 +267,7 @@ export interface FileRouteTypes {
     | '/.well-known/oauth-protected-resource'
     | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
+    | '/api/public/subscribe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -278,6 +290,7 @@ export interface RootRouteChildren {
   Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
   Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
   ApiPublicInquiryRoute: typeof ApiPublicInquiryRoute
+  ApiPublicSubscribeRoute: typeof ApiPublicSubscribeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -415,6 +428,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ApiPublicInquiryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/subscribe': {
+      id: '/api/public/subscribe'
+      path: '/api/public/subscribe'
+      fullPath: '/api/public/subscribe'
+      preLoaderRoute: typeof ApiPublicSubscribeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -439,6 +459,7 @@ const rootRouteChildren: RootRouteChildren = {
     Char91DotwellKnownChar93OauthProtectedResourceRoute,
   Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
   ApiPublicInquiryRoute: ApiPublicInquiryRoute,
+  ApiPublicSubscribeRoute: ApiPublicSubscribeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -690,7 +690,7 @@ main figure.credit-photo img{width:100%;height:auto}
 .gap-teamwork{max-width:min(100%,32rem);margin:1.4rem 0}
 
 /* ---- a little retro: pixel labels, typewriter captions, a blinking cursor, faint scanlines ---- */
-:root{--pixel:"Silkscreen","Space Mono",monospace;--type:"Special Elite","Courier New",monospace}
+:root{--pixel:"Silkscreen","Space Mono",monospace;--type:"Space Mono","IBM Plex Mono",monospace}
 .spread-no,.booth-group-label,.eyebrow,.kicker,.explore-no,.plan-mark,.booth-kicker,.sheet-pun-k{
   font-family:var(--pixel);font-size:.72rem;letter-spacing:.1em;font-weight:400}
 .booth-card::after{font-family:var(--pixel);font-size:.7rem;font-weight:400}
@@ -815,3 +815,114 @@ main figure.plate img,main figure.inline-photo img,main .work-lead-photo img,mai
 .deck-frame{min-width:0;max-width:100%}
 .ticker{max-width:100%}
 @media (max-width:520px){.page-title{overflow-wrap:anywhere}}
+
+/* The Gap: the band pictures that sit with the assembly-line argument */
+.photo-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem;max-width:48rem;margin:1.4rem 0}
+.photo-pair figure{margin:0}
+.photo-pair img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+@media (max-width:620px){.photo-pair{grid-template-columns:minmax(0,1fr)}}
+
+/* fewer typefaces: Space Grotesk for headings and group titles, Space Mono for text and captions,
+   the pixel face only for small tags and numbers */
+.booth-group-label{font-family:var(--sans);font-weight:700;font-size:1.2rem;letter-spacing:.06em;text-transform:uppercase;padding-top:.8rem}
+.booths-intro{margin-bottom:.9rem}
+.booths-pointer{font-family:var(--sans);font-size:1.05rem;font-weight:700;letter-spacing:0;color:var(--ink);margin:.2rem 0 0}
+figcaption,.explore-desc,.sheet-actions-note,.deck-frame-note{font-family:var(--mono)}
+
+/* ============================================================
+   TYPE SYSTEM. Two typefaces, four styles. Nothing else.
+     Display   Space Grotesk 700, uppercase     page titles, section titles, card titles
+     Text      Space Mono 400                   every paragraph, list, caption, note
+     Label     Space Mono 700, uppercase, wide  buttons, tags, numbers, nav, meta lines
+     Emphasis  bold or red inside Text
+   Change --font-display / --font-text to retheme the whole site (and the newsletter).
+   ============================================================ */
+:root{
+  --font-display:"Space Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-text:"Space Mono","IBM Plex Mono",ui-monospace,monospace;
+  --pixel:var(--font-text);--type:var(--font-text);
+}
+/* text: one face for everything that is read */
+main :is(p,li,dd,td,blockquote,figcaption,label,input,textarea,select),
+.site-footer :is(p,li,div,a),.newsletter :is(p,input){font-family:var(--font-text)}
+main :is(.booth-detail-body,.booth-detail-line,.booths-intro p,.booth-symptoms li,.booth-start,.unit-prose p,.person-copy,.service-copy p,.remote-body p,.fold-body p,.path p,.closing-copy p,.spread-cols p){font-size:.92rem;line-height:1.7}
+main :is(.sheet-deck,.page-deck,.page-deck-second,.booths-intro p){font-size:1rem;line-height:1.7}
+main :is(.sheet-deck strong,.cta-close strong,.cta-close,.booth-detail-line){font-weight:700}
+/* labels: the one small-caps voice */
+.eyebrow,.kicker,.spread-no,.plan-mark,.booth-kicker,.pn-label,.explore-no,.sheet-pun-k,.sheet-meta,.booth-card::after,.booth-tag,.fold-hint,.btn,.filter-bar button,.desktop-nav a,.menu-links a span,.newsletter-status{
+  font-family:var(--font-text);font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+.eyebrow,.kicker,.spread-no,.pn-label{font-size:.8rem}
+.page-hero .eyebrow{font-size:.85rem;letter-spacing:.14em;padding:.4rem .8rem}
+.plan-mark,.booth-kicker,.explore-no,.sheet-pun-k,.booth-card::after{font-size:.7rem}
+.sheet-meta{font-size:.68rem;font-weight:400}
+.booths-pointer{font-family:var(--font-text);font-size:.9rem;font-weight:700;letter-spacing:.02em;text-transform:none;color:var(--ink)}
+.explore-desc,.sheet-actions-note,.deck-frame-note{font-size:.82rem;letter-spacing:0;text-transform:none}
+.ticker-track span{font-family:var(--font-display);font-weight:700;font-size:.95rem;letter-spacing:.06em}
+/* display: the headline voice */
+h1,h2,h3,h4,.booth-card-name,.explore-name,.booth-group-label,.service-row h2{font-family:var(--font-display)}
+.booth-card-name{font-size:.9rem;font-weight:700}
+
+/* ============================================================
+   Services: cards by group, no prices
+   ============================================================ */
+.services-stack{border-top:0;display:grid;gap:clamp(1.8rem,4vw,2.8rem)}
+.pricing-note{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(1.2rem,4vw,3rem);align-items:start;
+  padding:clamp(1.2rem,3vw,2rem);border:2px solid var(--ink);background:var(--panel);box-shadow:6px 6px 0 var(--navy)}
+.pricing-note h2{margin:0;font-size:clamp(1.5rem,3.4vw,2.4rem)}
+.pricing-note p{margin:0 0 .8rem;max-width:56ch}
+.service-set{--gc:var(--amber)}
+.service-set[data-set="1"]{--gc:var(--navy)}
+.service-set[data-set="2"]{--gc:var(--ink-soft)}
+.service-set .service-group{display:block;grid-template-columns:none;padding:0 0 .9rem;margin:0 0 1rem;border-top:4px solid var(--gc);border-bottom:0}
+.service-set .service-group h2{font-family:var(--font-display);font-weight:700;font-size:1.5rem;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--gc);margin:.7rem 0 .3rem}
+.service-set .service-group p{grid-column:auto;margin:0 0 .6rem;max-width:62ch;color:var(--muted);font-size:.9rem}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+@media (max-width:760px){.service-grid{grid-template-columns:minmax(0,1fr)}}
+.service-set .service-row{display:block;grid-template-columns:none;padding:1.1rem 1.2rem 1.2rem;border:1.5px solid var(--ink);
+  border-left:6px solid var(--gc);background:var(--card-parchment);box-shadow:3px 3px 0 rgba(60,44,22,.5)}
+.service-set .service-row.wide{grid-column:1/-1}
+.service-set .service-row h2{font-size:1.25rem;letter-spacing:-.01em;margin:0 0 .6rem;text-transform:uppercase}
+.service-set .service-row .service-copy{max-width:none;color:var(--ink)}
+.service-set .service-row .service-copy p{margin:0 0 .6rem;font-size:.88rem;line-height:1.65}
+.service-set .service-row .row-thumb{float:right;width:clamp(84px,9vw,118px);margin:.1rem 0 .5rem 1rem}
+.service-set .service-row .booth-tags{margin:0 0 .6rem}
+
+/* ============================================================
+   Newsletter band (every page, above the footer)
+   ============================================================ */
+.newsletter{border-top:1.5px solid var(--ink);background:var(--bg-soft);padding:clamp(1.6rem,4vw,2.4rem) 0}
+.newsletter-inner{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:1.4rem clamp(1.5rem,4vw,3rem);align-items:center}
+@media (max-width:820px){.newsletter-inner{grid-template-columns:minmax(0,1fr)}}
+.newsletter h2{margin:0 0 .4rem;font-size:clamp(1.4rem,3vw,2rem)}
+.newsletter p{margin:0;font-size:.9rem}
+.newsletter-form{display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
+.newsletter-form input[type="email"]{flex:1 1 14rem;min-width:0;min-height:2.9rem;padding:.6rem .8rem;border:1.5px solid var(--ink);border-radius:2px;
+  background:var(--panel);color:var(--ink);font-family:var(--font-text);font-size:.9rem}
+.newsletter-form input[type="email"]:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+.newsletter-status{flex:1 1 100%;min-height:1.1em;font-size:.72rem;letter-spacing:.04em;text-transform:none;font-weight:400;color:var(--muted)}
+.field-trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.footer-brand,.footer-brand *{font-family:var(--font-display)}
+.cta-section h2{font-weight:700}
+
+/* ============================================================
+   TYPE SYSTEM, round 2
+   Text: IBM Plex Mono. It carries IBM's typewriter heritage in cleaner, modern forms, so it reads about half
+   typewriter and half the old Space Mono. One face for all copy, captions and labels.
+   Pixel: Pixelify Sans, regular weight only, for small tags and numbers. A softer pixel face than a pure
+   arcade font, and never bold or large.
+   ============================================================ */
+:root{
+  --font-text:"IBM Plex Mono","Courier New",ui-monospace,monospace;
+  --pixel:"Pixelify Sans","IBM Plex Mono",monospace;
+  --mono:var(--font-text);--type:var(--font-text);
+}
+.eyebrow,.kicker,.spread-no,.plan-mark,.booth-kicker,.pn-label,.explore-no,.sheet-pun-k,.booth-card::after{
+  font-family:var(--pixel);font-weight:400;letter-spacing:.06em;text-transform:uppercase}
+.page-hero .eyebrow{font-size:1rem;letter-spacing:.08em;padding:.3rem .75rem}
+.kicker,.spread-no,.pn-label{font-size:1rem}
+.plan-mark,.booth-kicker,.explore-no,.sheet-pun-k,.booth-card::after{font-size:.85rem}
+.ticker-track span{font-family:var(--pixel);font-weight:400;font-size:1.05rem;letter-spacing:.06em}
+.page-hero .eyebrow,.page-hero .kicker{font-weight:400}
+/* the two intro paragraphs on Home read as one voice: same face, size, colour */
+.sheet-deck,.booths-intro p{color:var(--ink)}

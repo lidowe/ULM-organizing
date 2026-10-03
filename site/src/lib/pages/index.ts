@@ -1,10 +1,10 @@
 export default `
 <section class="sheet">
   <div class="wrap sheet-inner">
-    <p class="sheet-meta"><span><b>ULM</b></span><span>Edward Lidow</span><span>Est. 2012</span><span>Columbia, South Carolina</span><span>Remote work available</span></p>
+    <p class="sheet-meta"><span><b>ULM</b></span><span>Edward Lidow</span><span>Est. 2014</span><span>Columbia, South Carolina</span><span>Remote audio production solutions</span></p>
     <h1 class="sheet-title sheet-title-md">The Industry is undergoing <a href="/about#industry">major key changes.</a></h1>
     <div class="sheet-intro">
-      <p class="sheet-deck">Upper Level Music is an accessible solution to the modern changes in recording, as recording studios no longer serve the same function as they did from the 70s through the 90s and even the early 2000s, like most people romanticize. These days a recording studio practically sits in the back pocket of anyone with a modern phone. ULM sees that everyone has access to the tech now, so we&rsquo;ve decided to leave the building behind. So many new avenues to record exist, and new equipment is available every day at affordable prices. However, one major aspect got lost in this modern shift. <strong>The knowledge about audio didn&rsquo;t come with the new equipment.</strong></p>
+      <p class="sheet-deck">Upper Level Music is an accessible solution to the modern changes in recording, as recording studios no longer serve the same function as they did from the 1970s through the early 2000s, as many romanticize. We are in an age where a recording studio practically fits in our back pocket. Upper Level Music sees that everyone has access to the tech now, so we&rsquo;ve decided to leave the building behind. Many new avenues and reasons to record exist, and new equipment becomes more accessible, affordable, and more advanced every day. However, one major aspect got lost in this modern shift. <strong>The knowledge about audio didn&rsquo;t come with the new equipment.</strong></p>
       <div class="sheet-actions">
         <a class="btn primary" href="/contact">Hire your audio team</a>
         <a class="btn" href="#booths">Choose your service</a>
@@ -31,7 +31,7 @@ export default `
     <ol class="explore-grid">
       <li><a class="explore-btn" href="/the-gap"><span class="explore-no">01</span><span class="explore-name">The Gap</span><span class="explore-desc">Why Upper Level exists</span></a></li>
       <li><a class="explore-btn" href="/process"><span class="explore-no">02</span><span class="explore-name">Process</span><span class="explore-desc">How a project runs</span></a></li>
-      <li><a class="explore-btn" href="/services"><span class="explore-no">03</span><span class="explore-name">Services</span><span class="explore-desc">What we do, and rates</span></a></li>
+      <li><a class="explore-btn" href="/services"><span class="explore-no">03</span><span class="explore-name">Services</span><span class="explore-desc">What we do</span></a></li>
       <li><a class="explore-btn" href="/education"><span class="explore-no">04</span><span class="explore-name">Educational services</span><span class="explore-desc">One-on-one teaching</span></a></li>
       <li><a class="explore-btn" href="/studio"><span class="explore-no">05</span><span class="explore-name">Studio</span><span class="explore-desc">The room and the gear</span></a></li>
       <li><a class="explore-btn" href="/work"><span class="explore-no">06</span><span class="explore-name">Work</span><span class="explore-desc">Records and credits</span></a></li>

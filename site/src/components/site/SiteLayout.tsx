@@ -169,6 +169,43 @@ export function SiteLayout({ children }: { children: ReactNode }) {
 
       <PageNext pathname={pathname} />
 
+      <section className="newsletter" id="newsletter" aria-labelledby="newsletter-h">
+        <div className="wrap newsletter-inner">
+          <div>
+            <h2 id="newsletter-h">Subscribe to our newsletter.</h2>
+            <p>
+              News and notes from <span className="ulm">Upper Level Music</span>, straight to your
+              inbox.
+            </p>
+          </div>
+          <form className="newsletter-form" data-newsletter-form noValidate>
+            <label className="sr-only" htmlFor="newsletter-email">
+              Email address
+            </label>
+            <input
+              id="newsletter-email"
+              name="email"
+              type="email"
+              autoComplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <div className="field-trap" aria-hidden="true">
+              <input name="company" tabIndex={-1} autoComplete="off" />
+            </div>
+            <button className="btn primary" type="submit">
+              Subscribe
+            </button>
+            <p
+              className="newsletter-status"
+              data-newsletter-status
+              role="status"
+              aria-live="polite"
+            />
+          </form>
+        </div>
+      </section>
+
       <footer className="site-footer">
         <div className="wrap footer-grid">
           <div>
@@ -182,6 +219,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 </Link>
               ))}
               <Link to="/contact">Hire your audio team</Link>
+              <a href="#newsletter">Newsletter</a>
             </div>
           </div>
           <div className="footer-meta">
