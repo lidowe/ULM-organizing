@@ -140,10 +140,10 @@ export const BOOTHS: Booth[] = [
     short: "Places of worship",
     name: "Our place of worship can’t be heard",
     line: "A beautiful room with hard surfaces, a volunteer on a console with more channels than training, and a congregation straining to hear.",
-    body: "A sanctuary is a venue, a broadcast studio and a classroom under one roof. We measure it like any other room, trace the signal from microphone to speaker, and train your volunteer crew.",
+    body: "Church, mosque, synagogue, temple, gurdwara or meeting hall: a house of worship is a venue, a broadcast studio and a classroom under one roof. We measure it like any other room, trace the signal from microphone to speaker, and train your volunteer crew.",
     symptoms: [
       "Speech is hard to understand at the back",
-      "The band sounds fine but the message doesn’t",
+      "The music sounds fine but the words don’t",
       "Feedback, or a system nobody dares touch",
       "Our streams and recordings sound thin",
     ],
@@ -265,8 +265,15 @@ const SKETCHES: Record<string, string> = {
   worship: `
     <path d="M48 104 V52 Q48 26 80 8 Q112 26 112 52 V104"/>
     <path d="M60 104 V56 Q60 36 80 24 Q100 36 100 56 V104" opacity=".6"/>
-    <path d="M80 40 V70 M70 51 H90" class="acc"/>
-    <path d="M8 106 H152 M18 96 H58 M102 96 H142 M12 101 H64 M96 101 H148" opacity=".6"/>`,
+    <path d="M80 40 C72 54 68 62 80 76 C92 62 88 54 80 40 Z" class="acc"/>
+    <path d="M80 58 C76 64 77 69 80 71 C83 69 84 64 80 58" class="acc"/>
+    <path d="M24 14 V38 M14 24 H34"/>
+    <path d="M24 54 L33.5 70.5 H14.5 Z M24 76 L14.5 59.5 H33.5 Z"/>
+    <path d="M138 14 A12 12 0 1 0 138 38 A9.5 9.5 0 1 1 138 14 Z"/>
+    <path d="M144.0 21.8 L145.0 24.6 L148.0 24.7 L145.6 26.5 L146.5 29.4 L144.0 27.7 L141.5 29.4 L142.4 26.5 L140.0 24.7 L143.0 24.6 Z"/>
+    <circle cx="136" cy="66" r="11"/><circle cx="136" cy="66" r="3"/>
+    <path d="M139.0 66.0 L147.0 66.0 M138.1 68.1 L143.8 73.8 M136.0 69.0 L136.0 77.0 M133.9 68.1 L128.2 73.8 M133.0 66.0 L125.0 66.0 M133.9 63.9 L128.2 58.2 M136.0 63.0 L136.0 55.0 M138.1 63.9 L143.8 58.2"/>
+    <path d="M8 106 H152 M18 96 H40 M120 96 H142 M12 101 H44 M116 101 H148" opacity=".6"/>`,
   business: `
     <rect x="40" y="12" width="84" height="46" rx="2"/>
     <path d="M52 26 H112 M52 36 H98 M52 46 H84" opacity=".55"/>

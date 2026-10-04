@@ -1,7 +1,10 @@
 export default `
 <section class="sheet">
   <div class="wrap sheet-inner">
-    <p class="sheet-meta"><span><b>ULM</b></span><span>Edward Lidow</span><span>Est. 2014</span><span>Columbia, South Carolina</span><span>Remote audio production solutions</span></p>
+    <p class="sheet-meta"><span><b>ULM</b></span><span>Edward Lidow</span><span>Est. 2014</span><span>Columbia, South Carolina</span><span>Remote audio solutions</span></p>
+    <figure class="plate opening-plate">
+      <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow working at the console during a session" fetchpriority="high" />
+    </figure>
     <h1 class="sheet-title sheet-title-md">The Industry is undergoing <a href="/about#industry">major key changes.</a></h1>
     <div class="sheet-intro">
       <p class="sheet-deck">Upper Level Music is an accessible solution to the modern changes in recording, as recording studios no longer serve the same function as they did from the 1970s through the early 2000s, as many romanticize. We are in an age where a recording studio practically fits in our back pocket. Upper Level Music sees that everyone has access to the tech now, so we&rsquo;ve decided to leave the building behind. Many new avenues and reasons to record exist, and new equipment becomes more accessible, affordable, and more advanced every day. However, one major aspect got lost in this modern shift. <strong>The knowledge about audio didn&rsquo;t come with the new equipment.</strong></p>
@@ -11,16 +14,9 @@ export default `
       </div>
     </div>
   </div>
-  <div class="wrap">
-    <figure class="plate opening-plate">
-      <img src="{{IMG:ed-at-the-console}}" alt="Edward Lidow working at the console during a session" fetchpriority="high" />
-    </figure>
-  </div>
 </section>
 
 <!--BOOTHS-->
-
-<section class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></section>
 
 <section class="explore" id="explore">
   <div class="wrap">
@@ -39,6 +35,8 @@ export default `
     </ol>
   </div>
 </section>
+
+<section class="ribbon-strip"><div class="ribbon-track">{{RIBBON}}</div></section>
 
 <section class="cta-section">
   <div class="wrap cta-inner">

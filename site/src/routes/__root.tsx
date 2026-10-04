@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import siteCss from "../styles/site.css?url";
 import conceptCss from "../styles/concept.css?url";
+import systemCss from "../styles/system.css?url";
 
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -108,6 +109,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "stylesheet", href: siteCss },
       { rel: "stylesheet", href: conceptCss },
+      { rel: "stylesheet", href: systemCss },
 
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       { rel: "icon", href: "/favicon-32.png", type: "image/png", sizes: "32x32" },

@@ -110,7 +110,18 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             </strong>
             <span>Columbia, South Carolina</span>
           </Link>
+          <div className="rail-actions">
+            <Link className="rail-btn rail-btn-primary" to="/contact">
+              Talk to the team
+            </Link>
+            <Link className="rail-btn" to="/" hash="booths">
+              Choose your service
+            </Link>
+          </div>
           <nav className="desktop-nav" aria-label="Primary navigation">
+            <Link to="/" activeOptions={{ exact: true }}>
+              Home
+            </Link>
             {NAV.map((item) => (
               <Link key={item.to + (item.hash ?? "")} to={item.to} hash={item.hash}>
                 {item.label}

@@ -1,14 +1,11 @@
 export default `
 <section class="page-hero"><div class="wrap"><div class="eyebrow">Educational services</div><h1 class="page-title">The room is gone. The knowledge doesn&rsquo;t have to go with it.</h1><p class="page-deck">One-on-one teaching in recording, production, mixing and the technical side, built around what you are actually working on.</p><p class="page-deck page-deck-second">Not a curriculum. The apprenticeship, handed over directly, at the level you are at today. <a href="/the-gap">Why that path disappeared &rarr;</a></p></div></section>
 
-<section class="edu-photo-band">
-  <img src="{{IMG:classroom}}" alt="A teaching room: projector screen, whiteboard, keyboard, drum pads and a laptop on the table" loading="lazy" />
-</section>
-
 <section class="section">
   <div class="wrap section-header reveal"><div class="kicker">01 / What this is</div><h2 class="section-title">The apprenticeship, handed over directly.</h2></div>
   <div class="wrap remote-body reveal">
     <p class="booth-tags">{{BOOTH:learn}} {{BOOTH:worship}}</p>
+    <figure class="inline-photo ph-side reveal"><img src="{{IMG:classroom}}" alt="A teaching room: projector screen, whiteboard, keyboard, drum pads and a laptop on the table" loading="lazy" /></figure>
     <p>I learned this trade the old way: as an intern and then an assistant at Hit Factory Criteria, standing behind people who had been doing it for thirty years. Almost nobody entering audio today gets a room, a mentor, and five years to absorb it.</p>
     <p>So I hand it over directly: one person at a time, on real work, answering the question actually in front of you rather than the one a course assumed you would have this week.</p>
     <p>You do not need the vocabulary to start. &ldquo;This should sound like I'm in a spaceship&rdquo; is a real place to begin. So is &ldquo;something in my chain is buzzing and I cannot find it.&rdquo; Same depth either way.</p>

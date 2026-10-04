@@ -88,7 +88,8 @@ export function BoothBoard() {
         <div className="spread-head">
           <span className="spread-no">02 / How we help</span>
           <h2 className="spread-h">
-            Let <span className="ulm">Upper Level</span> bring the studio team to you.
+            <span className="ulm">Upper Level</span> offers award winning experience the modern way:
+            access in the palm of your hand just like the modern studio
           </h2>
         </div>
         <div className="booths-intro">
