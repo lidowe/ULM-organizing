@@ -9,6 +9,7 @@ import {
 import type { ReactNode } from "react";
 
 import resetCss from "../styles/reset.css?url";
+import tokensCss from "../styles/tokens.css?url";
 import siteCss from "../styles/site.css?url";
 import conceptCss from "../styles/concept.css?url";
 import systemCss from "../styles/system.css?url";
@@ -83,6 +84,7 @@ export const Route = createRootRoute({
       },
 
       { rel: "stylesheet", href: resetCss },
+      { rel: "stylesheet", href: tokensCss },
       { rel: "stylesheet", href: siteCss },
       { rel: "stylesheet", href: conceptCss },
       { rel: "stylesheet", href: systemCss },

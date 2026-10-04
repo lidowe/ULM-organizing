@@ -3,11 +3,6 @@
    One spacing scale, one reading width, one photo kit.
    Photos are never cropped: they keep their own proportions.
    ============================================================ */
-:root{
-  --measure:68ch;
-  --s1:.5rem;--s2:1rem;--s3:1.6rem;--s4:2.4rem;--s5:3.4rem;
-}
-
 /* ---- 1. vertical rhythm: one scale, used everywhere ---- */
 .sheet{padding-top:var(--s3)}
 .page-hero{padding-top:var(--s3);padding-bottom:var(--s2)}
@@ -36,17 +31,10 @@
 .sheet-inner > figure.plate.opening-plate{width:90%;max-width:none;margin:0}
 .plate.opening-plate img{aspect-ratio:auto;height:auto}
 
-/* ---- 3. photo kit: natural proportions, no crops ---- */
-.lead-photo img,.inline-photo img,.panel-photo img,.freedom-photo img,.room-band img,
-.edu-photo-band img,.booth-story img,.person-aside img,.archive-strip img,.gap-hero-photo img,
-.studio-hero-photo img,.studio-gallery img,.work-lead-photo img,.photo-set img,.detail-grid img,.anywhere-grid img,
-.process-photo-band img,.photo-single img{
+.inline-photo img, .freedom-photo img, .room-band img, .booth-story img, .archive-strip img, .gap-hero-photo img, .studio-hero-photo img, .studio-gallery img, .work-lead-photo img, .photo-set img {
   aspect-ratio:auto;height:auto;max-height:none;object-fit:contain}
-.lead-photo{max-width:var(--pw-2of3)}
-.inline-photo:hover img{transform:none}                       /* no drifting on hover; colour still comes up */
 
-/* grids of pictures line up at the top and let each picture keep its own height */
-.studio-gallery,.photo-set,.detail-grid,.anywhere-grid,.process-photo-band{align-items:start}
+.inline-photo:hover img{transform:none}                       .studio-gallery, .photo-set {align-items:start}
 
 /* index grid on About: natural proportions in columns instead of cropped tiles */
 .archive-strip{display:block;column-count:4;column-gap:var(--photo-gap)}
@@ -91,11 +79,6 @@
    ============================================================ */
 
 /* ---- paper: a hair lighter, edges a little more aged ---- */
-:root{
-  --bg:#eae1cd;--bg-soft:#efe7d4;--panel:#f3ebda;
-  --card-parchment:linear-gradient(180deg,#eee5d1,#e4d9bf);
-  --dark:#1f2127;--dark-edge:#14161b;
-}
 body::after{
   background:
     radial-gradient(ellipse at 0 0,rgba(120,84,40,.20),transparent 30%),
@@ -182,30 +165,15 @@ body::after{
    (!important is deliberate: five older rules in site.css and
    concept.css each set their own heading sizes and used to win.)
    ============================================================ */
-:root{
-  --t-h1:clamp(1.5rem,3.2vw,2.5rem);
-  --t-h2:clamp(1.2rem,2.3vw,1.8rem);
-  --t-h3:clamp(1rem,1.5vw,1.2rem);
-  --t-card:clamp(1rem,1.4vw,1.15rem);
-}
-h1,.page-title,.sheet-title,.sheet-title-md,.hero-title{font-size:var(--t-h1) !important;line-height:1.02}
-h2,.section-title,.plain-title,.spread-h,.unit-title,.cta-section h2,.slab h2,.closing-note h2,
-.paths-head h2,.pricing-note h2,.terminology-panel h2,.contact-side h2,.rate-panel h2{font-size:var(--t-h2) !important;line-height:1.1}
-h3,h4,.plan-part h3,.path h4,.booth-detail-name,.wwa-title{font-size:var(--t-h3) !important;line-height:1.2}
+h1, .page-title, .sheet-title, .sheet-title-md {font-size:var(--t-h1) !important;line-height:1.02}
+h2, .section-title, .plain-title, .spread-h, .unit-title, .cta-section h2, .slab h2, .closing-note h2, .paths-head h2, .pricing-note h2, .contact-side h2 {font-size:var(--t-h2) !important;line-height:1.1}
+h3, h4, .plan-part h3, .path h4, .booth-detail-name {font-size:var(--t-h3) !important;line-height:1.2}
 .service-row h2,.service-set .service-row h2,.work-card h3,.audience-card h3,.capability h3,.service-group h2{font-size:var(--t-card) !important;line-height:1.2}
 
 /* ============================================================
    Paper and oxblood, stronger: lighter bone, visibly aged edges,
    and a heavily textured dark oxblood for the rail, band and footer.
    ============================================================ */
-:root{
-  --bg:#f0e9d7;--bg-soft:#f5efe0;--panel:#f8f2e6;
-  --card-parchment:linear-gradient(180deg,#f3ecdb,#e9dfc6);
-  --dark:#1f2127;--dark-edge:#14161b;
-  --ox-tooth:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='4' seed='9' result='n'/><feDiffuseLighting in='n' surfaceScale='2.6' diffuseConstant='1' lighting-color='white'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1.95' intercept='-1.22'/><feFuncG type='linear' slope='1.95' intercept='-1.22'/><feFuncB type='linear' slope='1.95' intercept='-1.22'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>");
-  --ox-grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='g' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' seed='4' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .85  0 0 0 0 .52  0 0 0 0 .46  0 0 0 .6 -.21'/></filter><rect width='100%' height='100%' filter='url(%23g)'/></svg>");
-}
-
 /* aged bone: a visibly darker, stained edge all round the window, plus a stronger paper texture */
 body::before{opacity:.8}
 body::after{
@@ -265,13 +233,6 @@ body::after{
    Bone paper, turned up to match the dark panels:
    deeper tooth, more grain, more fibres and flecks.
    ============================================================ */
-:root{
-  --paper-tooth:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' seed='11' result='n'/><feDiffuseLighting in='n' surfaceScale='2.6' diffuseConstant='1' lighting-color='%23fff8ee'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1.9' intercept='-.70'/><feFuncG type='linear' slope='1.9' intercept='-.70'/><feFuncB type='linear' slope='1.9' intercept='-.70'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>");
-  --paper-tooth-soft:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' seed='11' result='n'/><feDiffuseLighting in='n' surfaceScale='2' diffuseConstant='1' lighting-color='white'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1.5' intercept='-.42'/><feFuncG type='linear' slope='1.5' intercept='-.42'/><feFuncB type='linear' slope='1.5' intercept='-.42'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>");
-  --paper-grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .56  0 0 0 0 .45  0 0 0 0 .3  0 0 0 .95 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  --paper-fibres:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='520' height='520'><filter id='f' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.07 .45' numOctaves='2' seed='5' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .66  0 0 0 0 .54  0 0 0 0 .36  0 0 0 7 -4.0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
-  --paper-specks:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='460' height='460'><filter id='s' x='0' y='0' width='100%' height='100%'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='1' seed='21' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .5  0 0 0 0 .32  0 0 0 14 -9.0'/></filter><rect width='100%' height='100%' filter='url(%23s)'/></svg>");
-}
 body::before{opacity:1}
 
 /* small grey captions need more weight on the heavier paper */
@@ -292,7 +253,6 @@ main figcaption,.gap-chain figcaption{color:var(--ink-soft)}
 /* ---- text that stands out from the paper ----
    --text is darker than any fleck in the texture, and a faint paper-coloured edge
    lifts the letters off the grain. Change --text / --halo here to tune it. */
-:root{--text:#0f0c09;--halo:0 0 1.5px rgba(246,240,225,.9),0 0 3px rgba(246,240,225,.55)}
 main :is(p,li,dd,blockquote,summary):not(:is(.cta-section,.slab,.site-footer,.booth-card,.explore-btn,.btn) *){
   color:var(--text) !important;text-shadow:var(--halo);font-weight:500}
 main h1,main h2,main h3,main h4{text-shadow:var(--halo)}
@@ -300,7 +260,6 @@ main :is(.cta-section,.slab) *{text-shadow:0 1px 0 rgba(0,0,0,.6),0 0 8px rgba(0
 .gap-chain text{fill:var(--text);font-weight:500}
 
 /* booth cards and their open panel: calm paper, much less texture than the page */
-:root{--paper-tooth-faint:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='20 20 300 300'><filter id='t' filterUnits='userSpaceOnUse' x='0' y='0' width='340' height='340'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' seed='11' result='n'/><feDiffuseLighting in='n' surfaceScale='.8' diffuseConstant='1' lighting-color='white'><feDistantLight azimuth='40' elevation='62'/></feDiffuseLighting><feComponentTransfer><feFuncR type='linear' slope='1' intercept='.09'/><feFuncG type='linear' slope='1' intercept='.09'/><feFuncB type='linear' slope='1' intercept='.09'/></feComponentTransfer></filter><rect width='340' height='340' filter='url(%23t)'/></svg>")}
 .booth-card{background-image:var(--paper-tooth-faint),var(--card-parchment);background-blend-mode:multiply,normal}
 .booth-card[aria-expanded="true"],.booth-detail{background-image:var(--paper-tooth-faint);background-blend-mode:multiply}
 
@@ -323,11 +282,10 @@ main :is(.cta-section,.slab) *{text-shadow:0 1px 0 rgba(0,0,0,.6),0 0 8px rgba(0
 .deck-stack .page-deck{margin:0 0 .9rem;max-width:none}
 .deck-stack .page-deck:last-child{margin-bottom:0}
 
-/* ---- tall pictures keep their shape but are capped in height (nothing is cropped, nothing runs away) ---- */
-.freedom-photo img,.panel-photo img,.work-lead-photo img,.room-band img,.lead-photo img,.studio-hero-photo img,.why-photo img{
+.freedom-photo img, .work-lead-photo img, .room-band img, .studio-hero-photo img {
   width:auto;max-width:100%;height:auto;max-height:36rem;object-fit:contain;object-position:left top}
 .freedom-inner{grid-template-columns:minmax(0,1fr) auto}
-.freedom-quote{font-size:var(--t-h2) !important;max-width:none}
+.freedom-quote{font-size:var(--t-h2);max-width:none}
 
 /* 404 and error pages (rendered outside the site layout until the layout route lands) */
 .fallback-page { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 1rem; padding: 2rem 1.25rem; text-align: center; }
