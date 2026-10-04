@@ -10,6 +10,11 @@
     "head_sampling_rate": 1,
     "logs": { "invocation_logs": true }
   },
+  // Up to 5 form posts per minute per address and endpoint (src/lib/http/guard.ts).
+  // namespace_id only has to be unique within the Cloudflare account.
+  "ratelimits": [
+    { "name": "FORM_LIMITER", "namespace_id": "1001", "simple": { "limit": 5, "period": 60 } }
+  ],
   // These attach the custom domains on deploy.
   "routes": [
     { "pattern": "upperlevelmusic.com", "custom_domain": true },

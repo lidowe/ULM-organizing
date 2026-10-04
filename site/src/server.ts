@@ -2,6 +2,8 @@ import "./lib/error-capture";
 
 import { consumeLastCapturedError } from "./lib/error-capture";
 import { renderErrorPage } from "./lib/error-page";
+import { guardFormRequest } from "./lib/http/guard";
+import { canonicalRedirect, withSecurityHeaders } from "./lib/http/security";
 
 type ServerEntry = {
   fetch: (request: Request, env: unknown, ctx: unknown) => Promise<Response> | Response;
@@ -44,18 +46,30 @@ function isH3SwallowedErrorBody(body: string): boolean {
   }
 }
 
+async function render(request: Request, env: unknown, ctx: unknown): Promise<Response> {
+  const redirect = canonicalRedirect(request);
+  if (redirect) return redirect;
+
+  if (new URL(request.url).pathname.startsWith("/api/public/")) {
+    const rejected = await guardFormRequest(request);
+    if (rejected) return rejected;
+  }
+
+  try {
+    const handler = await getServerEntry();
+    const response = await handler.fetch(request, env, ctx);
+    return await normalizeCatastrophicSsrResponse(response);
+  } catch (error) {
+    console.error(error);
+    return new Response(renderErrorPage(), {
+      status: 500,
+      headers: { "content-type": "text/html; charset=utf-8" },
+    });
+  }
+}
+
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
-    try {
-      const handler = await getServerEntry();
-      const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
-    } catch (error) {
-      console.error(error);
-      return new Response(renderErrorPage(), {
-        status: 500,
-        headers: { "content-type": "text/html; charset=utf-8" },
-      });
-    }
+    return withSecurityHeaders(await render(request, env, ctx), request);
   },
 };

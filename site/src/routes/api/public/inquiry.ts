@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
+import { deliver } from "../../../lib/http/deliver";
 
 /**
  * Real submission endpoint for the "Start a project" form.
@@ -18,7 +19,8 @@ import { z } from "zod";
  * { ok: false, fallback: "mailto" } and the form falls back to drafting an
  * email, so the page never dead ends.
  *
- * See docs/FORM-ENDPOINT.md for per host setup notes.
+ * Delivery itself lives in src/lib/http/deliver.ts, which only reports
+ * success when the receiver confirms the email went out.
  */
 
 /**
@@ -49,8 +51,8 @@ const InquiryFields = z.object({
   need: z.string().trim().max(120).optional().default(""),
   timeline: z.string().trim().max(160).optional().default(""),
   budget: z.string().trim().max(160).optional().default(""),
-  // honeypot, must stay empty
-  company: z.string().max(0).optional().default(""),
+  // honeypot: checked before parsing (see the handler), stripped here
+  company: z.string().max(200).optional().default(""),
 });
 
 // Something has to describe the request. The current form sends `services`;
@@ -99,6 +101,12 @@ function plainText(data: Inquiry) {
     .join("\n");
 }
 
+/** True when the hidden field a person never sees has been filled in. */
+function isBot(raw: unknown): boolean {
+  const company = (raw as { company?: unknown } | null)?.company;
+  return typeof company === "string" && company.trim().length > 0;
+}
+
 function json(body: unknown, status = 200) {
   return new Response(JSON.stringify(body), {
     status,
@@ -117,69 +125,31 @@ export const Route = createFileRoute("/api/public/inquiry")({
           return json({ ok: false, error: "Invalid request body." }, 400);
         }
 
+        // A bot that filled the honeypot gets the same answer a person would,
+        // so it has no signal to retry without it. Nothing is delivered.
+        if (isBot(raw)) return json({ ok: true });
+
         const parsed = InquirySchema.safeParse(raw);
         if (!parsed.success) {
-          return json(
-            { ok: false, error: "Please check the required fields and try again." },
-            400,
-          );
+          return json({ ok: false, error: "Please check the required fields and try again." }, 400);
         }
         const data = parsed.data;
 
-        // Env is injected per request on edge runtimes, so read it here.
-        const resendKey = process.env["RESEND_API_KEY"];
-        const toEmail = process.env["INQUIRY_TO_EMAIL"];
-        const fromEmail = process.env["INQUIRY_FROM_EMAIL"];
-        const webhookUrl = process.env["INQUIRY_WEBHOOK_URL"];
-
-        const body = plainText(data);
         // The expedited flag has to survive into the subject: it is the only
         // part of the message visible before the email is opened.
-        const subject = `${data.expedited ? "[EXPEDITED] " : ""}Upper Level Music inquiry: ${
-          data.name
-        }`;
-
-        try {
-          if (webhookUrl) {
-            const res = await fetch(webhookUrl, {
-              method: "POST",
-              headers: { "content-type": "application/json" },
-              body: JSON.stringify({ subject, text: body, ...data }),
-            });
-            if (!res.ok) throw new Error(`Webhook responded ${res.status}`);
-            return json({ ok: true, via: "webhook" });
-          }
-
-          if (resendKey && toEmail) {
-            const res = await fetch("https://api.resend.com/emails", {
-              method: "POST",
-              headers: {
-                authorization: `Bearer ${resendKey}`,
-                "content-type": "application/json",
-              },
-              body: JSON.stringify({
-                from: fromEmail || "Upper Level Music <onboarding@resend.dev>",
-                to: [toEmail],
-                reply_to: data.email,
-                subject,
-                text: body,
-              }),
-            });
-            if (!res.ok) throw new Error(`Resend responded ${res.status}`);
-            return json({ ok: true, via: "email" });
-          }
-        } catch (err) {
-          console.error("inquiry delivery failed", err);
-          return json(
-            { ok: false, fallback: "mailto", error: "Delivery failed." },
-            502,
-          );
-        }
-
-        return json(
-          { ok: false, fallback: "mailto", error: "No delivery method configured." },
-          503,
+        const result = await deliver(
+          {
+            subject: `${data.expedited ? "[EXPEDITED] " : ""}Upper Level Music inquiry: ${data.name}`,
+            text: plainText(data),
+            replyTo: data.email,
+          },
+          request,
         );
+
+        if (result.ok) return json({ ok: true, via: result.via });
+        return result.reason === "not-configured"
+          ? json({ ok: false, fallback: "mailto", error: "No delivery method configured." }, 503)
+          : json({ ok: false, fallback: "mailto", error: "Delivery failed." }, 502);
       },
     },
   },
