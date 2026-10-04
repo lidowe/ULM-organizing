@@ -10,9 +10,7 @@ export const SITE_URL = "https://upperlevelmusic.com";
 export const SITE_NAME = "Upper Level Music";
 
 /** Social share image: black and white session photo, drums and guitar. */
-export const SITE_OG_IMAGE =
-  SITE_URL +
-  "/session-bw.jpg";
+export const SITE_OG_IMAGE = SITE_URL + "/session-bw.jpg";
 
 export type PageEntry = {
   /** Content key in src/lib/site-pages.ts */
@@ -138,7 +136,10 @@ export function pageHead(slug: string) {
       { property: "og:type", content: "website" },
       { property: "og:url", content: url },
       { property: "og:image", content: SITE_OG_IMAGE },
-      { property: "og:image:alt", content: "Two musicians mid-session, drums and guitar, black and white" },
+      {
+        property: "og:image:alt",
+        content: "Two musicians mid-session, drums and guitar, black and white",
+      },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: SITE_OG_IMAGE },
       { name: "twitter:title", content: page.title },

@@ -421,21 +421,15 @@ export const PLACES_AND_PROJECTS = [
 ];
 
 /** A deliberately short artist presence in the ribbon. */
-const RIBBON_ARTISTS = [
-  "Lil Wayne",
-  "Willie Nelson",
-  "Katy Perry",
-  "Nicki Minaj",
-  "Blackfoot",
-];
+const RIBBON_ARTISTS = ["Lil Wayne", "Willie Nelson", "Katy Perry", "Nicki Minaj", "Blackfoot"];
 
 export function ribbonHtml(): string {
   // Places lead; one artist slips in after every third place.
   const names: string[] = [];
   PLACES_AND_PROJECTS.forEach((place, i) => {
     names.push(place);
-    if (i % 3 === 2 && RIBBON_ARTISTS[i / 3 | 0]) {
-      names.push(RIBBON_ARTISTS[i / 3 | 0]!);
+    if (i % 3 === 2 && RIBBON_ARTISTS[(i / 3) | 0]) {
+      names.push(RIBBON_ARTISTS[(i / 3) | 0]!);
     }
   });
   const run = names.map((name) => `<span>${esc(name)}</span>`).join("");

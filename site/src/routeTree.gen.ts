@@ -14,7 +14,6 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CreditsRouteImport } from './routes/credits'
 import { Route as EducationRouteImport } from './routes/education'
-import { Route as McpRouteImport } from './routes/mcp'
 import { Route as NewsRouteImport } from './routes/news'
 import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ReachRouteImport } from './routes/reach'
@@ -24,9 +23,6 @@ import { Route as StudioRouteImport } from './routes/studio'
 import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
 import { Route as WorkRouteImport } from './routes/work'
-import { Route as Char91DotmcpChar93ListToolsRouteImport } from './routes/[.mcp]/list-tools'
-import { Route as Char91DotwellKnownChar93OauthProtectedResourceRouteImport } from './routes/[.well-known]/oauth-protected-resource'
-import { Route as Char91DotmcpChar93InvokeToolToolRouteImport } from './routes/[.mcp]/invoke-tool/$tool'
 import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquiry'
 import { Route as ApiPublicSubscribeRouteImport } from './routes/api/public/subscribe'
 
@@ -53,11 +49,6 @@ const CreditsRoute = CreditsRouteImport.update({
 const EducationRoute = EducationRouteImport.update({
   id: '/education',
   path: '/education',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const McpRoute = McpRouteImport.update({
-  id: '/mcp',
-  path: '/mcp',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NewsRoute = NewsRouteImport.update({
@@ -105,24 +96,6 @@ const WorkRoute = WorkRouteImport.update({
   path: '/work',
   getParentRoute: () => rootRouteImport,
 } as any)
-const Char91DotmcpChar93ListToolsRoute =
-  Char91DotmcpChar93ListToolsRouteImport.update({
-    id: '/.mcp/list-tools',
-    path: '/.mcp/list-tools',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotwellKnownChar93OauthProtectedResourceRoute =
-  Char91DotwellKnownChar93OauthProtectedResourceRouteImport.update({
-    id: '/.well-known/oauth-protected-resource',
-    path: '/.well-known/oauth-protected-resource',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const Char91DotmcpChar93InvokeToolToolRoute =
-  Char91DotmcpChar93InvokeToolToolRouteImport.update({
-    id: '/.mcp/invoke-tool/$tool',
-    path: '/.mcp/invoke-tool/$tool',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
   id: '/api/public/inquiry',
   path: '/api/public/inquiry',
@@ -140,7 +113,6 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/education': typeof EducationRoute
-  '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
@@ -150,9 +122,6 @@ export interface FileRoutesByFullPath {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
@@ -162,7 +131,6 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/education': typeof EducationRoute
-  '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
@@ -172,9 +140,6 @@ export interface FileRoutesByTo {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
@@ -185,7 +150,6 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
   '/education': typeof EducationRoute
-  '/mcp': typeof McpRoute
   '/news': typeof NewsRoute
   '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
@@ -195,9 +159,6 @@ export interface FileRoutesById {
   '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
   '/work': typeof WorkRoute
-  '/.mcp/list-tools': typeof Char91DotmcpChar93ListToolsRoute
-  '/.well-known/oauth-protected-resource': typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  '/.mcp/invoke-tool/$tool': typeof Char91DotmcpChar93InvokeToolToolRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
@@ -209,7 +170,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/education'
-    | '/mcp'
     | '/news'
     | '/process'
     | '/reach'
@@ -219,9 +179,6 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   fileRoutesByTo: FileRoutesByTo
@@ -231,7 +188,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/education'
-    | '/mcp'
     | '/news'
     | '/process'
     | '/reach'
@@ -241,9 +197,6 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   id:
@@ -253,7 +206,6 @@ export interface FileRouteTypes {
     | '/contact'
     | '/credits'
     | '/education'
-    | '/mcp'
     | '/news'
     | '/process'
     | '/reach'
@@ -263,9 +215,6 @@ export interface FileRouteTypes {
     | '/the-gap'
     | '/who-we-are'
     | '/work'
-    | '/.mcp/list-tools'
-    | '/.well-known/oauth-protected-resource'
-    | '/.mcp/invoke-tool/$tool'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   fileRoutesById: FileRoutesById
@@ -276,7 +225,6 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   CreditsRoute: typeof CreditsRoute
   EducationRoute: typeof EducationRoute
-  McpRoute: typeof McpRoute
   NewsRoute: typeof NewsRoute
   ProcessRoute: typeof ProcessRoute
   ReachRoute: typeof ReachRoute
@@ -286,9 +234,6 @@ export interface RootRouteChildren {
   TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
   WorkRoute: typeof WorkRoute
-  Char91DotmcpChar93ListToolsRoute: typeof Char91DotmcpChar93ListToolsRoute
-  Char91DotwellKnownChar93OauthProtectedResourceRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRoute
-  Char91DotmcpChar93InvokeToolToolRoute: typeof Char91DotmcpChar93InvokeToolToolRoute
   ApiPublicInquiryRoute: typeof ApiPublicInquiryRoute
   ApiPublicSubscribeRoute: typeof ApiPublicSubscribeRoute
 }
@@ -328,13 +273,6 @@ declare module '@tanstack/react-router' {
       path: '/education'
       fullPath: '/education'
       preLoaderRoute: typeof EducationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mcp': {
-      id: '/mcp'
-      path: '/mcp'
-      fullPath: '/mcp'
-      preLoaderRoute: typeof McpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/news': {
@@ -400,27 +338,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WorkRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/.mcp/list-tools': {
-      id: '/.mcp/list-tools'
-      path: '/.mcp/list-tools'
-      fullPath: '/.mcp/list-tools'
-      preLoaderRoute: typeof Char91DotmcpChar93ListToolsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.well-known/oauth-protected-resource': {
-      id: '/.well-known/oauth-protected-resource'
-      path: '/.well-known/oauth-protected-resource'
-      fullPath: '/.well-known/oauth-protected-resource'
-      preLoaderRoute: typeof Char91DotwellKnownChar93OauthProtectedResourceRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/.mcp/invoke-tool/$tool': {
-      id: '/.mcp/invoke-tool/$tool'
-      path: '/.mcp/invoke-tool/$tool'
-      fullPath: '/.mcp/invoke-tool/$tool'
-      preLoaderRoute: typeof Char91DotmcpChar93InvokeToolToolRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/api/public/inquiry': {
       id: '/api/public/inquiry'
       path: '/api/public/inquiry'
@@ -444,7 +361,6 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   CreditsRoute: CreditsRoute,
   EducationRoute: EducationRoute,
-  McpRoute: McpRoute,
   NewsRoute: NewsRoute,
   ProcessRoute: ProcessRoute,
   ReachRoute: ReachRoute,
@@ -454,10 +370,6 @@ const rootRouteChildren: RootRouteChildren = {
   TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
   WorkRoute: WorkRoute,
-  Char91DotmcpChar93ListToolsRoute: Char91DotmcpChar93ListToolsRoute,
-  Char91DotwellKnownChar93OauthProtectedResourceRoute:
-    Char91DotwellKnownChar93OauthProtectedResourceRoute,
-  Char91DotmcpChar93InvokeToolToolRoute: Char91DotmcpChar93InvokeToolToolRoute,
   ApiPublicInquiryRoute: ApiPublicInquiryRoute,
   ApiPublicSubscribeRoute: ApiPublicSubscribeRoute,
 }

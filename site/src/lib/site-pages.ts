@@ -16,14 +16,14 @@ import news from "./pages/news";
 import theGap from "./pages/the-gap";
 
 export const pages: Record<string, string> = {
-  "index": index,
-  "work": work,
-  "process": process,
-  "studio": studio,
-  "services": services,
-  "contact": contact,
-  "about": about,
-  "education": education,
-  "news": news,
+  index: index,
+  work: work,
+  process: process,
+  studio: studio,
+  services: services,
+  contact: contact,
+  about: about,
+  education: education,
+  news: news,
   "the-gap": theGap,
 };

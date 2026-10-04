@@ -4,8 +4,7 @@ import { pages } from "../lib/site-pages";
 import { pageHead } from "../lib/seo";
 
 export const Route = createFileRoute("/studio")({
-  head: () =>
-    pageHead("studio"),
+  head: () => pageHead("studio"),
   component: StudioPage,
 });
 

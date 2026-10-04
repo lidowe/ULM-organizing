@@ -54,7 +54,10 @@ describe("withSecurityHeaders", () => {
   });
 });
 
-function post(headers: Record<string, string>, url = "https://upperlevelmusic.com/api/public/inquiry") {
+function post(
+  headers: Record<string, string>,
+  url = "https://upperlevelmusic.com/api/public/inquiry",
+) {
   return new Request(url, { method: "POST", headers, body: "{}" });
 }
 
@@ -102,20 +105,31 @@ describe("deliver", () => {
     const fetchMock = vi.fn(async () => Response.json({ ok: true }));
     vi.stubGlobal("fetch", fetchMock);
     expect(await deliver(message, request)).toEqual({ ok: true, via: "webhook" });
-    const sent = JSON.parse((fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1].body as string);
+    const sent = JSON.parse(
+      (fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1].body as string,
+    );
     expect(sent.secret).toBe("s3cret");
     expect(sent.email).toBe("p@x.com");
   });
   it("fails on a 200 that says ok: false", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => Response.json({ ok: false, error: "quota" })));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => Response.json({ ok: false, error: "quota" })),
+    );
     expect(await deliver(message, request)).toEqual({ ok: false, reason: "failed" });
   });
   it("fails on a 200 HTML error page", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => new Response("<html>Script error</html>")));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => new Response("<html>Script error</html>")),
+    );
     expect(await deliver(message, request)).toEqual({ ok: false, reason: "failed" });
   });
   it("fails when the network throws", async () => {
-    vi.stubGlobal("fetch", vi.fn(async () => Promise.reject(new Error("down"))));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => Promise.reject(new Error("down"))),
+    );
     expect(await deliver(message, request)).toEqual({ ok: false, reason: "failed" });
   });
   it("reports not-configured with no delivery method", async () => {
@@ -128,7 +142,9 @@ describe("deliver", () => {
     const fetchMock = vi.fn(async () => Response.json({ ok: true }));
     vi.stubGlobal("fetch", fetchMock);
     await deliver(message, new Request("https://x.workers.dev/api/public/inquiry"));
-    const sent = JSON.parse((fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1].body as string);
+    const sent = JSON.parse(
+      (fetchMock.mock.calls[0] as unknown as [string, RequestInit])[1].body as string,
+    );
     expect(sent.subject.startsWith("[PREVIEW] ")).toBe(true);
   });
 });

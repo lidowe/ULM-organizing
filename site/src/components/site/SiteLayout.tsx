@@ -33,8 +33,7 @@ function PageNext({ pathname }: { pathname: string }) {
   const i = ORDER.findIndex((o) => o.to === pathname);
   if (i < 0) return null;
   const prev = i > 0 ? ORDER[i - 1] : { to: "/", label: "Home" };
-  const next =
-    i < ORDER.length - 1 ? ORDER[i + 1] : { to: "/contact", label: "Contact" };
+  const next = i < ORDER.length - 1 ? ORDER[i + 1] : { to: "/contact", label: "Contact" };
   return (
     <nav className="page-next-nav" aria-label="Next and previous pages">
       <div className="wrap">
