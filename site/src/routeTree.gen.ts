@@ -9,36 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as ContactRouteImport } from './routes/contact'
+import { Route as SiteRouteImport } from './routes/_site'
 import { Route as CreditsRouteImport } from './routes/credits'
-import { Route as EducationRouteImport } from './routes/education'
-import { Route as NewsRouteImport } from './routes/news'
-import { Route as ProcessRouteImport } from './routes/process'
 import { Route as ReachRouteImport } from './routes/reach'
-import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as StudioRouteImport } from './routes/studio'
-import { Route as TheGapRouteImport } from './routes/the-gap'
 import { Route as WhoWeAreRouteImport } from './routes/who-we-are'
-import { Route as WorkRouteImport } from './routes/work'
+import { Route as SiteIndexRouteImport } from './routes/_site/index'
+import { Route as SiteAboutRouteImport } from './routes/_site/about'
+import { Route as SiteContactRouteImport } from './routes/_site/contact'
+import { Route as SiteEducationRouteImport } from './routes/_site/education'
+import { Route as SiteNewsRouteImport } from './routes/_site/news'
+import { Route as SiteProcessRouteImport } from './routes/_site/process'
+import { Route as SiteServicesRouteImport } from './routes/_site/services'
+import { Route as SiteStudioRouteImport } from './routes/_site/studio'
+import { Route as SiteTheGapRouteImport } from './routes/_site/the-gap'
+import { Route as SiteWorkRouteImport } from './routes/_site/work'
 import { Route as ApiPublicInquiryRouteImport } from './routes/api/public/inquiry'
 import { Route as ApiPublicSubscribeRouteImport } from './routes/api/public/subscribe'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
+const SiteRoute = SiteRouteImport.update({
+  id: '/_site',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CreditsRoute = CreditsRouteImport.update({
@@ -46,29 +36,9 @@ const CreditsRoute = CreditsRouteImport.update({
   path: '/credits',
   getParentRoute: () => rootRouteImport,
 } as any)
-const EducationRoute = EducationRouteImport.update({
-  id: '/education',
-  path: '/education',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const NewsRoute = NewsRouteImport.update({
-  id: '/news',
-  path: '/news',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ProcessRoute = ProcessRouteImport.update({
-  id: '/process',
-  path: '/process',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ReachRoute = ReachRouteImport.update({
   id: '/reach',
   path: '/reach',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ServicesRoute = ServicesRouteImport.update({
-  id: '/services',
-  path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -76,25 +46,60 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StudioRoute = StudioRouteImport.update({
-  id: '/studio',
-  path: '/studio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const TheGapRoute = TheGapRouteImport.update({
-  id: '/the-gap',
-  path: '/the-gap',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const WhoWeAreRoute = WhoWeAreRouteImport.update({
   id: '/who-we-are',
   path: '/who-we-are',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkRoute = WorkRouteImport.update({
+const SiteIndexRoute = SiteIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteAboutRoute = SiteAboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteContactRoute = SiteContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteEducationRoute = SiteEducationRouteImport.update({
+  id: '/education',
+  path: '/education',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteNewsRoute = SiteNewsRouteImport.update({
+  id: '/news',
+  path: '/news',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteProcessRoute = SiteProcessRouteImport.update({
+  id: '/process',
+  path: '/process',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteServicesRoute = SiteServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteStudioRoute = SiteStudioRouteImport.update({
+  id: '/studio',
+  path: '/studio',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteTheGapRoute = SiteTheGapRouteImport.update({
+  id: '/the-gap',
+  path: '/the-gap',
+  getParentRoute: () => SiteRoute,
+} as any)
+const SiteWorkRoute = SiteWorkRouteImport.update({
   id: '/work',
   path: '/work',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => SiteRoute,
 } as any)
 const ApiPublicInquiryRoute = ApiPublicInquiryRouteImport.update({
   id: '/api/public/inquiry',
@@ -108,57 +113,58 @@ const ApiPublicSubscribeRoute = ApiPublicSubscribeRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
+  '/': typeof SiteIndexRoute
   '/credits': typeof CreditsRoute
-  '/education': typeof EducationRoute
-  '/news': typeof NewsRoute
-  '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/studio': typeof StudioRoute
-  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
-  '/work': typeof WorkRoute
+  '/about': typeof SiteAboutRoute
+  '/contact': typeof SiteContactRoute
+  '/education': typeof SiteEducationRoute
+  '/news': typeof SiteNewsRoute
+  '/process': typeof SiteProcessRoute
+  '/services': typeof SiteServicesRoute
+  '/studio': typeof SiteStudioRoute
+  '/the-gap': typeof SiteTheGapRoute
+  '/work': typeof SiteWorkRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
   '/credits': typeof CreditsRoute
-  '/education': typeof EducationRoute
-  '/news': typeof NewsRoute
-  '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/studio': typeof StudioRoute
-  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
-  '/work': typeof WorkRoute
+  '/about': typeof SiteAboutRoute
+  '/contact': typeof SiteContactRoute
+  '/education': typeof SiteEducationRoute
+  '/news': typeof SiteNewsRoute
+  '/process': typeof SiteProcessRoute
+  '/services': typeof SiteServicesRoute
+  '/studio': typeof SiteStudioRoute
+  '/the-gap': typeof SiteTheGapRoute
+  '/work': typeof SiteWorkRoute
+  '/': typeof SiteIndexRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
+  '/_site': typeof SiteRouteWithChildren
   '/credits': typeof CreditsRoute
-  '/education': typeof EducationRoute
-  '/news': typeof NewsRoute
-  '/process': typeof ProcessRoute
   '/reach': typeof ReachRoute
-  '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
-  '/studio': typeof StudioRoute
-  '/the-gap': typeof TheGapRoute
   '/who-we-are': typeof WhoWeAreRoute
-  '/work': typeof WorkRoute
+  '/_site/about': typeof SiteAboutRoute
+  '/_site/contact': typeof SiteContactRoute
+  '/_site/education': typeof SiteEducationRoute
+  '/_site/news': typeof SiteNewsRoute
+  '/_site/process': typeof SiteProcessRoute
+  '/_site/services': typeof SiteServicesRoute
+  '/_site/studio': typeof SiteStudioRoute
+  '/_site/the-gap': typeof SiteTheGapRoute
+  '/_site/work': typeof SiteWorkRoute
+  '/_site/': typeof SiteIndexRoute
   '/api/public/inquiry': typeof ApiPublicInquiryRoute
   '/api/public/subscribe': typeof ApiPublicSubscribeRoute
 }
@@ -166,99 +172,77 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/credits'
+    | '/reach'
+    | '/sitemap.xml'
+    | '/who-we-are'
     | '/about'
     | '/contact'
-    | '/credits'
     | '/education'
     | '/news'
     | '/process'
-    | '/reach'
     | '/services'
-    | '/sitemap.xml'
     | '/studio'
     | '/the-gap'
-    | '/who-we-are'
     | '/work'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   fileRoutesByTo: FileRoutesByTo
   to:
-    | '/'
+    | '/credits'
+    | '/reach'
+    | '/sitemap.xml'
+    | '/who-we-are'
     | '/about'
     | '/contact'
-    | '/credits'
     | '/education'
     | '/news'
     | '/process'
-    | '/reach'
     | '/services'
-    | '/sitemap.xml'
     | '/studio'
     | '/the-gap'
-    | '/who-we-are'
     | '/work'
+    | '/'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   id:
     | '__root__'
-    | '/'
-    | '/about'
-    | '/contact'
+    | '/_site'
     | '/credits'
-    | '/education'
-    | '/news'
-    | '/process'
     | '/reach'
-    | '/services'
     | '/sitemap.xml'
-    | '/studio'
-    | '/the-gap'
     | '/who-we-are'
-    | '/work'
+    | '/_site/about'
+    | '/_site/contact'
+    | '/_site/education'
+    | '/_site/news'
+    | '/_site/process'
+    | '/_site/services'
+    | '/_site/studio'
+    | '/_site/the-gap'
+    | '/_site/work'
+    | '/_site/'
     | '/api/public/inquiry'
     | '/api/public/subscribe'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  ContactRoute: typeof ContactRoute
+  SiteRoute: typeof SiteRouteWithChildren
   CreditsRoute: typeof CreditsRoute
-  EducationRoute: typeof EducationRoute
-  NewsRoute: typeof NewsRoute
-  ProcessRoute: typeof ProcessRoute
   ReachRoute: typeof ReachRoute
-  ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
-  StudioRoute: typeof StudioRoute
-  TheGapRoute: typeof TheGapRoute
   WhoWeAreRoute: typeof WhoWeAreRoute
-  WorkRoute: typeof WorkRoute
   ApiPublicInquiryRoute: typeof ApiPublicInquiryRoute
   ApiPublicSubscribeRoute: typeof ApiPublicSubscribeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
+    '/_site': {
+      id: '/_site'
+      path: ''
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+      preLoaderRoute: typeof SiteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/credits': {
@@ -268,39 +252,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CreditsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/education': {
-      id: '/education'
-      path: '/education'
-      fullPath: '/education'
-      preLoaderRoute: typeof EducationRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/news': {
-      id: '/news'
-      path: '/news'
-      fullPath: '/news'
-      preLoaderRoute: typeof NewsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/process': {
-      id: '/process'
-      path: '/process'
-      fullPath: '/process'
-      preLoaderRoute: typeof ProcessRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/reach': {
       id: '/reach'
       path: '/reach'
       fullPath: '/reach'
       preLoaderRoute: typeof ReachRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/services': {
-      id: '/services'
-      path: '/services'
-      fullPath: '/services'
-      preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -310,20 +266,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/studio': {
-      id: '/studio'
-      path: '/studio'
-      fullPath: '/studio'
-      preLoaderRoute: typeof StudioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/the-gap': {
-      id: '/the-gap'
-      path: '/the-gap'
-      fullPath: '/the-gap'
-      preLoaderRoute: typeof TheGapRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/who-we-are': {
       id: '/who-we-are'
       path: '/who-we-are'
@@ -331,12 +273,75 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WhoWeAreRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work': {
-      id: '/work'
+    '/_site/': {
+      id: '/_site/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof SiteIndexRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/about': {
+      id: '/_site/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof SiteAboutRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/contact': {
+      id: '/_site/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof SiteContactRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/education': {
+      id: '/_site/education'
+      path: '/education'
+      fullPath: '/education'
+      preLoaderRoute: typeof SiteEducationRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/news': {
+      id: '/_site/news'
+      path: '/news'
+      fullPath: '/news'
+      preLoaderRoute: typeof SiteNewsRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/process': {
+      id: '/_site/process'
+      path: '/process'
+      fullPath: '/process'
+      preLoaderRoute: typeof SiteProcessRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/services': {
+      id: '/_site/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof SiteServicesRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/studio': {
+      id: '/_site/studio'
+      path: '/studio'
+      fullPath: '/studio'
+      preLoaderRoute: typeof SiteStudioRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/the-gap': {
+      id: '/_site/the-gap'
+      path: '/the-gap'
+      fullPath: '/the-gap'
+      preLoaderRoute: typeof SiteTheGapRouteImport
+      parentRoute: typeof SiteRoute
+    }
+    '/_site/work': {
+      id: '/_site/work'
       path: '/work'
       fullPath: '/work'
-      preLoaderRoute: typeof WorkRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof SiteWorkRouteImport
+      parentRoute: typeof SiteRoute
     }
     '/api/public/inquiry': {
       id: '/api/public/inquiry'
@@ -355,21 +360,40 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface SiteRouteChildren {
+  SiteAboutRoute: typeof SiteAboutRoute
+  SiteContactRoute: typeof SiteContactRoute
+  SiteEducationRoute: typeof SiteEducationRoute
+  SiteNewsRoute: typeof SiteNewsRoute
+  SiteProcessRoute: typeof SiteProcessRoute
+  SiteServicesRoute: typeof SiteServicesRoute
+  SiteStudioRoute: typeof SiteStudioRoute
+  SiteTheGapRoute: typeof SiteTheGapRoute
+  SiteWorkRoute: typeof SiteWorkRoute
+  SiteIndexRoute: typeof SiteIndexRoute
+}
+
+const SiteRouteChildren: SiteRouteChildren = {
+  SiteAboutRoute: SiteAboutRoute,
+  SiteContactRoute: SiteContactRoute,
+  SiteEducationRoute: SiteEducationRoute,
+  SiteNewsRoute: SiteNewsRoute,
+  SiteProcessRoute: SiteProcessRoute,
+  SiteServicesRoute: SiteServicesRoute,
+  SiteStudioRoute: SiteStudioRoute,
+  SiteTheGapRoute: SiteTheGapRoute,
+  SiteWorkRoute: SiteWorkRoute,
+  SiteIndexRoute: SiteIndexRoute,
+}
+
+const SiteRouteWithChildren = SiteRoute._addFileChildren(SiteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  ContactRoute: ContactRoute,
+  SiteRoute: SiteRouteWithChildren,
   CreditsRoute: CreditsRoute,
-  EducationRoute: EducationRoute,
-  NewsRoute: NewsRoute,
-  ProcessRoute: ProcessRoute,
   ReachRoute: ReachRoute,
-  ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
-  StudioRoute: StudioRoute,
-  TheGapRoute: TheGapRoute,
   WhoWeAreRoute: WhoWeAreRoute,
-  WorkRoute: WorkRoute,
   ApiPublicInquiryRoute: ApiPublicInquiryRoute,
   ApiPublicSubscribeRoute: ApiPublicSubscribeRoute,
 }

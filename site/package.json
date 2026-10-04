@@ -4,14 +4,16 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/photos/gen-names.mjs",
     "dev": "vite dev",
+    "prebuild": "node scripts/photos/gen-names.mjs",
     "build": "vite build",
     "preview": "wrangler dev -c .output/server/wrangler.json --local",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "check": "tsc --noEmit && eslint . && vitest run && vite build",
+    "check": "node scripts/photos/gen-names.mjs && tsc --noEmit && eslint . && vitest run && vite build",
     "capture": "node scripts/compare/capture.mjs",
     "compare": "node scripts/compare/compare.mjs"
   },

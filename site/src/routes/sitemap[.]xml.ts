@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
-import { PAGES, absoluteUrl } from "@/lib/seo";
+import { PAGES, absoluteUrl } from "@/site/site";
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {

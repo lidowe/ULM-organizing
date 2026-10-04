@@ -74,29 +74,3 @@ for (const [path, url] of Object.entries(originals)) {
   const name = nameOf(path);
   photos[name] = { url, srcset: srcsets[path], focal: FOCAL[name] };
 }
-
-/**
- * Stand-ins for photos that only exist in the Lovable project (added there
- * after the Aug 28 export). Replace by dropping the real file into
- * src/assets/ under the aliased name, then delete the entry here.
- * (session-color is session-bw colourised locally with the Zhang et al. eccv16
- * model, chroma x1.35; a better colourised file can overwrite src/assets/session-color.jpg.)
- */
-const STAND_INS: Record<string, string> = {
-  "session-collab-wide": "session-redlit",
-};
-for (const [name, from] of Object.entries(STAND_INS)) {
-  if (!photos[name] && photos[from]) photos[name] = { ...photos[from] };
-}
-
-/** Bundled URL for a photo, "" if the name is unknown. */
-export function photo(name: string): string {
-  return photos[name]?.url ?? "";
-}
-
-/** Registry entry for a photo by its bundled URL (how rendered tags are matched). */
-const byUrl = new Map(Object.entries(photos).map(([name, p]) => [p.url, { name, ...p }]));
-
-export function photoByUrl(url: string): ({ name: string } & Photo) | undefined {
-  return byUrl.get(url);
-}

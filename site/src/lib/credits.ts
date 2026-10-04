@@ -1,3 +1,5 @@
+import type { PhotoName } from "./photo-names.gen";
+
 /**
  * Single source of truth for discography credits and the artist roster.
  * The home-page ribbon, the Work page cards, the artist index and the MCP
@@ -17,8 +19,6 @@
  *      "Co-Production · Tracking Engineer · Mixing".
  */
 
-import { photo } from "./photos";
-
 export type Credit = {
   artist: string;
   /** Release title. Omitted for roster-only (uncredited) entries. */
@@ -35,12 +35,12 @@ export type Credit = {
    * "art-rachel-goodrich-baby-now-were-even". Optional: cards render fine
    * without it, so covers can be added one at a time as they are cleared.
    */
-  art?: string;
+  art?: PhotoName;
   /**
    * Award plaques that belong to this release, rendered alongside the card.
    * `img` is an asset name without extension, like `art`.
    */
-  plaques?: { img: string; alt: string }[];
+  plaques?: { img: PhotoName; alt: string }[];
 };
 
 const ASSISTANT_TRACKING = "Assistant Engineer · Editing · Tracking Engineer (various)";
@@ -344,56 +344,9 @@ export function releaseCredits(): Credit[] {
   return byArtist(CREDITS.filter((c) => c.title));
 }
 
-const ESC: Record<string, string> = {
-  "&": "&amp;",
-  "<": "&lt;",
-  ">": "&gt;",
-  '"': "&quot;",
-};
-
-function esc(value: string): string {
-  return value.replace(/[&<>"]/g, (ch) => ESC[ch]!);
-}
-
-export function creditCardsHtml(): string {
-  return releaseCredits()
-    .map(
-      (c) =>
-        `<article class="work-card${c.art ? " has-art" : ""}" data-year="${esc(
-          c.year ?? "",
-        )}" data-work-role="${esc(c.tags.join(" "))}">${
-          c.art
-            ? `<img class="work-art" src="${photo(c.art)}" alt="${esc(
-                c.artist,
-              )} — ${esc(c.title ?? "")}" loading="lazy" decoding="async" />`
-            : ""
-        }<div><div class="artist">${esc(c.artist)}${
-          c.year ? ` · ${esc(c.year)}` : ""
-        }</div><h3>${esc(c.title!)}</h3><div class="role">${esc(c.role)}</div></div>${
-          c.plaques?.length
-            ? `<div class="work-plaques">${c.plaques
-                .map(
-                  (p) =>
-                    `<img class="work-plaque" src="${photo(p.img)}" alt="${esc(p.alt)}" loading="lazy" decoding="async" />`,
-                )
-                .join("")}</div>`
-            : ""
-        }</article>`,
-    )
-    .join("\n      ");
-}
-
-export function artistIndexHtml(): string {
-  return artistRoster()
-    .map((name) => `<span>${esc(name)}</span>`)
-    .join("");
-}
-
-export function mediaIndexHtml(): string {
-  return [...MEDIA_AND_BRANDS]
-    .sort((a, b) => collator.compare(sortKey(a), sortKey(b)))
-    .map((name) => `<span>${esc(name)}</span>`)
-    .join("");
+/** Media and brands, sorted the same way as the artist roster. */
+export function mediaAndBrands(): string[] {
+  return [...MEDIA_AND_BRANDS].sort((a, b) => collator.compare(sortKey(a), sortKey(b)));
 }
 
 /**
@@ -423,15 +376,13 @@ export const PLACES_AND_PROJECTS = [
 /** A deliberately short artist presence in the ribbon. */
 const RIBBON_ARTISTS = ["Lil Wayne", "Willie Nelson", "Katy Perry", "Nicki Minaj", "Blackfoot"];
 
-export function ribbonHtml(): string {
-  // Places lead; one artist slips in after every third place.
+/** The Home ribbon: places lead, and one artist slips in after every third place. */
+export function ribbonNames(): string[] {
   const names: string[] = [];
   PLACES_AND_PROJECTS.forEach((place, i) => {
     names.push(place);
-    if (i % 3 === 2 && RIBBON_ARTISTS[(i / 3) | 0]) {
-      names.push(RIBBON_ARTISTS[(i / 3) | 0]!);
-    }
+    const artist = RIBBON_ARTISTS[Math.floor(i / 3)];
+    if (i % 3 === 2 && artist) names.push(artist);
   });
-  const run = names.map((name) => `<span>${esc(name)}</span>`).join("");
-  return `${run}\n      ${run}`;
+  return names;
 }

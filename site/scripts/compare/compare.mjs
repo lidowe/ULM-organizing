@@ -63,7 +63,10 @@ for (const name of names) {
   fs.copyFileSync(b("png"), path.join(OUT, `${name}--after.png`));
 
   const textSame = fs.readFileSync(a("txt"), "utf8") === fs.readFileSync(b("txt"), "utf8");
-  const htmlSame = fs.readFileSync(a("html"), "utf8") === fs.readFileSync(b("html"), "utf8");
+  // Collapse whitespace across text-node seams (React splits text differently).
+  const markup = (f) =>
+    fs.readFileSync(f, "utf8").replace(/\s+/g, " ").replace(/ </g, "<").replace(/> /g, ">");
+  const htmlSame = markup(a("html")) === markup(b("html"));
   const sa = JSON.parse(fs.readFileSync(a("styles.json"), "utf8"));
   const sb = JSON.parse(fs.readFileSync(b("styles.json"), "utf8"));
   const styleDiffs = [];

@@ -131,15 +131,29 @@ for (const [wName, w, h] of WIDTHS) {
             `${after.content}|${after.backgroundImage.slice(0, 80)}|${after.opacity}`;
         styles[keyOf(el)] = entry;
       }
-      const normalise = (html) =>
-        html
-          .replace(/\s+/g, " ")
-          .replace(/\/assets\/([\w.-]+?)-[\w-]{8}\.(\w+)/g, "/assets/$1.$2")
-          .replace(/ (data-[\w-]+-id|style)="[^"]*"/g, "")
-          .trim();
+      // Markup as a canonical string: attributes sorted, whitespace collapsed,
+      // whitespace-only text dropped, inline styles and router bookkeeping
+      // left out (computed styles are compared separately), asset hashes removed.
+      const SKIP = new Set(["style", "data-status", "aria-current"]);
+      const unhash = (v) => v.replace(/\/assets\/([\w.-]+?)-[\w-]{8}\.(\w+)/g, "/assets/$1.$2");
+      const serialise = (node) => {
+        if (node.nodeType === 3) {
+          const t = node.textContent.replace(/\s+/g, " ");
+          return t.trim() ? t : "";
+        }
+        if (node.nodeType !== 1) return "";
+        const tag = node.tagName.toLowerCase();
+        if (["script", "style", "link", "meta", "noscript"].includes(tag)) return "";
+        const attrs = [...node.attributes]
+          .filter((a) => !SKIP.has(a.name) && !/^data-[\w-]+-id$/.test(a.name))
+          .map((a) => `${a.name}="${unhash(a.value)}"`)
+          .sort();
+        const inner = [...node.childNodes].map(serialise).join("");
+        return `<${tag}${attrs.length ? " " + attrs.join(" ") : ""}>${inner}</${tag}>`;
+      };
       return {
         text: (document.querySelector("main") ?? document.body).innerText,
-        html: normalise(document.body.innerHTML),
+        html: serialise(document.body),
         styles,
         title: document.title,
       };
