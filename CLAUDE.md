@@ -24,9 +24,7 @@ Fix mechanical things freely: capitalisation, typos, entities, markup.
 - A photo must not imply a claim the work does not support. A picture placed
   beside a service is read as evidence of that service. Do not put a personal
   or incidental photo in a position where it argues for paid work.
-- Images live in `site/src/assets/`. The registry in `site/src/lib/photos.ts`
-  globs that folder automatically, so a file dropped there is immediately
-  available as `{{IMG:<filename-without-extension>}}`. No registration step.
+- Images live in `site/src/assets/` and are used as `<Photo name="…" alt="…" />`.
 - Camera originals are multi-megabyte. Compress before shipping.
 
 ## Credits
@@ -43,44 +41,16 @@ consistently chosen the more conservative wording when asked.
 
 ## Typography
 
-Three faces, one per role. The whole point is recognition before a word is read.
+Three faces, one per role (Ed's 3 October 2026 decision):
 
 | role | face | used for |
 |---|---|---|
-| display | Spectral 500 | headings, pull quotes, mission lines |
-| reading | Space Grotesk 400 | all prose |
-| data | Space Mono 700 | labels, kickers, prices, specs, quotes |
+| headings | Space Grotesk 700, uppercase | page titles, section titles |
+| text | IBM Plex Mono | all prose, labels, buttons |
+| tags | Pixelify Sans 400 | small tags and numbers only, never bold or big |
 
-Rules that keep getting broken:
-
-- **One place sets face, weight and tracking**: the `THE TYPE SYSTEM` block at
-  the foot of `site/src/styles/site.css`. Sizes stay with their components,
-  because size is layout. There were once three such blocks at top-level
-  specificity, so the last silently won and the other two were dead text.
-- **The auxiliary tier is uniform.** Every sub-title, kicker, label, number,
-  price, spec, button and nav link is one face, one weight, one size, one
-  tracking. Rank is carried by **colour only** — `--aux-hot` red is
-  load-bearing, `--aux-cool` grey is supporting. Nothing in the tier grows to
-  signal importance. If it needs to matter more, it turns red.
-- **Headings are Title Case**, written into the copy, not forced by
-  `text-transform`. "Major" must keep its capital for the pun, and a transform
-  would also capitalise "and" and "the".
-- **Prose is one size.** A deck and the body under it are the same; separating
-  them by a size step made every deck read as a second heading.
-- **A quote never outranks the heading it sits under.**
-- Photo captions stay **out** of the aux tier. They are sentences; uppercasing
-  them would be uppercasing prose.
-
-### Changing a typeface
-
-A face swap invalidates every measure tuned to the previous face — `ch` is the
-width of a zero in the current font, so every `max-width` in `ch` changes
-meaning. Re-derive the measures as part of the swap. Carrying them over is what
-produced a pull quote breaking into four stubby lines.
-
-Same for `clamp()`: derive the middle term against a real viewport width. A
-coefficient that is too small pins the value to its floor at every realistic
-width while the token claims otherwise.
+Heading sizes come from the `--t-h1`, `--t-h2`, `--t-h3` and `--t-card` tokens in
+`site/src/styles/tokens.css`. Change the token, not a component rule.
 
 ## Verifying visual changes
 
@@ -137,61 +107,47 @@ from `origin/main`, not from them.
 **6. When your job is done, say so and stop.** Tell Edward the branch name and
 what is on it. He decides what gets published and when.
 
+## Where to change what
+
+| To change | Edit |
+|---|---|
+| Words on a page | `site/src/pages/<Page>.tsx` (the copy is plain text inside the JSX) |
+| Page titles, search descriptions, nav labels and order, email, location | `site/src/site/site.ts` (the registry: nav, menu, footer, "keep exploring", head tags and sitemap all read it) |
+| A photo | drop `<name>.jpg` into `site/src/assets/`, then `<Photo name="<name>" alt="…" />`. The name is type-checked (`npm run dev`/`build` regenerate the list). Focal points: `site/src/lib/photos.ts` |
+| Booths (titles, text, groups) | `site/src/components/booths/booths.ts`; drawings in `sketches.tsx`; a tag in copy is `<BoothTag id="room" />` |
+| Credits, roster, places, ribbon | `site/src/lib/credits.ts` |
+| Colours, sizes, spacing, textures | `site/src/styles/tokens.css` (the only place tokens are defined) |
+| Header, menu, footer, newsletter band | `site/src/components/chrome/` |
+| Contact form | `site/src/components/forms/ContactForm.tsx`; endpoint `site/src/routes/api/public/inquiry.ts` |
+| Form delivery, redirects, security headers, rate limit | `site/src/lib/http/` and `site/src/server.ts` |
+| Component styles | `site/src/styles/site.css`, then `concept.css`, then `system.css` (loaded in that order; later wins). These are being rewritten into per-component files; new rules never use `!important` and never define tokens. |
+
+Every change: `npm run check` (types, lint, unit tests, build). Any visual change:
+build, serve it (`npm run preview`), then `npm run capture -- --label after` and
+`npm run compare -- --before <label> --after after`, and look at the report.
+
 ## Deployment
 
-The three ways to break the live site, in order of how easily they happen:
+1. **Merging to `main` is publishing.** Workers Builds builds `main` and deploys it to
+   the Worker `ulm-organizing`, which serves upperlevelmusic.com. There is no staging
+   step. Never merge without Edward saying "publish" in the current session.
+2. **Every other branch gets a preview.** A push builds a preview version with its own
+   URL (`<branch>-ulm-organizing.upperlevelmusic.workers.dev`), marked noindex.
+   Previews share the production secrets, so a preview form sends real email; its
+   subject starts with `[PREVIEW]`.
+3. **No hand deploys.** `wrangler deploy` from a laptop gets ahead of `main` and the
+   next merge silently replaces it. Fix the build instead.
+4. Secrets live only in the Worker (`npx wrangler versions secret put NAME`):
+   `INQUIRY_WEBHOOK_URL` (the Google Apps Script in `site/ops/gmail-forwarder.gs`)
+   and `FORWARDER_SECRET`. Never commit them; this repository is public.
+5. Rollback: Cloudflare dashboard, Workers, `ulm-organizing`, Deployments, or
+   `git revert` and merge.
 
-1. **Merging to `main` is publishing.** There is no staging step between the
-   two. A merge is live within a couple of minutes, on the domain Edward sends
-   to clients.
-2. **Repointing the production branch in the dashboard.** One careless save
-   publishes whatever that branch holds. See the combobox note below.
-3. **Deploying any Worker that still carries `routes`.** The custom domains are
-   bound in config, so a preview built from the unmodified config takes over
-   upperlevelmusic.com.
+## This repository is public
 
-The details:
-
-- The site is a **Cloudflare Worker** named `ulm-organizing`, not Pages.
-- **The production branch is `main`.** Verified by correlation, not by reading
-  the dashboard: `main`'s tip 21cfe76 was committed 2026-08-15 19:29:37 and the
-  Worker's `modified_on` is 19:30:40 — 63 seconds later. Branches that are not
-  the production branch do not deploy.
-- **A dashboard field is not the saved setting.** The Production branch control
-  is a combobox: clicking near it can display a different branch while the
-  stored value is unchanged. This nearly caused a save that would have
-  repointed production at `claude/cloudflare-domain-hosting-b36p1n`, a branch
-  49 commits behind, publishing a week-old site over the live domain. Never
-  read a form control as the current state, and never save a settings page to
-  find out what it does.
-- To confirm what is actually deployed, compare the Worker's `modified_on`
-  against commit timestamps. That is evidence; the UI is a claim.
-- With "Builds for non-production branches" on, those branches build with the
-  **Version command** (`npx wrangler versions upload`), producing a preview
-  version and its own URL. Only the production branch runs the Deploy command
-  (`npx wrangler deploy`) and reaches upperlevelmusic.com.
-- `site/wrangler.jsonc` binds `upperlevelmusic.com` and `www.` as custom
-  domains. Any preview deploy must strip `routes` and use a different Worker
-  name, or it takes over the live domain.
-- Agent containers cannot reach `api.cloudflare.com` — the proxy rejects it.
-  Deploys and preview deploys have to happen from Edward's side.
-
-## The old site is not in this tree
-
-There used to be an `archived/` folder holding eight complete copies of the
-pre-TanStack static site — v1, v2, v3, v3-2, v3-3, v3-production, v4-fresh and
-recovered — plus its blog, css and js. Nothing referenced it, nothing built it,
-and having six versions of every heading sitting next to the real ones is how
-old Lovable-era copy kept bleeding back into current work.
-
-It is removed from the working tree and preserved in history. To read or
-restore any of it:
-
-    git show 1b3f220 --stat            # what was archived
-    git checkout 1b3f220 -- archived   # bring the whole folder back
-
-If you are looking for the current copy of a page, it is in
-`site/src/lib/pages/`. Nothing outside `site/` is site content.
+Internal notes (open questions, reviews, drafts, logo work, photos not yet on the
+site) live outside the repository in `~/websiteulm/ULM-notes/`. Do not commit them.
+The old static site is in history only (`git show 1b3f220 --stat`).
 
 ## Working preferences
 

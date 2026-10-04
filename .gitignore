@@ -7,3 +7,8 @@ node_modules/
 dist/
 .env
 .env.local
+
+# Local-only notes for agents (internal material lives in ~/websiteulm/ULM-notes)
+CLAUDE.local.md
+notes/
+*.local.md
